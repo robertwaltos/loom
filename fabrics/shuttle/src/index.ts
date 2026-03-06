@@ -1,6 +1,6 @@
 /**
  * @loom/shuttle
- * 
+ *
  * TODO: Implementation pending
  */
 

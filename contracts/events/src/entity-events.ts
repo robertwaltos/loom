@@ -2,10 +2,10 @@
  * Entity Lifecycle Events
  */
 
-import type { LoomEvent } from "./event.js";
+import type { LoomEvent } from './event.js';
 
 export type EntitySpawnedEvent = LoomEvent<
-  "entity.spawned",
+  'entity.spawned',
   {
     readonly entityId: string;
     readonly worldId: string;
@@ -15,27 +15,27 @@ export type EntitySpawnedEvent = LoomEvent<
 >;
 
 export type EntityDespawnedEvent = LoomEvent<
-  "entity.despawned",
+  'entity.despawned',
   {
     readonly entityId: string;
     readonly worldId: string;
-    readonly reason: "destroyed" | "migrated" | "expired";
+    readonly reason: 'destroyed' | 'migrated' | 'expired';
   }
 >;
 
 export type EntityMigratedEvent = LoomEvent<
-  "entity.migrated",
+  'entity.migrated',
   {
     readonly entityId: string;
     readonly sourceWorldId: string;
     readonly destinationWorldId: string;
     readonly components: ReadonlyArray<ComponentSnapshot>;
-    readonly migrationPhase: "prepare" | "transfer" | "confirm";
+    readonly migrationPhase: 'prepare' | 'transfer' | 'confirm';
   }
 >;
 
 export type ComponentChangedEvent = LoomEvent<
-  "entity.component.changed",
+  'entity.component.changed',
   {
     readonly entityId: string;
     readonly worldId: string;

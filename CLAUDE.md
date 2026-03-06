@@ -1,14 +1,17 @@
 # Project Loom — The Silfen Weaver
 
 ## What This Is
+
 A hyper-realistic experience orchestration engine built on UE5. The Loom owns world state, entity lifecycle, AI behavior, identity, economy, and seamless world transitions (The Silfen Weave). UE5 is the rendering fabric — a plugin, not the brain.
 
 ## Multi-Agent Operating Rules
 
 ### You Are One Thread In A Loom
+
 Multiple AI agents work this repo simultaneously. Your actions must never break another agent's work.
 
 ### Zero-Conflict Rules
+
 1. **Never modify files outside your assigned Fabric** without explicit coordination
 2. **Contracts (`contracts/`) are read-only** unless you are specifically tasked with contract changes
 3. **Use git worktrees** for all work: `git worktree add .claude/worktrees/<branch-name> -b <branch-name>`
@@ -17,10 +20,13 @@ Multiple AI agents work this repo simultaneously. Your actions must never break 
 6. **Keep commits atomic** — one logical change per commit
 
 ### Branch Naming
+
 ```
 <thread-type>/<fabric>/<description>
 ```
+
 Examples:
+
 - `silk/selvage/add-rate-limiting`
 - `steel/loom-core/entity-migration`
 - `cotton/nakama-fabric/matchmaking-rooms`
@@ -30,6 +36,7 @@ Examples:
 - `scribe/docs/api-reference`
 
 ### Commit Format
+
 ```
 <type>(<fabric>): <description>
 
@@ -38,9 +45,11 @@ Examples:
 Thread: <thread-type>
 Tier: <0|1|2|3|R|M>
 ```
+
 Types: `feat`, `fix`, `refactor`, `test`, `docs`, `perf`, `chore`
 
 ## The Ten Commandments
+
 1. Name things so clearly that comments become redundant
 2. Functions under 30 lines
 3. Never nest deeper than 3 levels
@@ -53,6 +62,7 @@ Types: `feat`, `fix`, `refactor`, `test`, `docs`, `perf`, `chore`
 10. Delete dead code immediately
 
 ## Architecture Principles
+
 - **Hexagonal (Ports & Adapters)**: Business logic never imports infrastructure
 - **Event-driven**: Modules communicate through typed events, never direct calls
 - **Plugin architecture**: Core is minimal, features are plugins
@@ -61,6 +71,7 @@ Types: `feat`, `fix`, `refactor`, `test`, `docs`, `perf`, `chore`
 - **Design for the ceiling**: Store highest quality, serve what device can handle
 
 ## Directory Structure
+
 ```
 contracts/          ← Shared interfaces. RARELY MODIFIED. Changes = breaking.
   bridge-loom/      ← Interface any rendering engine must implement
@@ -85,6 +96,7 @@ docs/               ← Architecture docs, game bible, API specs
 ```
 
 ## Tech Stack
+
 - **TypeScript** (primary) — strict mode, no `any`, ES2023 target
 - **Rust** (performance-critical) — event bus hot paths, binary serialization
 - **C++** (UE5 plugin) — Bridge Loom, gRPC bridge
@@ -93,6 +105,7 @@ docs/               ← Architecture docs, game bible, API specs
 - **npm workspaces** — monorepo management
 
 ## Key Dependencies (Approved)
+
 - **Flecs** — Entity Component System (C, MIT)
 - **Nakama** — Game backend (Go, Apache 2.0)
 - **Temporal** — Workflow orchestration (Go, MIT)
@@ -101,6 +114,7 @@ docs/               ← Architecture docs, game bible, API specs
 - **Lyra patterns** — UE5 GameFeature Plugin architecture (Epic)
 
 ## Quality Gates (Every PR)
+
 1. `npm run format` — Prettier
 2. `npm run lint` — ESLint (zero warnings)
 3. `npm run typecheck` — TypeScript strict (zero errors)

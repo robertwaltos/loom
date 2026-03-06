@@ -7,18 +7,18 @@
  */
 
 export type MessageType =
-  | "state-snapshot"
-  | "entity-spawn"
-  | "entity-despawn"
-  | "player-input"
-  | "physics-event"
-  | "weave-begin"
-  | "weave-update"
-  | "weave-complete"
-  | "weave-abort"
-  | "capability-negotiate"
-  | "health-check"
-  | "health-response";
+  | 'state-snapshot'
+  | 'entity-spawn'
+  | 'entity-despawn'
+  | 'player-input'
+  | 'physics-event'
+  | 'weave-begin'
+  | 'weave-update'
+  | 'weave-complete'
+  | 'weave-abort'
+  | 'capability-negotiate'
+  | 'health-check'
+  | 'health-response';
 
 export interface MessageHeader {
   /** Message type for routing */

@@ -9,7 +9,7 @@
  * The rendering fabric handles the projection to screen space.
  */
 
-import type { EntityId } from "./rendering-fabric.js";
+import type { EntityId } from './rendering-fabric.js';
 
 export interface EntityVisualState {
   readonly entityId: EntityId;

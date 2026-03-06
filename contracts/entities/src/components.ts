@@ -10,7 +10,12 @@
 
 export interface TransformComponent {
   readonly position: { readonly x: number; readonly y: number; readonly z: number };
-  readonly rotation: { readonly x: number; readonly y: number; readonly z: number; readonly w: number };
+  readonly rotation: {
+    readonly x: number;
+    readonly y: number;
+    readonly z: number;
+    readonly w: number;
+  };
   readonly scale: { readonly x: number; readonly y: number; readonly z: number };
 }
 
@@ -45,7 +50,7 @@ export interface AIBrainComponent {
   readonly behaviorTreeId: string;
   readonly currentGoal: string | null;
   readonly awarenessRadius: number;
-  readonly hostility: "friendly" | "neutral" | "hostile";
+  readonly hostility: 'friendly' | 'neutral' | 'hostile';
   readonly knownEntities: ReadonlyArray<string>;
 }
 

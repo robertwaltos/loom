@@ -9,7 +9,7 @@
  * fall back to simpler transition effects (fog, portal, fade).
  */
 
-import type { WorldId } from "./rendering-fabric.js";
+import type { WorldId } from './rendering-fabric.js';
 
 export interface WeaveZoneRenderer {
   /**
@@ -60,7 +60,7 @@ export interface TransitionParams {
   readonly fpsFloorThreshold: number;
 }
 
-export type BlendCurve = "linear" | "ease-in" | "ease-out" | "ease-in-out" | "perceptual";
+export type BlendCurve = 'linear' | 'ease-in' | 'ease-out' | 'ease-in-out' | 'perceptual';
 
 /**
  * Fallback strategies when hardware can't handle dual-render:
@@ -69,8 +69,4 @@ export type BlendCurve = "linear" | "ease-in" | "ease-out" | "ease-in-out" | "pe
  * - fade-to-black: Cinematic fade
  * - narrative-beat: Custom effect (close eyes, blink, etc.)
  */
-export type TransitionFallback =
-  | "volumetric-fog"
-  | "portal"
-  | "fade-to-black"
-  | "narrative-beat";
+export type TransitionFallback = 'volumetric-fog' | 'portal' | 'fade-to-black' | 'narrative-beat';

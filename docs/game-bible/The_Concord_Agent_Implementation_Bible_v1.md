@@ -1,5 +1,7 @@
 # THE CONCORD — AGENT IMPLEMENTATION BIBLE
+
 ## Complete Technical & Design Reference for AI Coding Agents
+
 ### Version 1.0 · March 2026 · UE5 Foundation · 25M User Target
 
 ---
@@ -15,6 +17,7 @@
 The Concord is not a game. It is a persistent civilisation simulator — a single-shard, permanently recorded world of 600+ planets, governed by players, powered by AI, and designed to run for decades without a server wipe.
 
 The technology stack is:
+
 - **Unreal Engine 5** (Nanite, Lumen, World Partition, Mass Entity) — primary game runtime
 - **TypeScript** — backend services, economy engine, governance, API layer
 - **Rust** — performance-critical hot paths (physics sync, ledger operations, real-time auction processing)
@@ -26,14 +29,14 @@ The technology stack is:
 
 ### Scale Targets
 
-| Metric | Launch | Year 1 | Year 3 | Year 5 |
-|--------|--------|--------|--------|--------|
-| Registered users | 500K | 5M | 15M | 25M |
-| Concurrent active | 50K | 500K | 2M | 5M |
-| Worlds online | 60 | 180 | 400 | 600 |
-| Daily transactions | 2M | 20M | 100M | 500M |
-| Remembrance entries/day | 50K | 500K | 2M | 10M |
-| NPC agents running | 10K | 100K | 1M | 10M |
+| Metric                  | Launch | Year 1 | Year 3 | Year 5 |
+| ----------------------- | ------ | ------ | ------ | ------ |
+| Registered users        | 500K   | 5M     | 15M    | 25M    |
+| Concurrent active       | 50K    | 500K   | 2M     | 5M     |
+| Worlds online           | 60     | 180    | 400    | 600    |
+| Daily transactions      | 2M     | 20M    | 100M   | 500M   |
+| Remembrance entries/day | 50K    | 500K   | 2M     | 10M    |
+| NPC agents running      | 10K    | 100K   | 1M     | 10M    |
 
 **Design to 5 million concurrent from day one. Every system must horizontally scale without re-architecture.**
 
@@ -49,20 +52,20 @@ The Lattice is the transit network connecting The Concord's 600 worlds. It is no
 
 ```typescript
 interface LatticeNode {
-  nodeId: string;           // UUID
-  worldId: string;          // Parent world
-  frequency: FrequencySignature;  // Unique across all nodes, ever
+  nodeId: string; // UUID
+  worldId: string; // Parent world
+  frequency: FrequencySignature; // Unique across all nodes, ever
   beaconStatus: 'ACTIVE' | 'DEGRADED' | 'COMPROMISED' | 'DESTROYED';
-  precisionRating: number;  // 0.0–1.0; below 0.73 = transit risk
+  precisionRating: number; // 0.0–1.0; below 0.73 = transit risk
   lockQueue: LockRequest[]; // Active synchronisation sessions
-  deployedYear: number;     // In-game year of first lock
-  surveyMark?: SurveyMark;  // If this was a first-lock achievement
+  deployedYear: number; // In-game year of first lock
+  surveyMark?: SurveyMark; // If this was a first-lock achievement
 }
 
 interface FrequencySignature {
-  primary: bigint;          // 256-bit unique identifier
-  harmonics: number[];      // Secondary frequency components
-  fieldStrength: number;    // Zero-point field coupling coefficient
+  primary: bigint; // 256-bit unique identifier
+  harmonics: number[]; // Secondary frequency components
+  fieldStrength: number; // Zero-point field coupling coefficient
 }
 
 interface LockRequest {
@@ -70,23 +73,24 @@ interface LockRequest {
   originNodeId: string;
   targetNodeId: string;
   initiatedAt: Date;
-  coherenceLevel: number;   // 0.0–1.0; transit at >= 0.999
+  coherenceLevel: number; // 0.0–1.0; transit at >= 0.999
   estimatedCompletionMs: number;
-  payload: TransitPayload;  // What/who is transiting
+  payload: TransitPayload; // What/who is transiting
   status: LockStatus;
 }
 
-type LockStatus = 
+type LockStatus =
   | 'SYNCHRONISING'
-  | 'PARTIAL_COHERENCE'    // Danger zone: attack possible
-  | 'CRITICAL_THRESHOLD'   // 0.95-0.999 coherence
-  | 'TRANSIT_EXECUTING'    // The moment of topological equivalence
+  | 'PARTIAL_COHERENCE' // Danger zone: attack possible
+  | 'CRITICAL_THRESHOLD' // 0.95-0.999 coherence
+  | 'TRANSIT_EXECUTING' // The moment of topological equivalence
   | 'COMPLETE'
   | 'FAILED'
-  | 'PARTIAL_COLLAPSE';    // Medical emergency in-world
+  | 'PARTIAL_COLLAPSE'; // Medical emergency in-world
 ```
 
 **Lock duration formula:**
+
 ```
 lockDurationMs = BASE_LOCK_MS * (1 + distanceLY * DISTANCE_COEFFICIENT) * fieldConditionMultiplier
 BASE_LOCK_MS = 180000   // 3 minutes at zero distance
@@ -99,6 +103,7 @@ fieldConditionMultiplier = 0.8–2.4 (varies by world conditions, Ascendancy int
 ### 1.2 Bubble Projection Ships
 
 Ships are not primary transit. They are prestigious, expensive, and slow by Lattice standards. They matter for:
+
 - Survey missions (reaching worlds that have no Lattice node yet)
 - Military projection (force between node termini)
 - Prestige/roleplay (dynasties who want the experience of travel)
@@ -107,9 +112,9 @@ Ships are not primary transit. They are prestigious, expensive, and slow by Latt
 ```typescript
 interface SurveyVessel {
   vesselId: string;
-  dynastyId: string;        // Owner
-  bubbleCapacity: number;   // How many passengers/tonnes
-  fusionCharge: number;     // 0.0–1.0; range per charge = 5–8 ly
+  dynastyId: string; // Owner
+  bubbleCapacity: number; // How many passengers/tonnes
+  fusionCharge: number; // 0.0–1.0; range per charge = 5–8 ly
   currentPosition: GalacticCoordinate;
   heading?: GalacticCoordinate;
   transitState: 'DOCKED' | 'IN_BUBBLE' | 'DECELERATION' | 'ARRIVED';
@@ -118,9 +123,9 @@ interface SurveyVessel {
 
 // Transit time calculation
 function calculateBubbleTransitHours(
-  origin: GalacticCoordinate, 
+  origin: GalacticCoordinate,
   destination: GalacticCoordinate,
-  vessel: SurveyVessel
+  vessel: SurveyVessel,
 ): number {
   const distanceLY = galacticDistance(origin, destination);
   const effectiveC = vessel.effectiveVelocity; // e.g. 0.1
@@ -138,9 +143,9 @@ function calculateBubbleTransitHours(
 interface ResonanceBeacon {
   beaconId: string;
   frequency: FrequencySignature; // Burned at manufacture; immutable
-  deployedBy: string;           // Survey team dynasty ID
-  deployedYear: number;         // In-game year
-  orbitalAnchor: OrbitalBody;   // What it orbits
+  deployedBy: string; // Survey team dynasty ID
+  deployedYear: number; // In-game year
+  orbitalAnchor: OrbitalBody; // What it orbits
   powerStatus: 'NOMINAL' | 'DEGRADED' | 'CRITICAL' | 'OFFLINE';
   estimatedRemainingLifeYears: number; // Default 1,000,000
   tamperedWith: boolean;
@@ -148,11 +153,11 @@ interface ResonanceBeacon {
 }
 
 type CompromiseType =
-  | 'FREQUENCY_SPOOFING'   // Ascendancy: redirect transits
-  | 'SIGNAL_DEGRADATION'   // Beacon signal weakening; precision loss
-  | 'GEODETIC_CORRUPTION'  // Coordinate record attacks
-  | 'POWER_SABOTAGE'       // Physical attack on fusion reactor
-  | 'HARMONIC_INJECTION';  // Corrupts frequency signature gradually
+  | 'FREQUENCY_SPOOFING' // Ascendancy: redirect transits
+  | 'SIGNAL_DEGRADATION' // Beacon signal weakening; precision loss
+  | 'GEODETIC_CORRUPTION' // Coordinate record attacks
+  | 'POWER_SABOTAGE' // Physical attack on fusion reactor
+  | 'HARMONIC_INJECTION'; // Corrupts frequency signature gradually
 ```
 
 **The Ascendancy threat: Frequency spoofing is the primary antagonist mechanism. A spoofed beacon allows the Ascendancy to redirect travellers to locations of their choosing. The player community should be able to detect anomalies in transit logs and investigate. This is a gameplay mechanic, not just lore.**
@@ -164,11 +169,13 @@ type CompromiseType =
 ### 2.1 World Structure
 
 Each of The Concord's 600 worlds is a separate UE5 World Partition map. They share:
+
 - A common economic layer (TypeScript backend)
 - A common governance layer (Assembly, votes, Remembrance)
 - The Lattice transit network
 
 They are isolated in:
+
 - Physical geography (unique biomes, procedurally generated with hand-authored hero locations)
 - Political state (controlled by player dynasties)
 - Environmental conditions (weather, day/night, seasons)
@@ -201,6 +208,7 @@ They are isolated in:
 **Chaos Physics:** All destructible environments. World destruction events (Ascendancy attacks, siege warfare) must be physically simulated, not canned animations.
 
 **Pixel Streaming:** Required for:
+
 - Spectator mode (non-playing users watching Concord events)
 - Witness Protocol replay (founding event broadcast)
 - Low-end device access (browser-playable via Pixel Streaming)
@@ -231,6 +239,7 @@ Phase 3 (Emergence):
 ```
 
 **UE5 implementation:**
+
 - Use `UGameplayStatics::OpenLevelBySoftObjectPtr` with seamless travel
 - Maintain player state via `AGameMode::GetSeamlessTravelActorList`
 - Frequency lock VFX: Niagara particle system with procedural audio via MetaSounds
@@ -261,20 +270,20 @@ KALON is the civilisation's only currency. Fixed supply. Never purchasable with 
 ```typescript
 // Core constants — never change these after launch
 const KALON_CONSTANTS = {
-  TOTAL_SUPPLY: 1_000_000_000n,           // 1 billion KALON, atomic units
-  DECIMAL_PLACES: 6,                       // 1 KALON = 1,000,000 atomic units
+  TOTAL_SUPPLY: 1_000_000_000n, // 1 billion KALON, atomic units
+  DECIMAL_PLACES: 6, // 1 KALON = 1,000,000 atomic units
   FOUNDING_WAVE_ALLOCATION: 100_000_000n, // 10% reserved for Founders Programme
-  COMMONS_FUND_SEED: 50_000_000n,         // 5% to Commons Fund at genesis
-  ARCHITECT_RESERVE: 20_000_000n,         // 2% Architect's Reserve
-  NEW_DYNASTY_GRANT: 100n * 1_000_000n,   // 100 KALON per new player
+  COMMONS_FUND_SEED: 50_000_000n, // 5% to Commons Fund at genesis
+  ARCHITECT_RESERVE: 20_000_000n, // 2% Architect's Reserve
+  NEW_DYNASTY_GRANT: 100n * 1_000_000n, // 100 KALON per new player
 } as const;
 
 // Wealth zones — absolute KALON amounts derived from % of total supply
 const WEALTH_ZONES = {
-  ACTIVE_BAND_CAP: KALON_CONSTANTS.TOTAL_SUPPLY / 1000n,      // 0.10%
-  PROSPERITY_TIER_CAP: KALON_CONSTANTS.TOTAL_SUPPLY * 3n / 1000n, // 0.30%
-  CONCENTRATION_ALERT_CAP: KALON_CONSTANTS.TOTAL_SUPPLY * 5n / 1000n, // 0.50%
-  STRUCTURAL_CAP: KALON_CONSTANTS.TOTAL_SUPPLY * 5n / 1000n,  // Hard ceiling
+  ACTIVE_BAND_CAP: KALON_CONSTANTS.TOTAL_SUPPLY / 1000n, // 0.10%
+  PROSPERITY_TIER_CAP: (KALON_CONSTANTS.TOTAL_SUPPLY * 3n) / 1000n, // 0.30%
+  CONCENTRATION_ALERT_CAP: (KALON_CONSTANTS.TOTAL_SUPPLY * 5n) / 1000n, // 0.50%
+  STRUCTURAL_CAP: (KALON_CONSTANTS.TOTAL_SUPPLY * 5n) / 1000n, // Hard ceiling
 } as const;
 ```
 
@@ -284,16 +293,16 @@ const WEALTH_ZONES = {
 
 ```typescript
 interface KalonTransaction {
-  txId: string;             // UUID v7 (time-ordered)
+  txId: string; // UUID v7 (time-ordered)
   fromDynastyId: string | 'COMMONS_FUND' | 'ARCHITECT_RESERVE';
   toDynastyId: string | 'COMMONS_FUND' | 'ARCHITECT_RESERVE';
-  amount: bigint;           // Atomic units
+  amount: bigint; // Atomic units
   txType: TransactionType;
-  worldId?: string;         // Where the transaction occurred
+  worldId?: string; // Where the transaction occurred
   associatedEventId?: string; // Remembrance linkage
-  levyApplied: bigint;      // Concord Levy extracted
+  levyApplied: bigint; // Concord Levy extracted
   timestamp: Date;
-  blockHeight: number;      // Ethereum L2 block for MARKS-related tx
+  blockHeight: number; // Ethereum L2 block for MARKS-related tx
 }
 
 type TransactionType =
@@ -305,7 +314,7 @@ type TransactionType =
   | 'NEW_DYNASTY_GRANT'
   | 'LEVY_COLLECTION'
   | 'TITHE_COLLECTION'
-  | 'ENTROPY_FEE'           // Dynasty maintenance costs
+  | 'ENTROPY_FEE' // Dynasty maintenance costs
   | 'SURVEY_REWARD'
   | 'CIVIC_REWARD'
   | 'ESTATE_AUCTION_BID'
@@ -322,21 +331,21 @@ type TransactionType =
 function calculateLevyRate(transactionAmount: bigint): bigint {
   // Progressive rate: 0.5% small, up to 2.5% large
   const amountKalon = transactionAmount / 1_000_000n;
-  
-  if (amountKalon < 10n) return transactionAmount * 5n / 1000n;      // 0.5%
-  if (amountKalon < 100n) return transactionAmount * 10n / 1000n;    // 1.0%
-  if (amountKalon < 1000n) return transactionAmount * 15n / 1000n;   // 1.5%
-  if (amountKalon < 10000n) return transactionAmount * 20n / 1000n;  // 2.0%
-  return transactionAmount * 25n / 1000n;                             // 2.5%
+
+  if (amountKalon < 10n) return (transactionAmount * 5n) / 1000n; // 0.5%
+  if (amountKalon < 100n) return (transactionAmount * 10n) / 1000n; // 1.0%
+  if (amountKalon < 1000n) return (transactionAmount * 15n) / 1000n; // 1.5%
+  if (amountKalon < 10000n) return (transactionAmount * 20n) / 1000n; // 2.0%
+  return (transactionAmount * 25n) / 1000n; // 2.5%
 }
 
 function calculateQuarterlyTithe(holdings: bigint): bigint {
   const prosperityThreshold = WEALTH_ZONES.ACTIVE_BAND_CAP;
   if (holdings <= prosperityThreshold) return 0n;
-  
+
   const titheableAmount = holdings - prosperityThreshold;
   // Progressive: 0.5% of tithe band per quarter, rising to 2%
-  return titheableAmount * 5n / 1000n; // Base rate; Architect adjusts quarterly
+  return (titheableAmount * 5n) / 1000n; // Base rate; Architect adjusts quarterly
 }
 ```
 
@@ -350,14 +359,14 @@ interface CommonsFundDistribution {
   period: { start: Date; end: Date };
   totalAvailable: bigint;
   streams: {
-    newDynastyGrants: bigint;     // 30% of available
-    worldInfrastructure: bigint;  // 25% of available
-    civicRewards: bigint;         // 30% of available
-    architectReserve: bigint;     // 15% retained
+    newDynastyGrants: bigint; // 30% of available
+    worldInfrastructure: bigint; // 25% of available
+    civicRewards: bigint; // 30% of available
+    architectReserve: bigint; // 15% retained
   };
   recipients: DistributionRecipient[];
-  approvedByArchitect: boolean;   // Always true — Architect controls this
-  remembranceEntry: string;       // Auto-generated entry ID
+  approvedByArchitect: boolean; // Always true — Architect controls this
+  remembranceEntry: string; // Auto-generated entry ID
 }
 ```
 
@@ -371,29 +380,29 @@ The Remembrance is the append-only permanent record of everything that happens i
 
 ```typescript
 interface RemembranceEntry {
-  entryId: string;           // UUID v7 — time-ordered, never sequential
+  entryId: string; // UUID v7 — time-ordered, never sequential
   entryType: EntryType;
   worldId?: string;
-  dynastyIds: string[];      // All dynasties mentioned
-  playerIds: string[];       // All players involved (hashed for privacy layer)
+  dynastyIds: string[]; // All dynasties mentioned
+  playerIds: string[]; // All players involved (hashed for privacy layer)
   inGameYear: number;
-  inGameDate: string;        // Formatted per Concord calendar
+  inGameDate: string; // Formatted per Concord calendar
   realTimestamp: Date;
-  title: string;             // Max 200 chars
-  body: string;              // Max 50,000 chars; Markdown
-  isAnonymised: boolean;     // Player-requested privacy
-  citedBy: string[];         // Other entry IDs that reference this
-  markAwarded?: MarkType;    // If this entry awards a MARK
-  hash: string;              // SHA-256 of content; tamper detection
-  previousHash: string;      // Blockchain-style chain
+  title: string; // Max 200 chars
+  body: string; // Max 50,000 chars; Markdown
+  isAnonymised: boolean; // Player-requested privacy
+  citedBy: string[]; // Other entry IDs that reference this
+  markAwarded?: MarkType; // If this entry awards a MARK
+  hash: string; // SHA-256 of content; tamper detection
+  previousHash: string; // Blockchain-style chain
   archiveReplicated: boolean; // Confirmed in foundation archive
 }
 
 type EntryType =
-  | 'FOUNDING'              // World first settled
-  | 'DYNASTY_BIRTH'         // New dynasty created
-  | 'DYNASTY_DEATH'         // Digital Mortality completed
-  | 'DYNASTY_IN_ABEYANCE'   // Real-world death of player
+  | 'FOUNDING' // World first settled
+  | 'DYNASTY_BIRTH' // New dynasty created
+  | 'DYNASTY_DEATH' // Digital Mortality completed
+  | 'DYNASTY_IN_ABEYANCE' // Real-world death of player
   | 'SURVEY_MARK_AWARDED'
   | 'WORLD_MARK_AWARDED'
   | 'DEFENCE_MARK_AWARDED'
@@ -403,19 +412,20 @@ type EntryType =
   | 'BATTLE'
   | 'ALLIANCE_FORMED'
   | 'ALLIANCE_BROKEN'
-  | 'WORLD_DESTRUCTION'     // Permanent; cannot be reversed
+  | 'WORLD_DESTRUCTION' // Permanent; cannot be reversed
   | 'ASCENDANCY_EVENT'
   | 'LATTICE_NODE_DESTROYED'
-  | 'FREQUENCY_ANOMALY'     // Spoofing detection event
+  | 'FREQUENCY_ANOMALY' // Spoofing detection event
   | 'ASSEMBLY_VOTE'
   | 'ESTATE_AUCTION'
   | 'FIRST_CONTACT'
-  | 'ARCHITECT_NOTE'        // Architect's quarterly observations
-  | 'PARTIAL_COLLAPSE'      // Failed transit medical event
-  | 'WITNESS_INSCRIPTION';  // Pre-launch witness messages
+  | 'ARCHITECT_NOTE' // Architect's quarterly observations
+  | 'PARTIAL_COLLAPSE' // Failed transit medical event
+  | 'WITNESS_INSCRIPTION'; // Pre-launch witness messages
 ```
 
 **Remembrance storage requirements at 25M users:**
+
 - 10M entries/day at peak × 365 × 10 years = 36.5 billion entries
 - Average entry size: 2KB = ~73 TB over 10 years
 - Use PostgreSQL with table partitioning by in-game year
@@ -429,33 +439,33 @@ Used in voting weight calculation (40% of Civic Score):
 ```typescript
 function calculateRemembranceDepth(dynastyId: string): number {
   const entries = getRemembranceEntriesByDynasty(dynastyId);
-  
+
   let score = 0;
-  
+
   // Volume contribution (diminishing returns)
   score += Math.log10(entries.length + 1) * 10;
-  
+
   // Quality signals
   const citationCount = entries.reduce((sum, e) => sum + e.citedBy.length, 0);
   score += Math.sqrt(citationCount) * 5;
-  
+
   // Age contribution (older entries worth more — historical depth)
   const currentYear = getCurrentInGameYear();
   for (const entry of entries) {
     const age = currentYear - entry.inGameYear;
     score += Math.log2(age + 1) * 0.5;
   }
-  
+
   // Cross-phase durability (entries that survive to later phases)
-  const crossPhaseEntries = entries.filter(e => 
-    getPhaseForYear(e.inGameYear) < getCurrentPhase()
+  const crossPhaseEntries = entries.filter(
+    (e) => getPhaseForYear(e.inGameYear) < getCurrentPhase(),
   );
   score += crossPhaseEntries.length * 8;
-  
+
   // MARKS multiplier
   const marksCount = getMarksByDynasty(dynastyId).length;
-  score *= (1 + marksCount * 0.15);
-  
+  score *= 1 + marksCount * 0.15;
+
   return Math.min(score, 1000); // Cap at 1000 for normalisation
 }
 ```
@@ -469,30 +479,37 @@ function calculateRemembranceDepth(dynastyId: string): number {
 ```typescript
 interface CivicScore {
   dynastyId: string;
-  remembranceDepth: number;   // 0–1000, normalised to 0–1
-  civicContribution: number;  // 0–1000, normalised to 0–1
-  kalonPosition: number;      // 0–1; capped at ACTIVE_BAND_CAP
+  remembranceDepth: number; // 0–1000, normalised to 0–1
+  civicContribution: number; // 0–1000, normalised to 0–1
+  kalonPosition: number; // 0–1; capped at ACTIVE_BAND_CAP
   rawScore: number;
   normalizedVotingWeight: number;
-  dignityFloor: boolean;      // Always true if active dynasty
+  dignityFloor: boolean; // Always true if active dynasty
 }
 
 function calculateCivicScore(dynastyId: string): CivicScore {
   const rd = normalise(calculateRemembranceDepth(dynastyId), 0, 1000);
   const cc = normalise(calculateCivicContribution(dynastyId), 0, 1000);
-  
+
   const holdings = getKalonHoldings(dynastyId);
   // Cap voting weight contribution at ACTIVE_BAND_CAP (0.10% of supply)
   const cappedHoldings = min(holdings, WEALTH_ZONES.ACTIVE_BAND_CAP);
   const kp = normalise(cappedHoldings, 0n, WEALTH_ZONES.ACTIVE_BAND_CAP);
-  
-  const rawScore = (rd * 0.40) + (cc * 0.35) + (kp * 0.25);
-  
+
+  const rawScore = rd * 0.4 + cc * 0.35 + kp * 0.25;
+
   // Dignity floor: minimum 1.0 for any active dynasty
   const normalizedVotingWeight = max(rawScore, 0.001);
-  
-  return { dynastyId, remembranceDepth: rd, civicContribution: cc,
-           kalonPosition: Number(kp), rawScore, normalizedVotingWeight, dignityFloor: true };
+
+  return {
+    dynastyId,
+    remembranceDepth: rd,
+    civicContribution: cc,
+    kalonPosition: Number(kp),
+    rawScore,
+    normalizedVotingWeight,
+    dignityFloor: true,
+  };
 }
 ```
 
@@ -503,11 +520,11 @@ interface AssemblyVote {
   voteId: string;
   proposalId: string;
   category: VoteCategory;
-  initiatedBy: string;        // Dynasty ID
+  initiatedBy: string; // Dynasty ID
   initiatedAt: Date;
-  votingPeriodDays: number;   // Real days: 7 ordinary, 14 significant, 21 constitutional
+  votingPeriodDays: number; // Real days: 7 ordinary, 14 significant, 21 constitutional
   votes: VoteCast[];
-  architectVote?: VoteCast;   // Always recorded separately
+  architectVote?: VoteCast; // Always recorded separately
   result?: VoteResult;
   remembranceEntryId: string; // Auto-created when vote opens
 }
@@ -515,15 +532,15 @@ interface AssemblyVote {
 type VoteCategory = 'ORDINARY' | 'SIGNIFICANT' | 'CONSTITUTIONAL' | 'RESERVED';
 
 const VOTE_THRESHOLDS = {
-  ORDINARY: 0.50,
+  ORDINARY: 0.5,
   SIGNIFICANT: 0.65,
-  CONSTITUTIONAL: 0.75,  // Plus Architect affirmative
+  CONSTITUTIONAL: 0.75, // Plus Architect affirmative
 } as const;
 
 // Architect voting weight
 const ARCHITECT_VOTING_WEIGHT = {
-  ORDINARY: 0.07,      // 7% effective weight
-  SIGNIFICANT: 0.14,   // 14% effective weight
+  ORDINARY: 0.07, // 7% effective weight
+  SIGNIFICANT: 0.14, // 14% effective weight
   CONSTITUTIONAL: null, // Affirmative required — not weighted
 } as const;
 ```
@@ -543,7 +560,7 @@ MARKS exist on Ethereum L2 (Base or Arbitrum — finalise before launch). They s
 // The Concord Marks Registry — Permanent Achievement Record
 
 interface IMarksRegistry {
-    enum MarkType { 
+    enum MarkType {
         FOUNDING,       // 0 — ~500 ever awarded
         SURVEY,         // 1 — Thousands; multiple per address possible
         WORLD,          // 2 — One per world, ever
@@ -551,7 +568,7 @@ interface IMarksRegistry {
         SURVIVOR,       // 4 — Very rare
         FIRST_CONTACT   // 5 — Max 3 ever; may never be awarded
     }
-    
+
     struct Mark {
         MarkType markType;
         address holder;         // Ethereum address of player
@@ -561,7 +578,7 @@ interface IMarksRegistry {
         bytes32 worldId;        // World where earned (if applicable)
         bool transferable;      // Always false — MARKS cannot be transferred
     }
-    
+
     // Award a mark — only callable by Concord oracle
     function awardMark(
         address to,
@@ -570,11 +587,11 @@ interface IMarksRegistry {
         bytes32 remembranceRef,
         bytes32 worldId
     ) external returns (uint256 markId);
-    
+
     // Query marks
-    function getMarksByAddress(address holder) external view 
+    function getMarksByAddress(address holder) external view
         returns (Mark[] memory);
-    
+
     // Studio closure migration — callable by migration multisig after 30 days
     function enableSelfCustody() external;
 }
@@ -588,7 +605,7 @@ interface IMarksRegistry {
 
 ### 7.1 Philosophy
 
-NPCs in The Concord are not quest-givers or enemies. They are inhabitants. They have histories. They form relationships. They build things. They die. The goal is not to fake sentience — it is to create the *impression* of a living world through emergent behaviour at scale.
+NPCs in The Concord are not quest-givers or enemies. They are inhabitants. They have histories. They form relationships. They build things. They die. The goal is not to fake sentience — it is to create the _impression_ of a living world through emergent behaviour at scale.
 
 **Key principle: NPCs are lowercase — they do not form dynasties, they do not vote in the Assembly, they do not hold KALON, they do not earn MARKS. They are the substrate of civilisation, not its protagonists.**
 
@@ -601,7 +618,7 @@ Tier 1 — CROWD AGENTS (Mass Entity, ~100K per world)
   Identity: No persistent state; regenerated on world restart
   Assets: Cannot create; draw from world asset library
 
-Tier 2 — INHABITANT AGENTS (Mass Entity + lightweight personality, ~10K per world)  
+Tier 2 — INHABITANT AGENTS (Mass Entity + lightweight personality, ~10K per world)
   Behaviour: Daily routines, simple relationships, trade
   AI: Behaviour trees with personality weights
   Identity: Persistent name, occupation, home location; 90-day memory window
@@ -628,23 +645,23 @@ Tier 4 — ARCHITECT'S AGENTS (Unique, canonical, ~10–50 across all worlds)
 interface NPCMemory {
   npcId: string;
   tier: 1 | 2 | 3 | 4;
-  
+
   // Short-term: last 24 in-game hours, full fidelity
   shortTerm: MemoryEvent[];
-  
+
   // Medium-term: last 30 in-game days, summarised
   mediumTerm: MemorySummary[];
-  
+
   // Long-term: significant events only, permanent (Tier 3+)
   longTerm: SignificantEvent[];
-  
+
   // Relationship graph
   relationships: Map<string, RelationshipState>; // NPC/player ID → state
-  
+
   // Goals (Tier 3+)
   activeGoals: Goal[];
   completedGoals: Goal[];
-  
+
   // Asset creations (Tier 3+)
   createdAssets: AssetReference[];
 }
@@ -653,8 +670,8 @@ interface MemoryEvent {
   timestamp: Date;
   eventType: string;
   involvedEntities: string[];
-  emotionalWeight: number;  // -1.0 to 1.0
-  summary: string;          // LLM-generated at event time
+  emotionalWeight: number; // -1.0 to 1.0
+  summary: string; // LLM-generated at event time
 }
 ```
 
@@ -663,6 +680,7 @@ interface MemoryEvent {
 **This is the artificial life layer. Notable and Architect's agents can create assets within defined categories. They cannot create lineages (dynasties), cannot vote, cannot hold KALON.**
 
 Permitted creation categories for Tier 3+ NPCs:
+
 - **Structures**: Buildings, walls, market stalls, shrines (within world's architectural vocabulary)
 - **Goods**: Trade items with custom names and flavour text (not mechanical stats)
 - **Art**: In-world paintings, sculptures, murals (visual assets generated by AI image pipeline)
@@ -670,6 +688,7 @@ Permitted creation categories for Tier 3+ NPCs:
 - **Paths**: Trade routes, patrol patterns, pilgrimage roads (emergent path-finding infrastructure)
 
 **Forbidden NPC creation categories:**
+
 - Weapons above Tier 1 (prevents NPC power inflation)
 - Currency of any kind
 - Lattice node modifications
@@ -683,15 +702,15 @@ interface NPCAssetCreation {
   assetId: string;
   worldId: string;
   createdAt: Date;
-  
+
   // AI-generated content
   generatedBy: 'claude-haiku' | 'claude-sonnet';
-  generationPrompt: string;      // Archived for moderation review
-  
+  generationPrompt: string; // Archived for moderation review
+
   // Review status
   status: 'PENDING_REVIEW' | 'APPROVED' | 'REJECTED' | 'AUTO_APPROVED';
   reviewedBy?: 'AUTO_MODERATION' | 'HUMAN_MODERATOR';
-  
+
   // World integration
   placedAt?: WorldCoordinate;
   discoveredByPlayers: string[]; // Dynasty IDs who found this
@@ -743,10 +762,10 @@ NPCs consume and produce goods in the world economy — a simplified shadow econ
 ```typescript
 interface WorldShadowEconomy {
   worldId: string;
-  
+
   // Goods that NPCs produce and trade (not KALON)
   commodities: Map<CommodityType, CommodityState>;
-  
+
   // Price signals that affect player economy
   priceIndices: {
     food: number;
@@ -754,14 +773,14 @@ interface WorldShadowEconomy {
     services: number;
     luxury: number;
   };
-  
+
   // Employment signals
-  laborDemand: number;    // 0–1; affects player contract availability
+  laborDemand: number; // 0–1; affects player contract availability
   laborSupply: number;
-  
+
   // Unrest — can trigger events if high
   populationUnrest: number; // 0–1; above 0.7 triggers Assembly notification
-  
+
   // These feed into the Architect's quarterly prosperity index
   prosperityIndex: number; // 0–1
 }
@@ -776,15 +795,15 @@ interface WorldShadowEconomy {
 ```typescript
 type DynastyMortalityState =
   | 'ACTIVE'
-  | 'DORMANT_30'        // 30 days inactive
-  | 'DORMANT_60'        // 60 days; Assembly notification sent
-  | 'GRACE_WINDOW'      // Day 60–90; final warning
+  | 'DORMANT_30' // 30 days inactive
+  | 'DORMANT_60' // 60 days; Assembly notification sent
+  | 'GRACE_WINDOW' // Day 60–90; final warning
   | 'MORTALITY_TRIGGERED' // Day 90; character recorded Deceased
-  | 'REDISTRIBUTION'    // Day 90–180; KALON flowing out
-  | 'DECEASED'          // Day 180+; irreversible
-  | 'IN_ABEYANCE'       // Real-world death; heraldic protection
-  | 'HEIR_ACTIVATED'    // Heir claimed dynasty within 2 years
-  | 'LEGACY_NPC';       // Dynasty continues as NPC faction
+  | 'REDISTRIBUTION' // Day 90–180; KALON flowing out
+  | 'DECEASED' // Day 180+; irreversible
+  | 'IN_ABEYANCE' // Real-world death; heraldic protection
+  | 'HEIR_ACTIVATED' // Heir claimed dynasty within 2 years
+  | 'LEGACY_NPC'; // Dynasty continues as NPC faction
 
 // Transition rules
 const MORTALITY_TRANSITIONS: TransitionRule[] = [
@@ -808,19 +827,19 @@ When a dynasty reaches DECEASED state, its non-liquid assets enter the Estate Di
 interface EstateAuction {
   auctionId: string;
   deceasedDynastyId: string;
-  openedAt: Date;           // Real date
-  closesAt: Date;           // 14 real days after opening
-  
+  openedAt: Date; // Real date
+  closesAt: Date; // 14 real days after opening
+
   assets: AuctionLot[];
-  
+
   phases: {
-    phase1_Heirs: { 
+    phase1_Heirs: {
       duration: '48h';
-      eligible: string[];   // Dynasty's registered heirs only
+      eligible: string[]; // Dynasty's registered heirs only
     };
     phase2_Allies: {
       duration: '48h';
-      eligible: string[];   // Alliance members + diplomatic relations
+      eligible: string[]; // Alliance members + diplomatic relations
     };
     phase3_Assembly: {
       duration: '72h';
@@ -831,15 +850,15 @@ interface EstateAuction {
       remainingAssets: 'COMMONS_FUND'; // Unsold → commons
     };
   };
-  
+
   // Memorial bid — special category
   memorialBids: MemorialBid[];
 }
 
 interface MemorialBid {
   bidderId: string;
-  amount: bigint;           // KALON
-  memorialText: string;     // Max 500 chars; inscribed in Remembrance
+  amount: bigint; // KALON
+  memorialText: string; // Max 500 chars; inscribed in Remembrance
   // Winning memorial bid text appears permanently in the dynasty's Remembrance entry
 }
 ```
@@ -854,18 +873,19 @@ interface MemorialBid {
 // Launch constants — set once, never change
 const TIME_COMPRESSION = {
   LAUNCH_DATE: new Date('2027-01-01T00:00:00Z'), // TBD
-  INITIAL_RATIO: 10.0,          // 10 in-game years per 1 real year at launch
-  FINAL_RATIO: 1.0,             // Target: 1:1 real time
-  HALF_LIFE_REAL_YEARS: 12.0,   // Ratio halves every 12 real years
+  INITIAL_RATIO: 10.0, // 10 in-game years per 1 real year at launch
+  FINAL_RATIO: 1.0, // Target: 1:1 real time
+  HALF_LIFE_REAL_YEARS: 12.0, // Ratio halves every 12 real years
 } as const;
 
 function getCurrentCompressionRatio(realNow: Date): number {
-  const realYearsElapsed = (realNow.getTime() - TIME_COMPRESSION.LAUNCH_DATE.getTime()) 
-    / (365.25 * 24 * 3600 * 1000);
-  
-  const ratio = TIME_COMPRESSION.INITIAL_RATIO * 
+  const realYearsElapsed =
+    (realNow.getTime() - TIME_COMPRESSION.LAUNCH_DATE.getTime()) / (365.25 * 24 * 3600 * 1000);
+
+  const ratio =
+    TIME_COMPRESSION.INITIAL_RATIO *
     Math.pow(2, -realYearsElapsed / TIME_COMPRESSION.HALF_LIFE_REAL_YEARS);
-  
+
   // Never go below 1:1
   return Math.max(ratio, TIME_COMPRESSION.FINAL_RATIO);
 }
@@ -874,12 +894,12 @@ function getInGameYear(realNow: Date): number {
   // Integral of compression ratio over time = in-game years elapsed
   // For exponential decay: integral of k*2^(-t/h) dt from 0 to T
   // = k * h / ln(2) * (1 - 2^(-T/h))
-  const T = (realNow.getTime() - TIME_COMPRESSION.LAUNCH_DATE.getTime()) 
-    / (365.25 * 24 * 3600 * 1000);
+  const T =
+    (realNow.getTime() - TIME_COMPRESSION.LAUNCH_DATE.getTime()) / (365.25 * 24 * 3600 * 1000);
   const k = TIME_COMPRESSION.INITIAL_RATIO;
   const h = TIME_COMPRESSION.HALF_LIFE_REAL_YEARS;
-  
-  const inGameYearsElapsed = k * h / Math.LN2 * (1 - Math.pow(2, -T / h));
+
+  const inGameYearsElapsed = ((k * h) / Math.LN2) * (1 - Math.pow(2, -T / h));
   return Math.floor(1 + inGameYearsElapsed);
 }
 ```
@@ -898,7 +918,7 @@ type SubscriptionTier = 'FREE_TOURIST' | 'ACCORD' | 'PATRON' | 'HERALD';
 const SUBSCRIPTION_CONFIG: Record<SubscriptionTier, TierConfig> = {
   FREE_TOURIST: {
     priceUSD: 0,
-    maxActiveDynasties: 0,   // Observe only during 15-day trial
+    maxActiveDynasties: 0, // Observe only during 15-day trial
     kalonMonthlyStipend: 0n,
     surveyPriority: 'NONE',
     architectReportAccess: 'ON_RELEASE',
@@ -934,21 +954,21 @@ const SUBSCRIPTION_CONFIG: Record<SubscriptionTier, TierConfig> = {
 
 ### 10.2 Revenue Projections at Scale
 
-| Users | Tier Mix | Monthly Revenue | Annual Revenue |
-|-------|----------|-----------------|----------------|
-| 500K registered / 100K paying | 60% Accord, 30% Patron, 10% Herald | $2.15M | $25.8M |
-| 5M registered / 800K paying | 55% Accord, 32% Patron, 13% Herald | $17.5M | $210M |
-| 15M registered / 2.5M paying | 50% Accord, 33% Patron, 17% Herald | $56M | $672M |
-| 25M registered / 5M paying | 48% Accord, 34% Patron, 18% Herald | $110M | $1.32B |
+| Users                         | Tier Mix                           | Monthly Revenue | Annual Revenue |
+| ----------------------------- | ---------------------------------- | --------------- | -------------- |
+| 500K registered / 100K paying | 60% Accord, 30% Patron, 10% Herald | $2.15M          | $25.8M         |
+| 5M registered / 800K paying   | 55% Accord, 32% Patron, 13% Herald | $17.5M          | $210M          |
+| 15M registered / 2.5M paying  | 50% Accord, 33% Patron, 17% Herald | $56M            | $672M          |
+| 25M registered / 5M paying    | 48% Accord, 34% Patron, 18% Herald | $110M           | $1.32B         |
 
-**Payment processor:** Stripe. Never store card data. 3D Secure required for annual plans. Auto-retry failed payments 3× over 14 days before Dormant state triggers.
----
+## **Payment processor:** Stripe. Never store card data. 3D Secure required for annual plans. Auto-retry failed payments 3× over 14 days before Dormant state triggers.
 
 ## PART 11: INFRASTRUCTURE & SCALE ARCHITECTURE
 
 ### 11.1 The Three Planes
 
 **Plane 1 — Game Runtime (UE5)**
+
 - UE5 Dedicated Servers: one per world instance
 - Regions: US-East, US-West, EU-West, AP-Southeast, AP-Northeast
 - World assignment: players auto-routed to lowest-latency region that has their world
@@ -956,6 +976,7 @@ const SUBSCRIPTION_CONFIG: Record<SubscriptionTier, TierConfig> = {
 - Target: 200 concurrent players per world server (scale to 500 with optimisation)
 
 **Plane 2 — Economy & Governance (TypeScript/Rust backend)**
+
 - Multi-region active-active Kubernetes deployment
 - PostgreSQL primary in each region with cross-region async replication
 - Redis Cluster: 6 nodes per region (3 primary, 3 replica)
@@ -963,6 +984,7 @@ const SUBSCRIPTION_CONFIG: Record<SubscriptionTier, TierConfig> = {
 - No single points of failure anywhere in this plane
 
 **Plane 3 — Foundation Archive (Independent)**
+
 - Separate cloud account, separate provider
 - Receives real-time Remembrance replication via encrypted stream
 - Read-only from studio systems; write access only from replication service
@@ -1039,9 +1061,9 @@ CREATE TABLE remembrance_entries (
 ) PARTITION BY RANGE (in_game_year);
 
 -- Create initial partitions
-CREATE TABLE remembrance_entries_year_1_150 
+CREATE TABLE remembrance_entries_year_1_150
   PARTITION OF remembrance_entries FOR VALUES FROM (1) TO (151);
-CREATE TABLE remembrance_entries_year_151_400 
+CREATE TABLE remembrance_entries_year_151_400
   PARTITION OF remembrance_entries FOR VALUES FROM (151) TO (401);
 -- Continue as needed
 
@@ -1087,37 +1109,40 @@ CREATE TABLE vote_casts (
 ### 11.4 Networking for 5M Concurrent
 
 **Connection architecture:**
+
 - WebSocket connections per game server: max 500 (world capacity)
 - Each UE5 server handles one world instance
 - At 5M concurrent: 10,000 world server instances needed
 - Use AWS/GCP spot instances for non-hero worlds; reserved for Kelath Prime etc.
 
 **Backend API:**
+
 - REST: player auth, dynasty management, subscription, Remembrance read
 - WebSocket: real-time game state, economy ticks, Assembly notifications
 - gRPC: internal service-to-service (economy ↔ Remembrance ↔ NPC)
 - GraphQL: Remembrance complex queries (players browsing history)
 
 **CDN:**
+
 - Cloudflare: static assets, UE5 patch delivery, Pixel Streaming relay
 - All worlds' static geography served as PAK files from Cloudflare R2
 - Dynamic content (NPC state, world state) never cached; always live
 
 ### 11.5 Cost Model at 5M Concurrent
 
-| Component | Cost/Month |
-|-----------|------------|
-| UE5 game servers (10K instances, spot mix) | $480K |
-| Backend Kubernetes (multi-region) | $85K |
-| Database (PostgreSQL + TimescaleDB) | $120K |
-| Redis Cluster | $45K |
-| Kafka | $35K |
-| CDN & storage | $95K |
-| LLM API (NPC AI, Tier 3 NPCs) | $200K |
-| Ethereum L2 operations | $15K |
-| Foundation archive | $25K |
-| Monitoring, logging, misc | $40K |
-| **Total infrastructure** | **~$1.14M/month** |
+| Component                                  | Cost/Month        |
+| ------------------------------------------ | ----------------- |
+| UE5 game servers (10K instances, spot mix) | $480K             |
+| Backend Kubernetes (multi-region)          | $85K              |
+| Database (PostgreSQL + TimescaleDB)        | $120K             |
+| Redis Cluster                              | $45K              |
+| Kafka                                      | $35K              |
+| CDN & storage                              | $95K              |
+| LLM API (NPC AI, Tier 3 NPCs)              | $200K             |
+| Ethereum L2 operations                     | $15K              |
+| Foundation archive                         | $25K              |
+| Monitoring, logging, misc                  | $40K              |
+| **Total infrastructure**                   | **~$1.14M/month** |
 
 At 5M paying users × $21 average ARPU = $105M/month revenue vs $1.14M infra = healthy margin.
 
@@ -1125,60 +1150,60 @@ At 5M paying users × $21 average ARPU = $105M/month revenue vs $1.14M infra = h
 
 ## PART 12: HISTORICAL ANALYSIS — LEARNING FROM FAILURE
 
-*Every major MMO failure carries lessons. The Concord is built by studying them.*
+_Every major MMO failure carries lessons. The Concord is built by studying them._
 
 ### 12.1 The Graveyard
 
-| Game | Peak Users | Failure Mode | Concord Response |
-|------|-----------|--------------|------------------|
-| **Star Wars Galaxies** | 300K | Forced NGE redesign destroyed trust; devs overrode player investment | Permanence Covenant + Article IX: No Cheat Codes. Devs cannot reset. |
-| **Warhammer Online** | 800K → 40K in 6mo | Half the content cut at launch; poor realm balance; empty servers | Launch with only content that is complete. Never fake density. Single shard. |
-| **WildStar** | 3M copies | F2P pivot destroyed value proposition; NCSoft killed it financially | Private venture philosophy. No public financial pressure. Permanence Covenant survives studio closure. |
-| **Tabula Rasa** | 100K | Richard Garriott left; IP too complex to operate without creator | Architecture documentation. Bus factor zero policy — everything documented. AI agents can rebuild. |
-| **City of Heroes** | 180K → shutdown | NCSoft pulled profitable game for no stated reason | Studio closure provisions: Apache 2.0 source release, MARKS migrate on-chain, Remembrance to foundation. |
-| **Marvel Heroes** | 1M+ | Disney IP revoked; overnight shutdown | Own your IP. The Concord's lore belongs to The Concord. No licensed characters. |
-| **Battleborn** | 12K peak | Launched against Overwatch; marketing positioned as competitor | Never position against a giant. Find a category of one. "The only civilisation you can actually be born into." |
-| **Anthem** | 5M copies | No endgame; live service promised but never delivered | No content promises without systems in place. Procedural generation ensures infinite worlds. |
-| **New World** (early) | 913K → 10K | Economy broken by duplication bug; trust collapsed | Rust-implemented ledger with cryptographic transaction chain. Duplication mathematically impossible. |
-| **Ultima Online** | 250K | Couldn't handle player behaviour; griefing destroyed new player retention | Dignity Floor in voting. New players protected. Grief mechanics documented and designed against from day 1. |
-| **EverQuest Next** | Never launched | Over-promised voxel destruction system; 8-year development spiral | Build what can ship. Incrementally expand. Never demo what doesn't run. |
-| **Crowfall** | Failed | Complicated systems with poor onboarding; niche appeal | Onboarding as first-class design problem. Witness Protocol creates pre-investment before play. |
-| **Ashes of Creation** | TBD | 7-year development; funding dependency; feature creep | Private venture: build within budget. Features earn their way in. |
-| **Hellgate: London** | 150K | Flagship developer bankruptcy mid-live service | Permanence Covenant: game continues regardless of studio status. |
-| **Final Fantasy XIV 1.0** | Critical failure → **Reborn success** | Transparent acknowledgment of failure + complete rebuild rebuilt trust | **LESSON: Radical transparency about what went wrong rebuilds trust faster than PR spin.** |
+| Game                      | Peak Users                            | Failure Mode                                                              | Concord Response                                                                                               |
+| ------------------------- | ------------------------------------- | ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Star Wars Galaxies**    | 300K                                  | Forced NGE redesign destroyed trust; devs overrode player investment      | Permanence Covenant + Article IX: No Cheat Codes. Devs cannot reset.                                           |
+| **Warhammer Online**      | 800K → 40K in 6mo                     | Half the content cut at launch; poor realm balance; empty servers         | Launch with only content that is complete. Never fake density. Single shard.                                   |
+| **WildStar**              | 3M copies                             | F2P pivot destroyed value proposition; NCSoft killed it financially       | Private venture philosophy. No public financial pressure. Permanence Covenant survives studio closure.         |
+| **Tabula Rasa**           | 100K                                  | Richard Garriott left; IP too complex to operate without creator          | Architecture documentation. Bus factor zero policy — everything documented. AI agents can rebuild.             |
+| **City of Heroes**        | 180K → shutdown                       | NCSoft pulled profitable game for no stated reason                        | Studio closure provisions: Apache 2.0 source release, MARKS migrate on-chain, Remembrance to foundation.       |
+| **Marvel Heroes**         | 1M+                                   | Disney IP revoked; overnight shutdown                                     | Own your IP. The Concord's lore belongs to The Concord. No licensed characters.                                |
+| **Battleborn**            | 12K peak                              | Launched against Overwatch; marketing positioned as competitor            | Never position against a giant. Find a category of one. "The only civilisation you can actually be born into." |
+| **Anthem**                | 5M copies                             | No endgame; live service promised but never delivered                     | No content promises without systems in place. Procedural generation ensures infinite worlds.                   |
+| **New World** (early)     | 913K → 10K                            | Economy broken by duplication bug; trust collapsed                        | Rust-implemented ledger with cryptographic transaction chain. Duplication mathematically impossible.           |
+| **Ultima Online**         | 250K                                  | Couldn't handle player behaviour; griefing destroyed new player retention | Dignity Floor in voting. New players protected. Grief mechanics documented and designed against from day 1.    |
+| **EverQuest Next**        | Never launched                        | Over-promised voxel destruction system; 8-year development spiral         | Build what can ship. Incrementally expand. Never demo what doesn't run.                                        |
+| **Crowfall**              | Failed                                | Complicated systems with poor onboarding; niche appeal                    | Onboarding as first-class design problem. Witness Protocol creates pre-investment before play.                 |
+| **Ashes of Creation**     | TBD                                   | 7-year development; funding dependency; feature creep                     | Private venture: build within budget. Features earn their way in.                                              |
+| **Hellgate: London**      | 150K                                  | Flagship developer bankruptcy mid-live service                            | Permanence Covenant: game continues regardless of studio status.                                               |
+| **Final Fantasy XIV 1.0** | Critical failure → **Reborn success** | Transparent acknowledgment of failure + complete rebuild rebuilt trust    | **LESSON: Radical transparency about what went wrong rebuilds trust faster than PR spin.**                     |
 
 ### 12.2 The Successes — What Worked
 
-| Game | Mechanic | Why It Worked | How Concord Adopts |
-|------|---------|---------------|-------------------|
-| **EVE Online** (18+ years) | Player-driven economy; consequences matter; trust in permanence | Players invest because actions have real weight | KALON economy; Permanence Covenant; no rollbacks |
-| **EVE Online** | Single-shard server | Historical events feel shared and real | The Concord is single-shard globally |
-| **Minecraft** (1B+ users) | Player creativity; endless emergent content | Players generate content cheaper than any studio | NPC artificial life + player construction = infinite world density |
-| **Path of Exile** | Consistent release cadence; developer transparency | Predictable engagement loop; trust through openness | Architect's quarterly report = developer transparency, in-world |
-| **Dwarf Fortress** | Emergent narrative; procedural history | Stories players didn't author feel real | Undirected Narrative Layer; NPC life events generate unscripted history |
-| **Elite Dangerous** | Persistent galaxy-wide state | Every player's action affects the universe | Single-shard; Remembrance records all actions |
-| **RuneScape** (25+ years) | Accessible; runs on low-end hardware; consistent updates | Removed hardware barriers; consistent cadence | Pixel Streaming for low-end access; Steam Deck target |
-| **World of Warcraft Classic** | Players wanted history preserved | Nostalgia for permanence is a real demand | The Remembrance IS this feature — permanent history from day 1 |
-| **Stardew Valley** | Emotional connection; no FOMO | Players return on their own schedule | Anti-retention mechanics; no daily login bonuses |
-| **Animal Crossing NH** | 40M+ COVID spike | Right product, right time; word of mouth, no ads | Witness Protocol creates pre-investment community before launch |
-| **Guild Wars 2** | No subscription | Lower barrier to engagement; fair value | Free Tourist tier; no paywall on community participation |
+| Game                          | Mechanic                                                        | Why It Worked                                       | How Concord Adopts                                                      |
+| ----------------------------- | --------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------- |
+| **EVE Online** (18+ years)    | Player-driven economy; consequences matter; trust in permanence | Players invest because actions have real weight     | KALON economy; Permanence Covenant; no rollbacks                        |
+| **EVE Online**                | Single-shard server                                             | Historical events feel shared and real              | The Concord is single-shard globally                                    |
+| **Minecraft** (1B+ users)     | Player creativity; endless emergent content                     | Players generate content cheaper than any studio    | NPC artificial life + player construction = infinite world density      |
+| **Path of Exile**             | Consistent release cadence; developer transparency              | Predictable engagement loop; trust through openness | Architect's quarterly report = developer transparency, in-world         |
+| **Dwarf Fortress**            | Emergent narrative; procedural history                          | Stories players didn't author feel real             | Undirected Narrative Layer; NPC life events generate unscripted history |
+| **Elite Dangerous**           | Persistent galaxy-wide state                                    | Every player's action affects the universe          | Single-shard; Remembrance records all actions                           |
+| **RuneScape** (25+ years)     | Accessible; runs on low-end hardware; consistent updates        | Removed hardware barriers; consistent cadence       | Pixel Streaming for low-end access; Steam Deck target                   |
+| **World of Warcraft Classic** | Players wanted history preserved                                | Nostalgia for permanence is a real demand           | The Remembrance IS this feature — permanent history from day 1          |
+| **Stardew Valley**            | Emotional connection; no FOMO                                   | Players return on their own schedule                | Anti-retention mechanics; no daily login bonuses                        |
+| **Animal Crossing NH**        | 40M+ COVID spike                                                | Right product, right time; word of mouth, no ads    | Witness Protocol creates pre-investment community before launch         |
+| **Guild Wars 2**              | No subscription                                                 | Lower barrier to engagement; fair value             | Free Tourist tier; no paywall on community participation                |
 
 ### 12.3 Psychological Failure Modes — Solved By Design
 
-| Problem | Example | Concord Solution |
-|---------|---------|-----------------|
-| **Treadmill exhaustion** | WoW gear reset every patch | MARKS never expire; Remembrance Depth compounds forever |
-| **Pay-to-win resentment** | Many mobile games | KALON never purchasable; wealth is earned contribution |
-| **Content drought** | Every MMO post-launch | Procedural worlds; NPC artificial life; player history IS content |
-| **Population collapse** | Server merges kill immersion | Single-shard: no server to merge or die |
-| **Developer betrayal** | SWG NGE | Permanence Covenant + Article IX: developers cannot undo |
-| **Sunk cost anxiety** | "If I stop paying, I lose everything" | In Abeyance; Sentinel Regent; Remembrance survives subscription |
-| **FOMO marketing** | Limited-time events everywhere | Explicit anti-FOMO in Covenant: no timed exclusives |
-| **Endgame cliff** | Character max level → what now? | No max level. No endgame. Civilisation as the game. |
-| **Alt-account exploitation** | Vote manipulation, economy gaming | Civic Score tied to dynasty history, not account count |
-| **Streamer economy** | Content creator advantage amplifies wealth gap | Civic Contribution includes community contribution; streamers organically Civic-rewarded |
-| **Spoofed reviews** | Launch review bombing / fake positives | Remembrance is the review: it's what happened, not what was said |
-| **Live service abandonment** | Anthem, Babylon's Fall | Studio closure provisions mean game outlasts studio |
+| Problem                      | Example                                        | Concord Solution                                                                         |
+| ---------------------------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **Treadmill exhaustion**     | WoW gear reset every patch                     | MARKS never expire; Remembrance Depth compounds forever                                  |
+| **Pay-to-win resentment**    | Many mobile games                              | KALON never purchasable; wealth is earned contribution                                   |
+| **Content drought**          | Every MMO post-launch                          | Procedural worlds; NPC artificial life; player history IS content                        |
+| **Population collapse**      | Server merges kill immersion                   | Single-shard: no server to merge or die                                                  |
+| **Developer betrayal**       | SWG NGE                                        | Permanence Covenant + Article IX: developers cannot undo                                 |
+| **Sunk cost anxiety**        | "If I stop paying, I lose everything"          | In Abeyance; Sentinel Regent; Remembrance survives subscription                          |
+| **FOMO marketing**           | Limited-time events everywhere                 | Explicit anti-FOMO in Covenant: no timed exclusives                                      |
+| **Endgame cliff**            | Character max level → what now?                | No max level. No endgame. Civilisation as the game.                                      |
+| **Alt-account exploitation** | Vote manipulation, economy gaming              | Civic Score tied to dynasty history, not account count                                   |
+| **Streamer economy**         | Content creator advantage amplifies wealth gap | Civic Contribution includes community contribution; streamers organically Civic-rewarded |
+| **Spoofed reviews**          | Launch review bombing / fake positives         | Remembrance is the review: it's what happened, not what was said                         |
+| **Live service abandonment** | Anthem, Babylon's Fall                         | Studio closure provisions mean game outlasts studio                                      |
 
 ---
 
@@ -1195,32 +1220,32 @@ class WorldGenerationPipeline:
     Runtime target: < 4 hours on generation cluster.
     Storage per world: ~2TB (terrain, assets, NPC seeds).
     """
-    
+
     def generate(self, world_id: str, seed: int, world_class: WorldClass) -> World:
         # Stage 1: Tectonic (2 hours)
         terrain = TectonicSimulation(seed).run(world_class)
-        
+
         # Stage 2: Climate (30 min)
         climate = ClimateSimulation(terrain, seed).run()
-        
+
         # Stage 3: Biomes (20 min)
         biomes = BiomeAssignment(terrain, climate).run()
-        
+
         # Stage 4: Flora & Fauna (30 min)
         ecology = EcologySimulation(biomes, seed).run()
-        
+
         # Stage 5: Hero locations (20 min)
         # Cities, ruins, landmarks — using LLM for narrative hooks
         hero_locations = HeroLocationGenerator(terrain, ecology, seed).run()
-        
+
         # Stage 6: NPC seed population (20 min)
         npc_seeds = NPCPopulationSeeder(hero_locations, world_class).run()
-        
+
         # Stage 7: UE5 asset assignment (manual step — texture/mesh selection)
         # Automated from biome → asset library mapping
         ue5_assets = AssetMapper(biomes, ecology).run()
-        
-        return World(world_id, terrain, climate, biomes, ecology, 
+
+        return World(world_id, terrain, climate, biomes, ecology,
                     hero_locations, npc_seeds, ue5_assets)
 
 class WorldClass(Enum):
@@ -1257,12 +1282,13 @@ World composition at full build-out (Year 1 targets 60 worlds):
 The teaser is a single HTML file. No build tools. No npm. No React. One file deployable to any static host.
 
 **Design language:**
+
 - Background: `#060d1a` (deep navy, approaching black)
 - Primary accent: `#b8963e` (aged gold — not bright, not brash — the gold of old books)
 - Text primary: `#eef2f8` (near white, slightly warm)
 - Text secondary: `#c4cedc` (mist — most body text)
 - Text tertiary: `#8a9bb5` (slate — captions, labels)
-- Typefaces: 
+- Typefaces:
   - Display: `Cinzel Decorative` (title) + `Cinzel` (headings, labels)
   - Body: `Cormorant Garamond` (editorial — long-form reading)
   - Technical: `Courier Prime` (logs, codes, system text)
@@ -1272,6 +1298,7 @@ The teaser is a single HTML file. No build tools. No npm. No React. One file dep
 - Grain overlay: CSS `repeating-linear-gradient` scan lines
 
 **Phase system:** Three content phases gated by body class:
+
 - Phase 1 (body default): Hero section always visible. Founding event. Okafor log. Countdown.
 - Phase 2 (body.phase-2): All phase-1 content + Witness Protocol form + Physics section
 - Phase 3 (body.phase-3): All above + Civilisation section + Pricing + Call to action
@@ -1280,35 +1307,47 @@ The teaser is a single HTML file. No build tools. No npm. No React. One file dep
 
 ```css
 :root {
-  --navy:  #060d1a;
+  --navy: #060d1a;
   --navy2: #0a1628;
   --navy3: #0d1f3c;
-  --gold:  #b8963e;
+  --gold: #b8963e;
   --gold2: #c9a63a;
   --gold3: #d4af5a;
   --gold4: #e8cc80;
   --white: #eef2f8;
-  --mist:  #c4cedc;
+  --mist: #c4cedc;
   --slate: #8a9bb5;
-  --dim:   #3a4a62;
-  --redl:  #c08080;
+  --dim: #3a4a62;
+  --redl: #c08080;
 }
 
 /* Phase gating */
-.phase-2, .phase-3 { display: none; }
+.phase-2,
+.phase-3 {
+  display: none;
+}
 body.phase-2 .phase-2,
 body.phase-3 .phase-2,
-body.phase-3 .phase-3 { display: block; }
+body.phase-3 .phase-3 {
+  display: block;
+}
 body.phase-2 .phase-1-only,
-body.phase-3 .phase-1-only { display: none; }
+body.phase-3 .phase-1-only {
+  display: none;
+}
 
 /* Scroll section base — hidden until intersected */
 .sect {
   opacity: 0;
   transform: translateY(32px);
-  transition: opacity 0.9s ease, transform 0.9s ease;
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
 }
-.sect.vis { opacity: 1; transform: translateY(0); }
+.sect.vis {
+  opacity: 1;
+  transform: translateY(0);
+}
 ```
 
 ### 14.3 JavaScript Architecture
@@ -1356,13 +1395,14 @@ const TICKER_CONTENT = {
 function initStarfield() {
   const canvas = document.getElementById('cosmos');
   const ctx = canvas.getContext('2d');
-  let mouseX = 0, mouseY = 0;
-  
+  let mouseX = 0,
+    mouseY = 0;
+
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  
+
   const STAR_COUNT = 300;
-  const stars = Array.from({length: STAR_COUNT}, () => ({
+  const stars = Array.from({ length: STAR_COUNT }, () => ({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
     r: Math.random() * 1.4 + 0.2,
@@ -1370,38 +1410,34 @@ function initStarfield() {
     parallax: Math.random() * 0.04 + 0.005, // Slow parallax layers
     twinkle: Math.random() * Math.PI * 2,
   }));
-  
+
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     const t = Date.now() / 3000;
-    
-    stars.forEach(s => {
-      const parallaxX = (mouseX - canvas.width/2) * s.parallax;
-      const parallaxY = (mouseY - canvas.height/2) * s.parallax;
+
+    stars.forEach((s) => {
+      const parallaxX = (mouseX - canvas.width / 2) * s.parallax;
+      const parallaxY = (mouseY - canvas.height / 2) * s.parallax;
       const flicker = Math.sin(t + s.twinkle) * 0.15 + 0.85;
-      
+
       ctx.beginPath();
-      ctx.arc(
-        s.x + parallaxX, 
-        s.y + parallaxY, 
-        s.r, 0, Math.PI * 2
-      );
+      ctx.arc(s.x + parallaxX, s.y + parallaxY, s.r, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(238,242,248,${s.opacity * flicker})`;
       ctx.fill();
     });
     requestAnimationFrame(draw);
   }
-  
-  document.addEventListener('mousemove', e => {
+
+  document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
   });
-  
+
   window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
   });
-  
+
   draw();
 }
 
@@ -1412,22 +1448,22 @@ const LAUNCH_DATE = new Date('2027-01-01T00:00:00Z');
 function updateCountdown() {
   const now = new Date();
   const diff = LAUNCH_DATE - now;
-  
+
   if (diff <= 0) {
-    document.getElementById('counter').innerHTML = 
+    document.getElementById('counter').innerHTML =
       '<div style="font-family:Cinzel;color:var(--gold4);font-size:1.4rem;letter-spacing:.2em">THE CONCORD IS OPEN</div>';
     return;
   }
-  
+
   const days = Math.floor(diff / 86400000);
   const hrs = Math.floor((diff % 86400000) / 3600000);
   const min = Math.floor((diff % 3600000) / 60000);
   const sec = Math.floor((diff % 60000) / 1000);
-  
-  document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
-  document.getElementById('cd-hrs').textContent = String(hrs).padStart(2,'0');
-  document.getElementById('cd-min').textContent = String(min).padStart(2,'0');
-  document.getElementById('cd-sec').textContent = String(sec).padStart(2,'0');
+
+  document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+  document.getElementById('cd-hrs').textContent = String(hrs).padStart(2, '0');
+  document.getElementById('cd-min').textContent = String(min).padStart(2, '0');
+  document.getElementById('cd-sec').textContent = String(sec).padStart(2, '0');
 }
 
 setInterval(updateCountdown, 1000);
@@ -1440,9 +1476,10 @@ async function fetchBlockHeight() {
     const d = await r.json();
     const n = d.blockNumber?.toLocaleString() ?? '—';
     document.getElementById('bnum').textContent = n;
-    if (document.getElementById('hl-bnum')) 
-      document.getElementById('hl-bnum').textContent = n;
-  } catch { /* silent fail */ }
+    if (document.getElementById('hl-bnum')) document.getElementById('hl-bnum').textContent = n;
+  } catch {
+    /* silent fail */
+  }
 }
 fetchBlockHeight();
 setInterval(fetchBlockHeight, 15000);
@@ -1452,39 +1489,46 @@ async function submitWitness() {
   const name = document.getElementById('w-name').value.trim();
   const email = document.getElementById('w-email').value.trim();
   const msg = document.getElementById('w-msg').value.trim();
-  
+
   if (!name || !email || !msg) return;
-  
+
   // POST to /api/witness
   try {
     await fetch('/api/witness', {
       method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({name, email, message: msg}),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message: msg }),
     });
-  } catch { /* silent — always show confirmation */ }
-  
+  } catch {
+    /* silent — always show confirmation */
+  }
+
   document.getElementById('wform-fields').style.display = 'none';
   document.getElementById('wconfirm').style.display = 'block';
 }
 
 // ── SCROLL REVEALS ────────────────────────────────────────────────────────
-const revealObserver = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
-}, { threshold: 0.08 });
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) e.target.classList.add('vis');
+    });
+  },
+  { threshold: 0.08 },
+);
 
-document.querySelectorAll('.sect, .pqw').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.sect, .pqw').forEach((el) => revealObserver.observe(el));
 
 // ── CUSTOM CURSOR ─────────────────────────────────────────────────────────
 const cr = document.getElementById('cr');
 const cd = document.getElementById('cd');
-document.addEventListener('mousemove', e => {
+document.addEventListener('mousemove', (e) => {
   cr.style.left = e.clientX + 'px';
   cr.style.top = e.clientY + 'px';
   cd.style.left = e.clientX + 'px';
   cd.style.top = e.clientY + 'px';
 });
-document.querySelectorAll('a,button,input,textarea').forEach(el => {
+document.querySelectorAll('a,button,input,textarea').forEach((el) => {
   el.addEventListener('mouseenter', () => {
     cr.style.width = '48px';
     cr.style.height = '48px';
@@ -1501,14 +1545,15 @@ document.querySelectorAll('a,button,input,textarea').forEach(el => {
 ### 14.4 Key HTML Sections
 
 **The Okafor Log** (green-on-black monospace block):
+
 ```html
 <div class="log">
   <div class="logh">Okafor Log · November 14 2030 · Entry 4,847 · Filed Standard Channels</div>
-  Target: 38.8895°N 77.0353°W · altitude 12.2m AGL · anchor 20-JAN-2031 17:03:42 UTC<br>
-  Coordinate selected for: optimal retrograde anchor precision<br>
-  Positional uncertainty: <strong style="color:var(--white)">0.003 millimetres</strong><br>
-  847 years continuous geodetic survey data · 96 years electromagnetic documentation<br>
-  Note: civilian event scheduled at target location. Recommend notification to safety officer.<br><br>
+  Target: 38.8895°N 77.0353°W · altitude 12.2m AGL · anchor 20-JAN-2031 17:03:42 UTC<br />
+  Coordinate selected for: optimal retrograde anchor precision<br />
+  Positional uncertainty: <strong style="color:var(--white)">0.003 millimetres</strong><br />
+  847 years continuous geodetic survey data · 96 years electromagnetic documentation<br />
+  Note: civilian event scheduled at target location. Recommend notification to safety officer.<br /><br />
   <span style="color:rgba(184,150,62,.24);font-size:.58rem">
     // Safety officer on vacation. Nobody followed up. The test ran.
   </span>
@@ -1516,15 +1561,19 @@ document.querySelectorAll('a,button,input,textarea').forEach(el => {
 ```
 
 **Dark Box component:**
+
 ```html
 <div class="db">
   <div class="dbt">The Permanence Covenant</div>
-  <p class="dbb">Nine articles. Irrevocable. No single party — including the developers — 
-  can unilaterally violate it.</p>
+  <p class="dbb">
+    Nine articles. Irrevocable. No single party — including the developers — can unilaterally
+    violate it.
+  </p>
 </div>
 ```
 
 **Pull Quote component:**
+
 ```html
 <div class="pqw sect">
   <div class="pq">
@@ -1565,7 +1614,7 @@ interface ArchitectQuarterlyReport {
   reportId: string;
   period: { inGameYearStart: number; inGameYearEnd: number };
   realPeriod: { start: Date; end: Date };
-  
+
   // Mandatory sections — auto-generated from data
   economy: {
     giniCoefficient: number;
@@ -1577,36 +1626,36 @@ interface ArchitectQuarterlyReport {
     levyCollected: bigint;
     titheCollected: bigint;
   };
-  
+
   worlds: {
     activeWorlds: number;
     worldProsperityIndices: WorldProsperityRecord[];
     newWorldsOpened: number;
     surveyMarksAwarded: number;
   };
-  
+
   latticeIntegrity: {
     activeNodes: number;
     degradedNodes: number;
     compromisedNodes: number;
-    frequencyAnomalyCount: number;  // Never specify nature of anomalies
+    frequencyAnomalyCount: number; // Never specify nature of anomalies
     ascendancyThreatTier: 1 | 2 | 3 | 4 | 5;
   };
-  
+
   governance: {
     votesConducted: number;
     votesPassedCount: number;
     architectVotingRecord: VoteSummary[];
     assemblyParticipationRate: number;
   };
-  
+
   // Human-authored section — 600 words max, 3 hard truths minimum
   observations: string;
-  
+
   // Publication metadata
   draftedAt: Date;
-  publishedAt?: Date;          // Set when published; immutable thereafter
-  revised: false;              // Always false — reports are never revised
+  publishedAt?: Date; // Set when published; immutable thereafter
+  revised: false; // Always false — reports are never revised
 }
 ```
 
@@ -1637,6 +1686,7 @@ NPC-generated content (Tier 3+):
 ### 15.3 Incident Response
 
 **Tier 1 — Economy incident (duplication bug, runaway levy):**
+
 - Automatic freeze on transaction type within 60 seconds of detection
 - On-call engineer paged
 - Assembly notification within 1 hour
@@ -1644,18 +1694,21 @@ NPC-generated content (Tier 3+):
 - Post-mortem published within 72 hours
 
 **Tier 2 — Lattice integrity incident (beacon compromised):**
+
 - Affected node flagged COMPROMISED in real-time
 - Transits to that node suspended automatically
 - World isolated with in-game narrative explanation
 - Investigation opened as Remembrance entry
 
 **Tier 3 — Data loss incident:**
+
 - Foundation archive failover activated
 - Studio archive declared primary if necessary
 - Assembly notified within 2 hours
 - Public status page updated in real-time
 
 **Tier 4 — Studio financial crisis:**
+
 - Permanence Covenant provisions activate
 - 30-day countdown to source code release
 - MARKS migration to self-custody
@@ -1692,7 +1745,7 @@ NPC-generated content (Tier 3+):
 
 ```
 TypeScript services:    kebab-case.service.ts
-TypeScript models:      kebab-case.model.ts  
+TypeScript models:      kebab-case.model.ts
 TypeScript controllers: kebab-case.controller.ts
 UE5 Blueprints:         BP_PascalCase
 UE5 C++ Classes:        APascalCase (Actor), UPascalCase (Component/Object)
@@ -1723,13 +1776,13 @@ interface APIResponse<T> {
   success: boolean;
   data?: T;
   error?: {
-    code: string;      // e.g. 'DYNASTY_NOT_FOUND', 'KALON_INSUFFICIENT'
-    message: string;   // Human-readable
+    code: string; // e.g. 'DYNASTY_NOT_FOUND', 'KALON_INSUFFICIENT'
+    message: string; // Human-readable
     details?: unknown; // Structured error context
   };
   meta?: {
-    requestId: string;  // Correlation ID
-    timestamp: string;  // ISO 8601
+    requestId: string; // Correlation ID
+    timestamp: string; // ISO 8601
     inGameYear: number; // Current Concord year
   };
 }
@@ -1741,9 +1794,9 @@ interface APIResponse<T> {
 // Paginate everything with cursor-based pagination (not offset)
 interface PaginatedResponse<T> extends APIResponse<T[]> {
   meta: {
-    cursor?: string;    // Opaque; pass back as ?after=cursor
+    cursor?: string; // Opaque; pass back as ?after=cursor
     hasMore: boolean;
-    total?: number;     // Only when cheap to calculate
+    total?: number; // Only when cheap to calculate
   };
 }
 ```
@@ -1754,17 +1807,18 @@ interface PaginatedResponse<T> extends APIResponse<T[]> {
 
 ### 17.1 Pre-Launch Milestones
 
-| Milestone | Target | Criteria |
-|-----------|--------|----------|
-| Alpha | 18 months before launch | Kelath Prime playable; Economy running; Remembrance writing |
-| Closed Beta | 12 months before launch | 3 worlds live; Lattice working; 10K players |
-| Open Beta | 6 months before launch | 10 worlds live; all core systems functional; 100K players |
-| Founders Launch | 3 months before launch | Founders Programme open; Witness Protocol open |
-| Launch | — | 60 worlds; all 11 sections of this bible implemented |
+| Milestone       | Target                  | Criteria                                                    |
+| --------------- | ----------------------- | ----------------------------------------------------------- |
+| Alpha           | 18 months before launch | Kelath Prime playable; Economy running; Remembrance writing |
+| Closed Beta     | 12 months before launch | 3 worlds live; Lattice working; 10K players                 |
+| Open Beta       | 6 months before launch  | 10 worlds live; all core systems functional; 100K players   |
+| Founders Launch | 3 months before launch  | Founders Programme open; Witness Protocol open              |
+| Launch          | —                       | 60 worlds; all 11 sections of this bible implemented        |
 
 ### 17.2 Launch Day Requirements
 
 **Before the first player can log in:**
+
 - [ ] Permanence Covenant smart contract deployed and verified
 - [ ] MARKS registry contract deployed and verified
 - [ ] Migration escrow funded
@@ -1783,6 +1837,7 @@ interface PaginatedResponse<T> extends APIResponse<T[]> {
 ### 17.3 The Founding Mark Window
 
 The Founding Mark is awarded to every player who is active at the moment of launch. The window is:
+
 - **Opens:** Launch block height (exact)
 - **Closes:** Launch block height + 43,200 blocks (~6 days on most L2s)
 - **Awarded:** Automatically by contract at close; no human action required
@@ -1794,6 +1849,7 @@ The 43,200 number is meaningful: it is the approximate number of blocks in the t
 ## PART 18: THE GRAND PLAN — 10-YEAR ROADMAP
 
 ### Year 1–2: The Foundation Years
+
 - 60 worlds → 180 worlds
 - NPC Tier 1–2 fully deployed; Tier 3 in beta
 - Assembly governance running; first major constitutional votes
@@ -1802,6 +1858,7 @@ The 43,200 number is meaningful: it is the approximate number of blocks in the t
 - First Estate Auctions; Inheritance Protocol proven
 
 ### Year 3–5: The Survey Race
+
 - 180 → 400 worlds
 - NPC Tier 3 fully deployed; first Tier 4 Architect's Agents
 - Artificial life layer producing emergent world cultures
@@ -1811,6 +1868,7 @@ The 43,200 number is meaningful: it is the approximate number of blocks in the t
 - VR/AR integration: Pixel Streaming → native VR client for Meta/Apple Vision
 
 ### Year 5–8: Warning Signs
+
 - 400 → 600 worlds
 - Phase III begins (compression noticeably slowing)
 - Ascendancy integration events; civilisational fracture risk
@@ -1819,6 +1877,7 @@ The 43,200 number is meaningful: it is the approximate number of blocks in the t
 - The Architect's Okafor Convergence investigation becomes player-visible
 
 ### Year 8–10: The Reckoning
+
 - 600 worlds; compression approaching 1:1
 - Phase V begins; history and real time converge
 - The Architect reveals partial findings (never complete — Article IX maintained)
@@ -1830,22 +1889,22 @@ The 43,200 number is meaningful: it is the approximate number of blocks in the t
 
 ## APPENDIX A: NAMING CONVENTIONS FOR ALL SYSTEMS
 
-| System | Code Name | Rationale |
-|--------|-----------|-----------|
-| Game engine | The Loom | Weaves threads of worlds together |
-| NPC AI framework | The Spindle | Spins raw model into functional agent |
-| Task orchestrator | The Shuttle | Carries work across the warp |
-| Lattice transit system | The Silfen Weave | Hamilton reference; invisible seams |
-| Economy service | The Ledger | What it is |
-| Remembrance service | The Archive | What it is |
-| Governance service | The Assembly | The in-world body it serves |
-| NPC life system | The Substrate | NPCs are the substrate of civilisation |
-| World generation | The Foundry | Where worlds are made |
-| Monitoring stack | The Inspector | Examines every thread |
-| Security layer | The Dye House | Where threads are treated and hardened |
-| CI/CD pipeline | The Finishing Mill | Raw fabric becomes finished product |
-| Foundation archive | The Vault | Independent preservation |
-| Recovery system | The Mending Frame | Where torn threads are repaired |
+| System                 | Code Name          | Rationale                              |
+| ---------------------- | ------------------ | -------------------------------------- |
+| Game engine            | The Loom           | Weaves threads of worlds together      |
+| NPC AI framework       | The Spindle        | Spins raw model into functional agent  |
+| Task orchestrator      | The Shuttle        | Carries work across the warp           |
+| Lattice transit system | The Silfen Weave   | Hamilton reference; invisible seams    |
+| Economy service        | The Ledger         | What it is                             |
+| Remembrance service    | The Archive        | What it is                             |
+| Governance service     | The Assembly       | The in-world body it serves            |
+| NPC life system        | The Substrate      | NPCs are the substrate of civilisation |
+| World generation       | The Foundry        | Where worlds are made                  |
+| Monitoring stack       | The Inspector      | Examines every thread                  |
+| Security layer         | The Dye House      | Where threads are treated and hardened |
+| CI/CD pipeline         | The Finishing Mill | Raw fabric becomes finished product    |
+| Foundation archive     | The Vault          | Independent preservation               |
+| Recovery system        | The Mending Frame  | Where torn threads are repaired        |
 
 ---
 
@@ -1890,21 +1949,21 @@ PAGERDUTY_INTEGRATION_KEY=        # Critical incident alerting
 
 ## APPENDIX C: DECISION LOG — WHY WE CHOSE THIS
 
-| Decision | Alternatives Considered | Reason Chosen |
-|----------|------------------------|---------------|
-| UE5 (not Unity) | Unity, Godot, custom | Nanite+Lumen = hyper-realistic baseline; World Partition = 600-world scale; Mass Entity = 100K NPCs |
-| TypeScript backend (not Go) | Go, Java, Python | Type safety for financial logic; team familiarity; ecosystem depth |
-| Rust for ledger (not TypeScript) | TypeScript, Go | Zero-cost abstractions; memory safety; no GC pauses in financial hot path |
-| PostgreSQL (not MongoDB) | MongoDB, Cassandra | ACID transactions for financial data; SQL for complex Remembrance queries |
-| Ethereum L2 for MARKS (not database) | Internal DB, Solana | MARKS must survive studio closure; only blockchain provides this guarantee |
-| Single-shard (not multi-server) | Standard MMO multi-server | Historical events must be shared; community must be unified; this is the game |
-| Subscription (not F2P) | F2P, B2P, game pass | Sustainable economics; KALON integrity; no pay-to-win tension |
-| No real-money KALON (not hybrid) | Some premium currency | Breaks economic fairness immediately; community trust destroyed |
-| Permanence Covenant on-chain | Studio policy document | Policy can be changed; smart contracts cannot |
+| Decision                             | Alternatives Considered   | Reason Chosen                                                                                       |
+| ------------------------------------ | ------------------------- | --------------------------------------------------------------------------------------------------- |
+| UE5 (not Unity)                      | Unity, Godot, custom      | Nanite+Lumen = hyper-realistic baseline; World Partition = 600-world scale; Mass Entity = 100K NPCs |
+| TypeScript backend (not Go)          | Go, Java, Python          | Type safety for financial logic; team familiarity; ecosystem depth                                  |
+| Rust for ledger (not TypeScript)     | TypeScript, Go            | Zero-cost abstractions; memory safety; no GC pauses in financial hot path                           |
+| PostgreSQL (not MongoDB)             | MongoDB, Cassandra        | ACID transactions for financial data; SQL for complex Remembrance queries                           |
+| Ethereum L2 for MARKS (not database) | Internal DB, Solana       | MARKS must survive studio closure; only blockchain provides this guarantee                          |
+| Single-shard (not multi-server)      | Standard MMO multi-server | Historical events must be shared; community must be unified; this is the game                       |
+| Subscription (not F2P)               | F2P, B2P, game pass       | Sustainable economics; KALON integrity; no pay-to-win tension                                       |
+| No real-money KALON (not hybrid)     | Some premium currency     | Breaks economic fairness immediately; community trust destroyed                                     |
+| Permanence Covenant on-chain         | Studio policy document    | Policy can be changed; smart contracts cannot                                                       |
 
 ---
 
-*End of Agent Implementation Bible v1.0*
+_End of Agent Implementation Bible v1.0_
 
-*This document is a living record. Amendments require founding team consensus and are versioned.*
-*v1.0 — March 2026 — The Concord Founding Team*
+_This document is a living record. Amendments require founding team consensus and are versioned._
+_v1.0 — March 2026 — The Concord Founding Team_

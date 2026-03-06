@@ -7,20 +7,20 @@
  */
 
 /** Globally unique entity identifier */
-export type EntityId = string & { readonly __brand: "EntityId" };
+export type EntityId = string & { readonly __brand: 'EntityId' };
 
 /** Entity type determines which components are required vs optional */
 export type EntityType =
-  | "player"
-  | "npc"
-  | "creature"
-  | "item"
-  | "structure"
-  | "vehicle"
-  | "projectile"
-  | "trigger-zone"
-  | "weave-zone"
-  | "ambient";
+  | 'player'
+  | 'npc'
+  | 'creature'
+  | 'item'
+  | 'structure'
+  | 'vehicle'
+  | 'projectile'
+  | 'trigger-zone'
+  | 'weave-zone'
+  | 'ambient';
 
 export interface Entity {
   readonly id: EntityId;

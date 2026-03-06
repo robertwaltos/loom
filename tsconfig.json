@@ -35,5 +35,11 @@
     { "path": "./fabrics/dye-house" },
     { "path": "./fabrics/archive" }
   ],
-  "exclude": ["node_modules", "dist", "fabrics/bridge-loom-ue5", "vitest.config.ts", "eslint.config.js"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "fabrics/bridge-loom-ue5",
+    "vitest.config.ts",
+    "eslint.config.js"
+  ]
 }

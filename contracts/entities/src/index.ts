@@ -9,7 +9,7 @@
  * This is the minimal set needed to prove the architecture.
  */
 
-export type { Entity, EntityType } from "./entity.js";
+export type { Entity, EntityType } from './entity.js';
 export type {
   TransformComponent,
   IdentityComponent,
@@ -18,4 +18,4 @@ export type {
   AIBrainComponent,
   PhysicsBodyComponent,
   WorldMembershipComponent,
-} from "./components.js";
+} from './components.js';

@@ -6,7 +6,7 @@
  * This is how we design for the ceiling without requiring it.
  */
 
-export type RenderingTier = "cinematic" | "high" | "performance" | "streaming";
+export type RenderingTier = 'cinematic' | 'high' | 'performance' | 'streaming';
 
 export interface CapabilityManifest {
   /** Unique identifier for this rendering fabric instance */

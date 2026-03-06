@@ -17,5 +17,6 @@ export default defineConfig({
       },
     },
     testTimeout: 10000,
+    passWithNoTests: true,
   },
 });

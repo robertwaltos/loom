@@ -1,6 +1,6 @@
 /**
  * @loom/archive
- * 
+ *
  * TODO: Implementation pending
  */
 

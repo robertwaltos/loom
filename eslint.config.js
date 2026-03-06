@@ -43,6 +43,13 @@ export default tseslint.config(
     },
   },
   {
+    // Relax function length for test files — describe/it blocks are naturally longer
+    files: ['**/*.test.ts', '**/*.spec.ts', '**/__tests__/**/*.ts'],
+    rules: {
+      'max-lines-per-function': ['error', { max: 60, skipBlankLines: true, skipComments: true }],
+    },
+  },
+  {
     ignores: [
       'node_modules/',
       'dist/',

@@ -1,6 +1,6 @@
 /**
  * @loom/inspector
- * 
+ *
  * TODO: Implementation pending
  */
 

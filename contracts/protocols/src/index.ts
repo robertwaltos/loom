@@ -6,4 +6,4 @@
  * JSON is only for debugging and low-frequency admin APIs.
  */
 
-export type { WireMessage, MessageHeader, MessageType } from "./wire-message.js";
+export type { WireMessage, MessageHeader, MessageType } from './wire-message.js';

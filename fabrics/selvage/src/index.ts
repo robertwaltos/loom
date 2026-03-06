@@ -1,6 +1,6 @@
 /**
  * @loom/selvage
- * 
+ *
  * TODO: Implementation pending
  */
 

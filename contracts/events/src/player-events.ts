@@ -2,10 +2,10 @@
  * Player Events
  */
 
-import type { LoomEvent } from "./event.js";
+import type { LoomEvent } from './event.js';
 
 export type PlayerConnectedEvent = LoomEvent<
-  "player.connected",
+  'player.connected',
   {
     readonly playerId: string;
     readonly worldId: string;
@@ -16,17 +16,17 @@ export type PlayerConnectedEvent = LoomEvent<
 >;
 
 export type PlayerDisconnectedEvent = LoomEvent<
-  "player.disconnected",
+  'player.disconnected',
   {
     readonly playerId: string;
     readonly worldId: string;
     readonly sessionId: string;
-    readonly reason: "voluntary" | "timeout" | "error" | "kicked";
+    readonly reason: 'voluntary' | 'timeout' | 'error' | 'kicked';
   }
 >;
 
 export type PlayerInputReceivedEvent = LoomEvent<
-  "player.input",
+  'player.input',
   {
     readonly playerId: string;
     readonly entityId: string;

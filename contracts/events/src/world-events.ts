@@ -2,10 +2,10 @@
  * World & Silfen Weave Events
  */
 
-import type { LoomEvent } from "./event.js";
+import type { LoomEvent } from './event.js';
 
 export type WeaveTransitionStartedEvent = LoomEvent<
-  "weave.transition.started",
+  'weave.transition.started',
   {
     readonly transitionId: string;
     readonly entityId: string;
@@ -16,7 +16,7 @@ export type WeaveTransitionStartedEvent = LoomEvent<
 >;
 
 export type WeaveTransitionCompletedEvent = LoomEvent<
-  "weave.transition.completed",
+  'weave.transition.completed',
   {
     readonly transitionId: string;
     readonly entityId: string;
@@ -27,17 +27,17 @@ export type WeaveTransitionCompletedEvent = LoomEvent<
 >;
 
 export type WeaveTransitionAbortedEvent = LoomEvent<
-  "weave.transition.aborted",
+  'weave.transition.aborted',
   {
     readonly transitionId: string;
     readonly entityId: string;
-    readonly reason: "destination-unavailable" | "player-reversed" | "timeout" | "error";
+    readonly reason: 'destination-unavailable' | 'player-reversed' | 'timeout' | 'error';
     readonly errorMessage?: string;
   }
 >;
 
 export type WorldLoadedEvent = LoomEvent<
-  "world.loaded",
+  'world.loaded',
   {
     readonly worldId: string;
     readonly serverId: string;
@@ -46,9 +46,9 @@ export type WorldLoadedEvent = LoomEvent<
 >;
 
 export type WorldUnloadedEvent = LoomEvent<
-  "world.unloaded",
+  'world.unloaded',
   {
     readonly worldId: string;
-    readonly reason: "empty" | "shutdown" | "error";
+    readonly reason: 'empty' | 'shutdown' | 'error';
   }
 >;

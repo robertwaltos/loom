@@ -11,18 +11,18 @@
  * - Events flow back up for player input and physics results
  */
 
-import type { CapabilityManifest } from "./capabilities.js";
-import type { EntityVisualState, VisualUpdate } from "./visual-state.js";
-import type { WeaveZoneRenderer } from "./weave-zone-renderer.js";
+import type { CapabilityManifest } from './capabilities.js';
+import type { EntityVisualState, VisualUpdate } from './visual-state.js';
+import type { WeaveZoneRenderer } from './weave-zone-renderer.js';
 
 /** Entity identifier — opaque to the rendering fabric */
-export type EntityId = string & { readonly __brand: "EntityId" };
+export type EntityId = string & { readonly __brand: 'EntityId' };
 
 /** World identifier — which logical world this entity belongs to */
-export type WorldId = string & { readonly __brand: "WorldId" };
+export type WorldId = string & { readonly __brand: 'WorldId' };
 
 /** Correlation ID for tracing events across systems */
-export type CorrelationId = string & { readonly __brand: "CorrelationId" };
+export type CorrelationId = string & { readonly __brand: 'CorrelationId' };
 
 export interface RenderingFabric {
   /**

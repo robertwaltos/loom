@@ -9,7 +9,7 @@
  * The contract doesn't care.
  */
 
-import type { LoomEvent, EventHandler, EventFilter } from "./event.js";
+import type { LoomEvent, EventHandler, EventFilter } from './event.js';
 
 export interface EventBus {
   /**
@@ -37,11 +37,7 @@ export interface EventBus {
    * Replay historical events matching a filter.
    * Used for state reconstruction and debugging.
    */
-  replay(
-    filter: EventFilter,
-    fromTimestamp: number,
-    toTimestamp: number,
-  ): AsyncIterable<LoomEvent>;
+  replay(filter: EventFilter, fromTimestamp: number, toTimestamp: number): AsyncIterable<LoomEvent>;
 
   /**
    * Current backlog size (events published but not yet consumed).
