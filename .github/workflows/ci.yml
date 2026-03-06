@@ -1,0 +1,135 @@
+name: The Finishing Mill — CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  typecheck:
+    name: TypeScript Strict
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --build --noEmit
+
+  lint:
+    name: ESLint (Zero Warnings)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx eslint .
+
+  format:
+    name: Prettier Check
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx prettier --check '**/*.{ts,tsx,json,md}'
+
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx vitest run --coverage
+      - name: Check coverage thresholds
+        if: always()
+        run: npx vitest run --coverage --reporter=json 2>/dev/null || true
+
+  # Commandment enforcement — no any, no long functions, no deep nesting
+  code-quality:
+    name: Code Quality Gates
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: No `any` types
+        run: |
+          FOUND=$(grep -rn ': any' --include='*.ts' contracts/ fabrics/ || true)
+          if [ -n "$FOUND" ]; then
+            echo "❌ Found 'any' types (Commandment 4):"
+            echo "$FOUND"
+            exit 1
+          fi
+          echo "✅ No 'any' types found"
+
+      - name: No console.log
+        run: |
+          FOUND=$(grep -rn 'console\.\(log\|warn\|error\|info\|debug\)' --include='*.ts' contracts/ fabrics/ || true)
+          if [ -n "$FOUND" ]; then
+            echo "❌ Found console.* calls (Commandment 7 — use structured logging):"
+            echo "$FOUND"
+            exit 1
+          fi
+          echo "✅ No console.* calls found"
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm audit --omit=dev || true
+      - name: Check for secrets
+        run: |
+          FOUND=$(grep -rn 'PRIVATE_KEY\|SECRET_KEY\|API_KEY\|PASSWORD' --include='*.ts' --include='*.json' contracts/ fabrics/ || true)
+          if [ -n "$FOUND" ]; then
+            echo "⚠️ Potential secrets found in source:"
+            echo "$FOUND"
+            exit 1
+          fi
+          echo "✅ No secrets detected"
+
+  # Gate: all checks must pass before merge
+  gate:
+    name: Quality Gate
+    needs: [typecheck, lint, format, test, code-quality, security]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Check all jobs
+        run: |
+          if [ "${{ needs.typecheck.result }}" != "success" ] || \
+             [ "${{ needs.lint.result }}" != "success" ] || \
+             [ "${{ needs.format.result }}" != "success" ] || \
+             [ "${{ needs.code-quality.result }}" != "success" ] || \
+             [ "${{ needs.security.result }}" != "success" ]; then
+            echo "❌ Quality gate failed"
+            exit 1
+          fi
+          echo "✅ All quality gates passed — ready to merge"

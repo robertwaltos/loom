@@ -1,0 +1,87 @@
+name: Agent PR — Auto-Review
+
+# Triggered on PRs from agent branches
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  classify:
+    name: Classify PR
+    runs-on: ubuntu-latest
+    outputs:
+      thread-type: ${{ steps.parse.outputs.thread-type }}
+      fabric: ${{ steps.parse.outputs.fabric }}
+      auto-merge-eligible: ${{ steps.policy.outputs.eligible }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Parse branch name
+        id: parse
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          THREAD_TYPE=$(echo "$BRANCH" | cut -d'/' -f1)
+          FABRIC=$(echo "$BRANCH" | cut -d'/' -f2)
+          echo "thread-type=$THREAD_TYPE" >> "$GITHUB_OUTPUT"
+          echo "fabric=$FABRIC" >> "$GITHUB_OUTPUT"
+          echo "Thread: $THREAD_TYPE, Fabric: $FABRIC"
+
+      - name: Check auto-merge policy
+        id: policy
+        run: |
+          THREAD="${{ steps.parse.outputs.thread-type }}"
+          FABRIC="${{ steps.parse.outputs.fabric }}"
+
+          # Auto-merge eligible: Swift threads (tests/docs) + non-critical fabrics
+          ELIGIBLE="false"
+          if [ "$THREAD" = "scribe" ]; then
+            ELIGIBLE="true"
+          fi
+
+          # Never auto-merge: contracts, loom-core critical paths
+          if [ "$FABRIC" = "contracts" ] || [ "$FABRIC" = "loom-core" ]; then
+            ELIGIBLE="false"
+          fi
+
+          echo "eligible=$ELIGIBLE" >> "$GITHUB_OUTPUT"
+          echo "Auto-merge eligible: $ELIGIBLE"
+
+  scope-check:
+    name: Scope Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check files stay within fabric
+        run: |
+          BRANCH="${{ github.head_ref }}"
+          FABRIC=$(echo "$BRANCH" | cut -d'/' -f2)
+
+          # Get changed files
+          CHANGED=$(git diff --name-only origin/main...HEAD)
+
+          echo "Expected fabric: $FABRIC"
+          echo "Changed files:"
+          echo "$CHANGED"
+
+          # Check for cross-fabric changes (warning, not blocking)
+          CROSS_FABRIC=$(echo "$CHANGED" | grep -v "^fabrics/$FABRIC/" | grep -v "^contracts/" | grep -v "^\.github/" | grep -v "^package" | grep -v "^tsconfig" || true)
+          if [ -n "$CROSS_FABRIC" ]; then
+            echo "⚠️ Files changed outside assigned fabric ($FABRIC):"
+            echo "$CROSS_FABRIC"
+            echo "::warning::Cross-fabric changes detected. Verify coordination."
+          else
+            echo "✅ All changes within expected fabric scope"
+          fi
+
+      - name: Check contracts not modified
+        run: |
+          CHANGED=$(git diff --name-only origin/main...HEAD)
+          CONTRACT_CHANGES=$(echo "$CHANGED" | grep "^contracts/" || true)
+          if [ -n "$CONTRACT_CHANGES" ]; then
+            echo "🔒 Contract changes detected — requires Weaver approval:"
+            echo "$CONTRACT_CHANGES"
+            echo "::warning::Contract modifications require explicit Weaver approval"
+          fi
