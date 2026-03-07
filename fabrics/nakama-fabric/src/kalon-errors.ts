@@ -14,7 +14,9 @@ export type KalonErrorCode =
   | 'VAULT_DEPLETED'
   | 'WORLD_NOT_REGISTERED'
   | 'WORLD_ALREADY_REGISTERED'
-  | 'INTEGRITY_OUT_OF_RANGE';
+  | 'INTEGRITY_OUT_OF_RANGE'
+  | 'DYNASTY_NOT_FOUND'
+  | 'DYNASTY_ALREADY_EXISTS';
 
 export class KalonError extends Error {
   readonly code: KalonErrorCode;
@@ -92,6 +94,16 @@ export function worldAlreadyRegistered(worldId: string): KalonError {
     `World ${worldId} already registered for issuance`,
     { worldId },
   );
+}
+
+export function dynastyNotFound(dynastyId: string): KalonError {
+  return new KalonError('DYNASTY_NOT_FOUND', `Dynasty ${dynastyId} not found`, { dynastyId });
+}
+
+export function dynastyAlreadyExists(dynastyId: string): KalonError {
+  return new KalonError('DYNASTY_ALREADY_EXISTS', `Dynasty ${dynastyId} already exists`, {
+    dynastyId,
+  });
 }
 
 export function integrityOutOfRange(worldId: string, value: number): KalonError {

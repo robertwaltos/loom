@@ -1,10 +1,10 @@
 /**
- * @loom/nakama-fabric — Identity, economy, matchmaking.
+ * @loom/nakama-fabric — Identity, economy, governance, matchmaking.
  *
- * Currently provides: KALON Ledger (BigInt economy engine),
- * Stellar Standard (world-based issuance), Wealth Zones,
- * UBK, Genesis Vault, World Issuance Service, and
- * Lattice Integrity Service.
+ * Economy: KALON Ledger, Stellar Standard, Wealth Zones, UBK, Genesis Vault,
+ *   World Issuance Service, Lattice Integrity Service.
+ * Identity: Dynasty Registry, Civic Score.
+ * Governance: The Assembly (voting system).
  *
  * Future: Nakama integration for identity, matchmaking, and presence.
  */
@@ -31,6 +31,8 @@ export {
   worldNotRegistered,
   worldAlreadyRegistered,
   integrityOutOfRange,
+  dynastyNotFound,
+  dynastyAlreadyExists,
 } from './kalon-errors.js';
 export { calculateAnnualIssuance, adjustForProductivity } from './stellar-standard.js';
 export type { WorldPhysicalProperties, StellarClass, OrbitalZone } from './stellar-standard.js';
@@ -57,3 +59,26 @@ export type {
   IssuanceResult,
   IssuanceSummary,
 } from './world-issuance.js';
+export { createDynastyRegistry } from './dynasty.js';
+export type {
+  DynastyRegistry,
+  DynastyInfo,
+  DynastyStatus,
+  SubscriptionTier,
+  FoundDynastyParams,
+} from './dynasty.js';
+export { calculateCivicScore } from './civic-score.js';
+export type { CivicScoreInputs, CivicScoreResult } from './civic-score.js';
+export { createAssembly } from './assembly.js';
+export type {
+  Assembly,
+  AssemblyConfig,
+  Motion,
+  MotionStatus,
+  VoteCategory,
+  VoteChoice,
+  VoteRecord,
+  CastVoteParams,
+  TallyResult,
+  ProposeMotionParams,
+} from './assembly.js';
