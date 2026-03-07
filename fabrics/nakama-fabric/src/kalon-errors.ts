@@ -11,7 +11,10 @@ export type KalonErrorCode =
   | 'INVALID_AMOUNT'
   | 'SELF_TRANSFER'
   | 'WEALTH_CAP_EXCEEDED'
-  | 'VAULT_DEPLETED';
+  | 'VAULT_DEPLETED'
+  | 'WORLD_NOT_REGISTERED'
+  | 'WORLD_ALREADY_REGISTERED'
+  | 'INTEGRITY_OUT_OF_RANGE';
 
 export class KalonError extends Error {
   readonly code: KalonErrorCode;
@@ -75,4 +78,26 @@ export function vaultDepleted(vaultName: string, requested: bigint, available: b
     requested: requested.toString(),
     available: available.toString(),
   });
+}
+
+export function worldNotRegistered(worldId: string): KalonError {
+  return new KalonError('WORLD_NOT_REGISTERED', `World ${worldId} not registered for issuance`, {
+    worldId,
+  });
+}
+
+export function worldAlreadyRegistered(worldId: string): KalonError {
+  return new KalonError(
+    'WORLD_ALREADY_REGISTERED',
+    `World ${worldId} already registered for issuance`,
+    { worldId },
+  );
+}
+
+export function integrityOutOfRange(worldId: string, value: number): KalonError {
+  return new KalonError(
+    'INTEGRITY_OUT_OF_RANGE',
+    `Integrity value ${String(value)} out of range [0, 100] for world ${worldId}`,
+    { worldId, value },
+  );
 }

@@ -3,7 +3,8 @@
  *
  * Currently provides: KALON Ledger (BigInt economy engine),
  * Stellar Standard (world-based issuance), Wealth Zones,
- * UBK, and Genesis Vault.
+ * UBK, Genesis Vault, World Issuance Service, and
+ * Lattice Integrity Service.
  *
  * Future: Nakama integration for identity, matchmaking, and presence.
  */
@@ -27,6 +28,9 @@ export {
   selfTransfer,
   wealthCapExceeded,
   vaultDepleted,
+  worldNotRegistered,
+  worldAlreadyRegistered,
+  integrityOutOfRange,
 } from './kalon-errors.js';
 export { calculateAnnualIssuance, adjustForProductivity } from './stellar-standard.js';
 export type { WorldPhysicalProperties, StellarClass, OrbitalZone } from './stellar-standard.js';
@@ -44,3 +48,12 @@ export {
 export type { UbkTier } from './ubk.js';
 export { createGenesisVault, GENESIS_VAULT_RULES } from './genesis-vault.js';
 export type { GenesisVault } from './genesis-vault.js';
+export { createLatticeIntegrityService } from './lattice-integrity.js';
+export type { LatticeIntegrityService, IntegrityChangeResult } from './lattice-integrity.js';
+export { createWorldIssuanceService } from './world-issuance.js';
+export type {
+  WorldIssuanceService,
+  WorldIssuanceDeps,
+  IssuanceResult,
+  IssuanceSummary,
+} from './world-issuance.js';
