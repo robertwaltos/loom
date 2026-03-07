@@ -50,6 +50,19 @@ export type {
   RegisterVesselParams,
   InitiateMissionParams,
 } from './survey-mission.js';
+export { createLatticeCorridorEngine } from './lattice-corridor.js';
+export type {
+  LatticeCorridorEngine,
+  TransitCorridor,
+  CorridorPhase,
+  OpenCorridorParams,
+  CorridorTransition,
+  TransitEvent,
+  LatticeCorridorDeps,
+  CorridorNodePort,
+  CorridorLockPort,
+  CorridorIdGenerator,
+} from './lattice-corridor.js';
 export { WeaveError } from './weave-errors.js';
 export type { WeaveErrorCode } from './weave-errors.js';
 export {
@@ -70,4 +83,9 @@ export {
   missionInvalidPhase,
   worldAlreadySurveyed,
   surveyPriorityDenied,
+  corridorNotFound,
+  corridorAlreadyExists,
+  corridorNoRoute,
+  corridorEntityInTransit,
+  corridorInvalidPhase,
 } from './weave-errors.js';

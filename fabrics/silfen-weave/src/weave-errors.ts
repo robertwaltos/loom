@@ -22,7 +22,12 @@ export type WeaveErrorCode =
   | 'MISSION_NOT_FOUND'
   | 'MISSION_INVALID_PHASE'
   | 'WORLD_ALREADY_SURVEYED'
-  | 'SURVEY_PRIORITY_DENIED';
+  | 'SURVEY_PRIORITY_DENIED'
+  | 'CORRIDOR_NOT_FOUND'
+  | 'CORRIDOR_ALREADY_EXISTS'
+  | 'CORRIDOR_NO_ROUTE'
+  | 'CORRIDOR_ENTITY_IN_TRANSIT'
+  | 'CORRIDOR_INVALID_PHASE';
 
 export class WeaveError extends Error {
   readonly code: WeaveErrorCode;
@@ -139,5 +144,41 @@ export function surveyPriorityDenied(dynastyId: string, priority: string): Weave
     'SURVEY_PRIORITY_DENIED',
     `Dynasty ${dynastyId} has survey priority ${priority} which cannot initiate missions`,
     { dynastyId, priority },
+  );
+}
+
+export function corridorNotFound(corridorId: string): WeaveError {
+  return new WeaveError('CORRIDOR_NOT_FOUND', `Transit corridor ${corridorId} not found`, {
+    corridorId,
+  });
+}
+
+export function corridorAlreadyExists(corridorId: string): WeaveError {
+  return new WeaveError('CORRIDOR_ALREADY_EXISTS', `Transit corridor ${corridorId} already exists`, {
+    corridorId,
+  });
+}
+
+export function corridorNoRoute(originId: string, destinationId: string): WeaveError {
+  return new WeaveError(
+    'CORRIDOR_NO_ROUTE',
+    `No registered route from ${originId} to ${destinationId}`,
+    { originId, destinationId },
+  );
+}
+
+export function corridorEntityInTransit(entityId: string): WeaveError {
+  return new WeaveError(
+    'CORRIDOR_ENTITY_IN_TRANSIT',
+    `Entity ${entityId} already has an active transit corridor`,
+    { entityId },
+  );
+}
+
+export function corridorInvalidPhase(corridorId: string, current: string, expected: string): WeaveError {
+  return new WeaveError(
+    'CORRIDOR_INVALID_PHASE',
+    `Corridor ${corridorId} is in phase ${current}, expected ${expected}`,
+    { corridorId, current, expected },
   );
 }
