@@ -170,3 +170,13 @@ export type {
   VoteCompleteEvent,
   VoteConsequenceResult,
 } from './consequence-engine.js';
+export { createCommonsFund, COMMONS_ACCOUNT_ID } from './commons-fund.js';
+export type {
+  CommonsFund,
+  CommonsFundDeps,
+  CommonsLedgerPort,
+  CommonsDynastyPort,
+  CommonsWorldPort,
+  UbkDistributionResult,
+  CommonsFundSummary,
+} from './commons-fund.js';
