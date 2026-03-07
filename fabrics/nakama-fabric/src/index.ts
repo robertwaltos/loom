@@ -180,3 +180,16 @@ export type {
   UbkDistributionResult,
   CommonsFundSummary,
 } from './commons-fund.js';
+export { createDynastyMortalityOrchestrator } from './dynasty-mortality.js';
+export type {
+  DynastyMortalityOrchestrator,
+  DynastyMortalityDeps,
+  MortalityContinuityPort,
+  MortalityDynastyPort,
+  MortalityAuctionPort,
+  MortalityPhaseResult,
+  MortalityChroniclePort,
+  MortalityChronicleEntry,
+  MortalityIdGenerator,
+  MortalityTickResult,
+} from './dynasty-mortality.js';
