@@ -19,3 +19,5 @@ export type { HashInput } from './chronicle-hasher.js';
 export { ChronicleError } from './chronicle-errors.js';
 export type { ChronicleErrorCode } from './chronicle-errors.js';
 export { entryNotFound, chainIntegrityViolated, archiveSealed } from './chronicle-errors.js';
+export { calculateChronicleDepth, DEFAULT_DEPTH_CONFIG } from './depth-scoring.js';
+export type { DepthScoringConfig, DepthScore } from './depth-scoring.js';

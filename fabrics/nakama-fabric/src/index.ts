@@ -107,3 +107,16 @@ export type {
   TallyResult,
   ProposeMotionParams,
 } from './assembly.js';
+export {
+  createContinuityBondEngine,
+  BASE_BONDS,
+  MAX_BONDS,
+  CHRONICLE_ENTRIES_PER_BOND,
+  MAX_GOVERNANCE_BOND_VOTES,
+} from './continuity-bonds.js';
+export type {
+  ContinuityBondEngine,
+  ContinuityBondRecord,
+  BondSpend,
+  EarnBondsParams,
+} from './continuity-bonds.js';
