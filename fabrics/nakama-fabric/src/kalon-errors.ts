@@ -16,7 +16,12 @@ export type KalonErrorCode =
   | 'WORLD_ALREADY_REGISTERED'
   | 'INTEGRITY_OUT_OF_RANGE'
   | 'DYNASTY_NOT_FOUND'
-  | 'DYNASTY_ALREADY_EXISTS';
+  | 'DYNASTY_ALREADY_EXISTS'
+  | 'MORTALITY_RECORD_NOT_FOUND'
+  | 'MORTALITY_RECORD_ALREADY_EXISTS'
+  | 'MORTALITY_INVALID_TRANSITION'
+  | 'HEIR_NOT_REGISTERED'
+  | 'MORTALITY_TERMINAL_STATE';
 
 export class KalonError extends Error {
   readonly code: KalonErrorCode;
@@ -111,5 +116,47 @@ export function integrityOutOfRange(worldId: string, value: number): KalonError 
     'INTEGRITY_OUT_OF_RANGE',
     `Integrity value ${String(value)} out of range [0, 100] for world ${worldId}`,
     { worldId, value },
+  );
+}
+
+export function mortalityRecordNotFound(dynastyId: string): KalonError {
+  return new KalonError('MORTALITY_RECORD_NOT_FOUND', `Mortality record for ${dynastyId} not found`, {
+    dynastyId,
+  });
+}
+
+export function mortalityRecordAlreadyExists(dynastyId: string): KalonError {
+  return new KalonError(
+    'MORTALITY_RECORD_ALREADY_EXISTS',
+    `Mortality record for ${dynastyId} already exists`,
+    { dynastyId },
+  );
+}
+
+export function mortalityInvalidTransition(
+  dynastyId: string,
+  from: string,
+  to: string,
+): KalonError {
+  return new KalonError(
+    'MORTALITY_INVALID_TRANSITION',
+    `Invalid mortality transition for ${dynastyId}: ${from} → ${to}`,
+    { dynastyId, from, to },
+  );
+}
+
+export function heirNotRegistered(dynastyId: string, heirDynastyId: string): KalonError {
+  return new KalonError(
+    'HEIR_NOT_REGISTERED',
+    `Heir ${heirDynastyId} not registered for dynasty ${dynastyId}`,
+    { dynastyId, heirDynastyId },
+  );
+}
+
+export function mortalityTerminalState(dynastyId: string, state: string): KalonError {
+  return new KalonError(
+    'MORTALITY_TERMINAL_STATE',
+    `Dynasty ${dynastyId} is in terminal state: ${state}`,
+    { dynastyId, state },
   );
 }

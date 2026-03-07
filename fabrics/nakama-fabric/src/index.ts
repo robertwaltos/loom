@@ -33,6 +33,11 @@ export {
   integrityOutOfRange,
   dynastyNotFound,
   dynastyAlreadyExists,
+  mortalityRecordNotFound,
+  mortalityRecordAlreadyExists,
+  mortalityInvalidTransition,
+  heirNotRegistered,
+  mortalityTerminalState,
 } from './kalon-errors.js';
 export { calculateAnnualIssuance, adjustForProductivity } from './stellar-standard.js';
 export type { WorldPhysicalProperties, StellarClass, OrbitalZone } from './stellar-standard.js';
@@ -67,6 +72,26 @@ export type {
   SubscriptionTier,
   FoundDynastyParams,
 } from './dynasty.js';
+export { createMortalityEngine } from './dynasty-mortality.js';
+export type {
+  MortalityEngine,
+  MortalityRecord,
+  MortalityState,
+  MortalityTransition,
+} from './dynasty-mortality.js';
+export { createEstateAuctionEngine } from './estate-dispersal.js';
+export type {
+  EstateAuctionEngine,
+  EstateAuction,
+  AuctionLot,
+  AuctionPhase,
+  LotCategory,
+  LotStatus,
+  Bid,
+  PhaseTransition,
+  AddLotParams,
+  PlaceBidParams,
+} from './estate-dispersal.js';
 export { calculateCivicScore } from './civic-score.js';
 export type { CivicScoreInputs, CivicScoreResult } from './civic-score.js';
 export { createAssembly } from './assembly.js';
