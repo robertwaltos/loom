@@ -3,7 +3,8 @@
  *
  * Metrics Registry: In-process counters, gauges, and histograms.
  * Health Check Engine: Fabric and subsystem health monitoring.
- * Future: Alerting, quality gates, perceptual testing.
+ * Alerting Engine: Threshold-based metric alerts with cooldown.
+ * Future: Quality gates, perceptual testing.
  */
 
 export { createMetricsRegistry } from './metrics-registry.js';
@@ -27,3 +28,16 @@ export type {
   HealthReport,
   ProbeReport,
 } from './health-check.js';
+export { createAlertingEngine } from './alerting-engine.js';
+export type {
+  AlertingEngine,
+  AlertingDeps,
+  AlertRule,
+  AlertStatus,
+  AlertNotification,
+  AlertSeverity,
+  AlertState,
+  ThresholdDirection,
+  MetricValueProvider,
+  AlertCallback,
+} from './alerting-engine.js';
