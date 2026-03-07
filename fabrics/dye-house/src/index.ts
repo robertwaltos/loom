@@ -3,7 +3,8 @@
  *
  * Token Vault: Session token lifecycle management.
  * Rate Limiter: Sliding window rate control per identity per action.
- * Future: Encryption services, permission gates.
+ * Permission Gate: Action authorization based on tier, status, and custom rules.
+ * Future: Encryption services.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -25,3 +26,15 @@ export type {
   RateLimitRule,
   RateLimitCheck,
 } from './rate-limiter.js';
+export { createPermissionGate } from './permission-gate.js';
+export type {
+  PermissionGate,
+  PermissionGateDeps,
+  PermissionRule,
+  PermissionSubject,
+  PermissionVerdict,
+  SubscriptionTierGate,
+  DynastyStatusGate,
+  CustomPredicate,
+  PredicateResult,
+} from './permission-gate.js';
