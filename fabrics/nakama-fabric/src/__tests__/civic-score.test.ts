@@ -12,6 +12,7 @@ function emptyInputs(): CivicScoreInputs {
     totalKalonSupply: SUPPLY,
     votesParticipated: 0,
     motionsProposed: 0,
+    marksCount: 0,
   };
 }
 
@@ -86,5 +87,58 @@ describe('Civic Score voting weight', () => {
       motionsProposed: 10,
     });
     expect(high.votingWeight).toBeGreaterThan(low.votingWeight);
+  });
+});
+
+describe('Civic Score MARKS multiplier', () => {
+  it('returns 1.0 multiplier with zero marks', () => {
+    const result = calculateCivicScore(emptyInputs());
+    expect(result.marksMultiplier).toBe(1.0);
+  });
+
+  it('applies 15% per mark to total score', () => {
+    const base = calculateCivicScore({
+      ...emptyInputs(),
+      chronicleEntryCount: 100,
+      marksCount: 0,
+    });
+    const withMarks = calculateCivicScore({
+      ...emptyInputs(),
+      chronicleEntryCount: 100,
+      marksCount: 2,
+    });
+    expect(withMarks.marksMultiplier).toBeCloseTo(1.3, 10);
+    expect(withMarks.totalScore).toBeGreaterThan(base.totalScore);
+  });
+
+  it('marks boost voting weight', () => {
+    const base = calculateCivicScore({
+      ...emptyInputs(),
+      chronicleEntryCount: 50,
+      kalonBalance: kalonToMicro(1000n),
+      votesParticipated: 10,
+      marksCount: 0,
+    });
+    const boosted = calculateCivicScore({
+      ...emptyInputs(),
+      chronicleEntryCount: 50,
+      kalonBalance: kalonToMicro(1000n),
+      votesParticipated: 10,
+      marksCount: 5,
+    });
+    expect(boosted.marksMultiplier).toBeCloseTo(1.75, 10);
+    expect(boosted.votingWeight).toBeGreaterThan(base.votingWeight);
+  });
+
+  it('total score clamped at MAX_SCORE even with many marks', () => {
+    const result = calculateCivicScore({
+      ...emptyInputs(),
+      chronicleEntryCount: 1000,
+      kalonBalance: kalonToMicro(100_000_000n),
+      votesParticipated: 100,
+      motionsProposed: 10,
+      marksCount: 20,
+    });
+    expect(result.totalScore).toBeLessThanOrEqual(10000);
   });
 });

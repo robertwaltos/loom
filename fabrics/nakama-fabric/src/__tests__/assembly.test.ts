@@ -22,6 +22,7 @@ function activeScore(): CivicScoreResult {
     totalKalonSupply: SUPPLY,
     votesParticipated: 20,
     motionsProposed: 3,
+    marksCount: 0,
   });
 }
 
@@ -32,6 +33,7 @@ function wealthyScore(): CivicScoreResult {
     totalKalonSupply: SUPPLY,
     votesParticipated: 50,
     motionsProposed: 10,
+    marksCount: 0,
   });
 }
 

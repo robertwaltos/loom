@@ -136,3 +136,12 @@ export type {
   SurveyPriority,
   ArchitectAccess,
 } from './subscription-tiers.js';
+export { createMarksRegistry, MARK_SUPPLY_CAPS, MarkError } from './marks-registry.js';
+export type {
+  MarksRegistry,
+  Mark,
+  MarkType,
+  AwardMarkParams,
+  MarkErrorCode,
+  MarksRegistryDeps,
+} from './marks-registry.js';

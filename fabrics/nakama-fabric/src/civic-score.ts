@@ -21,6 +21,8 @@ export interface CivicScoreInputs {
   readonly totalKalonSupply: bigint;
   readonly votesParticipated: number;
   readonly motionsProposed: number;
+  /** Number of MARKS held by the dynasty. Multiplier: 1 + count * 0.15 */
+  readonly marksCount: number;
 }
 
 export interface CivicScoreResult {
@@ -28,6 +30,7 @@ export interface CivicScoreResult {
   readonly chronicleComponent: number;
   readonly economicComponent: number;
   readonly civicComponent: number;
+  readonly marksMultiplier: number;
   readonly votingWeight: number;
 }
 
@@ -49,12 +52,17 @@ const CIVIC_MOTION_SCALE = 10;
 /** Dignity floor: minimum voting weight (1/1000) */
 const DIGNITY_FLOOR_WEIGHT = 0.001;
 
+/** Bible v1.1 Part 6: Each MARK adds 15% to civic score. */
+const MARKS_MULTIPLIER_PER_MARK = 0.15;
+
 export function calculateCivicScore(inputs: CivicScoreInputs): CivicScoreResult {
   const chronicleComponent = computeChronicleScore(inputs.chronicleEntryCount);
   const economicComponent = computeEconomicScore(inputs.kalonBalance, inputs.totalKalonSupply);
   const civicComponent = computeCivicContribution(inputs.votesParticipated, inputs.motionsProposed);
 
-  const totalScore = weightedSum(chronicleComponent, economicComponent, civicComponent);
+  const baseScore = weightedSum(chronicleComponent, economicComponent, civicComponent);
+  const marksMultiplier = 1 + inputs.marksCount * MARKS_MULTIPLIER_PER_MARK;
+  const totalScore = clampScore(Math.floor(baseScore * marksMultiplier));
   const votingWeight = scoreToVotingWeight(totalScore);
 
   return {
@@ -62,6 +70,7 @@ export function calculateCivicScore(inputs: CivicScoreInputs): CivicScoreResult 
     chronicleComponent,
     economicComponent,
     civicComponent,
+    marksMultiplier,
     votingWeight,
   };
 }
