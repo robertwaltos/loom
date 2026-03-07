@@ -7,6 +7,7 @@
  *
  * Lattice Nodes: Topology, frequency signatures, resonance beacons.
  * Frequency Locks: Transit state machine, coherence tracking.
+ * Transit Anomaly Detector: Coherence pattern analysis, spoofing detection.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -63,6 +64,17 @@ export type {
   CorridorLockPort,
   CorridorIdGenerator,
 } from './lattice-corridor.js';
+export { createTransitAnomalyDetector, DEFAULT_ANOMALY_CONFIG } from './transit-anomaly.js';
+export type {
+  TransitAnomalyDetector,
+  TransitAnomaly,
+  AnomalyType,
+  AnomalySeverity,
+  AnomalyDetectorConfig,
+  AnomalyDetectorDeps,
+  AnomalyIdGenerator,
+  AnomalyCallback,
+} from './transit-anomaly.js';
 export { WeaveError } from './weave-errors.js';
 export type { WeaveErrorCode } from './weave-errors.js';
 export {
