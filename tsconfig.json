@@ -26,6 +26,7 @@
     { "path": "./contracts/events" },
     { "path": "./contracts/entities" },
     { "path": "./contracts/protocols" },
+    { "path": "./contracts/design" },
     { "path": "./fabrics/loom-core" },
     { "path": "./fabrics/shuttle" },
     { "path": "./fabrics/silfen-weave" },
