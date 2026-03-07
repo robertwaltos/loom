@@ -2,8 +2,6 @@ import { describe, it, expect } from 'vitest';
 import {
   KALON_DECIMALS,
   MICRO_KALON_PER_KALON,
-  TOTAL_SUPPLY_KALON,
-  TOTAL_SUPPLY_MICRO,
   kalonToMicro,
   microToKalonString,
 } from '../kalon-constants.js';
@@ -12,11 +10,6 @@ describe('KALON constants', () => {
   it('has 6 decimal places', () => {
     expect(KALON_DECIMALS).toBe(6);
     expect(MICRO_KALON_PER_KALON).toBe(1_000_000n);
-  });
-
-  it('has fixed supply of 1 billion', () => {
-    expect(TOTAL_SUPPLY_KALON).toBe(1_000_000_000n);
-    expect(TOTAL_SUPPLY_MICRO).toBe(1_000_000_000_000_000n);
   });
 });
 

@@ -1,10 +1,17 @@
 import { describe, it, expect } from 'vitest';
 import { createKalonLedger } from '../kalon-ledger.js';
-import { kalonToMicro, TOTAL_SUPPLY_MICRO } from '../kalon-constants.js';
+import { kalonToMicro } from '../kalon-constants.js';
 
 function createTestLedger() {
   return createKalonLedger({ clock: { nowMicroseconds: () => 1_000_000 } });
 }
+
+/**
+ * Structural cap = 0.050% of totalMinted = 500 ppm.
+ * Mint large supply so small transfers stay within cap.
+ * 10M KALON minted → cap = 5000 KALON per account.
+ */
+const LARGE_SUPPLY = kalonToMicro(10_000_000n);
 
 describe('KalonLedger accounts', () => {
   it('creates accounts with zero balance', () => {
@@ -48,12 +55,12 @@ describe('KalonLedger minting', () => {
     expect(ledger.getBalance('treasury')).toBe(kalonToMicro(1000n));
   });
 
-  it('rejects minting beyond supply cap', () => {
+  it('tracks total minted across multiple mints', () => {
     const ledger = createTestLedger();
     ledger.createAccount('treasury');
-    expect(() => {
-      ledger.mint('treasury', TOTAL_SUPPLY_MICRO + 1n);
-    }).toThrow('supply');
+    ledger.mint('treasury', kalonToMicro(1000n));
+    ledger.mint('treasury', kalonToMicro(2000n));
+    expect(ledger.totalMinted()).toBe(kalonToMicro(3000n));
   });
 
   it('rejects minting zero or negative', () => {
@@ -70,14 +77,14 @@ describe('KalonLedger transfers', () => {
     const ledger = createTestLedger();
     ledger.createAccount('alice');
     ledger.createAccount('bob');
-    ledger.mint('alice', kalonToMicro(10_000n));
+    ledger.mint('alice', LARGE_SUPPLY);
 
     const result = ledger.transfer('alice', 'bob', kalonToMicro(1000n));
 
     expect(result.grossAmount).toBe(kalonToMicro(1000n));
     expect(result.levy).toBeGreaterThan(0n);
     expect(result.netAmount).toBe(result.grossAmount - result.levy);
-    expect(result.senderBalance).toBeLessThan(kalonToMicro(10_000n));
+    expect(result.senderBalance).toBeLessThan(LARGE_SUPPLY);
     expect(result.recipientBalance).toBe(result.netAmount);
   });
 
@@ -85,7 +92,7 @@ describe('KalonLedger transfers', () => {
     const ledger = createTestLedger();
     ledger.createAccount('alice');
     ledger.createAccount('bob');
-    ledger.mint('alice', kalonToMicro(10_000n));
+    ledger.mint('alice', LARGE_SUPPLY);
 
     const result = ledger.transfer('alice', 'bob', kalonToMicro(1000n));
     expect(ledger.commonsFundBalance()).toBe(result.levy);
@@ -120,15 +127,40 @@ describe('KalonLedger transfers', () => {
   });
 });
 
+describe('KalonLedger wealth cap enforcement', () => {
+  it('enforces structural cap on transfers', () => {
+    const ledger = createTestLedger();
+    ledger.createAccount('whale');
+    ledger.createAccount('receiver');
+
+    ledger.mint('whale', LARGE_SUPPLY);
+    ledger.mint('receiver', kalonToMicro(4999n));
+
+    expect(() => {
+      ledger.transfer('whale', 'receiver', kalonToMicro(100n));
+    }).toThrow('wealth cap');
+  });
+
+  it('allows transfers within the structural cap', () => {
+    const ledger = createTestLedger();
+    ledger.createAccount('sender');
+    ledger.createAccount('receiver');
+    ledger.mint('sender', LARGE_SUPPLY);
+
+    const result = ledger.transfer('sender', 'receiver', kalonToMicro(1n));
+    expect(result.recipientBalance).toBeGreaterThan(0n);
+  });
+});
+
 describe('KalonLedger queries', () => {
   it('reports total circulating supply', () => {
     const ledger = createTestLedger();
     ledger.createAccount('alice');
     ledger.createAccount('bob');
-    ledger.mint('alice', kalonToMicro(5000n));
+    ledger.mint('alice', LARGE_SUPPLY);
 
     ledger.transfer('alice', 'bob', kalonToMicro(1000n));
-    expect(ledger.totalCirculating()).toBe(kalonToMicro(5000n));
+    expect(ledger.totalCirculating()).toBe(LARGE_SUPPLY);
   });
 
   it('lists all accounts', () => {

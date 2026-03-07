@@ -10,8 +10,8 @@ export type KalonErrorCode =
   | 'ACCOUNT_ALREADY_EXISTS'
   | 'INVALID_AMOUNT'
   | 'SELF_TRANSFER'
-  | 'SUPPLY_EXCEEDED'
-  | 'WEALTH_CAP_EXCEEDED';
+  | 'WEALTH_CAP_EXCEEDED'
+  | 'VAULT_DEPLETED';
 
 export class KalonError extends Error {
   readonly code: KalonErrorCode;
@@ -61,17 +61,18 @@ export function selfTransfer(accountId: string): KalonError {
   });
 }
 
-export function supplyExceeded(total: bigint, max: bigint): KalonError {
-  return new KalonError('SUPPLY_EXCEEDED', 'KALON supply would exceed fixed cap', {
-    total: total.toString(),
-    max: max.toString(),
-  });
-}
-
 export function wealthCapExceeded(accountId: string, balance: bigint, cap: bigint): KalonError {
   return new KalonError('WEALTH_CAP_EXCEEDED', `Account ${accountId} would exceed wealth cap`, {
     accountId,
     balance: balance.toString(),
     cap: cap.toString(),
+  });
+}
+
+export function vaultDepleted(vaultName: string, requested: bigint, available: bigint): KalonError {
+  return new KalonError('VAULT_DEPLETED', `${vaultName} has insufficient KALON`, {
+    vaultName,
+    requested: requested.toString(),
+    available: available.toString(),
   });
 }

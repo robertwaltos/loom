@@ -1,7 +1,9 @@
 /**
  * KALON Ledger — The economy's double-entry accounting engine.
  *
- * Fixed supply: 1 billion KALON. All math in BigInt micro-KALON.
+ * Bible v1.2 Stellar Standard: supply is dynamic, growing as
+ * worlds are unlocked. The ledger tracks totalMinted and
+ * enforces the structural wealth cap (0.050% of total supply).
  * Every transfer deducts a progressive levy into the Commons Fund.
  * No floating point ever touches the ledger.
  */
@@ -12,10 +14,10 @@ import {
   insufficientBalance,
   invalidAmount,
   selfTransfer,
-  supplyExceeded,
+  wealthCapExceeded,
 } from './kalon-errors.js';
-import { TOTAL_SUPPLY_MICRO } from './kalon-constants.js';
 import { calculateLevy } from './kalon-levy.js';
+import { structuralCapAmount } from './wealth-zones.js';
 
 export interface AccountInfo {
   readonly accountId: string;
@@ -39,6 +41,7 @@ export interface KalonLedger {
   transfer(from: string, to: string, amount: bigint): TransferResult;
   mint(accountId: string, amount: bigint): void;
   accountExists(accountId: string): boolean;
+  totalMinted(): bigint;
   totalCirculating(): bigint;
   commonsFundBalance(): bigint;
   listAccounts(): ReadonlyArray<AccountInfo>;
@@ -78,6 +81,7 @@ export function createKalonLedger(deps: {
       mintImpl(state, id, amount);
     },
     accountExists: (id) => state.accounts.has(id),
+    totalMinted: () => state.totalMinted,
     totalCirculating: () => computeCirculating(state),
     commonsFundBalance: () => state.commonsFund,
     listAccounts: () => [...state.accounts.values()],
@@ -109,9 +113,10 @@ function transferImpl(
 
   const sender = getAccount(state, from);
   const recipient = getAccount(state, to);
-  const levy = calculateLevy(amount, sender.balance);
+  const levy = calculateLevy(amount, sender.balance, state.totalMinted);
   const netAmount = amount - levy;
 
+  enforceWealthCap(recipient, netAmount, state.totalMinted);
   sender.balance -= amount;
   recipient.balance += netAmount;
   state.commonsFund += levy;
@@ -130,12 +135,16 @@ function validateTransfer(state: LedgerState, from: string, to: string, amount: 
 
 function mintImpl(state: LedgerState, accountId: string, amount: bigint): void {
   if (amount <= 0n) throw invalidAmount(amount);
-  const newTotal = state.totalMinted + amount;
-  if (newTotal > TOTAL_SUPPLY_MICRO) throw supplyExceeded(newTotal, TOTAL_SUPPLY_MICRO);
-
   const account = getAccount(state, accountId);
   account.balance += amount;
-  state.totalMinted = newTotal;
+  state.totalMinted += amount;
+}
+
+function enforceWealthCap(recipient: MutableAccount, incoming: bigint, totalSupply: bigint): void {
+  if (totalSupply <= 0n) return;
+  const cap = structuralCapAmount(totalSupply);
+  const projected = recipient.balance + incoming;
+  if (projected > cap) throw wealthCapExceeded(recipient.accountId, projected, cap);
 }
 
 function getAccount(state: LedgerState, accountId: string): MutableAccount {
