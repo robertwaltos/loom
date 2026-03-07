@@ -1,7 +1,85 @@
 /**
- * @loom/selvage
+ * @loom/selvage — API Gateway & Network Interface
  *
- * TODO: Implementation pending
+ * The Selvage is the outer edge of the fabric. It handles all
+ * external communication: WebSocket connections, protocol
+ * serialization, client lifecycle, and snapshot distribution.
+ *
+ * Architecture: Ports & Adapters. The selvage defines ports for
+ * what it needs from The Loom (entity queries, player spawning)
+ * and exposes a NetworkServer that any transport can drive.
  */
 
-export {};
+// Protocol types
+export type {
+  ClientHello,
+  ServerWelcome,
+  ClientInput,
+  InputAction,
+  ServerSnapshot,
+  EntityUpdate,
+  EntitySpawnMessage,
+  EntityDespawnMessage,
+  SystemMessage,
+  ServerDisconnect,
+  ClientMessage,
+  ServerMessage,
+} from './server-protocol.js';
+export {
+  PROTOCOL_VERSION,
+  MAX_INPUT_ACTIONS_PER_MESSAGE,
+  MAX_MESSAGE_SIZE_BYTES,
+  isClientHello,
+  isClientInput,
+} from './server-protocol.js';
+
+// Connection types
+export type { ConnectionInfo, ConnectionState } from './connection.js';
+
+// Connection manager
+export type {
+  ConnectionManager,
+  PlayerEntityPort,
+  ClockPort,
+  IdPort,
+  LogPort,
+  HandshakeResult,
+  DisconnectResult,
+} from './connection-manager.js';
+export { createConnectionManager } from './connection-manager.js';
+
+// Snapshot builder
+export type {
+  SnapshotBuilder,
+  EntityQueryPort,
+  ComponentQueryPort,
+  SnapshotEntity,
+} from './snapshot-builder.js';
+export { createSnapshotBuilder } from './snapshot-builder.js';
+
+// Message codec
+export type { MessageCodec } from './message-codec.js';
+export { createJsonCodec } from './message-codec.js';
+
+// Network server
+export type {
+  NetworkServer,
+  TransportPort,
+  ConnectionHandler,
+  TransportHandlers,
+} from './network-server.js';
+export { createNetworkServer } from './network-server.js';
+
+// Errors
+export type { SelvageErrorCode } from './selvage-errors.js';
+export {
+  SelvageError,
+  connectionNotFound,
+  duplicateClientId,
+  connectionNotActive,
+  handshakeAlreadyComplete,
+  invalidMessage,
+  protocolVersionMismatch,
+  messageTooLarge,
+  rateLimited,
+} from './selvage-errors.js';
