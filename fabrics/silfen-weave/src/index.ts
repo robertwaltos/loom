@@ -1,7 +1,49 @@
 /**
- * @loom/silfen-weave
+ * @loom/silfen-weave — Seamless world transition orchestration.
  *
- * TODO: Implementation pending
+ * The Silfen Weave is the lattice connecting all worlds in The Loom.
+ * Transit between worlds requires establishing frequency locks between
+ * lattice nodes, with coherence thresholds gating progression.
+ *
+ * Lattice Nodes: Topology, frequency signatures, resonance beacons.
+ * Frequency Locks: Transit state machine, coherence tracking.
  */
 
-export {};
+export { createLatticeNodeRegistry } from './lattice-node.js';
+export type {
+  LatticeNodeRegistry,
+  LatticeNode,
+  LatticeRoute,
+  FrequencySignature,
+  ResonanceBeacon,
+  BeaconStatus,
+  PrecisionRating,
+  RegisterNodeParams,
+} from './lattice-node.js';
+export {
+  createFrequencyLockEngine,
+  calculateLockDurationUs,
+  COHERENCE_PARTIAL,
+  COHERENCE_CRITICAL,
+  COHERENCE_TRANSIT,
+} from './frequency-lock.js';
+export type {
+  FrequencyLockEngine,
+  FrequencyLock,
+  LockStatus,
+  LockTransition,
+  InitiateLockParams,
+} from './frequency-lock.js';
+export { WeaveError } from './weave-errors.js';
+export type { WeaveErrorCode } from './weave-errors.js';
+export {
+  nodeNotFound,
+  nodeAlreadyExists,
+  routeNotFound,
+  lockNotFound,
+  lockAlreadyExists,
+  lockInvalidTransition,
+  coherenceOutOfRange,
+  beaconInvalidStatus,
+  transitFailed,
+} from './weave-errors.js';
