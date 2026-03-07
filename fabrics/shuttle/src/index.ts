@@ -31,3 +31,9 @@ export type {
   ShadowEconomyConfig,
   ShadowEconomyDeps,
 } from './world-shadow-economy.js';
+export { createWorldPopulationEngine, TIER_QUOTAS } from './world-population.js';
+export type {
+  WorldPopulationEngine,
+  WorldPopulationState,
+  PopulationDelta,
+} from './world-population.js';
