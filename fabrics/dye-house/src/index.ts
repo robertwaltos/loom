@@ -4,6 +4,7 @@
  * Token Vault: Session token lifecycle management.
  * Rate Limiter: Sliding window rate control per identity per action.
  * Permission Gate: Action authorization based on tier, status, and custom rules.
+ * Audit Log: Security event recording and forensic analysis.
  * Future: Encryption services.
  *
  * "Every thread entering The Loom must pass through the Dye House."
@@ -38,3 +39,15 @@ export type {
   CustomPredicate,
   PredicateResult,
 } from './permission-gate.js';
+export { createAuditLog } from './audit-log.js';
+export type {
+  AuditLog,
+  AuditLogDeps,
+  AuditEntry,
+  AuditSeverity,
+  AuditCategory,
+  RecordAuditParams,
+  AuditFilter,
+  AuditStats,
+  AuditIdGenerator,
+} from './audit-log.js';
