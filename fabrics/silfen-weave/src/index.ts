@@ -34,6 +34,22 @@ export type {
   LockTransition,
   InitiateLockParams,
 } from './frequency-lock.js';
+export {
+  createSurveyMissionEngine,
+  calculateTransitDurationUs,
+  SURVEY_CONSTANTS,
+} from './survey-mission.js';
+export type {
+  SurveyMissionEngine,
+  SurveyMission,
+  SurveyVessel,
+  SurveyPriority,
+  VesselStatus,
+  MissionPhase,
+  MissionPhaseTransition,
+  RegisterVesselParams,
+  InitiateMissionParams,
+} from './survey-mission.js';
 export { WeaveError } from './weave-errors.js';
 export type { WeaveErrorCode } from './weave-errors.js';
 export {
@@ -46,4 +62,12 @@ export {
   coherenceOutOfRange,
   beaconInvalidStatus,
   transitFailed,
+  vesselNotFound,
+  vesselAlreadyExists,
+  vesselInsufficientFuel,
+  vesselNotDocked,
+  missionNotFound,
+  missionInvalidPhase,
+  worldAlreadySurveyed,
+  surveyPriorityDenied,
 } from './weave-errors.js';

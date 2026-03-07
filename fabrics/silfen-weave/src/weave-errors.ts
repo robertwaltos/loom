@@ -14,7 +14,15 @@ export type WeaveErrorCode =
   | 'LOCK_INVALID_TRANSITION'
   | 'COHERENCE_OUT_OF_RANGE'
   | 'BEACON_INVALID_STATUS'
-  | 'TRANSIT_FAILED';
+  | 'TRANSIT_FAILED'
+  | 'VESSEL_NOT_FOUND'
+  | 'VESSEL_ALREADY_EXISTS'
+  | 'VESSEL_INSUFFICIENT_FUEL'
+  | 'VESSEL_NOT_DOCKED'
+  | 'MISSION_NOT_FOUND'
+  | 'MISSION_INVALID_PHASE'
+  | 'WORLD_ALREADY_SURVEYED'
+  | 'SURVEY_PRIORITY_DENIED';
 
 export class WeaveError extends Error {
   readonly code: WeaveErrorCode;
@@ -82,4 +90,54 @@ export function transitFailed(lockId: string, reason: string): WeaveError {
     lockId,
     reason,
   });
+}
+
+export function vesselNotFound(vesselId: string): WeaveError {
+  return new WeaveError('VESSEL_NOT_FOUND', `Survey vessel ${vesselId} not found`, { vesselId });
+}
+
+export function vesselAlreadyExists(vesselId: string): WeaveError {
+  return new WeaveError('VESSEL_ALREADY_EXISTS', `Survey vessel ${vesselId} already exists`, {
+    vesselId,
+  });
+}
+
+export function vesselInsufficientFuel(vesselId: string, required: number): WeaveError {
+  return new WeaveError(
+    'VESSEL_INSUFFICIENT_FUEL',
+    `Vessel ${vesselId} has insufficient fuel (needs ${required.toFixed(2)})`,
+    { vesselId, required },
+  );
+}
+
+export function vesselNotDocked(vesselId: string): WeaveError {
+  return new WeaveError('VESSEL_NOT_DOCKED', `Vessel ${vesselId} is not docked`, { vesselId });
+}
+
+export function missionNotFound(missionId: string): WeaveError {
+  return new WeaveError('MISSION_NOT_FOUND', `Survey mission ${missionId} not found`, {
+    missionId,
+  });
+}
+
+export function missionInvalidPhase(missionId: string, current: string, expected: string): WeaveError {
+  return new WeaveError(
+    'MISSION_INVALID_PHASE',
+    `Mission ${missionId} is in phase ${current}, expected ${expected}`,
+    { missionId, current, expected },
+  );
+}
+
+export function worldAlreadySurveyed(worldId: string): WeaveError {
+  return new WeaveError('WORLD_ALREADY_SURVEYED', `World ${worldId} has already been surveyed`, {
+    worldId,
+  });
+}
+
+export function surveyPriorityDenied(dynastyId: string, priority: string): WeaveError {
+  return new WeaveError(
+    'SURVEY_PRIORITY_DENIED',
+    `Dynasty ${dynastyId} has survey priority ${priority} which cannot initiate missions`,
+    { dynastyId, priority },
+  );
 }
