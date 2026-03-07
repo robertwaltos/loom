@@ -1,7 +1,8 @@
 /**
  * @loom/shuttle — AI agent orchestration (Temporal workflows).
  *
- * Currently provides: NPC Tier System (classification and capability rules).
+ * NPC Tier System: Classification and capability rules for AI agents.
+ * World Shadow Economy: Per-world NPC commodity layer and prosperity.
  * Future: Temporal workflow integration, LLM orchestration, memory services.
  */
 
@@ -21,3 +22,12 @@ export type {
   AiBackend,
   MemoryModel,
 } from './npc-tiers.js';
+export { createWorldShadowEconomy, DEFAULT_SHADOW_CONFIG } from './world-shadow-economy.js';
+export type {
+  WorldShadowEconomy,
+  CommodityType,
+  CommodityState,
+  UnrestEvent,
+  ShadowEconomyConfig,
+  ShadowEconomyDeps,
+} from './world-shadow-economy.js';
