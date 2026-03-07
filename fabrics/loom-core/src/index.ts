@@ -2,7 +2,8 @@
  * @loom/loom-core — The central nervous system of The Loom.
  *
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
- * System Registry, Tick Loop. All inter-module communication flows through here.
+ * System Registry, Tick Loop, Entity Query Engine.
+ * All inter-module communication flows through here.
  */
 
 export { createLoomCore } from './loom-core.js';
@@ -26,6 +27,18 @@ export type {
 } from './system-registry.js';
 export { createTickLoop } from './tick-loop.js';
 export type { TickLoop, TickLoopConfig, TickLoopState, TickStats } from './tick-loop.js';
+
+export { createEntityQueryEngine } from './entity-query.js';
+export type {
+  EntityQueryEngine,
+  EntityQueryDeps,
+  EntityQueryResult,
+  QueryDescriptor,
+  QueryStats,
+  QueryComponentPort,
+  QueryEntityPort,
+  QueryWorldPort,
+} from './entity-query.js';
 
 export { matchesFilter } from './event-filter-matcher.js';
 
