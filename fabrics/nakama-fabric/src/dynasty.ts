@@ -1,19 +1,19 @@
 /**
  * Dynasty Registry — Player identity and lineage tracking.
  *
- * Bible v1.2: A Dynasty is the persistent identity of a player across
- * generations. Each dynasty has a KALON account, a Remembrance record,
- * a civic score, and a mortality state. A Dynasty outlives any single
+ * Bible v1.2, v1.4: A Dynasty is the persistent identity of a player across
+ * generations. Each dynasty has a KALON account, a Chronicle record,
+ * a civic score, and a continuity state. A Dynasty outlives any single
  * character — it is the player's civilisational footprint.
  *
- * Status lifecycle: active → dormant → deceased
+ * Status lifecycle: active → dormant → completed
  * Dormancy triggers after configurable inactivity (default 90 days).
- * Mortality is a multi-stage process (see dynasty-mortality.ts).
+ * Continuity is a multi-stage process (see dynasty-continuity.ts).
  */
 
 import { dynastyNotFound, dynastyAlreadyExists } from './kalon-errors.js';
 
-export type DynastyStatus = 'active' | 'dormant' | 'deceased';
+export type DynastyStatus = 'active' | 'dormant' | 'completed';
 
 export type SubscriptionTier = 'free' | 'accord' | 'patron' | 'herald';
 

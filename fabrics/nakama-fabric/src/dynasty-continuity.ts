@@ -1,78 +1,77 @@
 /**
- * Dynasty Mortality — Lifecycle state machine for dynasty death and inheritance.
+ * Dynasty Continuity — Lifecycle state machine for dynasty legacy protocols.
  *
- * Bible v1.1 Part 8: Digital Mortality & Inheritance
- * Bible v1.2: Day 91 protection, Memorial Dynasty filter
+ * Bible v1.1 Part 8, v1.4: Legacy Protocols & Inheritance
  *
- * 10 mortality states with strict transition rules:
- *   ACTIVE → DORMANT_30 → DORMANT_60 → GRACE_WINDOW → MORTALITY_TRIGGERED
- *   → REDISTRIBUTION → DECEASED
- *   Any state → IN_ABEYANCE (real-world death documented)
- *   DECEASED → HEIR_ACTIVATED | LEGACY_NPC
+ * 10 continuity states with strict transition rules:
+ *   ACTIVE → DORMANT_30 → DORMANT_60 → GRACE_WINDOW → CONTINUITY_TRIGGERED
+ *   → REDISTRIBUTION → COMPLETED
+ *   Any state → VIGIL (real-world death documented)
+ *   COMPLETED → HEIR_ACTIVATED | LEGACY_NPC
  *
  * "Before implementing any mechanic that touches inactive dynasties, ask:
- *  what does this do to the player who logged in once a month to add one
- *  Remembrance entry for someone they lost?"
+ *  what does this do to the player who logged in once a month to write one
+ *  Chronicle entry for someone they lost?"
  */
 
 import type { SubscriptionTier } from './dynasty.js';
 import {
-  mortalityRecordNotFound,
-  mortalityRecordAlreadyExists,
-  mortalityInvalidTransition,
+  continuityRecordNotFound,
+  continuityRecordAlreadyExists,
+  continuityInvalidTransition,
   heirNotRegistered,
-  mortalityTerminalState,
+  continuityTerminalState,
 } from './kalon-errors.js';
 
 // ─── Types ───────────────────────────────────────────────────────────
 
-export type MortalityState =
+export type ContinuityState =
   | 'active'
   | 'dormant_30'
   | 'dormant_60'
   | 'grace_window'
-  | 'mortality_triggered'
+  | 'continuity_triggered'
   | 'redistribution'
-  | 'deceased'
-  | 'in_abeyance'
+  | 'completed'
+  | 'vigil'
   | 'heir_activated'
   | 'legacy_npc';
 
-export interface MortalityRecord {
+export interface ContinuityRecord {
   readonly dynastyId: string;
-  readonly state: MortalityState;
+  readonly state: ContinuityState;
   readonly stateEnteredAt: number;
   readonly lastLoginAt: number;
   readonly subscriptionTier: SubscriptionTier;
   readonly heirDynastyIds: ReadonlyArray<string>;
-  readonly deceasedAt: number | null;
-  readonly inAbeyanceSince: number | null;
+  readonly completedAt: number | null;
+  readonly vigilSince: number | null;
   readonly activatingHeirId: string | null;
 }
 
-export interface MortalityTransition {
+export interface ContinuityTransition {
   readonly dynastyId: string;
-  readonly from: MortalityState;
-  readonly to: MortalityState;
+  readonly from: ContinuityState;
+  readonly to: ContinuityState;
   readonly at: number;
   readonly reason: string;
 }
 
-export interface MortalityEngine {
-  initializeRecord(dynastyId: string, tier: SubscriptionTier): MortalityRecord;
-  getRecord(dynastyId: string): MortalityRecord;
-  tryGetRecord(dynastyId: string): MortalityRecord | undefined;
-  recordLogin(dynastyId: string): MortalityTransition | null;
+export interface ContinuityEngine {
+  initializeRecord(dynastyId: string, tier: SubscriptionTier): ContinuityRecord;
+  getRecord(dynastyId: string): ContinuityRecord;
+  tryGetRecord(dynastyId: string): ContinuityRecord | undefined;
+  recordLogin(dynastyId: string): ContinuityTransition | null;
   registerHeir(dynastyId: string, heirDynastyId: string): void;
   removeHeir(dynastyId: string, heirDynastyId: string): void;
   updateSubscriptionTier(dynastyId: string, tier: SubscriptionTier): void;
-  evaluateInactivity(dynastyId: string): MortalityTransition | null;
-  evaluateAll(): ReadonlyArray<MortalityTransition>;
-  declareAbeyance(dynastyId: string): MortalityTransition;
-  activateHeir(deceasedDynastyId: string, heirDynastyId: string): MortalityTransition;
-  convertToLegacyNpc(dynastyId: string): MortalityTransition;
-  completeRedistribution(dynastyId: string): MortalityTransition;
-  listByState(state: MortalityState): ReadonlyArray<MortalityRecord>;
+  evaluateInactivity(dynastyId: string): ContinuityTransition | null;
+  evaluateAll(): ReadonlyArray<ContinuityTransition>;
+  declareVigil(dynastyId: string): ContinuityTransition;
+  activateHeir(completedDynastyId: string, heirDynastyId: string): ContinuityTransition;
+  convertToLegacyNpc(dynastyId: string): ContinuityTransition;
+  completeRedistribution(dynastyId: string): ContinuityTransition;
+  listByState(state: ContinuityState): ReadonlyArray<ContinuityRecord>;
   daysUntilNextTransition(dynastyId: string): number | null;
   count(): number;
 }
@@ -83,7 +82,7 @@ const US_PER_DAY = 24 * 60 * 60 * 1_000_000;
 
 const DORMANCY_30_DAYS = 30;
 const DORMANCY_60_DAYS = 60;
-const MINIMUM_MORTALITY_DAYS = 91;
+const MINIMUM_CONTINUITY_DAYS = 91;
 const HARD_DEADLINE_DAYS = 180;
 const HEIR_CLAIM_WINDOW_DAYS = 730;
 
@@ -94,22 +93,22 @@ const TIER_GRACE_DAYS: Readonly<Record<SubscriptionTier, number>> = {
   herald: 90,
 };
 
-const RECOVERABLE_STATES: ReadonlySet<MortalityState> = new Set([
+const RECOVERABLE_STATES: ReadonlySet<ContinuityState> = new Set([
   'dormant_30',
   'dormant_60',
   'grace_window',
-  'mortality_triggered',
+  'continuity_triggered',
 ]);
 
-const TERMINAL_STATES: ReadonlySet<MortalityState> = new Set([
-  'in_abeyance',
+const TERMINAL_STATES: ReadonlySet<ContinuityState> = new Set([
+  'vigil',
   'heir_activated',
   'legacy_npc',
 ]);
 
-const ABEYANCE_BLOCKED_STATES: ReadonlySet<MortalityState> = new Set([
-  'deceased',
-  'in_abeyance',
+const VIGIL_BLOCKED_STATES: ReadonlySet<ContinuityState> = new Set([
+  'completed',
+  'vigil',
   'heir_activated',
   'legacy_npc',
 ]);
@@ -118,13 +117,13 @@ const ABEYANCE_BLOCKED_STATES: ReadonlySet<MortalityState> = new Set([
 
 interface MutableRecord {
   readonly dynastyId: string;
-  state: MortalityState;
+  state: ContinuityState;
   stateEnteredAt: number;
   lastLoginAt: number;
   subscriptionTier: SubscriptionTier;
   heirDynastyIds: string[];
-  deceasedAt: number | null;
-  inAbeyanceSince: number | null;
+  completedAt: number | null;
+  vigilSince: number | null;
   activatingHeirId: string | null;
 }
 
@@ -135,9 +134,9 @@ interface EngineState {
 
 // ─── Factory ─────────────────────────────────────────────────────────
 
-export function createMortalityEngine(deps: {
+export function createContinuityEngine(deps: {
   readonly clock: { nowMicroseconds(): number };
-}): MortalityEngine {
+}): ContinuityEngine {
   const state: EngineState = {
     records: new Map(),
     clock: deps.clock,
@@ -153,7 +152,7 @@ export function createMortalityEngine(deps: {
     updateSubscriptionTier: (id, tier) => { updateTierImpl(state, id, tier); },
     evaluateInactivity: (id) => evaluateInactivityImpl(state, id),
     evaluateAll: () => evaluateAllImpl(state),
-    declareAbeyance: (id) => declareAbeyanceImpl(state, id),
+    declareVigil: (id) => declareVigilImpl(state, id),
     activateHeir: (id, heirId) => activateHeirImpl(state, id, heirId),
     convertToLegacyNpc: (id) => convertToLegacyNpcImpl(state, id),
     completeRedistribution: (id) => completeRedistributionImpl(state, id),
@@ -169,9 +168,9 @@ function initializeRecordImpl(
   state: EngineState,
   dynastyId: string,
   tier: SubscriptionTier,
-): MortalityRecord {
+): ContinuityRecord {
   if (state.records.has(dynastyId)) {
-    throw mortalityRecordAlreadyExists(dynastyId);
+    throw continuityRecordAlreadyExists(dynastyId);
   }
   const now = state.clock.nowMicroseconds();
   const record: MutableRecord = {
@@ -181,24 +180,24 @@ function initializeRecordImpl(
     lastLoginAt: now,
     subscriptionTier: tier,
     heirDynastyIds: [],
-    deceasedAt: null,
-    inAbeyanceSince: null,
+    completedAt: null,
+    vigilSince: null,
     activatingHeirId: null,
   };
   state.records.set(dynastyId, record);
   return toReadonly(record);
 }
 
-function getRecordImpl(state: EngineState, dynastyId: string): MortalityRecord {
+function getRecordImpl(state: EngineState, dynastyId: string): ContinuityRecord {
   const record = state.records.get(dynastyId);
-  if (!record) throw mortalityRecordNotFound(dynastyId);
+  if (!record) throw continuityRecordNotFound(dynastyId);
   return toReadonly(record);
 }
 
 function tryGetRecordImpl(
   state: EngineState,
   dynastyId: string,
-): MortalityRecord | undefined {
+): ContinuityRecord | undefined {
   const record = state.records.get(dynastyId);
   return record ? toReadonly(record) : undefined;
 }
@@ -208,7 +207,7 @@ function tryGetRecordImpl(
 function recordLoginImpl(
   state: EngineState,
   dynastyId: string,
-): MortalityTransition | null {
+): ContinuityTransition | null {
   const record = getMutableRecord(state, dynastyId);
   const now = state.clock.nowMicroseconds();
   record.lastLoginAt = now;
@@ -251,7 +250,7 @@ function updateTierImpl(
 function evaluateInactivityImpl(
   state: EngineState,
   dynastyId: string,
-): MortalityTransition | null {
+): ContinuityTransition | null {
   const record = getMutableRecord(state, dynastyId);
   const now = state.clock.nowMicroseconds();
   return evaluateSingleRecord(record, now);
@@ -259,8 +258,8 @@ function evaluateInactivityImpl(
 
 function evaluateAllImpl(
   state: EngineState,
-): ReadonlyArray<MortalityTransition> {
-  const transitions: MortalityTransition[] = [];
+): ReadonlyArray<ContinuityTransition> {
+  const transitions: ContinuityTransition[] = [];
   const now = state.clock.nowMicroseconds();
   for (const record of state.records.values()) {
     if (TERMINAL_STATES.has(record.state)) continue;
@@ -273,8 +272,8 @@ function evaluateAllImpl(
 function evaluateSingleRecord(
   record: MutableRecord,
   now: number,
-): MortalityTransition | null {
-  if (record.state === 'deceased') {
+): ContinuityTransition | null {
+  if (record.state === 'completed') {
     return evaluateHeirWindow(record, now);
   }
   if (record.state === 'redistribution') return null;
@@ -286,7 +285,7 @@ function evaluateStateTransition(
   record: MutableRecord,
   inactiveDays: number,
   now: number,
-): MortalityTransition | null {
+): ContinuityTransition | null {
   switch (record.state) {
     case 'active':
       return transitionIf(record, inactiveDays >= DORMANCY_30_DAYS,
@@ -302,7 +301,7 @@ function evaluateStateTransition(
     case 'grace_window':
       return evaluateGraceWindow(record, inactiveDays, now);
 
-    case 'mortality_triggered':
+    case 'continuity_triggered':
       return transitionIf(record, inactiveDays >= HARD_DEADLINE_DAYS,
         'redistribution', now, 'Day 180 — redistribution begins');
 
@@ -315,31 +314,31 @@ function evaluateDormant60(
   record: MutableRecord,
   inactiveDays: number,
   now: number,
-): MortalityTransition | null {
+): ContinuityTransition | null {
   if (hasGraceWindow(record.subscriptionTier)) {
     return applyTransition(record, 'grace_window', now,
       `Grace window opened (${String(TIER_GRACE_DAYS[record.subscriptionTier])} days)`);
   }
-  return transitionIf(record, inactiveDays >= MINIMUM_MORTALITY_DAYS,
-    'mortality_triggered', now, 'Day 91 — mortality triggered (free tier)');
+  return transitionIf(record, inactiveDays >= MINIMUM_CONTINUITY_DAYS,
+    'continuity_triggered', now, 'Day 91 — continuity triggered (free tier)');
 }
 
 function evaluateGraceWindow(
   record: MutableRecord,
   inactiveDays: number,
   now: number,
-): MortalityTransition | null {
-  const threshold = mortalityThresholdDays(record.subscriptionTier);
+): ContinuityTransition | null {
+  const threshold = continuityThresholdDays(record.subscriptionTier);
   return transitionIf(record, inactiveDays >= threshold,
-    'mortality_triggered', now, `Day ${String(threshold)} — mortality triggered`);
+    'continuity_triggered', now, `Day ${String(threshold)} — continuity triggered`);
 }
 
 function evaluateHeirWindow(
   record: MutableRecord,
   now: number,
-): MortalityTransition | null {
-  if (record.deceasedAt === null) return null;
-  const elapsed = daysSince(record.deceasedAt, now);
+): ContinuityTransition | null {
+  if (record.completedAt === null) return null;
+  const elapsed = daysSince(record.completedAt, now);
   if (elapsed < HEIR_CLAIM_WINDOW_DAYS) return null;
   return applyTransition(record, 'legacy_npc', now,
     'No heir claimed within 2 years — Legacy NPC');
@@ -347,29 +346,29 @@ function evaluateHeirWindow(
 
 // ─── Special Transitions ────────────────────────────────────────────
 
-function declareAbeyanceImpl(
+function declareVigilImpl(
   state: EngineState,
   dynastyId: string,
-): MortalityTransition {
+): ContinuityTransition {
   const record = getMutableRecord(state, dynastyId);
-  if (ABEYANCE_BLOCKED_STATES.has(record.state)) {
-    throw mortalityTerminalState(dynastyId, record.state);
+  if (VIGIL_BLOCKED_STATES.has(record.state)) {
+    throw continuityTerminalState(dynastyId, record.state);
   }
   const now = state.clock.nowMicroseconds();
-  record.inAbeyanceSince = now;
-  return applyTransition(record, 'in_abeyance', now,
-    'Real-world death documented — dynasty in abeyance');
+  record.vigilSince = now;
+  return applyTransition(record, 'vigil', now,
+    'Real-world death documented — dynasty enters the Vigil');
 }
 
 function activateHeirImpl(
   state: EngineState,
-  deceasedDynastyId: string,
+  completedDynastyId: string,
   heirDynastyId: string,
-): MortalityTransition {
-  const record = getMutableRecord(state, deceasedDynastyId);
-  assertState(record, 'deceased', 'heir_activated');
+): ContinuityTransition {
+  const record = getMutableRecord(state, completedDynastyId);
+  assertState(record, 'completed', 'heir_activated');
   if (!record.heirDynastyIds.includes(heirDynastyId)) {
-    throw heirNotRegistered(deceasedDynastyId, heirDynastyId);
+    throw heirNotRegistered(completedDynastyId, heirDynastyId);
   }
   const now = state.clock.nowMicroseconds();
   record.activatingHeirId = heirDynastyId;
@@ -380,9 +379,9 @@ function activateHeirImpl(
 function convertToLegacyNpcImpl(
   state: EngineState,
   dynastyId: string,
-): MortalityTransition {
+): ContinuityTransition {
   const record = getMutableRecord(state, dynastyId);
-  assertState(record, 'deceased', 'legacy_npc');
+  assertState(record, 'completed', 'legacy_npc');
   const now = state.clock.nowMicroseconds();
   return applyTransition(record, 'legacy_npc', now,
     'Dynasty converted to Legacy NPC');
@@ -391,22 +390,22 @@ function convertToLegacyNpcImpl(
 function completeRedistributionImpl(
   state: EngineState,
   dynastyId: string,
-): MortalityTransition {
+): ContinuityTransition {
   const record = getMutableRecord(state, dynastyId);
-  assertState(record, 'redistribution', 'deceased');
+  assertState(record, 'redistribution', 'completed');
   const now = state.clock.nowMicroseconds();
-  record.deceasedAt = now;
-  return applyTransition(record, 'deceased', now,
-    'Estate dispersal complete — dynasty deceased');
+  record.completedAt = now;
+  return applyTransition(record, 'completed', now,
+    'Estate dispersal complete — dynasty completed');
 }
 
 // ─── Queries ─────────────────────────────────────────────────────────
 
 function listByStateImpl(
   state: EngineState,
-  targetState: MortalityState,
-): ReadonlyArray<MortalityRecord> {
-  const result: MortalityRecord[] = [];
+  targetState: ContinuityState,
+): ReadonlyArray<ContinuityRecord> {
+  const result: ContinuityRecord[] = [];
   for (const record of state.records.values()) {
     if (record.state === targetState) result.push(toReadonly(record));
   }
@@ -435,12 +434,12 @@ function daysUntilForState(
       return DORMANCY_60_DAYS - inactiveDays;
     case 'dormant_60':
       if (hasGraceWindow(record.subscriptionTier)) return 0;
-      return Math.max(0, MINIMUM_MORTALITY_DAYS - inactiveDays);
+      return Math.max(0, MINIMUM_CONTINUITY_DAYS - inactiveDays);
     case 'grace_window':
-      return Math.max(0, mortalityThresholdDays(record.subscriptionTier) - inactiveDays);
-    case 'mortality_triggered':
+      return Math.max(0, continuityThresholdDays(record.subscriptionTier) - inactiveDays);
+    case 'continuity_triggered':
       return Math.max(0, HARD_DEADLINE_DAYS - inactiveDays);
-    case 'deceased':
+    case 'completed':
       return daysUntilHeirExpiry(record, now);
     default:
       return null;
@@ -448,18 +447,18 @@ function daysUntilForState(
 }
 
 function daysUntilHeirExpiry(record: MutableRecord, now: number): number | null {
-  if (record.deceasedAt === null) return null;
-  return Math.max(0, HEIR_CLAIM_WINDOW_DAYS - daysSince(record.deceasedAt, now));
+  if (record.completedAt === null) return null;
+  return Math.max(0, HEIR_CLAIM_WINDOW_DAYS - daysSince(record.completedAt, now));
 }
 
 // ─── Helpers ─────────────────────────────────────────────────────────
 
 function applyTransition(
   record: MutableRecord,
-  to: MortalityState,
+  to: ContinuityState,
   at: number,
   reason: string,
-): MortalityTransition {
+): ContinuityTransition {
   const from = record.state;
   record.state = to;
   record.stateEnteredAt = at;
@@ -469,30 +468,30 @@ function applyTransition(
 function transitionIf(
   record: MutableRecord,
   condition: boolean,
-  to: MortalityState,
+  to: ContinuityState,
   at: number,
   reason: string,
-): MortalityTransition | null {
+): ContinuityTransition | null {
   return condition ? applyTransition(record, to, at, reason) : null;
 }
 
 function assertState(
   record: MutableRecord,
-  expected: MortalityState,
-  target: MortalityState,
+  expected: ContinuityState,
+  target: ContinuityState,
 ): void {
   if (record.state !== expected) {
-    throw mortalityInvalidTransition(record.dynastyId, record.state, target);
+    throw continuityInvalidTransition(record.dynastyId, record.state, target);
   }
 }
 
 function getMutableRecord(state: EngineState, dynastyId: string): MutableRecord {
   const record = state.records.get(dynastyId);
-  if (!record) throw mortalityRecordNotFound(dynastyId);
+  if (!record) throw continuityRecordNotFound(dynastyId);
   return record;
 }
 
-function toReadonly(record: MutableRecord): MortalityRecord {
+function toReadonly(record: MutableRecord): ContinuityRecord {
   return {
     dynastyId: record.dynastyId,
     state: record.state,
@@ -500,8 +499,8 @@ function toReadonly(record: MutableRecord): MortalityRecord {
     lastLoginAt: record.lastLoginAt,
     subscriptionTier: record.subscriptionTier,
     heirDynastyIds: [...record.heirDynastyIds],
-    deceasedAt: record.deceasedAt,
-    inAbeyanceSince: record.inAbeyanceSince,
+    completedAt: record.completedAt,
+    vigilSince: record.vigilSince,
     activatingHeirId: record.activatingHeirId,
   };
 }
@@ -510,8 +509,8 @@ function daysSince(fromMicroseconds: number, toMicroseconds: number): number {
   return Math.floor((toMicroseconds - fromMicroseconds) / US_PER_DAY);
 }
 
-function mortalityThresholdDays(tier: SubscriptionTier): number {
-  return Math.max(DORMANCY_60_DAYS + TIER_GRACE_DAYS[tier], MINIMUM_MORTALITY_DAYS);
+function continuityThresholdDays(tier: SubscriptionTier): number {
+  return Math.max(DORMANCY_60_DAYS + TIER_GRACE_DAYS[tier], MINIMUM_CONTINUITY_DAYS);
 }
 
 function hasGraceWindow(tier: SubscriptionTier): boolean {

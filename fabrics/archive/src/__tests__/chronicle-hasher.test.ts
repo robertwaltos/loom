@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { computeEntryHash } from '../remembrance-hasher.js';
+import { computeEntryHash } from '../chronicle-hasher.js';
 
-describe('RemembranceHasher', () => {
+describe('ChronicleHasher', () => {
   it('produces a 64-char hex hash', async () => {
     const hash = await computeEntryHash({
       previousHash: '0'.repeat(64),

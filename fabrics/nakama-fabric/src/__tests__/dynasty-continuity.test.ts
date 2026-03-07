@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { createMortalityEngine } from '../dynasty-mortality.js';
-import type { MortalityEngine, MortalityState } from '../dynasty-mortality.js';
+import { createContinuityEngine } from '../dynasty-continuity.js';
+import type { ContinuityEngine, ContinuityState } from '../dynasty-continuity.js';
 import type { SubscriptionTier } from '../dynasty.js';
 
 const US_PER_DAY = 24 * 60 * 60 * 1_000_000;
@@ -15,12 +15,12 @@ function createTestClock(initialDays = 0) {
 
 function createTestEngine(initialDays = 0) {
   const clock = createTestClock(initialDays);
-  const engine = createMortalityEngine({ clock });
+  const engine = createContinuityEngine({ clock });
   return { engine, clock };
 }
 
 function progressToRedistribution(
-  engine: MortalityEngine,
+  engine: ContinuityEngine,
   clock: ReturnType<typeof createTestClock>,
   dynastyId: string,
   tier: SubscriptionTier = 'free',
@@ -32,8 +32,8 @@ function progressToRedistribution(
   }
 }
 
-function progressToDeceased(
-  engine: MortalityEngine,
+function progressToCompleted(
+  engine: ContinuityEngine,
   clock: ReturnType<typeof createTestClock>,
   dynastyId: string,
   tier: SubscriptionTier = 'free',
@@ -44,7 +44,7 @@ function progressToDeceased(
 
 // ─── Initialization ──────────────────────────────────────────────────
 
-describe('MortalityEngine initialization', () => {
+describe('ContinuityEngine initialization', () => {
   it('creates record in active state', () => {
     const { engine } = createTestEngine();
     const record = engine.initializeRecord('house-atreides', 'accord');
@@ -52,8 +52,8 @@ describe('MortalityEngine initialization', () => {
     expect(record.dynastyId).toBe('house-atreides');
     expect(record.subscriptionTier).toBe('accord');
     expect(record.heirDynastyIds).toEqual([]);
-    expect(record.deceasedAt).toBeNull();
-    expect(record.inAbeyanceSince).toBeNull();
+    expect(record.completedAt).toBeNull();
+    expect(record.vigilSince).toBeNull();
     expect(record.activatingHeirId).toBeNull();
   });
 
@@ -85,7 +85,7 @@ describe('MortalityEngine initialization', () => {
 
 // ─── Login Recovery (dormant states) ─────────────────────────────────
 
-describe('MortalityEngine login recovery from dormant states', () => {
+describe('ContinuityEngine login recovery from dormant states', () => {
   it('recovers from dormant_30', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
@@ -123,7 +123,7 @@ describe('MortalityEngine login recovery from dormant states', () => {
     expect(transition?.to).toBe('active');
   });
 
-  it('recovers from mortality_triggered', () => {
+  it('recovers from continuity_triggered', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     clock.advanceDays(92);
@@ -132,37 +132,37 @@ describe('MortalityEngine login recovery from dormant states', () => {
     engine.evaluateInactivity('house-atreides');
 
     const transition = engine.recordLogin('house-atreides');
-    expect(transition?.from).toBe('mortality_triggered');
+    expect(transition?.from).toBe('continuity_triggered');
     expect(transition?.to).toBe('active');
   });
 });
 
 // ─── Login Recovery (non-recoverable) ────────────────────────────────
 
-describe('MortalityEngine login non-recoverable states', () => {
+describe('ContinuityEngine login non-recoverable states', () => {
   it('returns null for active state login', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     expect(engine.recordLogin('house-atreides')).toBeNull();
   });
 
-  it('returns null for deceased state login', () => {
+  it('returns null for completed state login', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
+    progressToCompleted(engine, clock, 'house-atreides');
     expect(engine.recordLogin('house-atreides')).toBeNull();
   });
 
   it('returns null for terminal states', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
-    engine.declareAbeyance('house-atreides');
+    engine.declareVigil('house-atreides');
     expect(engine.recordLogin('house-atreides')).toBeNull();
   });
 });
 
 // ─── Free Tier Early Dormancy ────────────────────────────────────────
 
-describe('MortalityEngine free tier early dormancy', () => {
+describe('ContinuityEngine free tier early dormancy', () => {
   it('progresses active → dormant_30 at day 30', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
@@ -194,7 +194,7 @@ describe('MortalityEngine free tier early dormancy', () => {
 
     clock.advanceDays(1);
     const transition = engine.evaluateInactivity('house-atreides');
-    expect(transition?.to).toBe('mortality_triggered');
+    expect(transition?.to).toBe('continuity_triggered');
   });
 
   it('skips grace_window for free tier', () => {
@@ -204,14 +204,14 @@ describe('MortalityEngine free tier early dormancy', () => {
     engine.evaluateInactivity('house-atreides');
     engine.evaluateInactivity('house-atreides');
     engine.evaluateInactivity('house-atreides');
-    expect(engine.getRecord('house-atreides').state).toBe('mortality_triggered');
+    expect(engine.getRecord('house-atreides').state).toBe('continuity_triggered');
   });
 });
 
-// ─── Free Tier Late Mortality ────────────────────────────────────────
+// ─── Free Tier Late Continuity ────────────────────────────────────────
 
-describe('MortalityEngine free tier late mortality', () => {
-  it('progresses mortality_triggered → redistribution at day 180', () => {
+describe('ContinuityEngine free tier late continuity', () => {
+  it('progresses continuity_triggered → redistribution at day 180', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     clock.advanceDays(179);
@@ -224,19 +224,19 @@ describe('MortalityEngine free tier late mortality', () => {
     expect(engine.evaluateInactivity('house-atreides')?.to).toBe('redistribution');
   });
 
-  it('completes redistribution → deceased', () => {
+  it('completes redistribution → completed', () => {
     const { engine, clock } = createTestEngine();
     progressToRedistribution(engine, clock, 'house-atreides');
 
     const transition = engine.completeRedistribution('house-atreides');
-    expect(transition.to).toBe('deceased');
-    expect(engine.getRecord('house-atreides').deceasedAt).not.toBeNull();
+    expect(transition.to).toBe('completed');
+    expect(engine.getRecord('house-atreides').completedAt).not.toBeNull();
   });
 });
 
 // ─── Paying Tier Progression ─────────────────────────────────────────
 
-describe('MortalityEngine paying tier progression', () => {
+describe('ContinuityEngine paying tier progression', () => {
   it('accord enters grace_window after dormant_60', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'accord');
@@ -246,7 +246,7 @@ describe('MortalityEngine paying tier progression', () => {
     expect(engine.evaluateInactivity('house-atreides')?.to).toBe('grace_window');
   });
 
-  it('accord triggers mortality at day 91 (Day 91 protection)', () => {
+  it('accord triggers continuity at day 91 (Day 91 protection)', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'accord');
     clock.advanceDays(60);
@@ -258,10 +258,10 @@ describe('MortalityEngine paying tier progression', () => {
     expect(engine.evaluateInactivity('house-atreides')).toBeNull();
 
     clock.advanceDays(1);
-    expect(engine.evaluateInactivity('house-atreides')?.to).toBe('mortality_triggered');
+    expect(engine.evaluateInactivity('house-atreides')?.to).toBe('continuity_triggered');
   });
 
-  it('patron triggers mortality at day 120 (60+60)', () => {
+  it('patron triggers continuity at day 120 (60+60)', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'patron');
     clock.advanceDays(60);
@@ -273,10 +273,10 @@ describe('MortalityEngine paying tier progression', () => {
     expect(engine.evaluateInactivity('house-atreides')).toBeNull();
 
     clock.advanceDays(1);
-    expect(engine.evaluateInactivity('house-atreides')?.to).toBe('mortality_triggered');
+    expect(engine.evaluateInactivity('house-atreides')?.to).toBe('continuity_triggered');
   });
 
-  it('herald triggers mortality at day 150 (60+90)', () => {
+  it('herald triggers continuity at day 150 (60+90)', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'herald');
     clock.advanceDays(60);
@@ -288,13 +288,13 @@ describe('MortalityEngine paying tier progression', () => {
     expect(engine.evaluateInactivity('house-atreides')).toBeNull();
 
     clock.advanceDays(1);
-    expect(engine.evaluateInactivity('house-atreides')?.to).toBe('mortality_triggered');
+    expect(engine.evaluateInactivity('house-atreides')?.to).toBe('continuity_triggered');
   });
 });
 
 // ─── Tier Update ─────────────────────────────────────────────────────
 
-describe('MortalityEngine subscription tier update', () => {
+describe('ContinuityEngine subscription tier update', () => {
   it('changes tier on existing record', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
@@ -316,7 +316,7 @@ describe('MortalityEngine subscription tier update', () => {
 
 // ─── Heir Management ─────────────────────────────────────────────────
 
-describe('MortalityEngine heir management', () => {
+describe('ContinuityEngine heir management', () => {
   it('registers heirs', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
@@ -351,69 +351,69 @@ describe('MortalityEngine heir management', () => {
   });
 });
 
-// ─── Abeyance (valid transitions) ───────────────────────────────────
+// ─── Vigil (valid transitions) ───────────────────────────────────
 
-describe('MortalityEngine abeyance entry', () => {
-  it('enters abeyance from active', () => {
+describe('ContinuityEngine vigil entry', () => {
+  it('enters vigil from active', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
-    const transition = engine.declareAbeyance('house-atreides');
-    expect(transition.to).toBe('in_abeyance');
-    expect(engine.getRecord('house-atreides').inAbeyanceSince).not.toBeNull();
+    const transition = engine.declareVigil('house-atreides');
+    expect(transition.to).toBe('vigil');
+    expect(engine.getRecord('house-atreides').vigilSince).not.toBeNull();
   });
 
-  it('enters abeyance from dormant_30', () => {
+  it('enters vigil from dormant_30', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     clock.advanceDays(31);
     engine.evaluateInactivity('house-atreides');
-    expect(engine.declareAbeyance('house-atreides').from).toBe('dormant_30');
+    expect(engine.declareVigil('house-atreides').from).toBe('dormant_30');
   });
 
-  it('enters abeyance from mortality_triggered', () => {
+  it('enters vigil from continuity_triggered', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     clock.advanceDays(91);
     engine.evaluateInactivity('house-atreides');
     engine.evaluateInactivity('house-atreides');
     engine.evaluateInactivity('house-atreides');
-    expect(engine.declareAbeyance('house-atreides').from).toBe('mortality_triggered');
+    expect(engine.declareVigil('house-atreides').from).toBe('continuity_triggered');
   });
 
-  it('enters abeyance from redistribution', () => {
+  it('enters vigil from redistribution', () => {
     const { engine, clock } = createTestEngine();
     progressToRedistribution(engine, clock, 'house-atreides');
-    expect(engine.declareAbeyance('house-atreides').from).toBe('redistribution');
+    expect(engine.declareVigil('house-atreides').from).toBe('redistribution');
   });
 });
 
-// ─── Abeyance (rejection and terminal) ──────────────────────────────
+// ─── Vigil (rejection and terminal) ──────────────────────────────
 
-describe('MortalityEngine abeyance rejection', () => {
-  it('rejects abeyance from deceased', () => {
+describe('ContinuityEngine vigil rejection', () => {
+  it('rejects vigil from completed', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
-    expect(() => engine.declareAbeyance('house-atreides')).toThrow('terminal state');
+    progressToCompleted(engine, clock, 'house-atreides');
+    expect(() => engine.declareVigil('house-atreides')).toThrow('terminal state');
   });
 
-  it('rejects abeyance from in_abeyance', () => {
+  it('rejects vigil from vigil', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
-    engine.declareAbeyance('house-atreides');
-    expect(() => engine.declareAbeyance('house-atreides')).toThrow('terminal state');
+    engine.declareVigil('house-atreides');
+    expect(() => engine.declareVigil('house-atreides')).toThrow('terminal state');
   });
 
-  it('rejects abeyance from legacy_npc', () => {
+  it('rejects vigil from legacy_npc', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
+    progressToCompleted(engine, clock, 'house-atreides');
     engine.convertToLegacyNpc('house-atreides');
-    expect(() => engine.declareAbeyance('house-atreides')).toThrow('terminal state');
+    expect(() => engine.declareVigil('house-atreides')).toThrow('terminal state');
   });
 
-  it('abeyance is terminal — no further evaluation transitions', () => {
+  it('vigil is terminal — no further evaluation transitions', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
-    engine.declareAbeyance('house-atreides');
+    engine.declareVigil('house-atreides');
     clock.advanceDays(365);
     const relevant = engine.evaluateAll().filter((t) => t.dynastyId === 'house-atreides');
     expect(relevant).toHaveLength(0);
@@ -422,8 +422,8 @@ describe('MortalityEngine abeyance rejection', () => {
 
 // ─── Heir Activation ─────────────────────────────────────────────────
 
-describe('MortalityEngine heir activation', () => {
-  it('activates registered heir from deceased state', () => {
+describe('ContinuityEngine heir activation', () => {
+  it('activates registered heir from completed state', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     engine.registerHeir('house-atreides', 'paul-atreides');
@@ -440,16 +440,16 @@ describe('MortalityEngine heir activation', () => {
 
   it('rejects unregistered heir', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
+    progressToCompleted(engine, clock, 'house-atreides');
     expect(() => engine.activateHeir('house-atreides', 'nope')).toThrow('not registered');
   });
 
-  it('rejects heir activation from non-deceased state', () => {
+  it('rejects heir activation from non-completed state', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     engine.registerHeir('house-atreides', 'paul-atreides');
     expect(() => engine.activateHeir('house-atreides', 'paul-atreides'))
-      .toThrow('Invalid mortality transition');
+      .toThrow('Invalid continuity transition');
   });
 
   it('heir_activated is terminal', () => {
@@ -471,16 +471,16 @@ describe('MortalityEngine heir activation', () => {
 
 // ─── Legacy NPC Conversion ───────────────────────────────────────────
 
-describe('MortalityEngine legacy NPC', () => {
-  it('manually converts deceased to legacy_npc', () => {
+describe('ContinuityEngine legacy NPC', () => {
+  it('manually converts completed to legacy_npc', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
+    progressToCompleted(engine, clock, 'house-atreides');
     expect(engine.convertToLegacyNpc('house-atreides').to).toBe('legacy_npc');
   });
 
   it('auto-converts after 2 years via evaluateAll', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
+    progressToCompleted(engine, clock, 'house-atreides');
 
     clock.advanceDays(729);
     expect(engine.evaluateAll().filter((t) => t.dynastyId === 'house-atreides'))
@@ -492,22 +492,22 @@ describe('MortalityEngine legacy NPC', () => {
     expect(relevant[0]?.to).toBe('legacy_npc');
   });
 
-  it('rejects from non-deceased state', () => {
+  it('rejects from non-completed state', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     expect(() => engine.convertToLegacyNpc('house-atreides'))
-      .toThrow('Invalid mortality transition');
+      .toThrow('Invalid continuity transition');
   });
 });
 
 // ─── Redistribution ──────────────────────────────────────────────────
 
-describe('MortalityEngine redistribution', () => {
+describe('ContinuityEngine redistribution', () => {
   it('rejects completeRedistribution from non-redistribution state', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     expect(() => engine.completeRedistribution('house-atreides'))
-      .toThrow('Invalid mortality transition');
+      .toThrow('Invalid continuity transition');
   });
 
   it('redistribution does not auto-transition', () => {
@@ -520,7 +520,7 @@ describe('MortalityEngine redistribution', () => {
 
 // ─── evaluateAll Batch Processing ────────────────────────────────────
 
-describe('MortalityEngine evaluateAll', () => {
+describe('ContinuityEngine evaluateAll', () => {
   it('processes multiple records in single evaluation', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('d1', 'free');
@@ -536,7 +536,7 @@ describe('MortalityEngine evaluateAll', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('d1', 'free');
     engine.initializeRecord('d2', 'free');
-    engine.declareAbeyance('d2');
+    engine.declareVigil('d2');
     clock.advanceDays(31);
     const transitions = engine.evaluateAll();
     expect(transitions).toHaveLength(1);
@@ -562,7 +562,7 @@ describe('MortalityEngine evaluateAll', () => {
 
 // ─── listByState ─────────────────────────────────────────────────────
 
-describe('MortalityEngine listByState', () => {
+describe('ContinuityEngine listByState', () => {
   it('filters records by state', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('d1', 'free');
@@ -577,7 +577,7 @@ describe('MortalityEngine listByState', () => {
 
 // ─── daysUntilNextTransition (active/dormant) ────────────────────────
 
-describe('MortalityEngine timing for active and dormant', () => {
+describe('ContinuityEngine timing for active and dormant', () => {
   it('returns 30 for fresh active record', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
@@ -620,7 +620,7 @@ describe('MortalityEngine timing for active and dormant', () => {
 
 // ─── daysUntilNextTransition (advanced states) ───────────────────────
 
-describe('MortalityEngine timing for advanced states', () => {
+describe('ContinuityEngine timing for advanced states', () => {
   it('returns days until threshold for grace_window', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'patron');
@@ -631,7 +631,7 @@ describe('MortalityEngine timing for advanced states', () => {
     expect(engine.daysUntilNextTransition('house-atreides')).toBe(60);
   });
 
-  it('returns days until day 180 for mortality_triggered', () => {
+  it('returns days until day 180 for continuity_triggered', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     clock.advanceDays(91);
@@ -641,16 +641,16 @@ describe('MortalityEngine timing for advanced states', () => {
     expect(engine.daysUntilNextTransition('house-atreides')).toBe(89);
   });
 
-  it('returns days until heir window expiry for deceased', () => {
+  it('returns days until heir window expiry for completed', () => {
     const { engine, clock } = createTestEngine();
-    progressToDeceased(engine, clock, 'house-atreides');
+    progressToCompleted(engine, clock, 'house-atreides');
     expect(engine.daysUntilNextTransition('house-atreides')).toBe(730);
   });
 
   it('returns null for terminal states', () => {
     const { engine } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
-    engine.declareAbeyance('house-atreides');
+    engine.declareVigil('house-atreides');
     expect(engine.daysUntilNextTransition('house-atreides')).toBeNull();
   });
 
@@ -663,12 +663,12 @@ describe('MortalityEngine timing for advanced states', () => {
 
 // ─── Full Lifecycle: Free Tier ───────────────────────────────────────
 
-describe('MortalityEngine full lifecycle free tier', () => {
+describe('ContinuityEngine full lifecycle free tier', () => {
   it('walks through complete death cycle with heir', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-atreides', 'free');
     engine.registerHeir('house-atreides', 'paul-atreides');
-    const states: MortalityState[] = ['active'];
+    const states: ContinuityState[] = ['active'];
 
     clock.advanceDays(30);
     engine.evaluateInactivity('house-atreides');
@@ -694,14 +694,14 @@ describe('MortalityEngine full lifecycle free tier', () => {
 
     expect(states).toEqual([
       'active', 'dormant_30', 'dormant_60',
-      'mortality_triggered', 'redistribution', 'deceased', 'heir_activated',
+      'continuity_triggered', 'redistribution', 'completed', 'heir_activated',
     ]);
   });
 });
 
 // ─── Full Lifecycle: Herald Tier ─────────────────────────────────────
 
-describe('MortalityEngine full lifecycle herald tier', () => {
+describe('ContinuityEngine full lifecycle herald tier', () => {
   it('walks through complete death cycle with grace window', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('house-corrino', 'herald');
@@ -717,12 +717,12 @@ describe('MortalityEngine full lifecycle herald tier', () => {
 
     clock.advanceDays(90);
     engine.evaluateInactivity('house-corrino');
-    expect(engine.getRecord('house-corrino').state).toBe('mortality_triggered');
+    expect(engine.getRecord('house-corrino').state).toBe('continuity_triggered');
 
     clock.advanceDays(30);
     engine.evaluateInactivity('house-corrino');
     engine.completeRedistribution('house-corrino');
-    expect(engine.getRecord('house-corrino').state).toBe('deceased');
+    expect(engine.getRecord('house-corrino').state).toBe('completed');
 
     clock.advanceDays(730);
     engine.evaluateAll();
@@ -732,7 +732,7 @@ describe('MortalityEngine full lifecycle herald tier', () => {
 
 // ─── Memorial Dynasty Filter ─────────────────────────────────────────
 
-describe('MortalityEngine Memorial Dynasty filter', () => {
+describe('ContinuityEngine Memorial Dynasty filter', () => {
   it('monthly login resets timer — never goes dormant', () => {
     const { engine, clock } = createTestEngine();
     engine.initializeRecord('memorial-dynasty', 'free');

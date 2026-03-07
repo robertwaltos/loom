@@ -4,7 +4,7 @@
  * Bible v1.2: Civic Score determines a dynasty's voting weight.
  * Three factors compose the score:
  *
- *   1. Remembrance Depth (40%) — entries in The Remembrance
+ *   1. Chronicle Depth (40%) — entries in The Chronicle
  *   2. Economic Standing (35%) — KALON balance relative to total supply
  *   3. Civic Contribution (25%) — governance participation, voted motions
  *
@@ -16,7 +16,7 @@
  */
 
 export interface CivicScoreInputs {
-  readonly remembranceEntryCount: number;
+  readonly chronicleEntryCount: number;
   readonly kalonBalance: bigint;
   readonly totalKalonSupply: bigint;
   readonly votesParticipated: number;
@@ -25,7 +25,7 @@ export interface CivicScoreInputs {
 
 export interface CivicScoreResult {
   readonly totalScore: number;
-  readonly remembranceComponent: number;
+  readonly chronicleComponent: number;
   readonly economicComponent: number;
   readonly civicComponent: number;
   readonly votingWeight: number;
@@ -36,13 +36,13 @@ const MAX_SCORE = 10000;
 
 /** Component weights in basis points (must sum to MAX_SCORE) */
 const WEIGHTS = {
-  remembrance: 4000,
+  chronicle: 4000,
   economic: 3500,
   civic: 2500,
 } as const;
 
 /** Scaling factors for logarithmic curves */
-const REMEMBRANCE_SCALE = 1000;
+const CHRONICLE_SCALE = 1000;
 const CIVIC_VOTE_SCALE = 100;
 const CIVIC_MOTION_SCALE = 10;
 
@@ -50,16 +50,16 @@ const CIVIC_MOTION_SCALE = 10;
 const DIGNITY_FLOOR_WEIGHT = 0.001;
 
 export function calculateCivicScore(inputs: CivicScoreInputs): CivicScoreResult {
-  const remembranceComponent = computeRemembranceScore(inputs.remembranceEntryCount);
+  const chronicleComponent = computeChronicleScore(inputs.chronicleEntryCount);
   const economicComponent = computeEconomicScore(inputs.kalonBalance, inputs.totalKalonSupply);
   const civicComponent = computeCivicContribution(inputs.votesParticipated, inputs.motionsProposed);
 
-  const totalScore = weightedSum(remembranceComponent, economicComponent, civicComponent);
+  const totalScore = weightedSum(chronicleComponent, economicComponent, civicComponent);
   const votingWeight = scoreToVotingWeight(totalScore);
 
   return {
     totalScore,
-    remembranceComponent,
+    chronicleComponent,
     economicComponent,
     civicComponent,
     votingWeight,
@@ -67,12 +67,12 @@ export function calculateCivicScore(inputs: CivicScoreInputs): CivicScoreResult 
 }
 
 /**
- * Remembrance score uses logarithmic scaling — first entries matter most.
+ * Chronicle score uses logarithmic scaling — first entries matter most.
  * log10(1 + entries) / log10(1 + SCALE) → normalized to [0, MAX_SCORE].
  */
-function computeRemembranceScore(entryCount: number): number {
+function computeChronicleScore(entryCount: number): number {
   if (entryCount <= 0) return 0;
-  const normalized = Math.log10(1 + entryCount) / Math.log10(1 + REMEMBRANCE_SCALE);
+  const normalized = Math.log10(1 + entryCount) / Math.log10(1 + CHRONICLE_SCALE);
   return clampScore(Math.floor(normalized * MAX_SCORE));
 }
 
@@ -99,9 +99,9 @@ function computeCivicContribution(votes: number, motions: number): number {
   return clampScore(Math.floor(combined * MAX_SCORE));
 }
 
-function weightedSum(remembrance: number, economic: number, civic: number): number {
+function weightedSum(chronicle: number, economic: number, civic: number): number {
   const weighted =
-    remembrance * WEIGHTS.remembrance + economic * WEIGHTS.economic + civic * WEIGHTS.civic;
+    chronicle * WEIGHTS.chronicle + economic * WEIGHTS.economic + civic * WEIGHTS.civic;
   return clampScore(Math.floor(weighted / MAX_SCORE));
 }
 

@@ -1,7 +1,7 @@
 /**
- * Estate Dispersal Auction — 4-phase asset redistribution for deceased dynasties.
+ * Estate Dispersal Auction — 4-phase asset redistribution for completed dynasties.
  *
- * Bible v1.1 Part 8: Digital Mortality & Inheritance
+ * Bible v1.1 Part 8, v1.4: Legacy Protocols & Inheritance
  *
  * When a dynasty reaches REDISTRIBUTION state, its assets are auctioned
  * through four time-gated phases over 192 hours (8 real days):
@@ -12,12 +12,12 @@
  *   Phase 4 — Liquidation (24h): Unsold assets → Commons Fund
  *
  * Memorial Bids: Special lot category. Winning bid text is inscribed
- * permanently in The Remembrance as the dynasty's final entry.
+ * permanently in The Chronicle as the dynasty's final entry.
  */
 
 import {
-  mortalityRecordNotFound,
-  mortalityInvalidTransition,
+  continuityRecordNotFound,
+  continuityInvalidTransition,
 } from './kalon-errors.js';
 
 // ─── Types ───────────────────────────────────────────────────────────
@@ -175,7 +175,7 @@ function createAuctionImpl(
   dynastyId: string,
 ): EstateAuction {
   if (state.auctions.has(auctionId)) {
-    throw mortalityRecordNotFound(auctionId);
+    throw continuityRecordNotFound(auctionId);
   }
   const now = state.clock.nowMicroseconds();
   const auction: MutableAuction = {
@@ -193,7 +193,7 @@ function createAuctionImpl(
 
 function getAuctionImpl(state: EngineState, auctionId: string): EstateAuction {
   const auction = state.auctions.get(auctionId);
-  if (!auction) throw mortalityRecordNotFound(auctionId);
+  if (!auction) throw continuityRecordNotFound(auctionId);
   return toReadonlyAuction(auction);
 }
 
@@ -259,11 +259,11 @@ function placeBidImpl(
 
 function validateBid(lot: MutableLot, amount: bigint): void {
   if (lot.status !== 'active') {
-    throw mortalityInvalidTransition(lot.lotId, lot.status, 'bid');
+    throw continuityInvalidTransition(lot.lotId, lot.status, 'bid');
   }
   const minRequired = lot.highestBid ?? lot.minimumBid;
   if (amount <= minRequired) {
-    throw mortalityInvalidTransition(lot.lotId, 'bid_too_low', 'bid');
+    throw continuityInvalidTransition(lot.lotId, 'bid_too_low', 'bid');
   }
 }
 
@@ -398,19 +398,19 @@ function getMemorialWinnerImpl(
 
 function getMutableAuction(state: EngineState, auctionId: string): MutableAuction {
   const auction = state.auctions.get(auctionId);
-  if (!auction) throw mortalityRecordNotFound(auctionId);
+  if (!auction) throw continuityRecordNotFound(auctionId);
   return auction;
 }
 
 function findLot(auction: MutableAuction, lotId: string): MutableLot {
   const lot = auction.lots.find((l) => l.lotId === lotId);
-  if (!lot) throw mortalityRecordNotFound(lotId);
+  if (!lot) throw continuityRecordNotFound(lotId);
   return lot;
 }
 
 function assertNotComplete(auction: MutableAuction): void {
   if (auction.isComplete) {
-    throw mortalityInvalidTransition(auction.auctionId, 'complete', 'active');
+    throw continuityInvalidTransition(auction.auctionId, 'complete', 'active');
   }
 }
 

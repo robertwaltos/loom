@@ -1,5 +1,7 @@
 /**
- * The Remembrance — Append-only permanent record.
+ * The Chronicle — Append-only permanent record.
+ *
+ * Bible v1.4: "Your story is permanent. Build something worth reading."
  *
  * Every significant event in The Concord is recorded here.
  * SHA-256 hash chain ensures integrity. Entries are immutable.
@@ -7,10 +9,10 @@
  * syncs to a separate cloud provider for permanence.
  */
 
-import { archiveSealed } from './remembrance-errors.js';
-import { computeEntryHash } from './remembrance-hasher.js';
+import { archiveSealed } from './chronicle-errors.js';
+import { computeEntryHash } from './chronicle-hasher.js';
 
-export type RemembranceCategory =
+export type ChronicleCategory =
   | 'entity.lifecycle'
   | 'economy.transaction'
   | 'governance.vote'
@@ -19,11 +21,11 @@ export type RemembranceCategory =
   | 'npc.action'
   | 'system.event';
 
-export interface RemembranceEntry {
+export interface ChronicleEntry {
   readonly entryId: string;
   readonly index: number;
   readonly timestamp: number;
-  readonly category: RemembranceCategory;
+  readonly category: ChronicleCategory;
   readonly worldId: string;
   readonly subjectId: string;
   readonly content: string;
@@ -31,26 +33,26 @@ export interface RemembranceEntry {
   readonly previousHash: string;
 }
 
-export interface Remembrance {
-  record(params: RecordParams): Promise<RemembranceEntry>;
-  get(entryId: string): RemembranceEntry | undefined;
-  getByIndex(index: number): RemembranceEntry | undefined;
-  latest(): RemembranceEntry | undefined;
+export interface Chronicle {
+  record(params: RecordParams): Promise<ChronicleEntry>;
+  get(entryId: string): ChronicleEntry | undefined;
+  getByIndex(index: number): ChronicleEntry | undefined;
+  latest(): ChronicleEntry | undefined;
   count(): number;
-  query(filter: RemembranceFilter): ReadonlyArray<RemembranceEntry>;
+  query(filter: ChronicleFilter): ReadonlyArray<ChronicleEntry>;
   verifyChain(): Promise<ChainVerification>;
   seal(): void;
 }
 
 export interface RecordParams {
-  readonly category: RemembranceCategory;
+  readonly category: ChronicleCategory;
   readonly worldId: string;
   readonly subjectId: string;
   readonly content: string;
 }
 
-export interface RemembranceFilter {
-  readonly category?: RemembranceCategory;
+export interface ChronicleFilter {
+  readonly category?: ChronicleCategory;
   readonly worldId?: string;
   readonly subjectId?: string;
   readonly fromIndex?: number;
@@ -64,8 +66,8 @@ export interface ChainVerification {
 }
 
 interface ArchiveState {
-  readonly entries: RemembranceEntry[];
-  readonly entryById: Map<string, RemembranceEntry>;
+  readonly entries: ChronicleEntry[];
+  readonly entryById: Map<string, ChronicleEntry>;
   readonly idGenerator: { generate(): string };
   readonly clock: { nowMicroseconds(): number };
   sealed: boolean;
@@ -73,10 +75,10 @@ interface ArchiveState {
 
 const GENESIS_HASH = '0'.repeat(64);
 
-export function createRemembrance(deps: {
+export function createChronicle(deps: {
   readonly idGenerator: { generate(): string };
   readonly clock: { nowMicroseconds(): number };
-}): Remembrance {
+}): Chronicle {
   const state: ArchiveState = {
     entries: [],
     entryById: new Map(),
@@ -99,7 +101,7 @@ export function createRemembrance(deps: {
   };
 }
 
-async function recordEntry(state: ArchiveState, params: RecordParams): Promise<RemembranceEntry> {
+async function recordEntry(state: ArchiveState, params: RecordParams): Promise<ChronicleEntry> {
   if (state.sealed) throw archiveSealed();
 
   const entryId = state.idGenerator.generate();
@@ -116,7 +118,7 @@ async function recordEntry(state: ArchiveState, params: RecordParams): Promise<R
     content: params.content,
   });
 
-  const entry: RemembranceEntry = {
+  const entry: ChronicleEntry = {
     entryId,
     index,
     timestamp,
@@ -135,12 +137,12 @@ async function recordEntry(state: ArchiveState, params: RecordParams): Promise<R
 
 function queryEntries(
   state: ArchiveState,
-  filter: RemembranceFilter,
-): ReadonlyArray<RemembranceEntry> {
-  return state.entries.filter((entry) => matchesRemembranceFilter(entry, filter));
+  filter: ChronicleFilter,
+): ReadonlyArray<ChronicleEntry> {
+  return state.entries.filter((entry) => matchesChronicleFilter(entry, filter));
 }
 
-function matchesRemembranceFilter(entry: RemembranceEntry, filter: RemembranceFilter): boolean {
+function matchesChronicleFilter(entry: ChronicleEntry, filter: ChronicleFilter): boolean {
   if (filter.category !== undefined && entry.category !== filter.category) return false;
   if (filter.worldId !== undefined && entry.worldId !== filter.worldId) return false;
   if (filter.subjectId !== undefined && entry.subjectId !== filter.subjectId) return false;

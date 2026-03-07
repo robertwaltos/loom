@@ -1,5 +1,5 @@
 /**
- * Remembrance Hasher — SHA-256 hash computation for the chain.
+ * Chronicle Hasher — SHA-256 hash computation for the chain.
  *
  * Uses the Web Crypto API (available in Node 22+).
  * Each entry's hash = SHA-256(previousHash + entryId + timestamp + category + content).

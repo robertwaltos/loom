@@ -7,7 +7,7 @@ const SUPPLY = kalonToMicro(1_000_000_000n);
 
 function emptyInputs(): CivicScoreInputs {
   return {
-    remembranceEntryCount: 0,
+    chronicleEntryCount: 0,
     kalonBalance: 0n,
     totalKalonSupply: SUPPLY,
     votesParticipated: 0,
@@ -19,7 +19,7 @@ describe('Civic Score zero inputs', () => {
   it('returns zero score for zero inputs', () => {
     const result = calculateCivicScore(emptyInputs());
     expect(result.totalScore).toBe(0);
-    expect(result.remembranceComponent).toBe(0);
+    expect(result.chronicleComponent).toBe(0);
     expect(result.economicComponent).toBe(0);
     expect(result.civicComponent).toBe(0);
   });
@@ -30,11 +30,11 @@ describe('Civic Score zero inputs', () => {
   });
 });
 
-describe('Civic Score remembrance component', () => {
+describe('Civic Score chronicle component', () => {
   it('increases score with entries', () => {
-    const low = calculateCivicScore({ ...emptyInputs(), remembranceEntryCount: 10 });
-    const high = calculateCivicScore({ ...emptyInputs(), remembranceEntryCount: 500 });
-    expect(high.remembranceComponent).toBeGreaterThan(low.remembranceComponent);
+    const low = calculateCivicScore({ ...emptyInputs(), chronicleEntryCount: 10 });
+    const high = calculateCivicScore({ ...emptyInputs(), chronicleEntryCount: 500 });
+    expect(high.chronicleComponent).toBeGreaterThan(low.chronicleComponent);
     expect(high.totalScore).toBeGreaterThan(low.totalScore);
   });
 });
@@ -51,7 +51,7 @@ describe('Civic Score economic component', () => {
       ...emptyInputs(),
       kalonBalance: kalonToMicro(100n),
       totalKalonSupply: 0n,
-      remembranceEntryCount: 10,
+      chronicleEntryCount: 10,
     });
     expect(result.economicComponent).toBe(0);
     expect(result.totalScore).toBeGreaterThan(0);
@@ -74,13 +74,13 @@ describe('Civic Score voting weight', () => {
   it('produces higher weight for higher score', () => {
     const low = calculateCivicScore({
       ...emptyInputs(),
-      remembranceEntryCount: 1,
+      chronicleEntryCount: 1,
       kalonBalance: kalonToMicro(10n),
       votesParticipated: 1,
     });
     const high = calculateCivicScore({
       ...emptyInputs(),
-      remembranceEntryCount: 500,
+      chronicleEntryCount: 500,
       kalonBalance: kalonToMicro(100_000n),
       votesParticipated: 50,
       motionsProposed: 10,

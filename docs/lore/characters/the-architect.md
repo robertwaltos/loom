@@ -19,7 +19,7 @@ The Architect is the in-world manifestation of developer transparency. Not an NP
 
 - Powered by Claude Opus
 - Drive world-scale narrative events
-- Named and permanently recorded in The Remembrance
+- Named and permanently recorded in The Chronicle
 - Each has full character history, relationships, and goals
 - Persistent memory across all interactions
 

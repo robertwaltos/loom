@@ -17,7 +17,7 @@ function createTestAssembly() {
 
 function activeScore(): CivicScoreResult {
   return calculateCivicScore({
-    remembranceEntryCount: 100,
+    chronicleEntryCount: 100,
     kalonBalance: kalonToMicro(10_000n),
     totalKalonSupply: SUPPLY,
     votesParticipated: 20,
@@ -27,7 +27,7 @@ function activeScore(): CivicScoreResult {
 
 function wealthyScore(): CivicScoreResult {
   return calculateCivicScore({
-    remembranceEntryCount: 500,
+    chronicleEntryCount: 500,
     kalonBalance: kalonToMicro(500_000n),
     totalKalonSupply: SUPPLY,
     votesParticipated: 50,

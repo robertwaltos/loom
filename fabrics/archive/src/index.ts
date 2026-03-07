@@ -1,21 +1,21 @@
 /**
  * @loom/archive — Document storage, state persistence.
  *
- * Currently provides: The Remembrance (append-only hash chain).
+ * Currently provides: The Chronicle (append-only hash chain).
  * Future: Foundation Archive sync, full-text search, state snapshots.
  */
 
-export { createRemembrance } from './remembrance.js';
+export { createChronicle } from './chronicle.js';
 export type {
-  Remembrance,
-  RemembranceEntry,
-  RemembranceCategory,
+  Chronicle,
+  ChronicleEntry,
+  ChronicleCategory,
   RecordParams,
-  RemembranceFilter,
+  ChronicleFilter,
   ChainVerification,
-} from './remembrance.js';
-export { computeEntryHash } from './remembrance-hasher.js';
-export type { HashInput } from './remembrance-hasher.js';
-export { RemembranceError } from './remembrance-errors.js';
-export type { RemembranceErrorCode } from './remembrance-errors.js';
-export { entryNotFound, chainIntegrityViolated, archiveSealed } from './remembrance-errors.js';
+} from './chronicle.js';
+export { computeEntryHash } from './chronicle-hasher.js';
+export type { HashInput } from './chronicle-hasher.js';
+export { ChronicleError } from './chronicle-errors.js';
+export type { ChronicleErrorCode } from './chronicle-errors.js';
+export { entryNotFound, chainIntegrityViolated, archiveSealed } from './chronicle-errors.js';

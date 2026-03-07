@@ -17,11 +17,11 @@ export type KalonErrorCode =
   | 'INTEGRITY_OUT_OF_RANGE'
   | 'DYNASTY_NOT_FOUND'
   | 'DYNASTY_ALREADY_EXISTS'
-  | 'MORTALITY_RECORD_NOT_FOUND'
-  | 'MORTALITY_RECORD_ALREADY_EXISTS'
-  | 'MORTALITY_INVALID_TRANSITION'
+  | 'CONTINUITY_RECORD_NOT_FOUND'
+  | 'CONTINUITY_RECORD_ALREADY_EXISTS'
+  | 'CONTINUITY_INVALID_TRANSITION'
   | 'HEIR_NOT_REGISTERED'
-  | 'MORTALITY_TERMINAL_STATE';
+  | 'CONTINUITY_TERMINAL_STATE';
 
 export class KalonError extends Error {
   readonly code: KalonErrorCode;
@@ -119,28 +119,28 @@ export function integrityOutOfRange(worldId: string, value: number): KalonError 
   );
 }
 
-export function mortalityRecordNotFound(dynastyId: string): KalonError {
-  return new KalonError('MORTALITY_RECORD_NOT_FOUND', `Mortality record for ${dynastyId} not found`, {
+export function continuityRecordNotFound(dynastyId: string): KalonError {
+  return new KalonError('CONTINUITY_RECORD_NOT_FOUND', `Continuity record for ${dynastyId} not found`, {
     dynastyId,
   });
 }
 
-export function mortalityRecordAlreadyExists(dynastyId: string): KalonError {
+export function continuityRecordAlreadyExists(dynastyId: string): KalonError {
   return new KalonError(
-    'MORTALITY_RECORD_ALREADY_EXISTS',
-    `Mortality record for ${dynastyId} already exists`,
+    'CONTINUITY_RECORD_ALREADY_EXISTS',
+    `Continuity record for ${dynastyId} already exists`,
     { dynastyId },
   );
 }
 
-export function mortalityInvalidTransition(
+export function continuityInvalidTransition(
   dynastyId: string,
   from: string,
   to: string,
 ): KalonError {
   return new KalonError(
-    'MORTALITY_INVALID_TRANSITION',
-    `Invalid mortality transition for ${dynastyId}: ${from} → ${to}`,
+    'CONTINUITY_INVALID_TRANSITION',
+    `Invalid continuity transition for ${dynastyId}: ${from} → ${to}`,
     { dynastyId, from, to },
   );
 }
@@ -153,9 +153,9 @@ export function heirNotRegistered(dynastyId: string, heirDynastyId: string): Kal
   );
 }
 
-export function mortalityTerminalState(dynastyId: string, state: string): KalonError {
+export function continuityTerminalState(dynastyId: string, state: string): KalonError {
   return new KalonError(
-    'MORTALITY_TERMINAL_STATE',
+    'CONTINUITY_TERMINAL_STATE',
     `Dynasty ${dynastyId} is in terminal state: ${state}`,
     { dynastyId, state },
   );

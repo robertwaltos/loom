@@ -150,7 +150,7 @@ describe('DynastyRegistry mutations', () => {
   it('sets status', () => {
     const registry = createTestRegistry();
     registry.found({ dynastyId: 'd1', name: 'D1', homeWorldId: 'w1' });
-    registry.setStatus('d1', 'deceased');
-    expect(registry.get('d1').status).toBe('deceased');
+    registry.setStatus('d1', 'completed');
+    expect(registry.get('d1').status).toBe('completed');
   });
 });
