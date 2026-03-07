@@ -31,6 +31,8 @@ export { matchesFilter } from './event-filter-matcher.js';
 
 export { createSystemClock, createFakeClock } from './clock.js';
 export type { Clock } from './clock.js';
+export { createTimeService, DEFAULT_TIME_CONFIG } from './time-service.js';
+export type { TimeService, TimeServiceConfig } from './time-service.js';
 export { createUuidGenerator, createSequentialIdGenerator } from './id-generator.js';
 export type { IdGenerator } from './id-generator.js';
 export { createSilentLogger } from './logger.js';
