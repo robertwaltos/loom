@@ -13,7 +13,7 @@
  */
 
 export type { LoomEvent, EventMetadata, EventHandler, EventFilter } from './event.js';
-export type { EventBus } from './event-bus.js';
+export type { EventBus, Unsubscribe } from './event-bus.js';
 export type {
   EntitySpawnedEvent,
   EntityDespawnedEvent,

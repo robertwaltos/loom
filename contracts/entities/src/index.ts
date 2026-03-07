@@ -9,7 +9,7 @@
  * This is the minimal set needed to prove the architecture.
  */
 
-export type { Entity, EntityType } from './entity.js';
+export type { Entity, EntityId, EntityType } from './entity.js';
 export type {
   TransformComponent,
   IdentityComponent,
