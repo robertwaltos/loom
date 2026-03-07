@@ -4,6 +4,7 @@
  * NPC Tier System: Classification and capability rules for AI agents.
  * World Shadow Economy: Per-world NPC commodity layer and prosperity.
  * NPC Memory Service: Tier-aware persistent memory for AI agents.
+ * NPC Decision Engine: Think/act loop for AI agents.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -48,3 +49,17 @@ export type {
   RecallFilter,
   MemoryStats,
 } from './npc-memory.js';
+export { createNpcDecisionEngine } from './npc-decision.js';
+export type {
+  NpcDecisionEngine,
+  NpcDecisionDeps,
+  NpcDecision,
+  NpcPerception,
+  ContextSignal,
+  DecisionOutcome,
+  DecisionRequest,
+  DecisionBackend,
+  BackendResult,
+  DecisionStats,
+  TierBackendResolver,
+} from './npc-decision.js';
