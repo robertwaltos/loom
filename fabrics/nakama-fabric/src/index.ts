@@ -156,3 +156,17 @@ export type {
   ChroniclePort,
   FoundingEligibility,
 } from './dynasty-bootstrap.js';
+export { createConsequenceEngine } from './consequence-engine.js';
+export type {
+  ConsequenceEngine,
+  ConsequenceEngineDeps,
+  ConsequenceChroniclePort,
+  ConsequenceChronicleEntry,
+  WorldSurveyedCallback,
+  SurveyCompleteEvent,
+  SurveyConsequenceResult,
+  UnrestNotifyEvent,
+  UnrestConsequenceResult,
+  VoteCompleteEvent,
+  VoteConsequenceResult,
+} from './consequence-engine.js';
