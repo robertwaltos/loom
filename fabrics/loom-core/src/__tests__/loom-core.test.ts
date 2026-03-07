@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { createLoomCore } from '../loom-core.js';
 import { createFakeClock } from '../clock.js';
 import { createSequentialIdGenerator } from '../id-generator.js';
@@ -18,6 +18,8 @@ describe('LoomCore creation', () => {
     expect(loom.entities).toBeDefined();
     expect(loom.worlds).toBeDefined();
     expect(loom.eventFactory).toBeDefined();
+    expect(loom.systems).toBeDefined();
+    expect(loom.tickLoop).toBeDefined();
     loom.shutdown();
   });
 
@@ -98,5 +100,25 @@ describe('LoomCore multi-world', () => {
     expect(loom.entities.queryByWorld('void-reach')).toHaveLength(1);
     expect(loom.entities.count()).toBe(3);
     loom.shutdown();
+  });
+});
+
+describe('LoomCore systems', () => {
+  it('registers and ticks systems', () => {
+    const loom = createTestLoom();
+    const fn = vi.fn();
+    loom.systems.register('test-system', fn);
+
+    loom.tickLoop.tickOnce();
+    expect(fn).toHaveBeenCalledOnce();
+    loom.shutdown();
+  });
+
+  it('shutdown stops the tick loop', () => {
+    const loom = createTestLoom();
+    loom.tickLoop.start();
+    expect(loom.tickLoop.state()).toBe('running');
+    loom.shutdown();
+    expect(loom.tickLoop.state()).toBe('idle');
   });
 });
