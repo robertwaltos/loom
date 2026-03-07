@@ -1,8 +1,10 @@
 /**
  * @loom/archive — Document storage, state persistence.
  *
- * Currently provides: The Chronicle (append-only hash chain).
- * Future: Foundation Archive sync, full-text search, state snapshots.
+ * Chronicle: Append-only SHA-256 hash chain.
+ * Chronicle Search: Full-text inverted index over Chronicle entries.
+ * State Snapshots: Point-in-time world state capture.
+ * Future: Foundation Archive sync.
  */
 
 export { createChronicle } from './chronicle.js';
@@ -32,3 +34,12 @@ export type {
   SnapshotHasher,
   SnapshotIdGenerator,
 } from './state-snapshot.js';
+export { createChronicleSearchIndex } from './chronicle-search.js';
+export type {
+  ChronicleSearchIndex,
+  SearchResult,
+  SearchQuery,
+  SearchMode,
+  IndexEntry,
+  SearchStats,
+} from './chronicle-search.js';
