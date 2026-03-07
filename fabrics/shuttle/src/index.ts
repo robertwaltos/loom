@@ -3,7 +3,8 @@
  *
  * NPC Tier System: Classification and capability rules for AI agents.
  * World Shadow Economy: Per-world NPC commodity layer and prosperity.
- * Future: Temporal workflow integration, LLM orchestration, memory services.
+ * NPC Memory Service: Tier-aware persistent memory for AI agents.
+ * Future: Temporal workflow integration, LLM orchestration.
  */
 
 export { createNpcTierRegistry, TIER_CONFIGS as NPC_TIER_CONFIGS } from './npc-tiers.js';
@@ -37,3 +38,13 @@ export type {
   WorldPopulationState,
   PopulationDelta,
 } from './world-population.js';
+export { createNpcMemoryService } from './npc-memory.js';
+export type {
+  NpcMemoryService,
+  NpcMemoryDeps,
+  MemoryEntry,
+  MemoryCategory,
+  RecordMemoryParams,
+  RecallFilter,
+  MemoryStats,
+} from './npc-memory.js';
