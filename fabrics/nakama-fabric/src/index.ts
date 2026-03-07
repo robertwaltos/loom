@@ -120,3 +120,19 @@ export type {
   BondSpend,
   EarnBondsParams,
 } from './continuity-bonds.js';
+export {
+  TIER_CONFIGS,
+  getTierConfig,
+  canFoundDynasty,
+  canInitiateSurvey,
+  surveyPriorityForTier,
+  monthlyStipendMicro,
+  graceDaysForTier,
+  isTrialTier,
+  hasEarlyArchitectAccess,
+} from './subscription-tiers.js';
+export type {
+  TierConfig,
+  SurveyPriority,
+  ArchitectAccess,
+} from './subscription-tiers.js';
