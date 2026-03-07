@@ -180,6 +180,19 @@ export type {
   UbkDistributionResult,
   CommonsFundSummary,
 } from './commons-fund.js';
+export { createHeirRegistry, MAX_HEIRS_BY_TIER } from './heir-registry.js';
+export type {
+  HeirRegistry,
+  HeirRegistryDeps,
+  HeirDeclaration,
+  HeirClaimResult,
+  HeirContinuityPort,
+  HeirContinuityRecord,
+  HeirDynastyPort,
+  HeirDynastyInfo,
+  HeirChroniclePort,
+  HeirChronicleEntry,
+} from './heir-registry.js';
 export { createDynastyMortalityOrchestrator } from './dynasty-mortality.js';
 export type {
   DynastyMortalityOrchestrator,
