@@ -145,3 +145,14 @@ export type {
   MarkErrorCode,
   MarksRegistryDeps,
 } from './marks-registry.js';
+export { createDynastyBootstrapService } from './dynasty-bootstrap.js';
+export type {
+  DynastyBootstrapService,
+  DynastyBootstrapDeps,
+  BootstrapParams,
+  BootstrapResult,
+  KalonLedgerPort,
+  GenesisVaultPort,
+  ChroniclePort,
+  FoundingEligibility,
+} from './dynasty-bootstrap.js';
