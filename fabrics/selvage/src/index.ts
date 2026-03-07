@@ -83,3 +83,16 @@ export {
   messageTooLarge,
   rateLimited,
 } from './selvage-errors.js';
+
+// Action dispatcher
+export type {
+  ActionDispatcher,
+  ActionDispatcherDeps,
+  ActionRequest,
+  ActionResult,
+  ActionOutcome,
+  ActionHandler,
+  ActionHandlerResult,
+  DispatchStats,
+} from './action-dispatcher.js';
+export { createActionDispatcher } from './action-dispatcher.js';
