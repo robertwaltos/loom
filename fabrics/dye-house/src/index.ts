@@ -2,7 +2,8 @@
  * @loom/dye-house — Security, authentication, encryption.
  *
  * Token Vault: Session token lifecycle management.
- * Future: Rate limiting, encryption services, permission gates.
+ * Rate Limiter: Sliding window rate control per identity per action.
+ * Future: Encryption services, permission gates.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -17,3 +18,10 @@ export type {
   TokenInvalidReason,
   TokenIdGenerator,
 } from './token-vault.js';
+export { createRateLimiter } from './rate-limiter.js';
+export type {
+  RateLimiter,
+  RateLimiterDeps,
+  RateLimitRule,
+  RateLimitCheck,
+} from './rate-limiter.js';
