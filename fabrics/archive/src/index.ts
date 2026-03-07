@@ -21,3 +21,14 @@ export type { ChronicleErrorCode } from './chronicle-errors.js';
 export { entryNotFound, chainIntegrityViolated, archiveSealed } from './chronicle-errors.js';
 export { calculateChronicleDepth, DEFAULT_DEPTH_CONFIG } from './depth-scoring.js';
 export type { DepthScoringConfig, DepthScore } from './depth-scoring.js';
+export { createStateSnapshotEngine } from './state-snapshot.js';
+export type {
+  StateSnapshotEngine,
+  StateSnapshotDeps,
+  StateSnapshot,
+  CaptureParams,
+  SnapshotFilter,
+  SnapshotRestoreResult,
+  SnapshotHasher,
+  SnapshotIdGenerator,
+} from './state-snapshot.js';
