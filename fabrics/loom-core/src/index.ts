@@ -232,3 +232,38 @@ export type {
   AggregateHealth,
   ServiceHealthStats,
 } from './service-health.js';
+
+// ── Game Systems ─────────────────────────────────────────────────
+
+export { createMovementSystem, MOVEMENT_SYSTEM_PRIORITY } from './movement-system.js';
+export type { MovementSystemDeps } from './movement-system.js';
+
+export { createSpawnSystem } from './spawn-system.js';
+export type {
+  SpawnSystemDeps,
+  SpawnSystemService,
+  SpawnPlayerParams,
+  SpawnNpcParams,
+  SpawnResult,
+} from './spawn-system.js';
+
+export { createVisualStateMapper, VISUAL_STATE_MAPPER_PRIORITY } from './visual-state-mapper.js';
+export type {
+  VisualStateMapperDeps,
+  VisualStateMapperService,
+  VisualStateBuffer,
+  MappedVisualState,
+  MappedTransform,
+  MappedMesh,
+  MappedAnimation,
+} from './visual-state-mapper.js';
+
+export { createPlayerConnectionSystem } from './player-connection-system.js';
+export type {
+  PlayerConnectionDeps,
+  PlayerConnectionSystem,
+  PlayerConnection,
+  PlayerConnectionState,
+  ConnectPlayerParams,
+  PlayerConnectionStats,
+} from './player-connection-system.js';
