@@ -4,6 +4,7 @@
  * Metrics Registry: In-process counters, gauges, and histograms.
  * Health Check Engine: Fabric and subsystem health monitoring.
  * Alerting Engine: Threshold-based metric alerts with cooldown.
+ * Metrics Aggregator: Time-windowed aggregation, trend analysis, rate-of-change.
  * Future: Quality gates, perceptual testing.
  */
 
@@ -41,3 +42,12 @@ export type {
   MetricValueProvider,
   AlertCallback,
 } from './alerting-engine.js';
+export { createMetricsAggregator, DEFAULT_AGGREGATOR_CONFIG } from './metrics-aggregator.js';
+export type {
+  MetricsAggregator,
+  AggregatorDeps,
+  AggregatorConfig,
+  AggregatedMetric,
+  TrendDirection,
+  MetricValuePort,
+} from './metrics-aggregator.js';
