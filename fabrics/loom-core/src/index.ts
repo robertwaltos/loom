@@ -212,3 +212,12 @@ export type {
   AggregateSnapshot,
   EventSourcingStats,
 } from './event-sourcing.js';
+export { createTaskScheduler } from './task-scheduler.js';
+export type {
+  TaskScheduler,
+  TaskSchedulerDeps,
+  ScheduledTaskStatus,
+  ScheduledTask,
+  ScheduleTaskParams,
+  TaskSchedulerStats,
+} from './task-scheduler.js';
