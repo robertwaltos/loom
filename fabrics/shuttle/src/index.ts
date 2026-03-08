@@ -6,6 +6,7 @@
  * NPC Memory Service: Tier-aware persistent memory for AI agents.
  * NPC Decision Engine: Think/act loop for AI agents.
  * Behavior Tree: Tick-driven decision trees for Tier 2 Inhabitants.
+ * NPC Relationship Tracker: Inter-entity disposition and social graph.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -85,3 +86,13 @@ export type {
   BehaviorTreeRegistry,
   BtTreeStats,
 } from './behavior-tree.js';
+export { createRelationshipTracker } from './npc-relationship.js';
+export type {
+  RelationshipTracker,
+  RelationshipTrackerDeps,
+  Relationship,
+  RelationshipType,
+  FormRelationshipParams,
+  DispositionChange,
+  RelationshipStats,
+} from './npc-relationship.js';
