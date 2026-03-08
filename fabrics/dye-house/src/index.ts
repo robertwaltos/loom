@@ -14,6 +14,7 @@
  * IP Allowlist: Address-based access control with temporary blocks.
  * Session Manager: Authenticated session lifecycle with TTL and idle expiry.
  * Threat Scorer: Connection-level threat assessment with signal decay.
+ * Credential Vault: Secure credential storage with rotation and expiration.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -156,3 +157,12 @@ export type {
   ThreatLevel,
   ThreatScorerStats,
 } from './threat-scorer.js';
+export { createCredentialVault } from './credential-vault.js';
+export type {
+  CredentialVault,
+  CredentialVaultDeps,
+  StoredCredential,
+  StoreCredentialParams,
+  CredentialAccess,
+  CredentialVaultStats,
+} from './credential-vault.js';
