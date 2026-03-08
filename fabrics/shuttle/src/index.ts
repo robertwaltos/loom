@@ -168,3 +168,15 @@ export type {
   InheritTraitsParams,
   TraitSystemStats,
 } from './npc-traits.js';
+export { createNpcRoutineEngine } from './npc-routine.js';
+export type {
+  NpcRoutineEngine,
+  NpcRoutineDeps,
+  RoutineActivity,
+  RoutineStep,
+  Routine,
+  CreateRoutineParams,
+  AssignmentStatus,
+  RoutineAssignment,
+  NpcRoutineStats,
+} from './npc-routine.js';
