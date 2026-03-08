@@ -1,22 +1,19 @@
 /**
  * Core Components
  *
- * Minimal component set to prove the architecture.
- * The game bible will drive expansion of these.
+ * Minimal component set that forms the foundation.
+ * Extended by gameplay-components.ts for the vertical slice.
  *
  * All components are pure data — serializable, immutable snapshots.
  * No methods. No references to other entities (use entity IDs).
  */
 
+import type { Vec3, Quat } from './shared-types.js';
+
 export interface TransformComponent {
-  readonly position: { readonly x: number; readonly y: number; readonly z: number };
-  readonly rotation: {
-    readonly x: number;
-    readonly y: number;
-    readonly z: number;
-    readonly w: number;
-  };
-  readonly scale: { readonly x: number; readonly y: number; readonly z: number };
+  readonly position: Vec3;
+  readonly rotation: Quat;
+  readonly scale: Vec3;
 }
 
 export interface IdentityComponent {
@@ -56,7 +53,7 @@ export interface AIBrainComponent {
 
 export interface PhysicsBodyComponent {
   readonly mass: number;
-  readonly velocity: { readonly x: number; readonly y: number; readonly z: number };
+  readonly velocity: Vec3;
   readonly isKinematic: boolean;
   readonly collisionLayer: number;
   readonly collisionMask: number;
