@@ -224,3 +224,11 @@ export type {
   ExtractionResult,
   WorldResourceStats,
 } from './world-resource-map.js';
+export { createWorldTimeZoneService } from './world-time-zone.js';
+export type {
+  WorldTimeZoneService,
+  WorldTimeZoneDeps,
+  WorldTimeConfig,
+  WorldLocalTime,
+  WorldTimeZoneStats,
+} from './world-time-zone.js';
