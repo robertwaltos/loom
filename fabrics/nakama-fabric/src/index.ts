@@ -298,3 +298,16 @@ export type {
   ProposeAllianceParams,
   DynastyAllianceStats,
 } from './dynasty-alliance.js';
+export { createDynastyTreasuryService } from './dynasty-treasury.js';
+export type {
+  DynastyTreasuryService,
+  DynastyTreasuryDeps,
+  TransactionType,
+  TreasuryTransaction,
+  TreasuryDepositParams,
+  TreasuryWithdrawParams,
+  TreasuryTransferParams,
+  TreasuryResult,
+  TreasuryTransferResult,
+  DynastyTreasuryStats,
+} from './dynasty-treasury.js';
