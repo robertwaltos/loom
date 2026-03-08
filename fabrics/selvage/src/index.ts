@@ -192,3 +192,16 @@ export type {
   ConnectionPoolStats,
 } from './connection-pool.js';
 export { createConnectionPool, DEFAULT_POOL_CONFIG } from './connection-pool.js';
+
+// Request pipeline
+export type {
+  RequestPipeline,
+  RequestPipelineDeps,
+  PipelineContext,
+  StageHandler,
+  PipelineStage,
+  AddStageParams as PipelineAddStageParams,
+  ExecutionResult,
+  PipelineStats,
+} from './request-pipeline.js';
+export { createRequestPipeline } from './request-pipeline.js';
