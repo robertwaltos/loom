@@ -9,6 +9,7 @@
  * Document Store: Key-value document storage with versioning.
  * Notification Channel: Pub/sub event notification dispatch with topic filtering.
  * Archive Index: Metadata index with tag, category, and date-range queries.
+ * Document Vault: Versioned document storage with full edit history.
  * Future: Foundation Archive sync.
  */
 
@@ -110,3 +111,12 @@ export type {
   IndexQuery,
   IndexStats,
 } from './archive-index.js';
+export { createDocumentVault } from './document-vault.js';
+export type {
+  DocumentVault,
+  DocumentVaultDeps,
+  Document as VaultDocument,
+  DocumentVersion,
+  CreateDocumentParams as VaultCreateDocumentParams,
+  VaultStats,
+} from './document-vault.js';
