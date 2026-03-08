@@ -289,3 +289,12 @@ export type {
   ReputationChange,
   WorldReputationStats,
 } from './world-reputation.js';
+export { createDynastyAllianceService } from './dynasty-alliance.js';
+export type {
+  DynastyAllianceService,
+  DynastyAllianceDeps,
+  AllianceStatus,
+  Alliance,
+  ProposeAllianceParams,
+  DynastyAllianceStats,
+} from './dynasty-alliance.js';
