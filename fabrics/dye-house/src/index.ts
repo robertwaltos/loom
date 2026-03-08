@@ -8,6 +8,7 @@
  * Hash Service: Cryptographic hashing, HMAC signing, key derivation.
  * Encryption Service: Symmetric encryption with key rotation.
  * Access Control List: Role-based resource-level permission enforcement.
+ * Permission Policy Engine: Attribute-based access control (ABAC).
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -84,3 +85,18 @@ export type {
   CreateRoleParams,
   AclStats,
 } from './access-control.js';
+export { createPermissionPolicyEngine } from './permission-policy.js';
+export type {
+  PermissionPolicyEngine,
+  PermissionPolicyDeps,
+  PolicyIdGenerator,
+  Policy,
+  PolicyEffect,
+  PolicyDecision,
+  PolicyAttributes,
+  PolicyCondition,
+  CreatePolicyParams,
+  EvaluationRequest,
+  EvaluationResult,
+  PolicyStats,
+} from './permission-policy.js';
