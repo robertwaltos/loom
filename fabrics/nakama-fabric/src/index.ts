@@ -5,6 +5,7 @@
  *   World Issuance Service, Lattice Integrity Service.
  * Identity: Dynasty Registry, Civic Score.
  * Governance: The Assembly (voting system).
+ * Trade: Trade Engine (P2P KALON trades with escrow).
  *
  * Future: Nakama integration for identity, matchmaking, and presence.
  */
@@ -206,3 +207,14 @@ export type {
   MortalityIdGenerator,
   MortalityTickResult,
 } from './dynasty-mortality.js';
+export { createTradeEngine, DEFAULT_TRADE_CONFIG } from './trade-engine.js';
+export type {
+  TradeEngine,
+  TradeEngineDeps,
+  TradeEscrowPort,
+  Trade,
+  TradePhase,
+  ProposalParams,
+  TradeEngineConfig,
+  TradeStats,
+} from './trade-engine.js';
