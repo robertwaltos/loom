@@ -7,6 +7,7 @@
  * Audit Log: Security event recording and forensic analysis.
  * Hash Service: Cryptographic hashing, HMAC signing, key derivation.
  * Encryption Service: Symmetric encryption with key rotation.
+ * Access Control List: Role-based resource-level permission enforcement.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -72,3 +73,14 @@ export type {
   RegisterKeyParams,
   EncryptionStats,
 } from './encryption-service.js';
+export { createAccessControlList } from './access-control.js';
+export type {
+  AccessControlList,
+  AccessControlDeps,
+  AclRole,
+  AclGrant,
+  AclAssignment,
+  AclVerdict,
+  CreateRoleParams,
+  AclStats,
+} from './access-control.js';
