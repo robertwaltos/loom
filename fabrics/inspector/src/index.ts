@@ -6,6 +6,7 @@
  * Alerting Engine: Threshold-based metric alerts with cooldown.
  * Metrics Aggregator: Time-windowed aggregation, trend analysis, rate-of-change.
  * Diagnostic Reporter: Aggregated health, alerts, and metrics reporting.
+ * Performance Profiler: Execution timing for systems and operations.
  * Future: Quality gates, perceptual testing.
  */
 
@@ -70,3 +71,11 @@ export type {
   DiagnosticMetricPort,
   DiagnosticIdGenerator,
 } from './diagnostic-reporter.js';
+export { createPerformanceProfiler } from './performance-profiler.js';
+export type {
+  PerformanceProfiler,
+  PerformanceProfilerDeps,
+  ProfileEntry,
+  OperationProfile,
+  ProfilerStats,
+} from './performance-profiler.js';
