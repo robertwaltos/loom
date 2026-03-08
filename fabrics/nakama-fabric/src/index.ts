@@ -311,3 +311,13 @@ export type {
   TreasuryTransferResult,
   DynastyTreasuryStats,
 } from './dynasty-treasury.js';
+export { createDynastyNotificationService } from './dynasty-notification.js';
+export type {
+  DynastyNotificationService,
+  DynastyNotificationDeps,
+  NotificationType,
+  NotificationSnapshot,
+  SendNotificationParams,
+  NotificationFilter,
+  DynastyNotificationStats,
+} from './dynasty-notification.js';
