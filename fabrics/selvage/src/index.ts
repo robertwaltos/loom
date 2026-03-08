@@ -227,3 +227,14 @@ export type {
   MessageQueueStats,
 } from './message-queue.js';
 export { createMessageQueueService, DEFAULT_QUEUE_CONFIG } from './message-queue.js';
+
+// Response cache
+export type {
+  ResponseCacheService,
+  ResponseCacheDeps,
+  CacheEntry,
+  CacheConfig,
+  SetCacheParams,
+  ResponseCacheStats,
+} from './response-cache.js';
+export { createResponseCache, DEFAULT_CACHE_CONFIG } from './response-cache.js';
