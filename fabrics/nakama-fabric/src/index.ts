@@ -7,6 +7,7 @@
  * Governance: The Assembly (voting system).
  * Trade: Trade Engine (P2P KALON trades with escrow).
  *
+ * World Reputation: Per-world dynasty reputation tracking.
  * Future: Nakama integration for identity, matchmaking, and presence.
  */
 
@@ -277,3 +278,14 @@ export type {
   GuildConfig,
   GuildStats,
 } from './guild-registry.js';
+export { createWorldReputationService, DEFAULT_REPUTATION_CONFIG } from './world-reputation.js';
+export type {
+  WorldReputationService,
+  WorldReputationDeps,
+  WorldReputationConfig,
+  ReputationTier,
+  ReputationRecord,
+  ChangeReputationParams,
+  ReputationChange,
+  WorldReputationStats,
+} from './world-reputation.js';
