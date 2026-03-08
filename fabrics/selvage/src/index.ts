@@ -125,3 +125,15 @@ export type {
   RateLimitPortResult,
 } from './rate-guard.js';
 export { createRateGuard, DEFAULT_RATE_GUARD_CONFIG } from './rate-guard.js';
+
+// Session manager
+export type {
+  SessionManager,
+  SessionManagerDeps,
+  SessionManagerConfig,
+  Session,
+  SessionState,
+  CreateSessionParams,
+  SessionStats,
+} from './session-manager.js';
+export { createSessionManager, DEFAULT_SESSION_CONFIG } from './session-manager.js';
