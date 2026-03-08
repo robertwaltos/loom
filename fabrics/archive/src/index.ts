@@ -153,3 +153,13 @@ export type {
   BackupRun,
   BackupSchedulerStats,
 } from './backup-scheduler.js';
+export { createAuditLogService } from './audit-log.js';
+export type {
+  AuditLogService,
+  AuditLogDeps,
+  AuditEntry,
+  AuditOutcome,
+  RecordAuditParams,
+  AuditQuery,
+  AuditLogStats,
+} from './audit-log.js';
