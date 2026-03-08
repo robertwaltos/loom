@@ -203,3 +203,14 @@ export type {
   RecordTransitParams,
   TransitLedgerStats,
 } from './transit-ledger.js';
+export { createWorldWeatherEngine } from './world-weather.js';
+export type {
+  WorldWeatherEngine,
+  WorldWeatherDeps,
+  WeatherType,
+  WeatherSeverity,
+  WeatherCondition,
+  SetWeatherParams,
+  WorldWeatherSnapshot,
+  WorldWeatherStats,
+} from './world-weather.js';
