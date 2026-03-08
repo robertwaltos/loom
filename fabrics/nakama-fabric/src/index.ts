@@ -268,3 +268,12 @@ export type {
   LeaderboardInfo,
   LeaderboardStats,
 } from './world-leaderboard.js';
+export { createGuildRegistry, DEFAULT_GUILD_CONFIG } from './guild-registry.js';
+export type {
+  GuildRegistry,
+  GuildRegistryDeps,
+  Guild,
+  CreateGuildParams as GuildCreateParams,
+  GuildConfig,
+  GuildStats,
+} from './guild-registry.js';
