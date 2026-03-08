@@ -1,16 +1,16 @@
 import { describe, it, expect } from 'vitest';
-import { createDynastyMortalityOrchestrator } from '../dynasty-mortality.js';
+import { createContinuityOrchestrator } from '../continuity-orchestrator.js';
 import type {
-  DynastyMortalityOrchestrator,
-  DynastyMortalityDeps,
-  MortalityContinuityPort,
-  MortalityDynastyPort,
-  MortalityAuctionPort,
-  MortalityChroniclePort,
-  MortalityIdGenerator,
-  MortalityChronicleEntry,
-  MortalityPhaseResult,
-} from '../dynasty-mortality.js';
+  DynastyContinuityOrchestrator,
+  ContinuityOrchestratorDeps,
+  OrchestratorContinuityPort,
+  OrchestratorDynastyPort,
+  OrchestratorAuctionPort,
+  OrchestratorChroniclePort,
+  OrchestratorIdGenerator,
+  OrchestratorChronicleEntry,
+  OrchestratorPhaseResult,
+} from '../continuity-orchestrator.js';
 import type { ContinuityTransition } from '../dynasty-continuity.js';
 import type { DynastyStatus } from '../dynasty.js';
 
@@ -18,7 +18,7 @@ import type { DynastyStatus } from '../dynasty.js';
 
 function createMockContinuity(
   transitions: ContinuityTransition[] = [],
-): MortalityContinuityPort & {
+): OrchestratorContinuityPort & {
   transitions: ContinuityTransition[];
   redistributionCalls: string[];
 } {
@@ -42,7 +42,7 @@ function createMockContinuity(
   };
 }
 
-function createMockDynasty(): MortalityDynastyPort & {
+function createMockDynasty(): OrchestratorDynastyPort & {
   statusChanges: Array<{ dynastyId: string; status: DynastyStatus }>;
 } {
   const statusChanges: Array<{ dynastyId: string; status: DynastyStatus }> = [];
@@ -54,12 +54,12 @@ function createMockDynasty(): MortalityDynastyPort & {
   };
 }
 
-function createMockAuction(): MortalityAuctionPort & {
+function createMockAuction(): OrchestratorAuctionPort & {
   created: Array<{ auctionId: string; dynastyId: string }>;
-  phaseResults: Map<string, MortalityPhaseResult | null>;
+  phaseResults: Map<string, OrchestratorPhaseResult | null>;
 } {
   const created: Array<{ auctionId: string; dynastyId: string }> = [];
-  const phaseResults = new Map<string, MortalityPhaseResult | null>();
+  const phaseResults = new Map<string, OrchestratorPhaseResult | null>();
   return {
     created,
     phaseResults,
@@ -72,14 +72,14 @@ function createMockAuction(): MortalityAuctionPort & {
   };
 }
 
-function createMockChronicle(): MortalityChroniclePort & {
-  entries: MortalityChronicleEntry[];
+function createMockChronicle(): OrchestratorChroniclePort & {
+  entries: OrchestratorChronicleEntry[];
 } {
-  const entries: MortalityChronicleEntry[] = [];
+  const entries: OrchestratorChronicleEntry[] = [];
   let counter = 0;
   return {
     entries,
-    append(entry: MortalityChronicleEntry) {
+    append(entry: OrchestratorChronicleEntry) {
       counter += 1;
       entries.push(entry);
       return 'chr-' + String(counter);
@@ -87,7 +87,7 @@ function createMockChronicle(): MortalityChroniclePort & {
   };
 }
 
-function createMockIdGenerator(): MortalityIdGenerator {
+function createMockIdGenerator(): OrchestratorIdGenerator {
   let counter = 0;
   return {
     next() {
@@ -111,7 +111,7 @@ function transition(
 }
 
 interface TestHarness {
-  orchestrator: DynastyMortalityOrchestrator;
+  orchestrator: DynastyContinuityOrchestrator;
   continuity: ReturnType<typeof createMockContinuity>;
   dynasty: ReturnType<typeof createMockDynasty>;
   auction: ReturnType<typeof createMockAuction>;
@@ -125,7 +125,7 @@ function createTestHarness(
   const dynasty = createMockDynasty();
   const auction = createMockAuction();
   const chronicle = createMockChronicle();
-  const deps: DynastyMortalityDeps = {
+  const deps: ContinuityOrchestratorDeps = {
     continuity,
     dynasty,
     auction,
@@ -133,7 +133,7 @@ function createTestHarness(
     idGenerator: createMockIdGenerator(),
   };
   return {
-    orchestrator: createDynastyMortalityOrchestrator(deps),
+    orchestrator: createContinuityOrchestrator(deps),
     continuity,
     dynasty,
     auction,
@@ -143,7 +143,7 @@ function createTestHarness(
 
 // ─── Empty Tick ─────────────────────────────────────────────────────
 
-describe('Dynasty mortality orchestrator empty tick', () => {
+describe('Continuity orchestrator empty tick', () => {
   it('returns empty result when no transitions occur', () => {
     const { orchestrator } = createTestHarness();
     const result = orchestrator.tick();
@@ -162,7 +162,7 @@ describe('Dynasty mortality orchestrator empty tick', () => {
 
 // ─── Dynasty Status Sync ────────────────────────────────────────────
 
-describe('Dynasty mortality status sync', () => {
+describe('Continuity orchestrator status sync', () => {
   it('sets dynasty to dormant on dormant_30 transition', () => {
     const t = transition({ to: 'dormant_30' });
     const { orchestrator, dynasty } = createTestHarness([t]);
@@ -226,7 +226,7 @@ describe('Dynasty mortality status sync', () => {
 
 // ─── Chronicle Entries ──────────────────────────────────────────────
 
-describe('Dynasty mortality chronicle entries', () => {
+describe('Continuity orchestrator chronicle entries', () => {
   it('records chronicle for dormant_30 transition', () => {
     const t = transition({ to: 'dormant_30' });
     const { orchestrator, chronicle } = createTestHarness([t]);
@@ -283,7 +283,7 @@ describe('Dynasty mortality chronicle entries', () => {
 
 // ─── Auction Creation ───────────────────────────────────────────────
 
-describe('Dynasty mortality auction creation', () => {
+describe('Continuity orchestrator auction creation', () => {
   it('creates auction on redistribution transition', () => {
     const t = transition({ to: 'redistribution' });
     const { orchestrator, auction } = createTestHarness([t]);
@@ -300,7 +300,7 @@ describe('Dynasty mortality auction creation', () => {
     expect(orchestrator.getActiveAuctionIds()).toHaveLength(1);
   });
 
-  it('does not create auction for non-redistribution transitions', () => {
+  it('does not create auction for non-redistribution', () => {
     const t = transition({ to: 'dormant_30' });
     const { orchestrator, auction } = createTestHarness([t]);
     orchestrator.tick();
@@ -326,7 +326,7 @@ describe('Dynasty mortality auction creation', () => {
 
 // ─── Auction Phase Evaluation ───────────────────────────────────────
 
-describe('Dynasty mortality auction completion', () => {
+describe('Continuity orchestrator auction completion', () => {
   it('completes redistribution when auction finishes', () => {
     const t = transition({ to: 'redistribution' });
     const { orchestrator, auction, continuity } = createTestHarness([t]);
@@ -387,7 +387,7 @@ describe('Dynasty mortality auction completion', () => {
 
 // ─── Full Lifecycle ─────────────────────────────────────────────────
 
-describe('Dynasty mortality full lifecycle', () => {
+describe('Continuity orchestrator full lifecycle', () => {
   it('handles dormancy through redistribution to completion', () => {
     const { orchestrator, auction, continuity, dynasty, chronicle } =
       createTestHarness();

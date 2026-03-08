@@ -194,19 +194,19 @@ export type {
   HeirChroniclePort,
   HeirChronicleEntry,
 } from './heir-registry.js';
-export { createDynastyMortalityOrchestrator } from './dynasty-mortality.js';
+export { createContinuityOrchestrator } from './continuity-orchestrator.js';
 export type {
-  DynastyMortalityOrchestrator,
-  DynastyMortalityDeps,
-  MortalityContinuityPort,
-  MortalityDynastyPort,
-  MortalityAuctionPort,
-  MortalityPhaseResult,
-  MortalityChroniclePort,
-  MortalityChronicleEntry,
-  MortalityIdGenerator,
-  MortalityTickResult,
-} from './dynasty-mortality.js';
+  DynastyContinuityOrchestrator,
+  ContinuityOrchestratorDeps,
+  OrchestratorContinuityPort,
+  OrchestratorDynastyPort,
+  OrchestratorAuctionPort,
+  OrchestratorPhaseResult,
+  OrchestratorChroniclePort,
+  OrchestratorChronicleEntry,
+  OrchestratorIdGenerator,
+  ContinuityTickResult,
+} from './continuity-orchestrator.js';
 export { createTradeEngine, DEFAULT_TRADE_CONFIG } from './trade-engine.js';
 export type {
   TradeEngine,
