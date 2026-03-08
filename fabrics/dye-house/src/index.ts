@@ -175,3 +175,13 @@ export type {
   CsrfValidationResult,
   CsrfGuardStats,
 } from './csrf-guard.js';
+export { createKeyRotationService } from './key-rotation.js';
+export type {
+  KeyRotationService,
+  KeyRotationDeps,
+  KeyStatus,
+  ManagedKey,
+  KeyRegisterParams,
+  KeyRotationConfig,
+  KeyRotationStats,
+} from './key-rotation.js';
