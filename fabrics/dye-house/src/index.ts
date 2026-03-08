@@ -166,3 +166,12 @@ export type {
   CredentialAccess,
   CredentialVaultStats,
 } from './credential-vault.js';
+export { createCsrfGuard, DEFAULT_CSRF_CONFIG } from './csrf-guard.js';
+export type {
+  CsrfGuard,
+  CsrfGuardDeps,
+  CsrfConfig,
+  CsrfToken,
+  CsrfValidationResult,
+  CsrfGuardStats,
+} from './csrf-guard.js';
