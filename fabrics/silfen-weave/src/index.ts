@@ -13,6 +13,7 @@
  * Transit Queue: Priority-ordered entity transition request management.
  * World Connectivity Graph: Directed graph with shortest path finding.
  * Coherence Monitor: World coherence level tracking and alert generation.
+ * Transit Cooldown Tracker: Per-entity cooldown enforcement between transits.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -162,3 +163,12 @@ export type {
   CoherenceAlert,
   CoherenceStats,
 } from './coherence-monitor.js';
+export { createTransitCooldownTracker, DEFAULT_COOLDOWN_CONFIG } from './transit-cooldown.js';
+export type {
+  TransitCooldownTracker,
+  TransitCooldownDeps,
+  CooldownConfig,
+  CooldownRecord,
+  StartCooldownParams,
+  CooldownStats,
+} from './transit-cooldown.js';
