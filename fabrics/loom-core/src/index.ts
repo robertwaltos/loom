@@ -316,4 +316,7 @@ export { createGameOrchestrator } from './game-orchestrator.js';
 export type {
   GameOrchestrator,
   GameOrchestratorConfig,
+  FabricDeps,
+  ShuttleFabricDeps,
+  WeaveFabricDeps,
 } from './game-orchestrator.js';
