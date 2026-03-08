@@ -295,6 +295,23 @@ export type {
   WeaveCompletedTransit,
 } from './weave-system.js';
 
+export {
+  createEntityQueryAdapter,
+  createComponentQueryAdapter,
+  createPlayerEntityAdapter,
+  createSelvageBroadcastSystem,
+  SELVAGE_BROADCAST_PRIORITY,
+} from './selvage-adapters.js';
+export type {
+  SelvageEntityQueryPort,
+  SelvageSnapshotEntity,
+  SelvageComponentQueryPort,
+  SelvagePlayerEntityPort,
+  SelvaeBroadcastPort,
+  EntityQuerySourcePort,
+  PlayerEntityAdapterDeps,
+} from './selvage-adapters.js';
+
 // ── Wire Codec ───────────────────────────────────────────────────
 
 export { createJsonPayloadCodec, createMessageFactory } from './wire-codec.js';
