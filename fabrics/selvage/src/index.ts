@@ -112,3 +112,16 @@ export type {
   AuthIdGenerator,
 } from './connection-auth.js';
 export { createConnectionAuthenticator } from './connection-auth.js';
+
+// Rate guard
+export type {
+  RateGuard,
+  RateGuardDeps,
+  RateGuardConfig,
+  RateGuardResult,
+  RateGuardStats,
+  ConnectionViolation,
+  RateLimitPort,
+  RateLimitPortResult,
+} from './rate-guard.js';
+export { createRateGuard, DEFAULT_RATE_GUARD_CONFIG } from './rate-guard.js';
