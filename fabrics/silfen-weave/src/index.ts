@@ -241,3 +241,16 @@ export type {
   CreatePortalParams,
   WorldPortalStats,
 } from './world-portal.js';
+export { createWeaveOrchestrator, DEFAULT_WEAVE_CONFIG } from './weave-orchestrator.js';
+export type {
+  WeaveOrchestrator,
+  WeaveOrchestratorDeps,
+  WeaveOrchestratorConfig,
+  WeaveOrchestratorStats,
+  WeaveTickResult,
+  WeaveQueuePort,
+  WeaveCorridorPort,
+  WeaveCoherencePort,
+  WeaveSurveyPort,
+  WeaveLedgerPort,
+} from './weave-orchestrator.js';
