@@ -11,6 +11,7 @@
  * NPC Emotion Model: Emotional state tracking with intensity and decay.
  * NPC Dialogue Manager: Dialogue tree state machine for conversations.
  * NPC Goal Planner: Hierarchical goal tracking for NPC agents.
+ * NPC Faction Tracker: Faction affinity tracking for NPC agents.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -146,3 +147,11 @@ export type {
   AddGoalParams,
   GoalStats,
 } from './npc-goal.js';
+export { createNpcFactionTracker, AFFINITY_MIN, AFFINITY_MAX } from './npc-faction.js';
+export type {
+  NpcFactionTracker,
+  FactionAffinity,
+  AffinityLevel,
+  AdjustAffinityParams,
+  FactionStats,
+} from './npc-faction.js';
