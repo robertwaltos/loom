@@ -3,7 +3,7 @@
  *
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
- * Resource Pool, Command Bus, Entity Lifecycle Manager.
+ * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay.
  * All inter-module communication flows through here.
  */
 
@@ -103,3 +103,16 @@ export {
   eventBusClosed,
   worldCapacityReached,
 } from './errors.js';
+export { createEventReplayService } from './event-replay.js';
+export type {
+  EventReplayService,
+  EventReplayDeps,
+  ReplayEventSourcePort,
+  ReplayIdGenerator,
+  ReplayEvent,
+  ReplayFilter,
+  ReplaySession,
+  ReplayStatus,
+  ReplayHandler,
+  ReplayStats,
+} from './event-replay.js';
