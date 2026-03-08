@@ -137,3 +137,20 @@ export type {
   SessionStats,
 } from './session-manager.js';
 export { createSessionManager, DEFAULT_SESSION_CONFIG } from './session-manager.js';
+
+// Message router
+export type {
+  MessageRouter,
+  MessageRouterDeps,
+  RouteMode,
+  RoutedMessage,
+  RouteDirectParams,
+  RouteBroadcastParams,
+  RouteGroupParams,
+  RouteDynastyParams,
+  RouterStats,
+  MessageDeliveryPort,
+  RouterConnectionPort,
+  RouterIdGenerator,
+} from './message-router.js';
+export { createMessageRouter } from './message-router.js';
