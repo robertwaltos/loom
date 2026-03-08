@@ -191,3 +191,12 @@ export type {
   TransferResult,
   NpcInventoryStats,
 } from './npc-inventory.js';
+export { createNpcSkillSystem, XP_PER_LEVEL } from './npc-skill.js';
+export type {
+  NpcSkillSystem,
+  NpcSkillDeps,
+  NpcSkill,
+  AcquireSkillParams,
+  TrainResult,
+  NpcSkillStats,
+} from './npc-skill.js';
