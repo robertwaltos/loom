@@ -14,6 +14,7 @@
  * World Connectivity Graph: Directed graph with shortest path finding.
  * Coherence Monitor: World coherence level tracking and alert generation.
  * Transit Cooldown Tracker: Per-entity cooldown enforcement between transits.
+ * World Event Log: Per-world timestamped event logging with rotation.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -172,3 +173,13 @@ export type {
   StartCooldownParams,
   CooldownStats,
 } from './transit-cooldown.js';
+export { createWorldEventLog, DEFAULT_EVENT_LOG_CONFIG } from './world-event-log.js';
+export type {
+  WorldEventLog,
+  WorldEventLogDeps,
+  WorldEvent,
+  LogEventParams,
+  EventSeverity as WorldEventSeverity,
+  EventLogConfig,
+  EventLogStats,
+} from './world-event-log.js';
