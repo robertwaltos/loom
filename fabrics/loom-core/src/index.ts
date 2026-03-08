@@ -6,7 +6,7 @@
  * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay,
  * World Event Scheduler, Entity Template Registry, Config Registry,
  * Event Correlation Engine, System Dependency Graph, Entity Group Manager,
- * State Snapshot Service, Priority Queue.
+ * State Snapshot Service, Priority Queue, Service Registry.
  * All inter-module communication flows through here.
  */
 
@@ -193,3 +193,12 @@ export type {
   EnqueueParams,
   PriorityQueueStats,
 } from './priority-queue.js';
+export { createServiceRegistry } from './service-registry.js';
+export type {
+  ServiceRegistry,
+  ServiceRegistryDeps,
+  ServiceEntry,
+  ServiceStatus,
+  RegisterServiceParams,
+  ServiceRegistryStats,
+} from './service-registry.js';
