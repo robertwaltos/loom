@@ -4,6 +4,7 @@
  * Chronicle: Append-only SHA-256 hash chain.
  * Chronicle Search: Full-text inverted index over Chronicle entries.
  * State Snapshots: Point-in-time world state capture.
+ * Data Export: Structured export bundles for analytics pipelines.
  * Future: Foundation Archive sync.
  */
 
@@ -43,3 +44,21 @@ export type {
   IndexEntry,
   SearchStats,
 } from './chronicle-search.js';
+export { createDataExporter } from './data-export.js';
+export type {
+  DataExporter,
+  DataExportDeps,
+  ExportBundle,
+  ExportEntry,
+  ExportSource,
+  ExportFormat,
+  ExportFilter,
+  ExportMetadata,
+  ExportStats,
+  ChronicleExportPort,
+  ChroniclePortEntry,
+  ChroniclePortFilter,
+  SnapshotExportPort,
+  SnapshotPortEntry,
+  SnapshotPortFilter,
+} from './data-export.js';
