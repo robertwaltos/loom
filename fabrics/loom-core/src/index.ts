@@ -202,3 +202,13 @@ export type {
   RegisterServiceParams,
   ServiceRegistryStats,
 } from './service-registry.js';
+export { createEventSourcingStore } from './event-sourcing.js';
+export type {
+  EventSourcingStore,
+  EventSourcingDeps,
+  StoredEvent,
+  AppendEventParams,
+  EventReducer,
+  AggregateSnapshot,
+  EventSourcingStats,
+} from './event-sourcing.js';
