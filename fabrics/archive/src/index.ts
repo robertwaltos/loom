@@ -11,6 +11,7 @@
  * Archive Index: Metadata index with tag, category, and date-range queries.
  * Document Vault: Versioned document storage with full edit history.
  * Retention Policy: Data lifecycle and age-based cleanup rules.
+ * Migration Engine: Schema and data version migration with rollback.
  * Future: Foundation Archive sync.
  */
 
@@ -132,3 +133,14 @@ export type {
   RetentionSweepResult,
   RetentionStats,
 } from './retention-policy.js';
+export { createMigrationEngine } from './migration-engine.js';
+export type {
+  MigrationEngine,
+  MigrationEngineDeps,
+  MigrationDefinition,
+  MigrationDirection,
+  RegisterMigrationParams,
+  MigrationRecord,
+  MigrationResult,
+  MigrationEngineStats,
+} from './migration-engine.js';
