@@ -225,6 +225,11 @@ describe('Full-Stack — 10-tick simulation', () => {
     const weaveOrch = createWeaveOrchestrator(weaveSetup.deps);
     const completionQueue = weaveSetup.completionQueue;
 
+    let selvageBroadcasts = 0;
+    const selvageBroadcast = {
+      broadcastSnapshot: () => { selvageBroadcasts++; },
+    };
+
     const orchestrator = createGameOrchestrator({
       renderingFabric: fabric,
       coreConfig: { logger: createSilentLogger() },
@@ -244,6 +249,7 @@ describe('Full-Stack — 10-tick simulation', () => {
             },
           },
         },
+        selvage: selvageBroadcast,
       },
     });
 
@@ -253,6 +259,7 @@ describe('Full-Stack — 10-tick simulation', () => {
     runTicks(orchestrator, 10);
 
     verifyFullStackResults(orchestrator, fabric, nakamaOrch, shuttleOrch, weaveOrch);
+    expect(selvageBroadcasts).toBe(10);
     orchestrator.stop();
   });
 });
@@ -339,6 +346,7 @@ function verifyFullStackResults(
   expect(names).toContain('nakama-fabric');
   expect(names).toContain('shuttle-npc');
   expect(names).toContain('silfen-weave');
+  expect(names).toContain('selvage-broadcast');
   expect(names).toContain('bridge-service');
 
   expect(fabric.pushCount()).toBe(10);

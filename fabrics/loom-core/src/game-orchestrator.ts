@@ -20,6 +20,7 @@ import type { ComponentStore } from './component-store.js';
 import type { NakamaSystemOrchestrator } from './nakama-system.js';
 import type { ShuttleSystemOrchestrator, ShuttleWorldListPort } from './shuttle-system.js';
 import type { WeaveSystemOrchestrator, WeaveTransitCompletionPort } from './weave-system.js';
+import type { SelvaeBroadcastPort } from './selvage-adapters.js';
 
 import { createLoomCore } from './loom-core.js';
 import { createMovementSystem, MOVEMENT_SYSTEM_PRIORITY } from './movement-system.js';
@@ -30,6 +31,7 @@ import { createPlayerConnectionSystem } from './player-connection-system.js';
 import { createNakamaSystem, NAKAMA_SYSTEM_PRIORITY } from './nakama-system.js';
 import { createShuttleSystem, SHUTTLE_SYSTEM_PRIORITY } from './shuttle-system.js';
 import { createWeaveSystem, WEAVE_SYSTEM_PRIORITY } from './weave-system.js';
+import { createSelvageBroadcastSystem, SELVAGE_BROADCAST_PRIORITY } from './selvage-adapters.js';
 
 // ── Fabric Ports ────────────────────────────────────────────────
 
@@ -37,6 +39,7 @@ export interface FabricDeps {
   readonly nakama?: NakamaSystemOrchestrator;
   readonly shuttle?: ShuttleFabricDeps;
   readonly weave?: WeaveFabricDeps;
+  readonly selvage?: SelvaeBroadcastPort;
 }
 
 export interface ShuttleFabricDeps {
@@ -141,6 +144,7 @@ function registerFabricSystems(
   registerNakama(core, fabrics);
   registerShuttle(core, store, fabrics);
   registerWeave(core, store, clock, fabrics);
+  registerSelvage(core, fabrics);
 }
 
 function registerNakama(core: LoomCore, fabrics: FabricDeps): void {
@@ -177,6 +181,12 @@ function registerWeave(
     clock,
   });
   core.systems.register('silfen-weave', fn, WEAVE_SYSTEM_PRIORITY);
+}
+
+function registerSelvage(core: LoomCore, fabrics: FabricDeps): void {
+  if (fabrics.selvage === undefined) return;
+  const fn = createSelvageBroadcastSystem(fabrics.selvage);
+  core.systems.register('selvage-broadcast', fn, SELVAGE_BROADCAST_PRIORITY);
 }
 
 // ── Exports ─────────────────────────────────────────────────────

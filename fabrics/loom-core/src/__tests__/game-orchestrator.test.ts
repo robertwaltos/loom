@@ -185,6 +185,39 @@ describe('GameOrchestrator — NPC spawn', () => {
   });
 });
 
+describe('GameOrchestrator — selvage wiring', () => {
+  it('registers selvage-broadcast system when deps provided', () => {
+    const fabric = createMockFabric();
+    const broadcasts: Array<{ tick: number; ts: number }> = [];
+    const orchestrator = createGameOrchestrator({
+      renderingFabric: fabric,
+      coreConfig: { logger: createSilentLogger() },
+      fabrics: {
+        selvage: {
+          broadcastSnapshot: (tick, ts) => {
+            broadcasts.push({ tick, ts });
+          },
+        },
+      },
+    });
+
+    const names = orchestrator.core.systems.listSystems().map((s) => s.name);
+    expect(names).toContain('selvage-broadcast');
+
+    orchestrator.core.systems.runAll({
+      deltaMs: 33,
+      tickNumber: 1,
+      wallTimeMicroseconds: 33000,
+    });
+
+    expect(broadcasts).toHaveLength(1);
+    expect(broadcasts[0]?.tick).toBe(1);
+    expect(broadcasts[0]?.ts).toBe(33);
+
+    orchestrator.stop();
+  });
+});
+
 describe('GameOrchestrator — start/stop', () => {
   it('starts and stops without error', () => {
     const fabric = createMockFabric();
