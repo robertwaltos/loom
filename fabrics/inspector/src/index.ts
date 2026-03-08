@@ -5,6 +5,7 @@
  * Health Check Engine: Fabric and subsystem health monitoring.
  * Alerting Engine: Threshold-based metric alerts with cooldown.
  * Metrics Aggregator: Time-windowed aggregation, trend analysis, rate-of-change.
+ * Diagnostic Reporter: Aggregated health, alerts, and metrics reporting.
  * Future: Quality gates, perceptual testing.
  */
 
@@ -51,3 +52,21 @@ export type {
   TrendDirection,
   MetricValuePort,
 } from './metrics-aggregator.js';
+export { createDiagnosticReporter } from './diagnostic-reporter.js';
+export type {
+  DiagnosticReporter,
+  DiagnosticReporterDeps,
+  DiagnosticReport,
+  ReportSeverity,
+  HealthSummarySection,
+  FabricStatus,
+  AlertSummarySection,
+  AlertEntry,
+  MetricSummarySection,
+  MetricEntry,
+  Recommendation,
+  DiagnosticHealthPort,
+  DiagnosticAlertPort,
+  DiagnosticMetricPort,
+  DiagnosticIdGenerator,
+} from './diagnostic-reporter.js';
