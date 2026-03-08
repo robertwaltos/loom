@@ -9,6 +9,7 @@
  * Encryption Service: Symmetric encryption with key rotation.
  * Access Control List: Role-based resource-level permission enforcement.
  * Permission Policy Engine: Attribute-based access control (ABAC).
+ * Session Store: Session data storage with expiration.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -100,3 +101,11 @@ export type {
   EvaluationResult,
   PolicyStats,
 } from './permission-policy.js';
+export { createSessionStore } from './session-store.js';
+export type {
+  SessionStore,
+  SessionStoreDeps,
+  SessionRecord,
+  CreateSessionParams,
+  SessionStoreStats,
+} from './session-store.js';
