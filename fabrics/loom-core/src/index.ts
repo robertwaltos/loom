@@ -267,3 +267,7 @@ export type {
   ConnectPlayerParams,
   PlayerConnectionStats,
 } from './player-connection-system.js';
+
+// ── Wire Codec ───────────────────────────────────────────────────
+
+export { createJsonPayloadCodec, createMessageFactory } from './wire-codec.js';
