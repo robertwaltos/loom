@@ -10,6 +10,7 @@
  * Transit Anomaly Detector: Coherence pattern analysis, spoofing detection.
  * Transit Validator: Rule-based entity validation for world transitions.
  * Frequency Signature Matcher: Deep comparison, drift detection, candidate ranking.
+ * Transit Queue: Priority-ordered entity transition request management.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -127,3 +128,14 @@ export {
   corridorEntityInTransit,
   corridorInvalidPhase,
 } from './weave-errors.js';
+export { createTransitQueue } from './transit-queue.js';
+export type {
+  TransitQueue,
+  TransitQueueDeps,
+  TransitQueueConfig,
+  TransitPriority,
+  TransitRequest,
+  TransitQueueEntry,
+  EnqueueResult,
+  TransitQueueStats,
+} from './transit-queue.js';
