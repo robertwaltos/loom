@@ -5,7 +5,8 @@
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
  * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay,
  * World Event Scheduler, Entity Template Registry, Config Registry,
- * Event Correlation Engine, System Dependency Graph, Entity Group Manager.
+ * Event Correlation Engine, System Dependency Graph, Entity Group Manager,
+ * State Snapshot Service.
  * All inter-module communication flows through here.
  */
 
@@ -173,3 +174,13 @@ export type {
   RegisterSystemParams,
   DependencyStats,
 } from './system-dependency.js';
+export { createSnapshotService, DEFAULT_SNAPSHOT_CONFIG } from './state-snapshot.js';
+export type {
+  SnapshotService,
+  SnapshotServiceDeps,
+  SnapshotServiceConfig,
+  StateSnapshot,
+  CaptureSnapshotParams,
+  SnapshotDiff,
+  SnapshotServiceStats,
+} from './state-snapshot.js';
