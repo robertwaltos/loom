@@ -32,7 +32,7 @@ export interface RemoveItemResult {
   readonly remaining: number;
 }
 
-export interface TransferResult {
+export interface ItemTransferResult {
   readonly transferred: number;
   readonly fromRemaining: number;
   readonly toQuantity: number;
@@ -58,7 +58,7 @@ export interface InventoryService {
   removeItem(dynastyId: string, itemType: string, quantity: number): RemoveItemResult;
   getItem(dynastyId: string, itemType: string): InventoryItem | undefined;
   getInventory(dynastyId: string): ReadonlyArray<InventoryItem>;
-  transfer(from: string, to: string, itemType: string, quantity: number): TransferResult;
+  transfer(from: string, to: string, itemType: string, quantity: number): ItemTransferResult;
   hasItem(dynastyId: string, itemType: string, quantity: number): boolean;
   clearInventory(dynastyId: string): number;
   getStats(): InventoryStats;
@@ -161,7 +161,7 @@ function transferImpl(
   to: string,
   itemType: string,
   quantity: number,
-): TransferResult {
+): ItemTransferResult {
   const fromInv = state.inventories.get(from);
   const fromItem = fromInv?.get(itemType);
   if (fromItem === undefined) return { transferred: 0, fromRemaining: 0, toQuantity: 0 };

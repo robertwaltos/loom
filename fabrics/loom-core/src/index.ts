@@ -3,8 +3,8 @@
  *
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
- * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay.
- * All inter-module communication flows through here.
+ * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay,
+ * World Event Scheduler. All inter-module communication flows through here.
  */
 
 export { createLoomCore } from './loom-core.js';
@@ -116,3 +116,15 @@ export type {
   ReplayHandler,
   ReplayStats,
 } from './event-replay.js';
+export { createWorldEventScheduler } from './world-event-scheduler.js';
+export type {
+  WorldEventScheduler,
+  WorldEventSchedulerDeps,
+  ScheduledEvent,
+  ScheduledEventStatus,
+  EventRecurrence,
+  ScheduleEventParams,
+  ScheduledEventCallback,
+  TickResult,
+  SchedulerStats,
+} from './world-event-scheduler.js';

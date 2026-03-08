@@ -236,6 +236,6 @@ export type {
   InventoryItem,
   AddItemParams,
   RemoveItemResult,
-  TransferResult,
+  ItemTransferResult,
   InventoryStats,
 } from './inventory.js';
