@@ -4,7 +4,7 @@
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
  * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay,
- * World Event Scheduler, Entity Template Registry.
+ * World Event Scheduler, Entity Template Registry, Config Registry.
  * All inter-module communication flows through here.
  */
 
@@ -139,3 +139,11 @@ export type {
   TemplateFilter,
   TemplateStats,
 } from './entity-template.js';
+export { createConfigRegistry } from './config-registry.js';
+export type {
+  ConfigRegistry,
+  ConfigRegistryDeps,
+  ConfigEntry,
+  SetConfigParams,
+  ConfigStats,
+} from './config-registry.js';
