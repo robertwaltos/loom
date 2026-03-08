@@ -7,6 +7,7 @@
  * Data Export: Structured export bundles for analytics pipelines.
  * State Recovery: Coordinated point-in-time recovery from snapshots.
  * Document Store: Key-value document storage with versioning.
+ * Notification Channel: Pub/sub event notification dispatch with topic filtering.
  * Future: Foundation Archive sync.
  */
 
@@ -87,3 +88,15 @@ export type {
   DocumentFilter,
   DocumentStats,
 } from './document-store.js';
+export { createNotificationChannel } from './notification-channel.js';
+export type {
+  NotificationChannel,
+  NotificationChannelDeps,
+  Notification,
+  Subscriber,
+  SubscribeParams,
+  NotificationCallback,
+  PublishParams,
+  PublishResult,
+  NotificationStats,
+} from './notification-channel.js';
