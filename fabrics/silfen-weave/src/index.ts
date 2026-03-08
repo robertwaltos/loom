@@ -9,6 +9,7 @@
  * Frequency Locks: Transit state machine, coherence tracking.
  * Transit Anomaly Detector: Coherence pattern analysis, spoofing detection.
  * Transit Validator: Rule-based entity validation for world transitions.
+ * Frequency Signature Matcher: Deep comparison, drift detection, candidate ranking.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -87,6 +88,19 @@ export type {
   ValidationSeverity,
   WorldCapacityInfo,
 } from './transit-validator.js';
+export { createFrequencySignatureMatcher, DEFAULT_DRIFT_THRESHOLD } from './frequency-matcher.js';
+export type {
+  FrequencySignatureMatcher,
+  MatchableSignature,
+  CandidateSignature,
+  SignatureMatch,
+  MatchQuality,
+  RankedMatch,
+  SignatureDrift,
+  DriftSeverity,
+  DriftThreshold,
+  FrequencyBandwidth,
+} from './frequency-matcher.js';
 export { WeaveError } from './weave-errors.js';
 export type { WeaveErrorCode } from './weave-errors.js';
 export {
