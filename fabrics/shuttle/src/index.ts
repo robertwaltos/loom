@@ -9,6 +9,7 @@
  * NPC Relationship Tracker: Inter-entity disposition and social graph.
  * NPC Schedule Manager: Daily activity routines for AI agents.
  * NPC Emotion Model: Emotional state tracking with intensity and decay.
+ * NPC Dialogue Manager: Dialogue tree state machine for conversations.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -122,3 +123,16 @@ export type {
   StimulusResult,
   EmotionStats,
 } from './npc-emotion.js';
+export { createNpcDialogueManager } from './npc-dialogue.js';
+export type {
+  NpcDialogueManager,
+  NpcDialogueDeps,
+  DialogueTree,
+  DialogueNode,
+  DialogueResponse,
+  Conversation,
+  ConversationStatus,
+  StartConversationParams,
+  SelectResponseResult,
+  DialogueStats,
+} from './npc-dialogue.js';
