@@ -282,3 +282,11 @@ export type {
   BridgeClock,
   BridgeStats,
 } from './bridge-service.js';
+
+// ── Game Orchestrator ───────────────────────────────────────────
+
+export { createGameOrchestrator } from './game-orchestrator.js';
+export type {
+  GameOrchestrator,
+  GameOrchestratorConfig,
+} from './game-orchestrator.js';
