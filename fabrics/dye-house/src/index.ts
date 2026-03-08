@@ -6,7 +6,7 @@
  * Permission Gate: Action authorization based on tier, status, and custom rules.
  * Audit Log: Security event recording and forensic analysis.
  * Hash Service: Cryptographic hashing, HMAC signing, key derivation.
- * Future: Full encryption services.
+ * Encryption Service: Symmetric encryption with key rotation.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -61,3 +61,14 @@ export type {
   HmacResult,
   KeyDerivation,
 } from './hash-service.js';
+export { createEncryptionService } from './encryption-service.js';
+export type {
+  EncryptionService,
+  EncryptionServiceDeps,
+  EncryptionBackend,
+  EncryptedPayload,
+  DecryptedPayload,
+  EncryptionKey,
+  RegisterKeyParams,
+  EncryptionStats,
+} from './encryption-service.js';
