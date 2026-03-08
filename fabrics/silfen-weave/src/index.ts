@@ -8,6 +8,7 @@
  * Lattice Nodes: Topology, frequency signatures, resonance beacons.
  * Frequency Locks: Transit state machine, coherence tracking.
  * Transit Anomaly Detector: Coherence pattern analysis, spoofing detection.
+ * Transit Validator: Rule-based entity validation for world transitions.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -75,6 +76,17 @@ export type {
   AnomalyIdGenerator,
   AnomalyCallback,
 } from './transit-anomaly.js';
+export { createTransitValidator, requiredComponentsRule, worldCapacityRule, entityLockRule } from './transit-validator.js';
+export type {
+  TransitValidator,
+  TransitValidatorDeps,
+  TransitValidationRule,
+  ValidationContext,
+  TransitValidationResult,
+  ValidationIssue,
+  ValidationSeverity,
+  WorldCapacityInfo,
+} from './transit-validator.js';
 export { WeaveError } from './weave-errors.js';
 export type { WeaveErrorCode } from './weave-errors.js';
 export {
