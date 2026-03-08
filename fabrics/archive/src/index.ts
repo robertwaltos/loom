@@ -144,3 +144,12 @@ export type {
   MigrationResult,
   MigrationEngineStats,
 } from './migration-engine.js';
+export { createBackupScheduler } from './backup-scheduler.js';
+export type {
+  BackupScheduler,
+  BackupSchedulerDeps,
+  BackupJob,
+  CreateJobParams as BackupCreateJobParams,
+  BackupRun,
+  BackupSchedulerStats,
+} from './backup-scheduler.js';
