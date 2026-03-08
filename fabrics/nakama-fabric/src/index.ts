@@ -248,6 +248,16 @@ export type {
   MigrationRecord,
   CensusStats,
 } from './world-census.js';
+export { createPresenceTracker, DEFAULT_PRESENCE_CONFIG } from './presence-tracker.js';
+export type {
+  PresenceTracker,
+  PresenceTrackerDeps,
+  PresenceConfig,
+  PresenceRecord,
+  PresenceStatus,
+  ConnectParams as PresenceConnectParams,
+  PresenceStats,
+} from './presence-tracker.js';
 export { createWorldLeaderboard } from './world-leaderboard.js';
 export type {
   WorldLeaderboard,
