@@ -13,6 +13,7 @@
  * Token Refresh Service: Refresh token chains with reuse detection.
  * IP Allowlist: Address-based access control with temporary blocks.
  * Session Manager: Authenticated session lifecycle with TTL and idle expiry.
+ * Threat Scorer: Connection-level threat assessment with signal decay.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -143,3 +144,15 @@ export type {
   SessionConfig as AuthSessionConfig,
   SessionStats as AuthSessionStats,
 } from './session-manager.js';
+export { createThreatScorer, DEFAULT_THREAT_CONFIG } from './threat-scorer.js';
+export type {
+  ThreatScorer,
+  ThreatScorerDeps,
+  ThreatScorerConfig,
+  ThreatCategory,
+  ThreatSignal,
+  RecordSignalParams,
+  ThreatAssessment,
+  ThreatLevel,
+  ThreatScorerStats,
+} from './threat-scorer.js';
