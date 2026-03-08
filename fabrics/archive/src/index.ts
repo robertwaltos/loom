@@ -10,6 +10,7 @@
  * Notification Channel: Pub/sub event notification dispatch with topic filtering.
  * Archive Index: Metadata index with tag, category, and date-range queries.
  * Document Vault: Versioned document storage with full edit history.
+ * Retention Policy: Data lifecycle and age-based cleanup rules.
  * Future: Foundation Archive sync.
  */
 
@@ -120,3 +121,14 @@ export type {
   CreateDocumentParams as VaultCreateDocumentParams,
   VaultStats,
 } from './document-vault.js';
+export { createRetentionPolicyService } from './retention-policy.js';
+export type {
+  RetentionPolicyService,
+  RetentionPolicyDeps,
+  RetentionRule,
+  CreateRetentionRuleParams,
+  TrackedRecord,
+  TrackRecordParams,
+  RetentionSweepResult,
+  RetentionStats,
+} from './retention-policy.js';
