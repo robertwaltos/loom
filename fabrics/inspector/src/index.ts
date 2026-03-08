@@ -124,3 +124,12 @@ export type {
   ExportSnapshot,
   MetricExporterStats,
 } from './metric-exporter.js';
+export { createUptimeMonitor } from './uptime-monitor.js';
+export type {
+  UptimeMonitorService,
+  UptimeMonitorDeps,
+  ServiceState,
+  UptimeRegisterParams,
+  UptimeSnapshot,
+  UptimeMonitorStats,
+} from './uptime-monitor.js';
