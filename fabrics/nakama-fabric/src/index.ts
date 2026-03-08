@@ -239,3 +239,12 @@ export type {
   ItemTransferResult,
   InventoryStats,
 } from './inventory.js';
+export { createWorldCensusService } from './world-census.js';
+export type {
+  WorldCensusService,
+  WorldCensusDeps,
+  WorldPopulation,
+  RegisterResidencyParams,
+  MigrationRecord,
+  CensusStats,
+} from './world-census.js';
