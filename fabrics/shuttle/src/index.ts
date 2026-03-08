@@ -5,6 +5,7 @@
  * World Shadow Economy: Per-world NPC commodity layer and prosperity.
  * NPC Memory Service: Tier-aware persistent memory for AI agents.
  * NPC Decision Engine: Think/act loop for AI agents.
+ * Behavior Tree: Tick-driven decision trees for Tier 2 Inhabitants.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -63,3 +64,24 @@ export type {
   DecisionStats,
   TierBackendResolver,
 } from './npc-decision.js';
+export {
+  createBlackboard,
+  createActionNode,
+  createConditionNode,
+  createSequenceNode,
+  createSelectorNode,
+  createBehaviorTree,
+  createBehaviorTreeRegistry,
+} from './behavior-tree.js';
+export type {
+  BtNode,
+  BtNodeStatus,
+  BtNodeType,
+  BtBlackboard,
+  BtTickContext,
+  BtActionFn,
+  BtConditionFn,
+  BehaviorTree,
+  BehaviorTreeRegistry,
+  BtTreeStats,
+} from './behavior-tree.js';
