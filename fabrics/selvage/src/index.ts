@@ -215,3 +215,15 @@ export type {
   RateBucketStats,
 } from './rate-bucket.js';
 export { createRateBucketService, MICROSECONDS_PER_SECOND as RATE_BUCKET_MICROS_PER_SEC } from './rate-bucket.js';
+
+// Message queue
+export type {
+  MessageQueueService,
+  MessageQueueDeps,
+  MessageQueueConfig,
+  MessageStatus,
+  QueueMessage,
+  QueueEnqueueParams,
+  MessageQueueStats,
+} from './message-queue.js';
+export { createMessageQueueService, DEFAULT_QUEUE_CONFIG } from './message-queue.js';
