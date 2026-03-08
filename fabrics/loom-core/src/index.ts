@@ -2,7 +2,7 @@
  * @loom/loom-core — The central nervous system of The Loom.
  *
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
- * System Registry, Tick Loop, Entity Query Engine.
+ * System Registry, Tick Loop, Entity Query Engine, Event Journal.
  * All inter-module communication flows through here.
  */
 
@@ -39,6 +39,16 @@ export type {
   QueryEntityPort,
   QueryWorldPort,
 } from './entity-query.js';
+export { createEventJournal } from './event-journal.js';
+export type {
+  EventJournal,
+  EventJournalDeps,
+  JournalEntry,
+  JournalMeta,
+  JournalStats,
+  JournalQuery,
+  RecordableEvent,
+} from './event-journal.js';
 
 export { matchesFilter } from './event-filter-matcher.js';
 
