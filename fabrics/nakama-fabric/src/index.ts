@@ -248,3 +248,13 @@ export type {
   MigrationRecord,
   CensusStats,
 } from './world-census.js';
+export { createWorldLeaderboard } from './world-leaderboard.js';
+export type {
+  WorldLeaderboard,
+  LeaderboardDeps,
+  LeaderboardEntry,
+  SubmitScoreParams,
+  RankResult,
+  LeaderboardInfo,
+  LeaderboardStats,
+} from './world-leaderboard.js';
