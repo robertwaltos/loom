@@ -12,6 +12,7 @@
  * Frequency Signature Matcher: Deep comparison, drift detection, candidate ranking.
  * Transit Queue: Priority-ordered entity transition request management.
  * World Connectivity Graph: Directed graph with shortest path finding.
+ * Coherence Monitor: World coherence level tracking and alert generation.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -148,3 +149,16 @@ export type {
   PathResult,
   ConnectivityStats,
 } from './world-connectivity.js';
+export { createCoherenceMonitor, DEFAULT_COHERENCE_CONFIG } from './coherence-monitor.js';
+export type {
+  CoherenceMonitor,
+  CoherenceMonitorDeps,
+  CoherenceConfig,
+  CoherenceLevel,
+  CoherenceSample,
+  CoherenceSubject,
+  RegisterSubjectParams,
+  RecordSampleParams,
+  CoherenceAlert,
+  CoherenceStats,
+} from './coherence-monitor.js';
