@@ -268,6 +268,33 @@ export type {
   PlayerConnectionStats,
 } from './player-connection-system.js';
 
+// ── Fabric System Adapters ───────────────────────────────────────
+
+export { createNakamaSystem, NAKAMA_SYSTEM_PRIORITY } from './nakama-system.js';
+export type {
+  NakamaSystemDeps,
+  NakamaSystemOrchestrator,
+  NakamaSystemTickResult,
+} from './nakama-system.js';
+
+export { createShuttleSystem, createEcsPopulationAdapter, SHUTTLE_SYSTEM_PRIORITY } from './shuttle-system.js';
+export type {
+  ShuttleSystemDeps,
+  ShuttleSystemOrchestrator,
+  ShuttleSystemTickResult,
+  ShuttleWorldListPort,
+  ShuttleEcsNpcRecord,
+} from './shuttle-system.js';
+
+export { createWeaveSystem, WEAVE_SYSTEM_PRIORITY } from './weave-system.js';
+export type {
+  WeaveSystemDeps,
+  WeaveSystemOrchestrator,
+  WeaveSystemTickResult,
+  WeaveTransitCompletionPort,
+  WeaveCompletedTransit,
+} from './weave-system.js';
+
 // ── Wire Codec ───────────────────────────────────────────────────
 
 export { createJsonPayloadCodec, createMessageFactory } from './wire-codec.js';
