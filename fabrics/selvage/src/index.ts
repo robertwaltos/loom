@@ -180,3 +180,15 @@ export type {
   BandwidthStats,
 } from './bandwidth-tracker.js';
 export { createBandwidthTracker, DEFAULT_BANDWIDTH_CONFIG } from './bandwidth-tracker.js';
+
+// Connection pool
+export type {
+  ConnectionPool,
+  ConnectionPoolDeps,
+  ConnectionPoolConfig,
+  PoolEntry,
+  PoolEntryStatus,
+  AddEntryParams,
+  ConnectionPoolStats,
+} from './connection-pool.js';
+export { createConnectionPool, DEFAULT_POOL_CONFIG } from './connection-pool.js';
