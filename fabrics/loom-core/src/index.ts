@@ -271,3 +271,14 @@ export type {
 // ── Wire Codec ───────────────────────────────────────────────────
 
 export { createJsonPayloadCodec, createMessageFactory } from './wire-codec.js';
+
+// ── Bridge Service ───────────────────────────────────────────────
+
+export { createBridgeService, BRIDGE_SERVICE_PRIORITY } from './bridge-service.js';
+export type {
+  BridgeService,
+  BridgeServiceDeps,
+  BridgeRenderingFabric,
+  BridgeClock,
+  BridgeStats,
+} from './bridge-service.js';
