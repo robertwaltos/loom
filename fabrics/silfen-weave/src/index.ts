@@ -214,3 +214,13 @@ export type {
   WorldWeatherSnapshot,
   WorldWeatherStats,
 } from './world-weather.js';
+export { createWorldResourceMap } from './world-resource-map.js';
+export type {
+  WorldResourceMap,
+  WorldResourceDeps,
+  ResourceType,
+  ResourceDeposit,
+  RegisterDepositParams as ResourceRegisterParams,
+  ExtractionResult,
+  WorldResourceStats,
+} from './world-resource-map.js';
