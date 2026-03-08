@@ -253,4 +253,5 @@ export type {
   WeaveCoherencePort,
   WeaveSurveyPort,
   WeaveLedgerPort,
+  WeaveQueueEntry,
 } from './weave-orchestrator.js';
