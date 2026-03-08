@@ -5,7 +5,7 @@
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
  * Resource Pool, Command Bus, Entity Lifecycle Manager, Event Replay,
  * World Event Scheduler, Entity Template Registry, Config Registry,
- * Event Correlation Engine.
+ * Event Correlation Engine, System Dependency Graph.
  * All inter-module communication flows through here.
  */
 
@@ -157,3 +157,11 @@ export type {
   CorrelationGroup,
   CorrelationStats,
 } from './event-correlation.js';
+export { createSystemDependencyGraph } from './system-dependency.js';
+export type {
+  SystemDependencyGraph,
+  SystemDependencyDeps,
+  SystemNode,
+  RegisterSystemParams,
+  DependencyStats,
+} from './system-dependency.js';
