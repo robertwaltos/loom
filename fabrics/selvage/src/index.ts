@@ -8,6 +8,7 @@
  * Architecture: Ports & Adapters. The selvage defines ports for
  * what it needs from The Loom (entity queries, player spawning)
  * and exposes a NetworkServer that any transport can drive.
+ * Heartbeat Monitor: Connection liveness tracking with sweep-based stale detection.
  */
 
 // Protocol types
@@ -154,3 +155,16 @@ export type {
   RouterIdGenerator,
 } from './message-router.js';
 export { createMessageRouter } from './message-router.js';
+
+// Heartbeat monitor
+export type {
+  HeartbeatMonitor,
+  HeartbeatMonitorDeps,
+  HeartbeatConfig,
+  HeartbeatRecord,
+  ConnectionHealth,
+  HealthCheck,
+  SweepResult,
+  HeartbeatStats,
+} from './heartbeat-monitor.js';
+export { createHeartbeatMonitor, DEFAULT_HEARTBEAT_CONFIG } from './heartbeat-monitor.js';
