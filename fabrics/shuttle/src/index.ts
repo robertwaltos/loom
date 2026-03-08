@@ -8,6 +8,7 @@
  * Behavior Tree: Tick-driven decision trees for Tier 2 Inhabitants.
  * NPC Relationship Tracker: Inter-entity disposition and social graph.
  * NPC Schedule Manager: Daily activity routines for AI agents.
+ * NPC Emotion Model: Emotional state tracking with intensity and decay.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -110,3 +111,14 @@ export type {
   AddOverrideParams,
   ScheduleStats,
 } from './npc-schedule.js';
+export { createNpcEmotionModel } from './npc-emotion.js';
+export type {
+  NpcEmotionModel,
+  EmotionModelDeps,
+  EmotionType,
+  EmotionEntry,
+  EmotionSnapshot,
+  StimulusParams,
+  StimulusResult,
+  EmotionStats,
+} from './npc-emotion.js';
