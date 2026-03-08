@@ -209,3 +209,18 @@ export type {
   ReputationLevel,
   NpcReputationStats,
 } from './npc-reputation.js';
+export { createShuttleOrchestrator, DEFAULT_SHUTTLE_CONFIG } from './shuttle-orchestrator.js';
+export type {
+  ShuttleOrchestrator,
+  ShuttleOrchestratorDeps,
+  ShuttleOrchestratorConfig,
+  ShuttleOrchestratorStats,
+  ShuttleTickResult,
+  ShuttlePopulationPort,
+  ShuttleDecisionPort,
+  ShuttleBehaviorTreePort,
+  ShuttleMemoryPort,
+  ShuttleSchedulePort,
+  ShuttleNpcRecord,
+  ShuttleDecision,
+} from './shuttle-orchestrator.js';
