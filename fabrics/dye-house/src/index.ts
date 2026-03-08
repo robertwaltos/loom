@@ -10,6 +10,7 @@
  * Access Control List: Role-based resource-level permission enforcement.
  * Permission Policy Engine: Attribute-based access control (ABAC).
  * Session Store: Session data storage with expiration.
+ * Token Refresh Service: Refresh token chains with reuse detection.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -109,3 +110,14 @@ export type {
   CreateSessionParams,
   SessionStoreStats,
 } from './session-store.js';
+export { createTokenRefreshService, DEFAULT_REFRESH_CONFIG } from './token-refresh.js';
+export type {
+  TokenRefreshService,
+  TokenRefreshDeps,
+  TokenRefreshConfig,
+  RefreshToken,
+  RefreshStatus,
+  IssueRefreshParams,
+  RefreshResult,
+  RefreshStats,
+} from './token-refresh.js';
