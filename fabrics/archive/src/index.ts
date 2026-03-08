@@ -6,6 +6,7 @@
  * State Snapshots: Point-in-time world state capture.
  * Data Export: Structured export bundles for analytics pipelines.
  * State Recovery: Coordinated point-in-time recovery from snapshots.
+ * Document Store: Key-value document storage with versioning.
  * Future: Foundation Archive sync.
  */
 
@@ -77,3 +78,12 @@ export type {
   RecoveryApplyPort,
   RecoveryIdGenerator,
 } from './state-recovery.js';
+export { createDocumentStore } from './document-store.js';
+export type {
+  DocumentStore,
+  DocumentStoreDeps,
+  Document,
+  PutDocumentParams,
+  DocumentFilter,
+  DocumentStats,
+} from './document-store.js';
