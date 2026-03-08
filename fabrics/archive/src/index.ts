@@ -8,6 +8,7 @@
  * State Recovery: Coordinated point-in-time recovery from snapshots.
  * Document Store: Key-value document storage with versioning.
  * Notification Channel: Pub/sub event notification dispatch with topic filtering.
+ * Archive Index: Metadata index with tag, category, and date-range queries.
  * Future: Foundation Archive sync.
  */
 
@@ -100,3 +101,12 @@ export type {
   PublishResult,
   NotificationStats,
 } from './notification-channel.js';
+export { createArchiveIndex } from './archive-index.js';
+export type {
+  ArchiveIndex,
+  ArchiveIndexDeps,
+  IndexRecord,
+  AddRecordParams,
+  IndexQuery,
+  IndexStats,
+} from './archive-index.js';
