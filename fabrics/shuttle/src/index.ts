@@ -180,3 +180,14 @@ export type {
   RoutineAssignment,
   NpcRoutineStats,
 } from './npc-routine.js';
+export { createNpcInventoryService, DEFAULT_INVENTORY_CONFIG } from './npc-inventory.js';
+export type {
+  NpcInventoryService,
+  NpcInventoryDeps,
+  NpcInventoryConfig,
+  ItemCategory,
+  InventoryItem,
+  AddItemParams as InventoryAddItemParams,
+  TransferResult,
+  NpcInventoryStats,
+} from './npc-inventory.js';
