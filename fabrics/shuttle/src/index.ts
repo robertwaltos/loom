@@ -7,6 +7,7 @@
  * NPC Decision Engine: Think/act loop for AI agents.
  * Behavior Tree: Tick-driven decision trees for Tier 2 Inhabitants.
  * NPC Relationship Tracker: Inter-entity disposition and social graph.
+ * NPC Schedule Manager: Daily activity routines for AI agents.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -96,3 +97,16 @@ export type {
   DispositionChange,
   RelationshipStats,
 } from './npc-relationship.js';
+export { createNpcScheduleManager, MICROSECONDS_PER_DAY } from './npc-schedule.js';
+export type {
+  NpcScheduleManager,
+  NpcScheduleDeps,
+  NpcSchedule,
+  TimeBlock,
+  ActivityType,
+  ScheduleOverride,
+  ActiveBlock,
+  AddBlockParams,
+  AddOverrideParams,
+  ScheduleStats,
+} from './npc-schedule.js';
