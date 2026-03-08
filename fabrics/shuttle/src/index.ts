@@ -12,6 +12,7 @@
  * NPC Dialogue Manager: Dialogue tree state machine for conversations.
  * NPC Goal Planner: Hierarchical goal tracking for NPC agents.
  * NPC Faction Tracker: Faction affinity tracking for NPC agents.
+ * NPC Trait System: Personality traits, compatibility, and inheritance.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -155,3 +156,15 @@ export type {
   AdjustAffinityParams,
   FactionStats,
 } from './npc-faction.js';
+export { createTraitSystem } from './npc-traits.js';
+export type {
+  TraitSystem,
+  TraitSystemDeps,
+  TraitCategory,
+  Trait,
+  AssignTraitParams,
+  TraitProfile,
+  TraitCompatibility,
+  InheritTraitsParams,
+  TraitSystemStats,
+} from './npc-traits.js';
