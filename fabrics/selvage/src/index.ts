@@ -205,3 +205,13 @@ export type {
   PipelineStats,
 } from './request-pipeline.js';
 export { createRequestPipeline } from './request-pipeline.js';
+
+// Rate bucket
+export type {
+  RateBucketService,
+  RateBucketDeps,
+  BucketConfig,
+  ConsumeResult,
+  RateBucketStats,
+} from './rate-bucket.js';
+export { createRateBucketService, MICROSECONDS_PER_SECOND as RATE_BUCKET_MICROS_PER_SEC } from './rate-bucket.js';
