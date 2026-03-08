@@ -11,6 +11,7 @@
  * Transit Validator: Rule-based entity validation for world transitions.
  * Frequency Signature Matcher: Deep comparison, drift detection, candidate ranking.
  * Transit Queue: Priority-ordered entity transition request management.
+ * World Connectivity Graph: Directed graph with shortest path finding.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -139,3 +140,11 @@ export type {
   EnqueueResult,
   TransitQueueStats,
 } from './transit-queue.js';
+export { createWorldConnectivityGraph } from './world-connectivity.js';
+export type {
+  WorldConnectivityGraph,
+  WorldEdge,
+  AddEdgeParams,
+  PathResult,
+  ConnectivityStats,
+} from './world-connectivity.js';
