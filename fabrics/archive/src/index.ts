@@ -5,6 +5,7 @@
  * Chronicle Search: Full-text inverted index over Chronicle entries.
  * State Snapshots: Point-in-time world state capture.
  * Data Export: Structured export bundles for analytics pipelines.
+ * State Recovery: Coordinated point-in-time recovery from snapshots.
  * Future: Foundation Archive sync.
  */
 
@@ -62,3 +63,17 @@ export type {
   SnapshotPortEntry,
   SnapshotPortFilter,
 } from './data-export.js';
+export { createStateRecoveryService } from './state-recovery.js';
+export type {
+  StateRecoveryService,
+  StateRecoveryDeps,
+  RecoveryResult,
+  RecoveryStatus,
+  RecoveryRequest,
+  RecoveryCandidate,
+  RecoveryStats,
+  RecoverySnapshotPort,
+  RecoveryHasherPort,
+  RecoveryApplyPort,
+  RecoveryIdGenerator,
+} from './state-recovery.js';
