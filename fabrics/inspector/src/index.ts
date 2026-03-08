@@ -80,6 +80,15 @@ export type {
   OperationProfile,
   ProfilerStats,
 } from './performance-profiler.js';
+export { createMetricsDashboard } from './metrics-dashboard.js';
+export type {
+  MetricsDashboard,
+  MetricsDashboardDeps,
+  DashboardMetric,
+  AddMetricParams,
+  DashboardPanel,
+  DashboardStats,
+} from './metrics-dashboard.js';
 export { createAnomalyDetector, DEFAULT_ANOMALY_CONFIG } from './anomaly-detector.js';
 export type {
   AnomalyDetector,
