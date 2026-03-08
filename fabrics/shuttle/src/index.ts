@@ -200,3 +200,12 @@ export type {
   TrainResult,
   NpcSkillStats,
 } from './npc-skill.js';
+export { createNpcReputationService, REPUTATION_MIN, REPUTATION_MAX } from './npc-reputation.js';
+export type {
+  NpcReputationService,
+  NpcReputationDeps,
+  ReputationEntry,
+  AdjustReputationParams,
+  ReputationLevel,
+  NpcReputationStats,
+} from './npc-reputation.js';
