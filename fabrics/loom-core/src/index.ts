@@ -3,7 +3,7 @@
  *
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
- * Resource Pool.
+ * Resource Pool, Command Bus.
  * All inter-module communication flows through here.
  */
 
@@ -58,6 +58,16 @@ export type {
   PoolFactory,
   PoolReset,
 } from './resource-pool.js';
+export { createCommandBus } from './command-bus.js';
+export type {
+  CommandBus,
+  Command,
+  CommandResult,
+  CommandHandler,
+  CommandMiddleware,
+  CommandRegistration,
+  CommandBusStats,
+} from './command-bus.js';
 
 export { matchesFilter } from './event-filter-matcher.js';
 
