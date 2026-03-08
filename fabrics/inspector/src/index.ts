@@ -7,6 +7,7 @@
  * Metrics Aggregator: Time-windowed aggregation, trend analysis, rate-of-change.
  * Diagnostic Reporter: Aggregated health, alerts, and metrics reporting.
  * Performance Profiler: Execution timing for systems and operations.
+ * Anomaly Detector: Statistical anomaly detection on metric streams.
  * Future: Quality gates, perceptual testing.
  */
 
@@ -79,3 +80,13 @@ export type {
   OperationProfile,
   ProfilerStats,
 } from './performance-profiler.js';
+export { createAnomalyDetector, DEFAULT_ANOMALY_CONFIG } from './anomaly-detector.js';
+export type {
+  AnomalyDetector,
+  AnomalyDetectorDeps,
+  AnomalyConfig,
+  Anomaly,
+  AnomalySeverity,
+  MetricRegistration,
+  AnomalyDetectorStats,
+} from './anomaly-detector.js';
