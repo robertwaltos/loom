@@ -218,3 +218,14 @@ export type {
   TradeEngineConfig,
   TradeStats,
 } from './trade-engine.js';
+export { createMatchmakingEngine } from './matchmaking.js';
+export type {
+  MatchmakingEngine,
+  MatchmakingDeps,
+  MatchmakingConfig,
+  MatchStatus,
+  MatchTicket,
+  SubmitTicketParams,
+  MatchGroup,
+  MatchmakingStats,
+} from './matchmaking.js';
