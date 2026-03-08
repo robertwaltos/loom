@@ -221,3 +221,14 @@ export type {
   ScheduleTaskParams,
   TaskSchedulerStats,
 } from './task-scheduler.js';
+export { createServiceHealthAggregator } from './service-health.js';
+export type {
+  ServiceHealthAggregator,
+  ServiceHealthDeps,
+  HealthLevel,
+  ServiceHealthReport,
+  ReportHealthParams,
+  RegisterHealthServiceParams,
+  AggregateHealth,
+  ServiceHealthStats,
+} from './service-health.js';
