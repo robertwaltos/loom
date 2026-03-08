@@ -229,3 +229,13 @@ export type {
   MatchGroup,
   MatchmakingStats,
 } from './matchmaking.js';
+export { createInventoryService } from './inventory.js';
+export type {
+  InventoryService,
+  InventoryDeps,
+  InventoryItem,
+  AddItemParams,
+  RemoveItemResult,
+  TransferResult,
+  InventoryStats,
+} from './inventory.js';
