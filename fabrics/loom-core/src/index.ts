@@ -3,7 +3,7 @@
  *
  * Provides: Event Bus, Entity Registry, World Manager, Event Factory,
  * System Registry, Tick Loop, Entity Query Engine, Event Journal,
- * Resource Pool, Command Bus.
+ * Resource Pool, Command Bus, Entity Lifecycle Manager.
  * All inter-module communication flows through here.
  */
 
@@ -68,6 +68,18 @@ export type {
   CommandRegistration,
   CommandBusStats,
 } from './command-bus.js';
+
+export { createEntityLifecycleManager } from './entity-lifecycle.js';
+export type {
+  EntityLifecycleManager,
+  EntityLifecycleDeps,
+  LifecyclePhase,
+  LifecycleRecord,
+  LifecycleTransition,
+  LifecycleHistory,
+  LifecycleStats,
+  LifecycleCallback,
+} from './entity-lifecycle.js';
 
 export { matchesFilter } from './event-filter-matcher.js';
 
