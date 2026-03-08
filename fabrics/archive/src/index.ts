@@ -163,3 +163,13 @@ export type {
   AuditQuery,
   AuditLogStats,
 } from './audit-log.js';
+export { createDataCompactor } from './data-compactor.js';
+export type {
+  DataCompactorService,
+  DataCompactorDeps,
+  CompactorSource,
+  CompactorRegisterParams,
+  CompactionRun,
+  CompactionConfig,
+  DataCompactorStats,
+} from './data-compactor.js';
