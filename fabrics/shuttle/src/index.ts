@@ -10,6 +10,7 @@
  * NPC Schedule Manager: Daily activity routines for AI agents.
  * NPC Emotion Model: Emotional state tracking with intensity and decay.
  * NPC Dialogue Manager: Dialogue tree state machine for conversations.
+ * NPC Goal Planner: Hierarchical goal tracking for NPC agents.
  * Future: Temporal workflow integration, LLM orchestration.
  */
 
@@ -136,3 +137,12 @@ export type {
   SelectResponseResult,
   DialogueStats,
 } from './npc-dialogue.js';
+export { createNpcGoalPlanner } from './npc-goal.js';
+export type {
+  NpcGoalPlanner,
+  NpcGoalDeps,
+  Goal,
+  GoalStatus,
+  AddGoalParams,
+  GoalStats,
+} from './npc-goal.js';
