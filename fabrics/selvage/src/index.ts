@@ -96,3 +96,19 @@ export type {
   DispatchStats,
 } from './action-dispatcher.js';
 export { createActionDispatcher } from './action-dispatcher.js';
+
+// Connection authenticator
+export type {
+  ConnectionAuthenticator,
+  ConnectionAuthDeps,
+  ConnectionAuthConfig,
+  AuthResult,
+  AuthSuccess,
+  AuthFailure,
+  AuthDenialReason,
+  AuthenticatedSession,
+  TokenValidationPort,
+  TokenValidationResult,
+  AuthIdGenerator,
+} from './connection-auth.js';
+export { createConnectionAuthenticator } from './connection-auth.js';
