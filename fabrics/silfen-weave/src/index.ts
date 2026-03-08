@@ -15,6 +15,8 @@
  * Coherence Monitor: World coherence level tracking and alert generation.
  * Transit Cooldown Tracker: Per-entity cooldown enforcement between transits.
  * World Event Log: Per-world timestamped event logging with rotation.
+ * Survey Roster: Survey Corps member lifecycle and deployment tracking.
+ * Transit Ledger: Immutable record of all world-to-world transits.
  */
 
 export { createLatticeNodeRegistry } from './lattice-node.js';
@@ -183,3 +185,21 @@ export type {
   EventLogConfig,
   EventLogStats,
 } from './world-event-log.js';
+export { createSurveyRoster } from './survey-roster.js';
+export type {
+  SurveyRoster,
+  SurveyRosterDeps,
+  RosterMember,
+  RosterMemberStatus,
+  SurveySpecialisation,
+  EnrollParams as SurveyEnrollParams,
+  RosterStats,
+} from './survey-roster.js';
+export { createTransitLedger } from './transit-ledger.js';
+export type {
+  TransitLedger,
+  TransitLedgerDeps,
+  TransitRecord,
+  RecordTransitParams,
+  TransitLedgerStats,
+} from './transit-ledger.js';
