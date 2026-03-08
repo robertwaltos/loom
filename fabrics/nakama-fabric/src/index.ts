@@ -321,3 +321,15 @@ export type {
   NotificationFilter,
   DynastyNotificationStats,
 } from './dynasty-notification.js';
+export { createNakamaOrchestrator, DEFAULT_NAKAMA_ORCHESTRATOR_CONFIG } from './nakama-orchestrator.js';
+export type {
+  NakamaFabricOrchestrator,
+  NakamaOrchestratorDeps,
+  NakamaOrchestratorConfig,
+  NakamaTickResult,
+  WorldActivitySummary,
+  FabricPresencePort,
+  FabricContinuityPort,
+  FabricLatticePort,
+  FabricChroniclePort,
+} from './nakama-orchestrator.js';
