@@ -9,6 +9,7 @@
  * what it needs from The Loom (entity queries, player spawning)
  * and exposes a NetworkServer that any transport can drive.
  * Heartbeat Monitor: Connection liveness tracking with sweep-based stale detection.
+ * Bandwidth Tracker: Per-connection bandwidth monitoring with quota enforcement.
  */
 
 // Protocol types
@@ -168,3 +169,14 @@ export type {
   HeartbeatStats,
 } from './heartbeat-monitor.js';
 export { createHeartbeatMonitor, DEFAULT_HEARTBEAT_CONFIG } from './heartbeat-monitor.js';
+
+// Bandwidth tracker
+export type {
+  BandwidthTracker,
+  BandwidthTrackerDeps,
+  BandwidthConfig,
+  BandwidthRecord,
+  RecordTrafficParams,
+  BandwidthStats,
+} from './bandwidth-tracker.js';
+export { createBandwidthTracker, DEFAULT_BANDWIDTH_CONFIG } from './bandwidth-tracker.js';
