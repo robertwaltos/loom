@@ -232,3 +232,12 @@ export type {
   WorldLocalTime,
   WorldTimeZoneStats,
 } from './world-time-zone.js';
+export { createWorldPortalRegistry } from './world-portal.js';
+export type {
+  WorldPortalRegistry,
+  WorldPortalDeps,
+  PortalStatus,
+  PortalSnapshot,
+  CreatePortalParams,
+  WorldPortalStats,
+} from './world-portal.js';
