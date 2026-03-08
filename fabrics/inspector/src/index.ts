@@ -8,6 +8,7 @@
  * Diagnostic Reporter: Aggregated health, alerts, and metrics reporting.
  * Performance Profiler: Execution timing for systems and operations.
  * Anomaly Detector: Statistical anomaly detection on metric streams.
+ * Threshold Alert: Metric threshold breach alerting with acknowledgement.
  * Future: Quality gates, perceptual testing.
  */
 
@@ -99,3 +100,16 @@ export type {
   MetricRegistration,
   AnomalyDetectorStats,
 } from './anomaly-detector.js';
+export { createThresholdAlertService } from './threshold-alert.js';
+export type {
+  ThresholdAlertService,
+  ThresholdAlertDeps,
+  ThresholdRule,
+  ThresholdDirection as ThresholdRuleDirection,
+  ThresholdAlertSeverity,
+  ThresholdAlertStatus,
+  ThresholdAlert,
+  CreateThresholdRuleParams,
+  ThresholdEvaluateParams,
+  ThresholdAlertStats,
+} from './threshold-alert.js';
