@@ -1,9 +1,9 @@
 /**
  * TimeService — The single source of truth for in-game time.
  *
- * Implements Bible v1.1 Part 9: exponential compression decay.
- * At launch, 10 in-game years pass per 1 real year. The ratio halves
- * every 12 real years, asymptotically approaching 1:1 real time.
+ * Implements 3:1 time compression (Bible v2.0).
+ * Three in-game years pass per one real year.
+ * COMPRESSION_RATIO lives in this file only — the single source of truth.
  *
  * Pure math — no side effects, no state mutation, fully testable.
  */
