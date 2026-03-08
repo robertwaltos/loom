@@ -11,6 +11,7 @@
  * Permission Policy Engine: Attribute-based access control (ABAC).
  * Session Store: Session data storage with expiration.
  * Token Refresh Service: Refresh token chains with reuse detection.
+ * IP Allowlist: Address-based access control with temporary blocks.
  *
  * "Every thread entering The Loom must pass through the Dye House."
  */
@@ -121,3 +122,14 @@ export type {
   RefreshResult,
   RefreshStats,
 } from './token-refresh.js';
+export { createIpAllowlist } from './ip-allowlist.js';
+export type {
+  IpAllowlist,
+  AllowlistDeps,
+  AllowlistEntry,
+  AllowlistEntryStatus,
+  AddEntryParams as AllowlistAddParams,
+  BlockEntryParams,
+  CheckResult as AllowlistCheckResult,
+  AllowlistStats,
+} from './ip-allowlist.js';
