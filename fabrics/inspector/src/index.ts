@@ -113,3 +113,14 @@ export type {
   ThresholdEvaluateParams,
   ThresholdAlertStats,
 } from './threshold-alert.js';
+export { createMetricExporterService } from './metric-exporter.js';
+export type {
+  MetricExporterService,
+  MetricExporterDeps,
+  ExportFormat,
+  MetricSource,
+  MetricSample,
+  RegisterSourceParams as ExporterRegisterSourceParams,
+  ExportSnapshot,
+  MetricExporterStats,
+} from './metric-exporter.js';
