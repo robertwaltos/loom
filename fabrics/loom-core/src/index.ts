@@ -333,6 +333,22 @@ export type {
   ConnectSpawnPointPort,
 } from './player-connect-orchestrator.js';
 
+// ── Inspector Integration ────────────────────────────────────────
+
+export { registerFabricHealthProbes } from './inspector-integration.js';
+export type {
+  InspectorIntegrationDeps,
+  InspectorHealthPort,
+  InspectorHealthStatus,
+  InspectorProbeResult,
+  InspectorProbeRegistration,
+  NakamaHealthPort,
+  ShuttleHealthPort,
+  WeaveHealthPort,
+  ConnectionHealthPort,
+  BridgeHealthPort,
+} from './inspector-integration.js';
+
 // ── Wire Codec ───────────────────────────────────────────────────
 
 export { createJsonPayloadCodec, createMessageFactory } from './wire-codec.js';
