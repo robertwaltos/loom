@@ -293,6 +293,10 @@ export type {
   WeaveSystemTickResult,
   WeaveTransitCompletionPort,
   WeaveCompletedTransit,
+  WeaveEventPort,
+  WeaveTransitEvent,
+  WeaveEventMetadata,
+  WeaveIdPort,
 } from './weave-system.js';
 
 export {

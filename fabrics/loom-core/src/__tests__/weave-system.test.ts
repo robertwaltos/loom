@@ -9,6 +9,7 @@ import type {
   WeaveSystemTickResult,
   WeaveTransitCompletionPort,
   WeaveCompletedTransit,
+  WeaveTransitEvent,
 } from '../weave-system.js';
 import type { SystemContext } from '../system-registry.js';
 import { createComponentStore } from '../component-store.js';
@@ -234,5 +235,99 @@ describe('WeaveSystem — multi-transit and drain', () => {
     // Second tick should not re-process
     const membership = store.get(entityId, 'world-membership') as WorldMembershipComponent;
     expect(membership.worldId).toBe('mars');
+  });
+});
+
+// ── Event Emission ──────────────────────────────────────────────
+
+describe('WeaveSystem — event emission', () => {
+  it('emits transition.completed event on transit', () => {
+    const store = createComponentStore();
+    const entityId = eid('ship-1');
+    const events: WeaveTransitEvent[] = [];
+    let idSeq = 0;
+
+    store.set(entityId, 'world-membership', {
+      worldId: 'earth',
+      enteredAt: 100,
+      isTransitioning: true,
+      transitionTargetWorldId: 'mars',
+    });
+
+    const system = createWeaveSystem({
+      orchestrator: mockOrchestrator(),
+      completions: mockCompletions([
+        { entityId: 'ship-1', destinationNodeId: 'mars' },
+      ]),
+      componentStore: store,
+      clock: mockClock(),
+      events: { publish: (e) => { events.push(e); } },
+      idGenerator: { next: () => { idSeq++; return 'id-' + String(idSeq); } },
+    });
+
+    system(ctx(1));
+
+    expect(events).toHaveLength(1);
+    expect(events[0]?.type).toBe('weave.transition.completed');
+    expect(events[0]?.payload['sourceWorldId']).toBe('earth');
+    expect(events[0]?.payload['destinationWorldId']).toBe('mars');
+    expect(events[0]?.payload['entityId']).toBe('ship-1');
+  });
+
+});
+
+describe('WeaveSystem — event edge cases', () => {
+  it('does not emit event when already at destination', () => {
+    const store = createComponentStore();
+    const entityId = eid('ship-1');
+    const events: WeaveTransitEvent[] = [];
+
+    store.set(entityId, 'world-membership', {
+      worldId: 'mars',
+      enteredAt: 100,
+      isTransitioning: false,
+      transitionTargetWorldId: null,
+    });
+
+    const system = createWeaveSystem({
+      orchestrator: mockOrchestrator(),
+      completions: mockCompletions([
+        { entityId: 'ship-1', destinationNodeId: 'mars' },
+      ]),
+      componentStore: store,
+      clock: mockClock(),
+      events: { publish: (e) => { events.push(e); } },
+      idGenerator: { next: () => 'id-1' },
+    });
+
+    system(ctx(1));
+
+    expect(events).toHaveLength(0);
+  });
+
+  it('works without event port (backward compatible)', () => {
+    const store = createComponentStore();
+    const entityId = eid('ship-1');
+
+    store.set(entityId, 'world-membership', {
+      worldId: 'earth',
+      enteredAt: 100,
+      isTransitioning: true,
+      transitionTargetWorldId: 'mars',
+    });
+
+    const system = createWeaveSystem({
+      orchestrator: mockOrchestrator(),
+      completions: mockCompletions([
+        { entityId: 'ship-1', destinationNodeId: 'mars' },
+      ]),
+      componentStore: store,
+      clock: mockClock(),
+    });
+
+    expect(() => { system(ctx(1)); }).not.toThrow();
+
+    const m = store.get(entityId, 'world-membership') as WorldMembershipComponent;
+    expect(m.worldId).toBe('mars');
   });
 });

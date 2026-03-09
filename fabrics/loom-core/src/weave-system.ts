@@ -5,8 +5,9 @@
  * completions update world-membership before the visual pipeline runs.
  *
  * The key adapter responsibility: when a transit completes, mutate the
- * entity's `world-membership` component to reflect the new world. This
- * closes the loop from queue → corridor → ECS state.
+ * entity's `world-membership` component to reflect the new world and
+ * emit a `weave.transition.completed` event through the EventBus.
+ * This closes the loop from queue → corridor → ECS state → events.
  */
 
 import type { EntityId, WorldMembershipComponent } from '@loom/entities-contracts';
@@ -45,11 +46,38 @@ export interface WeaveCompletedTransit {
   readonly destinationNodeId: string;
 }
 
+/**
+ * Minimal EventBus port for publishing transit events.
+ * Duplicated from contracts to avoid coupling.
+ */
+export interface WeaveEventPort {
+  readonly publish: (event: WeaveTransitEvent) => void;
+}
+
+export interface WeaveTransitEvent {
+  readonly type: string;
+  readonly payload: Record<string, unknown>;
+  readonly metadata: WeaveEventMetadata;
+}
+
+export interface WeaveEventMetadata {
+  readonly eventId: string;
+  readonly timestamp: number;
+  readonly sourceWorldId: string;
+  readonly sourceFabricId: string;
+}
+
+export interface WeaveIdPort {
+  readonly next: () => string;
+}
+
 export interface WeaveSystemDeps {
   readonly orchestrator: WeaveSystemOrchestrator;
   readonly completions: WeaveTransitCompletionPort;
   readonly componentStore: ComponentStore;
   readonly clock: { readonly nowMicroseconds: () => number };
+  readonly events?: WeaveEventPort;
+  readonly idGenerator?: WeaveIdPort;
 }
 
 // ── Priority ───────────────────────────────────────────────────────
@@ -87,6 +115,8 @@ function applyTransit(
     'world-membership',
   ) as WorldMembershipComponent;
 
+  if (current.worldId === transit.destinationNodeId) return;
+
   const updated: WorldMembershipComponent = {
     worldId: transit.destinationNodeId,
     enteredAt: deps.clock.nowMicroseconds(),
@@ -94,9 +124,33 @@ function applyTransit(
     transitionTargetWorldId: null,
   };
 
-  if (current.worldId !== transit.destinationNodeId) {
-    deps.componentStore.set(entityId, 'world-membership', updated);
-  }
+  deps.componentStore.set(entityId, 'world-membership', updated);
+  emitTransitCompleted(deps, transit, current.worldId);
+}
+
+function emitTransitCompleted(
+  deps: WeaveSystemDeps,
+  transit: WeaveCompletedTransit,
+  sourceWorldId: string,
+): void {
+  if (deps.events === undefined || deps.idGenerator === undefined) return;
+
+  deps.events.publish({
+    type: 'weave.transition.completed',
+    payload: {
+      transitionId: deps.idGenerator.next(),
+      entityId: transit.entityId,
+      sourceWorldId,
+      destinationWorldId: transit.destinationNodeId,
+      actualDurationMs: 0,
+    },
+    metadata: {
+      eventId: deps.idGenerator.next(),
+      timestamp: deps.clock.nowMicroseconds(),
+      sourceWorldId,
+      sourceFabricId: 'silfen-weave',
+    },
+  });
 }
 
 // ── Exports ────────────────────────────────────────────────────────
