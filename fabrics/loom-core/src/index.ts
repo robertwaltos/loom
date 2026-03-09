@@ -312,6 +312,27 @@ export type {
   PlayerEntityAdapterDeps,
 } from './selvage-adapters.js';
 
+export { createPlayerConnectOrchestrator } from './player-connect-orchestrator.js';
+export type {
+  PlayerConnectOrchestrator,
+  PlayerConnectDeps,
+  PlayerConnectRequest,
+  PlayerConnectResult,
+  PlayerConnectSuccess,
+  PlayerConnectError,
+  PlayerConnectErrorCode,
+  ConnectTokenPort,
+  ConnectTokenResult,
+  ConnectIdentityPort,
+  ConnectIdentityInfo,
+  ConnectPlayerPort,
+  ConnectPlayerInput,
+  ConnectSpawnPort,
+  ConnectSpawnInput,
+  ConnectSpawnResult,
+  ConnectSpawnPointPort,
+} from './player-connect-orchestrator.js';
+
 // ── Wire Codec ───────────────────────────────────────────────────
 
 export { createJsonPayloadCodec, createMessageFactory } from './wire-codec.js';
@@ -336,4 +357,5 @@ export type {
   FabricDeps,
   ShuttleFabricDeps,
   WeaveFabricDeps,
+  ConnectFabricDeps,
 } from './game-orchestrator.js';

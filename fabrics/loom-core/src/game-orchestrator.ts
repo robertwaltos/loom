@@ -21,6 +21,12 @@ import type { NakamaSystemOrchestrator } from './nakama-system.js';
 import type { ShuttleSystemOrchestrator, ShuttleWorldListPort } from './shuttle-system.js';
 import type { WeaveSystemOrchestrator, WeaveTransitCompletionPort } from './weave-system.js';
 import type { SelvaeBroadcastPort } from './selvage-adapters.js';
+import type {
+  PlayerConnectOrchestrator,
+  ConnectTokenPort,
+  ConnectIdentityPort,
+  ConnectSpawnPointPort,
+} from './player-connect-orchestrator.js';
 
 import { createLoomCore } from './loom-core.js';
 import { createMovementSystem, MOVEMENT_SYSTEM_PRIORITY } from './movement-system.js';
@@ -32,6 +38,7 @@ import { createNakamaSystem, NAKAMA_SYSTEM_PRIORITY } from './nakama-system.js';
 import { createShuttleSystem, SHUTTLE_SYSTEM_PRIORITY } from './shuttle-system.js';
 import { createWeaveSystem, WEAVE_SYSTEM_PRIORITY } from './weave-system.js';
 import { createSelvageBroadcastSystem, SELVAGE_BROADCAST_PRIORITY } from './selvage-adapters.js';
+import { createPlayerConnectOrchestrator } from './player-connect-orchestrator.js';
 
 // ── Fabric Ports ────────────────────────────────────────────────
 
@@ -40,6 +47,13 @@ export interface FabricDeps {
   readonly shuttle?: ShuttleFabricDeps;
   readonly weave?: WeaveFabricDeps;
   readonly selvage?: SelvaeBroadcastPort;
+  readonly connect?: ConnectFabricDeps;
+}
+
+export interface ConnectFabricDeps {
+  readonly token: ConnectTokenPort;
+  readonly identity: ConnectIdentityPort;
+  readonly spawnPoints: ConnectSpawnPointPort;
 }
 
 export interface ShuttleFabricDeps {
@@ -68,6 +82,7 @@ export interface GameOrchestrator {
   readonly connections: PlayerConnectionSystem;
   readonly bridge: BridgeService;
   readonly visualMapper: VisualStateMapperService;
+  readonly playerConnect: PlayerConnectOrchestrator | undefined;
   readonly start: () => void;
   readonly stop: () => void;
 }
@@ -83,12 +98,15 @@ function createGameOrchestrator(config: GameOrchestratorConfig): GameOrchestrato
   registerCoreSystems(core, systems);
   registerFabricSystems(core, store, clock, config.fabrics);
 
+  const playerConnect = buildConnectOrchestrator(systems, config.fabrics);
+
   return {
     core,
     spawns: systems.spawns,
     connections: systems.connections,
     bridge: systems.bridge,
     visualMapper: systems.visualMapper,
+    playerConnect,
     start: () => { core.tickLoop.start(); },
     stop: () => { core.shutdown(); },
   };
@@ -187,6 +205,22 @@ function registerSelvage(core: LoomCore, fabrics: FabricDeps): void {
   if (fabrics.selvage === undefined) return;
   const fn = createSelvageBroadcastSystem(fabrics.selvage);
   core.systems.register('selvage-broadcast', fn, SELVAGE_BROADCAST_PRIORITY);
+}
+
+// ── Connect Orchestrator ────────────────────────────────────────
+
+function buildConnectOrchestrator(
+  systems: GameSystems,
+  fabrics?: FabricDeps,
+): PlayerConnectOrchestrator | undefined {
+  if (fabrics?.connect === undefined) return undefined;
+  return createPlayerConnectOrchestrator({
+    token: fabrics.connect.token,
+    identity: fabrics.connect.identity,
+    connections: systems.connections,
+    spawns: systems.spawns,
+    spawnPoints: fabrics.connect.spawnPoints,
+  });
 }
 
 // ── Exports ─────────────────────────────────────────────────────
