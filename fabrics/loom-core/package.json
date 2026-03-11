@@ -1,0 +1,25 @@
+{
+  "name": "@loom/loom-core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "echo 'No tests yet'",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@loom/bridge-loom-contracts": "*",
+    "@loom/events-contracts": "*",
+    "@loom/entities-contracts": "*",
+    "@loom/protocols-contracts": "*"
+  }
+}

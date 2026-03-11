@@ -1,0 +1,57 @@
+{
+    "FileVersion": 3,
+    "Version": 1,
+    "VersionName": "0.1.0",
+    "FriendlyName": "Bridge Loom",
+    "Description": "Connects UE5 to the Loom orchestration server via gRPC. Receives entity state, spawns visuals, sends player input.",
+    "Category": "Gameplay",
+    "CreatedBy": "Project Loom",
+    "CreatedByURL": "",
+    "DocsURL": "",
+    "MarketplaceURL": "",
+    "CanContainContent": false,
+    "IsBetaVersion": true,
+    "IsExperimentalVersion": true,
+    "Installed": false,
+    "Modules": [
+        {
+            "Name": "BridgeLoom",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "EnhancedInput",
+            "Enabled": true
+        },
+        {
+            "Name": "GameplayAbilities",
+            "Enabled": true
+        },
+        {
+            "Name": "Niagara",
+            "Enabled": true
+        },
+        {
+            "Name": "MetaHuman",
+            "Enabled": true
+        },
+        {
+            "Name": "RigLogic",
+            "Enabled": true
+        },
+        {
+            "Name": "HairStrands",
+            "Enabled": true
+        },
+        {
+            "Name": "LiveLink",
+            "Enabled": true
+        },
+        {
+            "Name": "GameFeatures",
+            "Enabled": true
+        }
+    ]
+}

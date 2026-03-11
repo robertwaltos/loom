@@ -1,0 +1,295 @@
+{
+  "annotations": { "list": [] },
+  "description": "Project Loom — Real-time game server monitoring",
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 1,
+  "links": [],
+  "panels": [
+    {
+      "title": "Active Players",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 6, "x": 0, "y": 0 },
+      "targets": [
+        {
+          "expr": "sum(loom_active_connections)",
+          "legendFormat": "Players Online"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "yellow", "value": 10000 },
+              { "color": "red", "value": 40000 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "title": "Active Worlds",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 6, "x": 6, "y": 0 },
+      "targets": [
+        {
+          "expr": "count(loom_world_population > 0)",
+          "legendFormat": "Active Worlds"
+        }
+      ]
+    },
+    {
+      "title": "Events/sec",
+      "type": "stat",
+      "gridPos": { "h": 4, "w": 6, "x": 12, "y": 0 },
+      "targets": [
+        {
+          "expr": "sum(rate(loom_events_published_total[1m]))",
+          "legendFormat": "Events/s"
+        }
+      ]
+    },
+    {
+      "title": "Tick Budget (ms)",
+      "type": "gauge",
+      "gridPos": { "h": 4, "w": 6, "x": 18, "y": 0 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.99, rate(loom_tick_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p99 Tick"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "max": 0.5,
+          "thresholds": {
+            "steps": [
+              { "color": "green", "value": null },
+              { "color": "yellow", "value": 0.3 },
+              { "color": "red", "value": 0.5 }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "title": "Player Connections Over Time",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 4 },
+      "targets": [
+        {
+          "expr": "sum(loom_active_connections) by (region)",
+          "legendFormat": "{{ region }}"
+        }
+      ]
+    },
+    {
+      "title": "Event Bus Throughput",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 4 },
+      "targets": [
+        {
+          "expr": "sum(rate(loom_events_published_total[1m])) by (topic)",
+          "legendFormat": "{{ topic }}"
+        },
+        {
+          "expr": "sum(rate(loom_events_dropped_total[1m]))",
+          "legendFormat": "Dropped"
+        }
+      ]
+    },
+    {
+      "title": "API Response Times",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 12 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.50, rate(loom_http_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p50"
+        },
+        {
+          "expr": "histogram_quantile(0.95, rate(loom_http_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p95"
+        },
+        {
+          "expr": "histogram_quantile(0.99, rate(loom_http_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p99"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "ms" }
+      }
+    },
+    {
+      "title": "KALON Economy",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 12 },
+      "targets": [
+        {
+          "expr": "sum(loom_kalon_total_supply)",
+          "legendFormat": "Total Supply"
+        },
+        {
+          "expr": "sum(rate(loom_kalon_transfers_total[5m]))",
+          "legendFormat": "Transfers/s"
+        },
+        {
+          "expr": "sum(rate(loom_kalon_volume_total[5m]))",
+          "legendFormat": "Volume/s"
+        }
+      ]
+    },
+    {
+      "title": "World Population Distribution",
+      "type": "barchart",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 20 },
+      "targets": [
+        {
+          "expr": "loom_world_population",
+          "legendFormat": "{{ world_id }}"
+        }
+      ]
+    },
+    {
+      "title": "WebSocket Connections",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 20 },
+      "targets": [
+        {
+          "expr": "sum(selvage_ws_connections) by (state)",
+          "legendFormat": "{{ state }}"
+        },
+        {
+          "expr": "sum(rate(selvage_ws_messages_total[1m])) by (direction)",
+          "legendFormat": "msgs/s {{ direction }}"
+        }
+      ]
+    },
+    {
+      "title": "Database Performance",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 28 },
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, rate(loom_db_query_duration_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p95 Query"
+        },
+        {
+          "expr": "sum(rate(loom_db_connections_total[1m]))",
+          "legendFormat": "Connections/s"
+        },
+        {
+          "expr": "loom_db_pool_size",
+          "legendFormat": "Pool Size"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": { "unit": "ms" }
+      }
+    },
+    {
+      "title": "Redis Cache",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 28 },
+      "targets": [
+        {
+          "expr": "sum(rate(loom_cache_hits_total[1m]))",
+          "legendFormat": "Hits/s"
+        },
+        {
+          "expr": "sum(rate(loom_cache_misses_total[1m]))",
+          "legendFormat": "Misses/s"
+        },
+        {
+          "expr": "sum(rate(loom_cache_hits_total[1m])) / (sum(rate(loom_cache_hits_total[1m])) + sum(rate(loom_cache_misses_total[1m])))",
+          "legendFormat": "Hit Rate"
+        }
+      ]
+    },
+    {
+      "title": "Nakama Backend",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 0, "y": 36 },
+      "targets": [
+        {
+          "expr": "sum(rate(loom_nakama_auth_total[1m])) by (result)",
+          "legendFormat": "Auth {{ result }}/s"
+        },
+        {
+          "expr": "sum(loom_nakama_matches_active)",
+          "legendFormat": "Active Matches"
+        },
+        {
+          "expr": "histogram_quantile(0.95, rate(loom_nakama_latency_seconds_bucket[5m])) * 1000",
+          "legendFormat": "p95 Latency"
+        }
+      ]
+    },
+    {
+      "title": "Resource Utilization",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 12, "x": 12, "y": 36 },
+      "targets": [
+        {
+          "expr": "avg(rate(container_cpu_usage_seconds_total{namespace='loom-prod'}[5m])) by (container) * 100",
+          "legendFormat": "{{ container }} CPU%"
+        },
+        {
+          "expr": "avg(container_memory_working_set_bytes{namespace='loom-prod'}) by (container) / 1024 / 1024",
+          "legendFormat": "{{ container }} Memory MB"
+        }
+      ]
+    },
+    {
+      "title": "Error Rates",
+      "type": "timeseries",
+      "gridPos": { "h": 8, "w": 24, "x": 0, "y": 44 },
+      "targets": [
+        {
+          "expr": "sum(rate(loom_errors_total[5m])) by (error_type)",
+          "legendFormat": "{{ error_type }}"
+        },
+        {
+          "expr": "sum(rate(loom_http_responses_total{status=~'5..'}[5m]))",
+          "legendFormat": "HTTP 5xx"
+        },
+        {
+          "expr": "sum(rate(loom_anti_cheat_violations_total[5m])) by (type)",
+          "legendFormat": "AntiCheat {{ type }}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "drawStyle": "bars"
+          }
+        }
+      }
+    }
+  ],
+  "refresh": "10s",
+  "schemaVersion": 39,
+  "tags": ["loom", "game-server", "production"],
+  "templating": {
+    "list": [
+      {
+        "name": "region",
+        "type": "query",
+        "query": "label_values(loom_active_connections, region)",
+        "multi": true,
+        "includeAll": true
+      },
+      {
+        "name": "world",
+        "type": "query",
+        "query": "label_values(loom_world_population, world_id)",
+        "multi": true,
+        "includeAll": true
+      }
+    ]
+  },
+  "time": { "from": "now-1h", "to": "now" },
+  "title": "Project Loom — Operations Dashboard",
+  "uid": "loom-ops-main"
+}

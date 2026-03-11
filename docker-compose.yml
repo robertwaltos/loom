@@ -1,0 +1,88 @@
+# Project Loom — Local Development Stack
+#
+# Usage:
+#   docker compose up -d          Start all services
+#   docker compose logs -f loom   Follow Loom server logs
+#   docker compose down           Stop & remove containers
+
+services:
+  # ── PostgreSQL ─────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: loom
+      POSTGRES_PASSWORD_FILE: /run/secrets/pg_password
+      POSTGRES_DB: loom
+    secrets:
+      - pg_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U loom"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Redis ──────────────────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--maxmemory", "256mb", "--maxmemory-policy", "allkeys-lru"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Loom Server ────────────────────────────────────────────
+  loom:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      LOOM_HOST: "0.0.0.0"
+      LOOM_PORT: "8080"
+      PG_HOST: postgres
+      PG_PORT: "5432"
+      PG_USER: loom
+      PG_PASSWORD_FILE: /run/secrets/pg_password
+      PG_DATABASE: loom
+      REDIS_URL: "redis://redis:6379"
+      OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector:4317"
+    secrets:
+      - pg_password
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # ── OpenTelemetry Collector (optional) ─────────────────────
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.96.0
+    restart: unless-stopped
+    ports:
+      - "4317:4317"   # OTLP gRPC
+      - "4318:4318"   # OTLP HTTP
+      - "8888:8888"   # Prometheus metrics
+    profiles:
+      - observability
+
+volumes:
+  pgdata:
+  redisdata:
+
+secrets:
+  pg_password:
+    file: .secrets/pg_password.txt

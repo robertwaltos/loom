@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+.pnp.*
+
+# Build output
+dist/
+build/
+*.js.map
+*.d.ts
+*.tsbuildinfo
+!contracts/**/*.d.ts
+
+# UE5
+fabrics/bridge-loom-ue5/Binaries/
+fabrics/bridge-loom-ue5/Intermediate/
+fabrics/bridge-loom-ue5/Saved/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.vcxproj*
+
+# Rust
+target/
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+secrets/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Claude local settings
+.claude/settings.local.json
+.claude/worktrees/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+Thumbs.db
+
+# Bible extracted text (regenerable from .docx)
+Bible/_all_bibles.txt
+Bible/_extracted.txt
+
+# Python cache
+__pycache__/
+*.pyc
+.mypy_cache/

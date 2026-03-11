@@ -1,0 +1,359 @@
+# Multi-Region Loom Deployment — Istio Service Mesh + Global Load Balancing
+# Thread: carbon/k8s/multi-region
+# Tier: 2
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: loom-prod
+  labels:
+    istio-injection: enabled
+    app.kubernetes.io/part-of: project-loom
+---
+# ─── Global ConfigMap ───────────────────────────────────────────
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: loom-region-config
+  namespace: loom-prod
+data:
+  REGION: "${LOOM_REGION}"
+  CLUSTER_NAME: "loom-${LOOM_REGION}"
+  PEER_REGIONS: "us-east-1,eu-west-1,ap-southeast-1"
+  REPLICATION_MODE: "async"
+  MAX_REPLICATION_LAG_MS: "500"
+---
+# ─── Loom Core Deployment (per-region) ──────────────────────────
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loom-core
+  namespace: loom-prod
+  labels:
+    app: loom-core
+    tier: compute
+spec:
+  replicas: 6
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: loom-core
+  template:
+    metadata:
+      labels:
+        app: loom-core
+        version: v1
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "9090"
+    spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: topology.kubernetes.io/zone
+          whenUnsatisfiable: ScheduleAnyway
+          labelSelector:
+            matchLabels:
+              app: loom-core
+      containers:
+        - name: loom-core
+          image: loom/core:latest
+          ports:
+            - containerPort: 3000
+              name: http
+            - containerPort: 50051
+              name: grpc
+            - containerPort: 9090
+              name: metrics
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: REGION
+              valueFrom:
+                configMapKeyRef:
+                  name: loom-region-config
+                  key: REGION
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: loom-secrets
+                  key: database-url
+            - name: REDIS_URL
+              valueFrom:
+                secretKeyRef:
+                  name: loom-secrets
+                  key: redis-url
+            - name: NAKAMA_SERVER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: loom-secrets
+                  key: nakama-server-key
+          resources:
+            requests:
+              cpu: "2"
+              memory: 4Gi
+            limits:
+              cpu: "4"
+              memory: 8Gi
+          readinessProbe:
+            httpGet:
+              path: /health/ready
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          lifecycle:
+            preStop:
+              exec:
+                command: ["/bin/sh", "-c", "sleep 15"]
+      terminationGracePeriodSeconds: 60
+---
+# ─── Selvage Gateway (API + WebSocket) ──────────────────────────
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: selvage-gateway
+  namespace: loom-prod
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: selvage-gateway
+  template:
+    metadata:
+      labels:
+        app: selvage-gateway
+    spec:
+      containers:
+        - name: selvage
+          image: loom/selvage:latest
+          ports:
+            - containerPort: 3001
+              name: ws
+            - containerPort: 9091
+              name: metrics
+          env:
+            - name: WS_MAX_CONNECTIONS
+              value: "10000"
+            - name: WS_HEARTBEAT_INTERVAL_MS
+              value: "30000"
+          resources:
+            requests:
+              cpu: "1"
+              memory: 2Gi
+            limits:
+              cpu: "2"
+              memory: 4Gi
+---
+# ─── Services ───────────────────────────────────────────────────
+apiVersion: v1
+kind: Service
+metadata:
+  name: loom-core
+  namespace: loom-prod
+spec:
+  selector:
+    app: loom-core
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+    - name: grpc
+      port: 50051
+      targetPort: 50051
+    - name: metrics
+      port: 9090
+      targetPort: 9090
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: selvage-gateway
+  namespace: loom-prod
+spec:
+  selector:
+    app: selvage-gateway
+  ports:
+    - name: ws
+      port: 3001
+      targetPort: 3001
+---
+# ─── HPA — Auto-scaling ────────────────────────────────────────
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: loom-core-hpa
+  namespace: loom-prod
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: loom-core
+  minReplicas: 3
+  maxReplicas: 24
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
+    - type: Pods
+      pods:
+        metric:
+          name: loom_active_connections
+        target:
+          type: AverageValue
+          averageValue: "5000"
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 60
+      policies:
+        - type: Pods
+          value: 4
+          periodSeconds: 60
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+        - type: Percent
+          value: 10
+          periodSeconds: 120
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: selvage-hpa
+  namespace: loom-prod
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: selvage-gateway
+  minReplicas: 2
+  maxReplicas: 16
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 65
+    - type: Pods
+      pods:
+        metric:
+          name: selvage_ws_connections
+        target:
+          type: AverageValue
+          averageValue: "8000"
+---
+# ─── PodDisruptionBudget ────────────────────────────────────────
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: loom-core-pdb
+  namespace: loom-prod
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: loom-core
+---
+# ─── Istio VirtualService — Traffic routing ─────────────────────
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: loom-routing
+  namespace: loom-prod
+spec:
+  hosts:
+    - "api.projectloom.game"
+  gateways:
+    - loom-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /api/v1/
+      route:
+        - destination:
+            host: loom-core
+            port:
+              number: 3000
+      retries:
+        attempts: 3
+        perTryTimeout: 2s
+        retryOn: "5xx,reset,connect-failure"
+    - match:
+        - uri:
+            prefix: /ws
+      route:
+        - destination:
+            host: selvage-gateway
+            port:
+              number: 3001
+      timeout: 0s  # WebSocket — no timeout
+---
+# ─── Istio DestinationRule — Circuit breaking ───────────────────
+apiVersion: networking.istio.io/v1beta1
+kind: DestinationRule
+metadata:
+  name: loom-core-dest
+  namespace: loom-prod
+spec:
+  host: loom-core
+  trafficPolicy:
+    connectionPool:
+      tcp:
+        maxConnections: 1000
+      http:
+        h2UpgradePolicy: UPGRADE
+        http1MaxPendingRequests: 1000
+        http2MaxRequests: 1000
+    outlierDetection:
+      consecutive5xxErrors: 5
+      interval: 30s
+      baseEjectionTime: 30s
+      maxEjectionPercent: 30
+---
+# ─── Network Policy — Zero-trust between services ───────────────
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: loom-core-netpol
+  namespace: loom-prod
+spec:
+  podSelector:
+    matchLabels:
+      app: loom-core
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: selvage-gateway
+      ports:
+        - port: 3000
+        - port: 50051
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              name: monitoring
+      ports:
+        - port: 9090
+  egress:
+    - to: []  # Allow all egress (DB, Redis, Nakama, Temporal)

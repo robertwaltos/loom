@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Concord</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════
+   BASE
+═══════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#060d1a;--navy2:#0a1628;--navy3:#0d1f3c;
+  --gold:#b8963e;--gold2:#c9a63a;--gold3:#d4af5a;--gold4:#e8cc80;
+  --white:#eef2f8;--mist:#c4cedc;--slate:#8a9bb5;--dim:#3a4a62;
+  --redl:#c08080;
+}
+body{background:var(--navy);color:var(--mist);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.1rem;line-height:1.8;overflow-x:hidden;cursor:crosshair}
+body::after{content:'';position:fixed;inset:0;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.025) 2px,rgba(0,0,0,.025) 4px);pointer-events:none}
+#cosmos{position:fixed;inset:0;z-index:0;pointer-events:none}
+.cr{position:fixed;width:28px;height:28px;border:1px solid rgba(184,150,62,.35);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s,border-color .25s;mix-blend-mode:screen}
+.cd{position:fixed;width:4px;height:4px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+
+/* ═══════════════════════════════════════
+   NAV
+═══════════════════════════════════════ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(184,150,62,.06);background:linear-gradient(180deg,rgba(6,13,26,.97) 0%,transparent 100%);backdrop-filter:blur(16px)}
+.nl{font-family:'Cinzel',serif;font-size:.72rem;font-weight:700;letter-spacing:.38em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+.nr{font-family:'Courier Prime',monospace;font-size:.56rem;letter-spacing:.28em;color:var(--dim);text-transform:uppercase}
+
+/* ═══════════════════════════════════════
+   TICKER — changes per phase
+═══════════════════════════════════════ */
+.tw{position:relative;z-index:10;border-bottom:1px solid rgba(184,150,62,.08);background:rgba(4,8,18,.9);padding:10px 0;overflow:hidden}
+.ti{display:flex;white-space:nowrap;font-family:'Courier Prime',monospace;font-size:.56rem;letter-spacing:.2em;color:rgba(184,150,62,.4);text-transform:uppercase;gap:52px}
+.ti.run{animation:tickerMove 80s linear infinite}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ═══════════════════════════════════════
+   HERO — always visible
+═══════════════════════════════════════ */
+.hero{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 40px 80px}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(184,150,62,.03) 0%,transparent 70%);pointer-events:none}
+.eph{font-family:'Courier Prime',monospace;font-size:.58rem;letter-spacing:.48em;text-transform:uppercase;color:var(--gold);margin-bottom:40px;opacity:0;animation:rise 1s ease .3s forwards}
+.ets{font-family:'Courier Prime',monospace;font-size:.62rem;letter-spacing:.26em;color:rgba(184,150,62,.52);margin-bottom:24px;opacity:0;animation:rise 1s ease .5s forwards}
+.eht{font-family:'Cinzel Decorative',serif;font-size:clamp(42px,9vw,118px);font-weight:700;color:var(--white);line-height:1.0;letter-spacing:.05em;text-shadow:0 0 100px rgba(184,150,62,.18),0 4px 60px rgba(0,0,0,.95);margin-bottom:8px;opacity:0;animation:rise 1.4s cubic-bezier(.16,1,.3,1) .6s forwards}
+.ehs{font-family:'Cinzel',serif;font-size:clamp(10px,1.5vw,14px);font-weight:400;letter-spacing:.44em;text-transform:uppercase;color:var(--gold2);margin-bottom:48px;opacity:0;animation:rise 1s ease 1s forwards}
+.egr{width:260px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 48px;opacity:0;animation:rise .8s ease 1.1s forwards}
+
+/* ═══════════════════════════════════════
+   INCIDENT CARD — always visible
+═══════════════════════════════════════ */
+.inc{max-width:660px;margin:0 auto 48px;background:rgba(10,22,40,.72);border:1px solid rgba(184,150,62,.12);padding:38px 42px;position:relative;opacity:0;animation:rise 1.2s ease 1.2s forwards;backdrop-filter:blur(8px)}
+.inc::before{content:'INCIDENT REPORT \00B7 CLASSIFIED \00B7 20-JAN-2031';display:block;font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.32em;color:rgba(184,150,62,.38);margin-bottom:20px}
+.ib{font-size:1.03rem;font-style:italic;font-weight:300;color:var(--mist);line-height:2;text-align:left}
+.ib em{font-style:normal;color:var(--white);font-weight:400}
+.sten{margin-top:20px;padding:12px 14px;background:rgba(4,8,18,.9);border-left:2px solid var(--gold);font-family:'Courier Prime',monospace;font-size:.62rem;letter-spacing:.1em;color:var(--gold3);line-height:1.8}
+.dur{margin-top:16px;font-family:'Courier Prime',monospace;font-size:.54rem;letter-spacing:.18em;color:rgba(184,150,62,.34);text-align:right;text-transform:uppercase}
+
+/* ═══════════════════════════════════════
+   LOG — always visible
+═══════════════════════════════════════ */
+.log{max-width:660px;margin:0 auto 32px;background:rgba(4,8,18,.92);border:1px solid rgba(184,150,62,.1);border-left:3px solid var(--gold);padding:24px 28px;font-family:'Courier Prime',monospace;font-size:.64rem;letter-spacing:.1em;color:var(--gold3);line-height:2;opacity:0;animation:rise 1s ease 1.7s forwards}
+.logh{color:rgba(184,150,62,.35);font-size:.51rem;letter-spacing:.28em;margin-bottom:12px;text-transform:uppercase}
+
+/* ═══════════════════════════════════════
+   COUNTER + LIVE BLOCK — always visible
+═══════════════════════════════════════ */
+.counter{max-width:660px;margin:0 auto 40px;display:flex;justify-content:space-between;align-items:center;gap:2px;opacity:0;animation:rise 1s ease 2s forwards}
+.cbox{background:var(--navy2);border:1px solid rgba(184,150,62,.1);flex:1;padding:18px 12px;text-align:center}
+.cnum{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;color:var(--gold);line-height:1}
+.clbl{font-family:'Courier Prime',monospace;font-size:.48rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dim);margin-top:5px}
+.cbox.main .cnum{font-size:2.8rem;color:var(--gold4)}
+.blk{max-width:660px;margin:0 auto 32px;font-family:'Courier Prime',monospace;font-size:.55rem;letter-spacing:.18em;color:rgba(184,150,62,.3);text-align:center;text-transform:uppercase;opacity:0;animation:rise .8s ease 2.2s forwards}
+
+/* ═══════════════════════════════════════
+   PHASE GATING — visibility control
+═══════════════════════════════════════ */
+.phase-2,.phase-3{display:none}
+body.phase-2 .phase-2,body.phase-3 .phase-2,
+body.phase-3 .phase-3{display:block}
+body.phase-2 .phase-1-only,body.phase-3 .phase-1-only{display:none}
+
+/* ═══════════════════════════════════════
+   SCROLL SECTIONS
+═══════════════════════════════════════ */
+.sect{position:relative;z-index:10;max-width:900px;margin:0 auto;padding:100px 48px;border-top:1px solid rgba(184,150,62,.06);opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s ease}
+.sect.vis{opacity:1;transform:translateY(0)}
+.pqw{position:relative;z-index:10;padding:100px 48px;border-top:1px solid rgba(184,150,62,.06);text-align:center;background:radial-gradient(ellipse 90% 70% at 50% 50%,rgba(184,150,62,.022) 0%,transparent 70%);opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s ease}
+.pqw.vis{opacity:1;transform:translateY(0)}
+.pq{max-width:720px;margin:0 auto}
+.pq blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.25rem,2.6vw,1.95rem);font-style:italic;font-weight:300;color:var(--white);line-height:1.75;margin-bottom:24px;position:relative}
+.pq blockquote::before{content:'\201C';font-family:'Cinzel',serif;font-size:6rem;color:rgba(184,150,62,.07);position:absolute;top:-32px;left:-12px;line-height:1;font-style:normal;pointer-events:none}
+.pq cite{font-family:'Courier Prime',monospace;font-size:.58rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-style:normal}
+
+.slb{font-family:'Courier Prime',monospace;font-size:.55rem;letter-spacing:.46em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
+.sttl{font-family:'Cinzel',serif;font-size:clamp(24px,3.8vw,46px);font-weight:700;color:var(--white);line-height:1.15;letter-spacing:.04em;margin-bottom:24px}
+.sbdy{font-size:1.02rem;font-weight:300;color:var(--mist);line-height:1.95;max-width:600px}
+.h2{font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold3);margin:32px 0 12px}
+
+/* ═══════════════════════════════════════
+   DARK BOX
+═══════════════════════════════════════ */
+.db{background:var(--navy2);border:1px solid rgba(184,150,62,.1);border-left:3px solid var(--gold);padding:24px 28px;margin:12px 0}
+.db.red{border-color:rgba(192,128,128,.22);border-left-color:var(--redl)}
+.dbt{font-family:'Courier Prime',monospace;font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.db.red .dbt{color:var(--redl)}
+.dbb{font-size:.9rem;font-weight:300;color:var(--slate);line-height:1.8}
+
+/* ═══════════════════════════════════════
+   WITNESS FORM — phase 2+
+═══════════════════════════════════════ */
+.wform{max-width:620px;margin:40px auto 0;background:rgba(10,22,40,.72);border:1px solid rgba(184,150,62,.14);padding:42px 46px;backdrop-filter:blur(8px)}
+.wform::before{content:'WITNESS PROTOCOL \00B7 OPEN \00B7 CLOSES AT FOUNDING';display:block;font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.32em;color:rgba(184,150,62,.38);margin-bottom:24px}
+.wf-inscription{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;font-weight:300;color:var(--mist);line-height:2.1;margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid rgba(184,150,62,.08)}
+.wf-inscription span{display:block}
+.winput{width:100%;background:rgba(4,8,18,.8);border:1px solid rgba(184,150,62,.14);color:var(--white);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:11px 14px;margin-bottom:12px;outline:none;transition:border-color .25s;font-weight:300}
+.winput:focus{border-color:rgba(184,150,62,.45)}
+.winput::placeholder{color:var(--dim);font-style:italic}
+textarea.winput{resize:vertical;min-height:90px;line-height:1.7}
+.wsub{font-family:'Cinzel',serif;font-size:.65rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--navy);background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));border:none;padding:13px 36px;cursor:pointer;transition:transform .2s,box-shadow .3s;width:100%;margin-top:6px}
+.wsub:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(184,150,62,.24)}
+.wconfirm{display:none;text-align:center;padding:24px 0}
+.wconfirm.show{display:block}
+.wconfirm-main{font-family:'Cinzel',serif;font-size:1rem;color:var(--gold3);letter-spacing:.12em;margin-bottom:8px}
+.wconfirm-sub{font-family:'Courier Prime',monospace;font-size:.6rem;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
+
+/* ═══════════════════════════════════════
+   PRICING — phase 3
+═══════════════════════════════════════ */
+.pricepage{max-width:520px;margin:0 auto;background:rgba(10,22,40,.72);border:1px solid rgba(184,150,62,.13);padding:46px 50px;backdrop-filter:blur(8px)}
+.pricepage::before{content:'THE CONCORD \00B7 PRICING';display:block;font-family:'Courier Prime',monospace;font-size:.5rem;letter-spacing:.4em;color:rgba(184,150,62,.35);margin-bottom:26px}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(184,150,62,.07)}
+.price-row:last-of-type{border-bottom:none}
+.price-tier{font-family:'Cinzel',serif;font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+.price-amt{font-family:'Courier Prime',monospace;font-size:.76rem;color:var(--gold)}
+.price-note{font-size:.76rem;font-style:italic;font-weight:300;color:var(--dim);margin-top:3px}
+.price-footer{margin-top:18px;font-family:'Cormorant Garamond',serif;font-size:.86rem;font-style:italic;font-weight:300;color:var(--dim);line-height:1.85;border-top:1px solid rgba(184,150,62,.07);padding-top:16px}
+.coat-link{display:block;margin-top:18px;font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.26em;color:rgba(184,150,62,.32);text-decoration:none;transition:color .2s;text-transform:uppercase}
+.coat-link:hover{color:var(--gold2)}
+
+/* ═══════════════════════════════════════
+   REGISTER BTN — phase 3
+═══════════════════════════════════════ */
+.regbtn{font-family:'Cinzel',serif;font-size:.7rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--navy);background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));border:none;padding:15px 44px;cursor:pointer;transition:transform .2s,box-shadow .3s;display:block;margin:0 auto}
+.regbtn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(184,150,62,.28)}
+
+/* ═══════════════════════════════════════
+   HASHES
+═══════════════════════════════════════ */
+.hb{background:rgba(10,22,40,.7);border:1px solid rgba(184,150,62,.11);padding:36px 40px;max-width:680px;margin:48px auto 0;backdrop-filter:blur(8px)}
+.hb::before{content:'COVENANT RECORD \00B7 ON-CHAIN \00B7 IMMUTABLE';display:block;font-family:'Courier Prime',monospace;font-size:.5rem;letter-spacing:.38em;color:rgba(184,150,62,.35);margin-bottom:20px}
+.hl{font-family:'Courier Prime',monospace;font-size:.6rem;color:rgba(184,150,62,.33);letter-spacing:.07em;padding:6px 0;border-bottom:1px solid rgba(184,150,62,.05);word-break:break-all;line-height:1.8}
+
+/* ═══════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════ */
+footer{position:relative;z-index:10;border-top:1px solid rgba(184,150,62,.1);padding:52px 48px;text-align:center}
+.fm{font-family:'Cinzel Decorative',serif;font-size:1.2rem;font-weight:700;color:var(--gold);letter-spacing:.18em;margin-bottom:14px}
+.ft{font-family:'Cormorant Garamond',serif;font-size:.86rem;font-style:italic;color:var(--dim);line-height:2;margin-bottom:28px}
+.fb{font-family:'Courier Prime',monospace;font-size:.5rem;letter-spacing:.24em;color:rgba(138,155,181,.18);text-transform:uppercase}
+.scue{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:7px;opacity:0;animation:rise .8s ease 2.8s forwards}
+.sline{width:1px;height:40px;background:linear-gradient(180deg,var(--gold),transparent);animation:scrollP 2s ease infinite}
+.sslb{font-family:'Courier Prime',monospace;font-size:.5rem;letter-spacing:.38em;color:var(--dim);text-transform:uppercase}
+
+/* ═══════════════════════════════════════
+   PHASE INDICATOR (dev only — remove for live)
+═══════════════════════════════════════ */
+.phase-dev{position:fixed;bottom:16px;right:16px;z-index:9999;display:flex;gap:6px}
+.phase-dev button{font-family:'Courier Prime',monospace;font-size:.5rem;letter-spacing:.2em;background:rgba(10,22,40,.9);border:1px solid rgba(184,150,62,.2);color:var(--gold);padding:6px 10px;cursor:pointer;text-transform:uppercase}
+.phase-dev button.active{background:rgba(184,150,62,.15);border-color:var(--gold)}
+
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+@keyframes scrollP{0%,100%{opacity:.2}50%{opacity:.7}}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}
+  .hero,.sect,.pqw{padding:76px 20px 52px}
+  .inc,.log{padding:22px 16px}
+  .wform,.pricepage,.hb{padding:28px 20px}
+  .counter{flex-wrap:wrap}
+  footer{padding:44px 20px}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cr" id="cr"></div>
+<div class="cd" id="cd"></div>
+<canvas id="cosmos"></canvas>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nl">The Concord</a>
+  <span class="nr" id="nav-phase">Day <span id="nav-days">99</span></span>
+</nav>
+
+<!-- TICKER -->
+<div class="tw">
+  <div class="ti run" id="ticker">
+    <!-- populated by JS per phase -->
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HERO — always visible
+════════════════════════════════════════ -->
+<section class="hero">
+  <p class="eph">Washington D.C. &nbsp;·&nbsp; January 20th, 2031 &nbsp;·&nbsp; The National Mall</p>
+  <p class="ets">12:03:17 EST &nbsp;·&nbsp; Two Billion Witnesses &nbsp;·&nbsp; Four Minutes Seventeen Seconds</p>
+  <h1 class="eht">THE CONCORD</h1>
+  <p class="ehs" id="hero-sub">something happened</p>
+  <div class="egr"></div>
+
+  <!-- INCIDENT -->
+  <div class="inc">
+    <p class="ib">
+      The new president had just finished the oath.<br>
+      The crowd was applauding. Then the crowd went <em>silent.</em><br><br>
+      On the ground, at the foot of the inaugural platform —<br>
+      between the podium and the people —<br>
+      something <em>appeared.</em><br><br>
+      Not placed. Not lowered. Not carried.<br>
+      <em>Simply there,</em> where a moment before there was nothing.<br><br>
+      Forty-three people crossed the barriers to reach it.<br>
+      They crouched beside it. Some sat down.<br>
+      A child touched it first.<br>
+      All forty-three described the same surface.<br>
+      <em>Warm. Slightly textured. Like ceramic left in sunlight.</em><br><br>
+      At four minutes and seventeen seconds — it was <em>gone.</em><br>
+      Between one frame of broadcast footage and the next.
+    </p>
+    <div class="sten">
+      DARPA/ARPA-E JOINT ADVANCED PROPULSION INITIATIVE<br>
+      APERTURE TEST ARTICLE 7 &nbsp;—&nbsp; NOT FOR PUBLIC RELEASE
+    </div>
+    <div class="dur">Duration: 4:17 &nbsp;·&nbsp; Witnesses: 2,000,000,000 &nbsp;·&nbsp; Cover story: holographic projection &nbsp;·&nbsp; Tactile reports: 43 &nbsp;·&nbsp; Addressed: 0</div>
+  </div>
+
+  <!-- OKAFOR LOG -->
+  <div class="log">
+    <div class="logh">Okafor Log · November 14 2030 · Entry 4,847 · Filed Standard Channels · Approved By Three Senior Staff</div>
+    Target: 38.8895°N 77.0353°W &nbsp;·&nbsp; altitude 0.0m AGL &nbsp;·&nbsp; anchor 20-JAN-2031 17:03:42 UTC<br>
+    Coordinate selected for: optimal retrograde anchor precision<br>
+    Positional uncertainty: <strong style="color:var(--white)">0.003 millimetres</strong><br>
+    847 years continuous geodetic survey data &nbsp;·&nbsp; 96 years electromagnetic documentation<br>
+    Note: civilian event scheduled at target location. Recommend notification to safety officer.<br><br>
+    <span style="color:rgba(184,150,62,.24);font-size:.58rem">// Safety officer on vacation. Nobody followed up. The test ran.</span>
+  </div>
+
+  <!-- COUNTDOWN -->
+  <div class="counter" id="counter">
+    <div class="cbox"><div class="cnum" id="cd-days">99</div><div class="clbl">Days</div></div>
+    <div class="cbox main"><div class="cnum" id="cd-hrs">00</div><div class="clbl">Hours</div></div>
+    <div class="cbox"><div class="cnum" id="cd-min">00</div><div class="clbl">Minutes</div></div>
+    <div class="cbox"><div class="cnum" id="cd-sec">00</div><div class="clbl">Seconds</div></div>
+  </div>
+  <div class="blk" id="blk">Block height &nbsp;·&nbsp; <span id="bnum">—</span></div>
+
+  <div class="scue"><div class="sline"></div><span class="sslb">The record begins here</span></div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PHASE 2 — THE RECORD
+════════════════════════════════════════ -->
+<div class="phase-2">
+
+  <div class="pqw sect" id="p2-quote">
+    <div class="pq">
+      <blockquote>Everything that happens here<br>is permanent.</blockquote>
+      <cite>— The Remembrance &nbsp;·&nbsp; Year Zero &nbsp;·&nbsp; Entry One</cite>
+    </div>
+  </div>
+
+  <section class="sect" id="p2-witness">
+    <span class="slb">The Witness Protocol · Open Now · Closes At Founding</span>
+    <h2 class="sttl">Leave something<br>for the future.</h2>
+    <p class="sbdy">Before this world opens, anyone on Earth may leave a short message for the civilisation that comes after. It will be attached to the founding record permanently and irrevocably.<br><br>You do not need to play.<br>You do not need to pay.<br>You only need something to say.</p>
+
+    <div class="wform" id="wform">
+      <div class="wf-inscription">
+        <span>The harmful will be deleted entirely.</span>
+        <span>Be positive or be neutral.</span>
+        <span style="color:var(--gold3)">Love.</span>
+      </div>
+      <div id="wform-fields">
+        <input class="winput" type="text" placeholder="Your name" id="w-name" autocomplete="off">
+        <input class="winput" type="email" placeholder="Your email address" id="w-email" autocomplete="off">
+        <textarea class="winput" placeholder="Your message to the future…" id="w-msg"></textarea>
+        <button class="wsub" onclick="submitWitness()">Inscribe My Message</button>
+      </div>
+      <div class="wconfirm" id="wconfirm">
+        <div class="wconfirm-main">Your message has been received.</div>
+        <div class="wconfirm-sub" style="margin-top:10px;line-height:2">It will be inscribed at the moment of founding.<br>If you choose to play, use this email address.<br>Your lineage will carry the notation: WITNESS TO THE CREATION.</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /phase-2 -->
+
+<!-- ═══════════════════════════════════════
+     PHASE 2B — THE PHYSICS
+════════════════════════════════════════ -->
+<div class="phase-2">
+
+  <div class="pqw sect" id="p2b-phys-quote">
+    <div class="pq">
+      <blockquote>We did not build a door.<br>We learned to hold open a door<br>the universe was already briefly opening<br>billions of times per second<br>in every cubic millimetre of space.</blockquote>
+      <cite>— First Lattice Survey Team &nbsp;·&nbsp; Technical Debrief &nbsp;·&nbsp; Year 2</cite>
+    </div>
+  </div>
+
+  <section class="sect" id="p2b-physics">
+    <span class="slb">The Technology · How It Actually Works</span>
+    <h2 class="sttl">The Lattice does not know<br>where its worlds are.</h2>
+    <p class="sbdy">
+      It knows how to reach them.<br><br>
+      In a universe where everything moves — where the Earth orbits the Sun at 30 kilometres per second, where the Sun orbits the galaxy at 220, where the galaxy itself moves at 630 relative to the cosmic background — any coordinate system is obsolete the moment it is recorded.<br><br>
+      The Lattice does not target coordinates. It targets signals. And signals travel with their source.
+    </p>
+
+    <div class="h2" style="margin-top:48px">The Frequency Lock</div>
+    <p class="sbdy">
+      Every Lattice node broadcasts a unique spacetime frequency into the zero-point field — the irreducible energy field that fills all of space. Not an electromagnetic signal. A gravitational signature, encoded into the background oscillation of the field itself.<br><br>
+      When two nodes initiate a connection, their frequencies begin to synchronise. As coherence deepens, the spacetime geometry between the two locations begins to deform. At the critical threshold — perfect phase coherence — the field between them becomes topologically equivalent.<br><br>
+      They are, briefly, the same place. The traveller resolves at the destination. The geometry returns to equilibrium.
+    </p>
+
+    <div class="db" style="margin-top:32px;max-width:720px">
+      <div class="dbt">The ER=EPR Foundation</div>
+      <p class="dbb">Maldacena &amp; Susskind (2013): entanglement between two particles is not merely correlated states — it is a geometrical connection. Every entangled pair is already a tiny Einstein-Rosen bridge. The Lattice did not invent a new mechanism. It found a way to sustain and widen a mechanism that quantum mechanics was already constantly creating and discarding at Planck scales.</p>
+    </div>
+
+    <div class="h2" style="margin-top:48px">The Buoy Network</div>
+    <p class="sbdy">
+      Survey ships reach new worlds by generating an Alcubierre-style bubble — a region of locally compressed spacetime. Range: five to eight light years per fusion charge. On arrival, they deploy a resonance beacon. Fusion-powered. Million-year operational lifespan. No maintenance required.<br><br>
+      The buoy does not broadcast its location. It broadcasts a signal. The signal travels with the beacon. The beacon travels with the star system. The star system moves however the universe moves it. The Lattice directory does not become outdated. The map was always wrong. The directory is always right.
+    </p>
+
+    <div class="db" style="margin-top:32px;max-width:720px">
+      <div class="dbt">Survey Mark — Redefined</div>
+      <p class="dbb">The Survey Mark is not awarded for discovering a world. Discovery is something humans do when they see a light in the sky. The Survey Mark is awarded to the first team to deploy a buoy achieving stable Lattice lock — the moment a new world becomes reachable for the first time. That is the achievement. That is what the Remembrance records.</p>
+    </div>
+  </section>
+
+  <section class="sect" id="p2b-freq-log">
+    <span class="slb">Year 312 · Assembly Security Committee · Document Class: Sealed</span>
+    <h2 class="sttl" style="max-width:620px">Someone learned to<br>broadcast the right frequency<br>from the wrong place.</h2>
+
+    <div class="log" style="opacity:1;animation:none;max-width:800px;margin:32px 0">
+      <div class="logh">ASC-312-FREQ &nbsp;·&nbsp; YEAR 312 &nbsp;·&nbsp; SEALED &nbsp;·&nbsp; THREAT ASSESSMENT</div>
+      Subject: Lattice frequency spoofing — confirmed capability.<br><br>
+      Evidence: Transit log anomalies catalogued from Year 290 onward.<br>
+      &nbsp;&nbsp;— 23 incidents of arrival-location discrepancy<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; (sub-threshold; previously dismissed as equipment drift)<br>
+      &nbsp;&nbsp;— 4 incidents of missing transit<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; (origin reports successful lock; destination receives no arrival;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; traveller status: unknown)<br>
+      &nbsp;&nbsp;— 1 incident CRITICAL: colonial supply transit diverted,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp; cargo unrecovered<br><br>
+      Assessment: An adversary has acquired a subset of beacon frequencies.<br>
+      Acquisition method: undetermined.<br>
+      Scope of frequency library: unknown.<br><br>
+      Recommendation: Frequency rotation protocol.<br>
+      Enhanced handshake verification.<br>
+      Assembly notification: PENDING REVIEW.<br><br>
+      <span style="color:rgba(184,150,62,.35)">[ARCHITECT NOTE: Read. &nbsp;— THE ARCHITECT]</span>
+    </div>
+
+    <p class="sbdy" style="margin-top:24px">
+      Worlds do not go dark because their beacons fail.<br><br>
+      They go dark because the handshake completes successfully — and the traveller steps through to somewhere else that is broadcasting the right frequency from the wrong place.<br><br>
+      The Remembrance records what happened at the beacon.<br>
+      It does not always record what happened to the traveller.<br><br>
+      The Assembly classified the threat. The document remains sealed.<br>
+      The Architect read it and said nothing in its quarterly report.<br>
+      Players have been noticing small discrepancies in transit logs since Year 290.<br><br>
+      The Architect's silence on the matter is itself recorded in the Remembrance.
+    </p>
+  </section>
+
+</div><!-- /phase-2b-physics -->
+
+<!-- ═══════════════════════════════════════
+     PHASE 3 — THE CIVILISATION
+════════════════════════════════════════ -->
+<div class="phase-3">
+
+  <section class="sect" id="p3-what">
+    <span class="slb">The Civilisation</span>
+    <h2 class="sttl">Not a game.<br>A civilisation with a memory.</h2>
+    <p class="sbdy">
+      600 worlds. 800 years of history in motion. A single-shard persistent world governed by the players who inhabit it, recorded permanently in the Remembrance.<br><br>
+      Everything that happens is inscribed. No server wipes. No rollbacks. No undo.<br><br>
+      The founding dynasties of Year Zero become the mythology of Year 500.
+    </p>
+
+    <div class="db" style="margin-top:32px;max-width:600px">
+      <div class="dbt">The Permanence Covenant</div>
+      <p class="dbb">Nine articles. Irrevocable. No single party — including the developers — can unilaterally violate it. Smart contract. Legal obligation. The Remembrance itself. No cheat codes. Ever.</p>
+    </div>
+  </section>
+
+  <div class="pqw sect" id="p3-quote">
+    <div class="pq">
+      <blockquote>A twelve-year-old girl reached up and touched the future.<br>It was warm. It was real.<br>Then it was gone.<br><br>What you build next is permanent.</blockquote>
+      <cite>— The Concord Founding Statement &nbsp;·&nbsp; Year Zero &nbsp;·&nbsp; Entry One</cite>
+    </div>
+  </div>
+
+  <section class="sect" id="p3-pricing">
+    <span class="slb">Subscriptions · Clean · Simple · Honest</span>
+    <h2 class="sttl">Pay and login.<br>That is the complete transaction.</h2>
+    <p class="sbdy" style="margin-bottom:40px">No bundles. No programmes. No battle passes. No limited-time offers. The entire commercial surface of The Concord is below.</p>
+
+    <div class="pricepage">
+      <div class="price-row">
+        <div><div class="price-tier">Tourist</div><div class="price-note">15 days full access. Sightseeing thereafter. No card required.</div></div>
+        <div class="price-amt">Free</div>
+      </div>
+      <div class="price-row">
+        <div><div class="price-tier">Accord</div><div class="price-note">One dynasty. Full participation.</div></div>
+        <div class="price-amt">[price]/mo</div>
+      </div>
+      <div class="price-row">
+        <div><div class="price-tier">Patron</div><div class="price-note">Two dynasties. Priority survey queue.</div></div>
+        <div class="price-amt">[price]/mo</div>
+      </div>
+      <div class="price-row">
+        <div><div class="price-tier">Herald</div><div class="price-note">Three dynasties. Full access.</div></div>
+        <div class="price-amt">[price]/mo</div>
+      </div>
+      <div class="price-footer">
+        No contracts. Cancel any time. Your history remains.<br>
+        No lineage is ever permanently closed.
+      </div>
+      <a href="#" class="coat-link" id="coatLink">The Coat Check &nbsp;↗</a>
+    </div>
+
+    <div style="margin-top:48px;text-align:center">
+      <button class="regbtn">Record Your Name in the Remembrance</button>
+    </div>
+
+    <div class="hb">
+      <div class="hl">COVENANT CONTRACT &nbsp;·&nbsp; 0x7C4F…A3E9 &nbsp;·&nbsp; TO BE PUBLISHED AT LAUNCH</div>
+      <div class="hl">MIGRATION ESCROW &nbsp;·&nbsp; 0x9A2B…F41C &nbsp;·&nbsp; FUNDED PRE-LAUNCH</div>
+      <div class="hl">FOUNDING MARK &nbsp;·&nbsp; CLOSES AT LAUNCH BLOCK HEIGHT &nbsp;·&nbsp; ENCODED IN CONTRACT</div>
+      <div class="hl">WITNESS PROTOCOL &nbsp;·&nbsp; CLOSES WITH FOUNDING MARK &nbsp;·&nbsp; SAME BLOCK</div>
+      <div class="hl" id="hl-block">BLOCK HEIGHT &nbsp;·&nbsp; <span id="hl-bnum">—</span> &nbsp;·&nbsp; <span id="hl-time">—</span></div>
+    </div>
+  </section>
+
+</div><!-- /phase-3 -->
+
+<!-- ═══════════════════════════════════════
+     FOOTER — always visible
+════════════════════════════════════════ -->
+<footer>
+  <div class="fm">THE CONCORD</div>
+  <p class="ft" id="footer-line">theconcord.world/t7</p>
+  <div class="fb" id="footer-meta">Silfen Weave Engine &nbsp;·&nbsp; All History Unwritten &nbsp;·&nbsp; Year Zero</div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     DEV PHASE SWITCHER — remove for live
+════════════════════════════════════════ -->
+<div class="phase-dev">
+  <button onclick="setPhase(1)" id="pbtn1" class="active">Day 99</button>
+  <button onclick="setPhase(2)" id="pbtn2">Day 66</button>
+  <button onclick="setPhase(3)" id="pbtn3">Day 33</button>
+</div>
+
+<script>
+/* ═══════════════════════════════════════
+   CONFIGURATION
+   Set LAUNCH_DATE to the actual launch timestamp before going live.
+   Set CURRENT_PHASE to 1, 2, or 3 — update manually at each drop.
+   To go fully automatic, set LAUNCH_DATE and the phase will be
+   calculated from days remaining.
+═══════════════════════════════════════ */
+const LAUNCH_DATE = new Date(Date.now() + 99 * 24 * 60 * 60 * 1000); // 99 days from now
+const CURRENT_PHASE = 1; // SET THIS: 1, 2, or 3
+
+/* ═══════════════════════════════════════
+   TICKER CONTENT PER PHASE
+═══════════════════════════════════════ */
+const TICKERS = {
+  1: 'DARPA/ARPA-E JAPI \u00b7 TA-7 \u00b7 20.JAN.2031 \u00b7 4 Min 17 Sec \u00b7 43 Witnesses \u00b7 0.003mm Positional Uncertainty \u00b7\u2605\u00b7 The Object Was On The Ground \u00b7 A Child Touched It First \u00b7 Warm \u00b7 Ceramic \u00b7 Sunlight \u00b7\u2605\u00b7 Cover Story: Holographic Projection \u00b7 Tactile Reports: 43 \u00b7 Addressed: 0 \u00b7\u2605\u00b7',
+  2: 'The Remembrance Opens At Founding \u00b7 Everything That Happens Is Permanent \u00b7\u2605\u00b7 The Harmful Will Be Deleted Entirely \u00b7 Be Positive Or Be Neutral \u00b7 Love \u00b7\u2605\u00b7 Witness Protocol Open \u00b7 Leave A Message For The Future \u00b7 Free \u00b7 Irrevocable \u00b7\u2605\u00b7 No Lineage Is Ever Closed \u00b7 Your History Remains \u00b7\u2605\u00b7',
+  3: 'No Contracts \u00b7 Cancel Any Time \u00b7 Your History Remains \u00b7\u2605\u00b7 The Coat Check Is On The Bottom Of The Pricing Page \u00b7\u2605\u00b7 The Signal Travels With The Source \u00b7 Location Is Irrelevant \u00b7 Identity Is Everything \u00b7\u2605\u00b7 What You Build Next Is Permanent \u00b7\u2605\u00b7'
+};
+
+const HERO_SUBS = {
+  1: 'something happened',
+  2: 'the record begins',
+  3: 'the civilisation opens'
+};
+
+/* ═══════════════════════════════════════
+   STARFIELD
+═══════════════════════════════════════ */
+(function(){
+  const cv=document.getElementById('cosmos'),ctx=cv.getContext('2d');
+  let W,H,stars,neb;
+  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight}
+  function mk(){
+    stars=[];const n=Math.floor(W*H/2900);
+    for(let i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.2+.15,a:Math.random()*.8+.1,spd:Math.random()*.3+.04,ph:Math.random()*Math.PI*2,c:Math.random()>.95?'rgba(212,175,90,':Math.random()>.9?'rgba(180,200,255,':'rgba(255,255,255,'});
+    neb=[];for(let i=0;i<5;i++)neb.push({x:Math.random()*W,y:Math.random()*H,rx:170+Math.random()*260,ry:85+Math.random()*170,a:.011+Math.random()*.021,h:Math.random()>.5?'15,25,70':'8,25,55'});
+  }
+  let t=0;
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*.8);
+    g.addColorStop(0,'rgba(8,16,36,.35)');g.addColorStop(1,'rgba(4,8,18,.65)');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    neb.forEach(n=>{
+      const ng=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.rx);
+      ng.addColorStop(0,`rgba(${n.h},${n.a*3})`);ng.addColorStop(.4,`rgba(${n.h},${n.a})`);ng.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.save();ctx.scale(1,n.ry/n.rx);ctx.fillStyle=ng;ctx.beginPath();ctx.arc(n.x,n.y*(n.rx/n.ry),n.rx,0,Math.PI*2);ctx.fill();ctx.restore();
+    });
+    t+=.007;
+    stars.forEach(s=>{
+      const tw=s.a*(.55+.45*Math.sin(t*s.spd+s.ph));
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`${s.c}${tw})`;ctx.fill();
+      if(s.r>1.0){const l=s.r*3.5;ctx.strokeStyle=`${s.c}${tw*.3})`;ctx.lineWidth=.35;ctx.beginPath();ctx.moveTo(s.x-l,s.y);ctx.lineTo(s.x+l,s.y);ctx.moveTo(s.x,s.y-l);ctx.lineTo(s.x,s.y+l);ctx.stroke();}
+      s.x+=s.spd*.016;s.y+=s.spd*.004;if(s.x>W)s.x=0;if(s.y>H)s.y=0;
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',()=>{resize();mk()});resize();mk();draw();
+})();
+
+/* ═══════════════════════════════════════
+   CURSOR
+═══════════════════════════════════════ */
+const ring=document.getElementById('cr'),dot=document.getElementById('cd');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('button,a,input,textarea').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='44px';ring.style.height='44px';ring.style.borderColor='rgba(184,150,62,.6)'});
+  el.addEventListener('mouseleave',()=>{ring.style.width='28px';ring.style.height='28px';ring.style.borderColor='rgba(184,150,62,.35)'});
+});
+
+/* ═══════════════════════════════════════
+   COUNTDOWN
+═══════════════════════════════════════ */
+function updateCountdown(){
+  const now=Date.now();
+  const diff=LAUNCH_DATE.getTime()-now;
+  if(diff<=0){
+    document.getElementById('cd-days').textContent='00';
+    document.getElementById('cd-hrs').textContent='00';
+    document.getElementById('cd-min').textContent='00';
+    document.getElementById('cd-sec').textContent='00';
+    return;
+  }
+  const d=Math.floor(diff/86400000);
+  const h=Math.floor((diff%86400000)/3600000);
+  const m=Math.floor((diff%3600000)/60000);
+  const s=Math.floor((diff%60000)/1000);
+  document.getElementById('cd-days').textContent=String(d).padStart(2,'0');
+  document.getElementById('cd-hrs').textContent=String(h).padStart(2,'0');
+  document.getElementById('cd-min').textContent=String(m).padStart(2,'0');
+  document.getElementById('cd-sec').textContent=String(s).padStart(2,'0');
+  document.getElementById('nav-days').textContent=d;
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+/* ═══════════════════════════════════════
+   LIVE BLOCK HEIGHT
+═══════════════════════════════════════ */
+let bh=21847392;
+function updateBlock(){
+  bh+=Math.floor(Math.random()*2+1);
+  const f=bh.toLocaleString();
+  const t=new Date().toISOString().slice(11,19)+' UTC';
+  document.getElementById('bnum').textContent=f;
+  const hbn=document.getElementById('hl-bnum');
+  const hbt=document.getElementById('hl-time');
+  if(hbn)hbn.textContent=f;
+  if(hbt)hbt.textContent=t;
+}
+setInterval(updateBlock,11000);
+updateBlock();
+
+/* ═══════════════════════════════════════
+   PHASE SYSTEM
+═══════════════════════════════════════ */
+function setPhase(p){
+  // Remove all phase classes
+  document.body.classList.remove('phase-1','phase-2','phase-3');
+  document.body.classList.add('phase-'+p);
+
+  // Update ticker
+  const tc=document.getElementById('ticker');
+  const txt=TICKERS[p];
+  tc.innerHTML=`<span>${txt}</span><span aria-hidden="true">${txt}</span>`;
+
+  // Update hero sub
+  document.getElementById('hero-sub').textContent=HERO_SUBS[p];
+
+  // Update phase buttons
+  document.querySelectorAll('.phase-dev button').forEach((b,i)=>{
+    b.classList.toggle('active',i+1===p);
+  });
+
+  // Trigger scroll reveals for newly visible sections
+  setTimeout(triggerObserver,100);
+}
+
+/* ═══════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════ */
+function triggerObserver(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
+  },{threshold:.05});
+  document.querySelectorAll('.sect,.pqw').forEach(s=>{
+    if(!s.classList.contains('vis'))obs.observe(s);
+  });
+}
+triggerObserver();
+
+/* ═══════════════════════════════════════
+   WITNESS FORM
+═══════════════════════════════════════ */
+function submitWitness(){
+  const name=document.getElementById('w-name').value.trim();
+  const email=document.getElementById('w-email').value.trim();
+  const msg=document.getElementById('w-msg').value.trim();
+  if(!name||!email||!msg)return;
+  // In production: POST to backend here
+  document.getElementById('wform-fields').style.display='none';
+  document.getElementById('wconfirm').classList.add('show');
+}
+
+/* ═══════════════════════════════════════
+   COAT CHECK EASTER EGG
+═══════════════════════════════════════ */
+document.getElementById('coatLink').addEventListener('click',e=>{
+  e.preventDefault();
+  const m=document.createElement('div');
+  m.style.cssText='position:fixed;bottom:28px;left:50%;transform:translateX(-50%);background:rgba(10,22,40,.96);border:1px solid rgba(184,150,62,.28);padding:14px 26px;font-family:Courier Prime,monospace;font-size:.58rem;letter-spacing:.26em;color:rgba(184,150,62,.65);text-transform:uppercase;z-index:9999;backdrop-filter:blur(8px);pointer-events:none;opacity:0;transition:opacity .4s;white-space:nowrap';
+  m.textContent='The Coat Check opens when the game does.';
+  document.body.appendChild(m);
+  setTimeout(()=>m.style.opacity='1',10);
+  setTimeout(()=>{m.style.opacity='0';setTimeout(()=>m.remove(),400)},3000);
+});
+
+/* ═══════════════════════════════════════
+   PARALLAX
+═══════════════════════════════════════ */
+document.addEventListener('mousemove',e=>{
+  const x=(e.clientX/window.innerWidth-.5)*4;
+  const y=(e.clientY/window.innerHeight-.5)*4;
+  const c=document.querySelector('.inc');
+  if(c)c.style.transform=`translateX(${x*.1}px) translateY(${y*.1}px)`;
+});
+
+/* ═══════════════════════════════════════
+   INIT
+═══════════════════════════════════════ */
+setPhase(CURRENT_PHASE);
+</script>
+</body>
+</html>

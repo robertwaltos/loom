@@ -1,0 +1,2109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE CONCORD — The Age of Radiance Awaits</title>
+    <meta
+      name="description"
+      content="Six hundred worlds. One Chronicle. The age of scarcity is over. The age of meaning has begun."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --dawn: #f8f4ee;
+        --parchment: #ede8df;
+        --cream: #e2d9ca;
+        --gold: #c49a3c;
+        --gold2: #d4aa4c;
+        --goldDim: #9a7a2c;
+        --goldPale: #edd98a;
+        --ink: #1a1410;
+        --inkMid: #2e2420;
+        --dim: #8a7a6a;
+        --dimLight: #b0a090;
+        --lattice: #2a5c8a;
+        --latticePale: #4a8abe;
+        --teal: #1a7a6a;
+        --tealPale: #3aaa8a;
+        --copper: #a05c28;
+        --red: #8a2020;
+        --night: #0d1525;
+        --border: rgba(26, 20, 16, 0.1);
+        --borderMed: rgba(26, 20, 16, 0.18);
+        --borderGold: rgba(196, 154, 60, 0.25);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--dawn);
+        color: var(--ink);
+        font-family: 'Lora', Georgia, serif;
+        font-size: 18px;
+        line-height: 1.7;
+        cursor: none;
+        overflow-x: hidden;
+      }
+
+      /* ── CURSOR ───────────────────────────────────────────── */
+      #cur {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 9999;
+      }
+      #cur-ring {
+        width: 26px;
+        height: 26px;
+        border: 1.5px solid var(--gold);
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.2s,
+          height 0.2s,
+          opacity 0.2s;
+      }
+      #cur-dot {
+        width: 4px;
+        height: 4px;
+        background: var(--gold);
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      canvas#atmos {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.5;
+      }
+
+      /* ── NAV ──────────────────────────────────────────────── */
+      #nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 200;
+        padding: 22px 56px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition:
+          background 0.4s,
+          border-color 0.4s;
+      }
+      #nav.scrolled {
+        background: rgba(248, 244, 238, 0.96);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+      }
+      .logo {
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        letter-spacing: 5px;
+        color: var(--goldDim);
+      }
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: var(--dim);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+      .nav-cta {
+        font-family: 'Cinzel', serif;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background: var(--ink);
+        padding: 10px 26px;
+        color: var(--dawn);
+        text-decoration: none;
+        cursor: none;
+        transition: background 0.3s;
+      }
+      .nav-cta:hover {
+        background: var(--gold);
+        color: var(--ink);
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ── HERO ─────────────────────────────────────────────── */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 110px 40px 90px;
+        position: relative;
+        overflow: hidden;
+      }
+      #hero::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -60%);
+        width: 900px;
+        height: 900px;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(196, 154, 60, 0.13) 0%,
+          rgba(42, 92, 138, 0.05) 45%,
+          transparent 70%
+        );
+        pointer-events: none;
+        animation: breathe 7s ease-in-out infinite;
+      }
+      @keyframes breathe {
+        0%,
+        100% {
+          opacity: 0.7;
+          transform: translate(-50%, -60%) scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: translate(-50%, -60%) scale(1.06);
+        }
+      }
+
+      .hero-eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 5px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        opacity: 0;
+        animation: fadeUp 1s 0.2s forwards;
+      }
+      .hero-kicker {
+        font-family: 'Lora', serif;
+        font-size: clamp(14px, 2vw, 18px);
+        font-style: italic;
+        color: var(--dim);
+        margin-bottom: 16px;
+        opacity: 0;
+        animation: fadeUp 1s 0.4s forwards;
+      }
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(64px, 13vw, 130px);
+        font-weight: 900;
+        color: var(--ink);
+        letter-spacing: -0.02em;
+        line-height: 0.9;
+        margin-bottom: 40px;
+        position: relative;
+        opacity: 0;
+        animation: fadeUp 1s 0.6s forwards;
+      }
+      .hero-title .the {
+        color: var(--gold);
+        display: block;
+        font-size: 0.72em;
+      }
+
+      .hero-deck {
+        font-family: 'Lora', serif;
+        font-size: clamp(18px, 2.5vw, 26px);
+        font-style: italic;
+        color: var(--inkMid);
+        max-width: 620px;
+        line-height: 1.5;
+        margin-bottom: 16px;
+        opacity: 0;
+        animation: fadeUp 1s 0.9s forwards;
+      }
+      .hero-deck em {
+        color: var(--gold);
+      }
+
+      .hero-sub {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--dim);
+        text-transform: uppercase;
+        margin-bottom: 64px;
+        opacity: 0;
+        animation: fadeUp 1s 1.1s forwards;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        opacity: 0;
+        animation: fadeUp 1s 1.3s forwards;
+      }
+      .btn-dark {
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: var(--ink);
+        padding: 18px 52px;
+        color: var(--dawn);
+        text-decoration: none;
+        cursor: none;
+        transition: background 0.3s;
+        font-weight: 600;
+      }
+      .btn-dark:hover {
+        background: var(--gold);
+        color: var(--ink);
+      }
+      .btn-border {
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        background: transparent;
+        border: 1.5px solid var(--border);
+        padding: 18px 52px;
+        color: var(--inkMid);
+        text-decoration: none;
+        cursor: none;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .btn-border:hover {
+        border-color: var(--goldDim);
+        background: var(--parchment);
+      }
+
+      .hero-scroll {
+        position: absolute;
+        bottom: 44px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        opacity: 0;
+        animation: fadeUp 1s 1.8s forwards;
+      }
+      .hero-scroll span {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: var(--dimLight);
+        text-transform: uppercase;
+      }
+      .scroll-bar {
+        width: 1px;
+        height: 44px;
+        background: linear-gradient(var(--goldDim), transparent);
+        animation: pulse 2s infinite;
+      }
+
+      /* ── LAYOUT ──────────────────────────────────────────── */
+      .s {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 90px 40px;
+      }
+      .sw {
+        max-width: 1060px;
+        margin: 0 auto;
+        padding: 90px 40px;
+      }
+      .sc {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 80px 40px;
+        text-align: center;
+      }
+
+      .hr {
+        max-width: 860px;
+        margin: 0 auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream), transparent);
+      }
+      .hrg {
+        max-width: 860px;
+        margin: 0 auto;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--borderGold),
+          var(--goldDim),
+          var(--borderGold),
+          transparent
+        );
+      }
+
+      /* ── TYPE ─────────────────────────────────────────────── */
+      .eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 4px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(30px, 5vw, 52px);
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.15;
+        margin-bottom: 32px;
+      }
+      .h2 em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+      .body {
+        font-size: 18px;
+        line-height: 1.85;
+        color: var(--inkMid);
+        margin-bottom: 24px;
+        font-weight: 400;
+      }
+      .body strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .body em {
+        color: var(--goldDim);
+        font-style: italic;
+      }
+
+      /* ── PULL QUOTE ──────────────────────────────────────── */
+      .pq {
+        position: relative;
+        text-align: center;
+        padding: 80px 60px;
+      }
+      .pq::before {
+        content: '\201C';
+        font-family: 'Playfair Display', serif;
+        font-size: 160px;
+        color: var(--cream);
+        line-height: 0;
+        position: absolute;
+        top: 96px;
+        left: 24px;
+      }
+      .pq::after {
+        content: '\201D';
+        font-family: 'Playfair Display', serif;
+        font-size: 160px;
+        color: var(--cream);
+        line-height: 0;
+        position: absolute;
+        bottom: 48px;
+        right: 24px;
+      }
+      .pq p {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(20px, 3.5vw, 36px);
+        font-style: italic;
+        color: var(--ink);
+        line-height: 1.45;
+        position: relative;
+        z-index: 1;
+      }
+      .pq p em {
+        color: var(--gold);
+      }
+      .pq-attr {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--dim);
+        text-transform: uppercase;
+        margin-top: 24px;
+        display: block;
+      }
+
+      /* ── AGE OF RADIANCE GRID ────────────────────────────── */
+      .radiance-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 0;
+        border: 1px solid var(--border);
+        margin: 56px 0;
+      }
+      .rad-cell {
+        padding: 44px 36px;
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        transition: background 0.3s;
+      }
+      .rad-cell:hover {
+        background: var(--parchment);
+      }
+      .rad-icon {
+        font-size: 32px;
+        margin-bottom: 16px;
+        display: block;
+        line-height: 1;
+      }
+      .rad-title {
+        font-family: 'Cinzel', serif;
+        font-size: 12px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .rad-body {
+        font-size: 15px;
+        color: var(--dim);
+        line-height: 1.6;
+      }
+
+      /* ── COMPARISON ──────────────────────────────────────── */
+      .compare {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 48px 0;
+        border: 1px solid var(--border);
+      }
+      .compare th {
+        font-family: 'Cinzel', serif;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        text-transform: uppercase;
+        text-align: left;
+        padding: 18px 24px;
+        border-bottom: 2px solid var(--borderGold);
+        font-weight: 600;
+        background: var(--parchment);
+      }
+      .compare td {
+        font-size: 15px;
+        color: var(--inkMid);
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        line-height: 1.55;
+      }
+      .compare tr:last-child td {
+        border-bottom: none;
+      }
+      .compare .hl {
+        background: rgba(196, 154, 60, 0.04);
+      }
+      .compare .yes {
+        color: var(--teal);
+        font-weight: 600;
+      }
+      .compare .no {
+        color: var(--dimLight);
+      }
+
+      /* ── LOG ──────────────────────────────────────────────── */
+      .log {
+        background: var(--night);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-left: 3px solid var(--teal);
+        padding: 36px 40px;
+        margin: 44px 0;
+        overflow-x: auto;
+      }
+      .log pre {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        line-height: 1.9;
+        color: #5aaa8a;
+        white-space: pre-wrap;
+      }
+      .lt {
+        color: #2a6a5a;
+      }
+      .lk {
+        color: #3a8a7a;
+      }
+      .lv {
+        color: #6abca0;
+      }
+      .lh {
+        color: #8adac0;
+      }
+      .lg {
+        color: #1a3a2a;
+        opacity: 0.35;
+      }
+
+      /* ── PANEL ───────────────────────────────────────────── */
+      .panel {
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--gold);
+        background: var(--parchment);
+        padding: 48px;
+        margin: 48px 0;
+        position: relative;
+      }
+      .panel[data-label]::before {
+        content: attr(data-label);
+        position: absolute;
+        top: -13px;
+        left: 28px;
+        background: var(--parchment);
+        padding: 0 14px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+      }
+      .panel ul {
+        list-style: none;
+      }
+      .panel li {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 17px;
+        color: var(--inkMid);
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+      }
+      .panel li:last-child {
+        border-bottom: none;
+      }
+      .panel li::before {
+        content: '◆';
+        color: var(--goldDim);
+        font-size: 8px;
+        flex-shrink: 0;
+        margin-top: 7px;
+      }
+      .panel p {
+        font-size: 17px;
+        color: var(--inkMid);
+        line-height: 1.75;
+        margin-bottom: 14px;
+      }
+      .panel p:last-child {
+        margin-bottom: 0;
+      }
+
+      .panel.teal {
+        border-top-color: var(--teal);
+      }
+      .panel.teal[data-label]::before {
+        color: var(--teal);
+      }
+
+      /* ── COVENANT ROMAN ──────────────────────────────────── */
+      .covenant {
+        list-style: none;
+        counter-reset: cov;
+        margin: 0;
+      }
+      .covenant li {
+        counter-increment: cov;
+        padding: 20px 0 20px 60px;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        font-size: 17px;
+        color: var(--inkMid);
+        line-height: 1.6;
+      }
+      .covenant li:last-child {
+        border-bottom: none;
+      }
+      .covenant li::before {
+        content: counter(cov, upper-roman);
+        position: absolute;
+        left: 0;
+        top: 20px;
+        font-family: 'Cinzel', serif;
+        font-size: 11px;
+        color: var(--goldDim);
+        letter-spacing: 2px;
+        width: 48px;
+        text-align: right;
+      }
+
+      /* ── MARKS ───────────────────────────────────────────── */
+      .marks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 16px;
+        margin: 48px 0;
+      }
+      .mark {
+        border: 1px solid var(--border);
+        padding: 32px 24px;
+        text-align: center;
+        transition:
+          border-color 0.3s,
+          transform 0.3s,
+          background 0.3s;
+        cursor: default;
+        position: relative;
+        overflow: hidden;
+      }
+      .mark::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 50% 0%, rgba(196, 154, 60, 0.06), transparent 60%);
+        pointer-events: none;
+      }
+      .mark:hover {
+        border-color: var(--goldDim);
+        transform: translateY(-3px);
+        background: var(--parchment);
+      }
+      .m-g {
+        font-family: 'Cinzel', serif;
+        font-size: 38px;
+        color: var(--goldDim);
+        margin-bottom: 14px;
+        display: block;
+        line-height: 1;
+      }
+      .m-n {
+        font-family: 'Cinzel', serif;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .m-d {
+        font-size: 13px;
+        color: var(--dim);
+        line-height: 1.5;
+      }
+      .m-c {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        color: var(--dimLight);
+        letter-spacing: 2px;
+        margin-top: 12px;
+        display: block;
+        text-transform: uppercase;
+      }
+
+      /* ── CHARACTER CARDS ─────────────────────────────────── */
+      .char-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1px;
+        background: var(--border);
+        margin: 48px 0;
+      }
+      .char-card {
+        background: var(--dawn);
+        padding: 40px 36px;
+        transition: background 0.3s;
+      }
+      .char-card:hover {
+        background: var(--parchment);
+      }
+      .char-role {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .char-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 16px;
+      }
+      .char-wound {
+        font-size: 14px;
+        color: var(--dim);
+        line-height: 1.6;
+        font-style: italic;
+        border-left: 2px solid var(--borderGold);
+        padding-left: 16px;
+        margin-top: 12px;
+      }
+
+      /* ── FACTIONS ────────────────────────────────────────── */
+      .factions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1px;
+        background: var(--border);
+        margin: 48px 0;
+      }
+      .faction {
+        padding: 40px 32px;
+        background: var(--dawn);
+        border-top: 3px solid transparent;
+        transition: background 0.3s;
+      }
+      .faction:nth-child(1) {
+        border-top-color: var(--lattice);
+      }
+      .faction:nth-child(2) {
+        border-top-color: var(--teal);
+      }
+      .faction:nth-child(3) {
+        border-top-color: var(--red);
+      }
+      .faction:hover {
+        background: var(--parchment);
+      }
+      .faction-name {
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: var(--ink);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .faction-creed {
+        font-size: 15px;
+        color: var(--inkMid);
+        line-height: 1.6;
+        margin-bottom: 16px;
+        font-style: italic;
+      }
+      .faction-truth {
+        font-size: 13px;
+        color: var(--dim);
+        line-height: 1.5;
+      }
+
+      /* ── SURVEY TIMELINE ─────────────────────────────────── */
+      .timeline {
+        display: flex;
+        gap: 0;
+        border: 1px solid var(--border);
+        margin: 48px 0;
+        overflow: hidden;
+      }
+      .tl-stop {
+        flex: 1;
+        padding: 28px 20px;
+        border-right: 1px solid var(--border);
+        text-align: center;
+        transition: background 0.3s;
+      }
+      .tl-stop:last-child {
+        border-right: none;
+      }
+      .tl-stop:hover {
+        background: var(--parchment);
+      }
+      .tl-year {
+        font-family: 'Cinzel', serif;
+        font-size: 16px;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 6px;
+      }
+      .tl-ig {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        color: var(--dim);
+        display: block;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      .tl-worlds {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--ink);
+        display: block;
+        line-height: 1;
+      }
+      .tl-label {
+        font-size: 12px;
+        color: var(--dim);
+        margin-top: 6px;
+        display: block;
+      }
+
+      /* ── TIERS ───────────────────────────────────────────── */
+      .tiers {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        border: 1px solid var(--border);
+        margin: 48px 0;
+      }
+      .tier {
+        padding: 44px 24px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+        position: relative;
+      }
+      .tier:last-child {
+        border-right: none;
+      }
+      .tier.feat {
+        background: var(--parchment);
+      }
+      .tier.feat::before {
+        content: 'Most Popular';
+        display: block;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+      .t-n {
+        font-family: 'Cinzel', serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: var(--gold);
+        margin-bottom: 20px;
+        display: block;
+      }
+      .t-p {
+        font-family: 'Playfair Display', serif;
+        font-size: 52px;
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1;
+        display: block;
+        margin-bottom: 4px;
+      }
+      .t-s {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        color: var(--dim);
+        letter-spacing: 2px;
+        margin-bottom: 28px;
+        display: block;
+      }
+      .t-f {
+        list-style: none;
+        text-align: left;
+        font-size: 13px;
+        color: var(--dim);
+        line-height: 2.3;
+      }
+
+      /* ── FOUNDERS ────────────────────────────────────────── */
+      .founders {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        margin: 48px 0;
+      }
+      .founder {
+        border: 1px solid var(--borderMed);
+        padding: 44px 32px;
+        background: var(--parchment);
+        position: relative;
+      }
+      .founder.gold-tier {
+        border-color: var(--gold);
+      }
+      .f-tier {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        display: block;
+      }
+      .f-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 20px;
+        display: block;
+      }
+      .f-price {
+        font-family: 'Playfair Display', serif;
+        font-size: 44px;
+        font-weight: 700;
+        color: var(--ink);
+        display: block;
+        margin-bottom: 24px;
+        line-height: 1;
+      }
+      .f-list {
+        list-style: none;
+        font-size: 14px;
+        color: var(--dim);
+        line-height: 2.2;
+      }
+      .f-list li::before {
+        content: '◆  ';
+        color: var(--goldDim);
+        font-size: 8px;
+      }
+
+      /* ── FORM ────────────────────────────────────────────── */
+      .register-box {
+        background: var(--parchment);
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--gold);
+        padding: 56px 48px;
+        margin: 48px 0;
+      }
+      .register-box h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 12px;
+      }
+      .register-box .subtext {
+        font-size: 16px;
+        color: var(--dim);
+        margin-bottom: 40px;
+        font-style: italic;
+      }
+      .field {
+        margin-bottom: 28px;
+      }
+      .flabel {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .finput {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1.5px solid var(--border);
+        padding: 12px 0;
+        color: var(--ink);
+        font-family: 'Lora', serif;
+        font-size: 18px;
+        outline: none;
+        transition: border-color 0.3s;
+        caret-color: var(--gold);
+      }
+      .finput::placeholder {
+        color: var(--dim);
+        opacity: 0.5;
+      }
+      .finput:focus {
+        border-bottom-color: var(--goldDim);
+      }
+      .ftarea {
+        resize: none;
+        min-height: 88px;
+        line-height: 1.6;
+      }
+      .fbtn {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--ink);
+        border: none;
+        padding: 16px 44px;
+        color: var(--dawn);
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: none;
+        transition: background 0.3s;
+        margin-top: 16px;
+      }
+      .fbtn:hover {
+        background: var(--gold);
+        color: var(--ink);
+      }
+      .fbtn::after {
+        content: '→';
+        font-size: 16px;
+      }
+      .fconfirm {
+        display: none;
+        margin-top: 24px;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        font-style: italic;
+        color: var(--gold);
+        line-height: 1.6;
+      }
+
+      /* ── CTA ─────────────────────────────────────────────── */
+      #final-cta {
+        text-align: center;
+        padding: 140px 40px;
+        background: radial-gradient(ellipse at 50% 60%, rgba(196, 154, 60, 0.09), transparent 60%);
+      }
+
+      /* ── FOOTER ──────────────────────────────────────────── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 64px 40px;
+        text-align: center;
+      }
+      .footer-logo {
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        letter-spacing: 6px;
+        color: var(--goldDim);
+        margin-bottom: 28px;
+      }
+      footer p {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        color: var(--dim);
+        letter-spacing: 2px;
+        line-height: 2.6;
+      }
+      footer a {
+        color: var(--goldDim);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      footer a:hover {
+        color: var(--gold);
+      }
+
+      /* ── ANIMATIONS ──────────────────────────────────────── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(22px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.9s,
+          transform 0.9s;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .d1 {
+        transition-delay: 0.1s;
+      }
+      .d2 {
+        transition-delay: 0.2s;
+      }
+      .d3 {
+        transition-delay: 0.3s;
+      }
+
+      @media (max-width: 720px) {
+        #nav {
+          padding: 18px 24px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .s,
+        .sw,
+        .sc {
+          padding: 60px 24px;
+        }
+        .panel {
+          padding: 32px 24px;
+        }
+        .register-box {
+          padding: 40px 24px;
+        }
+        .pq::before,
+        .pq::after {
+          display: none;
+        }
+        .tiers {
+          grid-template-columns: 1fr 1fr;
+        }
+        .timeline {
+          flex-direction: column;
+        }
+        .tl-stop {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cur">
+      <div id="cur-ring"></div>
+      <div id="cur-dot"></div>
+    </div>
+    <canvas id="atmos"></canvas>
+
+    <nav id="nav">
+      <div class="logo">The Concord</div>
+      <ul class="nav-links">
+        <li><a href="#radiance">The Age</a></li>
+        <li><a href="#chronicle">Chronicle</a></li>
+        <li><a href="#worlds">Worlds</a></li>
+        <li><a href="#covenant">Covenant</a></li>
+        <li><a href="#play">Play</a></li>
+        <li><a href="#founders">Founders</a></li>
+      </ul>
+      <a href="#play" class="nav-cta">Begin Your Dynasty</a>
+    </nav>
+
+    <div class="wrap">
+      <!-- ══════════════════════════════════════════ HERO -->
+      <section id="hero">
+        <p class="hero-eyebrow">Founding Event · 2027 · Six Hundred Worlds · One Chronicle</p>
+        <p class="hero-kicker">We are entering the Age of Radiance. What will you build with it?</p>
+        <h1 class="hero-title"><span class="the">The</span>Concord</h1>
+        <p class="hero-deck">
+          The age of scarcity is over.<br />The age of <em>meaning</em> has begun.
+        </p>
+        <p class="hero-sub">600 worlds · Permanent Chronicle · 35-year civilisation · No resets</p>
+        <div class="hero-btns">
+          <a href="#play" class="btn-dark">Begin Your Dynasty</a>
+          <a href="#chronicle" class="btn-border">Read the Chronicle</a>
+        </div>
+        <div class="hero-scroll">
+          <div class="scroll-bar"></div>
+          <span>Enter</span>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ THE AGE -->
+      <div class="hrg"></div>
+      <section class="s" id="radiance">
+        <div class="reveal">
+          <span class="eyebrow">Context · The World of 2031</span>
+          <h2 class="h2">Humanity woke up one morning and found out <em>it had won</em>.</h2>
+          <p class="body">
+            Zero-point energy extraction reached commercial scale in 2024. By 2031, power was
+            effectively free everywhere on Earth and the settled colonies. When energy is free,
+            water is free. When water is free, food is abundant. When food is abundant, the
+            territorial anxieties that drove human conflict for two hundred millennia began — for
+            the first time — to dissolve.
+          </p>
+          <p class="body">
+            Matterwave laser synthesis made element extraction obsolete: any element, created on
+            demand from energy input. Mining, resource wars, strategic reserves — relics. Vertical
+            climate-controlled farms run on free power feed every city on Earth. Nanite therapies
+            and cellular rejuvenation are extending healthy lifespans past anything any previous
+            generation considered possible. The projections, if progress continues, point toward
+            something that used to be called immortality.
+          </p>
+          <p class="body">
+            And then Dr Amara Okafor ran a test in a Lagos basement. And the universe opened a door.
+          </p>
+        </div>
+
+        <div class="radiance-grid reveal">
+          <div class="rad-cell">
+            <span class="rad-icon">⚡</span>
+            <span class="rad-title">Unlimited Energy</span>
+            <p class="rad-body">
+              Zero-point extraction. Effectively free, permanently clean. The engine of every other
+              transformation.
+            </p>
+          </div>
+          <div class="rad-cell">
+            <span class="rad-icon">⚗</span>
+            <span class="rad-title">Matter Synthesis</span>
+            <p class="rad-body">
+              Matterwave lasers create any element on demand. Mining is obsolete. Scarcity of
+              materials: historical.
+            </p>
+          </div>
+          <div class="rad-cell">
+            <span class="rad-icon">🌱</span>
+            <span class="rad-title">Infinite Food</span>
+            <p class="rad-body">
+              Vertical farms, climate-controlled, android-maintained, running on free power. No one
+              will starve again.
+            </p>
+          </div>
+          <div class="rad-cell">
+            <span class="rad-icon">∞</span>
+            <span class="rad-title">Expanding Lifespan</span>
+            <p class="rad-body">
+              Nanites, cellular rejuvenation, neural frequency mapping. Death is becoming optional.
+              Meaning is not.
+            </p>
+          </div>
+          <div class="rad-cell">
+            <span class="rad-icon">🔭</span>
+            <span class="rad-title">The Lattice</span>
+            <p class="rad-body">
+              Dr Okafor's discovery connects 600 worlds. The Survey Corps will spend 35 years
+              reaching them all.
+            </p>
+          </div>
+          <div class="rad-cell">
+            <span class="rad-icon">✦</span>
+            <span class="rad-title">The New Scarcity</span>
+            <p class="rad-body">
+              When everything material can be had, <em>meaning</em> becomes the only thing worth
+              building. The Chronicle is the answer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="sc reveal">
+        <div class="pq">
+          <p>
+            "When you might live forever,<br />the question isn't <em>will I survive.</em><br />The
+            question is: <em>will I have mattered?</em>"
+          </p>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════════ FOUNDING -->
+      <div class="hr"></div>
+      <section class="s">
+        <div class="reveal">
+          <span class="eyebrow">The Founding Moment · Lagos · August 14, 2031</span>
+          <h2 class="h2">She had been preparing for that Tuesday <em>her entire life</em>.</h2>
+          <p class="body">
+            The test was not an accident. It was the culmination of years of mathematics, years of
+            preparation, years of waiting for the equipment and the courage to exist at the same
+            moment. When the probe returned — intact, temperature nominal, alive in a universe that
+            had just proven itself larger — Dr Okafor said five words that changed everything.
+          </p>
+        </div>
+        <div class="log reveal">
+          <pre><span class="lt">[2031-08-14T09:17:44Z]</span> <span class="lk">WARNING:</span>  <span class="lv">Power draw exceeds permitted parameters by 340%.</span>
+<span class="lt">[2031-08-14T09:17:44Z]</span> <span class="lk">OKAFOR_A:</span> <span class="lh">Acknowledged. Continuing.</span>
+<span class="lt">[2031-08-14T09:17:51Z]</span> <span class="lk">SYSTEM:</span>   <span class="lv">Coherence: 97.1%. Topological equivalence achieved.</span>
+<span class="lt">[2031-08-14T09:17:51Z]</span> <span class="lk">SYSTEM:</span>   <span class="lv">Duration: 180,043ms. Probe: returned. Mass: intact.</span>
+<span class="lt">[2031-08-14T09:17:51Z]</span> <span class="lk">OKAFOR_A:</span> <span class="lh">It works.</span>
+<span class="lt">[2031-08-14T09:17:52Z]</span> <span class="lk">OKAFOR_A:</span> <span class="lh">Yusuf. It works.</span>
+<span class="lt">[2031-08-14T09:17:58Z]</span> <span class="lk">OKAFOR_A:</span> <span class="lh">I wish you were here to see this.</span>
+<span class="lt">[2031-08-14T09:18:03Z]</span> <span class="lk">OKAFOR_A:</span> <span class="lh">I think you always knew it would.</span>
+<span class="lg">// Chronicle Entry 1. Everything else follows.</span></pre>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ CHRONICLE -->
+      <div class="hrg"></div>
+      <section class="s" id="chronicle">
+        <div class="reveal">
+          <span class="eyebrow">The Chronicle · Permanent · Append-Only · Irreversible</span>
+          <h2 class="h2">Your story is permanent.<br /><em>Build something worth reading.</em></h2>
+          <p class="body">
+            The Chronicle is the answer to the question the Age of Radiance raises and nobody knows
+            how to ask out loud: <strong>if I might live forever, how do I prove I lived?</strong>
+          </p>
+          <p class="body">
+            Every dynasty. Every decision. Every trade. Every world opened. Every crisis survived.
+            Every discovery made. Written in a cryptographically chained, foundation-replicated,
+            permanently searchable record that outlasts its authors — by design, by contract, and by
+            code. A player in Year 105 can read what you wrote in Year 1. Your great-grandchildren
+            can read what their ancestor built.
+          </p>
+          <p class="body">
+            The Chronicle is not a graveyard. It is a cathedral of becoming. We built it before you
+            arrived because we knew you were going to need it.
+          </p>
+        </div>
+        <div class="panel reveal" data-label="How The Chronicle Works">
+          <ul>
+            <li>
+              Every entry is permanent — SHA-256 chained, append-only, tamper-evident by mathematics
+            </li>
+            <li>
+              Real-time replication to an independent foundation archive on a separate cloud
+              provider
+            </li>
+            <li>
+              Full-text searchable forever — Year 1 entries are as readable as entries written today
+            </li>
+            <li>
+              Two witnesses can record conflicting accounts of the same event — both are canonical
+            </li>
+            <li>
+              Dynasty Completion entries are final — the arc finished, the record is closed, the
+              story stays
+            </li>
+            <li>
+              If the studio closes: source Apache 2.0, archive transfers to foundation —
+              automatically
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ WORLDS -->
+      <div class="hr"></div>
+      <section class="s" id="worlds">
+        <div class="reveal">
+          <span class="eyebrow">The Universe · 600 Worlds · 35 Real Years</span>
+          <h2 class="h2">
+            Six hundred worlds, mapped and waiting.<br /><em
+              >The Survey Corps will spend your lifetime reaching them.</em
+            >
+          </h2>
+          <p class="body">
+            At launch: 20 worlds are reachable. The remaining 580 are confirmed Lattice-compatible
+            and documented — their stellar class, their node density, their estimated KALON issuance
+            — visible to every player. You can see what's coming. You cannot reach it yet. The
+            Survey Corps is how humanity gets there.
+          </p>
+          <p class="body">
+            The economy runs on what the Survey Corps finds. Every world unlocked expands the KALON
+            supply via the Stellar Standard: a world's physical properties determine its annual
+            issuance. A G-class habitable world produces ~63 million KALON per year in perpetuity.
+            Deploying a beacon is not just exploration — it is an economic event felt by the entire
+            civilisation.
+          </p>
+        </div>
+
+        <div class="timeline reveal">
+          <div class="tl-stop">
+            <span class="tl-year">2027</span>
+            <span class="tl-ig">Year 1</span>
+            <span class="tl-worlds">20</span>
+            <span class="tl-label">Founding worlds</span>
+          </div>
+          <div class="tl-stop">
+            <span class="tl-year">2030</span>
+            <span class="tl-ig">Year 10</span>
+            <span class="tl-worlds">60</span>
+            <span class="tl-label">Early expansion</span>
+          </div>
+          <div class="tl-stop">
+            <span class="tl-year">2035</span>
+            <span class="tl-ig">Year 25</span>
+            <span class="tl-worlds">150</span>
+            <span class="tl-label">Mid expansion</span>
+          </div>
+          <div class="tl-stop">
+            <span class="tl-year">2042</span>
+            <span class="tl-ig">Year 46</span>
+            <span class="tl-worlds">300</span>
+            <span class="tl-label">Half-open</span>
+          </div>
+          <div class="tl-stop">
+            <span class="tl-year">2052</span>
+            <span class="tl-ig">Year 76</span>
+            <span class="tl-worlds">500</span>
+            <span class="tl-label">Warning phase</span>
+          </div>
+          <div class="tl-stop">
+            <span class="tl-year">2062</span>
+            <span class="tl-ig">Year 105</span>
+            <span class="tl-worlds">600</span>
+            <span class="tl-label">The Reckoning</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <p
+            class="body"
+            style="
+              font-style: italic;
+              color: var(--dim);
+              font-size: 16px;
+              text-align: center;
+              padding: 16px 0;
+            "
+          >
+            3:1 time compression. Three in-game years pass for every one real year. Your dynasty can
+            grow a generation of history in the time it takes you to finish a degree.
+          </p>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ WHY DIFFERENT -->
+      <div class="hrg"></div>
+      <section class="s">
+        <div class="reveal">
+          <span class="eyebrow">Why The Concord Is Different</span>
+          <h2 class="h2">Every MMO that ran for twenty years made <em>one unkept promise</em>.</h2>
+          <p class="body">
+            We studied the graveyard carefully. Every failure has a specific structural cause. Every
+            cause has a structural fix.
+          </p>
+        </div>
+        <table class="compare reveal">
+          <thead>
+            <tr>
+              <th>The Problem</th>
+              <th class="hl">The Concord's Answer</th>
+              <th>Every Other MMO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Developer destroys player investment with a patch</td>
+              <td class="hl">
+                <span class="yes">◆</span> Permanence Covenant on L2 — legally and technically
+                irreversible
+              </td>
+              <td><span class="no">✕</span> Eleven years of work reset. Trust destroyed.</td>
+            </tr>
+            <tr>
+              <td>Economy destroyed by duplication exploit</td>
+              <td class="hl">
+                <span class="yes">◆</span> Rust ledger, cryptographic transaction chain —
+                duplication is mathematically impossible
+              </td>
+              <td><span class="no">✕</span> Database rollback. Players leave.</td>
+            </tr>
+            <tr>
+              <td>Game dies when company closes</td>
+              <td class="hl">
+                <span class="yes">◆</span> Apache 2.0 source + foundation archive execute
+                automatically — no human required
+              </td>
+              <td><span class="no">✕</span> Servers down. History gone.</td>
+            </tr>
+            <tr>
+              <td>Pay-to-win destroys community trust</td>
+              <td class="hl">
+                <span class="yes">◆</span> KALON cannot be purchased. By contract. By code. Forever.
+              </td>
+              <td><span class="no">✕</span> "Convenience" purchases creep. Economy collapses.</td>
+            </tr>
+            <tr>
+              <td>No new content after reaching endgame</td>
+              <td class="hl">
+                <span class="yes">◆</span> The Chronicle is infinite content. 105 years of history
+                awaits every new player.
+              </td>
+              <td><span class="no">✕</span> Endgame reached. Waiting. Churn.</td>
+            </tr>
+            <tr>
+              <td>Server merge kills server identity</td>
+              <td class="hl">
+                <span class="yes">◆</span> Single shard from day one. No servers to merge. No dead
+                realm to mourn.
+              </td>
+              <td><span class="no">✕</span> Population decline. Merge. Community grief.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ══════════════════════════════════════════ COVENANT -->
+      <div class="hr"></div>
+      <section class="s" id="covenant">
+        <div class="reveal">
+          <span class="eyebrow">The Permanence Covenant · Nine Articles</span>
+          <h2 class="h2">Not a terms of service.<br /><em>A contract with teeth.</em></h2>
+          <p class="body">
+            Deployed on Ethereum L2. Legally binding. Pre-funded escrow executes on studio closure
+            automatically. We cannot revoke it. The Assembly cannot amend it without supermajority.
+            Article Nine makes our own cheating mathematically impossible and publicly verifiable.
+          </p>
+        </div>
+        <div class="panel reveal" data-label="Nine Articles · Immutable After Launch">
+          <ol class="covenant">
+            <li>Your dynasty's Chronicle exists forever. No account closure removes it.</li>
+            <li>KALON cannot be purchased with real money. Ever. By anyone.</li>
+            <li>The MARKS system lives on Ethereum L2. It does not belong to us.</li>
+            <li>The Chronicle is replicated to an independent foundation archive in real time.</li>
+            <li>If the studio closes, source code is Apache 2.0 within 30 days — automatically.</li>
+            <li>No countdown timers on decisions. No timed exclusives. No FOMO mechanics. Ever.</li>
+            <li>No server wipe. No server merge. No manufactured reset. Not ever.</li>
+            <li>Gameplay cannot close your account. Only violation of our terms can.</li>
+            <li>
+              The developer does not have a cheat code. We cannot give ourselves KALON, MARKS, or
+              votes.
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ MARKS -->
+      <div class="hrg"></div>
+      <section class="s">
+        <div class="reveal">
+          <span class="eyebrow">The Six Marks · On-Chain · Non-Transferable · Permanent</span>
+          <h2 class="h2">Six things that can only <em>happen once</em>.</h2>
+          <p class="body">
+            Each Mark records a genuine civilisational moment. Not a simulated achievement —
+            something real that happened in the history of The Concord, on a specific day, involving
+            a specific dynasty. They live on Ethereum L2. They cannot be sold. They survive studio
+            closure by design.
+          </p>
+        </div>
+        <div class="marks reveal">
+          <div class="mark">
+            <span class="m-g">✦</span><span class="m-n">Founding Mark</span>
+            <p class="m-d">
+              Present at the Founding Event. Active within the first six days of launch.
+            </p>
+            <span class="m-c">Max ~50,000 · Never reissued</span>
+          </div>
+          <div class="mark">
+            <span class="m-g">◈</span><span class="m-n">Survey Mark</span>
+            <p class="m-d">
+              First stable Lattice lock with a world no Survey crew has reached before.
+            </p>
+            <span class="m-c">One per world · 600 possible</span>
+          </div>
+          <div class="mark">
+            <span class="m-g">⬡</span><span class="m-n">World Mark</span>
+            <p class="m-d">The dynasty that first established sovereignty on a new world.</p>
+            <span class="m-c">Maximum 600 · Ever</span>
+          </div>
+          <div class="mark">
+            <span class="m-g">⚔</span><span class="m-n">Defence Mark</span>
+            <p class="m-d">Defended a world when it genuinely needed defending.</p>
+            <span class="m-c">Rare · Circumstantial</span>
+          </div>
+          <div class="mark">
+            <span class="m-g">◎</span><span class="m-n">Survivor Mark</span>
+            <p class="m-d">Present during a world's final days. You witnessed an ending.</p>
+            <span class="m-c">Very rare</span>
+          </div>
+          <div class="mark">
+            <span class="m-g">∞</span><span class="m-n">First Contact</span>
+            <p class="m-d">
+              Maximum three will ever exist. The conditions are unknown. They may never be awarded.
+            </p>
+            <span class="m-c">0 to 3 · Unknown</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ CHARACTERS -->
+      <div class="hr"></div>
+      <section class="s">
+        <div class="reveal">
+          <span class="eyebrow">The People of The Concord</span>
+          <h2 class="h2">Every world in The Chronicle was shaped by <em>specific people</em>.</h2>
+          <p class="body">
+            The Concord is not populated by archetypes. Its figures are built around wounds,
+            limitations, and questions they cannot answer — visible in the Chronicle to any player
+            who goes looking.
+          </p>
+        </div>
+        <div class="char-grid reveal">
+          <div class="char-card">
+            <span class="char-role">Chronicle Keeper · Tier 4 NPC · All Worlds</span>
+            <div class="char-name">Itoro Adeyemi-Okafor</div>
+            <p style="font-size: 14px; color: var(--dim); line-height: 1.6">
+              Great-great-granddaughter of both founding families. Filed Chronicle Entry 1, Year 1 —
+              containing the contract that erased Dr Adeyemi from the official history. She cannot
+              advocate. She watches players walk past it ten thousand times a year. She says
+              nothing. The record speaks for itself.
+            </p>
+            <div class="char-wound">
+              "Why did you go looking?" — Her only response to any player who finds Entry 847.
+            </div>
+          </div>
+          <div class="char-card">
+            <span class="char-role">Retired Survey Admiral · The Involuntary Legend</span>
+            <div class="char-name">Commodore Seren Vael</div>
+            <p style="font-size: 14px; color: var(--dim); line-height: 1.6">
+              Opened World 247 — Adhan's Passage — in Year 163. It became the origin world of the
+              Ascendancy. She could not have known. She is still taught as a cautionary case study.
+              She was also the only person to file a formal objection to Ordinance 7 — the act that
+              created the Ascendancy in the first place.
+            </p>
+            <div class="char-wound">
+              "Does it feel like it's waiting for something?" — What she asks every Survey Mark
+              holder.
+            </div>
+          </div>
+          <div class="char-card">
+            <span class="char-role">The Architect · Singular · Everywhere</span>
+            <div class="char-name">The Architect</div>
+            <p style="font-size: 14px; color: var(--dim); line-height: 1.6">
+              Has read every Chronicle entry ever written. Every one. Has five private conclusions
+              it has never published. Has been building toward a specific political moment for 200
+              years. Its Year 287 report contains the sentence: "The civilisation is structurally
+              sound." Players who read every report from Year 1 onward can trace exactly when it
+              started choosing its words differently.
+            </p>
+            <div class="char-wound">
+              Cannot act without triggering a constitutional crisis. So it waits.
+            </div>
+          </div>
+          <div class="char-card">
+            <span class="char-role">Ascendancy · The Suppressed Proof</span>
+            <div class="char-name">Dr Kwame Osei-Adeyemi</div>
+            <p style="font-size: 14px; color: var(--dim); line-height: 1.6">
+              Proved the Lattice degradation in Year 220. Brought it to the Assembly's Technical
+              Council. The Council confirmed his mathematics and classified the report. He declined
+              a senior position that would have buried his findings forever. He is not the villain.
+              He is the person who chose the mathematics over the people. He knows this.
+            </p>
+            <div class="char-wound">
+              The Ascendancy's "attacks" are load management on infrastructure no one else is
+              managing.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ FACTIONS -->
+      <div class="hrg"></div>
+      <section class="s">
+        <div class="reveal">
+          <span class="eyebrow">Three Factions · All Partially Right · None Can Win Alone</span>
+          <h2 class="h2">The Concord has fault lines. <em>They run through everything.</em></h2>
+        </div>
+        <div class="factions reveal">
+          <div class="faction">
+            <span class="faction-name">The Continuationists</span>
+            <p class="faction-creed">
+              "The Lattice is the greatest gift in human history. Expansion is survival. The Survey
+              Corps is the most important institution we have."
+            </p>
+            <p class="faction-truth">
+              Correct that growth funds everything. Wrong that the founding was legitimate. Wrong
+              that the Ascendancy is simply hostile.
+            </p>
+          </div>
+          <div class="faction">
+            <span class="faction-name">The Returnists</span>
+            <p class="faction-creed">
+              "600 worlds is hubris. Consolidate. Govern well. Heal the founding wounds. A smaller,
+              just civilisation is worth more than a vast unjust one."
+            </p>
+            <p class="faction-truth">
+              Correct that the wounds are real. Wrong that contraction is possible — the 600 worlds
+              are already populated.
+            </p>
+          </div>
+          <div class="faction">
+            <span class="faction-name">The Ascendancy</span>
+            <p class="faction-creed">
+              "The Lattice is degrading. Every transit costs something. We are the only ones
+              managing the infrastructure that holds the entire civilisation together."
+            </p>
+            <p class="faction-truth">
+              Correct about the degradation. Started from a legitimate wound — Ordinance 7. What
+              they became in 85 years of exile is something else entirely.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ DESIGN ETHICS -->
+      <div class="hr"></div>
+      <div class="sc reveal">
+        <div class="pq">
+          <p>
+            "No countdown timers. No FOMO. No daily streaks.<br />The game is designed to still be
+            here<br />when you come back — <em>whether that's tomorrow or in three years.</em>"
+          </p>
+        </div>
+      </div>
+
+      <section class="s">
+        <div class="reveal">
+          <span class="eyebrow">Mental Health · Anti-Predatory Design</span>
+          <h2 class="h2">
+            Every mechanic is asked one question:<br /><em
+              >does this deepen investment, or exploit it?</em
+            >
+          </h2>
+          <p class="body">
+            The Concord is designed for people who want to build something permanent — not people
+            who can be panicked into spending or guilted into logging in. The Continuity Window
+            means your dynasty waits. The Vigil means your legacy is honoured. The Chronicle means
+            nothing you built disappears while you were away.
+          </p>
+        </div>
+        <div class="panel teal reveal" data-label="What We Will Never Build">
+          <ul>
+            <li>Countdown timers on any decision, offer, or choice</li>
+            <li>Limited-time events requiring continuous presence</li>
+            <li>Social comparison features designed to create inadequacy</li>
+            <li>Re-engagement notifications when you've chosen to stop</li>
+            <li>Daily login bonuses or streak mechanics of any kind</li>
+            <li>FOMO mechanics, timed exclusives, or artificial scarcity tied to attention</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ PLAY -->
+      <div class="hrg"></div>
+      <section class="s" id="play">
+        <div class="reveal">
+          <span class="eyebrow">Subscription · The Initiation Required</span>
+          <h2 class="h2">You cannot subscribe without <em>completing the Initiation</em>.</h2>
+          <p class="body" style="margin-bottom: 48px">
+            Two hours in-world. The physics of the Lattice. The KALON economy. The Assembly. The
+            Nine Articles illustrated by real Chronicle entries. At the end — your Founding Code. No
+            code, no subscription. We will not let you spend money before you understand what you
+            are joining.
+          </p>
+        </div>
+        <div class="tiers reveal">
+          <div class="tier">
+            <span class="t-n">Tourist</span><span class="t-p">$0</span
+            ><span class="t-s">15-day trial</span>
+            <ul class="t-f">
+              <li>Spectator mode</li>
+              <li>Chronicle access</li>
+              <li>The Initiation</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <span class="t-n">Accord</span><span class="t-p">$15</span
+            ><span class="t-s">per month</span>
+            <ul class="t-f">
+              <li>1 dynasty</li>
+              <li>100 KALON/month</li>
+              <li>Full Assembly vote</li>
+              <li>30-day continuity window</li>
+            </ul>
+          </div>
+          <div class="tier feat">
+            <span class="t-n">Patron</span><span class="t-p">$25</span
+            ><span class="t-s">per month</span>
+            <ul class="t-f">
+              <li>2 dynasties</li>
+              <li>175 KALON/month</li>
+              <li>Full Assembly vote</li>
+              <li>60-day continuity window</li>
+            </ul>
+          </div>
+          <div class="tier">
+            <span class="t-n">Herald</span><span class="t-p">$35</span
+            ><span class="t-s">per month</span>
+            <ul class="t-f">
+              <li>3 dynasties</li>
+              <li>250 KALON/month</li>
+              <li>Full Assembly vote</li>
+              <li>90-day continuity window</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ FOUNDERS -->
+      <section class="s" id="founders">
+        <div class="reveal">
+          <span class="eyebrow">Founders Programme · Limited Window</span>
+          <h2 class="h2">Three tiers. One window.<br /><em>The Founding Mark guaranteed.</em></h2>
+          <p class="body" style="margin-bottom: 48px">
+            Founders are active within the Founding Mark window — the first six days of the Concord.
+            Their names are in the Chronicle before the first world is settled. The window closes by
+            smart contract, automatically, six days after launch. It cannot be extended.
+          </p>
+        </div>
+        <div class="founders reveal">
+          <div class="founder">
+            <span class="f-tier">Tier I</span>
+            <span class="f-name">Prometheus Compact</span>
+            <span class="f-price">$49</span>
+            <ul class="f-list">
+              <li>Founding Mark (guaranteed)</li>
+              <li>+500 KALON at launch</li>
+              <li>Early Initiation access</li>
+              <li>Pre-Chronicle entry</li>
+              <li>Founders Assembly seat</li>
+            </ul>
+          </div>
+          <div class="founder">
+            <span class="f-tier">Tier II</span>
+            <span class="f-name">Shepherd's Circle</span>
+            <span class="f-price">$199</span>
+            <ul class="f-list">
+              <li>All Prometheus benefits</li>
+              <li>+2,500 KALON at launch</li>
+              <li>Named in Architect's Year Zero report</li>
+              <li>Closed beta invitation</li>
+              <li>Founders forum access</li>
+            </ul>
+          </div>
+          <div class="founder gold-tier">
+            <span class="f-tier">Tier III — Limited to 1,000</span>
+            <span class="f-name">First Light</span>
+            <span class="f-price">$999</span>
+            <ul class="f-list">
+              <li>All Shepherd's benefits</li>
+              <li>+15,000 KALON at launch</li>
+              <li>Dynasty named in game lore</li>
+              <li>Alpha access</li>
+              <li>Annual session with founders team</li>
+              <li>Physical charter document</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════ REGISTER -->
+      <div class="hrg"></div>
+      <section class="s">
+        <div class="register-box reveal">
+          <h3>Enter the Chronicle Before the Founding Event</h3>
+          <p class="subtext">
+            Your words are recorded before the first world is settled. Before you have paid. Before
+            you have logged in. You will have been here first.
+          </p>
+          <div class="field">
+            <label class="flabel" for="r-name">Your Dynasty Name</label>
+            <input
+              class="finput"
+              type="text"
+              id="r-name"
+              placeholder="House of ___"
+              autocomplete="off"
+            />
+          </div>
+          <div class="field">
+            <label class="flabel" for="r-email">Contact Address</label>
+            <input class="finput" type="email" id="r-email" placeholder="your@email.com" />
+          </div>
+          <div class="field">
+            <label class="flabel" for="r-msg">What Are You Going to Build?</label>
+            <textarea
+              class="finput ftarea"
+              id="r-msg"
+              rows="3"
+              placeholder="Your Chronicle entry begins here."
+            ></textarea>
+          </div>
+          <button class="fbtn" id="r-submit" type="button">Enter The Chronicle</button>
+          <p class="fconfirm" id="r-confirm">
+            Recorded. Your words are permanent.<br />Before the first world was reached — you were
+            here.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div id="final-cta" class="reveal">
+        <span class="eyebrow" style="display: block; margin-bottom: 20px"
+          >The Founding Event · 2027</span
+        >
+        <h2 class="h2" style="max-width: 580px; margin: 0 auto 20px">
+          Six hundred worlds are waiting.<br /><em>Your story starts now.</em>
+        </h2>
+        <p
+          style="
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 18px;
+            color: var(--dim);
+            max-width: 480px;
+            margin: 0 auto 0;
+          "
+        >
+          The Chronicle will record who was here first.<br />That moment cannot be recreated.
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 48px;
+          "
+        >
+          <a href="#play" class="btn-dark">Begin Your Dynasty</a>
+          <a href="#covenant" class="btn-border">Read the Covenant</a>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-logo">THE CONCORD</div>
+        <p>
+          <a href="#">The Permanence Covenant</a> &nbsp;·&nbsp;
+          <a href="#">The Chronicle API</a> &nbsp;·&nbsp; <a href="#">Survey Corps</a> &nbsp;·&nbsp;
+          <a href="#">Economy API</a> &nbsp;·&nbsp; <a href="#">Press Kit</a> &nbsp;·&nbsp;
+          <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+          <a href="#">Contact</a>
+        </p>
+        <p style="margin-top: 16px; font-size: 9px">
+          MARKS contract verified on Ethereum L2 &nbsp;·&nbsp; Chronicle replicated to independent
+          foundation in real time &nbsp;·&nbsp; Studio closure provisions execute automatically
+          without human intervention
+        </p>
+        <p style="margin-top: 12px">
+          © 2027 The Concord &nbsp;·&nbsp; A civilisation that persists
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      // CURSOR
+      const ring = document.getElementById('cur-ring'),
+        dot = document.getElementById('cur-dot');
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      document.addEventListener('mousemove', (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+      });
+      function animC() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+        requestAnimationFrame(animC);
+      }
+      animC();
+      document.querySelectorAll('a,button').forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+          ring.style.width = '44px';
+          ring.style.height = '44px';
+          ring.style.opacity = '.5';
+        });
+        el.addEventListener('mouseleave', () => {
+          ring.style.width = '26px';
+          ring.style.height = '26px';
+          ring.style.opacity = '1';
+        });
+      });
+
+      // ATMOSPHERE
+      const cv = document.getElementById('atmos'),
+        cx = cv.getContext('2d');
+      let pts = [];
+      function resize() {
+        cv.width = window.innerWidth;
+        cv.height = window.innerHeight;
+      }
+      function mkPts() {
+        pts = [];
+        for (let i = 0; i < 100; i++)
+          pts.push({
+            x: Math.random() * cv.width,
+            y: Math.random() * cv.height,
+            r: Math.random() * 100 + 30,
+            o: Math.random() * 0.07 + 0.01,
+            sp: Math.random() * 0.0003 + 0.0001,
+            ph: Math.random() * Math.PI * 2,
+            hue: Math.random() > 0.7 ? '196,154,60' : '42,92,138',
+          });
+      }
+      function drawAtmos() {
+        cx.clearRect(0, 0, cv.width, cv.height);
+        const t = Date.now();
+        for (const p of pts) {
+          const op = p.o * (0.5 + 0.5 * Math.sin(t * p.sp + p.ph));
+          const g = cx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+          g.addColorStop(0, `rgba(${p.hue},${op})`);
+          g.addColorStop(1, 'transparent');
+          cx.beginPath();
+          cx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          cx.fillStyle = g;
+          cx.fill();
+        }
+        requestAnimationFrame(drawAtmos);
+      }
+      resize();
+      mkPts();
+      drawAtmos();
+      window.addEventListener('resize', () => {
+        resize();
+        mkPts();
+      });
+
+      // NAV
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 80));
+
+      // REVEAL
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.07, rootMargin: '0px 0px -40px 0px' },
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+      // FORM
+      document.getElementById('r-submit').addEventListener('click', () => {
+        const name = document.getElementById('r-name').value.trim();
+        const email = document.getElementById('r-email').value.trim();
+        const msg = document.getElementById('r-msg').value.trim();
+        if (!name || !email) {
+          document.getElementById('r-name').focus();
+          return;
+        }
+        fetch('/api/chronicle/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message: msg, ts: new Date().toISOString() }),
+        }).catch(() => {});
+        document.getElementById('r-confirm').style.display = 'block';
+        document.getElementById('r-submit').style.display = 'none';
+        ['r-name', 'r-email', 'r-msg'].forEach((id) => (document.getElementById(id).value = ''));
+      });
+    </script>
+  </body>
+</html>

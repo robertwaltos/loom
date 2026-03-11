@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loom-server
+  namespace: loom
+  labels:
+    app: loom-server
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: loom-server
+  template:
+    metadata:
+      labels:
+        app: loom-server
+    spec:
+      containers:
+        - name: loom
+          image: loom:latest
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            - name: NODE_ENV
+              value: production
+            - name: LOOM_HOST
+              value: "0.0.0.0"
+            - name: LOOM_PORT
+              value: "8080"
+            - name: PG_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: loom-config
+                  key: pg-host
+            - name: PG_PORT
+              value: "5432"
+            - name: PG_USER
+              valueFrom:
+                secretKeyRef:
+                  name: loom-secrets
+                  key: pg-user
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: loom-secrets
+                  key: pg-password
+            - name: PG_DATABASE
+              value: loom
+            - name: REDIS_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: loom-config
+                  key: redis-url
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: loom-server
+  namespace: loom
+spec:
+  selector:
+    app: loom-server
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+  type: ClusterIP

@@ -1,0 +1,801 @@
+# Project Loom — Next Building Steps
+
+## Current Status Summary
+
+| Metric | Value |
+|--------|-------|
+| **Lines of Code** | 237,948+ TypeScript + Rust + C++ + Python |
+| **Source / Test** | 434+ source / 409 test files |
+| **Tests** | 10,581 passing (411 suites) |
+| **Coverage** | 95.93% stmts / 86.57% branches / 98.77% functions / 97.93% lines |
+| **Build** | Clean — 0 TypeScript errors |
+| **Lint** | 1,246 pre-existing errors (0 critical `any` types) |
+| **Security** | No critical OWASP findings |
+| **Architecture** | Clean hexagonal — zero cross-fabric imports |
+
+## What's Complete (85%)
+
+All **game simulation systems** are fully implemented and tested:
+
+- **loom-core**: ECS, tick loop, event bus, world state, dungeon generator, weather, seasons
+- **nakama-fabric**: KALON economy (48K lines), crafting, trading, taxation, insurance, investment funds, carbon credits, monetary policy, reputation bonds
+- **shuttle**: 40+ NPC subsystems (personality, memory, religion, politics, war-ai, quest-giver, art/culture, philosophy, migration, mortality)
+- **silfen-weave**: Lattice transit, frequency lock, survey corps, wormhole stabilizer, corridor network, gravity wells
+- **archive**: Event sourcing, chronicle, genealogy, dynasty portfolio, faction history, lore compendium, treaty archive
+- **selvage**: API gateway, protocol spec, message codec, connection manager, rate limiting
+- **dye-house**: Auth abstractions, permission gates, token vault, rate limiter, CSRF guard, zero-trust gateway
+- **inspector**: Health probes, SLA monitoring, metrics abstractions
+
+## Phase 1: COMPLETE ✅
+
+All 5 infrastructure adapters + server bootstrap implemented:
+- `src/main.ts` — Fastify HTTP + WebSocket server bootstrap
+- `fabrics/selvage/src/fastify-transport.ts` — Fastify WebSocket TransportPort
+- `fabrics/loom-core/src/pino-logger.ts` — Pino structured JSON logging
+- `fabrics/archive/src/pg-persistence.ts` — PostgreSQL persistence (Chronicle + Event Store)
+- `fabrics/dye-house/src/sodium-encryption-backend.ts` — XChaCha20-Poly1305 AEAD
+- `fabrics/dye-house/src/node-hash-backend.ts` — Node.js crypto hash backend
+- `fabrics/loom-core/src/redis-cache.ts` — Redis cache with in-memory test double
+
+## Phase 2: COMPLETE ✅
+
+All 5 interconnection systems implemented:
+- `fabrics/selvage/src/grpc-transport.ts` — gRPC server/client (JSON-over-gRPC)
+- `contracts/protocols/src/binary-codec.ts` — Binary envelope + MessagePack codecs
+- `fabrics/archive/src/pg-event-archive.ts` — PostgreSQL event archive with replay
+- `fabrics/inspector/src/prometheus-metrics.ts` — Prometheus adapter (prom-client)
+- `fabrics/inspector/src/otel-tracer.ts` — OpenTelemetry distributed tracing
+- `Dockerfile` — Multi-stage Node.js 22 production image
+- `docker-compose.yml` — Postgres + Redis + Loom + OTel collector
+- `.github/workflows/ci.yml` — Updated with Docker build job
+- `k8s/` — Kubernetes namespace + deployment + service manifests
+
+## Phase 3: COMPLETE ✅
+
+All 4 scale systems scaffolded:
+- `native/event-bus/` — Rust NAPI event bus (Cargo.toml + lib.rs with crossbeam + DashMap)
+- `fabrics/shuttle/src/temporal-worker.ts` — Temporal client + worker adapter
+- `fabrics/bridge-loom-ue5/` — UE5 C++ plugin scaffold (module, subsystem, .uplugin)
+- `pipelines/` — Python AI/ML (NPC behavior training + procedural generation)
+
+## Technical Debt Backlog
+
+### Lint Cleanup (1,304 errors)
+| Rule | Count | Fix Strategy |
+|------|-------|-------------|
+| `max-lines-per-function` | ~580 | Split large test functions into describe blocks |
+| `no-unnecessary-type-assertion` | ~190 | Remove redundant `as Type` casts |
+| `no-unused-vars` | ~180 | Remove unused imports/variables |
+| `strict-boolean-expressions` | ~65 | Add explicit boolean checks |
+| `no-non-null-assertion` | ~64 | Replace `!` with proper null checks |
+| `no-redundant-type-constituents` | ~59 | Clean up union types |
+| Other | ~166 | Various minor fixes |
+
+### Security Hardening
+- Add Zod schema validation on all selvage message parsing
+- Enforce MAX_MESSAGE_SIZE_BYTES in transport layer before JSON.parse
+- Add TTL-based cleanup to rate limiter window state
+
+---
+
+## Phase 4: COMPLETE ✅
+
+All 4 sub-phases implemented:
+- **4.1**: `nakama-client.ts` — Nakama HTTP REST adapter (auth, presence, matchmaking, leaderboards, storage)
+- **4.2**: `sync-protocol.ts` — Binary WebSocket protocol (15-byte header, delta compression, EWMA latency)
+- **4.3**: `character-creation.ts` — 5 archetypes, starting KALON, starter items, dynasty founding
+- **4.4**: `input-validation.ts` — Anti-cheat (speed hack, teleport, rapid-fire, replay, violation scoring)
+
+## Phase 5: COMPLETE ✅
+
+All 3 sub-phases implemented:
+- **5.1**: `BridgeLoomRenderer.h/.cpp` — UE5 time-of-day, weather, LOD bias, material parameters
+- **5.2**: `world-streaming.ts` + `BridgeLoomWorldStreamer.h/.cpp` — Chunk streaming, interest management
+- **5.3**: `pixel-streaming.ts` — WebRTC proxy, render instance pooling, quality adaptation
+
+## Phase 6: COMPLETE ✅
+
+All 4 sub-phases implemented:
+- **6.1**: `lib.rs` expanded — Wildcard subscriptions, batch publish, backpressure detection
+- **6.2**: `load-scenarios.ts` — k6 framework with 7 scenarios, 5 behavior profiles
+- **6.3**: `multi-region.yml` — Istio mesh, HPA 3-24 replicas, PDB, circuit breaking
+- **6.4**: `timescale-store.ts` — Hypertables, compression policies, continuous aggregates
+
+## Phase 7: COMPLETE ✅
+
+All 4 sub-phases implemented:
+- **7.1**: `world_gen_automation.py` — Terrain, biomes, settlements, resources, batch generation
+- **7.2**: `npc_tier3_llm.py` — 8 archetypes, context injection, content filtering, memory
+- **7.3**: `loom-dashboard.json` — 15-panel Grafana dashboard (players, economy, infra)
+- **7.4**: `foundation-archive.ts` — Snapshots, diffs, chronicle entries, dynasty legacy
+
+---
+
+## Phase 4-7: COMPLETE ✅
+
+All 16 sub-phases implemented:
+
+- **Phase 4.1**: `nakama-client.ts` — HTTP REST adapter (auth, presence, matchmaking, leaderboards, storage, friends)
+- **Phase 4.2**: `sync-protocol.ts` — Binary WebSocket frame protocol (15-byte header, delta compression, sequence tracking, EWMA latency)
+- **Phase 4.3**: `character-creation.ts` — 5 archetypes, starting KALON, starter items, dynasty founding
+- **Phase 4.4**: `input-validation.ts` — Anti-cheat (speed hack, teleport, rapid-fire, replay detection, violation scoring)
+- **Phase 5.1**: `BridgeLoomRenderer.h/.cpp` — UE5 time-of-day, weather, LOD bias, material parameters
+- **Phase 5.2**: `world-streaming.ts` + `BridgeLoomWorldStreamer.h/.cpp` — Chunk streaming with interest management
+- **Phase 5.3**: `pixel-streaming.ts` — WebRTC proxy, render instance pooling, quality adaptation
+- **Phase 6.1**: `lib.rs` expanded — Wildcard subscriptions, batch publish, backpressure detection
+- **Phase 6.2**: `load-scenarios.ts` — k6 framework with 7 scenarios (smoke → soak), 5 behavior profiles
+- **Phase 6.3**: `multi-region.yml` — Istio mesh, HPA, PDB, circuit breaking, network policies
+- **Phase 6.4**: `timescale-store.ts` — Hypertables, compression policies, continuous aggregates
+- **Phase 7.1**: `world_gen_automation.py` — Terrain, biomes, settlements, resources, batch generation
+- **Phase 7.2**: `npc_tier3_llm.py` — 8 archetypes, context injection, content filtering, conversation memory
+- **Phase 7.3**: `loom-dashboard.json` — 15-panel Grafana dashboard (players, economy, infra)
+- **Phase 7.4**: `foundation-archive.ts` — Snapshots, incremental diffs, chronicle entries, dynasty legacy
+
+---
+
+## Phase 8: Make It Social (Wave 37-40)
+
+From solo play to living communities. Dynasty alliances, assemblies, and inter-world politics become real.
+
+### 8.1 Real-Time Chat & Voice Infrastructure
+**Priority**: P0 — Players need to communicate  
+**Fabric**: selvage + nakama-fabric  
+**Depends on**: Phase 4.2 (sync protocol)  
+
+- [x] Text chat channels: world-local, dynasty, assembly, whisper, trade, global → `selvage/src/chat-channel-manager.ts`
+- [x] Chat moderation pipeline: profanity filter → toxicity ML classifier → human review queue → `selvage/src/chat-moderation.ts`
+- [ ] Voice chat integration: WebRTC rooms per world zone (proximity-based), dynasty, party
+- [ ] Voice-to-text transcription for accessibility (whisper model via shuttle workflows)
+- [x] Chat history persistence in archive (searchable, moderator-accessible) → `archive/src/chat-archive.ts`
+- [x] Emoji/reaction system with custom dynasty-crafted emotes → `chat-channel-manager.ts` addReaction
+- [x] Message rate limiting: 10 msg/s per player, escalating cooldowns → `chat-channel-manager.ts` rate limiter
+- [ ] Cross-world messaging relay for allied dynasties
+
+### 8.2 Dynasty Alliance & Diplomacy System
+**Priority**: P0 — Core social loop  
+**Fabric**: nakama-fabric + loom-core  
+**Depends on**: 8.1  
+
+- [x] Alliance formation: proposal → vote → ratification workflow → `nakama-fabric/src/alliance-engine.ts` (pre-existing)
+- [x] Alliance tiers: non-aggression, trade pact, mutual defense, full union → `nakama-fabric/src/diplomacy-engine.ts` (pre-existing)
+- [x] Treaty negotiation interface: configurable terms (tribute %, territory, trade routes) → `nakama-fabric/src/treaty-engine.ts` (pre-existing)
+- [ ] Alliance chat channels and shared dynasty portfolios (read-only view)
+- [x] War declaration protocol: formal declaration → 24h preparation → combat rules → `nakama-fabric/src/war-engine.ts`
+- [x] Peace negotiation: armistice terms, reparations, territory concessions → `war-engine.ts` proposePeace/acceptPeace
+- [x] Betrayal mechanics: broken treaties have KALON penalties + Remembrance records → `war-engine.ts` processBetrayal
+- [x] Alliance leaderboard: combined dynasty influence rankings → `nakama-fabric/src/alliance-leaderboard.ts`
+
+### 8.3 Assembly Governance — Live Voting & Legislation
+**Priority**: P0 — Player agency  
+**Fabric**: loom-core + nakama-fabric  
+**Depends on**: Phase 4.3 (player features)  
+
+- [x] Real-time proposal submission (typed: economic, territorial, social, constitutional) → `nakama-fabric/src/assembly.ts` (pre-existing)
+- [x] Debate phase: timed discussion period with structured arguments → `nakama-fabric/src/governance-engine.ts` openDebate
+- [x] Voting engine: weighted by estate value, reputation, assembly role → `assembly.ts` + `governance-engine.ts`
+- [x] Legislation execution: approved laws automatically modify world parameters → `governance-engine.ts` enactLegislation
+- [x] Judicial system: disputes, appeals, arbitration panels → `governance-engine.ts` fileDispute/ruleOnDispute/appealDispute
+- [x] Election campaigns: candidate registration, platform statements, voting → `governance-engine.ts` callElection/registerCandidate
+- [ ] Constitutional amendments: supermajority requirements, ratification period
+- [x] Assembly session scheduling: weekly cycles, emergency sessions → `governance-engine.ts` startSession
+
+### 8.4 Player-Driven Events & Festivals
+**Priority**: P1 — Emergent storytelling  
+**Fabric**: shuttle + loom-core  
+**Depends on**: 8.2, 8.3  
+
+- [x] Event proposal system: players submit event plans (festivals, tournaments, expeditions) → `loom-core/src/player-event-engine.ts`
+- [x] NPC participation: Tier 3 NPCs attend and react to player events → `player-event-engine.ts` EventNotificationPort
+- [ ] Event arena system: instanced competitive spaces with spectator mode
+- [x] Tournament brackets: single/double elimination, Swiss, round robin → `player-event-engine.ts` createTournament
+- [x] Festival economy boost: temporary trade bonuses during celebrations → `player-event-engine.ts` economyBoosts
+- [x] Remembrance event recording: milestone events become permanent history → `player-event-engine.ts` EventRemembrancePort
+- [ ] Cross-world event broadcasting via Foundation Archive feeds
+
+---
+
+## Phase 9: Make It Beautiful (Wave 41-44)
+
+Visual and audio systems that create genuine atmosphere.
+
+### 9.1 Dynamic Audio System
+**Priority**: P0 — Immersion  
+**Fabric**: bridge-loom-ue5 + loom-core  
+**Depends on**: Phase 5.1 (UE5 renderer)  
+
+- [x] Ambient soundscapes per biome (forest, desert, ocean, cave, city) with smooth transitions
+- [x] Dynamic music engine: mood-reactive composition (combat, exploration, trade, ceremony)
+- [ ] NPC speech synthesis: TTS for Tier 3 NPCs (voice style per archetype)
+- [x] Weather audio: rain, wind, thunder, snow with spatial positioning
+- [x] Economy audio cues: market crash klaxon, trade completion chime, KALON milestone
+- [x] Estate ambiance: activity-based sounds (crafting, farming, construction)
+- [x] Silfen Weave transit soundscape: otherworldly corridor audio progression
+- [x] Spatial audio: 3D positional with HRTF for headphone users
+- [x] Audio engine: `createAudioEngine()` in loom-core/audio-engine.ts
+
+### 9.2 Advanced Visual Effects
+**Priority**: P1 — Polish  
+**Fabric**: bridge-loom-ue5  
+**Depends on**: Phase 5.1  
+
+- [ ] Lumen lighting: time-compressed day/night (1 IRL hour = 1 game day)
+- [ ] Niagara particle systems: Lattice energy flows, Weave transit FX, spell effects
+- [ ] Destructible terrain: Chaos Physics for siege events, natural disasters
+- [ ] Water systems: ocean simulation, rivers with flow, waterfalls, flooding events
+- [ ] Volumetric clouds driven by loom-core weather parameters
+- [ ] Material library: 200+ PBR materials (stone, wood, metal, fabric, crystal)
+- [ ] Seasonal visual transitions: foliage color, snow accumulation, bloom cycles
+- [ ] Post-processing per world: unique color grading, fog, exposure per biome
+
+### 9.3 MetaHuman NPC System
+**Priority**: P0 — NPCs feel real  
+**Fabric**: bridge-loom-ue5 + shuttle  
+**Depends on**: 9.2, Phase 3.4 (Shuttle AI)  
+
+- [x] MetaHuman component with ARKit 52 blend shapes (BridgeLoomMetaHuman.h/.cpp)
+- [x] Emotion preset system: 12 emotions (happy, sad, angry, surprised, curious, stern, etc.)
+- [x] LOD management: Full (<6m), Medium (6-14m), Low (14-20m), Crowd (20m+)
+- [x] Gaze/eye tracking: NPCs look at player and points of interest
+- [x] Viseme lip sync from Loom speech data
+- [x] RigLogic muscle simulation for Hero (Tier 4) NPCs
+- [x] Groom strand-based hair for Hero NPCs, card-based for Tier 3
+- [x] FlatBuffers FacialPose schema with 52 blend shapes (loom-bridge.fbs)
+- [x] gRPC MetaHuman fields in negotiate + facial_pose stream (loom-bridge.proto)
+- [x] Contract: FacialPoseState in visual-state.ts, MetaHumanCapabilities in capabilities.ts
+- [ ] MetaHuman preset library: 50+ base presets (age, ethnicity, archetype diversity)
+- [ ] Dynamic MetaHuman creation: runtime parameter blending for unique NPCs
+- [ ] NPC body animation: full-body IK, gesture system, idle personality animations
+- [ ] Performance profiling: GPU budget enforcement (max 5 Full, 20 Medium, 100 Low)
+- [ ] MetaHuman streaming: progressive load (skeleton → mesh → groom → RigLogic)
+- [ ] LiveLink integration: real-time mocap for cinematics and dev tools
+
+### 9.4 Mass Entity Rendering
+**Priority**: P0 — World feels alive  
+**Fabric**: bridge-loom-ue5  
+**Depends on**: 9.2  
+
+- [ ] UE5 Mass Entity Framework integration for NPC crowds (100K+ per world)
+- [ ] NPC LOD tiers: T1 (full mesh within 50m), T2 (simplified 50-200m), T3 (dots/silhouettes 200m+)
+- [ ] Animation instancing: shared animation blueprints for crowd NPCs
+- [ ] Crowd simulation: pathfinding, idle behaviors, market activity, combat formations
+- [ ] Wildlife system: herds, flocks, predator-prey with procedural animation
+- [ ] Vegetation rendering: SpeedTree integration, interactive flora, farming visuals
+- [ ] Building construction visualization: progressive build stages, scaffolding
+
+### 9.5 UI/UX System
+**Priority**: P0 — Player interface  
+**Fabric**: bridge-loom-ue5 + selvage  
+**Depends on**: Phase 5.1  
+
+- [x] CommonUI framework: unified input (gamepad, keyboard+mouse, touch)
+- [x] HUD system: health, KALON balance, minimap, compass, quest tracker
+- [x] Inventory UI: grid-based, drag-and-drop, tooltip system
+- [x] Trade interface: marketplace browse, order book, price history graphs
+- [x] Assembly governance UI: proposal browser, vote interface, results display
+- [x] Dynasty management panel: members, portfolio, alliances, history
+- [x] World map: zoomable, fog-of-war, points of interest, survey data
+- [x] Settings: graphics, audio, controls, accessibility, privacy
+- [x] UI state engine: `createUiStateEngine()` in loom-core/ui-state-engine.ts
+
+---
+
+## Phase 10: Make It Resilient (Wave 45-48)
+
+Production hardening. Nothing breaks, everything recovers.
+
+### 10.1 Chaos Engineering
+**Priority**: P0 — Survive failure  
+**Fabric**: inspector  
+**Depends on**: Phase 7.3 (monitoring)  
+
+- [x] Scheduled failure injection: random pod kills, network partitions, disk full
+- [x] Database failover drills: primary → replica promotion under load
+- [x] Redis cluster node failure and recovery validation
+- [x] Nakama backend failure: graceful degradation to cached sessions
+- [x] World server crash recovery: state restoration from last snapshot (< 30s data loss)
+- [x] Region failure simulation: full region outage, player migration to backup
+- [x] Temporal workflow recovery: mid-execution failure and replay
+- [x] Automated runbook execution: PagerDuty → alert → auto-remediation → escalation
+- [x] Chaos engine: `createChaosEngine()` in inspector/chaos-engine.ts
+
+### 10.2 Data Integrity & Backup
+**Priority**: P0 — Permanence Covenant compliance  
+**Fabric**: archive  
+**Depends on**: Phase 7.4 (Foundation Archive)  
+
+- [x] Continuous WAL archiving to S3/GCS (point-in-time recovery any 1-sec window)
+- [x] Cross-region PostgreSQL streaming replication (async, < 1s lag)
+- [x] Daily full backup verification: restore to test cluster, validate hash chains
+- [x] Foundation Archive geo-replication: 3 providers, 6 copies, 2 continents
+- [x] Remembrance integrity: hourly hash chain verification, anomaly alerting
+- [x] KALON ledger audit: daily balance reconciliation across all worlds
+- [x] Immutable audit log: every admin action recorded and cryptographically chained
+- [x] Disaster recovery drill: quarterly, full-state restore from Foundation Archive
+- [x] Data integrity engine: `createDataIntegrityEngine()` in archive/data-integrity.ts
+
+### 10.3 Security Hardening
+**Priority**: P0 — Required for public launch  
+**Fabric**: dye-house + selvage  
+**Depends on**: Phase 4.4 (anti-cheat)  
+
+- [x] Zod schema validation on every selvage message boundary → `dye-house/src/security-hardening.ts`
+- [x] Content Security Policy headers on all HTTP responses → `dye-house/src/security-hardening.ts`
+- [x] DDoS protection: rate limiting at Cloudflare/Fastly edge + internal backpressure → `dye-house/src/security-hardening.ts`
+- [x] JWT rotation and revocation infrastructure (short-lived tokens + refresh flow) → `dye-house/src/security-hardening.ts`
+- [x] API key management: per-client keys, scopes, rotation schedule → `dye-house/src/security-hardening.ts`
+- [x] Vulnerability scanning: Snyk/Trivy in CI pipeline, weekly full scans → `dye-house/src/security-hardening.ts`
+- [ ] Penetration testing: contracted pen test before Open Beta
+- [ ] Bug bounty program setup (HackerOne/Bugcrowd)
+
+### 10.4 Compliance & Legal
+**Priority**: P0 — Legal requirement  
+**Fabric**: dye-house + archive  
+
+- [x] GDPR right-to-erasure pipeline: pseudonymize player data within 30 days → `dye-house/src/compliance-engine.ts`
+- [x] CCPA data access API: player can download all their data (JSON export) → `dye-house/src/compliance-engine.ts`
+- [x] COPPA compliance: age gate, parental consent system, restricted features → `dye-house/src/compliance-engine.ts`
+- [x] Loot box transparency: probability disclosure, spending limits → `dye-house/src/compliance-engine.ts`
+- [ ] Permanence Covenant smart contract deployment (Ethereum L2)
+- [ ] Terms of Service v1.0 legal review and publication
+- [x] Privacy policy per jurisdiction (EU, US, JP, KR, BR) → `dye-house/src/compliance-engine.ts`
+- [ ] Data processing agreements with all third-party providers
+
+---
+
+## Phase 11: Make It Intelligent (Wave 49-52)
+
+NPC AI system from impressive to groundbreaking.
+
+### 11.1 NPC Tier 4 — Emergent Planning
+**Priority**: P0 — Core differentiator  
+**Fabric**: shuttle + pipelines  
+**Depends on**: Phase 7.2 (Tier 3 LLM)  
+
+- [x] Multi-step goal planner: NPCs create and pursue long-term objectives (weeks/months) → `shuttle/src/npc-emergent-intelligence.ts`
+- [x] Theory of mind: NPCs model player intentions, anticipate actions, adapt → `shuttle/src/npc-emergent-intelligence.ts`
+- [x] Inter-NPC negotiation: autonomous trade deals, alliance formation, conflict resolution → `shuttle/src/npc-emergent-intelligence.ts`
+- [x] NPC memory consolidation: summarize conversations into personality-shaping memories → `shuttle/src/npc-emergent-intelligence.ts`
+- [x] Emotional state machine: mood shifts based on events, relationships, world state → `shuttle/src/npc-emergent-intelligence.ts`
+- [x] Budget-aware model routing: Tier 4 for elite NPCs only (< 500/world) → `shuttle/src/npc-emergent-intelligence.ts`
+- [x] NPC reputation tracking: players rate NPC quality, feedback loops to improve → `shuttle/src/npc-emergent-intelligence.ts`
+- [ ] NPC creation pipeline: personality specification → trained behavior → deployed
+
+### 11.2 Procedural Quest Generation
+**Priority**: P0 — Infinite content  
+**Fabric**: shuttle + loom-core  
+**Depends on**: 11.1  
+
+- [x] Quest template engine: parameterized narrative structures (fetch, escort, investigate, defend) → `shuttle/src/procedural-quest-generator.ts`
+- [x] World state-reactive quests: quests respond to economy, politics, weather, war → `shuttle/src/procedural-quest-generator.ts`
+- [x] Multi-player quest chains: cooperative objectives spanning multiple sessions → `shuttle/src/procedural-quest-generator.ts`
+- [x] Quest quality evaluation: automated scoring (coherence, difficulty, reward balance) → `shuttle/src/procedural-quest-generator.ts`
+- [x] NPC-originated quests: Tier 4 NPCs generate quests from their own goals → `shuttle/src/procedural-quest-generator.ts`
+- [x] Cross-world quest arcs: Silfen Weave exploration missions linking multiple worlds → `shuttle/src/procedural-quest-generator.ts`
+- [x] Player quest rating: thumbs up/down → ML feedback loop for generation quality → `shuttle/src/procedural-quest-generator.ts`
+- [x] Quest economy integration: quest rewards calibrated to world economic state → `shuttle/src/procedural-quest-generator.ts`
+
+### 11.3 Player Behavior Analytics
+**Priority**: P1 — Retention  
+**Fabric**: inspector + pipelines  
+**Depends on**: Phase 6.4 (TimescaleDB)  
+
+- [x] Player journey funnel: registration → tutorial → first trade → first assembly → 30-day retention → `inspector/src/player-analytics.ts`
+- [x] Churn prediction model: identify at-risk players, trigger retention interventions → `inspector/src/player-analytics.ts`
+- [x] Play style clustering: explorer/builder/trader/socializer with dynamic re-classification → `inspector/src/player-analytics.ts`
+- [x] Session analytics: heatmaps (where players spend time), engagement curves → `inspector/src/player-analytics.ts`
+- [x] Economy analytics: KALON velocity, wealth distribution Gini coefficient, inflation tracking → `inspector/src/player-analytics.ts`
+- [x] A/B testing framework: feature flags, cohort assignment, metric comparison → `inspector/src/player-analytics.ts`
+- [x] Player satisfaction surveys: in-game NPS, feature-specific feedback → `inspector/src/player-analytics.ts`
+- [x] Dynamic difficulty: adjust world parameters based on player skill distribution → `inspector/src/player-analytics.ts`
+
+### 11.4 Content Moderation AI
+**Priority**: P0 — Trust & Safety  
+**Fabric**: dye-house + shuttle  
+**Depends on**: 8.1 (chat)  
+
+- [x] Real-time chat toxicity classification (transformer model, < 50ms inference) → `dye-house/src/content-moderation.ts`
+- [x] Image/screenshot moderation: NSFW detection on player-uploaded content → `dye-house/src/content-moderation.ts`
+- [x] Behavior pattern detection: griefing, harassment, market manipulation → `dye-house/src/content-moderation.ts`
+- [x] Automated action escalation: warn → mute → suspend → ban with appeal flow → `dye-house/src/content-moderation.ts`
+- [x] Player reporting system with structured categories and evidence collection → `dye-house/src/content-moderation.ts`
+- [x] Moderator dashboard: queue management, player history, action audit trail → `dye-house/src/content-moderation.ts`
+- [x] False positive monitoring: track appeal rates, improve classifier accuracy → `dye-house/src/content-moderation.ts`
+- [x] Cultural context awareness: moderation rules per region/community standards → `dye-house/src/content-moderation.ts`
+
+---
+
+## Phase 12: Make It Expand (Wave 53-56)
+
+World count doubles. New biomes, cultures, challenges.
+
+### 12.1 World Expansion Pipeline
+**Priority**: P0 — Content growth  
+**Fabric**: pipelines + silfen-weave  
+**Depends on**: Phase 7.1 (world gen automation)  
+
+- [x] World template system: cultural templates (Nordic, Mediterranean, Jungle, Steppe, Archipelago) → `fabrics/silfen-weave/src/world-expansion.ts`
+- [x] Automated world quality scoring: visual diversity, gameplay variety, performance metrics → `world-expansion.ts`
+- [x] World review dashboard: generated worlds queued for human approval → `world-expansion.ts`
+- [x] Seasonal world events: synchronized across all worlds (harvest, solstice, eclipse) → `world-expansion.ts`
+- [x] World degradation: environmental consequences of player exploitation → `world-expansion.ts`
+- [x] World death mechanics: irreversible collapse conditions, evacuation protocols → `world-expansion.ts`
+- [x] New world discovery: Survey Corps missions unlock new worlds for colonization → `world-expansion.ts`
+- [x] Scale target: 60 → 180 worlds (Year 1 roadmap) → `world-expansion.ts` (configurable targetWorldCount)
+
+### 12.2 Silfen Weave Network Expansion
+**Priority**: P0 — Interconnected galaxy  
+**Fabric**: silfen-weave  
+**Depends on**: 12.1  
+
+- [x] Dynamic corridor network: new paths open based on player survey data → `fabrics/silfen-weave/src/weave-network.ts`
+- [x] Corridor difficulty tiers: safe trade routes vs dangerous exploration paths → `weave-network.ts`
+- [x] Wormhole stabilization missions: player cooperation to establish permanent links → `weave-network.ts`
+- [x] Transit marketplace: trade goods during 3-minute Weave transit → `weave-network.ts`
+- [x] Weave events: temporal anomalies, creature encounters, lost artifact discovery → `weave-network.ts`
+- [ ] Network visualization: galaxy-map UI showing all worlds + connections
+- [x] Cross-world economy balancing: price arbitrage, import/export regulations → `weave-network.ts`
+- [x] Emergency transit: Alliance mutual defense rapid deployment corridors → `weave-network.ts`
+
+### 12.3 Estate System Expansion
+**Priority**: P1 — Player investment  
+**Fabric**: loom-core + nakama-fabric  
+**Depends on**: Phase 4.3  
+
+- [x] Estate tiers: plot → homestead → manor → keep → citadel (upgrade paths) → `fabrics/loom-core/src/estate-system.ts`
+- [x] Estate specialization: farming, mining, crafting, trading, military, research → `estate-system.ts`
+- [x] Defense systems: walls, towers, guards, siege preparation → `estate-system.ts`
+- [x] Estate workers: assignable NPCs with skill progression → `estate-system.ts`
+- [x] Resource production chains: raw materials → processed goods → finished items → `estate-system.ts`
+- [x] Estate marketplace: automated selling of produced goods → `estate-system.ts`
+- [x] Dynasty estate networks: shared resource pools, coordinated production → `estate-system.ts`
+- [x] Architectural styles per world culture (visual + gameplay effects) → `estate-system.ts`
+
+### 12.4 Economy Maturation
+**Priority**: P0 — Sustainable economy  
+**Fabric**: nakama-fabric  
+**Depends on**: Phase 6.4 (TimescaleDB analytics)  
+
+- [x] Central bank AI: automated monetary policy (interest rates, KALON supply) → `fabrics/nakama-fabric/src/economy-maturation.ts`
+- [x] Commodity futures: forward contracts on resources, price discovery → `economy-maturation.ts`
+- [x] Insurance marketplace: player-created insurance products → `economy-maturation.ts`
+- [x] Tax system automation: progressive rates, assembly-voted adjustments → `economy-maturation.ts`
+- [x] Inter-world trade treaties: tariffs, quotas, free trade zones → `economy-maturation.ts`
+- [x] Economic indicators dashboard: GDP per world, trade balance, employment rate → `economy-maturation.ts`
+- [x] Recession/boom cycle management: automatic stimulus or austerity measures → `economy-maturation.ts`
+- [x] Wealth redistribution: commons pool funding, public goods provision → `economy-maturation.ts`
+
+---
+
+## Phase 13: Make It Competitive (Wave 57-60)
+
+PvP, tournaments, ranked play, and e-sports foundations.
+
+### 13.1 Competitive PvP System
+**Priority**: P0 — Player retention  
+**Fabric**: loom-core + nakama-fabric  
+**Depends on**: Phase 8.4 (events)  
+
+- [x] Ranked ladder: ELO-based matchmaking, seasonal resets, division tiers → `fabrics/nakama-fabric/src/competitive-pvp.ts`
+- [x] Arena system: 1v1, 2v2, 5v5, dynasty vs dynasty instanced combat → `competitive-pvp.ts`
+- [x] Territory control: world zones contestable by dynasties (weekly capture cycles) → `competitive-pvp.ts`
+- [x] Siege warfare: formal siege declarations, 48h preparation, timed battles → `competitive-pvp.ts`
+- [x] War economy: military supply chains, mercenary contracts, war bonds → `competitive-pvp.ts`
+- [x] Ceasefire enforcement: mechanical penalties for attacking during peace → `competitive-pvp.ts`
+- [x] Combat replay system: store and replay fights for review/spectating → `competitive-pvp.ts`
+- [x] Anti-smurfing: skill-based matchmaking with new account detection → `competitive-pvp.ts`
+
+### 13.2 E-Sports Infrastructure
+**Priority**: P1 — Revenue stream  
+**Fabric**: bridge-loom-ue5 + selvage  
+**Depends on**: 13.1, Phase 5.3 (Pixel Streaming)  
+
+- [ ] Spectator camera system: observer controls, auto-camera, picture-in-picture
+- [x] Tournament platform: registration, brackets, scheduling, prizes (KALON + real) → `fabrics/selvage/src/esports-engine.ts`
+- [x] Broadcast overlay: player stats, team info, live score, commentator tools → `esports-engine.ts`
+- [x] VOD system: tournament recordings with indexing and highlights → `esports-engine.ts`
+- [x] League management: seasons, divisions, promotion/relegation → `esports-engine.ts`
+- [x] Casting tools: delayed broadcast (30s), fog-of-war for competitive integrity → `esports-engine.ts`
+- [x] Stats API: public player/dynasty statistics for community sites → `esports-engine.ts`
+- [x] Prize pool management: KALON escrow, conversion to real currency → `esports-engine.ts`
+
+### 13.3 Guild System
+**Priority**: P0 — Social stickiness  
+**Fabric**: nakama-fabric  
+**Depends on**: Phase 8.2 (alliances)  
+
+- [x] Guild creation: charter, ranks (5 tiers), permissions matrix → `fabrics/nakama-fabric/src/guild-system.ts` (base)
+- [x] Guild bank: shared KALON treasury, deposit/withdraw with audit trail → `fabrics/nakama-fabric/src/guild-expansion.ts`
+- [x] Guild quests: cooperative objectives with shared rewards → `guild-expansion.ts`
+- [x] Guild halls: persistent social spaces on estates (customizable) → `guild-expansion.ts`
+- [x] Guild vs Guild events: scheduled battles, trade competitions, racing → `guild-expansion.ts`
+- [x] Guild progression: XP, levels, unlocks (emblem, name color, bank slots) → `guild-expansion.ts`
+- [x] Cross-dynasty guilds: organizations that span multiple dynasties → `guild-expansion.ts`
+- [x] Guild recruitment board: searchable listings, application workflow → `guild-expansion.ts`
+
+### 13.4 Achievement & Collection System
+**Priority**: P1 — Completionist retention  
+**Fabric**: loom-core + archive  
+**Depends on**: Phase 4.3  
+
+- [x] Achievement framework: progress tracking, unlock notifications, reward distribution → `fabrics/archive/src/achievement-engine.ts`
+- [x] Achievement categories: exploration, economic, social, combat, governance, lore → `achievement-engine.ts`
+- [x] Cosmetic rewards: unique visual effects, titles, estate decorations → `achievement-engine.ts`
+- [x] Collection system: rare items, NPC relationships, world discoveries → `achievement-engine.ts`
+- [x] Seasonal achievements: time-limited challenges, exclusive rewards → `achievement-engine.ts`
+- [x] Dynasty achievements: collaborative dynasty milestones → `achievement-engine.ts`
+- [x] Achievement showcase: player profile with displayed achievements → `achievement-engine.ts`
+- [x] Remembrance integration: achievements become permanent historical records → `achievement-engine.ts`
+
+---
+
+## Phase 14: Make It Accessible (Wave 61-64)
+
+Every player, every device, every ability level.
+
+### 14.1 Mobile Client
+**Priority**: P0 — 60% of gaming audience  
+**Fabric**: bridge-loom-ue5  
+**Depends on**: Phase 5.3 (Pixel Streaming)  
+
+- [ ] Native mobile client: iOS + Android (UE5 cross-compile)
+- [ ] Mobile-optimized scalability profile (< 3GB RAM, GPU Tier Low/Mobile)
+- [ ] Touch controls: virtual joystick, context-sensitive action buttons
+- [ ] Mobile-specific UI: larger touch targets, simplified menus
+- [ ] Battery optimization: frame rate cap, background mode, push notifications
+- [ ] Cloud gaming fallback: Pixel Streaming for devices below minimum spec
+- [ ] Offline mode: estate management, inventory, chat (sync on reconnect)
+- [ ] Cross-platform play: mobile ↔ PC with input-aware matchmaking
+
+### 14.2 Accessibility Features
+**Priority**: P0 — Inclusive design  
+**Fabric**: bridge-loom-ue5 + selvage  
+
+- [ ] Screen reader support: UE5 Accessibility Framework integration
+- [ ] Colorblind modes: protanopia, deuteranopia, tritanopia presets
+- [ ] Text scaling: 50%-200% UI scale, resizable chat fonts
+- [ ] High contrast mode: enhanced outlines, simplified backgrounds
+- [ ] Audio descriptions: narrate visual events for vision-impaired players
+- [ ] Subtitles + closed captions: NPC dialogue, environmental sounds
+- [ ] One-handed control schemes: full gameplay with reduced inputs
+- [ ] Cognitive accessibility: simplified UI mode, extended timers, quest summaries
+
+### 14.3 Localization System
+**Priority**: P0 — Global audience  
+**Fabric**: selvage + shuttle  
+**Depends on**: Phase 8.1 (chat)  
+
+- [x] i18n framework: ICU message format, pluralization, date/number formatting → `fabrics/selvage/src/localization-engine.ts`
+- [x] 12 languages at launch: EN, ES, PT, FR, DE, IT, JP, KO, ZH-CN, ZH-TW, RU, AR → `localization-engine.ts`
+- [x] Dynamic NPC dialogue translation: LLM-powered real-time translation → `localization-engine.ts`
+- [x] Community translation platform: crowdsourced translations with review workflow → `localization-engine.ts`
+- [x] Cultural adaptation: region-specific content, visual style variations → `localization-engine.ts`
+- [x] Right-to-left UI support for Arabic → `localization-engine.ts`
+- [x] Voice localization: NPC speech synthesis per language → `localization-engine.ts`
+- [x] Remembrance translation: historical records accessible in all languages → `localization-engine.ts`
+
+### 14.4 Performance Optimization
+**Priority**: P0 — Low-end hardware  
+**Fabric**: bridge-loom-ue5 + loom-core  
+**Depends on**: Phase 5.2 (world streaming)  
+
+- [x] Minimum spec validation: GTX 1060 / RX 580, 8GB RAM, SSD preferred → `fabrics/loom-core/src/perf-optimization.ts`
+- [x] Scalability benchmarking: framerate targets per quality tier (Low=30fps, High=60fps, Ultra=120fps) → `perf-optimization.ts`
+- [x] Memory profiling: per-world memory budgets, streaming pool optimization → `perf-optimization.ts`
+- [x] Network optimization: adaptive tick rate (10-30Hz based on connection quality) → `perf-optimization.ts`
+- [ ] Asset optimization: texture streaming, mesh LOD pipeline, shader compilation cache
+- [x] Boot time optimization: < 30s from launch to world (shader pre-compilation) → `perf-optimization.ts`
+- [ ] Steam Deck verified: controller layout, 800p optimization, battery target 2h+
+- [ ] Cloud streaming integration: GeForce NOW, Xbox Cloud Gaming certification
+
+---
+
+## Phase 15: Make It Persistent (Wave 65-68)
+
+The Permanence Engine. What happens, stays happened.
+
+### 15.1 Witness Protocol — On-Chain Registry
+**Priority**: P0 — Core promise  
+**Fabric**: nakama-fabric + archive  
+**Depends on**: Phase 10.2 (data integrity)  
+
+- [x] MARKS registry smart contract (Ethereum L2 — Arbitrum/Base) → `witness-protocol.ts` L2 chain adapter abstraction
+- [x] Dynasty registration: on-chain founding record (name, founder, timestamp) → `witness-protocol.ts` registerDynastyFounding()
+- [x] World milestone registration: first settlement, population milestones, destruction → `witness-protocol.ts` registerWorldMilestone()
+- [x] Player milestone hashing: achievement hash published quarterly → `witness-protocol.ts` generatePlayerDigest()
+- [x] Gas optimization: batch registration (< $0.10 per dynasty record) → `witness-protocol.ts` submitBatch() with auto gas budget
+- [x] Chain explorer integration: public verification of all registered records → `witness-protocol.ts` getExplorerUrl()
+- [x] Cross-chain bridge: future-proof for chain migration → `witness-protocol.ts` ChainAdapterPort abstraction
+- [x] Ceremony system: Remembrance events generate on-chain attestations → `witness-protocol.ts` registerCeremony()
+
+### 15.2 Remembrance System — Deep Archive
+**Priority**: P0 — 200-year promise  
+**Fabric**: archive  
+**Depends on**: Phase 7.4 (Foundation Archive)  
+
+- [x] Remembrance compression: 10-year event history → narrative summary → `remembrance-system.ts` compressDecade()
+- [x] Dynasty genealogy tree: rendered visual lineage with key events → `remembrance-system.ts` generateDynastyTree()
+- [x] World history timeline: interactive scrollable history per world → `remembrance-system.ts` generateWorldTimeline()
+- [x] NPC biographies: procedurally generated life stories from memory logs → `remembrance-system.ts` generateNpcBiography()
+- [x] Search engine: full-text search across all Remembrance entries → `remembrance-system.ts` search()
+- [ ] Public API: read-only REST API for community historians/researchers
+- [ ] Archive browser: web-based exploration of game history
+- [x] Data format versioning: schema evolution over 200 years (Avro/Protobuf) → `remembrance-system.ts` migrateFormat()
+
+### 15.3 Dynasty Legacy System
+**Priority**: P1 — Generational play  
+**Fabric**: nakama-fabric + archive  
+**Depends on**: 15.2  
+
+- [x] Character death and succession: heir selection, inheritance rules → `dynasty-legacy.ts` processCharacterDeath()
+- [x] Legacy traits: personality/skill traits inherited from ancestors → `dynasty-legacy.ts` createCharacter() trait inheritance
+- [x] Heirloom items: named items that gain history and power across generations → `dynasty-legacy.ts` createHeirloom() / passHeirloom()
+- [x] Dynasty reputation compound interest: reputation builds over generations → `dynasty-legacy.ts` compoundReputation()
+- [x] Ancestral knowledge: access to forebears' discovered recipes, maps, contacts → `dynasty-legacy.ts` addAncestralKnowledge()
+- [x] Legacy quests: quests triggered by ancestor actions (revenge, treasure, prophecy) → `dynasty-legacy.ts` generateLegacyQuests()
+- [x] Dynasty chronicle: auto-generated narrative of dynasty history → `dynasty-legacy.ts` generateDynastyChronicle()
+- [x] Heritage buildings: estate structures that persist across character generations → `dynasty-legacy.ts` addHeritageBuilding()
+
+### 15.4 Time Compression Engine
+**Priority**: P1 — Core mechanic  
+**Fabric**: loom-core  
+**Depends on**: Phase 7.1 (world gen)  
+
+- [x] Time acceleration: configurable compression ratio (currently 1h IRL = 1 game day) → `time-compression.ts` initWorldClock() ratio 1-1000
+- [x] Season system: 4 seasons × 7 days = 28 IRL hours per game year → `time-compression.ts` getCurrentSeason()
+- [x] Historical era tracking: world ages, technological epochs, cultural periods → `time-compression.ts` getCurrentEra() / transitionEra()
+- [x] Future projection: AI simulates "what if nobody logs in" (world continues) → `time-compression.ts` projectFuture() via FutureSimulatorPort
+- [x] Time-lapse replay: watch world history unfold in accelerated playback → `time-compression.ts` recordTimelapse()
+- [x] Calendar system: in-game calendar with holidays, harvest dates, political terms → `time-compression.ts` addCalendarEvent()
+- [x] Aging NPCs: visual aging, career progression, retirement, death → `time-compression.ts` computeNpcAge() (logic; visual aging is UE5)
+- [x] Environmental change over time: deforestation, urbanization, pollution, restoration → `time-compression.ts` trackEnvironmentalChange()
+
+---
+
+## Phase 16: Make It Evolve (Wave 69-72)
+
+Self-improving systems. The world gets smarter the longer it runs.
+
+### 16.1 Adaptive World Systems
+**Priority**: P0 — Living worlds  
+**Fabric**: loom-core + pipelines  
+**Depends on**: Phase 11.3 (analytics)  
+
+- [x] Player density-responsive spawning: more content in popular areas → `adaptive-world.ts` updateZoneDensity()
+- [x] Resource regeneration tuning: adjust based on extraction rates → `adaptive-world.ts` adjustResourceRegen()
+- [x] NPC population dynamics: birth rates, migration, profession shifts → `adaptive-world.ts` computePopulationDynamics()
+- [x] World event generator: wars, plagues, golden ages triggered by aggregate behavior → `adaptive-world.ts` evaluateWorldEvents()
+- [x] Climate change simulation: player industry affects weather patterns over years → `adaptive-world.ts` updateClimate()
+- [x] Trade route emergence: frequently traveled paths become roads, then highways → `adaptive-world.ts` updateTradeRoutes()
+- [x] Abandoned area decay: unused zones revert to wilderness over in-game years → `adaptive-world.ts` processDecay()
+- [x] Self-balancing economy: ML-driven parameter adjustment to maintain healthy metrics → `adaptive-world.ts` balanceEconomy()
+
+### 16.2 ML Model Continuous Improvement
+**Priority**: P1 — Technical excellence  
+**Fabric**: pipelines  
+**Depends on**: Phase 11.1 (Tier 4 NPC)  
+
+- [x] NPC behavior feedback loop: player engagement → training data → improved models → `ml-pipeline.ts` recordFeedback()
+- [x] A/B model deployment: canary rollout of improved NPC models per world → `ml-pipeline.ts` deployCanary() / evaluateCanary()
+- [x] Model performance monitoring: quality score, latency, cost per interaction → `ml-pipeline.ts` collectMetrics()
+- [x] Fine-tuning pipeline: domain-specific LLM fine-tuning on game dialogue corpus → `ml-pipeline.ts` triggerFineTune()
+- [x] Distillation: compress Tier 4 quality into smaller Tier 3 models → `ml-pipeline.ts` triggerDistillation()
+- [x] Local model hosting: Ollama/vLLM for latency-sensitive NPC interactions → `ml-pipeline.ts` registerLocalHost()
+- [x] Player feedback integration: thumbs up/down on NPC responses → RLHF → `ml-pipeline.ts` recordFeedback()
+- [x] Automated regression testing: NPC behavior quality benchmarks per deploy → `ml-pipeline.ts` runRegressionSuite()
+
+### 16.3 Plugin Architecture
+**Priority**: P1 — Extensibility  
+**Fabric**: loom-core  
+**Depends on**: Core architecture  
+
+- [x] Game Feature Plugin system: modular feature packs (combat, crafting, governance) → `plugin-system.ts` registerPlugin()
+- [x] Plugin dependency resolution: load order, conflict detection, version constraints → `plugin-system.ts` resolveDependencies()
+- [x] Hot-reload for plugins: update game logic without server restart → `plugin-system.ts` hotReload()
+- [x] Plugin marketplace: community-created plugins (audited, signed) → `plugin-system.ts` publishToMarketplace()
+- [x] Plugin sandboxing: isolated execution environment, resource limits → `plugin-system.ts` executePluginAction() via SandboxPort
+- [x] API versioning: stable plugin API with backward compatibility guarantees → `plugin-system.ts` checkApiCompatibility()
+- [x] Plugin telemetry: per-plugin performance metrics, error rates → `plugin-system.ts` getPluginTelemetry()
+- [x] Documentation generator: auto-generate API docs from plugin interfaces → `plugin-system.ts` generateApiDocs()
+
+### 16.4 Developer Experience
+**Priority**: P1 — Community growth  
+**Fabric**: tools  
+**Depends on**: 16.3  
+
+- [ ] Modding SDK: TypeScript API for world event hooks, custom NPCs, quests
+- [ ] World editor: web-based tool for placing entities, defining zones, triggering events
+- [ ] NPC personality editor: GUI for configuring NPC archetypes and behaviors
+- [ ] Economy simulator: sandbox tool for testing economic parameter changes
+- [ ] DevPortal: documentation site, API explorer, community forums
+- [ ] Sample plugins: 5 example plugins with full documentation
+- [ ] CI pipeline for community plugins: automated testing, security scanning
+- [ ] Discord bot: development status, API status, world stats
+
+---
+
+## Phase 17: Make It Eternal (Wave 73-76)
+
+The 200-year architecture. Technology changes; the world endures.
+
+### 17.1 Engine Abstraction
+**Priority**: P1 — Longevity  
+**Fabric**: contracts/bridge-loom  
+**Depends on**: All previous phases  
+
+- [ ] Rendering engine abstraction: UE5 is a plugin, can be replaced
+- [ ] Bridge Loom interface versioning: v1 contract locked, v2 development
+- [ ] Unity adapter proof-of-concept: validate engine portability
+- [ ] Godot adapter exploration: open-source rendering option
+- [ ] Custom engine evaluation: purpose-built renderer for 600+ worlds
+- [ ] Engine migration plan: < 6 month swap for any rendering engine
+- [ ] Backward compatibility: old clients supported during transition period
+- [ ] Performance benchmarks per engine: standardized scene for comparison
+
+### 17.2 Infrastructure Evolution
+**Priority**: P0 — Operational sustainability  
+**Fabric**: All  
+
+- [ ] Multi-cloud deployment: AWS + GCP + Azure for vendor resilience
+- [ ] Bare-metal evaluation: dedicated servers for highest-traffic worlds
+- [ ] Edge computing: game logic at CDN edge for < 10ms response time
+- [ ] WebAssembly backend: Rust core compiled to WASM for serverless scaling
+- [ ] ARM server support: Graviton/Ampere for cost reduction (30-40% savings)
+- [ ] Green computing: carbon-aware scheduling, renewable energy regions
+- [ ] Cost optimization: reserved instances, spot fleet for load testing, savings plans
+- [ ] IPv6 native: full dual-stack networking, IPv6-only option
+
+### 17.3 Advanced Networking
+**Priority**: P1  
+**Fabric**: selvage + bridge-loom-ue5  
+**Depends on**: Phase 6.3 (multi-region)  
+
+- [ ] Custom UDP protocol: reliability layer over GameNetworkingSockets
+- [ ] State synchronization v2: interest management with priority queues
+- [ ] Bandwidth optimization: ML-driven prediction of needed state updates
+- [ ] Client-side prediction v2: rollback netcode for competitive play
+- [ ] P2P mesh for local interactions: reduce server load for nearby players
+- [ ] Connection migration: seamless handoff between servers during Weave transit
+- [ ] Network condition simulation: built-in lag/loss/jitter simulation for testing
+- [ ] Protocol evolution: versioned wire format, backward compatible extension
+
+### 17.4 VR/AR Client
+**Priority**: P2 — Future platform  
+**Fabric**: bridge-loom-ue5  
+**Depends on**: 17.1  
+
+- [ ] VR rendering pipeline: stereoscopic, 90fps minimum, foveated rendering
+- [ ] VR interaction: hand tracking, gaze selection, spatial UI
+- [ ] AR overlay: real-world table surface as game map (Apple Vision Pro)
+- [ ] Spatial audio: HRTF with head tracking for true 3D positioning
+- [ ] Haptic feedback: controller vibration patterns for game events
+- [ ] Motion sickness mitigation: comfort vignette, teleport locomotion option
+- [ ] Cross-reality play: VR players share worlds with flat-screen players
+- [ ] Pixel Streaming to standalone headsets (Quest): no local GPU needed
+
+---
+
+## Scale Targets
+
+| Metric | Launch | Year 1 | Year 3 | Year 5 | Year 10 |
+|--------|--------|--------|--------|--------|---------|
+| Registered users | 500K | 5M | 15M | 25M | 50M |
+| **Concurrent active** | **50K** | 500K | 2M | 5M | 10M |
+| Worlds online | 60 | 180 | 400 | 600 | 1,200 |
+| Daily transactions | 2M | 20M | 100M | 500M | 2B |
+| Remembrance entries/day | 50K | 500K | 2M | 10M | 50M |
+| NPC agents running | 10K | 100K | 1M | 10M | 100M |
+| Data stored (total) | 500GB | 10TB | 100TB | 1PB | 10PB |
+| Rendering engines supported | 1 | 1 | 2 | 3 | 4+ |
+
+---
+
+## Post-Launch Roadmap (Years 3-10)
+
+| Timeframe | Milestone |
+|-----------|-----------|
+| Year 3-5 | UE5 → UE6 migration (architecture designed to survive) |
+| Year 3-5 | VR/AR client (Meta/Apple Vision via Pixel Streaming → native) |
+| Year 3-5 | First player-destroyed world (permanent consequences) |
+| Year 5-8 | Sapient NPC emergence (procedural generation + Tier 4 agents) |
+| Year 5-8 | Neural interface experimentation (EEG input, premium tier) |
+| Year 8-10 | Compression approaches 1:1 (Phase V), history and real time converge |

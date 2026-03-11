@@ -1,0 +1,139 @@
+// gRPC service definition for Loom ↔ Bridge communication
+// Thread: bridge/bridge-loom-ue5/grpc-proto
+// Tier: 0
+//
+// Binary transport uses FlatBuffers payloads inside gRPC byte streams.
+// This gives us the best of both worlds: gRPC for connection management,
+// FlatBuffers for zero-copy deserialization on the hot path.
+
+syntax = "proto3";
+
+package loom.bridge;
+
+option csharp_namespace = "Loom.Bridge";
+
+// ─── Primary Service ────────────────────────────────────────────
+
+service BridgeLoom {
+  // Bidirectional stream: Loom pushes state, Bridge pushes input
+  // This is the hot path — every tick at 30Hz
+  rpc GameStream (stream ClientMessage) returns (stream ServerMessage);
+
+  // Capability negotiation on connection
+  rpc Negotiate (NegotiateRequest) returns (NegotiateResponse);
+
+  // Health monitoring (inspector polls this)
+  rpc HealthCheck (HealthCheckRequest) returns (HealthCheckResponse);
+
+  // World preload/unload commands (less frequent)
+  rpc WorldCommand (WorldCommandRequest) returns (WorldCommandResponse);
+}
+
+// ─── Negotiate ──────────────────────────────────────────────────
+
+message NegotiateRequest {
+  string fabric_id = 1;
+  string fabric_name = 2;        // "UE5.5", "UE6-Preview"
+  int32 max_resolution_width = 3;
+  int32 max_resolution_height = 4;
+  int32 max_refresh_rate = 5;
+  string rendering_tier = 6;     // "cinematic" | "high" | "performance" | "streaming"
+  RenderingFeatures features = 7;
+  int32 max_visible_entities = 8;
+  bool supports_weave_zone = 9;
+  bool supports_pixel_streaming = 10;
+  int32 preferred_update_rate_hz = 11;
+  bool supports_metahuman = 12;
+  int32 max_metahuman_instances = 13;
+}
+
+message RenderingFeatures {
+  bool nanite_geometry = 1;
+  bool hardware_ray_tracing = 2;
+  bool software_ray_tracing = 3;
+  bool global_illumination = 4;
+  bool virtual_shadow_maps = 5;
+  bool volumetric_clouds = 6;
+  bool hair_simulation = 7;
+  bool cloth_simulation = 8;
+  bool facial_animation = 9;
+  bool procedural_generation = 10;
+  bool metasound_audio = 11;
+  bool mass_entity = 12;
+  bool chaos_physics = 13;
+}
+
+message NegotiateResponse {
+  bool accepted = 1;
+  int32 assigned_update_rate_hz = 2;   // Loom decides actual tick rate
+  int32 max_entities_budget = 3;       // Entity cap Loom will send
+  string session_id = 4;
+  repeated string preload_worlds = 5;  // Worlds to start loading
+}
+
+// ─── Game Stream Messages ───────────────────────────────────────
+
+message ClientMessage {
+  oneof payload {
+    bytes player_input = 1;       // FlatBuffer PlayerInput
+    bytes physics_event = 2;      // FlatBuffer PhysicsEvent
+    bytes telemetry = 3;          // FlatBuffer performance telemetry
+  }
+  uint32 sequence = 10;
+  int64 timestamp_us = 11;
+}
+
+message ServerMessage {
+  oneof payload {
+    bytes entity_snapshot = 1;    // FlatBuffer EntitySnapshot batch
+    bytes entity_spawn = 2;       // FlatBuffer EntitySpawn
+    bytes entity_despawn = 3;     // FlatBuffer EntityDespawn
+    bytes time_of_day = 4;        // FlatBuffer TimeOfDayUpdate
+    bytes weather = 5;            // FlatBuffer WeatherUpdate
+    bytes chunk_load = 6;         // FlatBuffer ChunkLoad
+    bytes chunk_unload = 7;       // FlatBuffer ChunkUnload
+    bytes facial_pose = 8;        // FlatBuffer FacialPose
+  }
+  uint32 sequence = 10;
+  int64 timestamp_us = 11;
+  string correlation_id = 12;
+}
+
+// ─── World Commands ─────────────────────────────────────────────
+
+message WorldCommandRequest {
+  string command_type = 1;        // "preload" | "unload"
+  string world_id = 2;
+  repeated AssetManifestEntry assets = 3;
+  float priority = 4;
+}
+
+message AssetManifestEntry {
+  string content_hash = 1;
+  string asset_name = 2;
+  uint64 size_bytes = 3;
+}
+
+message WorldCommandResponse {
+  bool success = 1;
+  string error_message = 2;
+  float estimated_load_time_sec = 3;
+}
+
+// ─── Health Check ───────────────────────────────────────────────
+
+message HealthCheckRequest {
+  string request_id = 1;
+}
+
+message HealthCheckResponse {
+  string request_id = 1;
+  bool healthy = 2;
+  float current_fps = 3;
+  float frame_time_ms = 4;
+  int32 visible_entities = 5;
+  float memory_usage_mb = 6;
+  float gpu_usage_percent = 7;
+  int32 loaded_chunks = 8;
+  int32 active_metahumans = 9;
+}

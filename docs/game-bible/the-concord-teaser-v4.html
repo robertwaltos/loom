@@ -1,0 +1,1595 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE CONCORD — Six Hundred Worlds Are Waiting</title>
+    <meta
+      name="description"
+      content="The age of scarcity is over. The age of meaning has begun. Six hundred worlds. One Chronicle. Your story starts now."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cinzel:wght@400;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --dawn: #f8f4ee;
+        --parchment: #ede8df;
+        --cream: #e5ddd0;
+        --gold: #c49a3c;
+        --gold2: #d4aa4c;
+        --goldDim: #9a7a2c;
+        --goldPale: #e8d494;
+        --ink: #1a1410;
+        --inkLight: #2e2420;
+        --dim: #8a7a6a;
+        --lattice: #2a5c8a;
+        --latticePale: #4a8abe;
+        --teal: #1a7a6a;
+        --copper: #a05c28;
+        --red: #8a2020;
+        --night: #0d1525;
+        --void: #060a12;
+        --border: rgba(26, 20, 16, 0.12);
+        --borderGold: rgba(196, 154, 60, 0.3);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--dawn);
+        color: var(--ink);
+        font-family: 'Lora', Georgia, serif;
+        font-size: 18px;
+        line-height: 1.7;
+        cursor: none;
+        overflow-x: hidden;
+      }
+
+      /* ── CURSOR ───────────────────────────────────────────────── */
+      #cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 9999;
+      }
+      #cursor-ring {
+        width: 26px;
+        height: 26px;
+        border: 1.5px solid var(--gold);
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.2s,
+          height 0.2s,
+          opacity 0.2s;
+      }
+      #cursor-dot {
+        width: 4px;
+        height: 4px;
+        background: var(--gold);
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+
+      /* ── ATMOSPHERIC CANVAS ───────────────────────────────────── */
+      #atmosphere {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      /* ── NAV ──────────────────────────────────────────────────── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 22px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition:
+          background 0.4s,
+          border-color 0.4s;
+      }
+      nav.scrolled {
+        background: rgba(248, 244, 238, 0.95);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-logo {
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        letter-spacing: 5px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+      }
+      .nav-links {
+        display: flex;
+        gap: 32px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: var(--dim);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+
+      /* ── HERO ─────────────────────────────────────────────────── */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 40px 80px;
+        position: relative;
+      }
+
+      /* Radiant light burst behind hero title */
+      #hero::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 800px;
+        height: 800px;
+        background: radial-gradient(
+          ellipse at center,
+          rgba(196, 154, 60, 0.12) 0%,
+          rgba(196, 154, 60, 0.04) 40%,
+          transparent 70%
+        );
+        pointer-events: none;
+        animation: breathe 6s ease-in-out infinite;
+      }
+
+      @keyframes breathe {
+        0%,
+        100% {
+          opacity: 0.6;
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: translate(-50%, -50%) scale(1.08);
+        }
+      }
+
+      .hero-eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 5px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        opacity: 0;
+        animation: fadeUp 1s 0.2s forwards;
+      }
+
+      .hero-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(56px, 11vw, 120px);
+        font-weight: 900;
+        color: var(--ink);
+        letter-spacing: -0.01em;
+        line-height: 0.92;
+        margin-bottom: 8px;
+        opacity: 0;
+        animation: fadeUp 1s 0.5s forwards;
+        position: relative;
+      }
+
+      /* Gold underline on THE */
+      .hero-title span.accent {
+        color: var(--gold);
+      }
+
+      .hero-subtitle {
+        font-family: 'Cinzel', serif;
+        font-size: clamp(12px, 2vw, 16px);
+        letter-spacing: 6px;
+        color: var(--dim);
+        text-transform: uppercase;
+        margin-bottom: 56px;
+        opacity: 0;
+        animation: fadeUp 1s 0.7s forwards;
+      }
+
+      .hero-statement {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(20px, 3vw, 32px);
+        font-style: italic;
+        font-weight: 400;
+        color: var(--inkLight);
+        max-width: 680px;
+        line-height: 1.45;
+        margin-bottom: 72px;
+        opacity: 0;
+        animation: fadeUp 1s 1s forwards;
+      }
+
+      .hero-statement em {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      /* ── COUNTDOWN ──────────────────────────────────────────── */
+      .countdown-block {
+        opacity: 0;
+        animation: fadeUp 1s 1.3s forwards;
+        text-align: center;
+      }
+      .countdown-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 4px;
+        color: var(--dim);
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        display: block;
+      }
+      .countdown {
+        display: flex;
+        gap: 48px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cd-unit {
+        text-align: center;
+      }
+      .cd-num {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(44px, 7vw, 72px);
+        font-weight: 700;
+        color: var(--ink);
+        display: block;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        min-width: 90px;
+      }
+      .cd-unit-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: var(--dim);
+        text-transform: uppercase;
+        margin-top: 10px;
+        display: block;
+      }
+      .cd-divider {
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        color: var(--border);
+        line-height: 1;
+        margin-top: 8px;
+        display: block;
+        align-self: flex-start;
+        padding-top: 8px;
+      }
+      .block-ticker {
+        margin-top: 32px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 11px;
+        color: var(--dim);
+        letter-spacing: 2px;
+      }
+      .block-ticker span {
+        color: var(--lattice);
+      }
+
+      .scroll-cue {
+        position: absolute;
+        bottom: 48px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: fadeUp 1s 1.8s forwards;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+      .scroll-cue span {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: var(--dim);
+        text-transform: uppercase;
+      }
+      .scroll-line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(var(--goldDim), transparent);
+        animation: pulse 2s infinite;
+      }
+
+      /* ── LAYOUT CONTAINERS ──────────────────────────────────── */
+      .section {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 80px 40px;
+      }
+      .section-wide {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 80px 40px;
+      }
+
+      /* ── RULE ─────────────────────────────────────────────────── */
+      .rule {
+        max-width: 800px;
+        margin: 0 auto 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream), transparent);
+      }
+      .rule-gold {
+        max-width: 800px;
+        margin: 0 auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--goldDim), transparent);
+      }
+
+      /* ── EYEBROW / HEADING ──────────────────────────────────── */
+      .eyebrow {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 4px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(32px, 5vw, 52px);
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.15;
+        margin-bottom: 32px;
+      }
+      .h2 em {
+        color: var(--gold);
+        font-style: italic;
+      }
+      .h2 i {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      .body-text {
+        font-family: 'Lora', serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--inkLight);
+        line-height: 1.85;
+        margin-bottom: 24px;
+      }
+      .body-text strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      /* ── PULL QUOTE ─────────────────────────────────────────── */
+      .pull-quote {
+        text-align: center;
+        padding: 80px 40px;
+        max-width: 760px;
+        margin: 0 auto;
+        position: relative;
+      }
+      .pull-quote::before,
+      .pull-quote::after {
+        content: '"';
+        font-family: 'Playfair Display', serif;
+        font-size: 120px;
+        color: var(--cream);
+        line-height: 0;
+        position: absolute;
+      }
+      .pull-quote::before {
+        top: 80px;
+        left: 20px;
+      }
+      .pull-quote::after {
+        content: '"';
+        bottom: 40px;
+        right: 20px;
+      }
+
+      .pull-quote p {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(22px, 3.5vw, 34px);
+        font-style: italic;
+        font-weight: 400;
+        color: var(--ink);
+        line-height: 1.45;
+        position: relative;
+        z-index: 1;
+      }
+      .pull-quote p em {
+        color: var(--gold);
+      }
+
+      /* ── FEATURE PANEL ──────────────────────────────────────── */
+      .feature-panel {
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--gold);
+        padding: 48px;
+        margin: 48px 0;
+        background: var(--parchment);
+        position: relative;
+      }
+      .feature-panel[data-label]::before {
+        content: attr(data-label);
+        position: absolute;
+        top: -13px;
+        left: 32px;
+        background: var(--parchment);
+        padding: 0 14px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+      }
+      .feature-panel p {
+        color: var(--inkLight);
+        font-size: 17px;
+        line-height: 1.75;
+        margin-bottom: 16px;
+      }
+      .feature-panel p:last-child {
+        margin-bottom: 0;
+      }
+      .feature-panel ul {
+        list-style: none;
+      }
+      .feature-panel li {
+        padding: 12px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 17px;
+        color: var(--inkLight);
+        display: flex;
+        gap: 16px;
+        align-items: baseline;
+      }
+      .feature-panel li:last-child {
+        border-bottom: none;
+      }
+      .feature-panel li::before {
+        content: '◆';
+        color: var(--goldDim);
+        font-size: 8px;
+        flex-shrink: 0;
+        margin-top: 8px;
+      }
+      .feature-panel h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        color: var(--ink);
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      /* ── GRID OF FOUR ──────────────────────────────────────── */
+      .quad-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        border: 1px solid var(--border);
+        margin: 48px 0;
+      }
+      .quad-cell {
+        padding: 40px 32px;
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        transition: background 0.3s;
+      }
+      .quad-cell:hover {
+        background: var(--parchment);
+      }
+      .quad-cell:nth-child(2n) {
+        border-right: none;
+      }
+      .quad-cell:nth-last-child(-n + 2) {
+        border-bottom: none;
+      }
+      .quad-num {
+        font-family: 'Playfair Display', serif;
+        font-size: 52px;
+        color: var(--cream);
+        line-height: 1;
+        margin-bottom: 14px;
+        display: block;
+      }
+      .quad-title {
+        font-family: 'Cinzel', serif;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: block;
+      }
+      .quad-body {
+        font-size: 14px;
+        color: var(--dim);
+        line-height: 1.6;
+      }
+
+      /* ── LOG BLOCK ──────────────────────────────────────────── */
+      .log-block {
+        background: var(--night);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-left: 3px solid var(--teal);
+        padding: 32px 36px;
+        margin: 40px 0;
+        overflow-x: auto;
+      }
+      .log-block pre {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        line-height: 1.9;
+        color: #5aaa8a;
+        white-space: pre-wrap;
+      }
+      .log-ts {
+        color: #2a6a5a;
+      }
+      .log-key {
+        color: #3a8a7a;
+      }
+      .log-val {
+        color: #6abca0;
+      }
+      .log-human {
+        color: #8adac0;
+      }
+      .log-ghost {
+        color: #1a3a2a;
+        opacity: 0.4;
+      }
+
+      /* ── MARKS GRID ─────────────────────────────────────────── */
+      .marks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin: 48px 0;
+      }
+      .mark-card {
+        border: 1px solid var(--border);
+        padding: 32px 24px;
+        text-align: center;
+        transition:
+          border-color 0.3s,
+          transform 0.3s,
+          background 0.3s;
+        cursor: default;
+      }
+      .mark-card:hover {
+        border-color: var(--goldDim);
+        transform: translateY(-2px);
+        background: var(--parchment);
+      }
+      .mark-glyph {
+        font-family: 'Cinzel', serif;
+        font-size: 36px;
+        color: var(--goldDim);
+        margin-bottom: 14px;
+        display: block;
+      }
+      .mark-name {
+        font-family: 'Cinzel', serif;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .mark-desc {
+        font-size: 13px;
+        color: var(--dim);
+        line-height: 1.5;
+      }
+      .mark-count {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        color: var(--dim);
+        letter-spacing: 2px;
+        margin-top: 12px;
+        display: block;
+        text-transform: uppercase;
+      }
+
+      /* ── COVENANT LIST ──────────────────────────────────────── */
+      .covenant-list {
+        list-style: none;
+        counter-reset: covenant;
+        margin: 32px 0;
+      }
+      .covenant-list li {
+        counter-increment: covenant;
+        padding: 20px 0 20px 56px;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        font-size: 17px;
+        color: var(--inkLight);
+        line-height: 1.6;
+      }
+      .covenant-list li:last-child {
+        border-bottom: none;
+      }
+      .covenant-list li::before {
+        content: counter(covenant, upper-roman);
+        position: absolute;
+        left: 0;
+        top: 20px;
+        font-family: 'Cinzel', serif;
+        font-size: 12px;
+        color: var(--goldDim);
+        letter-spacing: 2px;
+        width: 40px;
+        text-align: right;
+      }
+
+      /* ── WITNESS FORM ─────────────────────────────────────── */
+      .witness-section {
+        background: var(--parchment);
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--gold);
+        padding: 56px 48px;
+        margin: 48px 0;
+      }
+      .witness-section h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        color: var(--ink);
+        margin-bottom: 16px;
+        font-weight: 700;
+      }
+      .witness-section p {
+        font-size: 17px;
+        color: var(--dim);
+        margin-bottom: 40px;
+        font-style: italic;
+      }
+      .form-row {
+        margin-bottom: 28px;
+      }
+      .form-label {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .form-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1.5px solid var(--border);
+        padding: 12px 0;
+        color: var(--ink);
+        font-family: 'Lora', serif;
+        font-size: 18px;
+        outline: none;
+        transition: border-color 0.3s;
+        caret-color: var(--gold);
+      }
+      .form-input::placeholder {
+        color: var(--dim);
+        opacity: 0.5;
+      }
+      .form-input:focus {
+        border-bottom-color: var(--goldDim);
+      }
+      .form-textarea {
+        resize: none;
+        min-height: 90px;
+        line-height: 1.6;
+      }
+      .btn-submit {
+        display: inline-flex;
+        align-items: center;
+        gap: 16px;
+        background: var(--ink);
+        border: none;
+        padding: 16px 44px;
+        color: var(--dawn);
+        font-family: 'Cinzel', serif;
+        font-size: 13px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        cursor: none;
+        transition: background 0.3s;
+        margin-top: 16px;
+      }
+      .btn-submit:hover {
+        background: var(--inkLight);
+      }
+      .btn-submit::after {
+        content: '→';
+        font-size: 16px;
+      }
+      .confirm-text {
+        display: none;
+        margin-top: 28px;
+        font-family: 'Playfair Display', serif;
+        font-size: 18px;
+        font-style: italic;
+        color: var(--gold);
+        line-height: 1.6;
+      }
+
+      /* ── TIERS ──────────────────────────────────────────────── */
+      .tier-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        border: 1px solid var(--border);
+        margin: 48px 0;
+      }
+      .tier-cell {
+        padding: 40px 24px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+      .tier-cell:last-child {
+        border-right: none;
+      }
+      .tier-cell.featured {
+        background: var(--parchment);
+      }
+      .tier-cell.featured::before {
+        content: 'Most Popular';
+        display: block;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        letter-spacing: 3px;
+        color: var(--goldDim);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        margin-top: -4px;
+      }
+      .t-name {
+        font-family: 'Cinzel', serif;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: var(--gold);
+        margin-bottom: 20px;
+        display: block;
+      }
+      .t-price {
+        font-family: 'Playfair Display', serif;
+        font-size: 48px;
+        color: var(--ink);
+        line-height: 1;
+        display: block;
+        margin-bottom: 4px;
+        font-weight: 700;
+      }
+      .t-per {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 9px;
+        color: var(--dim);
+        letter-spacing: 2px;
+        margin-bottom: 28px;
+        display: block;
+      }
+      .t-feats {
+        list-style: none;
+        text-align: left;
+        font-size: 13px;
+        color: var(--dim);
+        line-height: 2.2;
+      }
+
+      /* ── FINAL CTA ──────────────────────────────────────────── */
+      .cta-block {
+        text-align: center;
+        padding: 120px 40px;
+        background: radial-gradient(ellipse at 50% 50%, rgba(196, 154, 60, 0.08), transparent 60%);
+      }
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: var(--ink);
+        padding: 20px 56px;
+        color: var(--dawn);
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: none;
+        transition: background 0.3s;
+        font-weight: 600;
+      }
+      .btn-primary:hover {
+        background: var(--gold);
+        color: var(--ink);
+      }
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        background: transparent;
+        border: 1.5px solid var(--border);
+        padding: 20px 56px;
+        color: var(--ink);
+        font-family: 'Cinzel', serif;
+        font-size: 14px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-decoration: none;
+        cursor: none;
+        transition:
+          border-color 0.3s,
+          background 0.3s;
+      }
+      .btn-secondary:hover {
+        border-color: var(--goldDim);
+        background: var(--parchment);
+      }
+      .btn-group {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 48px;
+      }
+
+      /* ── FOOTER ─────────────────────────────────────────────── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 56px 40px;
+        text-align: center;
+      }
+      footer p {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 10px;
+        color: var(--dim);
+        letter-spacing: 2px;
+        line-height: 2.4;
+      }
+      footer a {
+        color: var(--goldDim);
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: var(--gold);
+      }
+
+      /* ── ANIMATIONS ─────────────────────────────────────────── */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.9s,
+          transform 0.9s;
+      }
+      .reveal.in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 600px) {
+        nav {
+          padding: 18px 24px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .section {
+          padding: 60px 24px;
+        }
+        .feature-panel {
+          padding: 32px 24px;
+        }
+        .witness-section {
+          padding: 40px 24px;
+        }
+        .pull-quote::before,
+        .pull-quote::after {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cursor">
+      <div id="cursor-ring"></div>
+      <div id="cursor-dot"></div>
+    </div>
+    <canvas id="atmosphere"></canvas>
+
+    <!-- NAV -->
+    <nav id="nav">
+      <div class="nav-logo">The Concord</div>
+      <ul class="nav-links">
+        <li><a href="#radiance">The Age</a></li>
+        <li><a href="#chronicle">The Chronicle</a></li>
+        <li><a href="#covenant">Covenant</a></li>
+        <li><a href="#register">Register</a></li>
+      </ul>
+    </nav>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- HERO -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <section id="hero">
+      <p class="hero-eyebrow">Founding Event · 2027 · Six Hundred Worlds</p>
+
+      <h1 class="hero-title"><span class="accent">The</span><br />Concord</h1>
+
+      <p class="hero-subtitle">A Civilisation · A Chronicle · A New Age</p>
+
+      <p class="hero-statement">
+        The age of scarcity is over.<br />
+        The age of <em>meaning</em> has begun.
+      </p>
+
+      <div class="countdown-block">
+        <span class="countdown-label">Founding Event Opens In</span>
+        <div class="countdown">
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-days">---</span>
+            <span class="cd-unit-label">Days</span>
+          </div>
+          <div class="cd-unit" style="display: flex; align-items: flex-start; padding-top: 8px">
+            <span class="cd-divider" style="font-size: 48px; color: var(--border); line-height: 1.2"
+              >·</span
+            >
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-hours">--</span>
+            <span class="cd-unit-label">Hours</span>
+          </div>
+          <div class="cd-unit" style="display: flex; align-items: flex-start; padding-top: 8px">
+            <span class="cd-divider" style="font-size: 48px; color: var(--border); line-height: 1.2"
+              >·</span
+            >
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-min">--</span>
+            <span class="cd-unit-label">Minutes</span>
+          </div>
+          <div class="cd-unit" style="display: flex; align-items: flex-start; padding-top: 8px">
+            <span class="cd-divider" style="font-size: 48px; color: var(--border); line-height: 1.2"
+              >·</span
+            >
+          </div>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-sec">--</span>
+            <span class="cd-unit-label">Seconds</span>
+          </div>
+        </div>
+        <p class="block-ticker">Ethereum Block: <span id="block-height">–––––––</span></p>
+      </div>
+
+      <div class="scroll-cue">
+        <div class="scroll-line"></div>
+        <span>Enter</span>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- THE AGE OF RADIANCE -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule-gold"></div>
+
+    <section class="section" id="radiance">
+      <div class="reveal">
+        <span class="eyebrow">Context · The World of 2031</span>
+        <h2 class="h2">Humanity woke up one morning<br />and found out <em>it had won</em>.</h2>
+        <p class="body-text">
+          Zero-point energy reached commercial scale in 2024. By 2031, power was effectively free.
+          When energy is free, water is free. When water is free, food is abundant. When food is
+          abundant, the territorial anxiety that drove human conflict for two hundred millennia
+          quietly dissolved.
+        </p>
+        <p class="body-text">
+          Matterwave synthesis made element extraction obsolete. Nanite therapies extended healthy
+          lifespans past what any previous generation thought possible. The great compression of
+          human anxiety — scarcity, disease, death — began, for the first time, to relax.
+        </p>
+        <p class="body-text">
+          And then Dr Amara Okafor ran a test in a Lagos basement. And the universe opened a door.
+        </p>
+      </div>
+
+      <div class="quad-grid reveal">
+        <div class="quad-cell">
+          <span class="quad-num">∞</span>
+          <span class="quad-title">Free Energy</span>
+          <p class="quad-body">
+            Zero-point extraction. Unlimited, clean, permanent. The engine of every other change.
+          </p>
+        </div>
+        <div class="quad-cell">
+          <span class="quad-num">0</span>
+          <span class="quad-title">Scarcity</span>
+          <p class="quad-body">
+            Matterwave synthesis creates any element on demand. Mining: obsolete. Resource wars:
+            historical.
+          </p>
+        </div>
+        <div class="quad-cell">
+          <span class="quad-num">+</span>
+          <span class="quad-title">Longevity</span>
+          <p class="quad-body">
+            Nanite therapies. Cellular rejuvenation. Neural mapping. The question is no longer
+            survival. It is significance.
+          </p>
+        </div>
+        <div class="quad-cell">
+          <span class="quad-num">600</span>
+          <span class="quad-title">Worlds Waiting</span>
+          <p class="quad-body">
+            The Lattice connects them all. The Survey Corps will spend thirty-five years unlocking
+            them. Every door is open.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="pull-quote reveal">
+      <p>
+        "When everything material can be had,<br />
+        <em>meaning becomes the only thing worth building.</em>"
+      </p>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- THE FOUNDING MOMENT -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule"></div>
+    <section class="section">
+      <div class="reveal">
+        <span class="eyebrow">Origin · August 14, 2031</span>
+        <h2 class="h2">She had been preparing for that Tuesday <em>her entire life</em>.</h2>
+        <p class="body-text">
+          The test was not an accident. It was the culmination of everything Dr Okafor and Dr
+          Adeyemi had built together — years of mathematics, years of preparation, years of waiting
+          for the equipment, the funding, and the courage to exist simultaneously.
+        </p>
+        <p class="body-text">
+          When the probe returned intact — temperature nominal, mass perfect, alive in a universe
+          that had just proven itself larger than anyone had measured — she said four words.
+        </p>
+      </div>
+
+      <div class="log-block reveal">
+        <pre><span class="log-ts">[2031-08-14T09:17:44Z]</span> <span class="log-key">WARNING:</span>  <span class="log-val">Power draw exceeds permitted parameters by 340%.</span>
+<span class="log-ts">[2031-08-14T09:17:44Z]</span> <span class="log-key">OKAFOR_A:</span> <span class="log-human">Acknowledged. Continuing.</span>
+<span class="log-ts">[2031-08-14T09:17:51Z]</span> <span class="log-key">SYSTEM:</span>   <span class="log-val">Coherence: 97.1%. Topological equivalence achieved.</span>
+<span class="log-ts">[2031-08-14T09:17:51Z]</span> <span class="log-key">SYSTEM:</span>   <span class="log-val">Duration: 180,043ms. Probe: returned. Mass: intact.</span>
+<span class="log-ts">[2031-08-14T09:17:51Z]</span> <span class="log-key">OKAFOR_A:</span> <span class="log-human">It works.</span>
+<span class="log-ts">[2031-08-14T09:17:52Z]</span> <span class="log-key">OKAFOR_A:</span> <span class="log-human">Yusuf. It works.</span>
+<span class="log-ts">[2031-08-14T09:17:58Z]</span> <span class="log-key">OKAFOR_A:</span> <span class="log-human">I wish you were here to see this.</span>
+<span class="log-ts">[2031-08-14T09:18:03Z]</span> <span class="log-key">OKAFOR_A:</span> <span class="log-human">I think you always knew it would.</span>
+<span class="log-ghost">// The Chronicle records this as Entry 1. Everything else follows.</span></pre>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- THE CHRONICLE -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule-gold"></div>
+    <section class="section" id="chronicle">
+      <div class="reveal">
+        <span class="eyebrow">The Chronicle · Permanent · Append-Only · Yours</span>
+        <h2 class="h2">
+          When you might live forever,<br /><em>significance</em> becomes the scarce resource.
+        </h2>
+        <p class="body-text">
+          The Chronicle is the answer to the question nobody in the Age of Radiance knows how to ask
+          out loud: <strong>if I never have to die, how do I prove that I lived?</strong>
+        </p>
+        <p class="body-text">
+          Every dynasty. Every decision. Every world opened. Every crisis survived. Every alliance
+          forged. Every discovery made. Written in an append-only, cryptographically chained,
+          foundation-replicated record that outlasts its authors — by design, by contract, and by
+          code.
+        </p>
+        <p class="body-text">
+          The Chronicle was built before you arrived, because we knew you were going to need it.
+        </p>
+      </div>
+
+      <div class="feature-panel reveal" data-label="How The Chronicle Works">
+        <ul>
+          <li>
+            Every entry is permanent — append-only, SHA-256 chained, tamper-evident by mathematics
+          </li>
+          <li>
+            Real-time replication to an independent foundation archive on a separate cloud provider
+          </li>
+          <li>
+            Full-text searchable forever — a player in Year 105 can read what you wrote in Year 1
+          </li>
+          <li>
+            Two witnesses can write conflicting accounts of the same event — both are canonical.
+            History holds both.
+          </li>
+          <li>
+            Dynasty Completion entries are final — the arc finished, the record is closed, the story
+            stays
+          </li>
+          <li>
+            Studio closure provisions: source Apache 2.0, archive to foundation, automatic. Not a
+            promise. Code.
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <p
+          class="body-text"
+          style="
+            font-style: italic;
+            font-size: 20px;
+            color: var(--ink);
+            text-align: center;
+            padding: 24px 0;
+          "
+        >
+          "Your story is permanent. Build something worth reading."
+        </p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- THE MARKS -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule"></div>
+    <section class="section">
+      <div class="reveal">
+        <span class="eyebrow">The Six Marks · On-Chain · Non-Transferable</span>
+        <h2 class="h2">Six things that can only happen <em>once</em>.</h2>
+      </div>
+
+      <div class="marks-grid reveal">
+        <div class="mark-card">
+          <span class="mark-glyph">✦</span>
+          <span class="mark-name">Founding Mark</span>
+          <p class="mark-desc">Present at the Founding Event. Active in the first six days.</p>
+          <span class="mark-count">Max ~50,000 · Never reissued</span>
+        </div>
+        <div class="mark-card">
+          <span class="mark-glyph">◈</span>
+          <span class="mark-name">Survey Mark</span>
+          <p class="mark-desc">First stable Lattice lock with a world no one has reached before.</p>
+          <span class="mark-count">One per world · 600 possible</span>
+        </div>
+        <div class="mark-card">
+          <span class="mark-glyph">⬡</span>
+          <span class="mark-name">World Mark</span>
+          <p class="mark-desc">The dynasty that first established sovereignty on a new world.</p>
+          <span class="mark-count">Maximum 600 · Ever</span>
+        </div>
+        <div class="mark-card">
+          <span class="mark-glyph">⚔</span>
+          <span class="mark-name">Defence Mark</span>
+          <p class="mark-desc">Defended a world when it genuinely needed defending.</p>
+          <span class="mark-count">Rare · Circumstantial</span>
+        </div>
+        <div class="mark-card">
+          <span class="mark-glyph">◎</span>
+          <span class="mark-name">Survivor Mark</span>
+          <p class="mark-desc">Present during a world's final days. You witnessed an ending.</p>
+          <span class="mark-count">Very rare</span>
+        </div>
+        <div class="mark-card">
+          <span class="mark-glyph">∞</span>
+          <span class="mark-name">First Contact</span>
+          <p class="mark-desc">Maximum three will ever exist. The conditions are unknown.</p>
+          <span class="mark-count">0 to 3 · May never be awarded</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- COVENANT -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule-gold"></div>
+    <section class="section" id="covenant">
+      <div class="reveal">
+        <span class="eyebrow">The Permanence Covenant · Nine Articles</span>
+        <h2 class="h2">Not a terms of service.<br /><em>A contract with teeth.</em></h2>
+        <p class="body-text">
+          Deployed on Ethereum L2. Legally binding. A pre-funded escrow executes automatically on
+          studio closure. We cannot revoke it. We cannot amend it without the Assembly. We cannot
+          pretend it doesn't exist.
+        </p>
+      </div>
+
+      <div class="feature-panel reveal" data-label="Nine Articles · Immutable After Launch">
+        <ol class="covenant-list">
+          <li>Your dynasty's Chronicle exists forever. No account closure removes it.</li>
+          <li>KALON cannot be purchased with real money. Ever. By anyone.</li>
+          <li>The MARKS system lives on Ethereum L2. It does not belong to us.</li>
+          <li>The Chronicle is replicated to an independent foundation archive in real time.</li>
+          <li>If the studio closes, source code is Apache 2.0 within 30 days — automatically.</li>
+          <li>No countdown timers on decisions. No timed exclusives. No FOMO mechanics. Ever.</li>
+          <li>No server wipe. No server merge. No manufactured reset. Not ever.</li>
+          <li>Gameplay cannot close your account. Only violation of our terms can.</li>
+          <li>
+            The developer does not have a cheat code. We cannot give ourselves KALON, MARKS, or
+            votes.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- TIERS -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule"></div>
+    <section class="section">
+      <div class="reveal">
+        <span class="eyebrow">Subscription · When The Founding Event Opens</span>
+        <h2 class="h2">You cannot subscribe without <em>completing the Initiation</em>.</h2>
+        <p class="body-text" style="margin-bottom: 48px">
+          Two hours in-world. Physics. Economy. Governance. The Nine Articles illustrated by real
+          Chronicle entries. At the end — your Founding Code. No code, no subscription. We will not
+          let you spend money before you understand what you are joining.
+        </p>
+      </div>
+
+      <div class="tier-row reveal">
+        <div class="tier-cell">
+          <span class="t-name">Tourist</span>
+          <span class="t-price">$0</span>
+          <span class="t-per">15-day trial</span>
+          <ul class="t-feats">
+            <li>Spectator mode</li>
+            <li>Chronicle access</li>
+            <li>The Initiation</li>
+          </ul>
+        </div>
+        <div class="tier-cell">
+          <span class="t-name">Accord</span>
+          <span class="t-price">$15</span>
+          <span class="t-per">per month</span>
+          <ul class="t-feats">
+            <li>1 dynasty</li>
+            <li>100 KALON / month</li>
+            <li>Full Assembly vote</li>
+          </ul>
+        </div>
+        <div class="tier-cell featured">
+          <span class="t-name">Patron</span>
+          <span class="t-price">$25</span>
+          <span class="t-per">per month</span>
+          <ul class="t-feats">
+            <li>2 dynasties</li>
+            <li>175 KALON / month</li>
+            <li>Full Assembly vote</li>
+          </ul>
+        </div>
+        <div class="tier-cell">
+          <span class="t-name">Herald</span>
+          <span class="t-price">$35</span>
+          <span class="t-per">per month</span>
+          <ul class="t-feats">
+            <li>3 dynasties</li>
+            <li>250 KALON / month</li>
+            <li>Full Assembly vote</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- REGISTER -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div class="rule-gold"></div>
+    <section class="section" id="register">
+      <div class="witness-section reveal">
+        <h3>Register Before the Founding Event</h3>
+        <p>
+          Your words enter the Chronicle before the first world is settled.<br />Before you have
+          paid. Before you have logged in. You will have been here first.
+        </p>
+        <div class="form-row">
+          <label class="form-label" for="w-name">Your Dynasty Name</label>
+          <input
+            class="form-input"
+            type="text"
+            id="w-name"
+            placeholder="House of ___"
+            autocomplete="off"
+          />
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="w-email">Contact Address</label>
+          <input class="form-input" type="email" id="w-email" placeholder="your@email.com" />
+        </div>
+        <div class="form-row">
+          <label class="form-label" for="w-msg">What Are You Going to Build?</label>
+          <textarea
+            class="form-input form-textarea"
+            id="w-msg"
+            rows="3"
+            placeholder="Your Chronicle entry begins here."
+          ></textarea>
+        </div>
+        <button class="btn-submit" id="w-submit" type="button">Enter The Chronicle</button>
+        <p class="confirm-text" id="w-confirm">
+          Recorded. Your words are in the Chronicle.<br />
+          Before the first world was reached — you were here.
+        </p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div class="cta-block reveal">
+      <span class="eyebrow" style="display: block; margin-bottom: 24px"
+        >The Founding Event · 2027</span
+      >
+      <h2 class="h2" style="max-width: 600px; margin: 0 auto 24px">
+        Six hundred worlds are waiting.<br /><em>Your story starts now.</em>
+      </h2>
+      <p
+        style="
+          font-family: 'Lora', serif;
+          font-style: italic;
+          font-size: 18px;
+          color: var(--dim);
+          max-width: 500px;
+          margin: 0 auto;
+        "
+      >
+        The Chronicle will record who was here first.<br />That moment cannot be recreated.
+      </p>
+      <div class="btn-group">
+        <a href="#register" class="btn-primary">Register Now</a>
+        <a href="#covenant" class="btn-secondary">Read the Covenant</a>
+      </div>
+    </div>
+
+    <footer>
+      <p
+        style="
+          font-family: 'Cinzel', serif;
+          font-size: 13px;
+          color: var(--gold);
+          letter-spacing: 4px;
+          margin-bottom: 24px;
+        "
+      >
+        THE CONCORD
+      </p>
+      <p>
+        <a href="#">The Permanence Covenant</a> &nbsp;·&nbsp;
+        <a href="#">Privacy Policy</a> &nbsp;·&nbsp;
+        <a href="#">Contact</a>
+      </p>
+      <p style="margin-top: 16px; font-size: 9px">
+        MARKS contract on Ethereum L2 &nbsp;·&nbsp; Chronicle replicated to independent foundation
+        &nbsp;·&nbsp; Studio closure provisions execute automatically
+      </p>
+    </footer>
+
+    <script>
+      // CURSOR
+      const ring = document.getElementById('cursor-ring');
+      const dot = document.getElementById('cursor-dot');
+      let mx = 0,
+        my = 0,
+        rx = 0,
+        ry = 0;
+      document.addEventListener('mousemove', (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+      });
+      function animCursor() {
+        rx += (mx - rx) * 0.12;
+        ry += (my - ry) * 0.12;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+        requestAnimationFrame(animCursor);
+      }
+      animCursor();
+      document.querySelectorAll('a,button').forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+          ring.style.width = '44px';
+          ring.style.height = '44px';
+          ring.style.opacity = '.5';
+        });
+        el.addEventListener('mouseleave', () => {
+          ring.style.width = '26px';
+          ring.style.height = '26px';
+          ring.style.opacity = '1';
+        });
+      });
+
+      // ATMOSPHERIC CANVAS — soft light particles on parchment
+      const cv = document.getElementById('atmosphere');
+      const cx = cv.getContext('2d');
+      let pts = [];
+
+      function resize() {
+        cv.width = window.innerWidth;
+        cv.height = window.innerHeight;
+      }
+
+      function mkParticles() {
+        pts = [];
+        for (let i = 0; i < 120; i++)
+          pts.push({
+            x: Math.random() * cv.width,
+            y: Math.random() * cv.height,
+            r: Math.random() * 80 + 20,
+            o: Math.random() * 0.06 + 0.01,
+            speed: Math.random() * 0.0004 + 0.0001,
+            phase: Math.random() * Math.PI * 2,
+            hue: Math.random() > 0.7 ? '#C49A3C' : '#2A5C8A',
+          });
+      }
+
+      function drawAtmosphere() {
+        cx.clearRect(0, 0, cv.width, cv.height);
+        const t = Date.now();
+        for (const p of pts) {
+          const opacity = p.o * (0.5 + 0.5 * Math.sin(t * p.speed + p.phase));
+          cx.beginPath();
+          const grad = cx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r);
+          grad.addColorStop(
+            0,
+            p.hue +
+              Math.round(opacity * 255)
+                .toString(16)
+                .padStart(2, '0'),
+          );
+          grad.addColorStop(1, 'transparent');
+          cx.fillStyle = grad;
+          cx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          cx.fill();
+        }
+        requestAnimationFrame(drawAtmosphere);
+      }
+
+      resize();
+      mkParticles();
+      drawAtmosphere();
+      window.addEventListener('resize', () => {
+        resize();
+        mkParticles();
+      });
+
+      // NAV
+      const nav = document.getElementById('nav');
+      window.addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 80));
+
+      // COUNTDOWN
+      const LAUNCH = new Date('2027-01-01T00:00:00Z');
+      function pad(n, l = 2) {
+        return String(n).padStart(l, '0');
+      }
+      function tick() {
+        const diff = LAUNCH - Date.now();
+        if (diff <= 0) return;
+        document.getElementById('cd-days').textContent = pad(Math.floor(diff / 86400000), 3);
+        document.getElementById('cd-hours').textContent = pad(
+          Math.floor((diff % 86400000) / 3600000),
+        );
+        document.getElementById('cd-min').textContent = pad(Math.floor((diff % 3600000) / 60000));
+        document.getElementById('cd-sec').textContent = pad(Math.floor((diff % 60000) / 1000));
+      }
+      tick();
+      setInterval(tick, 1000);
+
+      // BLOCK HEIGHT
+      async function fetchBlock() {
+        try {
+          const r = await fetch('https://api.blockcypher.com/v1/eth/main');
+          const d = await r.json();
+          if (d.height) {
+            document.getElementById('block-height').textContent = d.height.toLocaleString();
+            setTimeout(fetchBlock, 15000);
+          }
+        } catch {
+          let h = 22_000_000;
+          document.getElementById('block-height').textContent = h.toLocaleString();
+          setInterval(() => {
+            h += Math.floor(Math.random() * 2);
+            document.getElementById('block-height').textContent = h.toLocaleString();
+          }, 14000);
+        }
+      }
+      fetchBlock();
+
+      // REVEAL
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -40px 0px' },
+      );
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+      // WITNESS FORM
+      document.getElementById('w-submit').addEventListener('click', () => {
+        const name = document.getElementById('w-name').value.trim();
+        const email = document.getElementById('w-email').value.trim();
+        const msg = document.getElementById('w-msg').value.trim();
+        if (!name || !email) {
+          document.getElementById('w-name').focus();
+          return;
+        }
+        fetch('/api/chronicle/witness', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message: msg, timestamp: new Date().toISOString() }),
+        }).catch(() => {});
+        document.getElementById('w-confirm').style.display = 'block';
+        document.getElementById('w-submit').style.display = 'none';
+        document.getElementById('w-name').value = '';
+        document.getElementById('w-email').value = '';
+        document.getElementById('w-msg').value = '';
+      });
+    </script>
+  </body>
+</html>

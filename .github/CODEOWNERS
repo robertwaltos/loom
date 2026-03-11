@@ -1,0 +1,29 @@
+# CODEOWNERS — Controls merge approval requirements
+# Each Fabric is owned independently to enable parallel agent work
+# '*' patterns match files; agent ownership is enforced via PR labels
+
+# Root config — requires Weaver approval
+/*.json                          @the-weaver
+/*.md                            @the-weaver
+/.github/                        @the-weaver
+
+# Contracts — CRITICAL: changes here affect all Fabrics
+# Requires Weaver approval + Review Thread validation
+contracts/                       @the-weaver
+
+# Individual Fabrics — one agent/guild owns each
+fabrics/loom-core/               @loom-core-guild
+fabrics/shuttle/                  @shuttle-guild
+fabrics/silfen-weave/            @silfen-weave-guild
+fabrics/nakama-fabric/           @nakama-guild
+fabrics/bridge-loom-ue5/         @bridge-guild
+fabrics/inspector/               @inspector-guild
+fabrics/selvage/                 @selvage-guild
+fabrics/dye-house/               @security-guild
+fabrics/archive/                 @archive-guild
+
+# Tools
+tools/                           @the-weaver
+
+# Tests
+tests/                           @the-weaver

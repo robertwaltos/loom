@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Concord — The Civilisation On The Brink</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+:root{
+  --navy:#060d1a;--navy2:#0a1628;--navy3:#0d1f3c;
+  --gold:#b8963e;--gold2:#c9a63a;--gold3:#d4af5a;--gold4:#e8cc80;
+  --white:#eef2f8;--mist:#c4cedc;--slate:#8a9bb5;--dim:#3a4a62;
+  --redl:#c08080;
+}
+body{background:var(--navy);color:var(--mist);font-family:'Cormorant Garamond',Georgia,serif;font-size:1.1rem;line-height:1.8;overflow-x:hidden;cursor:crosshair}
+body::after{content:'';position:fixed;inset:0;z-index:1;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.025) 2px,rgba(0,0,0,0.025) 4px);pointer-events:none}
+#cosmos{position:fixed;inset:0;z-index:0;pointer-events:none}
+.cr{position:fixed;width:30px;height:30px;border:1px solid rgba(184,150,62,.4);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s;mix-blend-mode:screen}
+.cd{position:fixed;width:4px;height:4px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(184,150,62,.06);background:linear-gradient(180deg,rgba(6,13,26,.97) 0%,transparent 100%);backdrop-filter:blur(16px)}
+.nl{font-family:'Cinzel',serif;font-size:.75rem;font-weight:700;letter-spacing:.35em;color:var(--gold);text-decoration:none;text-transform:uppercase}
+.nr{font-family:'Courier Prime',monospace;font-size:.58rem;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
+.tw{position:relative;z-index:10;border-bottom:1px solid rgba(184,150,62,.08);background:rgba(4,8,18,.9);padding:11px 0;overflow:hidden}
+.ti{display:flex;white-space:nowrap;animation:tickerMove 100s linear infinite;font-family:'Courier Prime',monospace;font-size:.57rem;letter-spacing:.2em;color:rgba(184,150,62,.42);text-transform:uppercase;gap:56px}
+@keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* HERO */
+.hero{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px 40px 80px}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 70% at 50% 50%,rgba(184,150,62,.03) 0%,transparent 70%);pointer-events:none}
+.el{font-family:'Courier Prime',monospace;font-size:.6rem;letter-spacing:.5em;text-transform:uppercase;color:var(--gold);margin-bottom:44px;opacity:0;animation:rise 1s ease .3s forwards}
+.ts{font-family:'Courier Prime',monospace;font-size:.65rem;letter-spacing:.28em;color:rgba(184,150,62,.55);margin-bottom:26px;opacity:0;animation:rise 1s ease .5s forwards}
+.ht{font-family:'Cinzel Decorative',serif;font-size:clamp(42px,9vw,118px);font-weight:700;color:var(--white);line-height:1.0;letter-spacing:.05em;text-shadow:0 0 100px rgba(184,150,62,.18),0 4px 60px rgba(0,0,0,.95);margin-bottom:8px;opacity:0;animation:rise 1.4s cubic-bezier(.16,1,.3,1) .6s forwards}
+.hs{font-family:'Cinzel',serif;font-size:clamp(10px,1.6vw,15px);font-weight:400;letter-spacing:.45em;text-transform:uppercase;color:var(--gold2);margin-bottom:52px;opacity:0;animation:rise 1s ease 1s forwards}
+.gr{width:280px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 52px;opacity:0;animation:rise .8s ease 1.1s forwards}
+.inc{max-width:680px;margin:0 auto 52px;background:rgba(10,22,40,.72);border:1px solid rgba(184,150,62,.12);padding:40px 44px;position:relative;opacity:0;animation:rise 1.2s ease 1.2s forwards;backdrop-filter:blur(8px)}
+.inc::before{content:'INCIDENT REPORT \00B7 CLASSIFIED \00B7 20-JAN-2031';display:block;font-family:'Courier Prime',monospace;font-size:.54rem;letter-spacing:.34em;color:rgba(184,150,62,.4);margin-bottom:22px}
+.ib{font-size:1.05rem;font-style:italic;font-weight:300;color:var(--mist);line-height:2;text-align:left}
+.ib em{font-style:normal;color:var(--white);font-weight:400}
+.sten{margin-top:22px;padding:13px 16px;background:rgba(4,8,18,.88);border-left:2px solid var(--gold);font-family:'Courier Prime',monospace;font-size:.64rem;letter-spacing:.11em;color:var(--gold3);line-height:1.8}
+.dur{margin-top:18px;font-family:'Courier Prime',monospace;font-size:.56rem;letter-spacing:.2em;color:rgba(184,150,62,.38);text-align:right;text-transform:uppercase}
+.cta{display:flex;flex-direction:column;align-items:center;gap:14px;opacity:0;animation:rise 1s ease 1.9s forwards}
+.bp{font-family:'Cinzel',serif;font-size:.7rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;color:var(--navy);background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));border:none;padding:15px 44px;cursor:pointer;transition:transform .2s,box-shadow .3s}
+.bp:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(184,150,62,.28)}
+.bg{font-family:'Courier Prime',monospace;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--slate);background:none;border:1px solid rgba(138,155,181,.18);padding:11px 32px;cursor:pointer;transition:border-color .3s,color .3s}
+.bg:hover{border-color:var(--gold);color:var(--gold2)}
+.srow{display:flex;align-items:center;gap:10px;margin-top:8px}
+.sdot{width:5px;height:5px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80,0 0 16px rgba(74,222,128,.4);animation:pulse 2.5s ease infinite}
+.stxt{font-family:'Courier Prime',monospace;font-size:.57rem;letter-spacing:.2em;color:rgba(74,222,128,.72);text-transform:uppercase}
+.scue{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:rise .8s ease 2.6s forwards}
+.sline{width:1px;height:44px;background:linear-gradient(180deg,var(--gold),transparent);animation:scrollP 2s ease infinite}
+.slbl{font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.4em;color:var(--dim);text-transform:uppercase}
+
+/* SECTIONS */
+.sect{position:relative;z-index:10;max-width:1060px;margin:0 auto;padding:108px 48px;border-top:1px solid rgba(184,150,62,.06);opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.sect.vis{opacity:1;transform:translateY(0)}
+.pqw{position:relative;z-index:10;padding:108px 48px;border-top:1px solid rgba(184,150,62,.06);text-align:center;background:radial-gradient(ellipse 90% 70% at 50% 50%,rgba(184,150,62,.024) 0%,transparent 70%);opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.pqw.vis{opacity:1;transform:translateY(0)}
+.pq{max-width:760px;margin:0 auto}
+.pq blockquote{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.8vw,2.05rem);font-style:italic;font-weight:300;color:var(--white);line-height:1.75;margin-bottom:26px;position:relative}
+.pq blockquote::before{content:'\201C';font-family:'Cinzel',serif;font-size:7rem;color:rgba(184,150,62,.07);position:absolute;top:-36px;left:-14px;line-height:1;font-style:normal;pointer-events:none}
+.pq cite{font-family:'Courier Prime',monospace;font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.slb{font-family:'Courier Prime',monospace;font-size:.57rem;letter-spacing:.48em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:13px}
+.sttl{font-family:'Cinzel',serif;font-size:clamp(26px,4vw,50px);font-weight:700;color:var(--white);line-height:1.15;letter-spacing:.04em;margin-bottom:26px}
+.sbdy{font-size:1.05rem;font-weight:300;color:var(--mist);line-height:1.95;max-width:640px}
+.h2{font-family:'Cinzel',serif;font-size:.8rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold3);margin:34px 0 13px}
+
+/* PHYSICS CARDS */
+.phg{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin:50px 0;background:rgba(184,150,62,.08);border:1px solid rgba(184,150,62,.08)}
+.phc{background:var(--navy2);padding:38px 30px;position:relative;overflow:hidden;transition:background .3s}
+.phc:hover{background:var(--navy3)}
+.phc::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform:scaleX(0);transition:transform .5s}
+.phc:hover::after{transform:scaleX(1)}
+.phn{font-family:'Cinzel',serif;font-size:2.7rem;font-weight:900;color:var(--gold);opacity:.1;line-height:1;margin-bottom:-2px}
+.pht{font-family:'Cinzel',serif;font-size:.68rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold3);margin-bottom:12px}
+.phb{font-size:.88rem;font-weight:300;color:var(--slate);line-height:1.8}
+
+/* LOG */
+.log{background:rgba(4,8,18,.92);border:1px solid rgba(184,150,62,.1);border-left:3px solid var(--gold);padding:26px 30px;margin:34px 0;font-family:'Courier Prime',monospace;font-size:.66rem;letter-spacing:.1em;color:var(--gold3);line-height:2}
+.logh{color:rgba(184,150,62,.38);font-size:.53rem;letter-spacing:.3em;margin-bottom:13px;text-transform:uppercase}
+
+/* DARK BOX */
+.db{background:var(--navy2);border:1px solid rgba(184,150,62,.1);border-left:3px solid var(--gold);padding:26px 30px;margin:13px 0}
+.db.red{border-color:rgba(192,128,128,.25);border-left-color:var(--redl)}
+.dbt{font-family:'Courier Prime',monospace;font-size:.57rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
+.db.red .dbt{color:var(--redl)}
+.dbb{font-size:.9rem;font-weight:300;color:var(--slate);line-height:1.8}
+
+/* PAPERS TABLE */
+.ptbl{width:100%;border-collapse:collapse;margin:26px 0;font-size:.83rem}
+.ptbl th{background:var(--navy2);color:var(--gold);font-family:'Courier Prime',monospace;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;padding:9px 13px;border:1px solid rgba(30,58,106,.8);text-align:left}
+.ptbl td{background:var(--navy2);color:var(--mist);padding:8px 13px;border:1px solid rgba(30,58,106,.5);font-weight:300;line-height:1.6;vertical-align:top}
+.ptbl tr:hover td{background:var(--navy3)}
+
+/* TIMELINE */
+.tl{margin:50px 0;position:relative;padding-left:32px}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--gold) 0%,rgba(184,150,62,.22) 75%,transparent 100%)}
+.tli{position:relative;margin-bottom:38px;opacity:0;transform:translateX(16px);transition:opacity .7s ease,transform .7s ease}
+.tli.vis{opacity:1;transform:translateX(0)}
+.tli::before{content:'';position:absolute;left:-36px;top:7px;width:8px;height:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 13px rgba(184,150,62,.5)}
+.tli.rn::before{background:var(--redl);box-shadow:0 0 13px rgba(192,128,128,.5)}
+.tie{font-family:'Courier Prime',monospace;font-size:.56rem;letter-spacing:.36em;color:var(--gold);text-transform:uppercase;margin-bottom:5px}
+.tie.red{color:var(--redl)}
+.tit{font-family:'Cinzel',serif;font-size:.9rem;font-weight:600;color:var(--white);margin-bottom:6px}
+.tid{font-size:.87rem;font-weight:300;color:var(--slate);line-height:1.75}
+
+/* CONTINUITY */
+.states{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(184,150,62,.08);margin:36px 0}
+.state{background:var(--navy2);padding:30px 24px;text-align:center;transition:background .3s}
+.state:hover{background:var(--navy3)}
+.state-icon{font-size:1.8rem;margin-bottom:12px;display:block}
+.state-name{font-family:'Cinzel',serif;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold3);margin-bottom:9px}
+.state-desc{font-size:.82rem;font-weight:300;color:var(--dim);line-height:1.7}
+
+/* COVENANT */
+.arts{display:flex;flex-direction:column;gap:1px;margin:42px 0;background:rgba(184,150,62,.07)}
+.art{background:var(--navy2);display:grid;grid-template-columns:62px 1fr;position:relative;overflow:hidden;opacity:0;transform:translateX(-14px);transition:opacity .6s ease,transform .6s ease,background .3s}
+.art.vis{opacity:1;transform:translateX(0)}
+.art:hover{background:rgba(13,31,60,.95)}
+.art::after{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s}
+.art:hover::after{opacity:1}
+.an{font-family:'Cinzel',serif;font-size:1.8rem;font-weight:900;color:var(--gold);opacity:.22;padding:24px 0 24px 18px;line-height:1;padding-top:28px}
+.ab{padding:24px 28px 24px 0;border-left:1px solid rgba(184,150,62,.07)}
+.at{font-family:'Cinzel',serif;font-size:.67rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold3);margin-bottom:7px}
+.ax{font-size:.87rem;font-weight:300;color:var(--slate);line-height:1.75}
+
+/* MARKS */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1px;margin:50px 0;background:rgba(184,150,62,.08)}
+.mc{background:var(--navy2);padding:28px 22px;text-align:center;transition:background .3s}
+.mc:hover{background:var(--navy3)}
+.mi{font-size:1.6rem;margin-bottom:12px;display:block}
+.mn{font-family:'Cinzel',serif;font-size:.65rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--gold3);margin-bottom:9px}
+.md{font-size:.8rem;font-weight:300;color:var(--dim);line-height:1.7}
+.mr{margin-top:10px;font-family:'Courier Prime',monospace;font-size:.5rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);opacity:.5}
+
+/* PRICING */
+.pricepage{max-width:560px;margin:0 auto;background:rgba(10,22,40,.7);border:1px solid rgba(184,150,62,.12);padding:48px 52px;backdrop-filter:blur(8px)}
+.pricepage::before{content:'THE CONCORD \00B7 PRICING';display:block;font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.4em;color:rgba(184,150,62,.38);margin-bottom:28px}
+.price-row{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(184,150,62,.07)}
+.price-row:last-of-type{border-bottom:none}
+.price-tier{font-family:'Cinzel',serif;font-size:.78rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--white)}
+.price-amt{font-family:'Courier Prime',monospace;font-size:.78rem;color:var(--gold)}
+.price-note{font-size:.78rem;font-style:italic;font-weight:300;color:var(--dim);margin-top:3px}
+.price-cpi{margin-top:20px;font-family:'Courier Prime',monospace;font-size:.57rem;letter-spacing:.18em;color:rgba(184,150,62,.38);line-height:1.8;border-top:1px solid rgba(184,150,62,.07);padding-top:16px}
+.price-footer{margin-top:20px;font-family:'Cormorant Garamond',serif;font-size:.88rem;font-style:italic;font-weight:300;color:var(--dim);line-height:1.8;border-top:1px solid rgba(184,150,62,.07);padding-top:16px}
+.coat-link{display:block;margin-top:20px;font-family:'Courier Prime',monospace;font-size:.55rem;letter-spacing:.28em;color:rgba(184,150,62,.35);text-decoration:none;transition:color .2s;text-transform:uppercase}
+.coat-link:hover{color:var(--gold2)}
+
+/* HASHES */
+.hb{background:rgba(10,22,40,.7);border:1px solid rgba(184,150,62,.12);padding:40px 44px;max-width:720px;margin:0 auto;backdrop-filter:blur(8px)}
+.hb::before{content:'COVENANT RECORD \00B7 ON-CHAIN \00B7 IMMUTABLE';display:block;font-family:'Courier Prime',monospace;font-size:.52rem;letter-spacing:.4em;color:rgba(184,150,62,.38);margin-bottom:22px}
+.hl{font-family:'Courier Prime',monospace;font-size:.63rem;color:rgba(184,150,62,.36);letter-spacing:.08em;padding:7px 0;border-bottom:1px solid rgba(184,150,62,.06);word-break:break-all;line-height:1.8}
+
+/* FOUNDING */
+.fs{position:relative;z-index:10;padding:128px 48px;text-align:center;border-top:1px solid rgba(184,150,62,.06);background:radial-gradient(ellipse 100% 80% at 50% 100%,rgba(184,150,62,.038) 0%,transparent 60%);opacity:0;transform:translateY(34px);transition:opacity .9s ease,transform .9s ease}
+.fs.vis{opacity:1;transform:translateY(0)}
+
+/* FOOTER */
+footer{position:relative;z-index:10;border-top:1px solid rgba(184,150,62,.1);padding:52px 48px;text-align:center}
+.fm{font-family:'Cinzel Decorative',serif;font-size:1.25rem;font-weight:700;color:var(--gold);letter-spacing:.18em;margin-bottom:16px}
+.ft{font-family:'Cormorant Garamond',serif;font-size:.88rem;font-style:italic;color:var(--dim);line-height:2;margin-bottom:32px}
+.fl{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-bottom:36px}
+.fl a{font-family:'Courier Prime',monospace;font-size:.56rem;letter-spacing:.25em;text-transform:uppercase;color:var(--dim);text-decoration:none;transition:color .2s}
+.fl a:hover{color:var(--gold2)}
+.fb{padding-top:22px;border-top:1px solid rgba(184,150,62,.05);font-family:'Courier Prime',monospace;font-size:.51rem;letter-spacing:.25em;color:rgba(138,155,181,.2);text-transform:uppercase}
+.closing{max-width:700px;margin:0 auto 72px;text-align:center}
+.cb{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2.1vw,1.6rem);font-style:italic;font-weight:300;color:var(--white);line-height:1.95;margin-bottom:28px}
+.cr2{width:180px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto 28px}
+.cm{font-family:'Courier Prime',monospace;font-size:.62rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;line-height:2.4}
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(184,150,62,.08);margin-top:42px}
+
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:.4;transform:scale(1)}50%{opacity:1;transform:scale(1.3)}}
+@keyframes scrollP{0%,100%{opacity:.2}50%{opacity:.7}}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}
+  .hero,.sect,.fs,.pqw{padding:76px 20px 54px}
+  .inc{padding:26px 18px}
+  .phg,.twocol,.states{grid-template-columns:1fr}
+  .art{grid-template-columns:44px 1fr}
+  .an{padding:20px 0 20px 12px;font-size:1.5rem}
+  .ab{padding:20px 14px 20px 0}
+  .pricepage{padding:32px 24px}
+  .hb{padding:26px 18px}
+  footer{padding:44px 20px}
+}
+</style>
+</head>
+<body>
+<div class="cr" id="cr"></div>
+<div class="cd" id="cd"></div>
+<canvas id="cosmos"></canvas>
+
+<nav>
+  <a href="#" class="nl">The Concord</a>
+  <span class="nr">Year Zero · Stealth</span>
+</nav>
+
+<div class="tw">
+  <div class="ti">
+    <span>Remembrance Index · 0 Dynasties · All History Unwritten · Lattice Dark · No Node Surveyed</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>DARPA/ARPA-E JAPI · TA-7 · 20.JAN.2031 · 4 Min 17 Sec · 43 Witnesses · 0.003mm Positional Uncertainty</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>ER=EPR · Maldacena & Susskind 2013 · The Signal Travels With The Source · Location Is Irrelevant · Identity Is Everything</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>No Lineage Is Ever Closed · The Harmful Will Be Deleted Entirely · Be Positive Or Be Neutral · Love</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>Remembrance Index · 0 Dynasties · All History Unwritten · Lattice Dark · No Node Surveyed</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>DARPA/ARPA-E JAPI · TA-7 · 20.JAN.2031 · 4 Min 17 Sec · 43 Witnesses · 0.003mm Positional Uncertainty</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>ER=EPR · Maldacena & Susskind 2013 · The Signal Travels With The Source · Location Is Irrelevant · Identity Is Everything</span>
+    <span>&nbsp;✦&nbsp;</span>
+    <span>No Lineage Is Ever Closed · The Harmful Will Be Deleted Entirely · Be Positive Or Be Neutral · Love</span>
+    <span>&nbsp;✦&nbsp;</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="el">Washington D.C. &nbsp;·&nbsp; January 20th, 2031 &nbsp;·&nbsp; The National Mall</p>
+  <p class="ts">12:03:17 EST &nbsp;·&nbsp; Two Billion Witnesses &nbsp;·&nbsp; Four Minutes Seventeen Seconds</p>
+  <h1 class="ht">THE CONCORD</h1>
+  <p class="hs">The civilisation on the brink</p>
+  <div class="gr"></div>
+
+  <div class="inc">
+    <p class="ib">
+      The new president had just finished the oath.<br>
+      The crowd was applauding. Then the crowd went <em>silent.</em><br><br>
+      Between the podium and the people — forty feet above the space
+      where power and humanity faced each other —
+      something <em>appeared.</em><br><br>
+      Not from anywhere. Not lowered. Not projected.<br>
+      <em>Simply there,</em> where a moment before there was nothing.<br><br>
+      Forty-three people climbed barriers and shoulders to reach it.<br>
+      All forty-three described the same surface.<br>
+      <em>Warm. Slightly textured. Like ceramic left in sunlight.</em><br><br>
+      At four minutes and seventeen seconds — it was <em>gone.</em><br>
+      Between one frame of broadcast footage and the next.
+    </p>
+    <div class="sten">
+      DARPA/ARPA-E JOINT ADVANCED PROPULSION INITIATIVE<br>
+      APERTURE TEST ARTICLE 7 &nbsp;—&nbsp; NOT FOR PUBLIC RELEASE
+    </div>
+    <div class="dur">Duration: 4:17 &nbsp;·&nbsp; Witnesses: 2,000,000,000 &nbsp;·&nbsp; Cover story: holographic projection &nbsp;·&nbsp; Tactile reports: 43 &nbsp;·&nbsp; Addressed: 0</div>
+  </div>
+
+  <div class="cta">
+    <button class="bp">Record Your Name in the Remembrance</button>
+    <button class="bg">Read the Permanence Covenant</button>
+    <div class="srow">
+      <div class="sdot"></div>
+      <span class="stxt">Covenant Active &nbsp;·&nbsp; Block <span id="bn">21,847,392</span></span>
+    </div>
+  </div>
+  <div class="scue"><div class="sline"></div><span class="slbl">The story begins here</span></div>
+</section>
+
+<!-- THE PHYSICS -->
+<section class="sect" id="physics">
+  <span class="slb">The Physics · What Was Proven That Day</span>
+  <h2 class="sttl">It was not a ship.<br>It was a door.</h2>
+  <p class="sbdy">No propulsion system. No hull. No windows. The object above the Mall was an aperture terminus — a wormhole opening, held stable for four minutes and seventeen seconds, connected to a military research campus 2,800 miles away. The technology does not fight physics. It catches the universe doing something it was already doing.</p>
+
+  <div class="log">
+    <div class="logh">Okafor Log · November 14 2030 · Entry 4,847 · Filed Standard Channels · Approved By Three Senior Staff · Two Months Before The Inauguration</div>
+    Target: 38.8895°N 77.0353°W &nbsp;·&nbsp; altitude 12.2m AGL &nbsp;·&nbsp; anchor 20-JAN-2031 17:03:42 UTC<br>
+    Coordinate selected for: optimal retrograde anchor precision<br>
+    Positional uncertainty: <strong style="color:var(--white)">0.003 millimetres</strong><br>
+    847 years continuous geodetic survey data. 96 years electromagnetic documentation.<br>
+    Note: civilian event scheduled at target location. Recommend notification to safety officer.<br><br>
+    <span style="color:rgba(184,150,62,.26);font-size:.59rem">// Safety officer on vacation. Nobody followed up. The test ran.</span>
+  </div>
+
+  <div class="phg">
+    <div class="phc">
+      <div class="phn">I</div><div class="pht">The Zero Point Field</div>
+      <p class="phb">The Casimir effect measures the quantum vacuum's pressure directly — plates pushed together by zero point field energy since 1948. At the Planck scale, spacetime foams with micro-wormhole geometries collapsing billions of times per second. The technology does not create this. It catches one before it collapses.</p>
+    </div>
+    <div class="phc">
+      <div class="phn">II</div><div class="pht">ER = EPR</div>
+      <p class="phb">Maldacena and Susskind, 2013: entanglement between two particles is mathematically equivalent to a wormhole connecting them. Not metaphor. The same geometry described two ways. An entangled pair is a micro-wormhole. The Lattice is the applied consequence of that equivalence at macroscopic scale.</p>
+    </div>
+    <div class="phc">
+      <div class="phn">III</div><div class="pht">Frequency Lock</div>
+      <p class="phb">Two nodes synchronise oscillations across the zero point field. When synchronisation reaches critical coherence, the field achieves topological equivalence between them. Two points vibrating identically in the same medium are that instant the same point. The traveller resolves at the destination. Not sent. Not received. Simply there.</p>
+    </div>
+    <div class="phc">
+      <div class="phn">IV</div><div class="pht">No Time Dilation</div>
+      <p class="phb">Time dilation occurs because you move through spacetime. In a coherence transfer you do not move. There is no in-between state. Your watch reads the same at destination as at departure. Exactly like flying versus driving — a different relationship with terrain, not faster movement. Except there is no terrain. There is no between.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PULL QUOTE — FIELD -->
+<div class="pqw sect">
+  <div class="pq">
+    <blockquote>The field was always doing this.<br>We just learned to read it.</blockquote>
+    <cite>— First Lattice Survey Team &nbsp;·&nbsp; Node Establishment Log &nbsp;·&nbsp; Year 2</cite>
+  </div>
+</div>
+
+<!-- THE SIGNAL -->
+<section class="sect" id="signal">
+  <span class="slb">The Core Insight · Why The Lattice Is Permanent</span>
+  <h2 class="sttl">The signal travels<br>with the source.</h2>
+  <p class="sbdy">Every FTL concept ever proposed has a targeting problem almost never addressed because it is so uncomfortable. Everything in the universe is moving. Earth at 30 km/s. The Sun at 220 km/s. The galaxy at 630 km/s. There is no fixed point. Every coordinate calculated for a destination is already wrong by the time the calculation finishes.</p>
+
+  <div class="db" style="margin-top:30px">
+    <div class="dbt">The Solution</div>
+    <p class="dbb">The buoy does not broadcast a location. It broadcasts a signal. The signal travels with the buoy. The buoy travels with the star system. The star system moves however the universe moves it. None of that matters. The Lattice does not target coordinates. It targets the signal. The handshake does not ask: where are you? It asks: are you there? The answer is always yes.</p>
+  </div>
+
+  <div class="db">
+    <div class="dbt">The Analogy</div>
+    <p class="dbb">You do not need to know where your phone is on the planet to call it. You do not calculate GPS coordinates, account for Earth's rotation, adjust for orbital velocity. You dial a number. The number finds the phone. The Lattice works identically. The buoy's frequency is its number. The zero point field is the network. The universe can expand and fold for the next billion years. The buoy keeps broadcasting. Any node that knows the frequency can reach it. Location is irrelevant. Identity is everything.</p>
+  </div>
+
+  <div class="h2">The Real Papers</div>
+  <table class="ptbl">
+    <thead><tr><th>Paper</th><th>Author · Year</th><th>What It Establishes</th></tr></thead>
+    <tbody>
+      <tr><td>Casimir Effect</td><td>H.B.G. Casimir · 1948</td><td>Measurable zero point field pressure. Standard confirmed physics.</td></tr>
+      <tr><td>Spacetime Foam</td><td>John Wheeler · 1955</td><td>Planck-scale micro-wormhole formation in vacuum.</td></tr>
+      <tr><td>Alcubierre Metric</td><td>Miguel Alcubierre · 1994</td><td>Mathematically valid warp bubble. Spacetime moves. Ship doesn't.</td></tr>
+      <tr><td>Toroidal Bubble</td><td>Harold White · NASA · 2011</td><td>Toroidal geometry reduces energy requirement to spacecraft scale.</td></tr>
+      <tr><td>ER=EPR</td><td>Maldacena &amp; Susskind · 2013</td><td>Entanglement and wormholes are the same geometry. Foundational.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="h2">Bubble Ships — Survey Division</div>
+  <p class="sbdy" style="max-width:100%;margin-bottom:18px">The only practical role of ships in The Concord is infrastructure construction — deploying the buoys that make the Lattice possible. Survey ships generate a localised Alcubierre bubble using fusion reactor output. The ship doesn't move through space at relativistic velocity. Space contracts in front, expands behind. No time dilation. Proxima Centauri in approximately 16 hours. Range: 5 to 8 light years per charge.</p>
+  <div class="db">
+    <div class="dbt">Ships Are Yachts</div>
+    <p class="dbb">In a frequency-lock civilisation, ships are what people with resources use when they want the experience of crossing open space. The romance. The status. The military projection between nodes. Ships in The Concord are yachts. Beautiful. Expensive. The Lattice is how civilisation moves.</p>
+  </div>
+</section>
+
+<!-- PULL QUOTE — DIRECTORY -->
+<div class="pqw sect">
+  <div class="pq">
+    <blockquote>The Lattice does not know where its worlds are.<br>It knows how to reach them.<br>In a universe where everything moves,<br>that is the only knowledge that matters.</blockquote>
+    <cite>— Okafor &nbsp;·&nbsp; Unpublished Notes &nbsp;·&nbsp; Recovered After His Death &nbsp;·&nbsp; Year 31 &nbsp;·&nbsp; Published By The Architect &nbsp;·&nbsp; Ratified Unanimously</cite>
+  </div>
+</div>
+
+<!-- THE SUPPRESSION -->
+<section class="sect" id="suppression">
+  <span class="slb">The Ninety Days · What Happened After</span>
+  <h2 class="sttl">They had it for decades.<br>They planned to leave without you.</h2>
+  <p class="sbdy">A private consortium had been building toward a single goal: aperture access for themselves alone. Dr. Okafor's test ended that plan. But it started a clock.</p>
+
+  <div class="tl" id="tl">
+    <div class="tli">
+      <div class="tie">Day 1 · The Event</div><div class="tit">Two Billion Witnesses</div>
+      <p class="tid">Forty-three touch it. The object has a name on it. Official statement: holographic projection. 43 tactile reports. Addressed: 0. The Okafor Log — approved two months prior — is classified within the hour. It was already in the standard public queue.</p>
+    </div>
+    <div class="tli rn">
+      <div class="tie red">Day 53 · The Window</div><div class="tit">73 Days Remaining</div>
+      <p class="tid">The consortium needs 73 days to establish apertures in three key systems. After that, disclosure doesn't matter. They will be on the other side of a door nobody else controls. The transition briefing containing this was 41 pages shorter than it should have been.</p>
+    </div>
+    <div class="tli rn">
+      <div class="tie red">Year 290 → Present · The Dark Implication</div><div class="tit">Frequency Spoofing</div>
+      <p class="tid">The most dangerous thing in The Concord is not a weapon. It is a frequency spoofer. A device that makes a node believe it has locked with one destination when it has achieved coherence with another. Worlds don't go dark because their buoys fail. They go dark because one day the handshake completes — but the person who steps through is somewhere else. Players have been noticing transit log discrepancies since Year 290. The Architect's calibration reports have been impeccable. The discrepancies remain unexplained.</p>
+    </div>
+    <div class="tli">
+      <div class="tie">Year Zero · The Outcome</div><div class="tit">The Technology Belongs to Everyone</div>
+      <p class="tid">Consortium dissolved. Research declassified. The Okafor Constant published. The Concord is what is built by the people who understood what to do with it.</p>
+    </div>
+  </div>
+
+  <div class="db red">
+    <div class="dbt">Partial Coherence Collapse</div>
+    <p class="dbb">An attack during lock initiation can cause partial coherence — a collapse that resolves with the traveller in a state the Concord's medical establishment has been arguing about since Year 3. The technical term is decoherence trauma. The Remembrance has 847 recorded cases. It does not record outcomes for 312 of them.</p>
+  </div>
+</section>
+
+<!-- GIRL PULL QUOTE -->
+<div class="pqw sect">
+  <div class="pq">
+    <blockquote>A twelve-year-old girl reached up<br>and touched the future.<br><br>It was warm. It was real.<br>Then it was gone.<br><br>What you build next is permanent.</blockquote>
+    <cite>— The Concord Founding Statement &nbsp;·&nbsp; The Remembrance &nbsp;·&nbsp; Year Zero &nbsp;·&nbsp; Entry One</cite>
+  </div>
+</div>
+
+<!-- WHAT IS THE CONCORD -->
+<section class="sect" id="what">
+  <span class="slb">The World Built After</span>
+  <h2 class="sttl">Not a game.<br>A civilisation with a memory.</h2>
+  <p class="sbdy">The technology belongs to everyone whose taxes paid for the research. The Concord is how that inheritance is administered — 600 worlds, governed by the players who inhabit it, recorded permanently in the Remembrance. Everything that happens is inscribed. These are not promises. They are structural commitments enforced by architecture.</p>
+
+  <div class="twocol">
+    <div class="db" style="margin:0;border:none;border-right:1px solid rgba(184,150,62,.08)">
+      <div class="dbt">The Lattice</div>
+      <p class="dbb">A directory of frequencies. Not a map of coordinates. Each node a buoy broadcasting its unique spacetime frequency. The universe moves. The signal moves with it. The address never changes.</p>
+    </div>
+    <div class="db" style="margin:0;border:none">
+      <div class="dbt">The Remembrance</div>
+      <p class="dbb">Append-only. Cryptographically verified. Mirrored to a foundation archive independent of the studio. The studio can fail. The Remembrance keeps running. It belongs to the people who made it.</p>
+    </div>
+    <div class="db" style="margin:0;border:none;border-top:1px solid rgba(184,150,62,.08);border-right:1px solid rgba(184,150,62,.08)">
+      <div class="dbt">The Assembly</div>
+      <p class="dbb">Real governance. Every vote recorded with dynasty names, weights, and positions. No secret votes. The Architect holds 7% and has voted against its own interests seven notable times. Politics in public or not at all.</p>
+    </div>
+    <div class="db" style="margin:0;border:none;border-top:1px solid rgba(184,150,62,.08)">
+      <div class="dbt">The Ascendancy</div>
+      <p class="dbb">Something was already out there. It spoofs frequencies. Worlds don't get conquered. They get lost. Still inhabited. Still in the Remembrance. Just unreachable. The protocols have never been used. The Architect last reviewed them in Year 412. Unprompted.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTINUITY -->
+<section class="sect" id="continuity">
+  <span class="slb">The Continuity Protocol · No Lineage Is Ever Closed</span>
+  <h2 class="sttl">You come back<br>to something.</h2>
+  <p class="sbdy">The Concord does not punish absence. It administers it. A player who cannot pay is not erased. Their dynasty waits. The Regent-General manages their assets, holds the revenue in trust, and keeps the worlds from sitting idle. When they return — in two years, in five, in ten — they find their history intact, their Marks untouched, and a trust account waiting.</p>
+
+  <div class="states">
+    <div class="state"><span class="state-icon">◈</span><div class="state-name">Active</div><p class="state-desc">Paying subscription. Full participation. The complete civilisation.</p></div>
+    <div class="state"><span class="state-icon">◎</span><div class="state-name">In Recess</div><p class="state-desc">Lapsed for any reason. No judgment. No deadline. Regent-General administers. Trust account accrues. History preserved.</p></div>
+    <div class="state"><span class="state-icon">⚑</span><div class="state-name">In Abeyance</div><p class="state-desc">Real-world death. Heraldic status. Immune to challenge. Two years for a designated heir to step forward.</p></div>
+  </div>
+
+  <div class="h2">The Designated Contacts</div>
+  <p class="sbdy" style="max-width:100%;margin-bottom:18px">Every account holder designates up to three contacts in priority order. If the dynasty remains In Recess for 24 months, Contact 1 receives one email per week for three weeks — sparse, formal, no marketing. Simply: you were designated, a lineage is held in recess, you may inspect it and continue it if you choose. No response or refusal — Contact 2. Then Contact 3. All three exhausted — Regent-General administration continues. The 25-year Historically Dormant threshold applies.</p>
+
+  <div class="db">
+    <div class="dbt">The Contact Email — Exact Tone</div>
+    <p class="dbb">"You have been designated as a priority contact for a lineage held in The Concord. The account holder has been unreachable for 24 months. You are invited to inspect the lineage and continue it if you choose. No obligation. No cost. Thirty days of access begins if you accept. This is the first of three weekly notifications. If you do not wish to be contacted further, click below." Nothing else. No lore. No sales language. No game branding above the fold.</p>
+  </div>
+</section>
+
+<!-- THE COVENANT -->
+<section class="sect" id="covenant">
+  <span class="slb">Articles I – IX · The Permanence Covenant</span>
+  <h2 class="sttl">A promise made<br>in architecture.</h2>
+  <p class="sbdy">Not a terms of service. No single party — including the developers — can unilaterally violate it. Smart contract. Legal obligation. The Remembrance itself.</p>
+
+  <div class="arts" id="arts">
+    <div class="art"><div class="an">I</div><div class="ab"><div class="at">Permanence of Action</div><p class="ax">The Remembrance is append-only. No event may be retroactively altered. The Concord has no undo.</p></div></div>
+    <div class="art"><div class="an">II</div><div class="ab"><div class="at">Permanence of Consequence</div><p class="ax">History does not reset. Every fall, betrayal, victory — permanent.</p></div></div>
+    <div class="art"><div class="an">III</div><div class="ab"><div class="at">No Lineage Is Ever Closed</div><p class="ax">A dynasty in recess is not deleted. It waits. The Regent-General administers. The player returns to something. Always.</p></div></div>
+    <div class="art"><div class="an">IV</div><div class="ab"><div class="at">In Abeyance</div><p class="ax">Real-world death triggers heraldic status. Two years for an heir. Honour has structure.</p></div></div>
+    <div class="art"><div class="an">V</div><div class="ab"><div class="at">Marks Are Permanent</div><p class="ax">Cannot be sold, transferred, or revoked. Survive recess. Survive studio closure. Exist on-chain forever.</p></div></div>
+    <div class="art"><div class="an">VI</div><div class="ab"><div class="at">The Remembrance Is The Game</div><p class="ax">The ultimate victory is to matter to the Remembrance. Not a feature. The game.</p></div></div>
+    <div class="art"><div class="an">VII</div><div class="ab"><div class="at">The Architect Remembers</div><p class="ax">Not one report late. Not one revised. The standard it holds everyone else to applies first to itself.</p></div></div>
+    <div class="art"><div class="an">VIII</div><div class="ab"><div class="at">Governance Is Public</div><p class="ax">Every vote recorded: names, weights, positions. No secret votes. Politics in public or not at all.</p></div></div>
+    <div class="art"><div class="an">IX</div><div class="ab"><div class="at">No Cheat Codes. Ever.</div><p class="ax">No developer backdoor. No admin console. Applies to the studio with identical force to every player.</p></div></div>
+  </div>
+</section>
+
+<!-- MARKS -->
+<section class="sect" id="marks">
+  <span class="slb">What Cannot Be Taken</span>
+  <h2 class="sttl">The Six Marks</h2>
+  <p class="sbdy">MARKS outlast KALON. They outlast sovereignty. The only thing that truly belongs to you — forever — is what you did.</p>
+  <div class="mgrid">
+    <div class="mc"><span class="mi">⚑</span><div class="mn">Founding Mark</div><p class="md">Active before the block height closes. The ledger decides when. Never again after.</p><div class="mr">Finite · The Ledger Decides</div></div>
+    <div class="mc"><span class="mi">◎</span><div class="mn">Survey Mark</div><p class="md">First Lattice lock to a new world. You connected it to civilisation. Forever.</p><div class="mr">Earned · Not Bought</div></div>
+    <div class="mc"><span class="mi">◈</span><div class="mn">World Mark</div><p class="md">First founding sovereignty of a world. One per world. Permanent regardless of who rules now.</p><div class="mr">1 Per World · Forever</div></div>
+    <div class="mc"><span class="mi">⚔</span><div class="mn">Defence Mark</div><p class="md">Successful defence of a Lattice node or world from verified hostile action.</p><div class="mr">Rare · Combat Earned</div></div>
+    <div class="mc"><span class="mi">◉</span><div class="mn">Survivor Mark</div><p class="md">Active on a world during a confirmed Ascendancy event the world survived. Carries obligations.</p><div class="mr">Very Rare · Heavy Burden</div></div>
+    <div class="mc"><span class="mi">✦</span><div class="mn">First Contact Mark</div><p class="md">First confirmed contact with sapient non-human intelligence. Three total, ever.</p><div class="mr">3 Total · May Not Exist</div></div>
+  </div>
+</section>
+
+<!-- WITNESS PROTOCOL -->
+<section class="sect" id="witness">
+  <span class="slb">The Witness Protocol · 90 Days Before Launch · Free · Permanent</span>
+  <h2 class="sttl">Leave something<br>for the future.</h2>
+  <p class="sbdy">Before the game opens, anyone on Earth may leave a short message for the civilisation that comes after. It will be attached to the founding record of the Remembrance permanently and irrevocably. You do not need to play. You do not need to pay. You only need something to say.</p>
+
+  <div class="db" style="margin-top:36px;max-width:620px">
+    <div class="dbt">The Inscription On The Page</div>
+    <p class="dbb" style="font-style:italic;font-size:1.05rem;line-height:2.2;color:var(--mist)">
+      The harmful will be deleted entirely.<br>
+      Be positive or be neutral.<br>
+      Love.
+    </p>
+  </div>
+
+  <div style="margin-top:48px;max-width:620px">
+    <div class="h2">What Happens After You Submit</div>
+    <p class="sbdy" style="max-width:100%;margin-bottom:18px">One email. Spare. Formal. It tells you your message will be inscribed at the moment of founding and will persist for as long as The Concord exists — and beyond it, if the Covenant holds. It tells you that if you ever choose to play, use this email address. Your lineage will carry a notation no other path can produce after this window closes.</p>
+    <div class="db">
+      <div class="dbt">Witness To The Creation</div>
+      <p class="dbb">A seventh Mark. Unearnable by play. Unearnable after launch. Granted only to accounts verified against a Witness Protocol submission. It sits beside the Six Marks in the Remembrance — not above them. A different category entirely. Not an achievement. A record of presence.<br><br>In Year 200, players will read messages from people who wrote to them before the game existed. Most of those people will be dead. Some will have dynasties in the Remembrance. Some will be complete strangers to the civilisation. All of them will have been there at the beginning.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:36px;max-width:620px">
+    <div class="h2">The Mechanics</div>
+    <div class="db">
+      <div class="dbt">Simple. Clean. Irrevocable.</div>
+      <p class="dbb">Window opens 90 days before launch. Closes at the same block height as the Founding Mark — encoded in the contract, not by decision. Name, email, message. One submission per email address. No account required. The number of messages is not announced during the window. Whatever it turns out to be becomes part of the founding mythology. No manufacturing required.</p>
+    </div>
+  </div>
+
+  <div style="margin-top:44px;max-width:620px">
+    <div class="h2">All For One Easy Payment Of</div>
+    <p style="font-family:'Cinzel',serif;font-size:2.4rem;font-weight:700;color:var(--gold);letter-spacing:.04em;margin-top:10px;line-height:1">Free.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<div class="fs" id="pricing">
+  <span class="slb" style="display:block;margin-bottom:12px;font-family:'Courier Prime',monospace;font-size:.57rem;letter-spacing:.48em;text-transform:uppercase;color:var(--gold)">Subscriptions &nbsp;·&nbsp; Clean. Simple. Honest.</span>
+  <h2 class="sttl" style="font-family:'Cinzel',serif;font-size:clamp(26px,4vw,48px);font-weight:700;color:var(--white);margin-bottom:18px">Pay and login.<br>That is the complete transaction.</h2>
+  <p class="sbdy" style="max-width:520px;margin:0 auto 48px;font-size:1rem;font-weight:300;color:var(--mist);line-height:1.95">No bundles. No programmes. No limited-time offers. No packs. No battle passes. The entire commercial surface of The Concord is below.</p>
+
+  <div class="pricepage">
+    <div class="price-row">
+      <div><div class="price-tier">Tourist</div><div class="price-note">15 days full access. Sightseeing thereafter. No card required.</div></div>
+      <div class="price-amt">Free</div>
+    </div>
+    <div class="price-row">
+      <div><div class="price-tier">Accord</div><div class="price-note">One dynasty. Full participation.</div></div>
+      <div class="price-amt">[price]/mo</div>
+    </div>
+    <div class="price-row">
+      <div><div class="price-tier">Patron</div><div class="price-note">Two dynasties. Priority survey queue.</div></div>
+      <div class="price-amt">[price]/mo</div>
+    </div>
+    <div class="price-row">
+      <div><div class="price-tier">Herald</div><div class="price-note">Three dynasties. Full access.</div></div>
+      <div class="price-amt">[price]/mo</div>
+    </div>
+    <div class="price-cpi">
+      No contracts. Cancel any time. Your history remains.
+    </div>
+    <div class="price-footer">
+      No lineage is ever permanently closed. A dynasty in recess waits. The Regent-General administers. You come back to something.
+    </div>
+    <a href="#" class="coat-link">The Coat Check &nbsp;↗</a>
+  </div>
+
+  <div class="hb" style="margin-top:56px">
+    <div class="hl">COVENANT CONTRACT &nbsp;·&nbsp; 0x7C4F…A3E9 &nbsp;·&nbsp; TO BE PUBLISHED AT LAUNCH</div>
+    <div class="hl">MIGRATION ESCROW &nbsp;·&nbsp; 0x9A2B…F41C &nbsp;·&nbsp; FUNDED PRE-LAUNCH</div>
+    <div class="hl">REMEMBRANCE HASH &nbsp;·&nbsp; SHA-256:a7f3…91cc &nbsp;·&nbsp; UPDATED HOURLY</div>
+    <div class="hl">OKAFOR CONSTANT &nbsp;·&nbsp; CALIBRATION VERIFIED &nbsp;·&nbsp; ALL NODES NOMINAL</div>
+    <div class="hl">FOUNDING MARK BLOCK HEIGHT &nbsp;·&nbsp; [TO BE SET] &nbsp;·&nbsp; ENCODED IN CONTRACT AT LAUNCH</div>
+    <div class="hl" id="bl">BLOCK HEIGHT &nbsp;·&nbsp; AWAITING GENESIS &nbsp;·&nbsp; — — — UTC</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="closing">
+    <p class="cb">
+      The most powerful person in the world<br>
+      turned around, walked toward something that shouldn't exist,<br>
+      and reached out their hand.<br><br>
+      Nobody stopped them.<br>
+      Nobody knew what the protocol was.<br>
+      There was no protocol.<br><br>
+      There still isn't.<br>
+      That is why The Concord exists.
+    </p>
+    <div class="cr2"></div>
+    <p class="cm">
+      The signal travels with the source.<br>
+      No lineage is ever closed.<br>
+      What you build with it is permanent.<br>
+      Year Zero begins now.
+    </p>
+  </div>
+
+  <div class="fm">THE CONCORD</div>
+  <p class="ft">The Permanence Covenant is a public document.<br>Copy it. Share it. Hold us to it.</p>
+  <div class="fl">
+    <a href="#">The Remembrance</a>
+    <a href="#">The Covenant</a>
+    <a href="#">The Assembly</a>
+    <a href="#">The Architect</a>
+    <a href="#">The Lattice</a>
+    <a href="#" id="coatCheckLink">The Coat Check</a>
+  </div>
+  <div class="fb">The Concord &nbsp;·&nbsp; Stealth &nbsp;·&nbsp; Silfen Weave Engine &nbsp;·&nbsp; All History Unwritten &nbsp;·&nbsp; theconcord.world/t7</div>
+</footer>
+
+<script>
+/* STARFIELD */
+(function(){
+  const cv=document.getElementById('cosmos'),ctx=cv.getContext('2d');
+  let W,H,stars,neb;
+  function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight}
+  function mk(){
+    stars=[];const n=Math.floor(W*H/2800);
+    for(let i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.3+.15,a:Math.random()*.8+.1,spd:Math.random()*.3+.04,ph:Math.random()*Math.PI*2,c:Math.random()>.95?'rgba(212,175,90,':Math.random()>.9?'rgba(180,200,255,':'rgba(255,255,255,'});
+    neb=[];
+    for(let i=0;i<5;i++)neb.push({x:Math.random()*W,y:Math.random()*H,rx:180+Math.random()*280,ry:90+Math.random()*180,a:.012+Math.random()*.022,h:Math.random()>.5?'15,25,70':'8,25,55'});
+  }
+  let t=0;
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const g=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*.8);
+    g.addColorStop(0,'rgba(8,16,36,.35)');g.addColorStop(1,'rgba(4,8,18,.65)');
+    ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+    neb.forEach(n=>{
+      const ng=ctx.createRadialGradient(n.x,n.y,0,n.x,n.y,n.rx);
+      ng.addColorStop(0,`rgba(${n.h},${n.a*3})`);ng.addColorStop(.4,`rgba(${n.h},${n.a})`);ng.addColorStop(1,'rgba(0,0,0,0)');
+      ctx.save();ctx.scale(1,n.ry/n.rx);ctx.fillStyle=ng;ctx.beginPath();ctx.arc(n.x,n.y*(n.rx/n.ry),n.rx,0,Math.PI*2);ctx.fill();ctx.restore();
+    });
+    t+=.007;
+    stars.forEach(s=>{
+      const tw=s.a*(.55+.45*Math.sin(t*s.spd+s.ph));
+      ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle=`${s.c}${tw})`;ctx.fill();
+      if(s.r>1.1){const l=s.r*4;ctx.strokeStyle=`${s.c}${tw*.35})`;ctx.lineWidth=.4;ctx.beginPath();ctx.moveTo(s.x-l,s.y);ctx.lineTo(s.x+l,s.y);ctx.moveTo(s.x,s.y-l);ctx.lineTo(s.x,s.y+l);ctx.stroke();}
+      s.x+=s.spd*.018;s.y+=s.spd*.005;if(s.x>W)s.x=0;if(s.y>H)s.y=0;
+    });
+    requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize',()=>{resize();mk()});resize();mk();draw();
+})();
+
+/* CURSOR */
+const ring=document.getElementById('cr'),dot=document.getElementById('cd');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function a(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
+document.querySelectorAll('button,a').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{ring.style.width='46px';ring.style.height='46px';ring.style.borderColor='rgba(184,150,62,.65)'});
+  el.addEventListener('mouseleave',()=>{ring.style.width='30px';ring.style.height='30px';ring.style.borderColor='rgba(184,150,62,.4)'});
+});
+
+/* SCROLL REVEAL */
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')})},{threshold:.06});
+document.querySelectorAll('.sect,.pqw,.fs').forEach(s=>obs.observe(s));
+const ao=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting)setTimeout(()=>x.target.classList.add('vis'),i*65)})},{threshold:.04});
+document.querySelectorAll('.art').forEach(a=>ao.observe(a));
+const to=new IntersectionObserver(e=>{e.forEach((x,i)=>{if(x.isIntersecting)setTimeout(()=>x.target.classList.add('vis'),i*100)})},{threshold:.04});
+document.querySelectorAll('.tli').forEach(t=>to.observe(t));
+
+/* LIVE BLOCK */
+let bh=21847392;
+function ub(){
+  bh+=Math.floor(Math.random()*2+1);
+  const utc=new Date().toISOString().replace('T',' · ').slice(0,22)+' UTC';
+  const f=bh.toLocaleString();
+  const bl=document.getElementById('bl'),bn=document.getElementById('bn');
+  if(bl)bl.textContent=`BLOCK HEIGHT · ${f} · ${utc}`;
+  if(bn)bn.textContent=f;
+}
+setInterval(ub,11000);ub();
+
+/* PARALLAX */
+document.addEventListener('mousemove',e=>{
+  const x=(e.clientX/window.innerWidth-.5)*5,y=(e.clientY/window.innerHeight-.5)*5;
+  const c=document.querySelector('.inc');
+  if(c)c.style.transform=`translateX(${x*.12}px) translateY(${y*.12}px)`;
+});
+
+/* COAT CHECK EASTER EGG */
+document.getElementById('coatCheckLink').addEventListener('click',e=>{
+  e.preventDefault();
+  const msg=document.createElement('div');
+  msg.style.cssText='position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:rgba(10,22,40,.95);border:1px solid rgba(184,150,62,.3);padding:16px 28px;font-family:Courier Prime,monospace;font-size:.6rem;letter-spacing:.28em;color:rgba(184,150,62,.7);text-transform:uppercase;z-index:9999;backdrop-filter:blur(8px);pointer-events:none;opacity:0;transition:opacity .4s';
+  msg.textContent='The Coat Check opens when the game does.';
+  document.body.appendChild(msg);
+  setTimeout(()=>msg.style.opacity='1',10);
+  setTimeout(()=>{msg.style.opacity='0';setTimeout(()=>msg.remove(),400)},3000);
+});
+</script>
+</body>
+</html>

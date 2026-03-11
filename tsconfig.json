@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2023"],
+    "outDir": "./dist",
+    "rootDir": ".",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "exactOptionalPropertyTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true
+  },
+  "references": [
+    { "path": "./contracts/bridge-loom" },
+    { "path": "./contracts/events" },
+    { "path": "./contracts/entities" },
+    { "path": "./contracts/protocols" },
+    { "path": "./contracts/design" },
+    { "path": "./fabrics/loom-core" },
+    { "path": "./fabrics/shuttle" },
+    { "path": "./fabrics/silfen-weave" },
+    { "path": "./fabrics/nakama-fabric" },
+    { "path": "./fabrics/inspector" },
+    { "path": "./fabrics/selvage" },
+    { "path": "./fabrics/dye-house" },
+    { "path": "./fabrics/archive" }
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "fabrics/bridge-loom-ue5",
+    "vitest.config.ts",
+    "eslint.config.js"
+  ]
+}

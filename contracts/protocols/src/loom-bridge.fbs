@@ -1,0 +1,214 @@
+// FlatBuffers schema for Loom ↔ Bridge wire protocol
+// Thread: bridge/bridge-loom-ue5/flatbuffers-schema
+// Tier: 0
+
+namespace LoomBridge;
+
+// ─── Envelopes ──────────────────────────────────────────────────
+
+enum MessageType : byte {
+  EntitySnapshot = 0,
+  EntitySpawn = 1,
+  EntityDespawn = 2,
+  PlayerInput = 3,
+  WorldPreload = 4,
+  WorldUnload = 5,
+  TimeOfDay = 6,
+  Weather = 7,
+  ChunkLoad = 8,
+  ChunkUnload = 9,
+  FacialPose = 10,
+  HealthCheck = 11,
+  HealthResponse = 12,
+}
+
+table Envelope {
+  message_type: MessageType;
+  sequence: uint;
+  timestamp_us: long;     // microseconds since epoch
+  correlation_id: string; // distributed tracing
+  payload: [ubyte];       // nested FlatBuffer
+}
+
+// ─── Geometry ───────────────────────────────────────────────────
+
+struct Vec3 {
+  x: float;
+  y: float;
+  z: float;
+}
+
+struct Quat {
+  x: float;
+  y: float;
+  z: float;
+  w: float;
+}
+
+struct TransformFB {
+  position: Vec3;
+  rotation: Quat;
+  scale: Vec3;
+}
+
+// ─── Entity State ───────────────────────────────────────────────
+
+table EntitySnapshot {
+  entity_id: string (required);
+  transform: TransformFB;
+  mesh_hash: string;
+  animation_clip: string;
+  animation_time: float;
+  animation_blend: float;
+  animation_rate: float;
+  material_overrides: [MaterialParam];
+  visibility: bool = true;
+  render_priority: int;
+  lod_bias: float;
+}
+
+table EntitySpawn {
+  entity_id: string (required);
+  initial_state: EntitySnapshot (required);
+  archetype: string;          // e.g. "character", "npc_tier3", "prop", "vehicle"
+  metahuman_preset: string;   // MetaHuman identity preset name (empty = non-human)
+}
+
+table EntityDespawn {
+  entity_id: string (required);
+  reason: DespawnReason;
+}
+
+enum DespawnReason : byte {
+  Normal = 0,
+  OutOfRange = 1,
+  WorldUnload = 2,
+  Death = 3,
+}
+
+table MaterialParam {
+  slot_index: int;
+  param_name: string (required);
+  float_value: float;
+  vector_value: Vec3;
+  texture_hash: string;     // content-addressed texture override
+}
+
+// ─── Player Input ───────────────────────────────────────────────
+
+table PlayerInput {
+  entity_id: string (required);
+  move_x: float;
+  move_y: float;
+  move_z: float;
+  yaw: float;
+  pitch: float;
+  action_flags: uint;       // bitfield of pressed actions
+  sequence: uint;
+}
+
+// ─── World Streaming ────────────────────────────────────────────
+
+table WorldPreload {
+  world_id: string (required);
+  asset_manifest: [AssetRef];
+  priority: float;
+}
+
+table WorldUnload {
+  world_id: string (required);
+}
+
+table ChunkLoad {
+  world_id: string (required);
+  chunk_x: int;
+  chunk_y: int;
+  chunk_z: int;
+  priority: float;
+}
+
+table ChunkUnload {
+  world_id: string (required);
+  chunk_x: int;
+  chunk_y: int;
+  chunk_z: int;
+}
+
+table AssetRef {
+  content_hash: string (required);
+  asset_name: string;
+  size_bytes: ulong;
+}
+
+// ─── Environment ────────────────────────────────────────────────
+
+table TimeOfDayUpdate {
+  sun_altitude: float;
+  sun_azimuth: float;
+  sun_color_r: float;
+  sun_color_g: float;
+  sun_color_b: float;
+  sun_intensity: float;
+  fog_density: float;
+  fog_color_r: float;
+  fog_color_g: float;
+  fog_color_b: float;
+  cloud_coverage: float;
+  star_brightness: float;      // night sky
+  moon_phase: float;           // 0-1 cycle
+}
+
+table WeatherUpdate {
+  rain_intensity: float;
+  snow_intensity: float;
+  wind_speed: float;
+  wind_direction: float;
+  temperature: float;
+  humidity: float;
+  lightning_probability: float; // per-minute flash chance
+  fog_height: float;            // ground fog ceiling
+}
+
+// ─── Facial Animation (MetaHuman) ───────────────────────────────
+
+table FacialPose {
+  entity_id: string (required);
+  blend_shapes: [BlendShapeValue];  // ARKit 52 blend shapes
+  jaw_open: float;
+  eye_look_up_left: float;
+  eye_look_up_right: float;
+  eye_look_down_left: float;
+  eye_look_down_right: float;
+  eye_look_in_left: float;
+  eye_look_in_right: float;
+  eye_look_out_left: float;
+  eye_look_out_right: float;
+  emotion_tag: string;          // "happy", "angry", "curious" — Loom-driven
+  speech_viseme: string;        // current phoneme for lip sync
+  speech_amplitude: float;      // volume-driven jaw/lip movement
+}
+
+table BlendShapeValue {
+  name: string (required);      // ARKit blend shape name
+  weight: float;                // 0.0 - 1.0
+}
+
+// ─── Health Check ───────────────────────────────────────────────
+
+table HealthCheckRequest {
+  request_id: string (required);
+}
+
+table HealthCheckResponse {
+  request_id: string (required);
+  healthy: bool;
+  current_fps: float;
+  frame_time_ms: float;
+  visible_entities: int;
+  memory_usage_mb: float;
+  gpu_usage_percent: float;
+  loaded_chunks: int;
+  active_metahumans: int;       // MetaHuman instances active
+}
+
+root_type Envelope;
