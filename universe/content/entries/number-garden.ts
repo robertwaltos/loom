@@ -2,7 +2,7 @@
  * Seed Data — Number Garden (Dottie Chakravarti)
  * Mathematics / Patterns
  *
- * Source: Koydo Universe Bible v2 + v3
+ * Source: Koydo Worlds Bible v2 + v3
  */
 import type { RealWorldEntry } from '../types.js';
 

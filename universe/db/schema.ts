@@ -1,7 +1,7 @@
 /**
- * Koydo Universe — Supabase Database Schema
+ * Koydo Worlds — Supabase Database Schema
  *
- * All tables live in the loom-universe Supabase project.
+ * All tables live in the loom-worlds Supabase project.
  * NEVER in the Koydo EdTech project. NEVER in The Concord's project.
  *
  * This file defines the TypeScript types matching the Supabase tables.
@@ -43,7 +43,7 @@ export type {
 // ─── Database Table Registry ───────────────────────────────────────
 
 /**
- * Complete table list for the loom-universe Supabase project:
+ * Complete table list for the loom-worlds Supabase project:
  *
  * Content:
  *   real_world_entries         — Core content (RealWorldEntry schema)

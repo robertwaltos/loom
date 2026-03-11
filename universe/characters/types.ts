@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — Character / Guide Types
+ * Koydo Worlds — Character / Guide Types
  *
  * Every character is a teacher with a wound, a gift, and a reason
  * children will remember them. 50 guides across the universe.

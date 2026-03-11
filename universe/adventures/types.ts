@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — Adventure Type Definitions
+ * Koydo Worlds — Adventure Type Definitions
  *
  * Seven adventure types, each mapping to a distinct UI/UX pattern.
  * Every RealWorldEntry specifies exactly one adventure type.

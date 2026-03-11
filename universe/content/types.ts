@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — Core Content Types
+ * Koydo Worlds — Core Content Types
  *
  * The RealWorldEntry schema and related types from the Bible.
  * These define the knowledge graph that underpins every world.

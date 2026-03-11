@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — World Definitions
+ * Koydo Worlds — World Definitions
  *
  * Each world is a self-contained Fabric (plugin) in The Loom architecture.
  * 50 worlds organized into 3 Realms + 1 Cross-Disciplinary Hub.

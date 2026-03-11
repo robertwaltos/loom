@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — Kindler (Player) Progression System
+ * Koydo Worlds — Kindler (Player) Progression System
  *
  * Every child is a Kindler — their Spark grows with learning,
  * dims gently with absence (never punitively).

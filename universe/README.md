@@ -1,6 +1,6 @@
-# Koydo Universe — Product Code
+# Koydo Worlds — Product Code
 
-This directory contains ALL product-specific code for Koydo Universe.
+This directory contains ALL product-specific code for Koydo Worlds.
 Nothing in this directory should ever be merged upstream to The Loom engine.
 
 ## Structure

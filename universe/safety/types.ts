@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — Safety & COPPA Compliance Types
+ * Koydo Worlds — Safety & COPPA Compliance Types
  *
  * COPPA compliance is not optional. It is a legal requirement.
  * Every data decision starts from: "is this legal for children under 13?"

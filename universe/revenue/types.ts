@@ -1,5 +1,5 @@
 /**
- * Koydo Universe — Revenue & Epic Royalty Tracking
+ * Koydo Worlds — Revenue & Epic Royalty Tracking
  *
  * UE5 Royalty: First $1M lifetime free, then 5% (or 3.5% with Epic Store).
  * Build this once, automate, and forget.
