@@ -136,6 +136,10 @@ public:
 		return ConnectionState == ELoomConnectionState::Connected;
 	}
 
+	/** The client ID assigned by the Loom server during negotiate. */
+	UFUNCTION(BlueprintPure, Category = "Loom|Connection")
+	FString GetAssignedClientId() const;
+
 	// ─── Player Input ───────────────────────────────────────────
 
 	/**
@@ -165,10 +169,15 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Loom|Events")
 	FOnLoomWorldPreload OnWorldPreload;
 
+// Forward declare gRPC types to avoid header pollution
+namespace LoomBridge { class ServerMessage; }
+
 protected:
 	void SetConnectionState(ELoomConnectionState NewState);
 	void AttemptReconnect();
 	void SendHeartbeat();
+	void ProcessServerMessage(const FString& MsgType,
+		const LoomBridge::ServerMessage& Msg);
 
 private:
 	ELoomConnectionState ConnectionState = ELoomConnectionState::Disconnected;
@@ -177,6 +186,7 @@ private:
 
 	uint32 InputSequence = 0;
 	int32 ReconnectAttempts = 0;
+	double LastHeartbeatSentSec = 0.0;
 	FTimerHandle ReconnectTimerHandle;
 	FTimerHandle HeartbeatTimerHandle;
 	double ConnectTimestamp = 0.0;

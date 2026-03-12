@@ -312,7 +312,7 @@ describe('Full-Stack — optional fabric wiring', () => {
     });
 
     const systems = orchestrator.core.systems.listSystems();
-    expect(systems).toHaveLength(3);
+    expect(systems).toHaveLength(7);
 
     orchestrator.stop();
   });

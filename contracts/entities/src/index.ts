@@ -46,6 +46,12 @@ export type {
   NpcTierComponent,
   InteractionType,
   InteractionComponent,
+  AppearanceComponent,
+  WalletComponent,
+  GovernanceVoteCategory,
+  GovernanceProposalStatus,
+  GovernanceProposalSummary,
+  GovernanceComponent,
 } from './gameplay-components.js';
 
 // ── Component Registry ──────────────────────────────────────────
@@ -78,3 +84,19 @@ export type {
   CharacterImageRequest,
   CharacterImageResult,
 } from './character-appearance.js';
+
+// ── Character Bible Types ───────────────────────────────────────
+
+export type {
+  ConcordFaction,
+  BibleTier,
+  MetaHumanConfig,
+  ExpressionSet,
+  BibleAppearance,
+  BibleCostume,
+  GenerationPrompts,
+  CharacterEntry,
+  StellarClass,
+  SovereigntyType,
+  WorldEntry,
+} from './character-bible-types.js';

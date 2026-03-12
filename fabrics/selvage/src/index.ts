@@ -768,3 +768,50 @@ export type {
   LocalizationEngineConfig,
   LocalizationEngine,
 } from './localization-engine.js';
+
+// ── Bridge gRPC Server ──────────────────────────────────────────
+
+export { createBridgeGrpcServer, DEFAULT_BRIDGE_CONFIG, STALE_CLIENT_TIMEOUT_MS } from './bridge-grpc-server.js';
+export type {
+  BridgeGrpcClockPort,
+  BridgeGrpcIdPort,
+  BridgeGrpcLogPort,
+  BridgeGrpcConfig,
+  RenderingFeatures,
+  RenderingTier,
+  CapabilityManifest,
+  ClientMessageType,
+  ServerMessageType,
+  ClientStreamMessage,
+  ServerStreamMessage,
+  WorldCommandType,
+  WorldCommandRequest,
+  WorldCommandResponse,
+  BridgeHealthStatus,
+  ConnectedClient,
+  BridgeInputHandler,
+  BridgePhysicsHandler,
+  BridgeWorldStateProvider,
+  BridgeNegotiateHandler,
+  BridgeDisconnectHandler,
+  BridgeGrpcServer,
+  BridgeGrpcServerDeps,
+} from './bridge-grpc-server.js';
+
+// ── Voice Chat Rooms ────────────────────────────────────────────
+
+export { createVoiceChatRoomManager, ROOM_CAPACITY, INACTIVE_TIMEOUT_MS } from './voice-chat-rooms.js';
+export type {
+  VoiceClockPort,
+  VoiceIdPort,
+  VoiceLogPort,
+  VoiceSignalingPort,
+  VoiceRoomType,
+  ParticipantState,
+  VoiceParticipant,
+  VoiceRoom,
+  VoiceRoomStats,
+  VoiceError,
+  VoiceChatRoomManager,
+  VoiceChatDeps,
+} from './voice-chat-rooms.js';

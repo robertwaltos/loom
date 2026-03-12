@@ -38,6 +38,16 @@ export type {
   AiBackend,
   MemoryModel,
 } from './npc-tiers.js';
+export { validatePillarProfile } from './npc-five-pillars.js';
+export type {
+  FivePillarProfile,
+  NpcWound,
+  NpcLimitation,
+  NpcCompetence,
+  NpcQuestion,
+  NpcSecret,
+  PillarValidationError,
+} from './npc-five-pillars.js';
 export { createWorldShadowEconomy, DEFAULT_SHADOW_CONFIG } from './world-shadow-economy.js';
 export type {
   WorldShadowEconomy,
@@ -1004,3 +1014,30 @@ export type {
   ModelComparison,
   MlPipelineStats,
 } from './ml-pipeline.js';
+
+// ── NPC Crowd Simulation ────────────────────────────────────────
+
+export {
+  createCrowdSimulation,
+  DEFAULT_CROWD_CONFIG,
+  vec3Add,
+  vec3Sub,
+  vec3Scale,
+  vec3Length,
+  vec3Normalize,
+  vec3DistanceSq,
+  vec3Clamp,
+} from './npc-crowd-simulation.js';
+export type {
+  CrowdClockPort,
+  CrowdIdPort,
+  CrowdLogPort,
+  Vec3,
+  CrowdBehavior,
+  CrowdAgent,
+  CrowdGroup,
+  CrowdObstacle,
+  CrowdConfig,
+  CrowdSimulation,
+  CrowdSimDeps,
+} from './npc-crowd-simulation.js';

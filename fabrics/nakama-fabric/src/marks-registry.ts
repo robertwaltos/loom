@@ -43,6 +43,18 @@ export const MARK_SUPPLY_CAPS: Readonly<Record<MarkType, number | null>> = {
   FIRST_CONTACT: 3,
 };
 
+// ─── Founding Mark Window (Bible v1.3) ─────────────────────────────
+
+/**
+ * Founding Mark eligibility requires presence in first 18 in-game days
+ * (6 real days at 3:1 compression, ~43,200 blocks on most L2s).
+ */
+export const FOUNDING_MARK = {
+  WINDOW_BLOCKS: 43_200,
+  REAL_DAYS_APPROX: 6,
+  INGAME_DAYS_APPROX: 18,
+} as const;
+
 // ─── Registry Interface ────────────────────────────────────────────
 
 export interface MarksRegistry {

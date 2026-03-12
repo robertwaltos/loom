@@ -196,6 +196,8 @@ export type {
   EventLogConfig,
   EventLogStats,
 } from './world-event-log.js';
+export { SURVEY_PACING, getPhaseForRealYear, getWorldsTargetAtRealYear } from './survey-pacing.js';
+export type { SurveyPhase } from './survey-pacing.js';
 export { createSurveyRoster } from './survey-roster.js';
 export type {
   SurveyRoster,

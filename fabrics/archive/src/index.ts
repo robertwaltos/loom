@@ -29,8 +29,20 @@ export type { HashInput } from './chronicle-hasher.js';
 export { ChronicleError } from './chronicle-errors.js';
 export type { ChronicleErrorCode } from './chronicle-errors.js';
 export { entryNotFound, chainIntegrityViolated, archiveSealed } from './chronicle-errors.js';
-export { calculateChronicleDepth, DEFAULT_DEPTH_CONFIG } from './depth-scoring.js';
-export type { DepthScoringConfig, DepthScore } from './depth-scoring.js';
+export {
+  calculateChronicleDepth,
+  DEFAULT_DEPTH_CONFIG,
+  PHASE_MULTIPLIERS,
+  PHASE_YEAR_RANGES,
+  getChroniclePhase,
+  getPhaseMultiplier,
+} from './depth-scoring.js';
+export type {
+  DepthScoringConfig,
+  DepthScore,
+  ChroniclePhase,
+  InGameYearResolver,
+} from './depth-scoring.js';
 export { createStateSnapshotEngine } from './state-snapshot.js';
 export type {
   StateSnapshotEngine,
@@ -879,3 +891,15 @@ export type {
   RemembranceSystemConfig,
   RemembranceEngine,
 } from './remembrance-system.js';
+export { createSealedChamberEngine, SEALED_CHAMBER_CONSTANTS } from './sealed-chambers.js';
+export type {
+  SealedChamberEngine,
+  SealedChamberDeps,
+  SealedChamberStats,
+  ChamberId,
+  ChamberState,
+  ChamberDefinition,
+  ChamberRecord,
+  ChamberTransition,
+  TriggerConditions,
+} from './sealed-chambers.js';

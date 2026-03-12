@@ -4,11 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "Subsystems/GameInstanceSubsystem.h"
+#include "BridgeLoomConnection.h"
 #include "BridgeLoomSubsystem.generated.h"
 
 /**
- * UBridgeLoomSubsystem — GameInstance-level subsystem that manages
- * the gRPC connection to the Loom server.
+ * UBridgeLoomSubsystem — Facade over UBridgeLoomConnection.
+ *
+ * Provides a simplified API for gameplay code that does not need
+ * the full connection configuration. Delegates all real work to
+ * UBridgeLoomConnection (the canonical gRPC connection manager).
  *
  * Receives:
  *   - Entity state snapshots (position, rotation, animation, LOD)
@@ -45,9 +49,11 @@ public:
     UFUNCTION(BlueprintCallable, Category = "BridgeLoom")
     void SendPlayerInput(const FString& PlayerId, const FVector& MoveDirection, float DeltaTime);
 
-private:
-    bool bConnected = false;
+    /** Access the underlying connection subsystem. */
+    UFUNCTION(BlueprintPure, Category = "BridgeLoom")
+    UBridgeLoomConnection* GetConnection() const { return CachedConnection; }
 
-    // Future: gRPC channel, stub, completion queue
-    // TSharedPtr<grpc::Channel> GrpcChannel;
+private:
+    UPROPERTY()
+    UBridgeLoomConnection* CachedConnection = nullptr;
 };

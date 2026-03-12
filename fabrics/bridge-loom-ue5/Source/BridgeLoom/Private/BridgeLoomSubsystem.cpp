@@ -5,46 +5,48 @@
 void UBridgeLoomSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
     Super::Initialize(Collection);
-    UE_LOG(LogTemp, Log, TEXT("BridgeLoom: Subsystem initialized"));
+    CachedConnection = GetGameInstance()->GetSubsystem<UBridgeLoomConnection>();
+    UE_LOG(LogTemp, Log, TEXT("BridgeLoom: Subsystem initialized (delegates to Connection)"));
 }
 
 void UBridgeLoomSubsystem::Deinitialize()
 {
-    DisconnectFromLoom();
+    CachedConnection = nullptr;
     Super::Deinitialize();
 }
 
 bool UBridgeLoomSubsystem::ConnectToLoom(const FString& Address, int32 Port)
 {
-    // TODO: Create gRPC channel to Address:Port
-    // GrpcChannel = grpc::CreateChannel(TCHAR_TO_UTF8(*FString::Printf(TEXT("%s:%d"), *Address, Port)), grpc::InsecureChannelCredentials());
-    bConnected = true;
-    UE_LOG(LogTemp, Log, TEXT("BridgeLoom: Connected to %s:%d"), *Address, Port);
-    return true;
+    if (!CachedConnection)
+    {
+        return false;
+    }
+
+    FLoomConnectionConfig Config;
+    Config.Address = Address;
+    Config.Port = Port;
+    CachedConnection->ConnectToLoom(Config);
+    return CachedConnection->IsConnected();
 }
 
 void UBridgeLoomSubsystem::DisconnectFromLoom()
 {
-    if (bConnected)
+    if (CachedConnection)
     {
-        // TODO: Close gRPC channel
-        bConnected = false;
-        UE_LOG(LogTemp, Log, TEXT("BridgeLoom: Disconnected"));
+        CachedConnection->DisconnectFromLoom();
     }
 }
 
 bool UBridgeLoomSubsystem::IsConnected() const
 {
-    return bConnected;
+    return CachedConnection && CachedConnection->IsConnected();
 }
 
 void UBridgeLoomSubsystem::SendPlayerInput(const FString& PlayerId, const FVector& MoveDirection, float DeltaTime)
 {
-    if (!bConnected)
+    if (!CachedConnection || !CachedConnection->IsConnected())
     {
         return;
     }
-    // TODO: Serialize to FlatBuffers, send via gRPC stream
-    UE_LOG(LogTemp, Verbose, TEXT("BridgeLoom: Input from %s dir=(%f,%f,%f) dt=%f"),
-        *PlayerId, MoveDirection.X, MoveDirection.Y, MoveDirection.Z, DeltaTime);
+    CachedConnection->SendPlayerInput(PlayerId, MoveDirection, 0.0f, 0.0f, 0);
 }

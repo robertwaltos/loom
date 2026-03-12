@@ -180,3 +180,112 @@ export interface InteractionComponent {
   /** UI prompt text shown to the player. */
   readonly promptText: string;
 }
+
+// ── Appearance (MetaHuman) ───────────────────────────────────────
+
+import type { AgeRange, BodyBuild } from './character-appearance.js';
+
+/**
+ * ECS component mapping an entity to a MetaHuman blueprint.
+ * The Loom stores canonical appearance data; UE5 resolves it
+ * to a MetaHuman asset at spawn time.
+ *
+ * Bridges the rich CharacterAppearance (Shuttle-owned) into
+ * the component store for rendering-fabric consumption.
+ */
+export interface AppearanceComponent {
+  /** MetaHuman preset ID from the MetaHuman Creator library. */
+  readonly metaHumanPresetId: string;
+  /** Body build for proportions and clothing fit. */
+  readonly bodyBuild: BodyBuild;
+  /** Age range for face/body aging. */
+  readonly ageRange: AgeRange;
+  /** Skin tone description (e.g. 'warm bronze'). */
+  readonly skinTone: string;
+  /** Hair style asset name. */
+  readonly hairStyle: string;
+  /** Hair color as hex (e.g. '#3B2F2F'). */
+  readonly hairColor: string;
+  /** Eye color as hex (e.g. '#5B8C5A'). */
+  readonly eyeColor: string;
+  /** Height multiplier relative to base (1.0 = default). */
+  readonly heightScale: number;
+  /** Optional clothing/armor overlay asset ID. */
+  readonly outfitAssetId: string | null;
+  /** Optional accessory asset IDs (hats, jewelry, weapons holstered). */
+  readonly accessories: ReadonlyArray<string>;
+  /** Facial feature overrides for fine-tuning (blend shape name → weight). */
+  readonly facialOverrides: Readonly<Record<string, number>>;
+}
+
+// ── Wallet (KALON Economy) ──────────────────────────────────────
+
+/**
+ * ECS component bridging the KalonLedger (nakama-fabric) into
+ * the entity component store. The ledger is the source of truth;
+ * this component is a read-optimized projection for gameplay systems.
+ *
+ * All amounts are in micro-KALON (bigint, 6 decimal places).
+ * 1 KALON = 1_000_000 micro-KALON.
+ */
+export interface WalletComponent {
+  /** Account ID in the KalonLedger (typically entityId or dynastyId). */
+  readonly accountId: string;
+  /** Current balance in micro-KALON (synced from ledger). */
+  readonly balance: bigint;
+  /** Lifetime earned in micro-KALON. */
+  readonly totalEarned: bigint;
+  /** Lifetime spent in micro-KALON. */
+  readonly totalSpent: bigint;
+  /** Tick number of last sync from ledger. */
+  readonly lastSyncTick: number;
+}
+
+// ── Governance ──────────────────────────────────────────────────
+
+/** Vote threshold category per the Bible: ordinary/significant/constitutional. */
+export type GovernanceVoteCategory = 'ordinary' | 'significant' | 'constitutional';
+
+/** Current status of a governance proposal visible to this entity. */
+export type GovernanceProposalStatus =
+  | 'draft'
+  | 'debating'
+  | 'voting'
+  | 'enacted'
+  | 'rejected'
+  | 'vetoed'
+  | 'expired';
+
+/** A governance proposal visible in the entity's governance component. */
+export interface GovernanceProposalSummary {
+  readonly proposalId: string;
+  readonly title: string;
+  readonly category: GovernanceVoteCategory;
+  readonly status: GovernanceProposalStatus;
+  readonly votesFor: number;
+  readonly votesAgainst: number;
+  readonly votesAbstain: number;
+  readonly deadline: number;
+}
+
+/**
+ * ECS component tracking an entity's governance participation.
+ * The Assembly (nakama-fabric) is the source of truth;
+ * this component is a read-optimized projection for UE5 rendering.
+ */
+export interface GovernanceComponent {
+  /** World this governance data belongs to. */
+  readonly worldId: string;
+  /** Entity's civic score (voting weight). */
+  readonly civicScore: number;
+  /** Entity's weighted vote power (derived from civic score). */
+  readonly votingWeight: number;
+  /** Currently visible proposals (max ~20 most relevant). */
+  readonly visibleProposals: ReadonlyArray<GovernanceProposalSummary>;
+  /** Whether entity has an active elected role. */
+  readonly electedRole: string | null;
+  /** Total votes cast lifetime. */
+  readonly totalVotesCast: number;
+  /** Total motions proposed lifetime. */
+  readonly totalMotionsProposed: number;
+}

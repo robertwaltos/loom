@@ -90,8 +90,8 @@ export { matchesFilter } from './event-filter-matcher.js';
 
 export { createSystemClock, createFakeClock } from './clock.js';
 export type { Clock } from './clock.js';
-export { createTimeService, DEFAULT_TIME_CONFIG } from './time-service.js';
-export type { TimeService, TimeServiceConfig } from './time-service.js';
+export { createTimeService, DEFAULT_TIME_CONFIG, COMPRESSION_RATIO } from './time-service.js';
+export type { TimeService, TimeServiceConfig, InGameDate } from './time-service.js';
 export { createUuidGenerator, createSequentialIdGenerator } from './id-generator.js';
 export type { IdGenerator } from './id-generator.js';
 export { createSilentLogger } from './logger.js';
@@ -238,6 +238,108 @@ export type {
 // ── Game Systems ─────────────────────────────────────────────────
 
 export { createMovementSystem, MOVEMENT_SYSTEM_PRIORITY } from './movement-system.js';
+export { createActionDispatchSystem, ACTION_DISPATCH_PRIORITY } from './action-dispatch-system.js';
+export type { ActionDispatchDeps, ActionEventSink, ActionEvent, ActionResult, ActionName, ActionFailReason } from './action-dispatch-system.js';
+export { createRespawnSystem, RESPAWN_SYSTEM_PRIORITY } from './respawn-system.js';
+export type { RespawnSystemDeps, RespawnEventSink, RespawnEvent } from './respawn-system.js';
+export { createNpcAiSystem, NPC_AI_SYSTEM_PRIORITY } from './npc-ai-system.js';
+export type { NpcAiSystemDeps, NpcAiEventSink, NpcAiEvent, NpcGoal } from './npc-ai-system.js';
+export { createWorldSeedService, createDefaultWorldSeed } from './world-seed-system.js';
+export type { WorldSeedDeps, WorldSeedConfig, WorldSeedResult, SpawnPointSeed, NpcSeed, ObjectSeed } from './world-seed-system.js';
+
+export {
+  getCharacterById,
+  getCharactersForWorld,
+  getMultiWorldCharacters,
+  getAllCharacters,
+  getCharacterCount,
+  getCharactersByTier,
+  getCharactersByFaction,
+} from './character-bible-registry.js';
+
+export {
+  getWorldById,
+  getAllWorlds,
+  getWorldCount,
+  getWorldsByStellarClass,
+  getWorldsBySovereignty,
+  STELLAR_ISSUANCE_MULTIPLIER,
+} from './world-bible-registry.js';
+
+export {
+  mapToCharacterAppearance,
+  mapToAppearanceComponent,
+} from './bible-appearance-mapper.js';
+
+export {
+  createBibleWorldSeed,
+  seedBibleWorld,
+  getAvailableBibleWorldIds,
+} from './bible-world-seed.js';
+export type { BibleWorldSeedResult } from './bible-world-seed.js';
+
+// ── Interaction System ──────────────────────────────────────────
+
+export {
+  createInteractionSystem,
+  INTERACTION_SYSTEM_PRIORITY,
+} from './interaction-system.js';
+export type {
+  InteractionEvent,
+  InteractionEventSink,
+  InteractionSystemDeps,
+} from './interaction-system.js';
+
+// ── Chronicle Service ───────────────────────────────────────────
+
+export { createChronicleService } from './chronicle-service.js';
+export type {
+  ChronicleService,
+  ChronicleEntry,
+  ChronicleSearchResult,
+  ChronicleEventSink,
+  ChronicleServiceDeps,
+  CreateEntryParams,
+} from './chronicle-service.js';
+
+// ── Wallet Sync System ──────────────────────────────────────────
+
+export {
+  createWalletSyncSystem,
+  WALLET_SYNC_PRIORITY,
+} from './wallet-sync-system.js';
+export type {
+  WalletSyncService,
+  WalletSyncDeps,
+  LedgerPort,
+  TransferPortResult,
+  WalletEventSink,
+  WalletBalanceChange,
+} from './wallet-sync-system.js';
+
+// ── Dialogue Bridge ─────────────────────────────────────────────
+
+export {
+  createDialogueBridge,
+  DIALOGUE_BRIDGE_PRIORITY,
+} from './dialogue-bridge.js';
+export type {
+  DialogueBridgeService,
+  DialogueBridgeDeps,
+  DialoguePort,
+  DialoguePortConversation,
+  DialoguePortNode,
+  DialoguePortAdvance,
+  TreeSelectorPort,
+  ChroniclePort,
+  ChronicleConversationParams,
+  DialogueEventSink,
+  DialogueBridgeStartedEvent,
+  DialogueBridgeLineEvent,
+  DialogueBridgeCompletedEvent,
+  DialogueBridgeInteractionComplete,
+} from './dialogue-bridge.js';
+
 export type { MovementSystemDeps } from './movement-system.js';
 
 export { createSpawnSystem } from './spawn-system.js';

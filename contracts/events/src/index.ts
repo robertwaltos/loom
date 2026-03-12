@@ -53,3 +53,29 @@ export type {
   TournamentMatchCompletedEvent,
   FestivalEconomyBoostEvent,
 } from './social-events.js';
+export type {
+  InteractionKind,
+  InteractionAvailableEvent,
+  InteractionUnavailableEvent,
+  InteractionStartedEvent,
+  InteractionCompletedEvent,
+  InteractionOutcome,
+  ChronicleEntryReadEvent,
+  ChronicleEntryCreatedEvent,
+  ChronicleEntryType,
+  ChronicleSearchEvent,
+} from './interaction-events.js';
+export type {
+  BalanceChangedEvent,
+  BalanceChangeReason,
+  TradeCompletedEvent,
+  IssuanceDistributedEvent,
+} from './economy-events.js';
+export type {
+  DialogueStartedEvent,
+  DialogueLineSpokenEvent,
+  DialogueSpeaker,
+  DialogueResponseOption,
+  DialogueCompletedEvent,
+  DialogueEndReason,
+} from './dialogue-events.js';

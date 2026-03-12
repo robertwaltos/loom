@@ -13,8 +13,8 @@ import type {
 import { ALL_COMPONENT_TYPES } from '../component-registry.js';
 
 describe('ALL_COMPONENT_TYPES', () => {
-  it('contains all 16 component types', () => {
-    expect(ALL_COMPONENT_TYPES).toHaveLength(16);
+  it('contains all 19 component types', () => {
+    expect(ALL_COMPONENT_TYPES).toHaveLength(19);
   });
 
   it('contains core components', () => {

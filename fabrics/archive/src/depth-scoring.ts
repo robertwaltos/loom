@@ -4,17 +4,59 @@
  * Bible v1.4: "A dynasty with a thousand trivial entries has less depth
  * than one with fifty significant ones."
  *
- * Five scoring factors:
+ * Six scoring factors:
  *   1. Category weights — different event types matter differently
  *   2. Recency decay — exponential half-life, floor at 10%
  *   3. Diminishing returns — 1/sqrt(n) for nth entry in same category
  *   4. Diversity bonus — Shannon entropy of category distribution
  *   5. World spread bonus — unique worlds visited
+ *   6. Phase multiplier — founding-era entries weighted higher (Bible v1.3)
  */
 
 import type { ChronicleEntry, ChronicleCategory } from './chronicle.js';
 
+// ─── Phase Multipliers (Bible v1.3) ─────────────────────────────────
+
+export type ChroniclePhase = 'founding' | 'early' | 'expansion' | 'contemporary';
+
+export const PHASE_MULTIPLIERS: Readonly<Record<ChroniclePhase, number>> = {
+  founding: 5.0,
+  early: 3.0,
+  expansion: 2.0,
+  contemporary: 1.0,
+} as const;
+
+export const PHASE_YEAR_RANGES: ReadonlyArray<{
+  readonly phase: ChroniclePhase;
+  readonly startYear: number;
+  readonly endYear: number;
+}> = [
+  { phase: 'founding', startYear: 1, endYear: 5 },
+  { phase: 'early', startYear: 6, endYear: 25 },
+  { phase: 'expansion', startYear: 26, endYear: 60 },
+  { phase: 'contemporary', startYear: 61, endYear: Infinity },
+] as const;
+
+export function getChroniclePhase(inGameYear: number): ChroniclePhase {
+  for (const range of PHASE_YEAR_RANGES) {
+    if (inGameYear >= range.startYear && inGameYear <= range.endYear) {
+      return range.phase;
+    }
+  }
+  return 'contemporary';
+}
+
+export function getPhaseMultiplier(inGameYear: number): number {
+  return PHASE_MULTIPLIERS[getChroniclePhase(inGameYear)];
+}
+
 // ─── Types ───────────────────────────────────────────────────────────
+
+/**
+ * Port to resolve the in-game year for a given timestamp.
+ * Injected by the consumer — keeps depth scoring decoupled from TimeService.
+ */
+export type InGameYearResolver = (timestampUs: number) => number;
 
 export interface DepthScoringConfig {
   readonly categoryWeights: Readonly<Record<ChronicleCategory, number>>;
@@ -22,6 +64,7 @@ export interface DepthScoringConfig {
   readonly worldSpreadScale: number;
   readonly recencyHalfLifeUs: number;
   readonly recencyFloor: number;
+  readonly inGameYearResolver?: InGameYearResolver;
 }
 
 export interface DepthScore {
@@ -111,7 +154,10 @@ function scoreByCategory(
     const weight = cfg.categoryWeights[entry.category];
     const recency = recencyFactor(entry.timestamp, now, cfg);
     const diminishing = 1 / Math.sqrt(nth);
-    scores[entry.category] += weight * recency * diminishing;
+    const phase = cfg.inGameYearResolver !== undefined
+      ? getPhaseMultiplier(cfg.inGameYearResolver(entry.timestamp))
+      : 1.0;
+    scores[entry.category] += weight * recency * diminishing * phase;
   }
 
   return scores;

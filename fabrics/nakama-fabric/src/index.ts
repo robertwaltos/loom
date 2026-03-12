@@ -58,6 +58,7 @@ export {
   UBK_BASE_ALLOCATION,
   UBK_INACTIVE_ESCROW_MONTHS,
   UBK_INACTIVE_THRESHOLD_DAYS,
+  UBK_CADENCE,
 } from './ubk.js';
 export type { UbkTier } from './ubk.js';
 export { createGenesisVault, GENESIS_VAULT_RULES } from './genesis-vault.js';
@@ -139,7 +140,7 @@ export {
   hasEarlyArchitectAccess,
 } from './subscription-tiers.js';
 export type { TierConfig, SurveyPriority, ArchitectAccess } from './subscription-tiers.js';
-export { createMarksRegistry, MARK_SUPPLY_CAPS, MarkError } from './marks-registry.js';
+export { createMarksRegistry, MARK_SUPPLY_CAPS, FOUNDING_MARK, MarkError } from './marks-registry.js';
 export type {
   MarksRegistry,
   Mark,
@@ -183,6 +184,18 @@ export type {
   UbkDistributionResult,
   CommonsFundSummary,
 } from './commons-fund.js';
+export { createQuarterlyTitheEngine, TITHE_RATES, TITHE_INTERVAL_DAYS } from './quarterly-tithe.js';
+export type {
+  QuarterlyTitheEngine,
+  QuarterlyTitheDeps,
+  TitheAssessment,
+  TitheCycleResult,
+  TitheLedgerPort,
+  TitheDynastyPort,
+  TitheSupplyPort,
+  TitheClockPort,
+  TitheIdPort,
+} from './quarterly-tithe.js';
 export { createHeirRegistry, MAX_HEIRS_BY_TIER } from './heir-registry.js';
 export type {
   HeirRegistry,
@@ -350,6 +363,12 @@ export {
   GRACE_PERIOD_DEFAULT_US,
   MAX_DORMANCY_DURATION_US,
 } from './dynasty-mortality.js';
+export {
+  MORTALITY_TIMINGS,
+  TIER_GRACE_INGAME_DAYS,
+  inGameDaysToRealDays,
+} from './mortality-timings.js';
+export type { SubscriptionTier as MortalitySubscriptionTier } from './mortality-timings.js';
 export type {
   DynastyMortalityEngine,
   MortalityDeps,
@@ -1320,3 +1339,55 @@ export type {
   DynastyLegacyConfig,
   DynastyLegacyEngine,
 } from './dynasty-legacy.js';
+export { createConstitutionalAmendmentEngine, DEFAULT_AMENDMENT_CONFIG } from './constitutional-amendment.js';
+export type {
+  ConstitutionalAmendmentEngine,
+  AmendmentDeps,
+  AmendmentConfig,
+  AmendmentStats,
+  Amendment,
+  AmendmentPhase,
+  RejectionReason,
+  ProposeAmendmentParams,
+  AmendmentVoteResult,
+} from './constitutional-amendment.js';
+export { createCrossWorldMessagingRelay, DEFAULT_MESSAGING_CONFIG } from './cross-world-messaging.js';
+export type {
+  CrossWorldMessagingRelay,
+  MessagingRelayDeps,
+  MessagingRelayConfig,
+  MessagingRelayStats,
+  CrossWorldMessage,
+  MessageType,
+  MessageStatus,
+  SendMessageParams,
+} from './cross-world-messaging.js';
+export { createEventArenaSystem, DEFAULT_ARENA_CONFIG } from './event-arena.js';
+export type {
+  EventArenaSystem,
+  ArenaSystemDeps,
+  ArenaSystemConfig,
+  ArenaSystemStats,
+  ArenaEvent,
+  ArenaType,
+  ArenaPhase,
+  ArenaParticipant,
+  ArenaSpectator,
+  ArenaMatch,
+  ParticipantStatus,
+  SpectatorStatus,
+  CreateArenaParams,
+  ReportMatchParams,
+} from './event-arena.js';
+export { createAllianceChatSystem, DEFAULT_CHAT_CONFIG } from './alliance-chat.js';
+export type {
+  AllianceChatSystem,
+  AllianceChatDeps,
+  AllianceChatConfig,
+  AllianceChatStats,
+  AllianceChannel,
+  ChannelType,
+  ChatMessage,
+  SharedPortfolio,
+  SharedPortfolioInput,
+} from './alliance-chat.js';

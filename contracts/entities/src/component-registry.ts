@@ -32,6 +32,9 @@ import type {
   SpawnPointComponent,
   NpcTierComponent,
   InteractionComponent,
+  AppearanceComponent,
+  WalletComponent,
+  GovernanceComponent,
 } from './gameplay-components.js';
 
 // ── Component Type Keys ─────────────────────────────────────────
@@ -58,7 +61,10 @@ export type ComponentType =
   | 'network-replication'
   | 'spawn-point'
   | 'npc-tier'
-  | 'interaction';
+  | 'interaction'
+  | 'appearance'
+  | 'wallet'
+  | 'governance';
 
 // ── Type Map ────────────────────────────────────────────────────
 
@@ -86,6 +92,9 @@ export interface ComponentTypeMap {
   readonly 'spawn-point': SpawnPointComponent;
   readonly 'npc-tier': NpcTierComponent;
   readonly interaction: InteractionComponent;
+  readonly appearance: AppearanceComponent;
+  readonly wallet: WalletComponent;
+  readonly governance: GovernanceComponent;
 }
 
 // ── Component Sets ──────────────────────────────────────────────
@@ -151,4 +160,7 @@ export const ALL_COMPONENT_TYPES: ReadonlyArray<ComponentType> = [
   'spawn-point',
   'npc-tier',
   'interaction',
+  'appearance',
+  'wallet',
+  'governance',
 ] as const;

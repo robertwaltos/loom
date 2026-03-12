@@ -33,7 +33,13 @@ import { registerFabricHealthProbes } from './inspector-integration.js';
 
 import { createLoomCore } from './loom-core.js';
 import { createMovementSystem, MOVEMENT_SYSTEM_PRIORITY } from './movement-system.js';
+import { createActionDispatchSystem, ACTION_DISPATCH_PRIORITY } from './action-dispatch-system.js';
+import { createRespawnSystem, RESPAWN_SYSTEM_PRIORITY } from './respawn-system.js';
+import { createNpcAiSystem, NPC_AI_SYSTEM_PRIORITY } from './npc-ai-system.js';
+import { createInteractionSystem, INTERACTION_SYSTEM_PRIORITY } from './interaction-system.js';
 import { createSpawnSystem } from './spawn-system.js';
+import { createWorldSeedService } from './world-seed-system.js';
+import type { WorldSeedConfig, WorldSeedResult } from './world-seed-system.js';
 import { createVisualStateMapper, VISUAL_STATE_MAPPER_PRIORITY } from './visual-state-mapper.js';
 import { createBridgeService, BRIDGE_SERVICE_PRIORITY } from './bridge-service.js';
 import { createPlayerConnectionSystem } from './player-connection-system.js';
@@ -104,6 +110,7 @@ export interface GameOrchestrator {
   readonly bridge: BridgeService;
   readonly visualMapper: VisualStateMapperService;
   readonly playerConnect: PlayerConnectOrchestrator | undefined;
+  readonly seedWorld: (config?: WorldSeedConfig) => WorldSeedResult;
   readonly start: () => void;
   readonly stop: () => void;
 }
@@ -123,6 +130,11 @@ function createGameOrchestrator(config: GameOrchestratorConfig): GameOrchestrato
 
   wireInspectorProbes(systems, clock, config.fabrics);
 
+  const worldSeed = createWorldSeedService({
+    entityRegistry: core.entities,
+    spawnSystem: systems.spawns,
+  });
+
   return {
     core,
     spawns: systems.spawns,
@@ -130,6 +142,7 @@ function createGameOrchestrator(config: GameOrchestratorConfig): GameOrchestrato
     bridge: systems.bridge,
     visualMapper: systems.visualMapper,
     playerConnect,
+    seedWorld: (config?) => config ? worldSeed.seed(config) : worldSeed.seedDefault('default'),
     start: () => {
       core.tickLoop.start();
     },
@@ -147,6 +160,10 @@ interface GameSystems {
   readonly bridge: BridgeService;
   readonly visualMapper: VisualStateMapperService;
   readonly movementSystemFn: SystemFn;
+  readonly actionDispatchFn: SystemFn;
+  readonly respawnFn: SystemFn;
+  readonly npcAiFn: SystemFn;
+  readonly interactionFn: SystemFn;
 }
 
 function buildGameSystems(
@@ -168,7 +185,11 @@ function buildGameSystems(
     renderingFabric: config.renderingFabric,
     clock,
   });
-  return { spawns, connections, bridge, visualMapper, movementSystemFn };
+  const actionDispatchFn = createActionDispatchSystem({ componentStore: store, clock });
+  const respawnFn = createRespawnSystem({ componentStore: store, clock });
+  const npcAiFn = createNpcAiSystem({ componentStore: store, clock });
+  const interactionFn = createInteractionSystem({ componentStore: store, clock, worldId: 'default' });
+  return { spawns, connections, bridge, visualMapper, movementSystemFn, actionDispatchFn, respawnFn, npcAiFn, interactionFn };
 }
 
 function registerCoreSystems(core: LoomCore, systems: GameSystems): void {
@@ -179,6 +200,10 @@ function registerCoreSystems(core: LoomCore, systems: GameSystems): void {
     VISUAL_STATE_MAPPER_PRIORITY,
   );
   core.systems.register('bridge-service', systems.bridge.system, BRIDGE_SERVICE_PRIORITY);
+  core.systems.register('action-dispatch', systems.actionDispatchFn, ACTION_DISPATCH_PRIORITY);
+  core.systems.register('respawn', systems.respawnFn, RESPAWN_SYSTEM_PRIORITY);
+  core.systems.register('npc-ai', systems.npcAiFn, NPC_AI_SYSTEM_PRIORITY);
+  core.systems.register('interaction', systems.interactionFn, INTERACTION_SYSTEM_PRIORITY);
 }
 
 // ── Fabric System Registration ──────────────────────────────────
