@@ -422,6 +422,98 @@ void UBridgeLoomConnection::SendHeartbeat()
 		InputSequence, Telemetry.RoundTripTimeMs);
 }
 
+// ── HealthCheck & WorldCommand RPCs ─────────────────────────────
+
+bool UBridgeLoomConnection::SendHealthCheck()
+{
+	if (!GrpcState || !GrpcState->Stub)
+	{
+		return false;
+	}
+
+	grpc::ClientContext Ctx;
+	Ctx.set_deadline(
+		std::chrono::system_clock::now() + std::chrono::seconds(5));
+
+	LoomBridge::HealthCheckRequest Req;
+	Req.set_request_id(TCHAR_TO_UTF8(
+		*FGuid::NewGuid().ToString()));
+
+	LoomBridge::HealthCheckResponse Resp;
+	grpc::Status Status = GrpcState->Stub->HealthCheck(&Ctx, Req, &Resp);
+
+	if (!Status.ok())
+	{
+		UE_LOG(LogBridgeLoom, Warning,
+			TEXT("HealthCheck RPC failed: %s"),
+			UTF8_TO_TCHAR(Status.error_message().c_str()));
+		return false;
+	}
+
+	UE_LOG(LogBridgeLoom, Verbose,
+		TEXT("HealthCheck: healthy=%s fps=%.1f frame=%.1fms entities=%d mem=%.0fMB gpu=%.0f%% chunks=%d metahumans=%d"),
+		Resp.healthy() ? TEXT("yes") : TEXT("no"),
+		Resp.current_fps(),
+		Resp.frame_time_ms(),
+		Resp.visible_entities(),
+		Resp.memory_usage_mb(),
+		Resp.gpu_usage_percent(),
+		Resp.loaded_chunks(),
+		Resp.active_metahumans());
+
+	return Resp.healthy();
+}
+
+bool UBridgeLoomConnection::SendWorldCommand(
+	const FString& CommandType, const FString& WorldId, float Priority)
+{
+	if (!GrpcState || !GrpcState->Stub)
+	{
+		return false;
+	}
+
+	grpc::ClientContext Ctx;
+	Ctx.set_deadline(
+		std::chrono::system_clock::now() + std::chrono::seconds(30));
+
+	LoomBridge::WorldCommandRequest Req;
+	Req.set_command_type(TCHAR_TO_UTF8(*CommandType));
+	Req.set_world_id(TCHAR_TO_UTF8(*WorldId));
+	Req.set_priority(Priority);
+
+	LoomBridge::WorldCommandResponse Resp;
+	grpc::Status Status = GrpcState->Stub->WorldCommand(&Ctx, Req, &Resp);
+
+	if (!Status.ok())
+	{
+		UE_LOG(LogBridgeLoom, Error,
+			TEXT("WorldCommand RPC failed: %s"),
+			UTF8_TO_TCHAR(Status.error_message().c_str()));
+		return false;
+	}
+
+	if (!Resp.success())
+	{
+		UE_LOG(LogBridgeLoom, Warning,
+			TEXT("WorldCommand '%s' for world '%s' rejected: %s"),
+			*CommandType, *WorldId,
+			UTF8_TO_TCHAR(Resp.error_message().c_str()));
+		return false;
+	}
+
+	UE_LOG(LogBridgeLoom, Log,
+		TEXT("WorldCommand '%s' for world '%s' accepted (est. load: %.1fs)"),
+		*CommandType, *WorldId, Resp.estimated_load_time_sec());
+
+	// Fire world preload delegate if this is a preload command
+	if (CommandType.Equals(TEXT("preload"), ESearchCase::IgnoreCase))
+	{
+		OnWorldPreload.Broadcast(WorldId);
+	}
+
+	return true;
+}
+
 void UBridgeLoomConnection::AttemptReconnect()
 {
 	if (ReconnectAttempts >= CurrentConfig.MaxReconnectAttempts)

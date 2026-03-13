@@ -158,6 +158,17 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Loom|Telemetry")
 	FLoomTelemetry GetTelemetry() const { return Telemetry; }
 
+	// ─── Server RPCs ────────────────────────────────────────────
+
+	/** Send a health check to the Loom server. Returns true if healthy. */
+	UFUNCTION(BlueprintCallable, Category = "Loom|Connection")
+	bool SendHealthCheck();
+
+	/** Send a world command (preload/unload). Returns true on success. */
+	UFUNCTION(BlueprintCallable, Category = "Loom|Connection")
+	bool SendWorldCommand(const FString& CommandType, const FString& WorldId,
+		float Priority = 1.0f);
+
 	// ─── Events ─────────────────────────────────────────────────
 
 	UPROPERTY(BlueprintAssignable, Category = "Loom|Events")

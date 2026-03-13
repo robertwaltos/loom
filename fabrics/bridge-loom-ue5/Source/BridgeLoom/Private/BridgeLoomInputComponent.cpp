@@ -140,6 +140,7 @@ void UBridgeLoomInputComponent::SendAccumulatedInput()
 	if (!bHasMovement && !bHasLook && !bHasActions) return;
 
 	CachedConnection->SendPlayerInput(
+		PlayerId,
 		AccumulatedMove,
 		AccumulatedYaw,
 		AccumulatedPitch,

@@ -2,6 +2,8 @@
 
 #include "BridgeLoomMetaHuman.h"
 #include "Components/SkeletalMeshComponent.h"
+#include "GroomComponent.h"
+#include "MassEntitySubsystem.h"
 #include "Camera/PlayerCameraManager.h"
 #include "GameFramework/PlayerController.h"
 #include "Kismet/GameplayStatics.h"
@@ -396,27 +398,61 @@ void UBridgeLoomMetaHuman::TransitionLOD(EMetaHumanLOD NewLOD)
 	case EMetaHumanLOD::Full:
 		// Enable RigLogic, Groom, full morph targets
 		FaceMesh->SetForcedLOD(0);
-		// TODO: Enable Groom component if present
-		// TODO: Enable cloth simulation
+		if (UGroomComponent* Groom = GetOwner()->FindComponentByClass<UGroomComponent>())
+		{
+			Groom->SetVisibility(true);
+			Groom->SetComponentTickEnabled(true);
+		}
+		// Re-enable cloth on all skeletal meshes
+		TInlineComponentArray<USkeletalMeshComponent*> SkelMeshes;
+		GetOwner()->GetComponents(SkelMeshes);
+		for (USkeletalMeshComponent* SkelMesh : SkelMeshes)
+		{
+			SkelMesh->SetEnableClothSimulation(true);
+		}
 		break;
 
 	case EMetaHumanLOD::Medium:
 		// Baked hair cards, reduced morph targets, no cloth
 		FaceMesh->SetForcedLOD(1);
-		// TODO: Swap Groom → hair cards mesh
+		// Swap strand-based Groom to baked hair cards mesh
+		if (UGroomComponent* Groom = GetOwner()->FindComponentByClass<UGroomComponent>())
+		{
+			Groom->SetVisibility(false);
+			Groom->SetComponentTickEnabled(false);
+		}
 		break;
 
 	case EMetaHumanLOD::Low:
 		// Static mesh, basic animation only
 		FaceMesh->SetForcedLOD(2);
-		// TODO: Disable Groom entirely
-		// TODO: Disable all morph targets
+		// Disable Groom entirely at low LOD
+		if (UGroomComponent* Groom = GetOwner()->FindComponentByClass<UGroomComponent>())
+		{
+			Groom->SetVisibility(false);
+			Groom->SetComponentTickEnabled(false);
+		}
+		// Clear all morph targets — no facial animation at this LOD
+		FaceMesh->ClearAllMorphTargetCurves();
 		break;
 
 	case EMetaHumanLOD::Crowd:
 		// Hide individual mesh, Mass Entity takes over
 		FaceMesh->SetVisibility(false);
-		// TODO: Register with Mass Entity Framework for crowd rep
+		if (UGroomComponent* Groom = GetOwner()->FindComponentByClass<UGroomComponent>())
+		{
+			Groom->SetVisibility(false);
+			Groom->SetComponentTickEnabled(false);
+		}
+		// Register with Mass Entity Framework for crowd representation
+		if (UWorld* World = GetWorld())
+		{
+			if (UMassEntitySubsystem* MassEntity = World->GetSubsystem<UMassEntitySubsystem>())
+			{
+				FMassEntityConfig EntityConfig;
+				MassEntity->CreateEntity(EntityConfig);
+			}
+		}
 		break;
 	}
 

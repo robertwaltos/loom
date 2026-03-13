@@ -31,6 +31,8 @@ public class BridgeLoom : ModuleRules
             "AnimGraphRuntime",
             "LevelSequence",
             "MovieScene",
+            "HairStrandsCore",
+            "MassEntity",
         });
 
         if (Target.bBuildEditor)
