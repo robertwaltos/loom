@@ -1,0 +1,128 @@
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.5",
+    "Category": "Game",
+    "Description": "Koydo — persistent hyper-realistic world rendered by UE5. The Loom server is authoritative; UE5 is the rendering fabric.",
+    "Modules": [
+        {
+            "Name": "KoydoLoom",
+            "Type": "Runtime",
+            "LoadingPhase": "Default"
+        }
+    ],
+    "AdditionalPluginDirectories": [
+        "../fabrics",
+        "../fabrics/bridge-loom-ue5/GameFeatures"
+    ],
+    "Plugins": [
+        {
+            "Name": "EnhancedInput",
+            "Enabled": true
+        },
+        {
+            "Name": "GameplayAbilities",
+            "Enabled": true
+        },
+        {
+            "Name": "GameplayTags",
+            "Enabled": true
+        },
+        {
+            "Name": "GameplayTasks",
+            "Enabled": true
+        },
+        {
+            "Name": "Niagara",
+            "Enabled": true
+        },
+        {
+            "Name": "MetaHuman",
+            "Enabled": true
+        },
+        {
+            "Name": "RigLogic",
+            "Enabled": true
+        },
+        {
+            "Name": "HairStrands",
+            "Enabled": true
+        },
+        {
+            "Name": "LiveLink",
+            "Enabled": true
+        },
+        {
+            "Name": "GameFeatures",
+            "Enabled": true
+        },
+        {
+            "Name": "ModularGameplay",
+            "Enabled": true
+        },
+        {
+            "Name": "CommonUI",
+            "Enabled": true
+        },
+        {
+            "Name": "PixelStreaming",
+            "Enabled": true
+        },
+        {
+            "Name": "PixelStreamingPlayer",
+            "Enabled": false
+        },
+        {
+            "Name": "MassEntity",
+            "Enabled": true
+        },
+        {
+            "Name": "MassGameplay",
+            "Enabled": true
+        },
+        {
+            "Name": "MassAI",
+            "Enabled": true
+        },
+        {
+            "Name": "SmartObjects",
+            "Enabled": true
+        },
+        {
+            "Name": "StateTree",
+            "Enabled": true
+        },
+        {
+            "Name": "WorldPartition",
+            "Enabled": false,
+            "Comment": "Enabled per-map in World Settings; not globally forced."
+        },
+        {
+            "Name": "Chaos",
+            "Enabled": true
+        },
+        {
+            "Name": "ChaosVehicles",
+            "Enabled": false
+        },
+        {
+            "Name": "Water",
+            "Enabled": true
+        },
+        {
+            "Name": "Landmass",
+            "Enabled": true
+        },
+        {
+            "Name": "PCG",
+            "Enabled": true
+        },
+        {
+            "Name": "BridgeLoom",
+            "Enabled": true
+        },
+        {
+            "Name": "LoomGameFeatures",
+            "Enabled": true
+        }
+    ]
+}
