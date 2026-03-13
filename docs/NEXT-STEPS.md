@@ -816,6 +816,44 @@ Five more Unreal Engine 5 C++ components bridging the remaining 5 TypeScript sub
 
 ---
 
+## Phase 20: Core Gameplay Systems UE5 Bridges
+
+Eight Unreal Engine 5 C++ components bridging the primary gameplay TypeScript modules introduced across multiple sprints. All structs, enums, and constants mirror the TypeScript sources exactly.
+
+### 20.1 Character & World Mechanics
+**Priority**: P0 — Core runtime gameplay
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Movement: `ELoomMovementMode` (Walking/Running/Sprinting/Falling/Swimming/Flying), configurable per-mode max speeds, `FLoomMovementSnapshot` synced to `UCharacterMovementComponent`, footstep Niagara VFX → `bridge-loom-ue5/Public/BridgeLoomMovement.h`, `...Movement.cpp` (`ELoomMovementMode`, `FLoomMovementState`, `FLoomMovementSnapshot`, `ApplySnapshot`, `GetCurrentMode`, `GetMaxSpeedForMode`, `SyncCharacterMovement`, `OnMovementModeChanged`, `OnEntityMoved`, `OnGroundedChanged`)
+
+- [x] Respawn: 3-second death → respawn pipeline (matches `DEFAULT_RESPAWN_DELAY_US = 3_000_000`), tick-driven countdown for HUD, `FLoomRespawnEvent` teleports owner actor via `TeleportPhysics`, death + respawn Niagara VFX → `bridge-loom-ue5/Public/BridgeLoomRespawn.h`, `...Respawn.cpp` (`FLoomRespawnTimer`, `FLoomRespawnEvent`, `NotifyDeath`, `NotifyRespawn`, `GetRespawnCountdownSeconds`, `OnEntityDied`, `OnEntityRespawned`, `OnCountdownTick`)
+
+### 20.2 AI & Dialogue
+**Priority**: P0 — NPC behaviour and narrative
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] NPC AI: `ELoomNpcGoal` (Idle/Patrol/Chase/Attack/Flee/ReturnHome), `ELoomNpcHostility` (Hostile/Neutral/Friendly), server-authoritative decision apply with goal-change diffing, alert Niagara VFX on Chase/Attack entry → `bridge-loom-ue5/Public/BridgeLoomNPCAI.h`, `...NPCAI.cpp` (`ELoomNpcGoal`, `ELoomNpcHostility`, `FLoomNpcDecision`, `FLoomNpcAiState`, `ApplyDecision`, `ApplyStateSnapshot`, `GetCurrentGoal`, `GetHostility`, `IsInCombat`, `SpawnAlertVFX`, `OnGoalChanged`, `OnAttackTriggered`, `OnDecisionReceived`)
+
+- [x] Dialogue: `ELoomDialogueSpeaker`, `ELoomDialogueEndReason` (Natural/Abandoned/Timeout), `TSoftClassPtr` widget auto-management, response selection forwarded to transport, `AbandonDialogue` synthesises completed event → `bridge-loom-ue5/Public/BridgeLoomDialogue.h`, `...Dialogue.cpp` (`FLoomDialogueResponse`, `FLoomDialogueLine`, `FLoomDialogueSession`, `FLoomDialogueCompletedEvent`, `BeginDialogue`, `ReceiveLine`, `EndDialogue`, `SelectResponse`, `AbandonDialogue`, `ShowDialogueWidget`, `HideDialogueWidget`, `OnDialogueStarted`, `OnDialogueLine`, `OnDialogueEnded`, `OnResponseSelected`)
+
+### 20.3 Combat & Progression
+**Priority**: P0 — Player agency and feedback loops
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Status Effects: `ELoomStatusEffectType` (Poison/Burn/Freeze/Stun/Slow/Haste/Regen/Shield/Weakness/Strength), `ELoomStackBehavior` (Replace/Extend/Stack/Refresh), TSet diffing for add/remove detection, Niagara VFX per effect type, MPC scalar writes (PoisonIntensity/FreezeIntensity/BurnIntensity/StunIntensity/ShieldIntensity) → `bridge-loom-ue5/Public/BridgeLoomStatusEffect.h`, `...StatusEffect.cpp` (`FLoomActiveStatusEffect`, `FLoomStatusImmunity`, `FLoomStatusReport`, `FLoomEffectTickResult`, `ApplyStatusReport`, `NotifyEffectTick`, `HasEffect`, `IsImmuneTo`, `UpdatePostProcessParams`, `SpawnEffectVFX`, `OnStatusChanged`, `OnEffectApplied`, `OnEffectRemoved`, `OnEffectTicked`)
+
+- [x] Abilities: `ELoomAbilityEffectType` (Damage/Heal/Buff/Debuff/Teleport/Summon/Shield), `ELoomAbilityResource` (Stamina/Mana/Health/Energy), tick-driven cooldown tracking with per-ability progress bar queries, per-effect-type Niagara VFX map, fail VFX on rejected activation → `bridge-loom-ue5/Public/BridgeLoomAbility.h`, `...Ability.cpp` (`FLoomResourceCost`, `FLoomAbilityDef`, `FLoomCooldownState`, `FLoomActivationResult`, `RequestActivation`, `RegisterAbility`, `NotifyActivation`, `NotifyActivationFailed`, `ApplyCooldownState`, `NotifyCooldownExpired`, `IsOnCooldown`, `GetCooldownRemaining`, `OnActivationRequested`, `OnAbilityActivated`, `OnAbilityFailed`, `OnCooldownExpired`)
+
+- [x] Achievements: `ELoomAchievementRarity` (Common/Uncommon/Rare/Epic/Legendary), per-rarity Niagara unlock VFX, `TSoftClassPtr` toast widget with auto-dismiss timer, `FLoomAchievementProgress.GetProgressRatio()` BlueprintPure → `bridge-loom-ue5/Public/BridgeLoomAchievement.h`, `...Achievement.cpp` (`FLoomAchievementDef`, `FLoomPlayerAchievement`, `FLoomAchievementProgress`, `FLoomPlayerAchievementStats`, `NotifyUnlock`, `UpdateProgress`, `ApplyPlayerStats`, `IsUnlocked`, `ShowToast`, `SpawnUnlockVFX`, `OnAchievementUnlocked`, `OnProgressUpdated`, `OnStatsRefreshed`)
+
+### 20.4 Persistence
+**Priority**: P1 — Player data and progression continuity
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Save Game: `MAX_SLOTS_PER_PLAYER = 5` enforced client-side, slot list cache for save-menu UI, bidirectional delegates (outbound request → transport RPC, inbound confirm → Blueprint), upsert on `NotifySaveCompleted`, `CanCreateNewSlot()` BlueprintPure → `bridge-loom-ue5/Public/BridgeLoomSaveGame.h`, `...SaveGame.cpp` (`FLoomSaveSlotInfo`, `FLoomSaveStateRecord`, `FLoomSaveSummary`, `RequestSave`, `RequestLoad`, `RequestCreateSlot`, `RequestDeleteSlot`, `NotifySaveCompleted`, `NotifyLoadCompleted`, `NotifySaveError`, `ApplySlotList`, `ApplySummary`, `CanCreateNewSlot`, `GetSlot`, `OnSaveCompleted`, `OnLoadCompleted`, `OnSaveError`, `OnSlotListRefreshed`, `OnSaveSummaryRefreshed`)
+
+---
+
 ## Scale Targets
 
 | Metric | Launch | Year 1 | Year 3 | Year 5 | Year 10 |
