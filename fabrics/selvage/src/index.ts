@@ -675,6 +675,24 @@ export type {
   WorldCommandType,
 } from './bridge-grpc-server.js';
 
+// ── Bridge gRPC Transport (network layer) ───────────────────────
+
+export { createBridgeGrpcTransport, DEFAULT_TRANSPORT_CONFIG } from './bridge-grpc-transport.js';
+export type {
+  BridgeGrpcTransport,
+  BridgeGrpcTransportDeps,
+  BridgeTransportConfig,
+  BridgeTransportLogPort,
+} from './bridge-grpc-transport.js';
+
+// ── Bridge World State Adapter ──────────────────────────────────
+
+export { createBridgeWorldStateAdapter, createWorldStateProvider } from './bridge-world-state-adapter.js';
+export type {
+  BridgeWorldStateAdapter,
+  WorldStateAdapterDeps,
+} from './bridge-world-state-adapter.js';
+
 // ── Phase 4 Sync Protocol ───────────────────────────────────────
 
 export {

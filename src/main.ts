@@ -108,8 +108,13 @@ async function main(): Promise<void> {
 
   // 5. Game Orchestrator (owns the core tick loop)
   const { createGameOrchestrator } = await import('@loom/loom-core');
+  const renderingFabric = createWirableRenderingFabric();
   const orchestrator = createGameOrchestrator({
-    renderingFabric: createNoOpRenderingFabric(),
+    renderingFabric: {
+      pushStateSnapshot: renderingFabric.pushStateSnapshot,
+      spawnVisual: renderingFabric.spawnVisual,
+      despawnVisual: renderingFabric.despawnVisual,
+    } as never,
     coreConfig: {
       logger,
       tickRateHz: env.tickRateHz,
@@ -179,28 +184,55 @@ async function main(): Promise<void> {
   });
 
   // 8. gRPC Bridge Server (UE5 clients connect here on port 50051)
-  const { createBridgeGrpcServer } = await import('@loom/selvage');
+  const {
+    createBridgeGrpcServer,
+    createBridgeGrpcTransport,
+    createBridgeWorldStateAdapter,
+  } = await import('@loom/selvage');
+
+  const bridgeLog = {
+    info: (ctx: Readonly<Record<string, unknown>>, msg: string) => logger.info(ctx, msg),
+    warn: (ctx: Readonly<Record<string, unknown>>, msg: string) => logger.warn(ctx, msg),
+    error: (ctx: Readonly<Record<string, unknown>>, msg: string) => logger.error(ctx, msg),
+  };
+
   const bridgeGrpc = createBridgeGrpcServer({
     clock: { nowMicroseconds: () => clock.nowMicroseconds() },
     id: { generate: () => idGen.generate() },
-    log: {
-      info: (ctx, msg) => logger.info(ctx, msg),
-      warn: (ctx, msg) => logger.warn(ctx, msg),
-      error: (ctx, msg) => logger.error(ctx, msg),
-    },
+    log: bridgeLog,
     config: {
       host: env.host,
       port: env.grpcPort,
     },
   });
 
-  // Register world state provider so bridge ticks push entity state to UE5
+  // World state adapter: converts BridgeService visual updates → gRPC messages
+  const worldStateAdapter = createBridgeWorldStateAdapter({
+    clock: { nowMicroseconds: () => clock.nowMicroseconds() },
+  });
+  bridgeGrpc.registerWorldStateProvider(worldStateAdapter.provider);
+
+  // Wire the rendering fabric: BridgeService tick → worldStateAdapter → gRPC
+  renderingFabric.wire({
+    onStatePush: (updates) => worldStateAdapter.onStatePush(updates as never),
+    onSpawn: (entityId, state) => worldStateAdapter.onEntitySpawn(entityId, {
+      entityId,
+      timestamp: clock.nowMicroseconds(),
+      sequenceNumber: 0,
+      delta: state as never,
+    }),
+    onDespawn: (entityId) => worldStateAdapter.onEntityDespawn(entityId),
+  });
+  logger.info({}, 'Rendering fabric wired: BridgeService → WorldStateAdapter → gRPC');
+
+  // Input handler: relay UE5 player input into the game orchestrator
   bridgeGrpc.registerInputHandler({
     onPlayerInput: (clientId, payload, sequenceNumber) => {
       logger.info({ clientId, sequenceNumber }, 'UE5 player input received');
     },
   });
 
+  // Negotiate handler: log when UE5 clients connect
   bridgeGrpc.registerNegotiateHandler({
     onNegotiate: (clientId, manifest) => {
       logger.info(
@@ -210,9 +242,21 @@ async function main(): Promise<void> {
     },
   });
 
+  // Disconnect handler: clean up when UE5 clients drop
   bridgeGrpc.registerDisconnectHandler({
     onDisconnect: (clientId) => {
       logger.info({ clientId }, 'UE5 client disconnected');
+    },
+  });
+
+  // gRPC transport: binds to port 50051, routes proto RPCs to bridgeGrpc
+  const bridgeTransport = await createBridgeGrpcTransport({
+    bridge: bridgeGrpc,
+    log: bridgeLog,
+    config: {
+      host: env.host,
+      port: env.grpcPort,
+      tickIntervalMs: Math.round(1000 / env.tickRateHz),
     },
   });
 
@@ -220,16 +264,18 @@ async function main(): Promise<void> {
 
   // 9. Start
   const address = await transport.boot();
+  const grpcAddress = await bridgeTransport.start();
   networkServer.start();
   orchestrator.start();
 
-  logger.info({ address, grpcPort: env.grpcPort }, 'Loom server is live');
+  logger.info({ address, grpcAddress }, 'Loom server is live');
 
   // 10. Graceful shutdown
   const shutdown = async (): Promise<void> => {
     logger.info({}, 'Shutdown signal received');
     orchestrator.stop();
     networkServer.stop();
+    await bridgeTransport.stop();
     await transport.teardown();
     await cache.close();
     await pgPool.end();
@@ -241,13 +287,39 @@ async function main(): Promise<void> {
   process.on('SIGTERM', () => void shutdown());
 }
 
-// ─── No-Op Rendering Fabric (server-only, no UE5) ──────────────
+// ─── Wirable Rendering Fabric ───────────────────────────────────
+// Starts as no-op. Once wire() is called, routes BridgeService
+// visual updates through the worldStateAdapter → gRPC pipeline.
 
-function createNoOpRenderingFabric() {
+interface RenderingFabricWiring {
+  readonly onStatePush: (updates: ReadonlyArray<Record<string, unknown>>) => void;
+  readonly onSpawn: (entityId: string, state: Record<string, unknown>) => void;
+  readonly onDespawn: (entityId: string) => void;
+}
+
+interface WirableRenderingFabric {
+  readonly pushStateSnapshot: (updates: ReadonlyArray<Record<string, unknown>>) => void;
+  readonly spawnVisual: (entityId: string, state: Record<string, unknown>) => Promise<void>;
+  readonly despawnVisual: (entityId: string) => Promise<void>;
+  readonly wire: (t: RenderingFabricWiring) => void;
+}
+
+function createWirableRenderingFabric(): WirableRenderingFabric {
+  let target: RenderingFabricWiring | undefined;
+
   return {
-    pushStateSnapshot: () => {},
-    spawnVisual: async () => {},
-    despawnVisual: async () => {},
+    pushStateSnapshot: (updates) => {
+      if (target) target.onStatePush(updates);
+    },
+    spawnVisual: async (entityId, state) => {
+      if (target) target.onSpawn(entityId, state);
+    },
+    despawnVisual: async (entityId) => {
+      if (target) target.onDespawn(entityId);
+    },
+    wire: (t) => {
+      target = t;
+    },
   };
 }
 
