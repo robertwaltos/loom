@@ -854,6 +854,44 @@ Eight Unreal Engine 5 C++ components bridging the primary gameplay TypeScript mo
 
 ---
 
+## Phase 21: Extended Gameplay Systems UE5 Bridges
+
+Eight Unreal Engine 5 C++ components bridging the next tier of core gameplay TypeScript modules. All structs, enums, and constants mirror the TypeScript sources exactly.
+
+### 21.1 Items & World Interaction
+**Priority**: P0 — Core game-feel loops
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Loot Table: `ELoomLootRarity` (Common/Uncommon/Rare/Epic/Legendary/Artifact), per-rarity Niagara VFX map, session item totals, `OnRareItemDropped` fires for Rarity ≥ Rare → `bridge-loom-ue5/Public/BridgeLoomLootTable.h`, `...LootTable.cpp` (`FLoomDroppedItem`, `FLoomLootRoll`, `NotifyLootRoll`, `GetLastRollByRarity`, `GetSessionItemCount`, `SpawnItemVFX`, `OnLootRollReceived`, `OnItemDropped`, `OnRareItemDropped`)
+
+- [x] Interaction System: `ELoomInteractionKind` (Talk/Trade/Inspect/Use/Pickup), `ELoomInteractionEventType` (Available/Unavailable/Started/Completed), `TSoftClassPtr` prompt widget with auto-manage, `TSet<FString>` entities-in-range, bidirectional delegates → `bridge-loom-ue5/Public/BridgeLoomInteraction.h`, `...Interaction.cpp` (`FLoomInteractionEvent`, `NotifyInteractionEvent`, `RequestInteraction`, `IsEntityInRange`, `GetEntitiesInRangeCount`, `ShowPromptWidget`, `HidePromptWidget`, `OnInteractionAvailable`, `OnInteractionUnavailable`, `OnInteractionStarted`, `OnInteractionCompleted`, `OnInteractionRequested`)
+
+### 21.2 Player Progression & Navigation
+**Priority**: P0 — Character advancement and world traversal
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Player Progression: `MaxLevel=100`, XP formula `level²×100`, skill catalog TMap for O(1) lookup, level-up Niagara VFX, `HasLearnedSkill`/`GetSkillRank` BlueprintPure queries → `bridge-loom-ue5/Public/BridgeLoomPlayerProgression.h`, `...PlayerProgression.cpp` (`FLoomPlayerLevel`, `FLoomSkillDef`, `FLoomPlayerSkill`, `FLoomProgressionStats`, `ApplyLevelState`, `RegisterSkillDef`, `ApplyPlayerSkill`, `ApplyProgressionStats`, `RequestLearnSkill`, `RequestUpgradeSkill`, `IsMaxLevel`, `OnLevelGained`, `OnXpChanged`, `OnSkillLearned`, `OnSkillUpgraded`, `OnLearnSkillRequested`, `OnUpgradeSkillRequested`)
+
+- [x] Navigation Mesh: `ELoomNavNodeType` (Passable/Blocked/Slow/Water/Hazard), `ELoomNavLayer` (Surface/Underground/Underwater), request-ID correlation, upsert obstacle mirror, `HasObstacleAt` BlueprintPure → `bridge-loom-ue5/Public/BridgeLoomNavMesh.h`, `...NavMesh.cpp` (`FLoomNavNode`, `FLoomNavPath`, `FLoomNavObstacle`, `FLoomNavPathRequest`, `FLoomNavMeshStats`, `RequestPath`, `NotifyPathResult`, `NotifyPathNotFound`, `NotifyObstacleAdded`, `NotifyObstacleRemoved`, `ApplyNavStats`, `OnPathRequested`, `OnPathFound`, `OnPathNotFound`, `OnObstacleAdded`, `OnObstacleRemoved`)
+
+### 21.3 Spawning & World Time
+**Priority**: P0 — Entity lifecycle and atmosphere
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Spawn System: `ELoomNpcTier` (Common/Uncommon/Rare/Elite = 0-3), ring-buffer result history (cap 32), `HasEntityBeenSpawned` BlueprintPure, bidirectional player/NPC spawn delegates → `bridge-loom-ue5/Public/BridgeLoomSpawnSystem.h`, `...SpawnSystem.cpp` (`FLoomSpawnPlayerParams`, `FLoomSpawnNpcParams`, `FLoomSpawnResult`, `RequestSpawnPlayer`, `RequestSpawnNpc`, `NotifySpawnResult`, `NotifySpawnFailed`, `OnSpawnPlayerRequested`, `OnSpawnNpcRequested`, `OnSpawnCompleted`, `OnSpawnFailed`)
+
+- [x] Day/Night Cycle: `ELoomDayPhase` (Dawn/Morning/Midday/Afternoon/Dusk/Evening/Midnight/DeepNight), drives `UDirectionalLightComponent` intensity + colour temperature, `IsNighttime`/`GetPhaseDisplayName` BlueprintPure, soft-ref sky atmosphere actor → `bridge-loom-ue5/Public/BridgeLoomDayNightCycle.h`, `...DayNightCycle.cpp` (`FLoomLightingState`, `FLoomTimeOfDay`, `FLoomPhaseTransition`, `NotifyPhaseTransition`, `ApplyLightingState`, `ApplyTimeOfDay`, `ApplyLightingToScene`, `OnPhaseChanged`, `OnLightingStateApplied`, `OnTimeOfDayUpdated`)
+
+### 21.4 World Economy & Procedural Content
+**Priority**: P1 — Player housing and dungeon gameplay
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Estate System: `ELoomEstateTier` (Plot→Citadel), `ELoomEstateSpecialization` (7 types), `ELoomArchitecturalStyle` (10 culture styles), `ELoomDefenseType` (7 types), `ELoomEstateProductionState`, `int64` economy fields (bigint parity), `GetTotalWeeklyRevenue` aggregate → `bridge-loom-ue5/Public/BridgeLoomEstate.h`, `...Estate.cpp` (`FLoomEstateInfo`, `FLoomProductionCompleteEvent`, `ApplyEstateInfo`, `NotifyTierUpgrade`, `NotifyProductionComplete`, `SetFocusedEstate`, `GetEstateById`, `OnEstateInfoRefreshed`, `OnEstateTierUpgraded`, `OnProductionCompleted`)
+
+- [x] Dungeon Generator: `ELoomRoomType` (Entry/Boss/Treasure/Corridor/Puzzle/Trap/Rest/Merchant/Elite/Secret), `FLoomDungeonLayout.Rooms` as `TMap<FString, FLoomDungeonRoom>` for O(1) lookup, request-ID correlation, `GetRoomsByType` filter query, `OnRoomEntered` fires with resolved `ELoomRoomType` → `bridge-loom-ue5/Public/BridgeLoomDungeonGenerator.h`, `...DungeonGenerator.cpp` (`FLoomGenerationParams`, `FLoomDungeonRoom`, `FLoomRoomConnection`, `FLoomDungeonLayout`, `RequestGeneration`, `NotifyLayoutReady`, `NotifyGenerationFailed`, `NotifyRoomEntered`, `GetRoom`, `GetRoomsByType`, `GetRoomCount`, `OnGenerationRequested`, `OnLayoutReady`, `OnGenerationFailed`, `OnRoomEntered`)
+
+---
+
 ## Scale Targets
 
 | Metric | Launch | Year 1 | Year 3 | Year 5 | Year 10 |
