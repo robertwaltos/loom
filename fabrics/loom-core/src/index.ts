@@ -1566,6 +1566,23 @@ export type {
   WorldRestorationAtlasPort,
 } from './world-restoration-atlas.js';
 
+// ── World Encyclopedia Coverage ────────────────────────────────
+
+export {
+  ACTUAL_ENCYCLOPEDIA_ENTRY_TOTAL,
+  createWorldEncyclopediaCoverage,
+  LEGACY_ENCYCLOPEDIA_WORLD_COVERAGE,
+  WORLD_ENCYCLOPEDIA_COVERAGE,
+  TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS,
+  TOTAL_WORLD_ENCYCLOPEDIA_COVERAGE_PROFILES,
+} from './world-encyclopedia-coverage.js';
+export type {
+  EncyclopediaCoverageStatus,
+  LegacyEncyclopediaWorldCoverage,
+  WorldEncyclopediaCoverageProfile,
+  WorldEncyclopediaCoveragePort,
+} from './world-encyclopedia-coverage.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
