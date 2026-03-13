@@ -28,14 +28,15 @@ describe('createWorldIdDriftReport', () => {
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('character dossiers show zero resolved aliases, two unresolved legacy IDs, and zero untracked IDs after cast cleanup', () => {
+  it('character dossiers show zero resolved aliases, four unresolved legacy IDs (science-lab + threadway-network special-space), and zero untracked IDs after cast cleanup', () => {
     const profile = report.getRegistryProfile('character-dossiers');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
-    expect(profile!.unresolvedLegacyReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(4);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
     expect(profile!.uniqueNoncanonicalWorldIds).toEqual([
       'science-lab',
+      'threadway-network',
     ]);
   });
 
