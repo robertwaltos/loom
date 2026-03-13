@@ -1320,6 +1320,119 @@ export type {
   AdaptiveWorldStats,
 } from './adaptive-world.js';
 
+// ── Phase 22: Creative canon — Lattice, Ascendancy, Sealed Chambers, Survey, Continuity ──
+
+// Lattice Node
+export { createLatticeNodeService } from './lattice-node.js';
+export type {
+  FrequencySignature,
+  LatticeNode,
+  LockRequest,
+  LockStatus,
+  CompromiseType,
+  BeaconStatus,
+  LatticeNodeDeps,
+  LatticeNodeService,
+  NetworkStats,
+} from './lattice-node.js';
+export {
+  BASE_LOCK_MS,
+  CRITICAL_PRECISION_THRESHOLD,
+  DISTANCE_PENALTY_PER_LY,
+  FIELD_MULTIPLIER_MIN,
+  FIELD_MULTIPLIER_MAX,
+  OUTER_ARC_THRESHOLD_LY as LATTICE_OUTER_ARC_THRESHOLD_LY,
+} from './lattice-node.js';
+
+// Ascendancy Engine
+export { createAscendancyEngine } from './ascendancy-engine.js';
+export type {
+  FrequencyAnomaly,
+  ThreatEvent,
+  BeaconIntegrityScore,
+  AscendancyChronicleEntry,
+  AscendancyEngineDeps,
+  AscendancyEngine,
+} from './ascendancy-engine.js';
+export {
+  OUTER_ARC_THRESHOLD_LY as ASCENDANCY_OUTER_ARC_THRESHOLD_LY,
+  DETECTION_CONFIDENCE_THRESHOLD,
+  FERREIRA_ASANTE_CORRELATION,
+} from './ascendancy-engine.js';
+
+// Sealed Chambers
+export { createSealedChambersService } from './sealed-chambers.js';
+export type {
+  ChamberId,
+  ChamberState,
+  ChamberRecord,
+  ChamberConditionEvaluator,
+  SealedChambersService,
+  SealedChambersDeps,
+  UnlockSummary,
+} from './sealed-chambers.js';
+export {
+  CHAMBER_ONE_MIN_SURVEY_WORLDS,
+  CHAMBER_THREE_CHRONICLE_TARGET,
+  CHAMBER_FIVE_OUTER_ARC_LY,
+  CHAMBER_SIX_KALON_ANOMALY_COUNT,
+  CHAMBER_SEVEN_UNLOCK_YEAR,
+} from './sealed-chambers.js';
+
+// Survey Vessel
+export { createSurveyVesselService, computeTransitHours } from './survey-vessel.js';
+export type {
+  SurveyVessel,
+  VesselTransitState,
+  VesselClass,
+  GalacticCoordinate,
+  SurveyMark,
+  VesselTransitRecord,
+  TransitEstimate,
+  SurveyVesselDeps,
+  SurveyVesselService,
+  FleetStats,
+} from './survey-vessel.js';
+export {
+  SURVEY_VESSEL_MIN_VELOCITY,
+  SURVEY_VESSEL_MAX_VELOCITY,
+  HOURS_PER_YEAR,
+  FUSION_RANGE_MIN_LY,
+  FUSION_RANGE_MAX_LY,
+} from './survey-vessel.js';
+
+// Continuity Protocol
+export { createContinuityProtocolService } from './continuity-protocol.js';
+export type {
+  ContinuityPhilosophicalStatus,
+  VigilState,
+  NeuralMap,
+  DynastyContinuityRecord,
+  ContinuityChronicleEntry,
+  ContinuityProtocolDeps,
+  ContinuityProtocolService,
+  FileNeuralMapParams,
+  SubstrateTransferParams,
+  ContinuityStats,
+} from './continuity-protocol.js';
+export {
+  DEFAULT_VIGIL_THRESHOLD_DAYS,
+  MS_PER_DAY,
+  NEURAL_MAP_MIN_FIDELITY,
+  MAX_CONTINUITY_BONDS,
+} from './continuity-protocol.js';
+
+// World 499: The Threshold
+export {
+  WORLD_499_SEED,
+  WORLD_499_ID,
+  WORLD_499_DISPLAY_NAME,
+  WORLD_499_DISTANCE_LY,
+  FERREIRA_ASANTE_ECHO_MS,
+  WORLD_499_LATTICE_PRECISION,
+  WORLD_499_LORE_SUMMARY,
+} from './world-seeds/world-499-threshold.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
