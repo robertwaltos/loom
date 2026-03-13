@@ -174,10 +174,10 @@ npx vitest run fabrics/nakama-fabric/src/__tests__/mortality-timings-simulation.
 
 Update these as you complete each phase:
 
-- [ ] Phase 1: nakama-fabric (10 files) — Tests: ___
-- [ ] Phase 2: selvage (8 files) — Tests: ___
-- [ ] Phase 3: dye-house (5 files) — Tests: ___
-- [ ] Phase 4: inspector (4 files) — Tests: ___
-- [ ] Phase 5: archive (8 files) — Tests: ___
-- [ ] Phase 6: silfen-weave + bridge (4 files) — Tests: ___
-- [ ] Full regression: ___ files, ___ tests — ALL PASSING
+- [x] Phase 1: nakama-fabric (10 files) — Tests: already written by prior run
+- [x] Phase 2: selvage (8 files) — Tests: already written by prior run
+- [x] Phase 3: dye-house (5 files) — Tests: already written by prior run
+- [x] Phase 4: inspector (4 files) — Tests: already written by prior run
+- [x] Phase 5: archive (8 files) — Tests: already written by prior run
+- [x] Phase 6: silfen-weave + bridge (4 files) — Tests: 39 (pixel-streaming-simulation.test.ts)
+- [x] Full regression: 893 files, 14,722 tests — ALL PASSING

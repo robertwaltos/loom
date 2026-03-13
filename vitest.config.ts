@@ -23,7 +23,7 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     include: ['**/*.test.ts', '**/*.spec.ts'],
-    exclude: ['node_modules', 'dist', 'fabrics/bridge-loom-ue5'],
+    exclude: ['node_modules', 'dist', 'fabrics/bridge-loom-ue5/Source', 'fabrics/bridge-loom-ue5/GameFeatures'],
     coverage: {
       provider: 'v8',
       reporter: ['text', 'json', 'html'],
