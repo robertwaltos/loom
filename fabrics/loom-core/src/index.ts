@@ -1603,6 +1603,21 @@ export type {
   WorldIdResolutionStatus,
 } from './world-id-resolution.js';
 
+// ── World ID Drift Report ──────────────────────────────────────
+
+export {
+  createWorldIdDriftReport,
+  TOTAL_WORLD_ID_DRIFT_REGISTRIES,
+  WORLD_ID_DRIFT_REPORT,
+} from './world-id-drift-report.js';
+export type {
+  RegistryWorldIdDriftProfile,
+  WorldIdDriftReference,
+  WorldIdDriftRegistryId,
+  WorldIdDriftReportPort,
+  WorldIdDriftStatus,
+} from './world-id-drift-report.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
