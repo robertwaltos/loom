@@ -1583,6 +1583,26 @@ export type {
   WorldEncyclopediaCoveragePort,
 } from './world-encyclopedia-coverage.js';
 
+// ── World ID Resolution ────────────────────────────────────────
+
+export {
+  createWorldIdResolution,
+  RESOLVED_WORLD_ID_ALIASES,
+  TOTAL_CANONICAL_WORLD_IDS,
+  TOTAL_RESOLVED_WORLD_ID_ALIASES,
+  TOTAL_UNRESOLVED_LEGACY_WORLD_IDS,
+  UNRESOLVED_LEGACY_WORLD_IDS,
+  WORLD_ID_RESOLUTION,
+} from './world-id-resolution.js';
+export type {
+  LegacyWorldIdDisposition,
+  ResolvedWorldIdAlias,
+  UnresolvedLegacyWorldId,
+  WorldIdResolution,
+  WorldIdResolutionPort,
+  WorldIdResolutionStatus,
+} from './world-id-resolution.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
