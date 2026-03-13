@@ -774,6 +774,27 @@ The 200-year architecture. Technology changes; the world endures.
 
 ---
 
+## Phase 18: Bible v5 UE5 Bridge Systems
+
+Five new Unreal Engine 5 C++ components bridging the 10 new TypeScript subsystems added in commit `cad9b73` (Bible v5 expansion). All numerical constants mirror the TypeScript sources exactly.
+
+### 18.1 Core Traversal & Progression
+**Priority**: P0 — Player experience backbone
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Threadway Network: 39 threadways across 5 realms, 5 hub portals, tier 1/2/3 discovery unlock, teleport via `FTimerDelegate`, portal actor scanning → `bridge-loom-ue5/Public/BridgeLoomThreadwayNetwork.h`, `...ThreadwayNetwork.cpp` (`ELoomThreadwayTier`, `ELoomThreadwayStatus`, `ELoomThreadwayRealm`, `FLoomThreadwayDefinition`, `FLoomHubPortal`, `FLoomKindlerThreadwayState`, `TriggerTransit`, `EvaluateDiscovery`, `OnThreadwayDiscovered`, `OnThreadwayTraversed`, `OnPortalActivated`)
+- [x] Kindler Progression: 8 spark levels (NewKindler → Constellation), luminance decay per world, welcome-back bonus after 7-day absence, aura MPC scalar writes (`SparkLevel` 0–7), async Niagara level-up VFX → `bridge-loom-ue5/Public/BridgeLoomKindlerProgression.h`, `...KindlerProgression.cpp` (`ELoomSparkLevel`, `ELoomSparkAction`, `FLoomSparkLevelDef`, `FLoomWorldLuminance`, `FLoomKindlerProgressionState`, `InitiateSession`, `AddSpark`, `ApplyLuminanceDecay`, `ApplyWelcomeBack`, `UpdateAuraMaterial`, `OnSparkGained`, `OnLevelUp`, `OnWelcomeBack`, `OnLuminanceChanged`)
+- [x] Hidden Zones: 5 discovery zones (TheInBetween / InverseGarden / WhalesLibrary / UnfinishedRoom / DreamArchive), 5 trigger types (linger 10 s, complete-all, follow-NPC, entries+ask, night+count), 15-spark reward, async Niagara reveal → `bridge-loom-ue5/Public/BridgeLoomHiddenZones.h`, `...HiddenZones.cpp` (`ELoomHiddenZoneId`, `ELoomDiscoveryTriggerType`, `FLoomDiscoveryTrigger`, `FLoomHiddenZoneDefinition`, `FLoomKindlerZoneState`, `EvaluateLinger`, `EvaluateDiscovery`, `MarkDiscovered`, `IsNightCycle`, `OnZoneDiscovered`, `OnZoneEntered`, `OnZoneExited`)
+
+### 18.2 Live Content & Mini-Games
+**Priority**: P1 — Engagement loops
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Seasonal Content: 12 monthly events, 6 time-of-day bands (Dawn 05–07 / Morning / Afternoon / GoldenHour 17–19 / Evening / Night 21–05), recurring calendar timer, async prop spawning per world, per-month `PropClasses` TMap → `bridge-loom-ue5/Public/BridgeLoomSeasonalContent.h`, `...SeasonalContent.cpp` (`ELoomTimeOfDay`, `ELoomMonth`, `FLoomMonthlyEvent`, `FLoomTimeLockedContent`, `FLoomSeasonalCalendarState`, `EvaluateCalendar`, `HourToTimeOfDay`, `SpawnEventProps`, `DespawnEventProps`, `InitDefaultMonthlyEvents`, `OnTimeOfDayChanged`, `OnMonthlyEventStarted`, `OnMonthlyEventEnded`)
+- [x] Mini-Games Registry: 50 canonical games across STEM / Language Arts / Financial Literacy / Crossroads realms, session lifecycle (Start → InProgress → Complete/Failed), spark gain `lerp(3,8)` by normalised score × difficulty, high-score tracking, incremental difficulty unlock at 80% threshold → `bridge-loom-ue5/Public/BridgeLoomMiniGames.h`, `...MiniGames.cpp` (`ELoomMiniGameRealm`, `ELoomMiniGameState`, `FLoomMiniGameDefinition`, `FLoomMiniGameSession`, `FLoomMiniGameResult`, `FLoomKindlerGameState`, `StartGame`, `CompleteGame`, `AbortGame`, `TearDownSession`, `ComputeSparkGain`, `InitDefaultGameDefs`, `OnGameStarted`, `OnGameCompleted`, `OnHighScoreAchieved`, `OnDifficultyUnlocked`)
+
+---
+
 ## Scale Targets
 
 | Metric | Launch | Year 1 | Year 3 | Year 5 | Year 10 |
