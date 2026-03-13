@@ -28,16 +28,14 @@ describe('createWorldIdDriftReport', () => {
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('character dossiers show one resolved alias, two unresolved legacy IDs, and two untracked IDs', () => {
+  it('character dossiers show zero resolved aliases, two unresolved legacy IDs, and zero untracked IDs after cast cleanup', () => {
     const profile = report.getRegistryProfile('character-dossiers');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(1);
+    expect(profile!.resolvedAliasReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(2);
-    expect(profile!.untrackedNoncanonicalReferences).toBe(2);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
     expect(profile!.uniqueNoncanonicalWorldIds).toEqual([
-      'meadow-laboratory',
       'science-lab',
-      'threadway',
     ]);
   });
 
@@ -52,7 +50,7 @@ describe('createWorldIdDriftReport', () => {
   it('npc relationship drift includes alias, unresolved legacy, and untracked references', () => {
     const profile = report.getRegistryProfile('npc-relationship-registry');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(4);
+    expect(profile!.resolvedAliasReferences).toBe(1);
     expect(profile!.unresolvedLegacyReferences).toBe(2);
     expect(profile!.untrackedNoncanonicalReferences).toBe(2);
   });
@@ -95,7 +93,6 @@ describe('createWorldIdDriftReport', () => {
       'all-worlds',
       'any-threadway',
       'garden-of-growth',
-      'threadway',
     ]);
   });
 
