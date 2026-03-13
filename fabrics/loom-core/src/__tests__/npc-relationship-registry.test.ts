@@ -79,6 +79,17 @@ describe('getRelationshipsForWorld', () => {
     const registry = createNpcRelationshipRegistry();
     expect(registry.getRelationshipsForWorld('world-definitely-does-not-exist')).toHaveLength(0);
   });
+
+  it('returns the cleaned alias-backed relationship worlds', () => {
+    const registry = createNpcRelationshipRegistry();
+    const baxterHugo = registry.getRelationship('baxter-hugo');
+    const diegoBabatunde = registry.getRelationship('diego-babatunde');
+    const theoSam = registry.getRelationship('theo-sam');
+
+    expect(baxterHugo?.characterAWorldId).toBe('meadow-lab');
+    expect(diegoBabatunde?.characterAWorldId).toBe('entrepreneur-workshop');
+    expect(theoSam?.characterBWorldId).toBe('tax-office');
+  });
 });
 
 // ── getCrossWorldPairs ─────────────────────────────────────────

@@ -172,7 +172,7 @@ export const CHARACTER_DOSSIERS: ReadonlyArray<CharacterDossier> = [
     fullName: 'Riku',
     ageAppearance: '13 — long-limbed, always looks like he is mid-step toward something',
     role: 'crossroads',
-    primaryWorld: 'threadway',
+    primaryWorld: 'threadway-network',
     voiceRegister: 'earnest',
     voiceNotes:
       'Speaks like he\'s always describing somewhere he has just come from, urgently, ' +
@@ -344,7 +344,7 @@ export const CHARACTER_DOSSIERS: ReadonlyArray<CharacterDossier> = [
     fullName: 'Baxter',
     ageAppearance: '11 — gentle presence, always slightly worried about something specific',
     role: 'stem_environment',
-    primaryWorld: 'meadow-laboratory',
+    primaryWorld: 'meadow-lab',
     voiceRegister: 'earnest',
     voiceNotes:
       'Speaks with the deep sincerity of someone who has spent a lot of time with non-speaking things ' +
@@ -575,7 +575,7 @@ export const CHARACTER_DOSSIERS: ReadonlyArray<CharacterDossier> = [
     fullName: 'Atlas',
     ageAppearance: '16 — something in the bearing suggests carrying',
     role: 'crossroads',
-    primaryWorld: 'threadway',
+    primaryWorld: 'threadway-network',
     voiceRegister: 'bold',
     voiceNotes:
       'Speaks with the confidence of someone who has been told things are impossible and ' +
