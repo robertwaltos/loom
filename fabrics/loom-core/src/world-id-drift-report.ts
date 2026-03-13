@@ -2,9 +2,9 @@
  * World ID Drift Report
  *
  * Cross-registry audit of world ID references within loom-core. This read
- * model classifies each reference as canonical, alias-resolved, unresolved
- * legacy, or untracked noncanonical so downstream cleanup work can be planned
- * from measured drift instead of ad hoc searches.
+ * model classifies each reference as canonical, alias-resolved, special
+ * reference, unresolved legacy, or untracked noncanonical so downstream
+ * cleanup work can be planned from measured drift instead of ad hoc searches.
  */
 
 import { CHARACTER_DOSSIERS } from './character-dossiers.js';
@@ -17,6 +17,11 @@ import {
   WORLD_ID_RESOLUTION,
   type WorldIdResolutionPort,
 } from './world-id-resolution.js';
+import {
+  WORLD_SPECIAL_REFERENCE_REGISTRY,
+  type WorldSpecialReferenceKind,
+  type WorldSpecialReferenceRegistryPort,
+} from './world-special-reference-registry.js';
 import { createThreadwayNetwork } from './threadway-network.js';
 
 // ── Constants ────────────────────────────────────────────────────
@@ -37,6 +42,7 @@ export type WorldIdDriftRegistryId =
 export type WorldIdDriftStatus =
   | 'canonical'
   | 'resolved-alias'
+  | 'special-reference'
   | 'unresolved-legacy'
   | 'untracked-noncanonical';
 
@@ -46,6 +52,7 @@ export interface WorldIdDriftReference {
   readonly fieldPath: string;
   readonly referencedWorldId: string;
   readonly status: WorldIdDriftStatus;
+  readonly specialReferenceKind?: WorldSpecialReferenceKind;
   readonly canonicalWorldId?: string;
   readonly canonicalWorldName?: string;
   readonly guideId?: string;
@@ -57,6 +64,7 @@ export interface RegistryWorldIdDriftProfile {
   readonly totalReferences: number;
   readonly canonicalReferences: number;
   readonly resolvedAliasReferences: number;
+  readonly specialReferenceReferences: number;
   readonly unresolvedLegacyReferences: number;
   readonly untrackedNoncanonicalReferences: number;
   readonly uniqueNoncanonicalWorldIds: ReadonlyArray<string>;
@@ -204,7 +212,19 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
 function classifyReference(
   seed: ReferenceSeed,
   resolution: WorldIdResolutionPort,
+  specialReferences: WorldSpecialReferenceRegistryPort,
 ): WorldIdDriftReference {
+  const specialReference = specialReferences.getReference(seed.referencedWorldId);
+
+  if (specialReference) {
+    return {
+      ...seed,
+      status: 'special-reference',
+      specialReferenceKind: specialReference.kind,
+      evidence: specialReference.evidence,
+    };
+  }
+
   const result = resolution.resolve(seed.referencedWorldId);
 
   if (!result) {
@@ -253,6 +273,9 @@ function buildRegistryProfiles(
       resolvedAliasReferences: registryReferences.filter(
         (reference) => reference.status === 'resolved-alias',
       ).length,
+      specialReferenceReferences: registryReferences.filter(
+        (reference) => reference.status === 'special-reference',
+      ).length,
       unresolvedLegacyReferences: registryReferences.filter(
         (reference) => reference.status === 'unresolved-legacy',
       ).length,
@@ -269,7 +292,13 @@ function buildRegistryProfiles(
 }
 
 const WORLD_ID_DRIFT_REFERENCES: ReadonlyArray<WorldIdDriftReference> =
-  extractReferenceSeeds().map((seed) => classifyReference(seed, WORLD_ID_RESOLUTION));
+  extractReferenceSeeds().map((seed) =>
+    classifyReference(
+      seed,
+      WORLD_ID_RESOLUTION,
+      WORLD_SPECIAL_REFERENCE_REGISTRY,
+    ),
+  );
 
 const REGISTRY_WORLD_ID_DRIFT_PROFILES = buildRegistryProfiles(
   WORLD_ID_DRIFT_REFERENCES,
@@ -324,6 +353,7 @@ export function createWorldIdDriftReport(): WorldIdDriftReportPort {
       return REGISTRY_WORLD_ID_DRIFT_PROFILES.filter(
         (profile) =>
           profile.resolvedAliasReferences > 0 ||
+          profile.specialReferenceReferences > 0 ||
           profile.unresolvedLegacyReferences > 0 ||
           profile.untrackedNoncanonicalReferences > 0,
       );

@@ -24,15 +24,17 @@ describe('createWorldIdDriftReport', () => {
     const profile = report.getRegistryProfile('encyclopedia-entries');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
-    expect(profile!.unresolvedLegacyReferences).toBe(8);
+    expect(profile!.specialReferenceReferences).toBe(3);
+    expect(profile!.unresolvedLegacyReferences).toBe(5);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('character dossiers show zero resolved aliases, four unresolved legacy IDs, and zero untracked IDs after cast cleanup', () => {
+  it('character dossiers now split special references from unresolved legacy IDs after cast cleanup', () => {
     const profile = report.getRegistryProfile('character-dossiers');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
-    expect(profile!.unresolvedLegacyReferences).toBe(4);
+    expect(profile!.specialReferenceReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(2);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
     expect(profile!.uniqueNoncanonicalWorldIds).toEqual([
       'science-lab',
@@ -44,23 +46,26 @@ describe('createWorldIdDriftReport', () => {
     const profile = report.getRegistryProfile('curriculum-map');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('npc relationship drift includes alias, unresolved legacy, and untracked references', () => {
+  it('npc relationship drift includes alias, special-reference, unresolved legacy, and untracked references', () => {
     const profile = report.getRegistryProfile('npc-relationship-registry');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(1);
-    expect(profile!.unresolvedLegacyReferences).toBe(2);
-    expect(profile!.untrackedNoncanonicalReferences).toBe(2);
+    expect(profile!.specialReferenceReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(1);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(1);
   });
 
-  it('quest chains now carry only unresolved special-space drift across definitions and steps', () => {
+  it('quest chains now carry only supported special references across definitions and steps', () => {
     const profile = report.getRegistryProfile('quest-chains');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
-    expect(profile!.unresolvedLegacyReferences).toBe(4);
+    expect(profile!.specialReferenceReferences).toBe(4);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
@@ -68,16 +73,18 @@ describe('createWorldIdDriftReport', () => {
     const profile = report.getRegistryProfile('threadway-network');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('hidden zones expose any-threadway as an untracked special reference', () => {
+  it('hidden zones expose any-threadway as a supported scope selector', () => {
     const profile = report.getRegistryProfile('hidden-zones');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(1);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
-    expect(profile!.untrackedNoncanonicalReferences).toBe(1);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
     expect(profile!.uniqueNoncanonicalWorldIds).toEqual(['any-threadway']);
   });
 
@@ -90,11 +97,7 @@ describe('createWorldIdDriftReport', () => {
   });
 
   it('surfaces the current set of untracked noncanonical IDs for future resolution work', () => {
-    expect(report.getUntrackedWorldIds()).toEqual([
-      'all-worlds',
-      'any-threadway',
-      'garden-of-growth',
-    ]);
+    expect(report.getUntrackedWorldIds()).toEqual(['garden-of-growth']);
   });
 
   it('lists every registry that still has at least one noncanonical reference', () => {
