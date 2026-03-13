@@ -1539,6 +1539,20 @@ export type {
   WorldDesignAtlasPort,
 } from './world-design-atlas.js';
 
+// ── World Ambient Atlas ──────────────────────────────────────────
+
+export {
+  createWorldAmbientAtlas,
+  WORLD_AMBIENT_ATLAS,
+  TOTAL_WORLD_AMBIENT_PROFILES,
+} from './world-ambient-atlas.js';
+export type {
+  AmbientProfileSource,
+  AmbientElement,
+  WorldAmbientProfile,
+  WorldAmbientAtlasPort,
+} from './world-ambient-atlas.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
