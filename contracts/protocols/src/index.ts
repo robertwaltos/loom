@@ -44,6 +44,40 @@ export {
   createMessagePackPayloadCodec,
 } from './binary-codec.js';
 
+// ── FlatBuffers Generated Bindings ──────────────────────────────
+
+export type {
+  Vec3Data,
+  QuatData,
+  TransformData,
+  EntitySnapshotData,
+  EntitySpawnData,
+  EntityDespawnData,
+  PlayerInputData,
+  FacialPoseData,
+  BlendShapeData,
+  TimeOfDayData,
+  WeatherData,
+  MaterialParamData,
+  EnvelopeData,
+  MessageTypeValue,
+  DespawnReasonValue,
+} from './generated/loom-bridge-generated.js';
+
+export {
+  MessageType,
+  DespawnReason,
+  buildEnvelope,
+  readEnvelope,
+  buildEntitySnapshot,
+  buildEntitySpawn,
+  buildEntityDespawn,
+  buildPlayerInput,
+  buildFacialPose,
+  buildTimeOfDay,
+  buildWeather,
+} from './generated/loom-bridge-generated.js';
+
 /** Protocol versioning and schema evolution */
 export {
   createSchemaRegistry,

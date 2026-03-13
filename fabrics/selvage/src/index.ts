@@ -646,6 +646,35 @@ export type {
   GrpcMethodDefinition,
 } from './grpc-transport.js';
 
+// ── Bridge gRPC Server (UE5 ↔ Loom) ────────────────────────────
+
+export { createBridgeGrpcServer, DEFAULT_BRIDGE_CONFIG } from './bridge-grpc-server.js';
+export type {
+  BridgeGrpcServer,
+  BridgeGrpcServerDeps,
+  BridgeGrpcConfig,
+  BridgeGrpcClockPort,
+  BridgeGrpcIdPort,
+  BridgeGrpcLogPort,
+  CapabilityManifest,
+  RenderingFeatures,
+  RenderingTier,
+  ClientStreamMessage,
+  ServerStreamMessage,
+  ClientMessageType,
+  ServerMessageType,
+  ConnectedClient,
+  BridgeHealthStatus,
+  BridgeNegotiateHandler,
+  BridgeDisconnectHandler,
+  BridgeInputHandler,
+  BridgePhysicsHandler,
+  BridgeWorldStateProvider,
+  WorldCommandRequest,
+  WorldCommandResponse,
+  WorldCommandType,
+} from './bridge-grpc-server.js';
+
 // ── Phase 4 Sync Protocol ───────────────────────────────────────
 
 export {

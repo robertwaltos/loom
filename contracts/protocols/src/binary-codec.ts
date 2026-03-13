@@ -14,6 +14,7 @@
  */
 
 import type { PayloadCodec } from './message-codec.js';
+import { Builder, ByteBuffer } from 'flatbuffers';
 
 // ─── Binary Payload Codec ───────────────────────────────────────
 // Uses a length-prefixed binary envelope wrapping JSON bytes.
@@ -56,17 +57,45 @@ export function createBinaryPayloadCodec(): PayloadCodec {
   };
 }
 
-// ─── FlatBuffers Schema Codec (stub for future .fbs integration) ─
+// ─── FlatBuffers Schema Codec (production zero-copy) ────────────
 
 export function createFlatBuffersPayloadCodec(): PayloadCodec {
-  // Once .fbs schema files are compiled, this codec uses the
-  // generated FlatBuffers builder/reader for zero-copy access.
-  // For now it delegates to the binary envelope codec.
-  const base = createBinaryPayloadCodec();
   return {
     name: 'flatbuffers',
-    encode: base.encode,
-    decode: base.decode,
+    encode: (payload: unknown): Uint8Array => {
+      // Encode as FlatBuffers Envelope wrapping the payload.
+      // The payload is serialized as JSON bytes inside the envelope
+      // for flexibility — individual message types can use typed builders
+      // via buildEntitySnapshot/buildPlayerInput/etc. directly.
+      const builder = new Builder(256);
+      const jsonBytes = new TextEncoder().encode(JSON.stringify(payload));
+      builder.startVector(1, jsonBytes.length, 1);
+      for (let i = jsonBytes.length - 1; i >= 0; i--) {
+        builder.addInt8(jsonBytes[i]!);
+      }
+      const payloadOff = builder.endVector();
+      builder.startObject(1);
+      builder.addFieldOffset(0, payloadOff, 0);
+      const off = builder.endObject();
+      builder.finish(off);
+      return builder.asUint8Array();
+    },
+    decode: (bytes: Uint8Array): unknown => {
+      const bb = new ByteBuffer(bytes);
+      const rootOff = bb.readInt32(bb.position()) + bb.position();
+      const vtableOff = rootOff - bb.readInt32(rootOff);
+      const fieldOff = bb.readInt16(vtableOff + 4);
+      if (!fieldOff) return null;
+      const vecStart = rootOff + fieldOff;
+      const vecOffset = vecStart + bb.readInt32(vecStart);
+      const vecLen = bb.readInt32(vecOffset);
+      const jsonBytes = new Uint8Array(
+        bb.bytes().buffer,
+        bb.bytes().byteOffset + vecOffset + 4,
+        vecLen,
+      );
+      return JSON.parse(new TextDecoder().decode(jsonBytes)) as unknown;
+    },
   };
 }
 

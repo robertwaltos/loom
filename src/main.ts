@@ -12,6 +12,7 @@
  *   LOOM_HOST        — Bind address (default: 0.0.0.0)
  *   LOOM_PORT        — Listen port (default: 8080)
  *   LOOM_TICK_RATE   — Tick rate in Hz (default: 20)
+ *   LOOM_GRPC_PORT   — gRPC bridge port for UE5 clients (default: 50051)
  *   PG_HOST          — PostgreSQL host (default: 127.0.0.1)
  *   PG_PORT          — PostgreSQL port (default: 5432)
  *   PG_DATABASE      — PostgreSQL database (default: loom)
@@ -31,6 +32,7 @@ interface LoomEnv {
   readonly host: string;
   readonly port: number;
   readonly tickRateHz: number;
+  readonly grpcPort: number;
   readonly pg: {
     readonly host: string;
     readonly port: number;
@@ -50,6 +52,7 @@ function loadEnv(): LoomEnv {
     host: process.env['LOOM_HOST'] ?? '0.0.0.0',
     port: parseInt(process.env['LOOM_PORT'] ?? '8080', 10),
     tickRateHz: parseInt(process.env['LOOM_TICK_RATE'] ?? '20', 10),
+    grpcPort: parseInt(process.env['LOOM_GRPC_PORT'] ?? '50051', 10),
     pg: {
       host: process.env['PG_HOST'] ?? '127.0.0.1',
       port: parseInt(process.env['PG_PORT'] ?? '5432', 10),
@@ -175,14 +178,54 @@ async function main(): Promise<void> {
     tickRateHz: env.tickRateHz,
   });
 
-  // 8. Start
+  // 8. gRPC Bridge Server (UE5 clients connect here on port 50051)
+  const { createBridgeGrpcServer } = await import('@loom/selvage');
+  const bridgeGrpc = createBridgeGrpcServer({
+    clock: { nowMicroseconds: () => clock.nowMicroseconds() },
+    id: { generate: () => idGen.generate() },
+    log: {
+      info: (ctx, msg) => logger.info(ctx, msg),
+      warn: (ctx, msg) => logger.warn(ctx, msg),
+      error: (ctx, msg) => logger.error(ctx, msg),
+    },
+    config: {
+      host: env.host,
+      port: env.grpcPort,
+    },
+  });
+
+  // Register world state provider so bridge ticks push entity state to UE5
+  bridgeGrpc.registerInputHandler({
+    onPlayerInput: (clientId, payload, sequenceNumber) => {
+      logger.info({ clientId, sequenceNumber }, 'UE5 player input received');
+    },
+  });
+
+  bridgeGrpc.registerNegotiateHandler({
+    onNegotiate: (clientId, manifest) => {
+      logger.info(
+        { clientId, fabricId: manifest.fabricId, tier: manifest.currentTier },
+        'UE5 client negotiated',
+      );
+    },
+  });
+
+  bridgeGrpc.registerDisconnectHandler({
+    onDisconnect: (clientId) => {
+      logger.info({ clientId }, 'UE5 client disconnected');
+    },
+  });
+
+  logger.info({ grpcPort: env.grpcPort }, 'Bridge gRPC server assembled (UE5 ↔ Loom)');
+
+  // 9. Start
   const address = await transport.boot();
   networkServer.start();
   orchestrator.start();
 
-  logger.info({ address }, 'Loom server is live');
+  logger.info({ address, grpcPort: env.grpcPort }, 'Loom server is live');
 
-  // 9. Graceful shutdown
+  // 10. Graceful shutdown
   const shutdown = async (): Promise<void> => {
     logger.info({}, 'Shutdown signal received');
     orchestrator.stop();

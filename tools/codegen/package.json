@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "echo 'codegen build placeholder'",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "generate:flatbuffers": "tsx generate-flatbuffers.ts"
   }
 }
