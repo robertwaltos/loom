@@ -1511,6 +1511,21 @@ export {
   WORLD_VARANTHA_STATION_LORE_SUMMARY,
 } from './world-seeds/world-varantha-station.js';
 
+// ── World Soundscape Profiles ────────────────────────────────────
+
+export {
+  createWorldSoundscapeProfiles,
+  WORLD_SOUNDSCAPE_PROFILES,
+  TOTAL_SOUNDSCAPE_PROFILES,
+} from './world-soundscape-profiles.js';
+export type {
+  WorldSoundscapeProfile,
+  WorldSoundscapeProfilesPort,
+  MusicalPalette,
+  FadingResponse,
+  ThreadwayCrossfade,
+} from './world-soundscape-profiles.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
