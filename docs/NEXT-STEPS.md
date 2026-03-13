@@ -795,6 +795,27 @@ Five new Unreal Engine 5 C++ components bridging the 10 new TypeScript subsystem
 
 ---
 
+## Phase 19: Bible v5 UE5 Bridge Systems — Batch 2
+
+Five more Unreal Engine 5 C++ components bridging the remaining 5 TypeScript subsystems from `cad9b73`. All constants, world-IDs, and data mirror the TypeScript sources exactly.
+
+### 19.1 Educational Standards & Content Types
+**Priority**: P0 — Curriculum integrity backbone
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Curriculum Map: STEM×15 worlds → NGSS/CCSS/C3, LanguageArts×10 → CCSS.ELA, Financial×10 → Jump$tart+C3, age-band K-2/3-5/6-8, 8 cross-curricular highlights → `bridge-loom-ue5/Public/BridgeLoomCurriculumMap.h`, `...CurriculumMap.cpp` (`ELoomCurriculumDomain`, `ELoomAgeLabel`, `FLoomGradeMapping`, `FLoomSTEMAlignment`, `FLoomLanguageArtsAlignment`, `FLoomFinancialAlignment`, `FLoomCrossCurricularHighlight`, `GetAlignmentsForWorld`, `GetSTEMAlignment`, `GetLanguageArtsAlignment`, `GetFinancialAlignment`, `GetHighlightsForWorld`, `GetGradeMapping`, `GetWorldsForDomain`, `InitDefaultAlignments`, `InitDefaultGradeMappings`, `InitDefaultCrossHighlights`)
+- [x] Entry Types: 3 new expandable formats — UnsolvedMystery (open/contested), LivingExperiment (ongoing/concluded/paused), ThoughtExperiment (philosophical, no answer), spark gain 5–15 per completion → `bridge-loom-ue5/Public/BridgeLoomEntryTypes.h`, `...EntryTypes.cpp` (`ELoomEntryTypeName`, `ELoomMysteryStatus`, `ELoomExperimentStatus`, `FLoomAgeContent`, `FLoomUnsolvedMysteryEntry`, `FLoomLivingExperimentEntry`, `FLoomThoughtExperimentEntry`, `FLoomExpandedEntryResult`, `FOnExpandedEntryCompleted`, `CompleteEntry`, `GetMysteryById`, `GetExperimentById`, `GetThoughtExperimentById`, `GetEntryIdsForWorld`, `GetEntryType`, `ComputeSparkGain`, `InitDefaultEntries`)
+
+### 19.2 Audio, Quests & Characters
+**Priority**: P0 — World immersion and long-form progression
+**Fabric**: fabrics/bridge-loom-ue5
+
+- [x] Leitmotif Catalog: 50 character motifs + Compass adaptive motif (4 modes), async `USoundBase` streaming via `FStreamableManager`, `TWeakObjectPtr<UAudioComponent>` lifecycle, global volume scalar → `bridge-loom-ue5/Public/BridgeLoomLeitmotifCatalog.h`, `...LeitmotifCatalog.cpp` (`FLoomLeitmotifDefinition`, `FLoomCompassMotifMode`, `FOnLeitmotifStarted`, `FOnLeitmotifStopped`, `PlayMotif`, `PlayCompassMotif`, `StopMotif`, `StopAllMotifs`, `GetLeitmotifByCharacterId`, `IsMotifPlaying`, `InitDefaultLeitmotifs`)
+- [x] Quest Chains: 20 cross-world quests (4×STEM 50sp, 3×LanguageArts 40-50sp, 2×FinancialLiteracy 40sp, 11×CrossRealm 40-50sp), entry-world-completion-based unlock, per-kindler step tracking via `TMap<FString,TSet<int32>>` → `bridge-loom-ue5/Public/BridgeLoomQuestChains.h`, `...QuestChains.cpp` (`ELoomQuestCategory`, `ELoomQuestChainStatus`, `FLoomQuestStep`, `FLoomQuestChainDefinition`, `FLoomKindlerQuestState`, `FLoomQuestAvailabilityResult`, `FLoomQuestCompletionResult`, `FOnQuestUnlocked`, `FOnQuestStepCompleted`, `FOnQuestChainCompleted`, `RecordWorldEntryCompletion`, `CompleteQuestStep`, `GetAllQuestAvailability`, `GetQuestStatus`, `GetQuestsByCategory`, `GetQuestById`, `GetCompletedStepCount`, `EvaluateQuestUnlock`, `IsQuestUnlocked`, `InitDefaultQuestDefs`)
+- [x] Visitor Characters: Compass guide (4 adaptive modes: orienting/celebrating/challenge/quiet), 9 recurring historical-traveler visitors, 12 legendary figures (first-visit then ambient), async `TSoftClassPtr<AActor>` spawning at tagged spawn points, `resolveCompassMode` logic (ForgettingWell→challenge, discovery→celebrating, lost/absent7d→orienting, else→quiet) → `bridge-loom-ue5/Public/BridgeLoomVisitorCharacters.h`, `...VisitorCharacters.cpp` (`ELoomCompassMode`, `ELoomVisitorCategory`, `ELoomLegendaryVisibility`, `FLoomCompassModeDefinition`, `FLoomCompassDefinition`, `FLoomRecurringVisitorDefinition`, `FLoomLegendaryFigureDefinition`, `FLoomKindlerVisitorState`, `FLoomCompassModeResult`, `FOnCompassModeChanged`, `FOnVisitorAppeared`, `FOnVisitorDeparted`, `FOnLegendaryFirstSeen`, `ResolveCompassMode`, `OnKindlerEnteredWorld`, `SpawnRecurringVisitor`, `SpawnLegendaryFigure`, `DespawnVisitor`, `GetVisitorsForWorld`, `IsLegendaryFirstVisit`, `InitDefaultVisitors`)
+
+---
+
 ## Scale Targets
 
 | Metric | Launch | Year 1 | Year 3 | Year 5 | Year 10 |
