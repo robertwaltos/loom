@@ -1,0 +1,118 @@
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.4",
+    "Category": "Games",
+    "Description": "Koydo Worlds — Project Loom UE5 game project. UE5 is the rendering fabric — the Loom is the brain.",
+
+    "Modules": [
+        {
+            "Name": "KoydoWorlds",
+            "Type": "Runtime",
+            "LoadingPhase": "Default",
+            "AdditionalDependencies": [
+                "Engine",
+                "CoreUObject"
+            ]
+        }
+    ],
+
+    "AdditionalPluginDirectories": [
+        ".."
+    ],
+
+    "Plugins": [
+        {
+            "Name": "BridgeLoom",
+            "Enabled": true
+        },
+        {
+            "Name": "LoomGameFeatures",
+            "Enabled": true
+        },
+        {
+            "Name": "EnhancedInput",
+            "Enabled": true
+        },
+        {
+            "Name": "GameplayAbilities",
+            "Enabled": true
+        },
+        {
+            "Name": "GameplayTags",
+            "Enabled": true
+        },
+        {
+            "Name": "Niagara",
+            "Enabled": true
+        },
+        {
+            "Name": "MetaHuman",
+            "Enabled": true
+        },
+        {
+            "Name": "RigLogic",
+            "Enabled": true
+        },
+        {
+            "Name": "HairStrands",
+            "Enabled": true
+        },
+        {
+            "Name": "LiveLink",
+            "Enabled": true
+        },
+        {
+            "Name": "GameFeatures",
+            "Enabled": true
+        },
+        {
+            "Name": "MassEntity",
+            "Enabled": true
+        },
+        {
+            "Name": "MassGameplay",
+            "Enabled": true
+        },
+        {
+            "Name": "MassCrowd",
+            "Enabled": true
+        },
+        {
+            "Name": "Water",
+            "Enabled": true
+        },
+        {
+            "Name": "Landmass",
+            "Enabled": true
+        },
+        {
+            "Name": "PCG",
+            "Enabled": true
+        },
+        {
+            "Name": "PixelStreaming",
+            "Enabled": true
+        },
+        {
+            "Name": "PixelStreamingInfrastructure",
+            "Enabled": true
+        },
+        {
+            "Name": "ChaosVehiclesPlugin",
+            "Enabled": false
+        },
+        {
+            "Name": "VirtualProductionUtilities",
+            "Enabled": false
+        },
+        {
+            "Name": "OpenXR",
+            "Enabled": true
+        },
+        {
+            "Name": "OpenXRHandTracking",
+            "Enabled": true,
+            "Optional": true
+        }
+    ]
+}
