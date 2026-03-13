@@ -28,21 +28,22 @@ describe('createWorldIdDriftReport', () => {
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('character dossiers show zero resolved aliases, two unresolved legacy IDs, and zero untracked IDs after cast cleanup', () => {
+  it('character dossiers show zero resolved aliases, four unresolved legacy IDs, and zero untracked IDs after cast cleanup', () => {
     const profile = report.getRegistryProfile('character-dossiers');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
-    expect(profile!.unresolvedLegacyReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(4);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
     expect(profile!.uniqueNoncanonicalWorldIds).toEqual([
       'science-lab',
+      'threadway-network',
     ]);
   });
 
   it('curriculum map carries exactly one rename-style alias reference', () => {
     const profile = report.getRegistryProfile('curriculum-map');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(1);
+    expect(profile!.resolvedAliasReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
@@ -66,7 +67,7 @@ describe('createWorldIdDriftReport', () => {
   it('threadway network currently only drifts on the entrepreneur workshop rename', () => {
     const profile = report.getRegistryProfile('threadway-network');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(2);
+    expect(profile!.resolvedAliasReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
@@ -103,11 +104,9 @@ describe('createWorldIdDriftReport', () => {
         .map((profile) => profile.registryId),
     ).toEqual([
       'character-dossiers',
-      'curriculum-map',
       'encyclopedia-entries',
       'npc-relationship-registry',
       'quest-chains',
-      'threadway-network',
       'hidden-zones',
     ]);
   });

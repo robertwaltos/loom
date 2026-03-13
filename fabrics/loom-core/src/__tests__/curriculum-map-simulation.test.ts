@@ -45,6 +45,15 @@ describe('curriculum-map simulation', () => {
     expect(cm.getFinancialAlignments().length).toBe(TOTAL_FINANCIAL_WORLDS);
   });
 
+  it('keeps entrepreneur workshop on the canonical world id', () => {
+    const cm = makeCm();
+    const alignment = cm.getAlignmentByWorld('entrepreneur-workshop');
+
+    expect(alignment).toBeDefined();
+    expect(alignment?.worldName).toBe("Entrepreneur's Workshop");
+    expect(cm.getAlignmentByWorld('entrepreneurs-workshop')).toBeUndefined();
+  });
+
   it('getCrossCurricularHighlights returns 8 items', () => {
     const cm = makeCm();
     expect(cm.getCrossCurricularHighlights().length).toBe(TOTAL_CROSS_CURRICULAR_HIGHLIGHTS);
