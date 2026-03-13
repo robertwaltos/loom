@@ -32,6 +32,15 @@ describe('quest-chains simulation', () => {
     expect(qc.getAllQuests().length).toBe(TOTAL_QUEST_CHAINS);
   });
 
+  it('keeps the startup quest on the canonical entrepreneur workshop id', () => {
+    const qc = makeQc();
+    const startup = qc.getQuestById('the-startup');
+
+    expect(startup).toBeDefined();
+    expect(startup?.worldIds[0]).toBe('entrepreneur-workshop');
+    expect(startup?.steps[0]?.worldId).toBe('entrepreneur-workshop');
+  });
+
   it('getTotalSparkAvailable returns 920', () => {
     const qc = makeQc();
     expect(qc.getTotalSparkAvailable()).toBe(920);

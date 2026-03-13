@@ -56,10 +56,10 @@ describe('createWorldIdDriftReport', () => {
     expect(profile!.untrackedNoncanonicalReferences).toBe(2);
   });
 
-  it('quest chains currently carry one alias world and one unresolved special-space world across definitions and steps', () => {
+  it('quest chains now carry only unresolved special-space drift across definitions and steps', () => {
     const profile = report.getRegistryProfile('quest-chains');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(2);
+    expect(profile!.resolvedAliasReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(4);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
