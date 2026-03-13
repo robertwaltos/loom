@@ -7,8 +7,7 @@
 #include "BridgeLoomRenderer.h"
 #include "Engine/GameInstance.h"
 #include "HAL/PlatformTime.h"
-#include "Serialization/JsonReader.h"
-#include "Serialization/JsonSerializer.h"
+#include "loom_bridge_generated.h"
 
 // ── Lifecycle ───────────────────────────────────────────────────
 
@@ -121,60 +120,39 @@ void UBridgeLoomStreamProcessor::ProcessPendingMessages(int32 MaxMessagesPerFram
 		static_cast<float>((FPlatformTime::Seconds() - StartTime) * 1000.0);
 }
 
-// ── Decoders ────────────────────────────────────────────────────
+// ── Decoders (FlatBuffers zero-copy) ────────────────────────────
 
 void UBridgeLoomStreamProcessor::ProcessEntitySnapshot(
 	const TArray<uint8>& Payload, uint32 Seq)
 {
-	// Decode JSON payload (MessagePack in production builds)
-	const FString JsonString = FString(
-		UTF8_TO_TCHAR(reinterpret_cast<const char*>(Payload.GetData())));
-
-	TSharedPtr<FJsonObject> JsonObj;
-	const TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonString);
-	if (!FJsonSerializer::Deserialize(Reader, JsonObj) || !JsonObj.IsValid())
+	auto* FB = LoomBridge::GetEntitySnapshot(Payload.GetData());
+	if (!FB || !FB->entity_id())
 	{
 		return;
 	}
 
 	FLoomEntitySnapshot Snapshot;
-	Snapshot.EntityId = JsonObj->GetStringField(TEXT("entityId"));
+	Snapshot.EntityId = UTF8_TO_TCHAR(FB->entity_id()->c_str());
 	Snapshot.SequenceNumber = Seq;
 
-	const TSharedPtr<FJsonObject>* TransformObj;
-	if (JsonObj->TryGetObjectField(TEXT("transform"), TransformObj))
+	if (const auto* Tf = FB->transform())
 	{
-		const TSharedPtr<FJsonObject>* PosObj;
-		if ((*TransformObj)->TryGetObjectField(TEXT("position"), PosObj))
-		{
-			Snapshot.Position.X = (*PosObj)->GetNumberField(TEXT("x"));
-			Snapshot.Position.Y = (*PosObj)->GetNumberField(TEXT("y"));
-			Snapshot.Position.Z = (*PosObj)->GetNumberField(TEXT("z"));
-		}
-		const TSharedPtr<FJsonObject>* RotObj;
-		if ((*TransformObj)->TryGetObjectField(TEXT("rotation"), RotObj))
-		{
-			Snapshot.Rotation.X = (*RotObj)->GetNumberField(TEXT("x"));
-			Snapshot.Rotation.Y = (*RotObj)->GetNumberField(TEXT("y"));
-			Snapshot.Rotation.Z = (*RotObj)->GetNumberField(TEXT("z"));
-			Snapshot.Rotation.W = (*RotObj)->GetNumberField(TEXT("w"));
-		}
-		const TSharedPtr<FJsonObject>* ScaleObj;
-		if ((*TransformObj)->TryGetObjectField(TEXT("scale"), ScaleObj))
-		{
-			Snapshot.Scale.X = (*ScaleObj)->GetNumberField(TEXT("x"));
-			Snapshot.Scale.Y = (*ScaleObj)->GetNumberField(TEXT("y"));
-			Snapshot.Scale.Z = (*ScaleObj)->GetNumberField(TEXT("z"));
-		}
+		const auto& Pos = Tf->position();
+		Snapshot.Position = FVector(Pos.x(), Pos.y(), Pos.z());
+
+		const auto& Rot = Tf->rotation();
+		Snapshot.Rotation = FQuat(Rot.x(), Rot.y(), Rot.z(), Rot.w());
+
+		const auto& Sc = Tf->scale();
+		Snapshot.Scale = FVector(Sc.x(), Sc.y(), Sc.z());
 	}
 
-	const TSharedPtr<FJsonObject>* AnimObj;
-	if (JsonObj->TryGetObjectField(TEXT("animation"), AnimObj))
+	if (FB->animation_clip())
 	{
-		Snapshot.AnimClipName = (*AnimObj)->GetStringField(TEXT("clipName"));
-		Snapshot.AnimNormalizedTime = (*AnimObj)->GetNumberField(TEXT("normalizedTime"));
-		Snapshot.AnimBlendWeight = (*AnimObj)->GetNumberField(TEXT("blendWeight"));
+		Snapshot.AnimClipName = UTF8_TO_TCHAR(FB->animation_clip()->c_str());
 	}
+	Snapshot.AnimNormalizedTime = FB->animation_time();
+	Snapshot.AnimBlendWeight = FB->animation_blend();
 
 	Stats.SnapshotsProcessed++;
 	OnEntitySnapshotReceived.Broadcast(Snapshot);
@@ -182,36 +160,38 @@ void UBridgeLoomStreamProcessor::ProcessEntitySnapshot(
 
 void UBridgeLoomStreamProcessor::ProcessEntitySpawn(const TArray<uint8>& Payload)
 {
-	const FString JsonString = FString(
-		UTF8_TO_TCHAR(reinterpret_cast<const char*>(Payload.GetData())));
-
-	TSharedPtr<FJsonObject> JsonObj;
-	const TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonString);
-	if (!FJsonSerializer::Deserialize(Reader, JsonObj) || !JsonObj.IsValid())
+	auto* FB = LoomBridge::GetEntitySpawn(Payload.GetData());
+	if (!FB || !FB->entity_id())
 	{
 		return;
 	}
 
 	FLoomSpawnRequest Request;
-	Request.EntityId = JsonObj->GetStringField(TEXT("entityId"));
-	Request.Archetype = JsonObj->GetStringField(TEXT("archetype"));
-	JsonObj->TryGetStringField(TEXT("meshAssetPath"), Request.MeshAssetPath);
-	JsonObj->TryGetStringField(TEXT("metaHumanPreset"), Request.MetaHumanPreset);
+	Request.EntityId = UTF8_TO_TCHAR(FB->entity_id()->c_str());
 
-	const TSharedPtr<FJsonObject>* PosObj;
-	if (JsonObj->TryGetObjectField(TEXT("position"), PosObj))
+	if (FB->archetype())
 	{
-		Request.SpawnPosition.X = (*PosObj)->GetNumberField(TEXT("x"));
-		Request.SpawnPosition.Y = (*PosObj)->GetNumberField(TEXT("y"));
-		Request.SpawnPosition.Z = (*PosObj)->GetNumberField(TEXT("z"));
+		Request.Archetype = UTF8_TO_TCHAR(FB->archetype()->c_str());
+	}
+	if (FB->metahuman_preset())
+	{
+		Request.MetaHumanPreset = UTF8_TO_TCHAR(FB->metahuman_preset()->c_str());
 	}
 
-	const TArray<TSharedPtr<FJsonValue>>* TagsArr;
-	if (JsonObj->TryGetArrayField(TEXT("tags"), TagsArr))
+	// Extract spawn position from initial_state
+	if (const auto* InitState = FB->initial_state())
 	{
-		for (const auto& Tag : *TagsArr)
+		if (InitState->mesh_hash())
 		{
-			Request.Tags.Add(Tag->AsString());
+			Request.MeshAssetPath = UTF8_TO_TCHAR(InitState->mesh_hash()->c_str());
+		}
+		if (const auto* Tf = InitState->transform())
+		{
+			const auto& Pos = Tf->position();
+			Request.SpawnPosition = FVector(Pos.x(), Pos.y(), Pos.z());
+
+			const auto& Rot = Tf->rotation();
+			Request.SpawnRotation = FQuat(Rot.x(), Rot.y(), Rot.z(), Rot.w());
 		}
 	}
 
@@ -221,17 +201,13 @@ void UBridgeLoomStreamProcessor::ProcessEntitySpawn(const TArray<uint8>& Payload
 
 void UBridgeLoomStreamProcessor::ProcessEntityDespawn(const TArray<uint8>& Payload)
 {
-	const FString JsonString = FString(
-		UTF8_TO_TCHAR(reinterpret_cast<const char*>(Payload.GetData())));
-
-	TSharedPtr<FJsonObject> JsonObj;
-	const TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonString);
-	if (!FJsonSerializer::Deserialize(Reader, JsonObj) || !JsonObj.IsValid())
+	auto* FB = LoomBridge::GetEntityDespawn(Payload.GetData());
+	if (!FB || !FB->entity_id())
 	{
 		return;
 	}
 
-	const FString EntityId = JsonObj->GetStringField(TEXT("entityId"));
+	const FString EntityId = UTF8_TO_TCHAR(FB->entity_id()->c_str());
 
 	Stats.DespawnsProcessed++;
 	OnDespawnReceived.Broadcast(EntityId);
@@ -239,36 +215,37 @@ void UBridgeLoomStreamProcessor::ProcessEntityDespawn(const TArray<uint8>& Paylo
 
 void UBridgeLoomStreamProcessor::ProcessFacialPose(const TArray<uint8>& Payload)
 {
-	const FString JsonString = FString(
-		UTF8_TO_TCHAR(reinterpret_cast<const char*>(Payload.GetData())));
-
-	TSharedPtr<FJsonObject> JsonObj;
-	const TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonString);
-	if (!FJsonSerializer::Deserialize(Reader, JsonObj) || !JsonObj.IsValid())
+	auto* FB = LoomBridge::GetFacialPose(Payload.GetData());
+	if (!FB || !FB->entity_id())
 	{
 		return;
 	}
 
 	FLoomFacialPose Pose;
-	Pose.EntityId = JsonObj->GetStringField(TEXT("entityId"));
-	JsonObj->TryGetStringField(TEXT("emotionTag"), Pose.EmotionTag);
-	JsonObj->TryGetStringField(TEXT("speechViseme"), Pose.SpeechViseme);
-	Pose.SpeechAmplitude = JsonObj->GetNumberField(TEXT("speechAmplitude"));
+	Pose.EntityId = UTF8_TO_TCHAR(FB->entity_id()->c_str());
 
-	const TSharedPtr<FJsonObject>* GazeObj;
-	if (JsonObj->TryGetObjectField(TEXT("gazeTarget"), GazeObj))
+	if (FB->emotion_tag())
 	{
-		Pose.GazeTarget.X = (*GazeObj)->GetNumberField(TEXT("x"));
-		Pose.GazeTarget.Y = (*GazeObj)->GetNumberField(TEXT("y"));
-		Pose.GazeTarget.Z = (*GazeObj)->GetNumberField(TEXT("z"));
+		Pose.EmotionTag = UTF8_TO_TCHAR(FB->emotion_tag()->c_str());
 	}
-
-	const TSharedPtr<FJsonObject>* BlendObj;
-	if (JsonObj->TryGetObjectField(TEXT("blendShapes"), BlendObj))
+	if (FB->speech_viseme())
 	{
-		for (const auto& Pair : (*BlendObj)->Values)
+		Pose.SpeechViseme = UTF8_TO_TCHAR(FB->speech_viseme()->c_str());
+	}
+	Pose.SpeechAmplitude = FB->speech_amplitude();
+
+	// ARKit blend shapes
+	if (const auto* Shapes = FB->blend_shapes())
+	{
+		for (flatbuffers::uoffset_t i = 0; i < Shapes->size(); ++i)
 		{
-			Pose.BlendShapes.Add(FName(*Pair.Key), Pair.Value->AsNumber());
+			const auto* Shape = Shapes->Get(i);
+			if (Shape && Shape->name())
+			{
+				Pose.BlendShapes.Add(
+					FName(UTF8_TO_TCHAR(Shape->name()->c_str())),
+					Shape->weight());
+			}
 		}
 	}
 
@@ -278,43 +255,34 @@ void UBridgeLoomStreamProcessor::ProcessFacialPose(const TArray<uint8>& Payload)
 
 void UBridgeLoomStreamProcessor::ProcessTimeWeather(const TArray<uint8>& Payload)
 {
-	const FString JsonString = FString(
-		UTF8_TO_TCHAR(reinterpret_cast<const char*>(Payload.GetData())));
-
-	TSharedPtr<FJsonObject> JsonObj;
-	const TSharedRef<TJsonReader<>> Reader = TJsonReaderFactory<>::Create(JsonString);
-	if (!FJsonSerializer::Deserialize(Reader, JsonObj) || !JsonObj.IsValid())
-	{
-		return;
-	}
-
+	// TimeWeather is dispatched for both time_of_day and weather payloads.
+	// Detect type by attempting FlatBuffer verification.
 	FLoomTimeOfDay TimeOfDay;
-	const TSharedPtr<FJsonObject>* TimeObj;
-	if (JsonObj->TryGetObjectField(TEXT("timeOfDay"), TimeObj))
+	FLoomWeather Weather;
+
+	// Try TimeOfDayUpdate first
+	if (auto* TimeFB = LoomBridge::GetTimeOfDayUpdate(Payload.GetData()))
 	{
-		TimeOfDay.SunAltitude = (*TimeObj)->GetNumberField(TEXT("sunAltitude"));
-		TimeOfDay.SunAzimuth = (*TimeObj)->GetNumberField(TEXT("sunAzimuth"));
-		TimeOfDay.SunIntensity = (*TimeObj)->GetNumberField(TEXT("sunIntensity"));
-		TimeOfDay.FogDensity = (*TimeObj)->GetNumberField(TEXT("fogDensity"));
-		TimeOfDay.CloudCoverage = (*TimeObj)->GetNumberField(TEXT("cloudCoverage"));
+		TimeOfDay.SunAltitude = TimeFB->sun_altitude();
+		TimeOfDay.SunAzimuth = TimeFB->sun_azimuth();
+		TimeOfDay.SunIntensity = TimeFB->sun_intensity();
+		TimeOfDay.SunColor = FLinearColor(
+			TimeFB->sun_color_r(), TimeFB->sun_color_g(), TimeFB->sun_color_b());
+		TimeOfDay.FogDensity = TimeFB->fog_density();
+		TimeOfDay.CloudCoverage = TimeFB->cloud_coverage();
 	}
 
-	FLoomWeather Weather;
-	const TSharedPtr<FJsonObject>* WeatherObj;
-	if (JsonObj->TryGetObjectField(TEXT("weather"), WeatherObj))
+	// Try WeatherUpdate
+	if (auto* WeatherFB = LoomBridge::GetWeatherUpdate(Payload.GetData()))
 	{
-		Weather.RainIntensity = (*WeatherObj)->GetNumberField(TEXT("rainIntensity"));
-		Weather.SnowIntensity = (*WeatherObj)->GetNumberField(TEXT("snowIntensity"));
-		Weather.WindSpeed = (*WeatherObj)->GetNumberField(TEXT("windSpeed"));
-		Weather.Temperature = (*WeatherObj)->GetNumberField(TEXT("temperature"));
-
-		const TSharedPtr<FJsonObject>* WindObj;
-		if ((*WeatherObj)->TryGetObjectField(TEXT("windDirection"), WindObj))
-		{
-			Weather.WindDirection.X = (*WindObj)->GetNumberField(TEXT("x"));
-			Weather.WindDirection.Y = (*WindObj)->GetNumberField(TEXT("y"));
-			Weather.WindDirection.Z = (*WindObj)->GetNumberField(TEXT("z"));
-		}
+		Weather.RainIntensity = WeatherFB->rain_intensity();
+		Weather.SnowIntensity = WeatherFB->snow_intensity();
+		Weather.WindSpeed = WeatherFB->wind_speed();
+		Weather.Temperature = WeatherFB->temperature();
+		Weather.WindDirection = FVector(
+			FMath::Cos(FMath::DegreesToRadians(WeatherFB->wind_direction())),
+			FMath::Sin(FMath::DegreesToRadians(WeatherFB->wind_direction())),
+			0.0f);
 	}
 
 	OnTimeWeatherReceived.Broadcast(TimeOfDay, Weather);

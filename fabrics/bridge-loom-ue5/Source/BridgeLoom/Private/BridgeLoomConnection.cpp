@@ -10,7 +10,9 @@
 #include "grpcpp/create_channel.h"
 #include "grpcpp/security/credentials.h"
 #include "loom_bridge.grpc.pb.h"
+#include "loom_bridge_generated.h"
 #include "flatbuffers/flatbuffers.h"
+#include "BridgeLoomStreamProcessor.h"
 
 DEFINE_LOG_CATEGORY(LogBridgeLoom);
 
@@ -107,14 +109,30 @@ void UBridgeLoomConnection::ConnectToLoom(const FLoomConnectionConfig& Config)
 	LoomBridge::NegotiateRequest NegReq;
 	NegReq.set_fabric_id("ue5-client");
 	NegReq.set_fabric_name("Unreal Engine 5.5");
-	NegReq.set_current_tier("high");
-	NegReq.mutable_max_resolution()->set_width(3840);
-	NegReq.mutable_max_resolution()->set_height(2160);
+	NegReq.set_rendering_tier("high");
+	NegReq.set_max_resolution_width(3840);
+	NegReq.set_max_resolution_height(2160);
 	NegReq.set_max_refresh_rate(120);
 	NegReq.set_max_visible_entities(10000);
-	NegReq.set_supports_weave_zone_overlap(true);
+	NegReq.set_supports_weave_zone(true);
 	NegReq.set_supports_pixel_streaming(true);
-	NegReq.set_preferred_state_update_rate(30);
+	NegReq.set_preferred_update_rate_hz(30);
+	NegReq.set_supports_metahuman(true);
+	NegReq.set_max_metahuman_instances(5);
+
+	// Populate rendering features
+	auto* Features = NegReq.mutable_features();
+	Features->set_nanite_geometry(true);
+	Features->set_hardware_ray_tracing(true);
+	Features->set_global_illumination(true);
+	Features->set_virtual_shadow_maps(true);
+	Features->set_volumetric_clouds(true);
+	Features->set_hair_simulation(true);
+	Features->set_cloth_simulation(true);
+	Features->set_facial_animation(true);
+	Features->set_metasound_audio(true);
+	Features->set_mass_entity(true);
+	Features->set_chaos_physics(true);
 
 	LoomBridge::NegotiateResponse NegResp;
 	grpc::Status NegStatus = GrpcState->Stub->Negotiate(
@@ -131,11 +149,12 @@ void UBridgeLoomConnection::ConnectToLoom(const FLoomConnectionConfig& Config)
 	}
 
 	GrpcState->AssignedClientId = UTF8_TO_TCHAR(
-		NegResp.assigned_client_id().c_str());
+		NegResp.session_id().c_str());
 	UE_LOG(LogBridgeLoom, Log,
-		TEXT("Negotiated with server v%s, assigned client ID: %s"),
-		UTF8_TO_TCHAR(NegResp.server_version().c_str()),
-		*GrpcState->AssignedClientId);
+		TEXT("Negotiated: session=%s, update_rate=%dHz, entity_budget=%d"),
+		*GrpcState->AssignedClientId,
+		NegResp.assigned_update_rate_hz(),
+		NegResp.max_entities_budget());
 
 	// Open bidirectional GameStream
 	GrpcState->StreamContext = grpc::ClientContext();
@@ -156,14 +175,11 @@ void UBridgeLoomConnection::ConnectToLoom(const FLoomConnectionConfig& Config)
 				Telemetry.MessagesReceived++;
 				Telemetry.BytesReceived += ServerMsg.ByteSizeLong();
 
-				const FString MsgType = UTF8_TO_TCHAR(
-					ServerMsg.type().c_str());
-
-				// Dispatch to game thread
+				// Dispatch to game thread via payload_case routing
 				AsyncTask(ENamedThreads::GameThread,
-					[this, MsgType, ServerMsg]()
+					[this, ServerMsg]()
 					{
-						ProcessServerMessage(MsgType, ServerMsg);
+						ProcessServerMessage(ServerMsg);
 					});
 			}
 		});
@@ -232,35 +248,113 @@ void UBridgeLoomConnection::SetConnectionState(ELoomConnectionState NewState)
 // ── Server Message Processing ───────────────────────────────────
 
 void UBridgeLoomConnection::ProcessServerMessage(
-	const FString& MsgType,
 	const LoomBridge::ServerMessage& Msg)
 {
-	if (MsgType == TEXT("entity-spawn"))
+	auto* StreamProc = GetGameInstance()->GetSubsystem<UBridgeLoomStreamProcessor>();
+
+	// Helper: extract FlatBuffer bytes from proto oneof payload → TArray<uint8>
+	auto ExtractPayload = [](const std::string& PayloadBytes) -> TArray<uint8>
 	{
-		const FString EntityId = UTF8_TO_TCHAR(Msg.entity_id().c_str());
-		const FString Archetype = UTF8_TO_TCHAR(Msg.archetype().c_str());
-		OnEntitySpawned.Broadcast(EntityId, Archetype);
-	}
-	else if (MsgType == TEXT("entity-despawn"))
+		TArray<uint8> Arr;
+		Arr.Append(reinterpret_cast<const uint8*>(PayloadBytes.data()),
+			PayloadBytes.size());
+		return Arr;
+	};
+
+	switch (Msg.payload_case())
 	{
-		const FString EntityId = UTF8_TO_TCHAR(Msg.entity_id().c_str());
-		OnEntityDespawned.Broadcast(EntityId);
-	}
-	else if (MsgType == TEXT("world-preload"))
-	{
-		const FString WorldId = UTF8_TO_TCHAR(Msg.world_id().c_str());
-		OnWorldPreload.Broadcast(WorldId);
-	}
-	else if (MsgType == TEXT("entity-snapshot"))
-	{
-		// Entity snapshots are routed to BridgeLoomStreamProcessor
-		// for batch processing on the game thread within frame budget.
-	}
-	else if (MsgType == TEXT("heartbeat-ack"))
-	{
-		const double NowSec = FPlatformTime::Seconds();
-		Telemetry.RoundTripTimeMs =
-			static_cast<float>((NowSec - LastHeartbeatSentSec) * 1000.0);
+	case LoomBridge::ServerMessage::kEntitySnapshot:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::EntitySnapshot,
+				ExtractPayload(Msg.entity_snapshot()), Msg.sequence());
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kEntitySpawn:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::EntitySpawn,
+				ExtractPayload(Msg.entity_spawn()), Msg.sequence());
+		}
+		// Fire Connection-level delegate for backward compat
+		{
+			auto* SpawnFB = LoomBridge::GetEntitySpawn(
+				Msg.entity_spawn().data());
+			if (SpawnFB && SpawnFB->entity_id() && SpawnFB->archetype())
+			{
+				OnEntitySpawned.Broadcast(
+					UTF8_TO_TCHAR(SpawnFB->entity_id()->c_str()),
+					UTF8_TO_TCHAR(SpawnFB->archetype()->c_str()));
+			}
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kEntityDespawn:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::EntityDespawn,
+				ExtractPayload(Msg.entity_despawn()), Msg.sequence());
+		}
+		{
+			auto* DespawnFB = LoomBridge::GetEntityDespawn(
+				Msg.entity_despawn().data());
+			if (DespawnFB && DespawnFB->entity_id())
+			{
+				OnEntityDespawned.Broadcast(
+					UTF8_TO_TCHAR(DespawnFB->entity_id()->c_str()));
+			}
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kTimeOfDay:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::TimeWeather,
+				ExtractPayload(Msg.time_of_day()), Msg.sequence());
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kWeather:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::TimeWeather,
+				ExtractPayload(Msg.weather()), Msg.sequence());
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kChunkLoad:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::WorldPreload,
+				ExtractPayload(Msg.chunk_load()), Msg.sequence());
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kChunkUnload:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::WorldUnload,
+				ExtractPayload(Msg.chunk_unload()), Msg.sequence());
+		}
+		break;
+
+	case LoomBridge::ServerMessage::kFacialPose:
+		if (StreamProc)
+		{
+			StreamProc->EnqueueMessage(ELoomServerMessageType::FacialPose,
+				ExtractPayload(Msg.facial_pose()), Msg.sequence());
+		}
+		break;
+
+	case LoomBridge::ServerMessage::PAYLOAD_NOT_SET:
+		// Heartbeat ack (empty payload)
+		{
+			const double NowSec = FPlatformTime::Seconds();
+			Telemetry.RoundTripTimeMs =
+				static_cast<float>((NowSec - LastHeartbeatSentSec) * 1000.0);
+		}
+		break;
 	}
 }
 
@@ -281,21 +375,22 @@ void UBridgeLoomConnection::SendPlayerInput(
 	++InputSequence;
 	Telemetry.MessagesSent++;
 
-	// Build protobuf PlayerInput and send via bidirectional stream
-	LoomBridge::ClientMessage ClientMsg;
-	ClientMsg.set_type("player-input");
-	ClientMsg.set_sequence_number(InputSequence);
-	ClientMsg.set_timestamp(FPlatformTime::Seconds() * 1000000.0);
-
-	// Encode player input as JSON payload (MessagePack on hot path later)
-	const FString PayloadJson = FString::Printf(
-		TEXT("{\"entityId\":\"%s\",\"dx\":%.4f,\"dy\":%.4f,\"dz\":%.4f,"
-		     "\"yaw\":%.4f,\"pitch\":%.4f,\"actionFlags\":%u,\"seq\":%u}"),
-		*PlayerId,
+	// Build FlatBuffer PlayerInput
+	flatbuffers::FlatBufferBuilder FBBuilder(256);
+	auto EntityIdOff = FBBuilder.CreateString(TCHAR_TO_UTF8(*PlayerId));
+	auto InputOff = LoomBridge::CreatePlayerInput(
+		FBBuilder, EntityIdOff,
 		MoveDirection.X, MoveDirection.Y, MoveDirection.Z,
 		Yaw, Pitch, ActionFlags, InputSequence);
+	FBBuilder.Finish(InputOff);
 
-	ClientMsg.set_payload(TCHAR_TO_UTF8(*PayloadJson));
+	// Wrap in proto ClientMessage
+	LoomBridge::ClientMessage ClientMsg;
+	ClientMsg.set_player_input(
+		FBBuilder.GetBufferPointer(), FBBuilder.GetSize());
+	ClientMsg.set_sequence(InputSequence);
+	ClientMsg.set_timestamp_us(
+		static_cast<int64_t>(FPlatformTime::Seconds() * 1000000.0));
 
 	const int64 ByteSize = ClientMsg.ByteSizeLong();
 	Telemetry.BytesSent += ByteSize;
@@ -315,9 +410,9 @@ void UBridgeLoomConnection::SendHeartbeat()
 	LastHeartbeatSentSec = FPlatformTime::Seconds();
 
 	LoomBridge::ClientMessage HeartbeatMsg;
-	HeartbeatMsg.set_type("heartbeat");
-	HeartbeatMsg.set_sequence_number(InputSequence);
-	HeartbeatMsg.set_timestamp(LastHeartbeatSentSec * 1000000.0);
+	HeartbeatMsg.set_sequence(InputSequence);
+	HeartbeatMsg.set_timestamp_us(
+		static_cast<int64_t>(LastHeartbeatSentSec * 1000000.0));
 
 	Telemetry.MessagesSent++;
 	GrpcState->GameStream->Write(HeartbeatMsg);

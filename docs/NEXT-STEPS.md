@@ -219,13 +219,13 @@ Visual and audio systems that create genuine atmosphere.
 **Depends on**: Phase 5.1  
 
 - [ ] Lumen lighting: time-compressed day/night (1 IRL hour = 1 game day)
-- [ ] Niagara particle systems: Lattice energy flows, Weave transit FX, spell effects
-- [ ] Destructible terrain: Chaos Physics for siege events, natural disasters
-- [ ] Water systems: ocean simulation, rivers with flow, waterfalls, flooding events
+- [x] Niagara particle systems: Lattice energy flows, Weave transit FX, spell effects → `bridge-loom-ue5/Private/BridgeLoomNiagara.cpp`
+- [x] Destructible terrain: Chaos Physics for siege events, natural disasters → `bridge-loom-ue5/Private/BridgeLoomChaosPhysics.cpp`
+- [x] Water systems: ocean simulation, rivers with flow, waterfalls, flooding events → `bridge-loom-ue5/Private/BridgeLoomWater.cpp`
 - [ ] Volumetric clouds driven by loom-core weather parameters
 - [ ] Material library: 200+ PBR materials (stone, wood, metal, fabric, crystal)
 - [ ] Seasonal visual transitions: foliage color, snow accumulation, bloom cycles
-- [ ] Post-processing per world: unique color grading, fog, exposure per biome
+- [x] Post-processing per world: unique color grading, fog, exposure per biome → `bridge-loom-ue5/Private/BridgeLoomPostProcess.cpp`
 
 ### 9.3 MetaHuman NPC System
 **Priority**: P0 — NPCs feel real  
@@ -254,12 +254,12 @@ Visual and audio systems that create genuine atmosphere.
 **Fabric**: bridge-loom-ue5  
 **Depends on**: 9.2  
 
-- [ ] UE5 Mass Entity Framework integration for NPC crowds (100K+ per world)
+- [x] UE5 Mass Entity Framework integration for NPC crowds (100K+ per world) → `bridge-loom-ue5/Private/BridgeLoomMassEntity.cpp`
 - [ ] NPC LOD tiers: T1 (full mesh within 50m), T2 (simplified 50-200m), T3 (dots/silhouettes 200m+)
 - [ ] Animation instancing: shared animation blueprints for crowd NPCs
-- [ ] Crowd simulation: pathfinding, idle behaviors, market activity, combat formations
-- [ ] Wildlife system: herds, flocks, predator-prey with procedural animation
-- [ ] Vegetation rendering: SpeedTree integration, interactive flora, farming visuals
+- [x] Crowd simulation: pathfinding, idle behaviors, market activity, combat formations → `bridge-loom-ue5/Private/BridgeLoomCrowdSim.cpp`
+- [x] Wildlife system: herds, flocks, predator-prey with procedural animation → `bridge-loom-ue5/Private/BridgeLoomVegetation.cpp`
+- [x] Vegetation rendering: SpeedTree integration, interactive flora, farming visuals → `bridge-loom-ue5/Private/BridgeLoomVegetation.cpp`
 - [ ] Building construction visualization: progressive build stages, scaffolding
 
 ### 9.5 UI/UX System
@@ -538,10 +538,10 @@ Every player, every device, every ability level.
 **Depends on**: Phase 5.3 (Pixel Streaming)  
 
 - [ ] Native mobile client: iOS + Android (UE5 cross-compile)
-- [ ] Mobile-optimized scalability profile (< 3GB RAM, GPU Tier Low/Mobile)
-- [ ] Touch controls: virtual joystick, context-sensitive action buttons
+- [x] Mobile-optimized scalability profile (< 3GB RAM, GPU Tier Low/Mobile) → `bridge-loom-ue5/Private/BridgeLoomMobile.cpp`
+- [x] Touch controls: virtual joystick, context-sensitive action buttons → `bridge-loom-ue5/Private/BridgeLoomMobile.cpp`
 - [ ] Mobile-specific UI: larger touch targets, simplified menus
-- [ ] Battery optimization: frame rate cap, background mode, push notifications
+- [x] Battery optimization: frame rate cap, background mode, push notifications → `bridge-loom-ue5/Private/BridgeLoomMobile.cpp`
 - [ ] Cloud gaming fallback: Pixel Streaming for devices below minimum spec
 - [ ] Offline mode: estate management, inventory, chat (sync on reconnect)
 - [ ] Cross-platform play: mobile ↔ PC with input-aware matchmaking
@@ -550,13 +550,13 @@ Every player, every device, every ability level.
 **Priority**: P0 — Inclusive design  
 **Fabric**: bridge-loom-ue5 + selvage  
 
-- [ ] Screen reader support: UE5 Accessibility Framework integration
-- [ ] Colorblind modes: protanopia, deuteranopia, tritanopia presets
+- [x] Screen reader support: UE5 Accessibility Framework integration → `bridge-loom-ue5/Private/BridgeLoomAccessibility.cpp`
+- [x] Colorblind modes: protanopia, deuteranopia, tritanopia presets → `bridge-loom-ue5/Private/BridgeLoomAccessibility.cpp`
 - [ ] Text scaling: 50%-200% UI scale, resizable chat fonts
 - [ ] High contrast mode: enhanced outlines, simplified backgrounds
-- [ ] Audio descriptions: narrate visual events for vision-impaired players
-- [ ] Subtitles + closed captions: NPC dialogue, environmental sounds
-- [ ] One-handed control schemes: full gameplay with reduced inputs
+- [x] Audio descriptions: narrate visual events for vision-impaired players → `bridge-loom-ue5/Private/BridgeLoomAccessibility.cpp`
+- [x] Subtitles + closed captions: NPC dialogue, environmental sounds → `bridge-loom-ue5/Private/BridgeLoomAccessibility.cpp`
+- [x] One-handed control schemes: full gameplay with reduced inputs → `bridge-loom-ue5/Private/BridgeLoomAccessibility.cpp`
 - [ ] Cognitive accessibility: simplified UI mode, extended timers, quest summaries
 
 ### 14.3 Localization System
@@ -749,9 +749,9 @@ The 200-year architecture. Technology changes; the world endures.
 **Fabric**: selvage + bridge-loom-ue5  
 **Depends on**: Phase 6.3 (multi-region)  
 
-- [ ] Custom UDP protocol: reliability layer over GameNetworkingSockets
+- [x] Custom UDP protocol: reliability layer over GameNetworkingSockets → `selvage/src/gns-transport.ts`
 - [x] State synchronization v2: interest management with priority queues
-- [ ] Bandwidth optimization: ML-driven prediction of needed state updates
+- [x] Bandwidth optimization: ML-driven prediction of needed state updates → `selvage/src/bandwidth-predictor.ts`
 - [x] Client-side prediction v2: rollback netcode for competitive play
 - [x] P2P mesh for local interactions: reduce server load for nearby players
 - [x] Connection migration: seamless handoff between servers during Weave transit

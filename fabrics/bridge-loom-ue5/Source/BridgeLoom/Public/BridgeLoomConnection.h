@@ -92,6 +92,9 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLoomEntityDespawned,
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnLoomWorldPreload,
 	const FString&, WorldId);
 
+// Forward declare gRPC types to avoid header pollution
+namespace LoomBridge { class ServerMessage; }
+
 /**
  * UBridgeLoomConnection
  *
@@ -169,15 +172,11 @@ public:
 	UPROPERTY(BlueprintAssignable, Category = "Loom|Events")
 	FOnLoomWorldPreload OnWorldPreload;
 
-// Forward declare gRPC types to avoid header pollution
-namespace LoomBridge { class ServerMessage; }
-
 protected:
 	void SetConnectionState(ELoomConnectionState NewState);
 	void AttemptReconnect();
 	void SendHeartbeat();
-	void ProcessServerMessage(const FString& MsgType,
-		const LoomBridge::ServerMessage& Msg);
+	void ProcessServerMessage(const LoomBridge::ServerMessage& Msg);
 
 private:
 	ELoomConnectionState ConnectionState = ELoomConnectionState::Disconnected;
