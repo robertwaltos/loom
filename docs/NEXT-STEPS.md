@@ -767,10 +767,10 @@ The 200-year architecture. Technology changes; the world endures.
 - [x] VR interaction: hand tracking, gaze selection, spatial UI → `BridgeLoomVR::UpdateHandTracking`, `FLoomHandTrackingState`
 - [x] AR overlay: real-world table surface as game map (Apple Vision Pro) → `BridgeLoomVR::EnableVR(ELoomVRMode::AR)`
 - [x] Spatial audio: HRTF with head tracking for true 3D positioning → `BridgeLoomVR::SetSpatialAudioEnabled`
-- [ ] Haptic feedback: controller vibration patterns for game events
+- [x] Haptic feedback: controller vibration patterns for game events → `bridge-loom-ue5/Public/BridgeLoomHaptics.h`, `...Haptics.cpp` (ELoomHapticEvent, FLoomHapticWaveform, 15 events, multi-layer summing, globalScale)
 - [x] Motion sickness mitigation: comfort vignette, teleport locomotion option → `FLoomVRComfortSettings`, `BridgeLoomVR::TeleportPlayer`, `SnapTurn`
-- [ ] Cross-reality play: VR players share worlds with flat-screen players
-- [ ] Pixel Streaming to standalone headsets (Quest): no local GPU needed
+- [x] Cross-reality play: VR players share worlds with flat-screen players → `bridge-loom-ue5/Public/BridgeLoomCrossReality.h`, `...CrossReality.cpp` (ELoomViewMode, ELoomXRPolicy, pointer-ray tracking, session state, mixed-policy gate)
+- [x] Pixel Streaming to standalone headsets (Quest): no local GPU needed → `bridge-loom-ue5/Public/BridgeLoomPixelStreaming.h`, `...PixelStreaming.cpp` (ELoomStreamTarget, ELoomStreamQuality, Quest 3840×1832@72fps, ApplyQuestStereoSettings, adaptive bitrate)
 
 ---
 
