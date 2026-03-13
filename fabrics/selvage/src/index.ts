@@ -648,7 +648,7 @@ export type {
 
 // ── Bridge gRPC Server (UE5 ↔ Loom) ────────────────────────────
 
-export { createBridgeGrpcServer, DEFAULT_BRIDGE_CONFIG } from './bridge-grpc-server.js';
+export { createBridgeGrpcServer, DEFAULT_BRIDGE_CONFIG, STALE_CLIENT_TIMEOUT_MS } from './bridge-grpc-server.js';
 export type {
   BridgeGrpcServer,
   BridgeGrpcServerDeps,
@@ -797,35 +797,6 @@ export type {
   LocalizationEngineConfig,
   LocalizationEngine,
 } from './localization-engine.js';
-
-// ── Bridge gRPC Server ──────────────────────────────────────────
-
-export { createBridgeGrpcServer, DEFAULT_BRIDGE_CONFIG, STALE_CLIENT_TIMEOUT_MS } from './bridge-grpc-server.js';
-export type {
-  BridgeGrpcClockPort,
-  BridgeGrpcIdPort,
-  BridgeGrpcLogPort,
-  BridgeGrpcConfig,
-  RenderingFeatures,
-  RenderingTier,
-  CapabilityManifest,
-  ClientMessageType,
-  ServerMessageType,
-  ClientStreamMessage,
-  ServerStreamMessage,
-  WorldCommandType,
-  WorldCommandRequest,
-  WorldCommandResponse,
-  BridgeHealthStatus,
-  ConnectedClient,
-  BridgeInputHandler,
-  BridgePhysicsHandler,
-  BridgeWorldStateProvider,
-  BridgeNegotiateHandler,
-  BridgeDisconnectHandler,
-  BridgeGrpcServer,
-  BridgeGrpcServerDeps,
-} from './bridge-grpc-server.js';
 
 // ── Voice Chat Rooms ────────────────────────────────────────────
 

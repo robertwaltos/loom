@@ -65,7 +65,7 @@ export type {
 } from './generated/loom-bridge-generated.js';
 
 export {
-  MessageType,
+  MessageType as FBMessageType,
   DespawnReason,
   buildEnvelope,
   readEnvelope,

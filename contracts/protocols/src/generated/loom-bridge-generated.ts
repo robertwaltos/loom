@@ -317,7 +317,8 @@ export function readEnvelope(bytes: Uint8Array): EnvelopeData {
   if (cidOff) {
     const strOffset = rootOff + cidOff;
     const indirectOff = strOffset + bb.readInt32(strOffset);
-    correlationId = bb.__string(indirectOff) ?? '';
+    const raw = bb.__string(indirectOff);
+    correlationId = typeof raw === 'string' ? raw : '';
   }
 
   // Field 4: payload ([ubyte])
@@ -327,7 +328,8 @@ export function readEnvelope(bytes: Uint8Array): EnvelopeData {
     const vecStart = rootOff + plOff;
     const vecOffset = vecStart + bb.readInt32(vecStart);
     const vecLen = bb.readInt32(vecOffset);
-    payload = new Uint8Array(bb.bytes().buffer, bb.bytes().byteOffset + vecOffset + 4, vecLen);
+    const src = bb.bytes();
+    payload = new Uint8Array(src.buffer as ArrayBuffer, src.byteOffset + vecOffset + 4, vecLen);
   }
 
   return { messageType, sequence, timestampUs, correlationId, payload };
