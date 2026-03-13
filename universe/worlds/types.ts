@@ -91,42 +91,42 @@ export const REALM_OF_EXPRESSION_WORLDS = [
   'letter-forge',         // Amara Diallo — Phonics / Letter Recognition
   'nonfiction-fleet',     // Captain Birch — Research / Nonfiction Reading
   'folklore-bazaar',      // Hassan Yilmaz — Folklore / Cultural Stories
-  'reading-reef',         // (Guide TBD) — Reading Comprehension
-  'word-workshop',        // (Guide TBD) — Vocabulary Building
-  'grammar-garden',       // (Guide TBD) — Grammar / Sentence Structure
-  'debate-dock',          // (Guide TBD) — Argumentation / Persuasion
-  'comic-corner',         // (Guide TBD) — Visual Storytelling
-  'journal-island',       // (Guide TBD) — Creative Writing / Journaling
+  'reading-reef',         // Oliver Marsh — Reading Comprehension
+  'vocabulary-jungle',    // Kwame Asante — Vocabulary / Word Roots
+  'grammar-bridge',       // Lila Johansson-Park — Grammar / Sentence Structure
+  'debate-arena',         // Theo Papadopoulos — Persuasive Writing
+  'illustration-cove',    // Ines Moreau — Visual Literacy
+  'editing-tower',        // Wren Calloway — Editing / Revision
   'translation-garden',   // Farah al-Rashid — Languages / Translation
   'diary-lighthouse',     // Nadia Volkov — Diary / Personal Narrative
-  'speech-stage',         // (Guide TBD) — Public Speaking
-  'library-labyrinth',    // (Guide TBD) — Library Skills / Research
+  'spelling-mines',       // Benny Okafor-Williams — Spelling / Word Patterns
+  'punctuation-station',  // Rosie Chen — Punctuation / Writing Mechanics
 ] as const;
 
 export const REALM_OF_EXCHANGE_WORLDS = [
   'market-square',           // Tía Carmen Herrera — Money Basics
   'savings-vault',           // Mr. Abernathy — Saving / Compound Interest
-  'entrepreneurs-workshop',  // Diego Montoya-Silva — Entrepreneurship
+  'entrepreneur-workshop',   // Diego Montoya-Silva — Entrepreneurship
   'barter-docks',            // Tomás Reyes — History of Money / Barter
   'tax-office',              // Sam Worthington — Taxes / Public Services
-  'budget-kitchen',          // (Guide TBD) — Budgeting
-  'needs-wants-bridge',      // (Guide TBD) — Needs vs Wants
-  'investment-greenhouse',   // (Guide TBD) — Investing Basics
-  'sharing-meadow',          // (Guide TBD) — Sharing Economy / Charity
-  'debt-glacier',            // (Guide TBD) — Debt / Borrowing
-  'job-fair',                // (Guide TBD) — Jobs / Careers
-  'insurance-island',        // (Guide TBD) — Risk / Insurance
+  'budget-kitchen',          // Priya Nair — Budgeting
+  'needs-wants-bridge',      // Nia Oduya — Needs vs Wants
+  'investment-greenhouse',   // Jin-ho Park — Investing Basics
+  'sharing-meadow',          // Auntie Bee — Sharing Economy / Charity
+  'debt-glacier',            // Elsa Lindgren — Debt / Borrowing
+  'job-fair',                // Babatunde Afolabi — Jobs / Careers
+  'charity-harbor',          // Mei-Lin Wu — Charitable Giving
 ] as const;
 
 export const THE_CROSSROADS_WORLDS = [
-  'music-meadow',     // Luna — Music / Sound
-  'thinking-grove',   // Old Rowan — Philosophy / Ethics
-  'wellness-garden',  // Hana — Mindfulness / Emotional Health
-  'time-gallery',     // Rami — History / Chronology
-  'art-studio',       // (Guide TBD) — Visual Art
-  'invention-lab',    // (Guide TBD) — Cross-disciplinary STEM
-  'culture-bridge',   // (Guide TBD) — Cross-cultural Understanding
-  'great-archive',    // The Librarian — Hub / Onboarding
+  'music-meadow',         // Luna Esperanza — Music & Math Patterns
+  'thinking-grove',       // Old Rowan — Ethics / Critical Thinking
+  'wellness-garden',      // Hana Bergstrom — Social-Emotional Learning
+  'time-gallery',         // Rami al-Farsi — Historical Thinking
+  'workshop-crossroads',  // Kenzo Nakamura-Osei — Design Thinking
+  'discovery-trail',      // Solana Bright — Scientific Method
+  'everywhere',           // Compass — Navigation / Tutorial
+  'great-archive',        // The Librarian — Hub / Onboarding
 ] as const;
 
 export type DiscoveryWorld = typeof REALM_OF_DISCOVERY_WORLDS[number];
