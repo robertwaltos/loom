@@ -1553,6 +1553,19 @@ export type {
   WorldAmbientAtlasPort,
 } from './world-ambient-atlas.js';
 
+// ── World Restoration Atlas ─────────────────────────────────────
+
+export {
+  createWorldRestorationAtlas,
+  WORLD_RESTORATION_ATLAS,
+  TOTAL_WORLD_RESTORATION_PROFILES,
+} from './world-restoration-atlas.js';
+export type {
+  RestorationProfileSource,
+  WorldRestorationProfile,
+  WorldRestorationAtlasPort,
+} from './world-restoration-atlas.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
