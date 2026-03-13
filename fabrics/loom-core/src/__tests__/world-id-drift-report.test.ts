@@ -23,7 +23,7 @@ describe('createWorldIdDriftReport', () => {
   it('encyclopedia entries remain the biggest legacy hotspot in the current report', () => {
     const profile = report.getRegistryProfile('encyclopedia-entries');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(5);
+    expect(profile!.resolvedAliasReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(8);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });

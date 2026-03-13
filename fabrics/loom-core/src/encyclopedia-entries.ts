@@ -338,7 +338,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
 
   {
     entryId: 'ml-darwin',
-    worldId: 'meadow-laboratory',
+    worldId: 'meadow-lab',
     domain: 'STEM',
     title: 'Theory of Evolution by Natural Selection',
     type: 'scientific_principle',
@@ -354,7 +354,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
   },
   {
     entryId: 'ml-mendel',
-    worldId: 'meadow-laboratory',
+    worldId: 'meadow-lab',
     domain: 'STEM',
     title: 'Mendelian Inheritance',
     type: 'scientific_principle',
@@ -580,7 +580,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
 
   {
     entryId: 'ew-assembly-line',
-    worldId: 'entrepreneurs-workshop',
+    worldId: 'entrepreneur-workshop',
     domain: 'FINANCIAL',
     title: 'Ford Moving Assembly Line',
     type: 'invention',
@@ -596,7 +596,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
   },
   {
     entryId: 'ew-microfinance',
-    worldId: 'entrepreneurs-workshop',
+    worldId: 'entrepreneur-workshop',
     domain: 'FINANCIAL',
     title: 'Grameen Bank Microfinance',
     type: 'institution',
@@ -634,7 +634,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
 
   {
     entryId: 'tot-public-goods',
-    worldId: 'tax-office-tower',
+    worldId: 'tax-office',
     domain: 'FINANCIAL',
     title: 'Theory of Public Goods',
     type: 'scientific_principle',
