@@ -29,7 +29,7 @@ import type { EntityId, WalletComponent } from '@loom/entities-contracts';
 export const WALLET_SYNC_PRIORITY = 50;
 
 /** Ticks between ledger sync (balance doesn't change every tick). */
-const SYNC_INTERVAL_TICKS = 10;
+export const SYNC_INTERVAL_TICKS = 10;
 
 // ── Ports ───────────────────────────────────────────────────────
 

@@ -1,0 +1,49 @@
+{
+  "name": "@koydo/universe",
+  "version": "0.1.0",
+  "description": "Koydo Worlds — educational product code. Characters, worlds, content, player progression.",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./worlds": {
+      "import": "./dist/worlds/index.js",
+      "types": "./dist/worlds/index.d.ts"
+    },
+    "./characters": {
+      "import": "./dist/characters/index.js",
+      "types": "./dist/characters/index.d.ts"
+    },
+    "./content": {
+      "import": "./dist/content/index.js",
+      "types": "./dist/content/index.d.ts"
+    },
+    "./fading": {
+      "import": "./dist/fading/index.js",
+      "types": "./dist/fading/index.d.ts"
+    },
+    "./parent-dashboard": {
+      "import": "./dist/parent-dashboard/index.js",
+      "types": "./dist/parent-dashboard/index.d.ts"
+    },
+    "./media-pipeline": {
+      "import": "./dist/media-pipeline/index.js",
+      "types": "./dist/media-pipeline/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "lint": "eslint \"**/*.ts\" --max-warnings 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^9.22.0",
+    "typescript": "^5.5.0"
+  }
+}

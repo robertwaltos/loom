@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach } from 'vitest';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
 import {
   createDungeonGeneratorState,
   generateLayout,
@@ -274,6 +274,7 @@ describe('DungeonGenerator', () => {
     });
 
     it('should scale enemy budget with difficulty', () => {
+      const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.5);
       const params1: GenerationParams = {
         ...createBasicParams(),
         difficultyTier: 0,
@@ -295,9 +296,13 @@ describe('DungeonGenerator', () => {
 
       expect(typeof budget1).toBe('number');
       expect(typeof budget2).toBe('number');
-      if (typeof budget1 === 'string' || typeof budget2 === 'string') return;
+      if (typeof budget1 === 'string' || typeof budget2 === 'string') {
+        randomSpy.mockRestore();
+        return;
+      }
 
       expect(budget2).toBeGreaterThan(budget1);
+      randomSpy.mockRestore();
     });
 
     it('should create bidirectional connections', () => {

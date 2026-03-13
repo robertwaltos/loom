@@ -141,6 +141,61 @@ def _biome_entity_type(biome: int, rng: np.random.Generator) -> str:
     return str(rng.choice(types))
 
 
+# ─── Biome-specific resource tables ─────────────────────────────────
+
+_BIOME_RESOURCES: dict[int, list[str]] = {
+    1: ["driftwood", "shell", "salt_crystal", "coral_fragment"],
+    2: ["sandite_ore", "cactus_fiber", "sun_stone", "glass_sand"],
+    3: ["ironwood", "herb_bundle", "mushroom_cluster", "amber_sap"],
+    4: ["granite_slab", "quartz_vein", "tin_ore", "mountain_moss"],
+    5: ["frost_crystal", "starlight_shard", "glacial_ice", "silverpine_bark"],
+}
+
+_BIOME_YIELD_RANGE: dict[int, tuple[int, int]] = {
+    1: (1, 4),
+    2: (1, 3),
+    3: (2, 5),
+    4: (1, 4),
+    5: (1, 3),
+}
+
+
+def place_resource_nodes(
+    heightmap: np.ndarray,
+    biome_map: np.ndarray,
+    config: WorldGenConfig,
+) -> list[dict[str, Any]]:
+    """Place harvestable resource nodes scaled to biome type."""
+    rng = np.random.default_rng(config.seed + 3)
+    nodes: list[dict[str, Any]] = []
+    total_cells = config.width * config.height
+    target_count = int(total_cells * config.resource_density)
+
+    for _ in range(target_count):
+        y = int(rng.integers(0, config.height))
+        x = int(rng.integers(0, config.width))
+        biome = int(biome_map[y, x])
+
+        if biome == 0:
+            continue
+
+        resources = _BIOME_RESOURCES.get(biome, ["common_stone"])
+        yield_lo, yield_hi = _BIOME_YIELD_RANGE.get(biome, (1, 3))
+
+        nodes.append({
+            "x": x,
+            "y": y,
+            "z": float(heightmap[y, x]),
+            "biome": biome,
+            "resource": str(rng.choice(resources)),
+            "yield_amount": int(rng.integers(yield_lo, yield_hi + 1)),
+            "respawn_hours": float(rng.uniform(1.0, 8.0)),
+        })
+
+    logger.info("resource_nodes_placed", count=len(nodes))
+    return nodes
+
+
 def run_generation(config: WorldGenConfig) -> GeneratedWorld:
     """Execute the full procedural generation pipeline."""
     logger.info("generation_start", world_id=config.world_id, seed=config.seed)
@@ -148,19 +203,21 @@ def run_generation(config: WorldGenConfig) -> GeneratedWorld:
     heightmap = generate_heightmap(config)
     biome_map = generate_biome_map(heightmap, config)
     entities = place_entities(heightmap, biome_map, config)
+    resources = place_resource_nodes(heightmap, biome_map, config)
 
     world = GeneratedWorld(
         world_id=config.world_id,
         heightmap=heightmap,
         biome_map=biome_map,
         entity_spawns=entities,
-        resource_nodes=[],
+        resource_nodes=resources,
     )
 
     logger.info(
         "generation_complete",
         world_id=config.world_id,
         entities=len(entities),
+        resources=len(resources),
     )
     return world
 

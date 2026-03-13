@@ -144,12 +144,12 @@ From solo play to living communities. Dynasty alliances, assemblies, and inter-w
 
 - [x] Text chat channels: world-local, dynasty, assembly, whisper, trade, global → `selvage/src/chat-channel-manager.ts`
 - [x] Chat moderation pipeline: profanity filter → toxicity ML classifier → human review queue → `selvage/src/chat-moderation.ts`
-- [ ] Voice chat integration: WebRTC rooms per world zone (proximity-based), dynasty, party
-- [ ] Voice-to-text transcription for accessibility (whisper model via shuttle workflows)
+- [x] Voice chat integration: WebRTC rooms per world zone (proximity-based), dynasty, party → `selvage/src/voice-chat-rooms.ts`
+- [x] Voice-to-text transcription for accessibility (whisper model via shuttle workflows) → `shuttle/src/voice-transcription.ts`
 - [x] Chat history persistence in archive (searchable, moderator-accessible) → `archive/src/chat-archive.ts`
 - [x] Emoji/reaction system with custom dynasty-crafted emotes → `chat-channel-manager.ts` addReaction
 - [x] Message rate limiting: 10 msg/s per player, escalating cooldowns → `chat-channel-manager.ts` rate limiter
-- [ ] Cross-world messaging relay for allied dynasties
+- [x] Cross-world messaging relay for allied dynasties → `nakama-fabric/src/cross-world-messaging.ts`
 
 ### 8.2 Dynasty Alliance & Diplomacy System
 **Priority**: P0 — Core social loop  
@@ -159,7 +159,7 @@ From solo play to living communities. Dynasty alliances, assemblies, and inter-w
 - [x] Alliance formation: proposal → vote → ratification workflow → `nakama-fabric/src/alliance-engine.ts` (pre-existing)
 - [x] Alliance tiers: non-aggression, trade pact, mutual defense, full union → `nakama-fabric/src/diplomacy-engine.ts` (pre-existing)
 - [x] Treaty negotiation interface: configurable terms (tribute %, territory, trade routes) → `nakama-fabric/src/treaty-engine.ts` (pre-existing)
-- [ ] Alliance chat channels and shared dynasty portfolios (read-only view)
+- [x] Alliance chat channels and shared dynasty portfolios (read-only view) → `nakama-fabric/src/alliance-chat.ts`
 - [x] War declaration protocol: formal declaration → 24h preparation → combat rules → `nakama-fabric/src/war-engine.ts`
 - [x] Peace negotiation: armistice terms, reparations, territory concessions → `war-engine.ts` proposePeace/acceptPeace
 - [x] Betrayal mechanics: broken treaties have KALON penalties + Remembrance records → `war-engine.ts` processBetrayal
@@ -176,7 +176,7 @@ From solo play to living communities. Dynasty alliances, assemblies, and inter-w
 - [x] Legislation execution: approved laws automatically modify world parameters → `governance-engine.ts` enactLegislation
 - [x] Judicial system: disputes, appeals, arbitration panels → `governance-engine.ts` fileDispute/ruleOnDispute/appealDispute
 - [x] Election campaigns: candidate registration, platform statements, voting → `governance-engine.ts` callElection/registerCandidate
-- [ ] Constitutional amendments: supermajority requirements, ratification period
+- [x] Constitutional amendments: supermajority requirements, ratification period → `nakama-fabric/src/constitutional-amendment.ts`
 - [x] Assembly session scheduling: weekly cycles, emergency sessions → `governance-engine.ts` startSession
 
 ### 8.4 Player-Driven Events & Festivals
@@ -186,11 +186,11 @@ From solo play to living communities. Dynasty alliances, assemblies, and inter-w
 
 - [x] Event proposal system: players submit event plans (festivals, tournaments, expeditions) → `loom-core/src/player-event-engine.ts`
 - [x] NPC participation: Tier 3 NPCs attend and react to player events → `player-event-engine.ts` EventNotificationPort
-- [ ] Event arena system: instanced competitive spaces with spectator mode
+- [x] Event arena system: instanced competitive spaces with spectator mode → `nakama-fabric/src/event-arena.ts`
 - [x] Tournament brackets: single/double elimination, Swiss, round robin → `player-event-engine.ts` createTournament
 - [x] Festival economy boost: temporary trade bonuses during celebrations → `player-event-engine.ts` economyBoosts
 - [x] Remembrance event recording: milestone events become permanent history → `player-event-engine.ts` EventRemembrancePort
-- [ ] Cross-world event broadcasting via Foundation Archive feeds
+- [x] Cross-world event broadcasting via Foundation Archive feeds → `selvage/src/cross-world-broadcast.ts`
 
 ---
 
@@ -205,7 +205,7 @@ Visual and audio systems that create genuine atmosphere.
 
 - [x] Ambient soundscapes per biome (forest, desert, ocean, cave, city) with smooth transitions
 - [x] Dynamic music engine: mood-reactive composition (combat, exploration, trade, ceremony)
-- [ ] NPC speech synthesis: TTS for Tier 3 NPCs (voice style per archetype)
+- [x] NPC speech synthesis: TTS for Tier 3 NPCs (voice style per archetype) → `shuttle/src/npc-speech-synthesis.ts`
 - [x] Weather audio: rain, wind, thunder, snow with spatial positioning
 - [x] Economy audio cues: market crash klaxon, trade completion chime, KALON milestone
 - [x] Estate ambiance: activity-based sounds (crafting, farming, construction)
@@ -358,7 +358,7 @@ NPC AI system from impressive to groundbreaking.
 - [x] Emotional state machine: mood shifts based on events, relationships, world state → `shuttle/src/npc-emergent-intelligence.ts`
 - [x] Budget-aware model routing: Tier 4 for elite NPCs only (< 500/world) → `shuttle/src/npc-emergent-intelligence.ts`
 - [x] NPC reputation tracking: players rate NPC quality, feedback loops to improve → `shuttle/src/npc-emergent-intelligence.ts`
-- [ ] NPC creation pipeline: personality specification → trained behavior → deployed
+- [x] NPC creation pipeline: personality specification → trained behavior → deployed → `shuttle/src/npc-creation-pipeline.ts`
 
 ### 11.2 Procedural Quest Generation
 **Priority**: P0 — Infinite content  
@@ -432,7 +432,7 @@ World count doubles. New biomes, cultures, challenges.
 - [x] Wormhole stabilization missions: player cooperation to establish permanent links → `weave-network.ts`
 - [x] Transit marketplace: trade goods during 3-minute Weave transit → `weave-network.ts`
 - [x] Weave events: temporal anomalies, creature encounters, lost artifact discovery → `weave-network.ts`
-- [ ] Network visualization: galaxy-map UI showing all worlds + connections
+- [x] Network visualization: galaxy-map UI showing all worlds + connections → `silfen-weave/src/network-visualizer.ts`
 - [x] Cross-world economy balancing: price arbitrage, import/export regulations → `weave-network.ts`
 - [x] Emergency transit: Alliance mutual defense rapid deployment corridors → `weave-network.ts`
 
@@ -489,7 +489,7 @@ PvP, tournaments, ranked play, and e-sports foundations.
 **Fabric**: bridge-loom-ue5 + selvage  
 **Depends on**: 13.1, Phase 5.3 (Pixel Streaming)  
 
-- [ ] Spectator camera system: observer controls, auto-camera, picture-in-picture
+- [x] Spectator camera system: observer controls, auto-camera, picture-in-picture → `selvage/src/spectator-camera.ts`
 - [x] Tournament platform: registration, brackets, scheduling, prizes (KALON + real) → `fabrics/selvage/src/esports-engine.ts`
 - [x] Broadcast overlay: player stats, team info, live score, commentator tools → `esports-engine.ts`
 - [x] VOD system: tournament recordings with indexing and highlights → `esports-engine.ts`
@@ -617,8 +617,8 @@ The Permanence Engine. What happens, stays happened.
 - [x] World history timeline: interactive scrollable history per world → `remembrance-system.ts` generateWorldTimeline()
 - [x] NPC biographies: procedurally generated life stories from memory logs → `remembrance-system.ts` generateNpcBiography()
 - [x] Search engine: full-text search across all Remembrance entries → `remembrance-system.ts` search()
-- [ ] Public API: read-only REST API for community historians/researchers
-- [ ] Archive browser: web-based exploration of game history
+- [x] Public API: read-only REST API for community historians/researchers → `archive/src/public-api.ts`
+- [x] Archive browser: web-based exploration of game history → `archive/src/archive-browser.ts`
 - [x] Data format versioning: schema evolution over 200 years (Avro/Protobuf) → `remembrance-system.ts` migrateFormat()
 
 ### 15.3 Dynasty Legacy System
@@ -702,14 +702,14 @@ Self-improving systems. The world gets smarter the longer it runs.
 **Fabric**: tools  
 **Depends on**: 16.3  
 
-- [ ] Modding SDK: TypeScript API for world event hooks, custom NPCs, quests
-- [ ] World editor: web-based tool for placing entities, defining zones, triggering events
-- [ ] NPC personality editor: GUI for configuring NPC archetypes and behaviors
-- [ ] Economy simulator: sandbox tool for testing economic parameter changes
-- [ ] DevPortal: documentation site, API explorer, community forums
-- [ ] Sample plugins: 5 example plugins with full documentation
-- [ ] CI pipeline for community plugins: automated testing, security scanning
-- [ ] Discord bot: development status, API status, world stats
+- [x] Modding SDK: TypeScript API for world event hooks, custom NPCs, quests → `tools/modding-sdk/index.ts`
+- [x] World editor: web-based tool for placing entities, defining zones, triggering events
+- [x] NPC personality editor: GUI for configuring NPC archetypes and behaviors
+- [x] Economy simulator: sandbox tool for testing economic parameter changes → `tools/economy-simulator/index.ts`
+- [x] DevPortal: documentation site, API explorer, community forums → `tools/dev-portal/index.ts`
+- [x] Sample plugins: 5 example plugins with full documentation → `tools/modding-sdk/samples/`
+- [x] CI pipeline for community plugins: automated testing, security scanning
+- [x] Discord bot: development status, API status, world stats → `tools/discord-bot/index.ts`
 
 ---
 
@@ -723,9 +723,9 @@ The 200-year architecture. Technology changes; the world endures.
 **Depends on**: All previous phases  
 
 - [ ] Rendering engine abstraction: UE5 is a plugin, can be replaced
-- [ ] Bridge Loom interface versioning: v1 contract locked, v2 development
-- [ ] Unity adapter proof-of-concept: validate engine portability
-- [ ] Godot adapter exploration: open-source rendering option
+- [x] Bridge Loom interface versioning: v1 contract locked, v2 development
+- [x] Unity adapter proof-of-concept: validate engine portability
+- [x] Godot adapter exploration: open-source rendering option
 - [ ] Custom engine evaluation: purpose-built renderer for 600+ worlds
 - [ ] Engine migration plan: < 6 month swap for any rendering engine
 - [ ] Backward compatibility: old clients supported during transition period
@@ -750,13 +750,13 @@ The 200-year architecture. Technology changes; the world endures.
 **Depends on**: Phase 6.3 (multi-region)  
 
 - [ ] Custom UDP protocol: reliability layer over GameNetworkingSockets
-- [ ] State synchronization v2: interest management with priority queues
+- [x] State synchronization v2: interest management with priority queues
 - [ ] Bandwidth optimization: ML-driven prediction of needed state updates
-- [ ] Client-side prediction v2: rollback netcode for competitive play
-- [ ] P2P mesh for local interactions: reduce server load for nearby players
-- [ ] Connection migration: seamless handoff between servers during Weave transit
-- [ ] Network condition simulation: built-in lag/loss/jitter simulation for testing
-- [ ] Protocol evolution: versioned wire format, backward compatible extension
+- [x] Client-side prediction v2: rollback netcode for competitive play
+- [x] P2P mesh for local interactions: reduce server load for nearby players
+- [x] Connection migration: seamless handoff between servers during Weave transit
+- [x] Network condition simulation: built-in lag/loss/jitter simulation for testing
+- [x] Protocol evolution: versioned wire format, backward compatible extension
 
 ### 17.4 VR/AR Client
 **Priority**: P2 — Future platform  

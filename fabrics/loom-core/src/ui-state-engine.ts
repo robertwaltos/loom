@@ -369,7 +369,7 @@ export function createUiStateEngine(
       return {
         hud,
         openPanels: [...openPanels],
-        notifications: notifications.filter(n => !n.dismissed),
+        notifications: [...notifications],
         activeContextMenu,
         activeModal,
         activeTooltip,

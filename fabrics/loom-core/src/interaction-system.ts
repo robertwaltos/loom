@@ -67,6 +67,8 @@ export interface InteractionSystemDeps {
 interface InteractionState {
   /** Set of "playerEntityId:targetEntityId" pairs currently in range. */
   readonly inRange: Set<string>;
+  /** Set of "playerEntityId:targetEntityId" pairs with an active started interaction. */
+  readonly activeInteractions: Set<string>;
   readonly store: ComponentStore;
   readonly clock: { readonly nowMicroseconds: () => number };
   readonly worldId: string;
@@ -165,6 +167,7 @@ function runProximityScan(state: InteractionState): void {
   for (const key of inRange) {
     if (!stillInRange.has(key)) {
       inRange.delete(key);
+      state.activeInteractions.delete(key);
       const [playerId, targetId] = key.split(':') as [string, string];
       eventSink?.onInteraction({
         type: 'unavailable',
@@ -209,7 +212,10 @@ function processInteractionRequests(state: InteractionState): void {
       continue;
     }
 
-    // Emit started event
+    // Emit started event (only once per (player, target) pair)
+    const startKey = pairKey(playerId, targetId);
+    if (state.activeInteractions.has(startKey)) continue;
+    state.activeInteractions.add(startKey);
     eventSink?.onInteraction({
       type: 'started',
       playerEntityId: playerId,
@@ -221,8 +227,9 @@ function processInteractionRequests(state: InteractionState): void {
       timestamp: state.clock.nowMicroseconds(),
     });
 
-    // For simple interactions (inspect, pickup), auto-complete immediately
+    // For simple interactions (inspect, pickup), auto-complete immediately and clear active state
     if (interactAction === 'inspect' || interactAction === 'pickup') {
+      state.activeInteractions.delete(startKey);
       eventSink?.onInteraction({
         type: 'completed',
         playerEntityId: playerId,
@@ -270,6 +277,7 @@ function findClosestInRangeTarget(
 export function createInteractionSystem(deps: InteractionSystemDeps): SystemFn {
   const state: InteractionState = {
     inRange: new Set(),
+    activeInteractions: new Set(),
     store: deps.componentStore,
     clock: deps.clock,
     worldId: deps.worldId,

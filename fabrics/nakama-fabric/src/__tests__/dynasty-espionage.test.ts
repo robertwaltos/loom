@@ -876,28 +876,34 @@ describe('DynastyEspionage', () => {
 
     it('should preserve agent data across operations', () => {
       const module = createDynastyEspionage(mockDeps);
-      const agent = module.plantAgent({
-        dynastyId: 'dynasty-1',
-        worldId: 'world-1',
-        skillLevel: 75,
-        coverIdentity: 'merchant',
-      });
+      const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0.99);
 
-      module.runMission({
-        agentId: agent.agentId,
-        missionType: 'GATHER_INTELLIGENCE',
-        targetDynastyId: 'dynasty-2',
-      });
+      try {
+        const agent = module.plantAgent({
+          dynastyId: 'dynasty-1',
+          worldId: 'world-1',
+          skillLevel: 75,
+          coverIdentity: 'merchant',
+        });
 
-      const agents = module.getAgentsByStatus({
-        dynastyId: 'dynasty-1',
-        worldId: 'world-1',
-        status: 'ACTIVE',
-      });
+        module.runMission({
+          agentId: agent.agentId,
+          missionType: 'GATHER_INTELLIGENCE',
+          targetDynastyId: 'dynasty-2',
+        });
 
-      const found = agents.find((a) => a.agentId === agent.agentId);
-      expect(found?.skillLevel).toBe(75);
-      expect(found?.coverIdentity).toBe('merchant');
+        const agents = module.getAgentsByStatus({
+          dynastyId: 'dynasty-1',
+          worldId: 'world-1',
+          status: 'ACTIVE',
+        });
+
+        const found = agents.find((a) => a.agentId === agent.agentId);
+        expect(found?.skillLevel).toBe(75);
+        expect(found?.coverIdentity).toBe('merchant');
+      } finally {
+        randomSpy.mockRestore();
+      }
     });
 
     it('should handle empty mission history', () => {

@@ -318,13 +318,7 @@ export function createPlayerEventEngine(
       createdAt: now,
     };
 
-    // Add proposer as organiser
-    event.participants.set(params.proposerId, {
-      playerId: params.proposerId,
-      role: 'organiser',
-      joinedAt: now,
-      score: 0,
-    });
+
 
     events.set(eventId, event);
     deps.logger.info(

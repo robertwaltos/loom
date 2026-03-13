@@ -43,3 +43,18 @@ export {
   createFlatBuffersPayloadCodec,
   createMessagePackPayloadCodec,
 } from './binary-codec.js';
+
+/** Protocol versioning and schema evolution */
+export {
+  createSchemaRegistry,
+  schemaVersion,
+} from './protocol-evolution.js';
+export type {
+  SchemaVersion,
+  SchemaDescriptor,
+  MigrationStep,
+  MigrationPath,
+  CompatibilityClass,
+  EvolutionError,
+  SchemaRegistry,
+} from './protocol-evolution.js';

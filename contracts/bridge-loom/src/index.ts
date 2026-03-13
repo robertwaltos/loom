@@ -21,3 +21,6 @@ export type {
   FacialPoseState,
 } from './visual-state.js';
 export type { WeaveZoneRenderer } from './weave-zone-renderer.js';
+
+/** v2 — superset of v1; includes audio push, batch handlers, hot-swap */
+export * from './v2/index.js';
