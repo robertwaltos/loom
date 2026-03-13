@@ -264,6 +264,7 @@ async function main(): Promise<void> {
       orchestrator.core.entities.components.set(entityId, 'movement', {
         speed: 0, maxSpeed: 3.5, isGrounded: true, movementMode: 'walking',
       });
+      worldStreaming.updatePlayerPosition(clientId, 'default', 0, 0, 0);
       logger.info({ clientId, entityId: entityId as string }, 'Player entity spawned for UE5 client');
     },
   });
@@ -276,6 +277,7 @@ async function main(): Promise<void> {
         orchestrator.core.entities.despawn(conn.entityId, 'destroyed');
       }
       orchestrator.connections.disconnect(clientId);
+      worldStreaming.removePlayer(clientId);
       logger.info({ clientId }, 'UE5 client disconnected, entity despawned');
     },
   });
@@ -293,7 +295,81 @@ async function main(): Promise<void> {
 
   logger.info({ grpcPort: env.grpcPort }, 'Bridge gRPC server assembled (UE5 ↔ Loom)');
 
-  // 9. Start
+  // 9. World Streaming — Silfen Weave chunk-based interest management
+  const { createWorldStreamingManager } = await import('@loom/silfen-weave');
+  const worldStreaming = createWorldStreamingManager();
+
+  // On each game tick, compute chunk load/unload commands → bridge WorldCommand RPC
+  const streamingTickMs = Math.round(1000 / env.tickRateHz);
+  const streamingInterval = setInterval(() => {
+    const commands = worldStreaming.computeCommands();
+    for (const cmd of commands) {
+      if (cmd.kind === 'load') {
+        bridgeGrpc.worldCommand({
+          commandType: 'preload',
+          worldId: cmd.chunk.worldId,
+          assetManifest: [`chunk:${cmd.chunk.cx},${cmd.chunk.cy},${cmd.chunk.cz}`],
+        });
+      } else {
+        bridgeGrpc.worldCommand({
+          commandType: 'unload',
+          worldId: cmd.chunk.worldId,
+        });
+      }
+    }
+  }, streamingTickMs);
+  logger.info({}, 'World streaming manager wired (Silfen Weave → Bridge WorldCommand)');
+
+  // 10. Inspector — Health probes for real metrics
+  const { createHealthCheckEngine } = await import('@loom/inspector');
+  const healthEngine = createHealthCheckEngine({
+    clock: { nowMicroseconds: () => Number(clock.nowMicroseconds()) },
+    maxHistory: 100,
+  });
+
+  healthEngine.registerProbe({
+    name: 'bridge-grpc',
+    fabric: 'selvage',
+    evaluate: () => {
+      const health = bridgeGrpc.healthCheck();
+      return {
+        status: health.healthy ? 'healthy' : 'unhealthy',
+        message: `clients=${health.connectedClients} streams=${health.activeStreams} rtt=${Math.round(health.avgRoundTripMs)}ms`,
+        durationMicroseconds: 0,
+      };
+    },
+  });
+
+  healthEngine.registerProbe({
+    name: 'ecs-entities',
+    fabric: 'loom-core',
+    evaluate: () => {
+      const count = orchestrator.core.entities.count();
+      return {
+        status: count < 10_000 ? 'healthy' : count < 50_000 ? 'degraded' : 'unhealthy',
+        message: `entities=${count}`,
+        durationMicroseconds: 0,
+      };
+    },
+  });
+
+  healthEngine.registerProbe({
+    name: 'world-streaming',
+    fabric: 'silfen-weave',
+    evaluate: () => {
+      const players = worldStreaming.playerCount();
+      const chunks = worldStreaming.totalLoadedChunks();
+      return {
+        status: 'healthy',
+        message: `players=${players} loadedChunks=${chunks}`,
+        durationMicroseconds: 0,
+      };
+    },
+  });
+
+  logger.info({}, 'Inspector health engine wired with 3 probes');
+
+  // 11. Start
   const address = await transport.boot();
   const grpcAddress = await bridgeTransport.start();
   networkServer.start();
@@ -301,9 +377,10 @@ async function main(): Promise<void> {
 
   logger.info({ address, grpcAddress }, 'Loom server is live');
 
-  // 10. Graceful shutdown
+  // 12. Graceful shutdown
   const shutdown = async (): Promise<void> => {
     logger.info({}, 'Shutdown signal received');
+    clearInterval(streamingInterval);
     orchestrator.stop();
     networkServer.stop();
     await bridgeTransport.stop();
