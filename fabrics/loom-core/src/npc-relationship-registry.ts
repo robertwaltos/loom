@@ -170,7 +170,7 @@ export const CHARACTER_RELATIONSHIPS: ReadonlyArray<CharacterRelationship> = [
   {
     relationshipId: 'baxter-hugo',
     characterA: 'Baxter',
-    characterAWorldId: 'meadow-laboratory',
+    characterAWorldId: 'meadow-lab',
     characterB: 'Hugo',
     characterBWorldId: 'greenhouse-spiral',
     nature: 'complementary_opposites',
@@ -300,7 +300,7 @@ export const CHARACTER_RELATIONSHIPS: ReadonlyArray<CharacterRelationship> = [
   {
     relationshipId: 'diego-babatunde',
     characterA: 'Diego',
-    characterAWorldId: 'entrepreneurs-workshop',
+    characterAWorldId: 'entrepreneur-workshop',
     characterB: 'Babatunde',
     characterBWorldId: 'job-fair',
     nature: 'cross_world_collaborators',
@@ -345,7 +345,7 @@ export const CHARACTER_RELATIONSHIPS: ReadonlyArray<CharacterRelationship> = [
     characterA: 'Theo',
     characterAWorldId: 'debate-arena',
     characterB: 'Sam',
-    characterBWorldId: 'tax-office-tower',
+    characterBWorldId: 'tax-office',
     nature: 'intellectual_sparring_partners',
     coreTension:
       'Theo argues for argument\'s sake — to sharpen ideas regardless of outcome. ' +

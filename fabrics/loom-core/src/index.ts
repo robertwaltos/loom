@@ -1511,6 +1511,113 @@ export {
   WORLD_VARANTHA_STATION_LORE_SUMMARY,
 } from './world-seeds/world-varantha-station.js';
 
+// ── World Soundscape Profiles ────────────────────────────────────
+
+export {
+  createWorldSoundscapeProfiles,
+  WORLD_SOUNDSCAPE_PROFILES,
+  TOTAL_SOUNDSCAPE_PROFILES,
+} from './world-soundscape-profiles.js';
+export type {
+  WorldSoundscapeProfile,
+  WorldSoundscapeProfilesPort,
+  MusicalPalette,
+  FadingResponse,
+  ThreadwayCrossfade,
+} from './world-soundscape-profiles.js';
+
+// ── World Design Atlas ───────────────────────────────────────────
+
+export {
+  createWorldDesignAtlas,
+  WORLD_DESIGN_ATLAS,
+  TOTAL_WORLD_DESIGN_PROFILES,
+} from './world-design-atlas.js';
+export type {
+  WorldZone,
+  WorldDesignProfile,
+  WorldDesignAtlasPort,
+} from './world-design-atlas.js';
+
+// ── World Ambient Atlas ──────────────────────────────────────────
+
+export {
+  createWorldAmbientAtlas,
+  WORLD_AMBIENT_ATLAS,
+  TOTAL_WORLD_AMBIENT_PROFILES,
+} from './world-ambient-atlas.js';
+export type {
+  AmbientProfileSource,
+  AmbientElement,
+  WorldAmbientProfile,
+  WorldAmbientAtlasPort,
+} from './world-ambient-atlas.js';
+
+// ── World Restoration Atlas ─────────────────────────────────────
+
+export {
+  createWorldRestorationAtlas,
+  WORLD_RESTORATION_ATLAS,
+  TOTAL_WORLD_RESTORATION_PROFILES,
+} from './world-restoration-atlas.js';
+export type {
+  RestorationProfileSource,
+  WorldRestorationProfile,
+  WorldRestorationAtlasPort,
+} from './world-restoration-atlas.js';
+
+// ── World Encyclopedia Coverage ────────────────────────────────
+
+export {
+  ACTUAL_ENCYCLOPEDIA_ENTRY_TOTAL,
+  createWorldEncyclopediaCoverage,
+  LEGACY_ENCYCLOPEDIA_WORLD_COVERAGE,
+  WORLD_ENCYCLOPEDIA_COVERAGE,
+  TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS,
+  TOTAL_WORLD_ENCYCLOPEDIA_COVERAGE_PROFILES,
+} from './world-encyclopedia-coverage.js';
+export type {
+  EncyclopediaCoverageStatus,
+  LegacyEncyclopediaWorldCoverage,
+  WorldEncyclopediaCoverageProfile,
+  WorldEncyclopediaCoveragePort,
+} from './world-encyclopedia-coverage.js';
+
+// ── World ID Resolution ────────────────────────────────────────
+
+export {
+  createWorldIdResolution,
+  RESOLVED_WORLD_ID_ALIASES,
+  TOTAL_CANONICAL_WORLD_IDS,
+  TOTAL_RESOLVED_WORLD_ID_ALIASES,
+  TOTAL_UNRESOLVED_LEGACY_WORLD_IDS,
+  UNRESOLVED_LEGACY_WORLD_IDS,
+  WORLD_ID_RESOLUTION,
+} from './world-id-resolution.js';
+export type {
+  LegacyWorldIdDisposition,
+  ResolvedWorldIdAlias,
+  UnresolvedLegacyWorldId,
+  WorldIdResolution,
+  WorldIdResolutionPort,
+  WorldIdResolutionStatus,
+} from './world-id-resolution.js';
+
+// ── World ID Drift Report ──────────────────────────────────────
+
+export {
+  createWorldIdDriftReport,
+  TOTAL_WORLD_ID_DRIFT_REGISTRIES,
+  WORLD_ID_DRIFT_REPORT,
+} from './world-id-drift-report.js';
+export type {
+  RegistryWorldIdDriftProfile,
+  WorldIdDriftReference,
+  WorldIdDriftRegistryId,
+  WorldIdDriftReportPort,
+  WorldIdDriftStatus,
+} from './world-id-drift-report.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {

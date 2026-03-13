@@ -62,6 +62,15 @@ describe('getByWorld', () => {
     expect(results.some((d) => d.characterId === 'zara')).toBe(true);
   });
 
+  it('returns the cleaned meadow-lab and threadway-network assignments', () => {
+    const registry = createCharacterDossierRegistry();
+
+    expect(registry.getById('baxter')?.primaryWorld).toBe('meadow-lab');
+    expect(registry.getByWorld('meadow-lab').some((d) => d.characterId === 'baxter')).toBe(true);
+    expect(registry.getById('riku')?.primaryWorld).toBe('threadway-network');
+    expect(registry.getById('atlas')?.primaryWorld).toBe('threadway-network');
+  });
+
   it('returns empty array for unknown world', () => {
     const registry = createCharacterDossierRegistry();
     expect(registry.getByWorld('world-xyz-unknown')).toHaveLength(0);
