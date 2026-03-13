@@ -1526,6 +1526,19 @@ export type {
   ThreadwayCrossfade,
 } from './world-soundscape-profiles.js';
 
+// ── World Design Atlas ───────────────────────────────────────────
+
+export {
+  createWorldDesignAtlas,
+  WORLD_DESIGN_ATLAS,
+  TOTAL_WORLD_DESIGN_PROFILES,
+} from './world-design-atlas.js';
+export type {
+  WorldZone,
+  WorldDesignProfile,
+  WorldDesignAtlasPort,
+} from './world-design-atlas.js';
+
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';
 export type {
