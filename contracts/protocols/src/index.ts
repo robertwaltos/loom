@@ -73,6 +73,7 @@ export {
   buildEntitySpawn,
   buildEntityDespawn,
   buildPlayerInput,
+  readPlayerInput,
   buildFacialPose,
   buildTimeOfDay,
   buildWeather,

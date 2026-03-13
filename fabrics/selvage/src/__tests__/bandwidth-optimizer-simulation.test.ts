@@ -150,8 +150,8 @@ describe('optimise — budget pressure', () => {
 
   it('priority order: critical > high > normal > low > cosmetic', () => {
     // Budget can hold exactly 3 items of 100 bytes each (budget = 300 bytes/tick)
-    // Use 3000 bps @ 10 Hz → 300 bytes/tick
-    const opt = makeOptimizer(3_000, 10);
+    // 24000 bps / (8 bits/byte * 10 Hz) = 300 bytes/tick
+    const opt = makeOptimizer(24_000, 10);
     opt.registerClient('client-1');
 
     const candidates: EntityUpdateCandidate[] = [

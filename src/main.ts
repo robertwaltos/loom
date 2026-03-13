@@ -225,27 +225,58 @@ async function main(): Promise<void> {
   });
   logger.info({}, 'Rendering fabric wired: BridgeService → WorldStateAdapter → gRPC');
 
-  // Input handler: relay UE5 player input into the game orchestrator
+  // Input handler: decode FlatBuffers input, map clientId → entityId, write ECS component
+  const { readPlayerInput } = await import('@loom/protocols-contracts');
   bridgeGrpc.registerInputHandler({
     onPlayerInput: (clientId, payload, sequenceNumber) => {
-      logger.info({ clientId, sequenceNumber }, 'UE5 player input received');
+      const conn = orchestrator.connections.getConnection(clientId);
+      if (!conn?.entityId) return;
+      const input = readPlayerInput(payload);
+      const actions = actionFlagsToNames(input.actionFlags);
+      orchestrator.core.entities.components.set(conn.entityId, 'player-input', {
+        moveDirection: { x: input.moveX, y: input.moveY, z: input.moveZ },
+        lookDirection: yawPitchToLookVector(input.yaw, input.pitch),
+        actions,
+        sequenceNumber,
+      });
     },
   });
 
-  // Negotiate handler: log when UE5 clients connect
+  // Negotiate handler: connect player, spawn entity, seed components
   bridgeGrpc.registerNegotiateHandler({
     onNegotiate: (clientId, manifest) => {
       logger.info(
         { clientId, fabricId: manifest.fabricId, tier: manifest.currentTier },
         'UE5 client negotiated',
       );
+      orchestrator.connections.connect({
+        connectionId: clientId,
+        playerId: `player-${clientId}`,
+        displayName: `Player-${clientId.slice(0, 8)}`,
+      });
+      const entityId = orchestrator.core.entities.spawn('player', 'default');
+      orchestrator.connections.markSpawned(clientId, entityId, 'default');
+      orchestrator.core.entities.components.set(entityId, 'transform', {
+        position: { x: 0, y: 0, z: 0 },
+        rotation: { x: 0, y: 0, z: 0, w: 1 },
+        scale: { x: 1, y: 1, z: 1 },
+      });
+      orchestrator.core.entities.components.set(entityId, 'movement', {
+        speed: 0, maxSpeed: 3.5, isGrounded: true, movementMode: 'walking',
+      });
+      logger.info({ clientId, entityId: entityId as string }, 'Player entity spawned for UE5 client');
     },
   });
 
-  // Disconnect handler: clean up when UE5 clients drop
+  // Disconnect handler: despawn entity, clean up connection
   bridgeGrpc.registerDisconnectHandler({
     onDisconnect: (clientId) => {
-      logger.info({ clientId }, 'UE5 client disconnected');
+      const conn = orchestrator.connections.getConnection(clientId);
+      if (conn?.entityId) {
+        orchestrator.core.entities.despawn(conn.entityId, 'destroyed');
+      }
+      orchestrator.connections.disconnect(clientId);
+      logger.info({ clientId }, 'UE5 client disconnected, entity despawned');
     },
   });
 
@@ -290,6 +321,35 @@ async function main(): Promise<void> {
 // ─── Wirable Rendering Fabric ───────────────────────────────────
 // Starts as no-op. Once wire() is called, routes BridgeService
 // visual updates through the worldStateAdapter → gRPC pipeline.
+
+// ─── Player Input Helpers ────────────────────────────────────────
+
+const ACTION_FLAG_MAP: ReadonlyArray<readonly [number, string]> = [
+  [1 << 0, 'jump'],
+  [1 << 1, 'sprint'],
+  [1 << 2, 'interact'],
+  [1 << 3, 'attack'],
+  [1 << 4, 'defend'],
+  [1 << 5, 'dodge'],
+];
+
+function actionFlagsToNames(flags: number): string[] {
+  const names: string[] = [];
+  for (const [bit, name] of ACTION_FLAG_MAP) {
+    if (flags & bit) names.push(name);
+  }
+  return names;
+}
+
+function yawPitchToLookVector(yaw: number, pitch: number): { x: number; y: number; z: number } {
+  const cy = Math.cos(yaw);
+  const sy = Math.sin(yaw);
+  const cp = Math.cos(pitch);
+  const sp = Math.sin(pitch);
+  return { x: cy * cp, y: sy * cp, z: sp };
+}
+
+// ─── Wirable Rendering Fabric ───────────────────────────────────
 
 interface RenderingFabricWiring {
   readonly onStatePush: (updates: ReadonlyArray<Record<string, unknown>>) => void;

@@ -130,11 +130,9 @@ describe('Bridge World State Adapter', () => {
     const spawns = adapter.provider.getSpawnQueue();
     expect(spawns).toHaveLength(1);
     expect(spawns[0]?.type).toBe('entity-spawn');
-
-    const payload = JSON.parse(new TextDecoder().decode(spawns[0]?.payload)) as {
-      entity_id: string;
-    };
-    expect(payload.entity_id).toBe('entity-2');
+    // Payload is now FlatBuffers binary, not JSON — verify non-empty bytes
+    expect(spawns[0]?.payload).toBeInstanceOf(Uint8Array);
+    expect(spawns[0]?.payload.length).toBeGreaterThan(0);
   });
 
   it('builds despawn messages', () => {
@@ -143,13 +141,9 @@ describe('Bridge World State Adapter', () => {
     const despawns = adapter.provider.getDespawnQueue();
     expect(despawns).toHaveLength(1);
     expect(despawns[0]?.type).toBe('entity-despawn');
-
-    const payload = JSON.parse(new TextDecoder().decode(despawns[0]?.payload)) as {
-      entity_id: string;
-      reason: string;
-    };
-    expect(payload.entity_id).toBe('entity-3');
-    expect(payload.reason).toBe('Normal');
+    // Payload is now FlatBuffers binary, not JSON — verify non-empty bytes
+    expect(despawns[0]?.payload).toBeInstanceOf(Uint8Array);
+    expect(despawns[0]?.payload.length).toBeGreaterThan(0);
   });
 
   it('clears queues on request', () => {

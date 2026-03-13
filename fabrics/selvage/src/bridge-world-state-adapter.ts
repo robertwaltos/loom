@@ -18,6 +18,17 @@ import type {
   ServerStreamMessage,
   BridgeGrpcClockPort,
 } from './bridge-grpc-server.js';
+import {
+  buildEntitySnapshot,
+  buildEntitySpawn,
+  buildEntityDespawn,
+  DespawnReason,
+} from '@loom/protocols-contracts';
+import type {
+  EntitySnapshotData,
+  EntitySpawnData,
+  TransformData,
+} from '@loom/protocols-contracts';
 
 // ── Types from bridge-service (structural compatibility) ─────────
 
@@ -71,63 +82,55 @@ interface AdapterState {
   sequence: number;
 }
 
-// ── Serialization helpers ────────────────────────────────────────
-// Encode payloads as JSON bytes. When the FlatBuffers codegen is
-// integrated into the tick path, swap these to use buildEntity*.
+// ── Serialization helpers (FlatBuffers binary on hot path) ───────
 
-const encoder = new TextEncoder();
+const IDENTITY_TRANSFORM: TransformData = {
+  position: { x: 0, y: 0, z: 0 },
+  rotation: { x: 0, y: 0, z: 0, w: 1 },
+  scale: { x: 1, y: 1, z: 1 },
+};
+
+function toTransformData(t: BridgeVisualUpdate['delta']['transform']): TransformData {
+  if (!t) return IDENTITY_TRANSFORM;
+  return {
+    position: { x: t.position.x, y: t.position.y, z: t.position.z },
+    rotation: { x: t.rotation.x, y: t.rotation.y, z: t.rotation.z, w: t.rotation.w },
+    scale: { x: t.scale.x, y: t.scale.y, z: t.scale.z },
+  };
+}
+
+function toSnapshotData(entityId: string, delta: BridgeVisualUpdate['delta']): EntitySnapshotData {
+  return {
+    entityId,
+    transform: toTransformData(delta.transform),
+    meshHash: delta.mesh?.contentHash ?? '',
+    animationClip: delta.animation?.clipName ?? '',
+    animationTime: delta.animation?.normalizedTime ?? 0,
+    animationBlend: delta.animation?.blendWeight ?? 1,
+    animationRate: delta.animation?.playbackRate ?? 1,
+    materialOverrides: [],
+    visibility: delta.visibility ?? true,
+    renderPriority: delta.renderPriority ?? 0,
+    lodBias: 1.0,
+  };
+}
 
 function encodeSnapshotPayload(update: BridgeVisualUpdate): Uint8Array {
-  const delta = update.delta;
-  return encoder.encode(JSON.stringify({
-    entity_id: update.entityId,
-    transform: delta.transform
-      ? {
-          px: delta.transform.position.x,
-          py: delta.transform.position.y,
-          pz: delta.transform.position.z,
-          rx: delta.transform.rotation.x,
-          ry: delta.transform.rotation.y,
-          rz: delta.transform.rotation.z,
-          rw: delta.transform.rotation.w,
-          sx: delta.transform.scale.x,
-          sy: delta.transform.scale.y,
-          sz: delta.transform.scale.z,
-        }
-      : undefined,
-    mesh_hash: delta.mesh?.contentHash,
-    animation_clip: delta.animation?.clipName,
-    animation_time: delta.animation?.normalizedTime,
-    animation_blend: delta.animation?.blendWeight,
-    animation_rate: delta.animation?.playbackRate,
-    visibility: delta.visibility,
-    lod_bias: delta.renderPriority,
-  }));
+  return buildEntitySnapshot(toSnapshotData(update.entityId, update.delta));
 }
 
 function encodeSpawnPayload(entityId: string, update: BridgeVisualUpdate): Uint8Array {
-  return encoder.encode(JSON.stringify({
-    entity_id: entityId,
+  const spawnData: EntitySpawnData = {
+    entityId,
+    initialState: toSnapshotData(entityId, update.delta),
     archetype: 'default',
-    initial_state: {
-      entity_id: entityId,
-      transform: update.delta.transform
-        ? {
-            px: update.delta.transform.position.x,
-            py: update.delta.transform.position.y,
-            pz: update.delta.transform.position.z,
-          }
-        : { px: 0, py: 0, pz: 0 },
-      mesh_hash: update.delta.mesh?.contentHash ?? '',
-    },
-  }));
+    metahumanPreset: '',
+  };
+  return buildEntitySpawn(spawnData);
 }
 
-function encodeDespawnPayload(entityId: string, reason: string): Uint8Array {
-  return encoder.encode(JSON.stringify({
-    entity_id: entityId,
-    reason,
-  }));
+function encodeDespawnPayload(entityId: string): Uint8Array {
+  return buildEntityDespawn({ entityId, reason: DespawnReason.Normal });
 }
 
 // ── Building ServerStreamMessages from visual updates ────────────
@@ -168,7 +171,7 @@ function buildDespawnMessage(
     type: 'entity-despawn',
     sequenceNumber: seq,
     timestamp: state.clock.nowMicroseconds(),
-    payload: encodeDespawnPayload(entityId, 'Normal'),
+    payload: encodeDespawnPayload(entityId),
   };
 }
 

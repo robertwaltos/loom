@@ -114,6 +114,8 @@ interface ConnectionState {
   readonly connectionId: string;
   /** Next sequence number to assign when sending. */
   nextSendSeq: number;
+  /** True once the first remote packet has been received. */
+  remoteHighestSeqInitialized: boolean;
   /** Highest sequence number received from remote. */
   remoteHighestSeq: number;
   /** Bitmask of received seqs below remoteHighestSeq. */
@@ -159,6 +161,7 @@ function makeConnection(connectionId: string): ConnectionState {
   return {
     connectionId,
     nextSendSeq: 0,
+    remoteHighestSeqInitialized: false,
     remoteHighestSeq: 0,
     remoteAckBitmask: 0,
     localAckSeq: 0,
@@ -238,19 +241,29 @@ export function createUdpProtocol(deps: UdpProtocolDeps): UdpProtocolService {
 
   function processIncomingReliableUnordered(conn: ConnectionState, packet: UdpPacket): void {
     const seq = packet.sequenceNumber;
+    const diff = conn.remoteHighestSeqInitialized ? seqDiff(seq, conn.remoteHighestSeq) : 1;
 
-    if (seqDiff(seq, conn.remoteHighestSeq) > 0) {
-      const gap = seqDiff(seq, conn.remoteHighestSeq);
-      const shifted = gap < 32 ? (conn.remoteAckBitmask << gap) : 0;
-      conn.remoteAckBitmask = (shifted | (1 << (gap - 1))) >>> 0;
+    if (diff > 0) {
+      if (conn.remoteHighestSeqInitialized) {
+        // Mark old highest in the bitmask before advancing
+        const gap = seqDiff(seq, conn.remoteHighestSeq);
+        const shifted = gap < 32 ? (conn.remoteAckBitmask << gap) : 0;
+        conn.remoteAckBitmask = (shifted | (1 << (gap - 1))) >>> 0;
+      } else {
+        conn.remoteAckBitmask = 0;
+        conn.remoteHighestSeqInitialized = true;
+      }
       conn.remoteHighestSeq = seq;
-    } else if (seqDiff(seq, conn.remoteHighestSeq) < 0) {
+    } else if (diff === 0) {
+      // Exact duplicate of the current highest — drop
+      return;
+    } else {
+      // Packet below current highest — duplicate check BEFORE marking received
       const offset = seqDiff(conn.remoteHighestSeq, seq) - 1;
       if (offset < SEQ_WINDOW) {
+        if ((conn.remoteAckBitmask >>> offset) & 1) return;
         conn.remoteAckBitmask = (conn.remoteAckBitmask | (1 << offset)) >>> 0;
       }
-      // Duplicate check
-      if ((conn.remoteAckBitmask >>> offset) & 1) return;
     }
 
     deliver(conn.connectionId, 'reliable-unordered', packet.payload);

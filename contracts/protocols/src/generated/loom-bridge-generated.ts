@@ -407,6 +407,53 @@ export function buildPlayerInput(data: PlayerInputData): Uint8Array {
   return builder.asUint8Array();
 }
 
+// ── PlayerInput Reader ──────────────────────────────────────────
+
+export function readPlayerInput(bytes: Uint8Array): PlayerInputData {
+  const bb = new ByteBuffer(bytes);
+  const rootOff = bb.readInt32(bb.position()) + bb.position();
+  const vtableOff = rootOff - bb.readInt32(rootOff);
+  const vtableSize = bb.readInt16(vtableOff);
+
+  const getField = (fieldIndex: number): number => {
+    const fieldOff = 4 + fieldIndex * 2;
+    if (fieldOff >= vtableSize) return 0;
+    return bb.readInt16(vtableOff + fieldOff);
+  };
+
+  // field 0: entity_id (string)
+  let entityId = '';
+  const f0 = getField(0);
+  if (f0) {
+    const strOff = rootOff + f0;
+    const strIndirect = strOff + bb.readInt32(strOff);
+    const strLen = bb.readInt32(strIndirect);
+    const strStart = strIndirect + 4;
+    const src = bb.bytes();
+    entityId = new TextDecoder().decode(src.subarray(strStart, strStart + strLen));
+  }
+
+  // fields 1-5: float32 values
+  const f1 = getField(1);
+  const moveX = f1 ? bb.readFloat32(rootOff + f1) : 0;
+  const f2 = getField(2);
+  const moveY = f2 ? bb.readFloat32(rootOff + f2) : 0;
+  const f3 = getField(3);
+  const moveZ = f3 ? bb.readFloat32(rootOff + f3) : 0;
+  const f4 = getField(4);
+  const yaw = f4 ? bb.readFloat32(rootOff + f4) : 0;
+  const f5 = getField(5);
+  const pitch = f5 ? bb.readFloat32(rootOff + f5) : 0;
+
+  // fields 6-7: int32 values
+  const f6 = getField(6);
+  const actionFlags = f6 ? bb.readInt32(rootOff + f6) : 0;
+  const f7 = getField(7);
+  const sequence = f7 ? bb.readInt32(rootOff + f7) : 0;
+
+  return { entityId, moveX, moveY, moveZ, yaw, pitch, actionFlags, sequence };
+}
+
 // ── EntityDespawn Builder ───────────────────────────────────────
 
 export function buildEntityDespawn(data: EntityDespawnData): Uint8Array {
