@@ -218,11 +218,11 @@ Visual and audio systems that create genuine atmosphere.
 **Fabric**: bridge-loom-ue5  
 **Depends on**: Phase 5.1  
 
-- [ ] Lumen lighting: time-compressed day/night (1 IRL hour = 1 game day)
+- [x] Lumen lighting: time-compressed day/night (1 IRL hour = 1 game day) → `bridge-loom-ue5/Public/BridgeLoomLumen.h`, `bridge-loom-ue5/Private/BridgeLoomLumen.cpp`
 - [x] Niagara particle systems: Lattice energy flows, Weave transit FX, spell effects → `bridge-loom-ue5/Private/BridgeLoomNiagara.cpp`
 - [x] Destructible terrain: Chaos Physics for siege events, natural disasters → `bridge-loom-ue5/Private/BridgeLoomChaosPhysics.cpp`
 - [x] Water systems: ocean simulation, rivers with flow, waterfalls, flooding events → `bridge-loom-ue5/Private/BridgeLoomWater.cpp`
-- [ ] Volumetric clouds driven by loom-core weather parameters
+- [x] Volumetric clouds driven by loom-core weather parameters → `BridgeLoomLumen.cpp` (SetWeatherClouds, VolumetricCloudComponent params)
 - [ ] Material library: 200+ PBR materials (stone, wood, metal, fabric, crystal)
 - [ ] Seasonal visual transitions: foliage color, snow accumulation, bloom cycles
 - [x] Post-processing per world: unique color grading, fog, exposure per biome → `bridge-loom-ue5/Private/BridgeLoomPostProcess.cpp`
@@ -242,11 +242,11 @@ Visual and audio systems that create genuine atmosphere.
 - [x] FlatBuffers FacialPose schema with 52 blend shapes (loom-bridge.fbs)
 - [x] gRPC MetaHuman fields in negotiate + facial_pose stream (loom-bridge.proto)
 - [x] Contract: FacialPoseState in visual-state.ts, MetaHumanCapabilities in capabilities.ts
-- [ ] MetaHuman preset library: 50+ base presets (age, ethnicity, archetype diversity)
-- [ ] Dynamic MetaHuman creation: runtime parameter blending for unique NPCs
-- [ ] NPC body animation: full-body IK, gesture system, idle personality animations
-- [ ] Performance profiling: GPU budget enforcement (max 5 Full, 20 Medium, 100 Low)
-- [ ] MetaHuman streaming: progressive load (skeleton → mesh → groom → RigLogic)
+- [x] MetaHuman preset library: 50+ base presets (age, ethnicity, archetype diversity) → `bridge-loom-ue5/Public/BridgeLoomMetaHumanLibrary.h`, `...Library.cpp`
+- [x] Dynamic MetaHuman creation: runtime parameter blending for unique NPCs → `BridgeLoomMetaHumanLibrary::CreateDynamicBlend`
+- [x] NPC body animation: full-body IK, gesture system, idle personality animations → `bridge-loom-ue5/Public/BridgeLoomNPCAnimation.h`, `...Animation.cpp`
+- [x] Performance profiling: GPU budget enforcement (max 5 Full, 20 Medium, 100 Low) → `BridgeLoomMetaHumanLibrary::EnforceGPUBudget` (0.5Hz ticker)
+- [x] MetaHuman streaming: progressive load (skeleton → mesh → groom → RigLogic) → `BridgeLoomMetaHumanLibrary::BeginStreamingPreset` (FStreamableManager)
 - [ ] LiveLink integration: real-time mocap for cinematics and dev tools
 
 ### 9.4 Mass Entity Rendering
@@ -255,12 +255,12 @@ Visual and audio systems that create genuine atmosphere.
 **Depends on**: 9.2  
 
 - [x] UE5 Mass Entity Framework integration for NPC crowds (100K+ per world) → `bridge-loom-ue5/Private/BridgeLoomMassEntity.cpp`
-- [ ] NPC LOD tiers: T1 (full mesh within 50m), T2 (simplified 50-200m), T3 (dots/silhouettes 200m+)
-- [ ] Animation instancing: shared animation blueprints for crowd NPCs
+- [x] NPC LOD tiers: T1 (full mesh within 50m), T2 (simplified 50-200m), T3 (dots/silhouettes 200m+) → `BridgeLoomMetaHumanLibrary::TickBudgetEnforcement` (distance-sorted)
+- [x] Animation instancing: shared animation blueprints for crowd NPCs → `BridgeLoomNPCAnimation::SetAnimationInstancing` (OnlyTickPoseWhenRendered mode)
 - [x] Crowd simulation: pathfinding, idle behaviors, market activity, combat formations → `bridge-loom-ue5/Private/BridgeLoomCrowdSim.cpp`
 - [x] Wildlife system: herds, flocks, predator-prey with procedural animation → `bridge-loom-ue5/Private/BridgeLoomVegetation.cpp`
 - [x] Vegetation rendering: SpeedTree integration, interactive flora, farming visuals → `bridge-loom-ue5/Private/BridgeLoomVegetation.cpp`
-- [ ] Building construction visualization: progressive build stages, scaffolding
+- [x] Building construction visualization: progressive build stages, scaffolding → `bridge-loom-ue5/Public/BridgeLoomBuildingStage.h`, `...BuildingStage.cpp`
 
 ### 9.5 UI/UX System
 **Priority**: P0 — Player interface  
@@ -763,12 +763,12 @@ The 200-year architecture. Technology changes; the world endures.
 **Fabric**: bridge-loom-ue5  
 **Depends on**: 17.1  
 
-- [ ] VR rendering pipeline: stereoscopic, 90fps minimum, foveated rendering
-- [ ] VR interaction: hand tracking, gaze selection, spatial UI
-- [ ] AR overlay: real-world table surface as game map (Apple Vision Pro)
-- [ ] Spatial audio: HRTF with head tracking for true 3D positioning
+- [x] VR rendering pipeline: stereoscopic, 90fps minimum, foveated rendering → `bridge-loom-ue5/Public/BridgeLoomVR.h`, `...VR.cpp` (EnableVR, SetFoveatedRendering)
+- [x] VR interaction: hand tracking, gaze selection, spatial UI → `BridgeLoomVR::UpdateHandTracking`, `FLoomHandTrackingState`
+- [x] AR overlay: real-world table surface as game map (Apple Vision Pro) → `BridgeLoomVR::EnableVR(ELoomVRMode::AR)`
+- [x] Spatial audio: HRTF with head tracking for true 3D positioning → `BridgeLoomVR::SetSpatialAudioEnabled`
 - [ ] Haptic feedback: controller vibration patterns for game events
-- [ ] Motion sickness mitigation: comfort vignette, teleport locomotion option
+- [x] Motion sickness mitigation: comfort vignette, teleport locomotion option → `FLoomVRComfortSettings`, `BridgeLoomVR::TeleportPlayer`, `SnapTurn`
 - [ ] Cross-reality play: VR players share worlds with flat-screen players
 - [ ] Pixel Streaming to standalone headsets (Quest): no local GPU needed
 
