@@ -33,6 +33,7 @@ export const NIGHT_END = 5;
 // ── Types ────────────────────────────────────────────────────────
 
 export type Month = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+export type MonthlyEventScopeId = 'all' | 'all-female-guides';
 
 export type TimeOfDay = 'dawn' | 'morning' | 'afternoon' | 'golden-hour' | 'evening' | 'night';
 
@@ -52,6 +53,7 @@ export interface MonthlyEvent {
   readonly month: Month;
   readonly name: string;
   readonly affectedWorldIds: ReadonlyArray<string>;
+  readonly affectedScopeIds: ReadonlyArray<MonthlyEventScopeId>;
   readonly newContent: string;
   readonly luminanceBoost: number;
 }
@@ -80,18 +82,18 @@ export interface SeasonalCalendarState {
 // ── Monthly Events Calendar ──────────────────────────────────────
 
 const MONTHLY_EVENTS: ReadonlyArray<MonthlyEvent> = [
-  { month: 1, name: 'New Year\'s Reset', affectedWorldIds: ['all'], newContent: 'The Fresh Start — all worlds gain +5 luminance. Fresh snow in Frost Peaks', luminanceBoost: 5 },
-  { month: 2, name: 'Inventor\'s Month', affectedWorldIds: ['savanna-workshop', 'code-canyon', 'circuit-marsh'], newContent: 'Spotlight on lesser-known inventors. New entries surface temporarily', luminanceBoost: 0 },
-  { month: 3, name: 'Women\'s History Month', affectedWorldIds: ['all-female-guides'], newContent: 'Special quests highlighting Hypatia, Curie, Hamilton, Earle, Maathai', luminanceBoost: 0 },
-  { month: 4, name: 'Earth Month', affectedWorldIds: ['cloud-kingdom', 'meadow-lab', 'tideline-bay'], newContent: 'Environmental entries spotlighted. Ocean cleanup quest in Tideline Bay', luminanceBoost: 0 },
-  { month: 5, name: 'Story Season', affectedWorldIds: ['story-tree', 'folklore-bazaar'], newContent: 'New stories added. Oral storytelling challenge', luminanceBoost: 0 },
-  { month: 6, name: 'Music Festival', affectedWorldIds: ['music-meadow'], newContent: 'Luna hosts a cross-world music festival. Characters contribute leitmotifs', luminanceBoost: 0 },
-  { month: 7, name: 'Explorer\'s Month', affectedWorldIds: ['map-room', 'discovery-trail'], newContent: 'New geography field trips unlocked temporarily', luminanceBoost: 0 },
-  { month: 8, name: 'Math Week', affectedWorldIds: ['number-garden', 'calculation-caves'], newContent: 'Math puzzles challenge across all STEM worlds', luminanceBoost: 0 },
-  { month: 9, name: 'Back to School', affectedWorldIds: ['great-archive'], newContent: 'The Librarian hosts a welcome back event. World state refreshes', luminanceBoost: 0 },
-  { month: 10, name: 'Curiosity Month', affectedWorldIds: ['all'], newContent: 'Mystery entries appear. Things science doesn\'t know yet', luminanceBoost: 0 },
-  { month: 11, name: 'Gratitude Season', affectedWorldIds: ['sharing-meadow', 'charity-harbor'], newContent: 'Community economics spotlight. Collaborative giving quest', luminanceBoost: 0 },
-  { month: 12, name: 'The Great Restoration', affectedWorldIds: ['all'], newContent: 'End-of-year event where all Kindlers collaborate to restore the most Faded world', luminanceBoost: 0 },
+  { month: 1, name: 'New Year\'s Reset', affectedWorldIds: [], affectedScopeIds: ['all'], newContent: 'The Fresh Start — all worlds gain +5 luminance. Fresh snow in Frost Peaks', luminanceBoost: 5 },
+  { month: 2, name: 'Inventor\'s Month', affectedWorldIds: ['savanna-workshop', 'code-canyon', 'circuit-marsh'], affectedScopeIds: [], newContent: 'Spotlight on lesser-known inventors. New entries surface temporarily', luminanceBoost: 0 },
+  { month: 3, name: 'Women\'s History Month', affectedWorldIds: [], affectedScopeIds: ['all-female-guides'], newContent: 'Special quests highlighting Hypatia, Curie, Hamilton, Earle, Maathai', luminanceBoost: 0 },
+  { month: 4, name: 'Earth Month', affectedWorldIds: ['cloud-kingdom', 'meadow-lab', 'tideline-bay'], affectedScopeIds: [], newContent: 'Environmental entries spotlighted. Ocean cleanup quest in Tideline Bay', luminanceBoost: 0 },
+  { month: 5, name: 'Story Season', affectedWorldIds: ['story-tree', 'folklore-bazaar'], affectedScopeIds: [], newContent: 'New stories added. Oral storytelling challenge', luminanceBoost: 0 },
+  { month: 6, name: 'Music Festival', affectedWorldIds: ['music-meadow'], affectedScopeIds: [], newContent: 'Luna hosts a cross-world music festival. Characters contribute leitmotifs', luminanceBoost: 0 },
+  { month: 7, name: 'Explorer\'s Month', affectedWorldIds: ['map-room', 'discovery-trail'], affectedScopeIds: [], newContent: 'New geography field trips unlocked temporarily', luminanceBoost: 0 },
+  { month: 8, name: 'Math Week', affectedWorldIds: ['number-garden', 'calculation-caves'], affectedScopeIds: [], newContent: 'Math puzzles challenge across all STEM worlds', luminanceBoost: 0 },
+  { month: 9, name: 'Back to School', affectedWorldIds: ['great-archive'], affectedScopeIds: [], newContent: 'The Librarian hosts a welcome back event. World state refreshes', luminanceBoost: 0 },
+  { month: 10, name: 'Curiosity Month', affectedWorldIds: [], affectedScopeIds: ['all'], newContent: 'Mystery entries appear. Things science doesn\'t know yet', luminanceBoost: 0 },
+  { month: 11, name: 'Gratitude Season', affectedWorldIds: ['sharing-meadow', 'charity-harbor'], affectedScopeIds: [], newContent: 'Community economics spotlight. Collaborative giving quest', luminanceBoost: 0 },
+  { month: 12, name: 'The Great Restoration', affectedWorldIds: [], affectedScopeIds: ['all'], newContent: 'End-of-year event where all Kindlers collaborate to restore the most Faded world', luminanceBoost: 0 },
 ];
 
 // ── Daily Rhythm Definitions ─────────────────────────────────────
@@ -152,7 +154,7 @@ function computeCalendarState(nowMs: number): SeasonalCalendarState {
 
 function isWorldAffected(worldId: string, month: Month): boolean {
   const event = getActiveEvent(month);
-  return event.affectedWorldIds.includes('all') || event.affectedWorldIds.includes(worldId);
+  return event.affectedScopeIds.includes('all') || event.affectedWorldIds.includes(worldId);
 }
 
 function getGreatRestorationTarget(worldLuminances: ReadonlyMap<string, number>): string | null {

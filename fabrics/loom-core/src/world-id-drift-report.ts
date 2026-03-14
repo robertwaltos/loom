@@ -18,6 +18,7 @@ import { createSeasonalContent } from './seasonal-content.js';
 import { createVisitorCharacters } from './visitor-characters.js';
 import { createWorldAmbientAtlas } from './world-ambient-atlas.js';
 import { createWorldFadingProfiles } from './world-fading-profiles.js';
+import { createWorldRestorationAtlas } from './world-restoration-atlas.js';
 import { createWorldSoundscapeProfiles } from './world-soundscape-profiles.js';
 import {
   WORLD_ID_RESOLUTION,
@@ -32,7 +33,7 @@ import { createThreadwayNetwork } from './threadway-network.js';
 
 // ── Constants ────────────────────────────────────────────────────
 
-export const TOTAL_WORLD_ID_DRIFT_REGISTRIES = 13;
+export const TOTAL_WORLD_ID_DRIFT_REGISTRIES = 14;
 
 // ── Types ────────────────────────────────────────────────────────
 
@@ -48,6 +49,7 @@ export type WorldIdDriftRegistryId =
   | 'visitor-characters'
   | 'world-ambient-atlas'
   | 'world-fading-profiles'
+  | 'world-restoration-atlas'
   | 'world-soundscape-profiles'
   | 'hidden-zones';
 
@@ -115,6 +117,7 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
   const visitors = createVisitorCharacters();
   const ambientAtlas = createWorldAmbientAtlas();
   const fadingProfiles = createWorldFadingProfiles();
+  const restorationAtlas = createWorldRestorationAtlas();
   const soundscapeProfiles = createWorldSoundscapeProfiles();
 
   const curriculumSeeds: ReadonlyArray<ReferenceSeed> = [
@@ -175,12 +178,14 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
   ]);
 
   const hiddenZoneSeeds = hiddenZones.getAllZones().flatMap((zone) => [
-    {
-      registryId: 'hidden-zones' as const,
-      recordId: zone.zoneId,
-      fieldPath: 'accessWorldId',
-      referencedWorldId: zone.accessWorldId,
-    },
+    ...(zone.accessWorldId === null
+      ? []
+      : [{
+          registryId: 'hidden-zones' as const,
+          recordId: zone.zoneId,
+          fieldPath: 'accessWorldId',
+          referencedWorldId: zone.accessWorldId,
+        }]),
     ...(zone.discoveryTrigger.requiredWorldId === null
       ? []
       : [{
@@ -253,6 +258,13 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
     referencedWorldId: profile.worldId,
   }));
 
+  const restorationSeeds: ReadonlyArray<ReferenceSeed> = restorationAtlas.all().map((profile) => ({
+    registryId: 'world-restoration-atlas' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
   return [
     ...CHARACTER_DOSSIERS.map((dossier) => ({
       registryId: 'character-dossiers' as const,
@@ -288,6 +300,7 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
     ...visitorSeeds,
     ...ambientSeeds,
     ...fadingSeeds,
+    ...restorationSeeds,
     ...soundscapeSeeds,
     ...hiddenZoneSeeds,
   ];
@@ -347,6 +360,7 @@ function buildRegistryProfiles(
     'visitor-characters',
     'world-ambient-atlas',
     'world-fading-profiles',
+    'world-restoration-atlas',
     'world-soundscape-profiles',
     'hidden-zones',
   ];

@@ -35,6 +35,8 @@ export type HiddenZoneId =
   | 'the-unfinished-room'
   | 'the-dream-archive';
 
+export type HiddenZoneAccessScopeId = 'any-threadway';
+
 export type DiscoveryTriggerType =
   | 'linger-in-threadway'
   | 'complete-all-entries'
@@ -70,7 +72,8 @@ export interface HiddenZoneDefinition {
   readonly location: string;
   readonly description: string;
   readonly narrativePurpose: string;
-  readonly accessWorldId: string;
+  readonly accessWorldId: string | null;
+  readonly accessScopeId: HiddenZoneAccessScopeId | null;
   readonly discoveryTrigger: DiscoveryTrigger;
   readonly sparkReward: number;
 }
@@ -99,7 +102,8 @@ const HIDDEN_ZONES: ReadonlyArray<HiddenZoneDefinition> = [
     location: 'Accessible from any Threadway by stopping in the middle',
     description: 'A liminal space where worlds overlap. The sky shows both worlds simultaneously. Sound blends. Colors merge.',
     narrativePurpose: 'Compass tells stories about connections between subjects that no one else knows',
-    accessWorldId: 'any-threadway',
+    accessWorldId: null,
+    accessScopeId: 'any-threadway',
     discoveryTrigger: {
       type: 'linger-in-threadway',
       description: 'Stand still in a Threadway for 10 seconds',
@@ -118,6 +122,7 @@ const HIDDEN_ZONES: ReadonlyArray<HiddenZoneDefinition> = [
     description: 'A garden where everything is negative — flowers grow downward, light comes from below, numbers are all negative.',
     narrativePurpose: 'Dottie says this is where subtraction lives. Cal has a secret cave entrance here.',
     accessWorldId: 'number-garden',
+    accessScopeId: null,
     discoveryTrigger: {
       type: 'complete-all-entries',
       description: 'Complete all Number Garden entries',
@@ -136,6 +141,7 @@ const HIDDEN_ZONES: ReadonlyArray<HiddenZoneDefinition> = [
     description: 'A massive whale skeleton that has become an underwater library. Barnacles have formed into text. Sea creatures live in chambers that were once organs.',
     narrativePurpose: 'Suki discovered it years ago and has never told anyone',
     accessWorldId: 'tideline-bay',
+    accessScopeId: null,
     discoveryTrigger: {
       type: 'follow-npc',
       description: 'Follow Hachi (the octopus) when he swims away during a lesson',
@@ -154,6 +160,7 @@ const HIDDEN_ZONES: ReadonlyArray<HiddenZoneDefinition> = [
     description: "Wren's 47th draft of their novel. The room literally isn't finished — walls fade into white, sentences trail off, characters are half-formed.",
     narrativePurpose: "A space about the courage to keep creating even when you're not done",
     accessWorldId: 'editing-tower',
+    accessScopeId: null,
     discoveryTrigger: {
       type: 'complete-entries-and-ask',
       description: 'Complete all Editing Tower entries and ask Wren about their novel',
@@ -172,6 +179,7 @@ const HIDDEN_ZONES: ReadonlyArray<HiddenZoneDefinition> = [
     description: "A visual representation of the dreaming brain. Memories from the child's own play sessions appear as floating fragments.",
     narrativePurpose: 'Hana explains that dreams are how your brain organizes what you\'ve learned',
     accessWorldId: 'wellness-garden',
+    accessScopeId: null,
     discoveryTrigger: {
       type: 'time-and-entry-count',
       description: 'Visit the Wellness Garden during the night cycle after completing at least 10 entries across different worlds',
