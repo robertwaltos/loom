@@ -9,7 +9,7 @@
 
 // ── Constants ────────────────────────────────────────────────────
 
-export const TOTAL_WORLD_SPECIAL_REFERENCES = 4;
+export const TOTAL_WORLD_SPECIAL_REFERENCES = 6;
 
 // ── Types ────────────────────────────────────────────────────────
 
@@ -55,6 +55,20 @@ export const WORLD_SPECIAL_REFERENCES: ReadonlyArray<WorldSpecialReference> = [
     kind: 'scope-selector',
     evidence:
       'Expansion Bible v5 uses all-world scope language for cross-world entities and artifacts that belong to no single numbered world.',
+  },
+  {
+    referenceId: 'all',
+    referenceName: 'All Worlds Event Scope',
+    kind: 'scope-selector',
+    evidence:
+      'The seasonal content calendar uses the selector "all" for global monthly events that intentionally affect every numbered world at once rather than a single destination world.',
+  },
+  {
+    referenceId: 'all-female-guides',
+    referenceName: 'All Female Guides Event Scope',
+    kind: 'scope-selector',
+    evidence:
+      'The seasonal content calendar uses "all-female-guides" as a scoped event target for Women\'s History Month, describing a guide cohort rather than a numbered world.',
   },
   {
     referenceId: 'any-threadway',

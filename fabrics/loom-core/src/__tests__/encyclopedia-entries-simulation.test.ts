@@ -70,6 +70,15 @@ describe('EncyclopediaRegistry — simulation', () => {
       expect(registry.getEntriesByWorld('tax-office').map((entry) => entry.entryId)).toContain(
         'tot-public-goods',
       );
+      expect(registry.getEntriesByWorld('greenhouse-spiral').map((entry) => entry.entryId)).toEqual(
+        expect.arrayContaining(['sl-periodic-table', 'sl-photosynthesis']),
+      );
+      expect(registry.getEntriesByWorld('body-atlas').map((entry) => entry.entryId)).toEqual(
+        expect.arrayContaining(['sl-dna', 'sl-germ-theory']),
+      );
+      expect(registry.getEntriesByWorld('magnet-hills').map((entry) => entry.entryId)).toContain(
+        'sl-gravity',
+      );
     });
   });
 

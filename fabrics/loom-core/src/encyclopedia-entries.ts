@@ -153,7 +153,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
 
   {
     entryId: 'sl-periodic-table',
-    worldId: 'science-lab',
+    worldId: 'greenhouse-spiral',
     domain: 'STEM',
     title: 'Periodic Table of Elements',
     type: 'invention',
@@ -169,7 +169,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
   },
   {
     entryId: 'sl-dna',
-    worldId: 'science-lab',
+    worldId: 'body-atlas',
     domain: 'STEM',
     title: 'DNA Double Helix Structure',
     type: 'scientific_principle',
@@ -185,7 +185,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
   },
   {
     entryId: 'sl-gravity',
-    worldId: 'science-lab',
+    worldId: 'magnet-hills',
     domain: 'STEM',
     title: 'Universal Gravitation',
     type: 'scientific_principle',
@@ -201,7 +201,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
   },
   {
     entryId: 'sl-photosynthesis',
-    worldId: 'science-lab',
+    worldId: 'greenhouse-spiral',
     domain: 'STEM',
     title: 'Photosynthesis',
     type: 'scientific_principle',
@@ -217,7 +217,7 @@ export const ENCYCLOPEDIA_ENTRIES: ReadonlyArray<EncyclopediaEntry> = [
   },
   {
     entryId: 'sl-germ-theory',
-    worldId: 'science-lab',
+    worldId: 'body-atlas',
     domain: 'STEM',
     title: 'Germ Theory of Disease',
     type: 'scientific_principle',

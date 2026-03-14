@@ -90,6 +90,14 @@ describe('mini-games-registry simulation', () => {
     expect(byWorld.every((g) => g.worldId === worldId)).toBe(true);
   });
 
+  it('exposes Prototype Sprint under the canonical entrepreneur-workshop world id', () => {
+    const r = makeRegistry();
+    const prototypeSprint = r.getGameById('prototype-sprint');
+    expect(prototypeSprint).toBeDefined();
+    expect(prototypeSprint!.worldId).toBe('entrepreneur-workshop');
+    expect(r.getGamesByWorld('entrepreneur-workshop').some((game) => game.gameId === 'prototype-sprint')).toBe(true);
+  });
+
   // ── computeSparkGain ─────────────────────────────────────────────
 
   describe('computeSparkGain', () => {

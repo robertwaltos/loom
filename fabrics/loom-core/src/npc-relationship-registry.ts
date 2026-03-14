@@ -385,7 +385,7 @@ export const CHARACTER_RELATIONSHIPS: ReadonlyArray<CharacterRelationship> = [
   {
     relationshipId: 'jin-ho-priya',
     characterA: 'Jin-ho',
-    characterAWorldId: 'garden-of-growth',
+    characterAWorldId: 'investment-greenhouse',
     characterB: 'Priya',
     characterBWorldId: 'market-square',
     nature: 'mutual_students',
@@ -406,9 +406,9 @@ export const CHARACTER_RELATIONSHIPS: ReadonlyArray<CharacterRelationship> = [
   {
     relationshipId: 'lena-dr-obi',
     characterA: 'Lena',
-    characterAWorldId: 'science-lab',
+    characterAWorldId: 'magnet-hills',
     characterB: 'Dr. Obi',
-    characterBWorldId: 'meadow-laboratory',
+    characterBWorldId: 'body-atlas',
     nature: 'intellectual_sparring_partners',
     coreTension:
       'Lena communicates science with acknowledged uncertainty ("current evidence suggests…"); ' +

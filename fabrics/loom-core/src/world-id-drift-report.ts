@@ -11,8 +11,14 @@ import { CHARACTER_DOSSIERS } from './character-dossiers.js';
 import { createCurriculumMap } from './curriculum-map.js';
 import { ENCYCLOPEDIA_ENTRIES } from './encyclopedia-entries.js';
 import { createHiddenZones } from './hidden-zones.js';
+import { createMiniGamesRegistry } from './mini-games-registry.js';
 import { CHARACTER_RELATIONSHIPS } from './npc-relationship-registry.js';
 import { createQuestChains } from './quest-chains.js';
+import { createSeasonalContent } from './seasonal-content.js';
+import { createVisitorCharacters } from './visitor-characters.js';
+import { createWorldAmbientAtlas } from './world-ambient-atlas.js';
+import { createWorldFadingProfiles } from './world-fading-profiles.js';
+import { createWorldSoundscapeProfiles } from './world-soundscape-profiles.js';
 import {
   WORLD_ID_RESOLUTION,
   type WorldIdResolutionPort,
@@ -26,7 +32,7 @@ import { createThreadwayNetwork } from './threadway-network.js';
 
 // ── Constants ────────────────────────────────────────────────────
 
-export const TOTAL_WORLD_ID_DRIFT_REGISTRIES = 7;
+export const TOTAL_WORLD_ID_DRIFT_REGISTRIES = 13;
 
 // ── Types ────────────────────────────────────────────────────────
 
@@ -34,9 +40,15 @@ export type WorldIdDriftRegistryId =
   | 'character-dossiers'
   | 'curriculum-map'
   | 'encyclopedia-entries'
+  | 'mini-games-registry'
   | 'npc-relationship-registry'
   | 'quest-chains'
+  | 'seasonal-content'
   | 'threadway-network'
+  | 'visitor-characters'
+  | 'world-ambient-atlas'
+  | 'world-fading-profiles'
+  | 'world-soundscape-profiles'
   | 'hidden-zones';
 
 export type WorldIdDriftStatus =
@@ -98,6 +110,12 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
   const quests = createQuestChains();
   const threadways = createThreadwayNetwork();
   const hiddenZones = createHiddenZones();
+  const miniGames = createMiniGamesRegistry();
+  const seasonalContent = createSeasonalContent();
+  const visitors = createVisitorCharacters();
+  const ambientAtlas = createWorldAmbientAtlas();
+  const fadingProfiles = createWorldFadingProfiles();
+  const soundscapeProfiles = createWorldSoundscapeProfiles();
 
   const curriculumSeeds: ReadonlyArray<ReferenceSeed> = [
     ...curriculum.getSTEMAlignments().map((alignment) => ({
@@ -173,6 +191,68 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
         }]),
   ]);
 
+  const miniGameSeeds: ReadonlyArray<ReferenceSeed> = miniGames.getAllGames().map((game) => ({
+    registryId: 'mini-games-registry' as const,
+    recordId: game.gameId,
+    fieldPath: 'worldId',
+    referencedWorldId: game.worldId,
+  }));
+
+  const visitorSeeds: ReadonlyArray<ReferenceSeed> = [
+    ...visitors.getRecurringVisitors().flatMap((visitor) =>
+      visitor.worldIds.map((worldId, index) => ({
+        registryId: 'visitor-characters' as const,
+        recordId: visitor.characterId,
+        fieldPath: `worldIds[${index}]`,
+        referencedWorldId: worldId,
+      })),
+    ),
+    ...visitors.getLegendaryFigures().map((figure) => ({
+      registryId: 'visitor-characters' as const,
+      recordId: figure.characterId,
+      fieldPath: 'worldId',
+      referencedWorldId: figure.worldId,
+    })),
+  ];
+
+  const seasonalSeeds: ReadonlyArray<ReferenceSeed> = [
+    ...seasonalContent.getMonthlyEvents().flatMap((event) =>
+      event.affectedWorldIds.map((worldId, index) => ({
+        registryId: 'seasonal-content' as const,
+        recordId: `${event.month}-${event.name}`,
+        fieldPath: `affectedWorldIds[${index}]`,
+        referencedWorldId: worldId,
+      })),
+    ),
+    ...seasonalContent.getAllTimeLockedContent().map((content) => ({
+      registryId: 'seasonal-content' as const,
+      recordId: content.contentId,
+      fieldPath: 'worldId',
+      referencedWorldId: content.worldId,
+    })),
+  ];
+
+  const soundscapeSeeds: ReadonlyArray<ReferenceSeed> = soundscapeProfiles.all().map((profile) => ({
+    registryId: 'world-soundscape-profiles' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
+  const fadingSeeds: ReadonlyArray<ReferenceSeed> = fadingProfiles.all().map((profile) => ({
+    registryId: 'world-fading-profiles' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
+  const ambientSeeds: ReadonlyArray<ReferenceSeed> = ambientAtlas.all().map((profile) => ({
+    registryId: 'world-ambient-atlas' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
   return [
     ...CHARACTER_DOSSIERS.map((dossier) => ({
       registryId: 'character-dossiers' as const,
@@ -187,6 +267,7 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
       fieldPath: 'worldId',
       referencedWorldId: entry.worldId,
     })),
+    ...miniGameSeeds,
     ...CHARACTER_RELATIONSHIPS.flatMap((relationship) => [
       {
         registryId: 'npc-relationship-registry' as const,
@@ -202,7 +283,12 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
       },
     ]),
     ...questSeeds,
+    ...seasonalSeeds,
     ...threadwaySeeds,
+    ...visitorSeeds,
+    ...ambientSeeds,
+    ...fadingSeeds,
+    ...soundscapeSeeds,
     ...hiddenZoneSeeds,
   ];
 }
@@ -253,9 +339,15 @@ function buildRegistryProfiles(
     'character-dossiers',
     'curriculum-map',
     'encyclopedia-entries',
+    'mini-games-registry',
     'npc-relationship-registry',
     'quest-chains',
+    'seasonal-content',
     'threadway-network',
+    'visitor-characters',
+    'world-ambient-atlas',
+    'world-fading-profiles',
+    'world-soundscape-profiles',
     'hidden-zones',
   ];
 

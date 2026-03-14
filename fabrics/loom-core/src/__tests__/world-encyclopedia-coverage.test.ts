@@ -16,8 +16,8 @@ describe('createWorldEncyclopediaCoverage', () => {
     expect(TOTAL_WORLD_ENCYCLOPEDIA_COVERAGE_PROFILES).toBe(50);
   });
 
-  it('exports TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS = 6', () => {
-    expect(TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS).toBe(6);
+  it('exports TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS = 2', () => {
+    expect(TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS).toBe(2);
   });
 
   it('returns 50 profiles via totalProfiles', () => {
@@ -29,10 +29,10 @@ describe('createWorldEncyclopediaCoverage', () => {
     expect(coverage.all()).toBe(WORLD_ENCYCLOPEDIA_COVERAGE);
   });
 
-  it('tracks 6 legacy encyclopedia world IDs', () => {
-    expect(coverage.totalLegacyWorldIds).toBe(6);
+  it('tracks 2 legacy encyclopedia world IDs', () => {
+    expect(coverage.totalLegacyWorldIds).toBe(2);
     expect(coverage.getLegacyWorldCoverage()).toBe(LEGACY_ENCYCLOPEDIA_WORLD_COVERAGE);
-    expect(coverage.getLegacyWorldCoverage()).toHaveLength(6);
+    expect(coverage.getLegacyWorldCoverage()).toHaveLength(2);
   });
 
   it('exposes the declared-vs-actual encyclopedia total drift', () => {
@@ -57,12 +57,12 @@ describe('createWorldEncyclopediaCoverage', () => {
   });
 
   describe('direct coverage split', () => {
-    it('finds 25 current worlds with direct encyclopedia entries', () => {
-      expect(coverage.getProfilesWithDirectEntries()).toHaveLength(25);
+    it('finds 30 current worlds with direct encyclopedia entries', () => {
+      expect(coverage.getProfilesWithDirectEntries()).toHaveLength(30);
     });
 
-    it('finds 25 current worlds without direct encyclopedia entries', () => {
-      expect(coverage.getProfilesWithoutDirectEntries()).toHaveLength(25);
+    it('finds 20 current worlds without direct encyclopedia entries', () => {
+      expect(coverage.getProfilesWithoutDirectEntries()).toHaveLength(20);
     });
 
     it('accounts for all encyclopedia entries across direct and legacy coverage', () => {
@@ -97,17 +97,21 @@ describe('createWorldEncyclopediaCoverage', () => {
       expect(profile.directEntryCount).toBe(0);
       expect(profile.coverageStatus).toBe('no-direct-entries');
     });
+
+    it('greenhouse-spiral, body-atlas, and magnet-hills now absorb the former science-lab entries directly', () => {
+      expect(coverage.getProfile('greenhouse-spiral')?.directEntryIds).toEqual(
+        expect.arrayContaining(['sl-periodic-table', 'sl-photosynthesis']),
+      );
+      expect(coverage.getProfile('body-atlas')?.directEntryIds).toEqual(
+        expect.arrayContaining(['sl-dna', 'sl-germ-theory']),
+      );
+      expect(coverage.getProfile('magnet-hills')?.directEntryIds).toContain('sl-gravity');
+    });
   });
 
   describe('legacy coverage', () => {
-    it('tracks meadow-laboratory as a legacy encyclopedia world with 2 entries', () => {
-      const legacy = coverage.getLegacyWorldCoverage().find((profile) => profile.legacyWorldId === 'meadow-laboratory');
-      expect(legacy).toBeDefined();
-      expect(legacy!.totalEntries).toBe(2);
-    });
-
-    it('tracks tax-office-tower as a legacy encyclopedia world with 1 entry', () => {
-      const legacy = coverage.getLegacyWorldCoverage().find((profile) => profile.legacyWorldId === 'tax-office-tower');
+    it('tracks forgetting-well as a legacy encyclopedia world with 1 entry', () => {
+      const legacy = coverage.getLegacyWorldCoverage().find((profile) => profile.legacyWorldId === 'forgetting-well');
       expect(legacy).toBeDefined();
       expect(legacy!.totalEntries).toBe(1);
     });

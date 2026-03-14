@@ -10,8 +10,8 @@ describe('createWorldSpecialReferenceRegistry', () => {
   const registry = createWorldSpecialReferenceRegistry();
 
   it('exports the supported special reference total', () => {
-    expect(TOTAL_WORLD_SPECIAL_REFERENCES).toBe(4);
-    expect(registry.totalReferences).toBe(4);
+    expect(TOTAL_WORLD_SPECIAL_REFERENCES).toBe(6);
+    expect(registry.totalReferences).toBe(6);
   });
 
   it('reuses the shared singleton reference dataset', () => {
@@ -32,6 +32,8 @@ describe('createWorldSpecialReferenceRegistry', () => {
   it('recognizes threadway and scope selectors as intentional non-world references', () => {
     expect(registry.getReference('threadway-network')!.kind).toBe('network-space');
     expect(registry.getReference('all-worlds')!.kind).toBe('scope-selector');
+    expect(registry.getReference('all')!.kind).toBe('scope-selector');
+    expect(registry.getReference('all-female-guides')!.kind).toBe('scope-selector');
     expect(registry.getReference('any-threadway')!.kind).toBe('scope-selector');
   });
 
