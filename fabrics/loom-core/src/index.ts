@@ -1652,3 +1652,12 @@ export type {
   ApiCompatibilityResult,
   PluginSystemStats,
 } from './plugin-system.js';
+
+// ── Modding SDK (Phase 16.4) ──────────────────────────────────────────────────
+export {
+  createModRegistry,
+  ModHook,
+  CURRENT_API_VERSION,
+} from './modding-sdk.js';
+export type { ModContext, HookHandler, ModManifest, ModRegistry } from './modding-sdk.js';
+
