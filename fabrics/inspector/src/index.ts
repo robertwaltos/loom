@@ -497,3 +497,16 @@ export type {
   SurveyResults,
   DifficultyRecommendation,
 } from './player-analytics.js';
+
+// ── Phase 22: Error Tracker ──────────────────────────────────────
+export { createErrorTracker, createHttpErrorReporter } from './error-tracker.js';
+export type {
+  ErrorSeverity,
+  Breadcrumb,
+  ErrorContext,
+  ErrorEvent,
+  ErrorReporter,
+  ErrorTrackerConfig,
+  ErrorTracker,
+  ErrorTrackerStats,
+} from './error-tracker.js';

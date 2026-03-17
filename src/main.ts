@@ -122,6 +122,10 @@ async function main(): Promise<void> {
   });
   logger.info({}, 'Game orchestrator assembled');
 
+  // 5b. Seed all 9 canonical worlds at boot
+  const { seedAllWorlds } = await import('./world-seed-boot.js');
+  seedAllWorlds(orchestrator, logger);
+
   // 6. Selvage — Fastify WebSocket transport
   const { createFastifyTransport } = await import('@loom/selvage');
   const { createAuthRoutes } = await import('./routes/auth.js');

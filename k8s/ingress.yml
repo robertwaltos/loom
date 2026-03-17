@@ -1,0 +1,117 @@
+# =============================================================================
+# Koydo NGINX Ingress
+#
+# Requires: ingress-nginx controller (kubernetes/ingress-nginx)
+# TLS:      koydo-tls Secret must exist in each namespace below.
+#           Provision with cert-manager or copy with:
+#             kubectl create secret tls koydo-tls \
+#               --cert=tls.crt --key=tls.key \
+#               -n loom
+#             kubectl create secret tls koydo-tls \
+#               --cert=tls.crt --key=tls.key \
+#               -n koydo-monitoring
+#
+# Apply: kubectl apply -f k8s/ingress.yml
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Game traffic — koydo.gg  (namespace: loom)
+# Routes:
+#   /api/nakama  → nakama:7350   (REST + gRPC-web)
+#   /            → loom-core:8080 (WebSocket + HTTP)
+# -----------------------------------------------------------------------------
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: koydo-game
+  namespace: loom
+  labels:
+    app.kubernetes.io/name: koydo-game-ingress
+    app.kubernetes.io/component: ingress
+    app.kubernetes.io/part-of: koydo
+  annotations:
+    # Keep WebSocket / long-poll connections alive
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "10"
+    # Allow large payloads (world-state snapshots, asset manifests)
+    nginx.ingress.kubernetes.io/proxy-body-size: "64m"
+    # WebSocket upgrade support
+    nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    # HTTPS redirect
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # Rate-limit public endpoints (override per-path as needed)
+    nginx.ingress.kubernetes.io/limit-rps: "100"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - koydo.gg
+      secretName: koydo-tls
+  rules:
+    - host: koydo.gg
+      http:
+        paths:
+          # Nakama REST/gRPC-web API — must come before the catch-all /
+          - path: /api/nakama
+            pathType: Prefix
+            backend:
+              service:
+                name: nakama
+                port:
+                  number: 7350
+
+          # Loom core — WebSocket game server + HTTP
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: loom-core
+                port:
+                  number: 8080
+
+---
+# -----------------------------------------------------------------------------
+# Grafana — grafana.koydo.gg  (namespace: koydo-monitoring)
+# Internal-only is recommended; restrict source IPs via nginx annotations if
+# this host should not be publicly routable.
+# -----------------------------------------------------------------------------
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: koydo-grafana
+  namespace: koydo-monitoring
+  labels:
+    app.kubernetes.io/name: koydo-grafana-ingress
+    app.kubernetes.io/component: ingress
+    app.kubernetes.io/part-of: koydo-monitoring
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "10"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # Restrict Grafana to internal CIDR ranges — adjust to your VPN / bastion
+    # nginx.ingress.kubernetes.io/whitelist-source-range: "10.0.0.0/8,172.16.0.0/12"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - grafana.koydo.gg
+      secretName: koydo-tls
+  rules:
+    - host: grafana.koydo.gg
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: grafana
+                port:
+                  number: 3000
