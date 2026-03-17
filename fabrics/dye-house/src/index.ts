@@ -612,3 +612,15 @@ export type {
   CulturalRuleSet,
   FalsePositiveMetrics,
 } from './content-moderation.js';
+
+// ── Phase 22: Anti-Cheat System ─────────────────────────────────
+
+export { createAntiCheatSystem, DEFAULT_ANTI_CHEAT_CONFIG } from './anti-cheat.js';
+export type {
+  ActionResult as AntiCheatActionResult,
+  PenaltyTier,
+  ViolationRecord,
+  PlayerViolationSummary,
+  AntiCheatConfig,
+  AntiCheatSystem,
+} from './anti-cheat.js';

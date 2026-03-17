@@ -75,7 +75,7 @@ export function seedBootstrapWorld(
   logger: MinimalLogger,
   worldId: string = DEFAULT_BOOT_WORLD_ID,
 ): void {
-  const result = orchestrator.seedWorldById(worldId);
+  const result = orchestrator.seedWorld({ worldId, spawnPoints: [], npcs: [], objects: [] });
   if (result.errors.length > 0) {
     throw new Error(`Bootstrap world ${worldId} seeded with errors: ${result.errors.join('; ')}`);
   }
@@ -132,7 +132,7 @@ export function ensurePlayerSpawnPoint(
     return existing;
   }
 
-  const result = orchestrator.seedWorldById(worldId);
+  const result = orchestrator.seedWorld({ worldId, spawnPoints: [], npcs: [], objects: [] });
   if (result.errors.length > 0) {
     throw new Error(`World ${worldId} seeded with errors: ${result.errors.join('; ')}`);
   }

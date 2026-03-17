@@ -171,8 +171,6 @@ export function createBridgeWorldStateProvider(
     getSpawnQueue: () => [...spawnQueue],
     getDespawnQueue: () => [...despawnQueue],
     getTimeWeather: () => createTimeWeatherMessage(clock, sequence),
-    getTimeWeatherUpdates: () =>
-      Array.from(worldIds, (worldId) => createTimeWeatherMessage(clock, sequence, worldId)),
     getFacialPoseUpdates: () => [],
     clearQueues: () => {
       spawnQueue.length = 0;

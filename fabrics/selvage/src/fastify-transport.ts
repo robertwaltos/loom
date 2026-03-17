@@ -14,9 +14,19 @@ import type {
   TransportHandlers,
 } from './network-server.js';
 
+// Minimal Fastify app interface exposed to route registrars
+export interface FastifyAppLike {
+  get(path: string, handler: (req: unknown, reply: unknown) => Promise<unknown> | unknown): void;
+  post(path: string, handler: (req: unknown, reply: unknown) => Promise<unknown> | unknown): void;
+  delete(path: string, handler: (req: unknown, reply: unknown) => Promise<unknown> | unknown): void;
+}
+
+export type RouteRegistrar = (app: FastifyAppLike) => void | Promise<void>;
+
 interface FastifyTransportConfig {
   readonly host: string;
   readonly port: number;
+  readonly routeRegistrars?: readonly RouteRegistrar[];
 }
 
 interface FastifyTransportState {
@@ -93,6 +103,12 @@ async function bootServer(state: FastifyTransportState): Promise<string> {
   });
 
   app.get('/health', async () => ({ status: 'ok' }));
+
+  if (state.config.routeRegistrars) {
+    for (const registrar of state.config.routeRegistrars) {
+      await registrar(app as unknown as FastifyAppLike);
+    }
+  }
 
   const address = await app.listen({
     host: state.config.host,

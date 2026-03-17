@@ -635,6 +635,7 @@ export type {
 // ── Phase 1 Infrastructure Adapters ─────────────────────────────
 
 export { createFastifyTransport } from './fastify-transport.js';
+export type { FastifyAppLike, RouteRegistrar } from './fastify-transport.js';
 
 // ── Phase 2 Infrastructure Adapters ─────────────────────────────
 

@@ -917,3 +917,114 @@ Eight Unreal Engine 5 C++ components bridging the next tier of core gameplay Typ
 | Year 5-8 | Sapient NPC emergence (procedural generation + Tier 4 agents) |
 | Year 5-8 | Neural interface experimentation (EEG input, premium tier) |
 | Year 8-10 | Compression approaches 1:1 (Phase V), history and real time converge |
+
+---
+
+## Phase 22: Launch Infrastructure (Internal Alpha → Open Beta)
+
+Operational infrastructure enabling real players to connect and ensuring legal compliance for public launch.
+
+### 22.1 Server Infrastructure
+
+**Priority**: P0 — Players cannot connect without this  
+**Completed**: March 2026
+
+- [x] `nakama.yml` — Nakama 3.22 server config (ports 7349/7350/7351, session tokens, runtime, metrics)
+- [x] `docker-compose.yml` updated — Nakama service, gRPC port 50051, NAKAMA_* env vars
+- [x] `k8s/config.yml` — ConfigMap templates (loom-config + nakama-config)
+- [x] `k8s/secrets.yml` — Secret templates (loom-secrets + nakama-secrets)
+- [x] `k8s/deployment.yml` updated — gRPC containerPort 50051
+- [x] `k8s/nakama.yml` — K8s Nakama Deployment + Service (init-container migration, health probes)
+- [x] `k8s/postgres.yml` — K8s PostgreSQL StatefulSet + PVC + Service (postgres:16-alpine, 20Gi)
+- [x] `k8s/redis.yml` — K8s Redis StatefulSet + PVC + Service (redis:7-alpine, 5Gi, LRU eviction)
+- [x] `.env.example` updated — All LOOM_*, NAKAMA_*, PG_*, REDIS_*, support vars documented
+- [x] `.github/workflows/docker-build.yml` — Docker build+push to GHCR, staging auto-deploy
+
+### 22.2 Player Account System
+
+**Priority**: P0 — Players cannot register without this  
+**Completed**: March 2026
+
+- [x] `src/routes/auth.ts` — Player registration + login + session endpoints
+  - `POST /v1/auth/register` — Creates Nakama account, returns JWT
+  - `POST /v1/auth/login` — Authenticates, returns JWT
+  - `GET /v1/auth/me` — Returns session info from Nakama
+- [x] `fabrics/selvage/src/fastify-transport.ts` — Extended with `routeRegistrars` hook for plugin registration
+- [x] `src/main.ts` — Auth routes wired into Fastify transport
+
+### 22.3 Anti-Cheat and Moderation
+
+**Priority**: P0 (Open Beta) — Required before public launch  
+**Completed**: March 2026
+
+- [x] `fabrics/dye-house/src/anti-cheat.ts` — Anti-cheat system scaffold
+  - Speed hack detection (max 12 units/s)
+  - Teleport detection (threshold 100 units)
+  - Rapid-fire detection (max 20 actions/s)
+  - Sequence replay detection
+  - Escalating penalties: warn (score ≥3) → kick (≥7) → 24h ban (≥15)
+  - Per-player audit log (200 entries)
+- [x] `fabrics/dye-house/src/chronicle-moderation.ts` — Chronicle content review (ported from upstream)
+- [x] `fabrics/dye-house/src/review-queue.ts` — Moderation queue system (ported from upstream)
+- [x] `tools/support/src/support-webhook.ts` — Player support system
+  - `POST /v1/support/report` — Submit a player report (7 categories)
+  - `GET /v1/support/ticket/:id` — Get ticket status
+  - `POST /v1/support/ban` — Internal ban action (shared-secret auth)
+  - `POST /v1/support/mute` — Internal mute action (shared-secret auth)
+  - Discord webhook notifications for new reports
+
+### 22.4 Legal and Compliance
+
+**Priority**: P0 (Open Beta) — Required before public launch  
+**Completed**: March 2026
+
+- [x] `docs/legal/tos.md` — Terms of Service (eligibility, Permanence Covenant, economy, IP)
+- [x] `docs/legal/privacy.md` — Privacy Policy (GDPR/CCPA/COPPA compliant template)
+- [ ] Age verification integration (Veriff/Onfido — external provider required)
+- [ ] DPAs signed with Nakama, Stripe, Pagerduty
+- [ ] External penetration test (contracted third party)
+- [ ] Bug bounty programme (HackerOne or similar)
+- [ ] EU/UK data representative appointed
+
+### 22.5 Upstream Sync (Wave GGGG+HHHH)
+
+**Priority**: P1 — Keeps Koydo fork current with loom engine  
+**Completed**: March 2026
+
+- [x] 30 nakama-fabric modules: launch-sequence, player-initiation, pre-launch-witness, game-state-aggregator, subscription-lifecycle, assembly systems, dynasty governance, economy engine, sovereignty ledger
+- [x] Inspector modules: health-check-service, permanence-covenant, metrics-endpoint, incident-response-service, covenant-status-api, civilisation-dashboard
+- [x] Selvage APIs: historian-api, galaxy-map-api, discord-stats-api, lore-compendium-api, witness-api
+- [x] Dye-house: chronicle-moderation, review-queue
+- [x] Contracts: binary-codec, gameplay-components, character-appearance
+- [x] Bootstrap: src/bootstrap-world.ts, src/main-bootstrap.ts, src/bridge-world-state-provider.ts
+- [x] Website: website/index.html, website/covenant.html
+
+### 22.6 Operations
+
+**Priority**: P1 — Engineers need to operate the system  
+**Completed**: March 2026
+
+- [x] `docs/LAUNCH-RUNBOOK.md` — Complete Phase 0→1→2 launch guide
+  - Prerequisites and exact commands for each phase
+  - Rollback procedures
+  - Environment variable reference
+  - Health check endpoint catalogue
+- [x] Updated `docs/NEXT-STEPS.md` — Phase 22 launch infrastructure documented
+
+---
+
+## What Remains for Full Launch (Phase 3)
+
+| Item | Status | Owner |
+|------|--------|-------|
+| Age verification integration | ⏳ Need external provider | Ops |
+| DPAs with processors | ⏳ Legal negotiation | Legal |
+| External penetration test | ⏳ Contracted third party | Security |
+| Bug bounty programme | ⏳ HackerOne setup | Security |
+| EU/UK data representative | ⏳ Legal appointment | Legal |
+| Production Kubernetes cluster | ⏳ Cloud provisioning | Infra |
+| DNS and TLS certificates | ⏳ Domain registration | Infra |
+| Steam/Epic storefront listing | ⏳ Platform submission | Marketing |
+| Permanence Covenant smart contract | ⏳ Blockchain deployment | Engineering |
+| UE5 client packaged build | ✅ Packaged in artifacts/ | Engineering |
+
