@@ -1,0 +1,1547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Concord ΓÇö A Civilisation With Memory</title>
+    <meta
+      name="description"
+      content="Six hundred worlds. Eight hundred years. One permanent Chronicle. Your story is permanent. Build something worth reading."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ΓöÇΓöÇ Variables ΓÇö Canonical Age of Radiance palette v2.0 ΓöÇΓöÇΓöÇ */
+      :root {
+        --parchment: #f2ede4;
+        --surface: #faf7f2;
+        --surface-mid: #ede8df;
+        --ink: #2c1810;
+        --ink-light: #5c4030;
+        --gold: #c49a3c;
+        --gold-action: #e8a838;
+        --gold-subtle: #f0d080;
+        --lattice: #2a5c8a;
+        --lattice-glow: #4a8cbf;
+        --dawn-white: #f8f4ee;
+        /* Dark context aliases (canvas / vigil only) */
+        --void: #060d1a;
+        --grief: #4a4440;
+        --ember: #c4451a;
+
+        --font-display: 'Cinzel Decorative', serif;
+        --font-heading: 'Cinzel', serif;
+        --font-body: 'Cormorant Garamond', serif;
+        --font-mono: 'Courier Prime', monospace;
+      }
+
+      /* ΓöÇΓöÇ Reset ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        background: var(--parchment);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 1.7;
+        overflow-x: hidden;
+        cursor: none;
+      }
+      @media (pointer: coarse) {
+        body {
+          cursor: auto;
+        }
+      }
+
+      /* ΓöÇΓöÇ Custom Cursor ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #cr,
+      #cd {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition:
+          width 0.15s ease,
+          height 0.15s ease,
+          border-color 0.15s ease;
+      }
+      #cr {
+        width: 28px;
+        height: 28px;
+        border: 1.5px solid var(--gold);
+        top: 0;
+        left: 0;
+      }
+      #cr.expand {
+        width: 48px;
+        height: 48px;
+        border-color: var(--gold-action);
+      }
+      #cd {
+        width: 5px;
+        height: 5px;
+        background: var(--gold);
+        top: 0;
+        left: 0;
+      }
+      @media (pointer: coarse) {
+        #cr,
+        #cd {
+          display: none;
+        }
+      }
+
+      /* ΓöÇΓöÇ Canvas ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #cosmos {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* ΓöÇΓöÇ Ticker ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #ticker-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: var(--surface);
+        border-bottom: 1px solid rgba(44,24,16,0.12);
+        overflow: hidden;
+        height: 32px;
+        display: flex;
+        align-items: center;
+      }
+      #ticker-track {
+        display: flex;
+        white-space: nowrap;
+        animation: ticker-scroll 40s linear infinite;
+        gap: 0;
+      }
+      #ticker-track span {
+        font-family: var(--font-heading);
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        color: var(--ink-light);
+        padding: 0 3rem;
+      }
+      #ticker-track span em {
+        color: var(--gold);
+        font-style: normal;
+      }
+      @keyframes ticker-scroll {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* ΓöÇΓöÇ Header ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      header {
+        position: fixed;
+        top: 32px;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        padding: 1.2rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(242,237,228,0.98) 0%, rgba(242,237,228,0) 100%);
+      }
+      .header-wordmark {
+        font-family: var(--font-heading);
+        font-size: 13px;
+        letter-spacing: 0.3em;
+        color: var(--gold);
+        text-transform: uppercase;
+        text-decoration: none;
+      }
+      nav {
+        display: flex;
+        gap: 2.5rem;
+        align-items: center;
+      }
+      nav a {
+        font-family: var(--font-heading);
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        color: var(--ink-light);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: var(--gold);
+      }
+      #block-display {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--ink-light);
+        letter-spacing: 0.1em;
+      }
+      #block-display span {
+        color: var(--gold);
+      }
+      @media (max-width: 768px) {
+        header {
+          padding: 1rem 1.5rem;
+        }
+        nav {
+          gap: 1.5rem;
+        }
+        nav a {
+          font-size: 10px;
+        }
+        #block-display {
+          display: none;
+        }
+      }
+
+      /* ΓöÇΓöÇ Page offset for fixed header ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      main {
+        padding-top: 80px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ΓöÇΓöÇ Section base ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      section {
+        position: relative;
+      }
+      .sect {
+        opacity: 0;
+        transform: translateY(32px);
+        transition:
+          opacity 0.9s ease,
+          transform 0.9s ease;
+      }
+      .sect.vis {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+      .container-narrow {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      /* ΓöÇΓöÇ Dividers ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .rule {
+        border: none;
+        border-top: 1px solid var(--dim);
+        margin: 4rem auto;
+        max-width: 400px;
+        opacity: 0.5;
+      }
+      .rule-full {
+        border: none;
+        border-top: 1px solid var(--dim);
+        opacity: 0.3;
+      }
+
+      /* ΓöÇΓöÇ Hero ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 6rem 2rem 4rem;
+      }
+      .hero-eyebrow {
+        font-family: var(--font-heading);
+        font-size: 11px;
+        letter-spacing: 0.35em;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+      }
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(2.8rem, 8vw, 7rem);
+        font-weight: 900;
+        line-height: 1.05;
+        letter-spacing: 0.05em;
+        background: linear-gradient(
+          135deg,
+          var(--gold2) 0%,
+          var(--gold4) 40%,
+          var(--gold3) 70%,
+          var(--gold) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 2rem;
+      }
+      .hero-subtitle {
+        font-family: var(--font-body);
+        font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+        font-weight: 300;
+        color: var(--mist);
+        letter-spacing: 0.04em;
+        margin-bottom: 1rem;
+        font-style: italic;
+      }
+      .hero-tagline {
+        font-family: var(--font-heading);
+        font-size: clamp(0.8rem, 1.5vw, 1rem);
+        letter-spacing: 0.2em;
+        color: var(--gold3);
+        text-transform: uppercase;
+        margin-bottom: 3.5rem;
+      }
+
+      /* ΓöÇΓöÇ Countdown ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #countdown {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 3.5rem;
+        flex-wrap: wrap;
+      }
+      .cd-unit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .cd-num {
+        font-family: var(--font-mono);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        color: var(--gold3);
+        line-height: 1;
+        min-width: 3ch;
+        text-align: center;
+      }
+      .cd-label {
+        font-family: var(--font-heading);
+        font-size: 9px;
+        letter-spacing: 0.3em;
+        color: var(--slate);
+        text-transform: uppercase;
+      }
+      .cd-sep {
+        font-family: var(--font-mono);
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: var(--dim);
+        align-self: flex-start;
+        padding-top: 0;
+        line-height: 1;
+      }
+      #countdown-open {
+        font-family: var(--font-heading);
+        font-size: 1.2rem;
+        letter-spacing: 0.2em;
+        color: var(--gold4);
+        text-transform: uppercase;
+        display: none;
+      }
+
+      /* ΓöÇΓöÇ Hero block height ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #hero-block {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--dim);
+        letter-spacing: 0.1em;
+        margin-bottom: 4rem;
+      }
+      #hero-block span {
+        color: var(--gold);
+      }
+
+      /* ΓöÇΓöÇ CTA button ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .btn-primary {
+        display: inline-block;
+        font-family: var(--font-heading);
+        font-size: 11px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--navy);
+        background: linear-gradient(135deg, var(--gold2), var(--gold4));
+        padding: 1rem 2.5rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+          opacity 0.2s,
+          transform 0.2s;
+      }
+      .btn-primary:hover {
+        opacity: 0.85;
+        transform: translateY(-1px);
+      }
+      .btn-ghost {
+        display: inline-block;
+        font-family: var(--font-heading);
+        font-size: 11px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold3);
+        background: transparent;
+        padding: 1rem 2.5rem;
+        border: 1px solid var(--dim);
+        cursor: pointer;
+        text-decoration: none;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
+      .btn-ghost:hover {
+        border-color: var(--gold);
+        color: var(--gold4);
+      }
+
+      /* ΓöÇΓöÇ Okafor Log ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #log-section {
+        padding: 6rem 0;
+      }
+      .section-label {
+        font-family: var(--font-heading);
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 2.5rem;
+        display: block;
+        text-align: center;
+      }
+      .log-block {
+        background: rgba(10, 22, 40, 0.9);
+        border: 1px solid var(--dim);
+        border-left: 3px solid var(--gold);
+        padding: 2.5rem;
+        font-family: var(--font-mono);
+        font-size: 13px;
+        line-height: 2;
+        color: var(--slate);
+        max-width: 760px;
+        margin: 0 auto;
+      }
+      .log-block .log-line {
+        display: block;
+      }
+      .log-block .log-ts {
+        color: var(--dim);
+      }
+      .log-block .log-warn {
+        color: var(--redl);
+      }
+      .log-block .log-sys {
+        color: var(--slate);
+      }
+      .log-block .log-okafor {
+        color: var(--gold3);
+      }
+      .log-block .log-comment {
+        color: var(--gold);
+        font-style: italic;
+      }
+
+      /* ΓöÇΓöÇ Pull Quotes ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .pull-quote {
+        font-family: var(--font-body);
+        font-size: clamp(1.3rem, 3vw, 1.9rem);
+        font-weight: 300;
+        font-style: italic;
+        color: var(--mist);
+        text-align: center;
+        line-height: 1.5;
+        padding: 4rem 2rem;
+        max-width: 840px;
+        margin: 0 auto;
+      }
+      .pull-quote cite {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        color: var(--gold);
+        font-style: normal;
+        margin-top: 1.2rem;
+        text-transform: uppercase;
+      }
+
+      /* ΓöÇΓöÇ Covenant Box ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .covenant-box {
+        background: rgba(6, 13, 26, 0.95);
+        border: 1px solid var(--gold);
+        padding: 3rem;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .covenant-box h3 {
+        font-family: var(--font-heading);
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+        letter-spacing: 0.25em;
+        color: var(--gold4);
+        text-transform: uppercase;
+        margin-bottom: 1.2rem;
+      }
+      .covenant-box p {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        color: var(--mist);
+        font-style: italic;
+        line-height: 1.7;
+      }
+
+      /* ΓöÇΓöÇ Section headings ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .section-title {
+        font-family: var(--font-display);
+        font-size: clamp(1.6rem, 4vw, 2.8rem);
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        background: linear-gradient(135deg, var(--gold2), var(--gold4));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .section-sub {
+        font-family: var(--font-body);
+        font-size: 1.1rem;
+        font-style: italic;
+        color: var(--slate);
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      /* ΓöÇΓöÇ Phase gating ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .phase-2,
+      .phase-3 {
+        display: none;
+      }
+      body.phase-2 .phase-2,
+      body.phase-3 .phase-2,
+      body.phase-3 .phase-3 {
+        display: block;
+      }
+      body.phase-2 .phase-2-flex,
+      body.phase-3 .phase-2-flex,
+      body.phase-3 .phase-3-flex {
+        display: flex;
+      }
+
+      /* ΓöÇΓöÇ Witness Protocol (Phase 2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #witness-section {
+        padding: 6rem 0;
+        background: linear-gradient(to bottom, var(--navy) 0%, var(--navy2) 50%, var(--navy) 100%);
+      }
+      .witness-form {
+        max-width: 600px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .form-group label {
+        font-family: var(--font-heading);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        color: var(--gold);
+        text-transform: uppercase;
+      }
+      .form-group input,
+      .form-group textarea {
+        background: rgba(10, 22, 40, 0.8);
+        border: 1px solid var(--dim);
+        color: var(--white);
+        font-family: var(--font-body);
+        font-size: 16px;
+        padding: 0.9rem 1.2rem;
+        outline: none;
+        transition: border-color 0.2s;
+        resize: vertical;
+        cursor: none;
+      }
+      @media (pointer: coarse) {
+        .form-group input,
+        .form-group textarea {
+          cursor: auto;
+        }
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: var(--gold3);
+      }
+      .form-group textarea {
+        min-height: 120px;
+      }
+      .char-counter {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--dim);
+        text-align: right;
+      }
+      .char-counter.warn {
+        color: var(--redl);
+      }
+      .form-notice {
+        font-family: var(--font-body);
+        font-size: 13px;
+        font-style: italic;
+        color: var(--dim);
+        text-align: center;
+      }
+      #witness-confirm {
+        display: none;
+        background: rgba(10, 22, 40, 0.95);
+        border: 1px solid var(--gold);
+        padding: 2rem;
+        text-align: center;
+        font-family: var(--font-body);
+        font-size: 1.2rem;
+        font-style: italic;
+        color: var(--gold4);
+      }
+      #witness-confirm span {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        color: var(--slate);
+        font-style: normal;
+        margin-top: 0.8rem;
+        text-transform: uppercase;
+      }
+
+      /* ΓöÇΓöÇ Physics / Features (Phase 2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #physics-section {
+        padding: 6rem 0;
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2px;
+        margin-top: 3rem;
+      }
+      .feature-card {
+        background: var(--navy2);
+        padding: 2.5rem;
+        border-top: 2px solid var(--dim);
+        transition: border-color 0.3s;
+      }
+      .feature-card:hover {
+        border-color: var(--gold);
+      }
+      .feature-card h3 {
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        letter-spacing: 0.2em;
+        color: var(--gold3);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+      }
+      .feature-card p {
+        font-family: var(--font-body);
+        font-size: 1rem;
+        color: var(--slate);
+        line-height: 1.7;
+      }
+
+      /* ΓöÇΓöÇ Civilisation (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #civilisation-section {
+        padding: 6rem 0;
+        background: var(--navy2);
+      }
+
+      /* ΓöÇΓöÇ Pricing (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #pricing-section {
+        padding: 6rem 0;
+      }
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2px;
+        margin-bottom: 4rem;
+      }
+      .price-card {
+        background: var(--navy2);
+        padding: 2.5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        position: relative;
+        border-top: 2px solid var(--dim);
+      }
+      .price-card.featured {
+        border-top-color: var(--gold3);
+      }
+      .price-tier {
+        font-family: var(--font-heading);
+        font-size: 11px;
+        letter-spacing: 0.3em;
+        color: var(--gold);
+        text-transform: uppercase;
+      }
+      .price-amount {
+        font-family: var(--font-mono);
+        font-size: 2rem;
+        color: var(--white);
+        line-height: 1.1;
+      }
+      .price-amount small {
+        font-size: 0.9rem;
+        color: var(--slate);
+      }
+      .price-desc {
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        color: var(--mist);
+        font-style: italic;
+      }
+      .price-features {
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        color: var(--slate);
+        margin-top: 0.5rem;
+      }
+      .pricing-founders {
+        border-top: 1px solid var(--dim);
+        padding-top: 3rem;
+      }
+      .pricing-founders-title {
+        font-family: var(--font-heading);
+        font-size: 12px;
+        letter-spacing: 0.35em;
+        color: var(--gold4);
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .founders-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2px;
+      }
+      .founder-card {
+        background: linear-gradient(135deg, rgba(13, 31, 60, 0.9), rgba(10, 22, 40, 0.9));
+        border: 1px solid var(--dim);
+        padding: 2rem;
+        position: relative;
+      }
+      .founder-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold), var(--gold4), var(--gold));
+      }
+      .founder-tier {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.25em;
+        color: var(--gold4);
+        margin-bottom: 0.5rem;
+      }
+      .founder-price {
+        font-family: var(--font-mono);
+        font-size: 1.6rem;
+        color: var(--white);
+        margin-bottom: 0.5rem;
+      }
+      .founder-desc {
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        color: var(--slate);
+        font-style: italic;
+      }
+
+      /* ΓöÇΓöÇ CTA / Final (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #cta-section {
+        padding: 8rem 0;
+        text-align: center;
+      }
+      .cta-btns {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 2.5rem;
+      }
+
+      /* ΓöÇΓöÇ Footer ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      footer {
+        padding: 3rem 2rem;
+        border-top: 1px solid var(--dim);
+        text-align: center;
+      }
+      .footer-wordmark {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        letter-spacing: 0.3em;
+        color: var(--gold);
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        display: block;
+      }
+      .footer-text {
+        font-family: var(--font-body);
+        font-size: 0.85rem;
+        color: var(--dim);
+        font-style: italic;
+      }
+      .footer-links {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+      }
+      .footer-links a {
+        font-family: var(--font-heading);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        color: var(--dim);
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.2s;
+      }
+      .footer-links a:hover {
+        color: var(--gold);
+      }
+
+      /* ΓöÇΓöÇ Utilities ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .text-gold {
+        color: var(--gold3);
+      }
+      .text-center {
+        text-align: center;
+      }
+      .mt-4 {
+        margin-top: 4rem;
+      }
+      .mb-4 {
+        margin-bottom: 4rem;
+      }
+      .py-8 {
+        padding: 8rem 0;
+      }
+
+      /* ΓöÇΓöÇ Scroll utility ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      @media (prefers-reduced-motion: reduce) {
+        .sect {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        #ticker-track {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Custom cursor -->
+    <div id="cr"></div>
+    <div id="cd"></div>
+
+    <!-- Starfield canvas -->
+    <canvas id="cosmos"></canvas>
+
+    <!-- ΓöÇΓöÇ Ticker ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <div id="ticker-wrap" class="phase-3">
+      <div id="ticker-track">
+        <!-- Populated by JS; two sets for seamless loop -->
+      </div>
+    </div>
+
+    <!-- ΓöÇΓöÇ Header ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <header>
+      <a href="#hero" class="header-wordmark">The Concord</a>
+      <nav>
+        <a href="#log-section">The Log</a>
+        <a href="#witness-section" class="phase-2">Witness</a>
+        <a href="#physics-section" class="phase-2">Systems</a>
+        <a href="#pricing-section" class="phase-3">Access</a>
+      </nav>
+      <div id="block-display">BLOCK <span id="block-num">ΓÇö</span></div>
+    </header>
+
+    <!-- ΓöÇΓöÇ Main ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <main>
+      <!-- ΓöÇΓöÇ Hero ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="hero">
+        <p class="hero-eyebrow">First Contact ┬╖ 2027</p>
+        <h1 class="hero-title">THE CONCORD</h1>
+        <p class="hero-subtitle">
+          Six hundred worlds. Eight hundred years. One permanent Chronicle.
+        </p>
+        <p class="hero-tagline">Your story is permanent. Build something worth reading.</p>
+
+        <!-- Countdown -->
+        <div id="countdown">
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-d">000</span><span class="cd-label">Days</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-h">00</span><span class="cd-label">Hours</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-m">00</span><span class="cd-label">Minutes</span>
+          </div>
+          <span class="cd-sep">:</span>
+          <div class="cd-unit">
+            <span class="cd-num" id="cd-s">00</span><span class="cd-label">Seconds</span>
+          </div>
+        </div>
+        <div id="countdown-open">THE CONCORD IS OPEN</div>
+
+        <p id="hero-block">ETHEREUM MAINNET ┬╖ BLOCK <span id="hero-block-num">ΓÇö</span></p>
+
+        <a href="#witness-section" class="btn-primary phase-2">Record Your Witness</a>
+      </section>
+
+      <!-- ΓöÇΓöÇ Okafor Log ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="log-section">
+        <div class="container-narrow sect">
+          <span class="section-label">The Log ΓÇö v1.4 Canonical</span>
+          <div class="log-block">
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:44Z]</span>
+              <span class="log-warn">WARNING: </span
+              ><span class="log-sys"> Power draw exceeds permitted parameters by 340%.</span></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:44Z]</span>
+              <span class="log-okafor">OKAFOR_A:</span
+              ><span class="log-sys"> Acknowledged. Continuing.</span></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:51Z]</span>
+              <span class="log-sys">SYSTEM: </span
+              ><span class="log-sys">
+                Coherence: 97.1%. Topological equivalence achieved.</span
+              ></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:51Z]</span>
+              <span class="log-sys">SYSTEM: </span
+              ><span class="log-sys">
+                Duration: 180,043ms. Probe: returned. Mass: intact.</span
+              ></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:51Z]</span>
+              <span class="log-okafor">OKAFOR_A:</span><span class="log-sys"> It works.</span></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:52Z]</span>
+              <span class="log-okafor">OKAFOR_A:</span
+              ><span class="log-sys"> Yusuf. It works.</span></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:17:58Z]</span>
+              <span class="log-okafor">OKAFOR_A:</span
+              ><span class="log-sys"> I wish you were here to see this.</span></span
+            >
+            <span class="log-line"
+              ><span class="log-ts">[2031-08-14T09:18:03Z]</span>
+              <span class="log-okafor">OKAFOR_A:</span
+              ><span class="log-sys"> I think you always knew it would.</span></span
+            >
+            <span class="log-line"
+              ><span class="log-comment">// Chronicle Entry 1. Everything else follows.</span></span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Pull quote 1 -->
+      <div class="pull-quote sect container-narrow">
+        "Everything that happens here is permanent."
+        <cite>The Remembrance ┬╖ Year Zero ┬╖ Entry One</cite>
+      </div>
+
+      <hr class="rule" />
+
+      <!-- Permanence Covenant -->
+      <div class="container sect mb-4">
+        <div class="covenant-box">
+          <h3>The Permanence Covenant</h3>
+          <p>
+            "Nine articles. Irrevocable. No single party ΓÇö including the developers ΓÇö can
+            unilaterally violate it."
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule" />
+
+      <!-- Pull quote 2 -->
+      <div class="pull-quote sect container-narrow">
+        "When you might live forever, significance is the only thing worth building."
+      </div>
+
+      <!-- ΓöÇΓöÇ Witness Protocol (Phase 2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="witness-section" class="phase-2">
+        <div class="container-narrow sect">
+          <span class="section-label">Witness Protocol</span>
+          <h2 class="section-title">Register Your Witness</h2>
+          <p class="section-sub">Your words will be sealed into the Chronicle.</p>
+
+          <form class="witness-form" id="witness-form" novalidate>
+            <div class="form-group">
+              <label for="witness-name">Name</label>
+              <input
+                type="text"
+                id="witness-name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="witness-email">Email</label>
+              <input
+                type="email"
+                id="witness-email"
+                name="email"
+                placeholder="your@email.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="witness-message">Your Message</label>
+              <textarea
+                id="witness-message"
+                name="message"
+                maxlength="500"
+                placeholder="Your first message to the Concord. Max 500 characters. It will be archived."
+              ></textarea>
+              <div class="char-counter"><span id="char-count">0</span> / 500</div>
+            </div>
+            <p class="form-notice">
+              This message will be cryptographically sealed into the Chronicle at launch.
+            </p>
+            <button type="submit" class="btn-primary">Record Your Witness</button>
+          </form>
+
+          <div id="witness-confirm">
+            Your witness is recorded. The Chronicle remembers.
+            <span>Sealed to the Remembrance ΓÇö awaiting launch block</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Physics / Core Systems (Phase 2) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="physics-section" class="phase-2">
+        <div class="container sect">
+          <span class="section-label">Core Systems</span>
+          <h2 class="section-title">The Architecture of Permanence</h2>
+          <p class="section-sub">Five interlocking systems. All irrevocable.</p>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <h3>The Lattice</h3>
+              <p>
+                Frequency-locked transit between 600 worlds. No loading screens. No seams. The
+                fabric of space, rendered in real time.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>The Chronicle</h3>
+              <p>
+                Append-only cryptographic ledger. Everything that happens is permanent. Every action
+                is an entry. The record cannot be altered.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>KALON</h3>
+              <p>
+                Fixed supply. Earned. Never purchased. The only currency of a post-scarcity
+                civilisation. Value through meaning, not scarcity.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>The Assembly</h3>
+              <p>
+                Player-governed. Architect-advised. Constitutional motions require supermajority.
+                The law is what you make it.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>MARKS</h3>
+              <p>
+                Six types of honour. On-chain. Non-transferable. They survive us. Your reputation
+                outlasts your dynasty.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pull quote 3 -->
+      <div class="pull-quote sect container-narrow phase-2">
+        "The age of scarcity is over. The age of meaning has begun."
+      </div>
+
+      <!-- ΓöÇΓöÇ Civilisation (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="civilisation-section" class="phase-3">
+        <div class="container sect">
+          <span class="section-label">The Civilisation</span>
+          <h2 class="section-title">Six Hundred Worlds Await</h2>
+          <p class="section-sub">
+            600 worlds unlocked over 35 real years by the Survey Corps. Each world, a story. Each
+            dynasty, a legacy.
+          </p>
+
+          <div class="features-grid" style="margin-top: 3rem">
+            <div class="feature-card">
+              <h3>1:1 Real Time</h3>
+              <p>
+                The Concord runs on real time. One second here is one second there. The world
+                doesn't pause when you log out. History continues.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>Dynasty System</h3>
+              <p>
+                Your identity persists across generations. Build a dynasty that outlasts your
+                character. Leave something worth inheriting.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>The Survey Corps</h3>
+              <p>
+                Not every world is known at launch. The Survey Corps discovers new worlds in real
+                time, unlocking new frontiers for all dynasties.
+              </p>
+            </div>
+            <div class="feature-card">
+              <h3>The Remembrance</h3>
+              <p>
+                The full historical record of the Concord. Every event sealed, hashed, and chained.
+                No event can be erased or rewritten.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pull quote 4 (Phase 3) -->
+      <div class="pull-quote sect container-narrow phase-3">
+        "Your story is permanent. Build something worth reading."
+      </div>
+
+      <!-- ΓöÇΓöÇ Pricing (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="pricing-section" class="phase-3">
+        <div class="container sect">
+          <span class="section-label">Access Tiers</span>
+          <h2 class="section-title">Choose Your Standing</h2>
+          <p class="section-sub">Entry is open. What you build with it is permanent.</p>
+
+          <div class="pricing-grid">
+            <div class="price-card">
+              <div class="price-tier">Free Tourist</div>
+              <div class="price-amount">$0</div>
+              <div class="price-desc">15-day trial, observe only</div>
+              <div class="price-features">See the worlds. Read the Chronicle. Make no mark.</div>
+            </div>
+            <div class="price-card">
+              <div class="price-tier">Accord</div>
+              <div class="price-amount">$15<small>/mo</small></div>
+              <div class="price-desc">1 dynasty, 30-day continuity window</div>
+              <div class="price-features">One dynasty. One legacy. Begin here.</div>
+            </div>
+            <div class="price-card featured">
+              <div class="price-tier">Patron</div>
+              <div class="price-amount">$25<small>/mo</small></div>
+              <div class="price-desc">2 dynasties, 60-day continuity window</div>
+              <div class="price-features">Two paths. Double the legacy. Double the risk.</div>
+            </div>
+            <div class="price-card">
+              <div class="price-tier">Herald</div>
+              <div class="price-amount">$35<small>/mo</small></div>
+              <div class="price-desc">3 dynasties, 90-day continuity window</div>
+              <div class="price-features">
+                Herald standing. Early Architect reports. Three dynasties.
+              </div>
+            </div>
+          </div>
+
+          <div class="pricing-founders sect">
+            <div class="pricing-founders-title">Founders ΓÇö Limited Allocation</div>
+            <div class="founders-grid">
+              <div class="founder-card">
+                <div class="founder-tier">PROMETHEUS</div>
+                <div class="founder-price">
+                  $49<small style="font-size: 1rem; color: var(--slate)">/mo</small>
+                </div>
+                <div class="founder-desc">
+                  Launch benefits. Chronicle priority. First through the gate.
+                </div>
+              </div>
+              <div class="founder-card">
+                <div class="founder-tier">SHEPHERD</div>
+                <div class="founder-price">
+                  $199<small style="font-size: 1rem; color: var(--slate)">/mo</small>
+                </div>
+                <div class="founder-desc">
+                  Named in the founding record. The Remembrance will know your name.
+                </div>
+              </div>
+              <div class="founder-card">
+                <div class="founder-tier">FIRST_LIGHT</div>
+                <div class="founder-price">
+                  $999<small style="font-size: 1rem; color: var(--slate)"> one-time</small>
+                </div>
+                <div class="founder-desc">
+                  Permanent founding status. You were there at the beginning. Always.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ CTA (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section id="cta-section" class="phase-3 sect">
+        <div class="container-narrow">
+          <span class="section-label">The Chronicle Opens</span>
+          <h2 class="section-title">Be There</h2>
+          <p class="section-sub">
+            Year Zero begins 2027-01-01. The first entry is already written. The rest is yours.
+          </p>
+          <div class="cta-btns">
+            <a href="#witness-section" class="btn-primary">Record Your Witness</a>
+            <a href="#pricing-section" class="btn-ghost">Choose Your Standing</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ΓöÇΓöÇ Footer ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <footer>
+      <span class="footer-wordmark">The Concord</span>
+      <div class="footer-links">
+        <a href="#">Permanence Covenant</a>
+        <a href="#">The Chronicle</a>
+        <a href="#">The Assembly</a>
+        <a href="#">Survey Corps</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer-text">A civilisation with memory. Year Zero begins 2027.</p>
+      <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.75rem">
+        The Concord is a persistent world operating under the Permanence Covenant. All events are
+        final.
+      </p>
+    </footer>
+
+    <!-- ΓöÇΓöÇ JavaScript ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <script>
+      'use strict';
+
+      /* ΓöÇΓöÇ Phase management ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      const CURRENT_PHASE = 3;
+      if (CURRENT_PHASE >= 2) document.body.classList.add('phase-2');
+      if (CURRENT_PHASE >= 3) document.body.classList.add('phase-3');
+
+      /* ΓöÇΓöÇ Starfield ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initStarfield() {
+        const canvas = document.getElementById('cosmos');
+        const ctx = canvas.getContext('2d');
+        let W,
+          H,
+          stars,
+          mouse = { x: 0, y: 0 };
+
+        function resize() {
+          W = canvas.width = window.innerWidth;
+          H = canvas.height = window.innerHeight;
+        }
+
+        function makeStar() {
+          return {
+            x: Math.random() * W,
+            y: Math.random() * H,
+            r: Math.random() * 1.2 + 0.1,
+            alpha: Math.random() * 0.12 + 0.02,
+            speed: Math.random() * 0.3 + 0.05,
+            twinkleSpeed: Math.random() * 0.008 + 0.002,
+            twinkleDir: Math.random() > 0.5 ? 1 : -1,
+            parallax: Math.random() * 0.04 + 0.005,
+            ox: 0,
+            oy: 0,
+          };
+        }
+
+        function initStars() {
+          stars = Array.from({ length: 300 }, makeStar);
+          stars.forEach((s) => {
+            s.ox = s.x;
+            s.oy = s.y;
+          });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          // Parchment canvas ΓÇö ancient astronomical manuscript feel
+          ctx.fillStyle = '#f2ede4';
+          ctx.fillRect(0, 0, W, H);
+
+          const mx = (mouse.x / W - 0.5) * W;
+          const my = (mouse.y / H - 0.5) * H;
+
+          for (const s of stars) {
+            // Twinkle ΓÇö reduced range for subtle parchment appearance
+            s.alpha += s.twinkleSpeed * s.twinkleDir;
+            if (s.alpha > 0.15 || s.alpha < 0.02) s.twinkleDir *= -1;
+
+            // Parallax offset
+            const px = s.ox + mx * s.parallax;
+            const py = s.oy + my * s.parallax;
+
+            ctx.beginPath();
+            ctx.arc(px, py, s.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(44, 24, 16, ${s.alpha})`;
+            ctx.fill();
+          }
+          requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', () => {
+          resize();
+          initStars();
+        });
+        window.addEventListener('mousemove', (e) => {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+
+        resize();
+        initStars();
+        draw();
+      })();
+
+      /* ΓöÇΓöÇ Custom cursor ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initCursor() {
+        if (window.matchMedia('(pointer: coarse)').matches) return;
+        const ring = document.getElementById('cr');
+        const dot = document.getElementById('cd');
+        let rx = 0,
+          ry = 0,
+          dx = 0,
+          dy = 0;
+        let tx = 0,
+          ty = 0;
+
+        document.addEventListener('mousemove', (e) => {
+          tx = e.clientX;
+          ty = e.clientY;
+        });
+
+        const hoverTargets = 'a, button, input, textarea, .btn-primary, .btn-ghost';
+
+        document.addEventListener('mouseover', (e) => {
+          if (e.target.matches(hoverTargets) || e.target.closest(hoverTargets)) {
+            ring.classList.add('expand');
+          }
+        });
+        document.addEventListener('mouseout', (e) => {
+          if (e.target.matches(hoverTargets) || e.target.closest(hoverTargets)) {
+            ring.classList.remove('expand');
+          }
+        });
+
+        function tick() {
+          // Dot follows immediately
+          dx = tx;
+          dy = ty;
+          // Ring lags slightly
+          rx += (tx - rx) * 0.18;
+          ry += (ty - ry) * 0.18;
+
+          ring.style.left = rx + 'px';
+          ring.style.top = ry + 'px';
+          dot.style.left = dx + 'px';
+          dot.style.top = dy + 'px';
+          requestAnimationFrame(tick);
+        }
+        tick();
+      })();
+
+      /* ΓöÇΓöÇ Ticker (Phase 3) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initTicker() {
+        const items = [
+          'THE CONCORD ┬╖ <em>600 WORLDS</em> ┬╖ 800 YEARS ┬╖ COUNTING',
+          'KALON ┬╖ <em>FIXED SUPPLY</em> ┬╖ EARNED ┬╖ NEVER BOUGHT',
+          'PERMANENCE COVENANT ┬╖ ARTICLE IX ┬╖ <em>NO CHEAT CODES</em> ┬╖ EVER',
+          '<em>FOUNDING MARK</em> ┬╖ CLOSES AT LAUNCH BLOCK HEIGHT',
+          'ASSEMBLY IN SESSION ┬╖ <em>VOTES PERMANENT</em> ┬╖ NAMES RECORDED',
+        ];
+        const track = document.getElementById('ticker-track');
+        if (!track) return;
+        // Duplicate for seamless loop
+        const build = () => items.map((t) => `<span>${t}</span>`).join('');
+        track.innerHTML = build() + build();
+      })();
+
+      /* ΓöÇΓöÇ Countdown ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initCountdown() {
+        const target = new Date('2027-01-01T00:00:00Z');
+        const dEl = document.getElementById('cd-d');
+        const hEl = document.getElementById('cd-h');
+        const mEl = document.getElementById('cd-m');
+        const sEl = document.getElementById('cd-s');
+        const openEl = document.getElementById('countdown-open');
+        const cdEl = document.getElementById('countdown');
+
+        function pad(n, len) {
+          return String(n).padStart(len, '0');
+        }
+
+        function tick() {
+          const now = Date.now();
+          const diff = target.getTime() - now;
+          if (diff <= 0) {
+            cdEl.style.display = 'none';
+            openEl.style.display = 'block';
+            return;
+          }
+          const d = Math.floor(diff / 86400000);
+          const h = Math.floor((diff % 86400000) / 3600000);
+          const m = Math.floor((diff % 3600000) / 60000);
+          const s = Math.floor((diff % 60000) / 1000);
+          dEl.textContent = pad(d, 3);
+          hEl.textContent = pad(h, 2);
+          mEl.textContent = pad(m, 2);
+          sEl.textContent = pad(s, 2);
+        }
+
+        tick();
+        setInterval(tick, 1000);
+      })();
+
+      /* ΓöÇΓöÇ Block height ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initBlockHeight() {
+        const blockEl = document.getElementById('block-num');
+        const heroBlockEl = document.getElementById('hero-block-num');
+
+        function setBlock(num) {
+          const formatted = Number(num).toLocaleString();
+          if (blockEl) blockEl.textContent = formatted;
+          if (heroBlockEl) heroBlockEl.textContent = formatted;
+        }
+
+        function fetch_block() {
+          fetch('https://api.blocknative.com/v0/ethereum/mainnet/header', {
+            mode: 'cors',
+            headers: { Accept: 'application/json' },
+          })
+            .then((r) => r.json())
+            .then((data) => {
+              const num = data?.blockNumber ?? data?.number ?? data?.block?.number;
+              if (num) setBlock(num);
+            })
+            .catch(() => {
+              /* silent fail */
+            });
+        }
+
+        fetch_block();
+        setInterval(fetch_block, 15000);
+      })();
+
+      /* ΓöÇΓöÇ Scroll reveals ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initScrollReveal() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('vis');
+                observer.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -48px 0px' },
+        );
+        document.querySelectorAll('.sect').forEach((el) => observer.observe(el));
+      })();
+
+      /* ΓöÇΓöÇ Witness form ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initWitnessForm() {
+        const form = document.getElementById('witness-form');
+        const msg = document.getElementById('witness-message');
+        const counter = document.getElementById('char-count');
+        const confirm = document.getElementById('witness-confirm');
+        if (!form) return;
+
+        msg.addEventListener('input', () => {
+          const len = msg.value.length;
+          counter.textContent = len;
+          counter.parentElement.classList.toggle('warn', len > 450);
+        });
+
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const name = document.getElementById('witness-name').value.trim();
+          const email = document.getElementById('witness-email').value.trim();
+          const message = msg.value.trim();
+
+          if (!email) {
+            document.getElementById('witness-email').focus();
+            return;
+          }
+
+          const btn = form.querySelector('button[type="submit"]');
+          btn.textContent = 'SealingΓÇª';
+          btn.disabled = true;
+
+          try {
+            await fetch('/api/witness', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ name, email, message }),
+            });
+          } catch (_) {
+            /* graceful: server may not exist in preview */
+          }
+
+          form.style.display = 'none';
+          confirm.style.display = 'block';
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,24 +1,24 @@
 /**
- * gameplay-components.ts — Components for the playable vertical slice.
+ * gameplay-components.ts ΓÇö Components for the playable vertical slice.
  *
  * These extend the minimal component set with gameplay-specific
  * data needed for player movement, camera, visuals, networking,
  * NPC classification, and world interaction.
  *
- * All components are pure data — serializable, immutable snapshots.
+ * All components are pure data ΓÇö serializable, immutable snapshots.
  * No methods. No references to other entities (use entity IDs).
  */
 
 import type { Vec3, NumericRange } from './shared-types.js';
 
-// ── Player Input ────────────────────────────────────────────────
+// ΓöÇΓöÇ Player Input ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
-/** Movement mode union — makes illegal states unrepresentable. */
+/** Movement mode union ΓÇö makes illegal states unrepresentable. */
 export type MovementMode = 'walking' | 'running' | 'sprinting' | 'falling' | 'swimming' | 'flying';
 
 /**
  * Captures player intent from the rendering fabric.
- * Processed by the Loom each tick — never applied directly.
+ * Processed by the Loom each tick ΓÇö never applied directly.
  */
 export interface PlayerInputComponent {
   /** Normalized movement direction in world space. Zero = no input. */
@@ -31,9 +31,9 @@ export interface PlayerInputComponent {
   readonly sequenceNumber: number;
 }
 
-// ── Movement ────────────────────────────────────────────────────
+// ΓöÇΓöÇ Movement ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
-/** Movement physics state — driven by PlayerInput + game rules. */
+/** Movement physics state ΓÇö driven by PlayerInput + game rules. */
 export interface MovementComponent {
   /** Current speed in world units per second. */
   readonly speed: number;
@@ -45,7 +45,7 @@ export interface MovementComponent {
   readonly movementMode: MovementMode;
 }
 
-// ── Camera ──────────────────────────────────────────────────────
+// ΓöÇΓöÇ Camera ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** Camera mode union. */
 export type CameraMode = 'first-person' | 'third-person' | 'orbital';
@@ -67,11 +67,11 @@ export interface CameraTargetComponent {
   readonly pitchLimits: NumericRange;
 }
 
-// ── Visuals ─────────────────────────────────────────────────────
+// ΓöÇΓöÇ Visuals ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /**
  * Links an entity to a visual mesh in the rendering fabric.
- * Content-addressed by hash — same asset always produces same hash.
+ * Content-addressed by hash ΓÇö same asset always produces same hash.
  */
 export interface VisualMeshComponent {
   /** Content-addressed hash matching MeshReference.contentHash. */
@@ -101,7 +101,7 @@ export interface AnimationComponent {
   readonly nextClip: string | null;
 }
 
-// ── Networking ──────────────────────────────────────────────────
+// ΓöÇΓöÇ Networking ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** Replication priority for bandwidth allocation. */
 export type ReplicationPriority = 'critical' | 'high' | 'normal' | 'low';
@@ -121,7 +121,7 @@ export interface NetworkReplicationComponent {
   readonly ownerConnectionId: string | null;
 }
 
-// ── World Anchors ───────────────────────────────────────────────
+// ΓöÇΓöÇ World Anchors ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** What kind of entity can spawn here. */
 export type SpawnType = 'player' | 'npc' | 'creature';
@@ -138,7 +138,7 @@ export interface SpawnPointComponent {
   readonly cooldownMicroseconds: number;
 }
 
-// ── NPC Classification ──────────────────────────────────────────
+// ΓöÇΓöÇ NPC Classification ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /**
  * NPC tier per the Bible:
@@ -164,10 +164,10 @@ export interface NpcTierComponent {
   readonly canCreateAssets: boolean;
 }
 
-// ── Interaction ─────────────────────────────────────────────────
+// ΓöÇΓöÇ Interaction ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** Available interaction types. */
-export type InteractionType = 'talk' | 'trade' | 'inspect' | 'use' | 'pickup';
+export type InteractionType = 'talk' | 'trade' | 'inspect' | 'use' | 'pickup' | 'negotiate';
 
 /** Defines what interactions an entity offers. */
 export interface InteractionComponent {
@@ -181,7 +181,7 @@ export interface InteractionComponent {
   readonly promptText: string;
 }
 
-// ── Appearance (MetaHuman) ───────────────────────────────────────
+// ΓöÇΓöÇ Appearance (MetaHuman) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 import type { AgeRange, BodyBuild } from './character-appearance.js';
 
@@ -214,11 +214,11 @@ export interface AppearanceComponent {
   readonly outfitAssetId: string | null;
   /** Optional accessory asset IDs (hats, jewelry, weapons holstered). */
   readonly accessories: ReadonlyArray<string>;
-  /** Facial feature overrides for fine-tuning (blend shape name → weight). */
+  /** Facial feature overrides for fine-tuning (blend shape name ΓåÆ weight). */
   readonly facialOverrides: Readonly<Record<string, number>>;
 }
 
-// ── Wallet (KALON Economy) ──────────────────────────────────────
+// ΓöÇΓöÇ Wallet (KALON Economy) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /**
  * ECS component bridging the KalonLedger (nakama-fabric) into
@@ -241,7 +241,7 @@ export interface WalletComponent {
   readonly lastSyncTick: number;
 }
 
-// ── Governance ──────────────────────────────────────────────────
+// ΓöÇΓöÇ Governance ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** Vote threshold category per the Bible: ordinary/significant/constitutional. */
 export type GovernanceVoteCategory = 'ordinary' | 'significant' | 'constitutional';
