@@ -90,7 +90,7 @@ describe('devportal-server', () => {
         portal.registerEndpoint(CUSTOM_ENDPOINT);
         portal.registerEndpoint(updated);
         const found = portal.searchEndpoints('/v1/custom/hello');
-        expect(found[0].description).toBe('Updated');
+        expect(found[0]!.description).toBe('Updated');
       });
     });
 
@@ -131,7 +131,7 @@ describe('devportal-server', () => {
         portal.registerPlugin(SAMPLE_PLUGIN);
         portal.registerPlugin(SAMPLE_PLUGIN_B);
         const featured = portal.getFeaturedPlugins();
-        expect(featured[0].rating).toBeGreaterThanOrEqual(featured[1].rating);
+        expect(featured[0]!.rating).toBeGreaterThanOrEqual(featured[1]!.rating);
       });
 
       it('getFeaturedPlugins respects limit', () => {

@@ -136,7 +136,7 @@ describe('protocol-evolution', () => {
         currencyType: 'KALON',
       }));
       const msg = { version: v100, senderId: 'alice', receiverId: 'bob', amountMicro: '100' };
-      const result = reg.migrate('trade', msg, v110) as { currencyType: string };
+      const result = reg.migrate('trade', msg, v110) as unknown as { currencyType: string };
       expect(result.currencyType).toBe('KALON');
     });
 
@@ -156,7 +156,7 @@ describe('protocol-evolution', () => {
         metadata: {},
       }));
       const msg = { version: v100, senderId: 'alice', receiverId: 'bob', amountMicro: '50' };
-      const result = reg.migrate('trade', msg, v120) as { metadata: object; currencyType: string };
+      const result = reg.migrate('trade', msg, v120) as unknown as { metadata: object; currencyType: string };
       expect(result.currencyType).toBe('KALON');
       expect(result.metadata).toBeDefined();
     });

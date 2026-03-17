@@ -45,7 +45,7 @@ describe('network-condition-sim', () => {
       t = 1;
       const delivered = sim.tick();
       expect(delivered).toHaveLength(1);
-      expect(delivered[0].payload).toBe('hello');
+      expect(delivered[0]!.payload).toBe('hello');
     });
 
     it('has no drops with perfect profile (loss=0)', () => {
@@ -79,7 +79,7 @@ describe('network-condition-sim', () => {
       });
       const pkts = sim.send('data');
       expect(pkts).toHaveLength(1);
-      expect(pkts[0].dropped).toBe(false);
+      expect(pkts[0]!.dropped).toBe(false);
     });
   });
 
@@ -98,7 +98,7 @@ describe('network-condition-sim', () => {
       });
       const pkts = sim.send('dup-me');
       expect(pkts).toHaveLength(2);
-      expect(pkts[1].duplicated).toBe(true);
+      expect(pkts[1]!.duplicated).toBe(true);
     });
   });
 

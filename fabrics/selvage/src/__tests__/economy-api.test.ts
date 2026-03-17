@@ -95,7 +95,7 @@ describe('economy-api', () => {
     it('single year range returns one record', () => {
       const result = filterLevyRateHistory(LEVY_HISTORY, 2049, 2049);
       expect(result).toHaveLength(1);
-      expect(result[0].year).toBe(2049);
+      expect(result[0]!.year).toBe(2049);
     });
 
     it('returns empty when fromYear > toYear', () => {
@@ -126,17 +126,17 @@ describe('economy-api', () => {
 
     it('includes commons fund balance from last snapshot', () => {
       const records = buildEconomicExport({ giniHistory: GINI_HISTORY, transactions: TX_RECORDS, fundSnapshots: FUND_SNAPSHOTS });
-      expect(records[0].commonsFundBalanceMicro).toBe('20000');
+      expect(records[0]!.commonsFundBalanceMicro).toBe('20000');
     });
 
     it('serializes bigint amounts as strings', () => {
       const records = buildEconomicExport({ giniHistory: GINI_HISTORY, transactions: TX_RECORDS, fundSnapshots: FUND_SNAPSHOTS });
-      expect(typeof records[0].totalVolumeMicro).toBe('string');
+      expect(typeof records[0]!.totalVolumeMicro).toBe('string');
     });
 
     it('handles empty fund snapshots', () => {
       const records = buildEconomicExport({ giniHistory: GINI_HISTORY, transactions: TX_RECORDS, fundSnapshots: [] });
-      expect(records[0].commonsFundBalanceMicro).toBe('0');
+      expect(records[0]!.commonsFundBalanceMicro).toBe('0');
     });
   });
 
