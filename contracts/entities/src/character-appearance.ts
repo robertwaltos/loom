@@ -1,7 +1,7 @@
 /**
  * Character Appearance Contract
  *
- * Describes how a character LOOKS in text form — the semantic bridge
+ * Describes how a character LOOKS in text form ΓÇö the semantic bridge
  * between NPC personality/archetype and visual generation.
  *
  * The Shuttle owns character identity. This contract defines the
@@ -10,13 +10,13 @@
  *
  * Flow:
  *   Shuttle (personality + archetype + traits)
- *     → CharacterAppearance (structured description)
- *       → T2I pipeline (Fal.ai FLUX)
- *         → GeneratedPortrait (image URL + content hash)
- *           → VisualMeshComponent (MetaHuman preset binding)
+ *     ΓåÆ CharacterAppearance (structured description)
+ *       ΓåÆ T2I pipeline (Fal.ai FLUX)
+ *         ΓåÆ GeneratedPortrait (image URL + content hash)
+ *           ΓåÆ VisualMeshComponent (MetaHuman preset binding)
  */
 
-// ── Appearance Description ──────────────────────────────────────
+// ΓöÇΓöÇ Appearance Description ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** Biological sex presentation for visual generation. */
 export type ApparentSex = 'masculine' | 'feminine' | 'androgynous';
@@ -25,10 +25,17 @@ export type ApparentSex = 'masculine' | 'feminine' | 'androgynous';
 export type AgeRange = 'child' | 'adolescent' | 'young-adult' | 'middle-aged' | 'elder' | 'ancient';
 
 /** Body build archetype. */
-export type BodyBuild = 'slight' | 'lean' | 'average' | 'athletic' | 'stocky' | 'heavy' | 'towering';
+export type BodyBuild =
+  | 'slight'
+  | 'lean'
+  | 'average'
+  | 'athletic'
+  | 'stocky'
+  | 'heavy'
+  | 'towering';
 
 /**
- * Structured character appearance — enough detail to drive
+ * Structured character appearance ΓÇö enough detail to drive
  * both T2I prompt construction and MetaHuman preset selection.
  */
 export interface CharacterAppearance {
@@ -41,10 +48,10 @@ export interface CharacterAppearance {
   /** Apparent biological sex presentation. */
   readonly apparentSex: ApparentSex;
 
-  /** Age bracket — drives wrinkle maps, hair graying, posture. */
+  /** Age bracket ΓÇö drives wrinkle maps, hair graying, posture. */
   readonly ageRange: AgeRange;
 
-  /** Body build — drives mesh selection and proportions. */
+  /** Body build ΓÇö drives mesh selection and proportions. */
   readonly bodyBuild: BodyBuild;
 
   /** Skin tone description (e.g., "warm bronze", "pale ivory", "deep ebony"). */
@@ -56,7 +63,7 @@ export interface CharacterAppearance {
   /** Facial feature details. */
   readonly facialFeatures: FacialFeatures;
 
-  /** Distinguishing marks — scars, tattoos, birthmarks. */
+  /** Distinguishing marks ΓÇö scars, tattoos, birthmarks. */
   readonly distinguishingMarks: ReadonlyArray<string>;
 
   /** Clothing/armor style driven by archetype and wealth. */
@@ -105,23 +112,16 @@ export interface AttireDescription {
   readonly condition: 'pristine' | 'well-kept' | 'worn' | 'battle-worn' | 'tattered';
 }
 
-// ── Generation Request & Result ─────────────────────────────────
+// ΓöÇΓöÇ Generation Request & Result ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 /** Image output format. */
 export type ImageFormat = 'png' | 'jpeg' | 'webp';
 
 /** Generation model selection. */
-export type T2IModel =
-  | 'fal-ai/flux-pro/v1.1'
-  | 'fal-ai/flux/dev'
-  | 'fal-ai/flux-pro/v1.1-ultra';
+export type T2IModel = 'fal-ai/flux-pro/v1.1' | 'fal-ai/flux/dev' | 'fal-ai/flux-pro/v1.1-ultra';
 
-/** Image size preset — portrait-oriented for character art. */
-export type ImageSize =
-  | 'portrait_4_3'
-  | 'portrait_3_4'
-  | 'square_hd'
-  | 'square';
+/** Image size preset ΓÇö portrait-oriented for character art. */
+export type ImageSize = 'portrait_4_3' | 'portrait_3_4' | 'square_hd' | 'square';
 
 /**
  * Request to generate a character portrait.
@@ -143,22 +143,22 @@ export interface CharacterImageRequest {
   /** Artistic style modifier (e.g., "fantasy oil painting", "character concept art"). */
   readonly stylePreset: string;
 
-  /** Number of images to generate (1–4). */
+  /** Number of images to generate (1ΓÇô4). */
   readonly numImages: number;
 
   /** Random seed for reproducibility. Omit for random. */
   readonly seed?: number;
 
-  /** Guidance scale for prompt adherence (1.0–20.0, default 3.5). */
+  /** Guidance scale for prompt adherence (1.0ΓÇô20.0, default 3.5). */
   readonly guidanceScale: number;
 
-  /** Number of inference steps (1–50, default 28). */
+  /** Number of inference steps (1ΓÇô50, default 28). */
   readonly inferenceSteps: number;
 
-  /** Negative prompt — things to avoid. */
+  /** Negative prompt ΓÇö things to avoid. */
   readonly negativePrompt?: string;
 
-  /** NPC tier — affects quality budget. */
+  /** NPC tier ΓÇö affects quality budget. */
   readonly npcTier: number;
 
   /** Correlation ID for tracing through the system. */
@@ -191,7 +191,7 @@ export interface CharacterImageResult {
   /** Generation latency in milliseconds. */
   readonly latencyMs: number;
 
-  /** NSFW detection score (0.0–1.0). Rejected if > 0.5. */
+  /** NSFW detection score (0.0ΓÇô1.0). Rejected if > 0.5. */
   readonly nsfwScore: number;
 
   /** Moderation status. */

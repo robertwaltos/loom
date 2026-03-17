@@ -51,6 +51,10 @@ services:
       NODE_ENV: production
       LOOM_HOST: "0.0.0.0"
       LOOM_PORT: "8080"
+      LOOM_GRPC_PORT: "50051"
+      NAKAMA_HOST: nakama
+      NAKAMA_PORT: "7350"
+      NAKAMA_SERVER_KEY: "koydo-loom-server-key-dev"
       PG_HOST: postgres
       PG_PORT: "5432"
       PG_USER: loom
@@ -62,10 +66,36 @@ services:
       - pg_password
     ports:
       - "8080:8080"
+      - "50051:50051"  # gRPC bridge for UE5 clients
     depends_on:
       postgres:
         condition: service_healthy
       redis:
+        condition: service_healthy
+
+  # ── Nakama Game Backend ────────────────────────────────────
+  nakama:
+    image: heroiclabs/nakama:3.22.0
+    restart: unless-stopped
+    entrypoint:
+      - "/bin/sh"
+      - "-ecx"
+      - |
+        /nakama/nakama migrate up --database.address postgres:5432 &&
+        exec /nakama/nakama --config /nakama/data/config.yml
+    environment:
+      NAKAMA_DATABASE_ADDRESS: "postgres:5432"
+      NAKAMA_SOCKET_SERVER_KEY: "koydo-loom-server-key-dev"
+      NAKAMA_SESSION_ENCRYPTION_KEY: "koydo-dev-session-key-32chars!!"
+      NAKAMA_CONSOLE_PASSWORD: "admin"
+    volumes:
+      - ./nakama.yml:/nakama/data/config.yml:ro
+    ports:
+      - "7349:7349"   # gRPC API
+      - "7350:7350"   # HTTP + WebSocket API
+      - "7351:7351"   # Admin console
+    depends_on:
+      postgres:
         condition: service_healthy
 
   # ── OpenTelemetry Collector (optional) ─────────────────────

@@ -21,6 +21,8 @@ spec:
           ports:
             - containerPort: 8080
               name: http
+            - containerPort: 50051
+              name: grpc
           env:
             - name: NODE_ENV
               value: production

@@ -1,0 +1,54 @@
+---
+# K8s ConfigMap for Loom server non-sensitive configuration.
+# Apply with: kubectl apply -f k8s/config.yml
+#
+# Edit the values below to match your deployment environment.
+# Sensitive values (passwords, keys) go in k8s/secrets.yml — NOT here.
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: loom-config
+  namespace: loom
+  labels:
+    app: loom-server
+data:
+  # ── Loom Server ───────────────────────────────────────────────────
+  loom-host: "0.0.0.0"
+  loom-port: "8080"
+  loom-grpc-port: "50051"
+  loom-tick-rate: "20"
+  node-env: "production"
+
+  # ── PostgreSQL ────────────────────────────────────────────────────
+  # Point to your cloud PostgreSQL (RDS, Cloud SQL, Supabase, etc.)
+  pg-host: "postgres.loom.svc.cluster.local"
+  pg-port: "5432"
+  pg-database: "loom"
+
+  # ── Redis ─────────────────────────────────────────────────────────
+  redis-url: "redis://redis.loom.svc.cluster.local:6379"
+
+  # ── Nakama ────────────────────────────────────────────────────────
+  nakama-host: "nakama.loom.svc.cluster.local"
+  nakama-port: "7350"
+
+  # ── Observability ─────────────────────────────────────────────────
+  otel-endpoint: "http://otel-collector.loom.svc.cluster.local:4317"
+  log-level: "info"
+
+---
+# K8s Nakama ConfigMap
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nakama-config
+  namespace: loom
+  labels:
+    app: nakama
+data:
+  nakama-port: "7350"
+  nakama-grpc-port: "7349"
+  nakama-console-port: "7351"
+  pg-host: "postgres.loom.svc.cluster.local"
+  pg-port: "5432"

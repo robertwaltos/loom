@@ -1,0 +1,84 @@
+# Nakama Server Configuration — Koydo Loom
+# https://heroiclabs.com/docs/nakama/getting-started/configuration/
+#
+# Run with:
+#   docker run --rm -it \
+#     -v $(pwd)/nakama.yml:/nakama/data/config.yml \
+#     heroiclabs/nakama --config /nakama/data/config.yml
+#
+# Or via docker-compose (see docker-compose.yml nakama service).
+
+name: koydo-loom
+
+# ─── Server ──────────────────────────────────────────────────────────────────
+server:
+  host: "0.0.0.0"
+  port: 7350                  # HTTP/WebSocket API
+  grpc_port: 7349             # gRPC API (internal service calls)
+  grpc_gateway_port: 7350     # Same port for HTTP/gRPC gateway mux
+
+# ─── Console (admin UI) ──────────────────────────────────────────────────────
+console:
+  port: 7351
+  username: admin
+  password: ""                # REQUIRED: set via NAKAMA_CONSOLE_PASSWORD env var
+  max_message_size_bytes: 4096
+
+# ─── Database ─────────────────────────────────────────────────────────────────
+database:
+  addresses:
+    - "postgres:5432"         # Docker service name; override with NAKAMA_DATABASE_ADDRESS
+  conn_max_lifetime_ms: 600000
+  max_open_conns: 100
+  max_idle_conns: 100
+
+# ─── Socket / Real-time ──────────────────────────────────────────────────────
+socket:
+  server_key: "koydo-loom-server-key"  # Override with NAKAMA_SOCKET_SERVER_KEY in production
+  port: 7350
+  max_message_size_bytes: 65536
+  write_timeout_ms: 10000
+  idle_timeout_ms: 60000
+  ping_period_ms: 15000
+  pong_wait_ms: 25000
+
+# ─── Session tokens ──────────────────────────────────────────────────────────
+session:
+  token_expiry_sec: 86400      # 24 hours
+  refresh_token_expiry_sec: 2592000  # 30 days
+  encryption_key: ""           # REQUIRED: 32-char key, set via NAKAMA_SESSION_ENCRYPTION_KEY
+
+# ─── Runtime modules (TypeScript server-side logic) ──────────────────────────
+runtime:
+  path: "/nakama/data/modules"
+  env:
+    - "LOOM_GRPC_HOST=loom-server"
+    - "LOOM_GRPC_PORT=50051"
+  js_entry_point: "index.js"   # compiled TypeScript modules
+  min_count: 4
+  max_count: 256
+  trace: false
+
+# ─── Leaderboards ────────────────────────────────────────────────────────────
+leaderboard:
+  callback_queue_size: 65536
+  callback_workers: 8
+
+# ─── Matchmaker ───────────────────────────────────────────────────────────────
+matchmaker:
+  max_tickets: 4096
+  interval_sec: 15
+  max_intervals: 4
+
+# ─── Logger ──────────────────────────────────────────────────────────────────
+logger:
+  level: "info"               # debug | info | warn | error
+  stdout: true
+  file: ""                    # "/nakama/data/logs/nakama.log" for file output
+
+# ─── Metrics ─────────────────────────────────────────────────────────────────
+metrics:
+  namespace: "koydo"
+  reporting_freq_sec: 60
+  stackdriver_instrumentation: false
+  prometheus_port: 9100       # Scraped by k8s/deployment.yml Prometheus annotations

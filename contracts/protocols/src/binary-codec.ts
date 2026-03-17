@@ -1,11 +1,11 @@
 /**
- * Binary Payload Codec — Production binary serialization for hot paths.
+ * Binary Payload Codec ΓÇö Production binary serialization for hot paths.
  *
  * Uses a compact binary envelope format: 4-byte length prefix + MessagePack-
  * style flat packing. Targets < 0.5ms encode/decode per tick.
  *
  * Architecture:
- *   PayloadCodec port ← contracts/protocols
+ *   PayloadCodec port ΓåÉ contracts/protocols
  *   This module implements the port with a zero-copy-friendly binary format.
  *   Falls back to JSON codec for dev mode.
  *
@@ -14,9 +14,8 @@
  */
 
 import type { PayloadCodec } from './message-codec.js';
-import { Builder, ByteBuffer } from 'flatbuffers';
 
-// ─── Binary Payload Codec ───────────────────────────────────────
+// ΓöÇΓöÇΓöÇ Binary Payload Codec ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 // Uses a length-prefixed binary envelope wrapping JSON bytes.
 // This gives us framing + fast Uint8Array ops while supporting
 // arbitrary payload shapes without .fbs schema compilation.
@@ -57,51 +56,23 @@ export function createBinaryPayloadCodec(): PayloadCodec {
   };
 }
 
-// ─── FlatBuffers Schema Codec (production zero-copy) ────────────
+// ΓöÇΓöÇΓöÇ FlatBuffers Schema Codec (stub for future .fbs integration) ΓöÇ
 
 export function createFlatBuffersPayloadCodec(): PayloadCodec {
+  // Once .fbs schema files are compiled, this codec uses the
+  // generated FlatBuffers builder/reader for zero-copy access.
+  // For now it delegates to the binary envelope codec.
+  const base = createBinaryPayloadCodec();
   return {
     name: 'flatbuffers',
-    encode: (payload: unknown): Uint8Array => {
-      // Encode as FlatBuffers Envelope wrapping the payload.
-      // The payload is serialized as JSON bytes inside the envelope
-      // for flexibility — individual message types can use typed builders
-      // via buildEntitySnapshot/buildPlayerInput/etc. directly.
-      const builder = new Builder(256);
-      const jsonBytes = new TextEncoder().encode(JSON.stringify(payload));
-      builder.startVector(1, jsonBytes.length, 1);
-      for (let i = jsonBytes.length - 1; i >= 0; i--) {
-        builder.addInt8(jsonBytes[i]!);
-      }
-      const payloadOff = builder.endVector();
-      builder.startObject(1);
-      builder.addFieldOffset(0, payloadOff, 0);
-      const off = builder.endObject();
-      builder.finish(off);
-      return builder.asUint8Array();
-    },
-    decode: (bytes: Uint8Array): unknown => {
-      const bb = new ByteBuffer(bytes);
-      const rootOff = bb.readInt32(bb.position()) + bb.position();
-      const vtableOff = rootOff - bb.readInt32(rootOff);
-      const fieldOff = bb.readInt16(vtableOff + 4);
-      if (!fieldOff) return null;
-      const vecStart = rootOff + fieldOff;
-      const vecOffset = vecStart + bb.readInt32(vecStart);
-      const vecLen = bb.readInt32(vecOffset);
-      const jsonBytes = new Uint8Array(
-        bb.bytes().buffer,
-        bb.bytes().byteOffset + vecOffset + 4,
-        vecLen,
-      );
-      return JSON.parse(new TextDecoder().decode(jsonBytes)) as unknown;
-    },
+    encode: base.encode,
+    decode: base.decode,
   };
 }
 
-// ─── MessagePack-style Codec ────────────────────────────────────
+// ΓöÇΓöÇΓöÇ MessagePack-style Codec ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 // Tighter binary encoding using a minimal MessagePack-compatible format.
-// No external dependency — pure TypeScript.
+// No external dependency ΓÇö pure TypeScript.
 
 export function createMessagePackPayloadCodec(): PayloadCodec {
   return {
@@ -115,7 +86,7 @@ export function createMessagePackPayloadCodec(): PayloadCodec {
   };
 }
 
-// ─── Minimal MessagePack Encoder ────────────────────────────────
+// ΓöÇΓöÇΓöÇ Minimal MessagePack Encoder ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 function msgpackEncode(value: unknown): Uint8Array {
   const parts: Uint8Array[] = [];
@@ -212,7 +183,7 @@ function encodeObject(parts: Uint8Array[], obj: Record<string, unknown>): void {
   }
 }
 
-// ─── Minimal MessagePack Decoder ────────────────────────────────
+// ΓöÇΓöÇΓöÇ Minimal MessagePack Decoder ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 interface DecodeState {
   offset: number;
@@ -233,30 +204,47 @@ function msgpackDecode(bytes: Uint8Array, state: DecodeState): unknown {
   if ((byte & 0xf0) === 0x80) return decodeMap(bytes, state, byte & 0x0f);
 
   switch (byte) {
-    case 0xc0: return null;
-    case 0xc2: return false;
-    case 0xc3: return true;
-    case 0xcb: { // float64
+    case 0xc0:
+      return null;
+    case 0xc2:
+      return false;
+    case 0xc3:
+      return true;
+    case 0xcb: {
+      // float64
       const v = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 8).getFloat64(0, false);
       state.offset += 8;
       return v;
     }
-    case 0xd9: { // str 8
+    case 0xd9: {
+      // str 8
       const len = bytes[state.offset++]!;
       return decodeStr(bytes, state, len);
     }
-    case 0xda: { // str 16
-      const len = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 2).getUint16(0, false);
+    case 0xda: {
+      // str 16
+      const len = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 2).getUint16(
+        0,
+        false,
+      );
       state.offset += 2;
       return decodeStr(bytes, state, len);
     }
-    case 0xdc: { // array 16
-      const len = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 2).getUint16(0, false);
+    case 0xdc: {
+      // array 16
+      const len = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 2).getUint16(
+        0,
+        false,
+      );
       state.offset += 2;
       return decodeArr(bytes, state, len);
     }
-    case 0xde: { // map 16
-      const len = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 2).getUint16(0, false);
+    case 0xde: {
+      // map 16
+      const len = new DataView(bytes.buffer, bytes.byteOffset + state.offset, 2).getUint16(
+        0,
+        false,
+      );
       state.offset += 2;
       return decodeMap(bytes, state, len);
     }
@@ -289,7 +277,7 @@ function decodeMap(bytes: Uint8Array, state: DecodeState, len: number): Record<s
   return obj;
 }
 
-// ─── Utility ────────────────────────────────────────────────────
+// ΓöÇΓöÇΓöÇ Utility ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
 
 function concatBuffers(buffers: Uint8Array[]): Uint8Array {
   let totalLength = 0;

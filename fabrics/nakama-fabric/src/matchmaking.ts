@@ -1,315 +1,291 @@
-/**
- * Matchmaking Engine — Dynasty grouping for co-operative activities.
+﻿/**
+ * matchmaking.ts — ELO-based player matchmaking engine for Koydo bracket play.
  *
- * Dynasties submit tickets specifying activity type, skill range,
- * and world preference. The engine finds compatible matches and
- * forms groups once minimum party size is reached.
+ * Players enqueue into one of four bracket types. The `tick()` method is called
+ * periodically to form matches from players within ±200 ELO of each other
+ * (max spread of 400 points across a group).
  *
- * Match criteria:
- *   - Activity type must match exactly
- *   - Skill ranges must overlap
- *   - World preference is optional (null matches any)
- *
- * Tickets expire after a configurable TTL.
+ * Brackets:
+ *   solo_1v1  — 2 players per match
+ *   duo_2v2   — 4 players per match
+ *   squad_4v4 — 8 players per match
+ *   open_world — 1 player; assigned immediately to least-populated world
  */
 
-// ─── Types ──────────────────────────────────────────────────────────
+// ─── Bracket Types ────────────────────────────────────────────────────────────
 
-export type MatchStatus = 'waiting' | 'matched' | 'expired' | 'cancelled';
+export type BracketType = 'solo_1v1' | 'duo_2v2' | 'squad_4v4' | 'open_world';
 
-export interface MatchTicket {
-  readonly ticketId: string;
-  readonly dynastyId: string;
-  readonly activityType: string;
-  readonly skillMin: number;
-  readonly skillMax: number;
-  readonly worldId: string | null;
-  readonly status: MatchStatus;
-  readonly createdAt: number;
-  readonly expiresAt: number;
+/** Players required to form one match per ELO bracket. */
+export const BRACKET_SIZES: Readonly<Record<Exclude<BracketType, 'open_world'>, number>> = {
+  solo_1v1: 2,
+  duo_2v2: 4,
+  squad_4v4: 8,
+};
+
+/**
+ * Maximum ELO spread within a match group.
+ * "within ±200 ELO" → the lowest and highest rated players may differ by at most 400.
+ */
+export const ELO_SPREAD_LIMIT = 400;
+
+// ─── Port Interfaces ──────────────────────────────────────────────────────────
+
+export interface MatchClock {
+  readonly nowMs: () => number;
 }
 
-export interface SubmitTicketParams {
-  readonly dynastyId: string;
-  readonly activityType: string;
-  readonly skillMin: number;
-  readonly skillMax: number;
-  readonly worldId?: string;
+export interface MatchIdGenerator {
+  readonly generate: () => string;
 }
 
-export interface MatchGroup {
-  readonly groupId: string;
-  readonly activityType: string;
-  readonly ticketIds: ReadonlyArray<string>;
-  readonly dynastyIds: ReadonlyArray<string>;
-  readonly formedAt: number;
+export interface MatchLogger {
+  readonly info: (message: string) => void;
 }
 
-export interface MatchmakingConfig {
-  readonly minGroupSize: number;
-  readonly maxGroupSize: number;
-  readonly ticketTtlUs: number;
+export interface WorldRosterPort {
+  readonly getActivePlayerCount: (worldId: string) => number;
 }
-
-export interface MatchmakingStats {
-  readonly waitingTickets: number;
-  readonly totalSubmitted: number;
-  readonly totalMatched: number;
-  readonly totalExpired: number;
-  readonly totalCancelled: number;
-  readonly groupsFormed: number;
-}
-
-// ─── Ports ──────────────────────────────────────────────────────────
 
 export interface MatchmakingDeps {
-  readonly idGenerator: { next(): string };
-  readonly clock: { nowMicroseconds(): number };
+  readonly clock: MatchClock;
+  readonly idGenerator: MatchIdGenerator;
+  readonly logger: MatchLogger;
+  readonly worldRoster: WorldRosterPort;
+  readonly worldIds: ReadonlyArray<string>;
 }
 
-// ─── Public Interface ───────────────────────────────────────────────
+// ─── Queue Entry ──────────────────────────────────────────────────────────────
+
+export interface QueueEntry {
+  readonly playerId: string;
+  readonly bracketType: BracketType;
+  /** ELO-style integer 0–3000; default 1500. */
+  readonly skillRating: number;
+  readonly queuedAt: number;
+  readonly preferredWorldIds: ReadonlyArray<string>;
+}
+
+// ─── Match Result ─────────────────────────────────────────────────────────────
+
+export interface MatchResult {
+  readonly matchId: string;
+  readonly bracketType: BracketType;
+  readonly playerIds: ReadonlyArray<string>;
+  readonly assignedWorldId: string;
+  readonly estimatedStartMs: number;
+}
+
+// ─── Stats ────────────────────────────────────────────────────────────────────
+
+export interface BracketStats {
+  readonly depth: number;
+  readonly averageWaitMs: number;
+}
+
+export type MatchmakingStats = Readonly<Record<BracketType, BracketStats>>;
+
+// ─── Engine Interface ─────────────────────────────────────────────────────────
 
 export interface MatchmakingEngine {
-  submit(params: SubmitTicketParams): MatchTicket;
-  cancel(ticketId: string): boolean;
-  findMatches(): ReadonlyArray<MatchGroup>;
-  getTicket(ticketId: string): MatchTicket | undefined;
-  getTicketsForDynasty(dynastyId: string): ReadonlyArray<MatchTicket>;
-  sweepExpired(): number;
+  enqueue(entry: QueueEntry): void;
+  dequeue(playerId: string): void;
+  tick(): MatchResult[];
+  getQueueDepth(bracket: BracketType): number;
   getStats(): MatchmakingStats;
 }
 
-// ─── Internal State ─────────────────────────────────────────────────
+// ─── Internal State ───────────────────────────────────────────────────────────
 
-interface MutableTicket {
-  readonly ticketId: string;
-  readonly dynastyId: string;
-  readonly activityType: string;
-  readonly skillMin: number;
-  readonly skillMax: number;
-  readonly worldId: string | null;
-  status: MatchStatus;
-  readonly createdAt: number;
-  readonly expiresAt: number;
-}
+type BracketQueue = Map<string, QueueEntry>;
 
 interface EngineState {
-  readonly tickets: Map<string, MutableTicket>;
-  readonly groups: MatchGroup[];
+  readonly queues: Record<BracketType, BracketQueue>;
   readonly deps: MatchmakingDeps;
-  readonly config: MatchmakingConfig;
-  totalSubmitted: number;
-  totalMatched: number;
-  totalExpired: number;
-  totalCancelled: number;
 }
 
-const DEFAULT_CONFIG: MatchmakingConfig = {
-  minGroupSize: 2,
-  maxGroupSize: 4,
-  ticketTtlUs: 120_000_000, // 2 minutes
-};
+// ─── Factory ──────────────────────────────────────────────────────────────────
 
-// ─── Factory ────────────────────────────────────────────────────────
-
-export function createMatchmakingEngine(
-  deps: MatchmakingDeps,
-  config?: Partial<MatchmakingConfig>,
-): MatchmakingEngine {
+export function createMatchmakingEngine(deps: MatchmakingDeps): MatchmakingEngine {
   const state: EngineState = {
-    tickets: new Map(),
-    groups: [],
+    queues: {
+      solo_1v1: new Map(),
+      duo_2v2: new Map(),
+      squad_4v4: new Map(),
+      open_world: new Map(),
+    },
     deps,
-    config: { ...DEFAULT_CONFIG, ...config },
-    totalSubmitted: 0,
-    totalMatched: 0,
-    totalExpired: 0,
-    totalCancelled: 0,
   };
 
   return {
-    submit: (p) => submitImpl(state, p),
-    cancel: (tid) => cancelImpl(state, tid),
-    findMatches: () => findMatchesImpl(state),
-    getTicket: (tid) => toReadonly(state.tickets.get(tid)),
-    getTicketsForDynasty: (did) => dynastyTickets(state, did),
-    sweepExpired: () => sweepImpl(state),
+    enqueue: (entry) => enqueueImpl(state, entry),
+    dequeue: (playerId) => dequeueImpl(state, playerId),
+    tick: () => tickImpl(state),
+    getQueueDepth: (bracket) => state.queues[bracket].size,
     getStats: () => computeStats(state),
   };
 }
 
-// ─── Submit ─────────────────────────────────────────────────────────
+// ─── Enqueue ──────────────────────────────────────────────────────────────────
 
-function submitImpl(state: EngineState, params: SubmitTicketParams): MatchTicket {
-  const now = state.deps.clock.nowMicroseconds();
-  const ticket: MutableTicket = {
-    ticketId: state.deps.idGenerator.next(),
-    dynastyId: params.dynastyId,
-    activityType: params.activityType,
-    skillMin: params.skillMin,
-    skillMax: params.skillMax,
-    worldId: params.worldId ?? null,
-    status: 'waiting',
-    createdAt: now,
-    expiresAt: now + state.config.ticketTtlUs,
-  };
-  state.tickets.set(ticket.ticketId, ticket);
-  state.totalSubmitted += 1;
-  return toReadonly(ticket) as MatchTicket;
+function enqueueImpl(state: EngineState, entry: QueueEntry): void {
+  state.queues[entry.bracketType].set(entry.playerId, entry);
+  state.deps.logger.info(
+    'enqueue player=' + entry.playerId + ' bracket=' + entry.bracketType + ' elo=' + String(entry.skillRating),
+  );
 }
 
-// ─── Cancel ─────────────────────────────────────────────────────────
+// ─── Dequeue ──────────────────────────────────────────────────────────────────
 
-function cancelImpl(state: EngineState, ticketId: string): boolean {
-  const ticket = state.tickets.get(ticketId);
-  if (ticket === undefined || ticket.status !== 'waiting') return false;
-  ticket.status = 'cancelled';
-  state.totalCancelled += 1;
-  return true;
-}
-
-// ─── Match Finding ──────────────────────────────────────────────────
-
-function findMatchesImpl(state: EngineState): ReadonlyArray<MatchGroup> {
-  const waiting = getWaitingTickets(state);
-  const byActivity = groupByActivity(waiting);
-  const formed: MatchGroup[] = [];
-  for (const [activity, pool] of byActivity.entries()) {
-    formGroupsForActivity(state, activity, pool, formed);
+function dequeueImpl(state: EngineState, playerId: string): void {
+  for (const bracket of ['solo_1v1', 'duo_2v2', 'squad_4v4', 'open_world'] as const) {
+    state.queues[bracket].delete(playerId);
   }
-  return formed;
 }
 
-function getWaitingTickets(state: EngineState): MutableTicket[] {
-  const result: MutableTicket[] = [];
-  for (const ticket of state.tickets.values()) {
-    if (ticket.status === 'waiting') result.push(ticket);
+// ─── Tick ─────────────────────────────────────────────────────────────────────
+
+function tickImpl(state: EngineState): MatchResult[] {
+  const results: MatchResult[] = [];
+  processOpenWorld(state, results);
+  for (const bracket of ['solo_1v1', 'duo_2v2', 'squad_4v4'] as const) {
+    processEloBracket(state, bracket, results);
   }
-  return result;
+  return results;
 }
 
-function groupByActivity(tickets: MutableTicket[]): Map<string, MutableTicket[]> {
-  const map = new Map<string, MutableTicket[]>();
-  for (const t of tickets) {
-    let list = map.get(t.activityType);
-    if (list === undefined) {
-      list = [];
-      map.set(t.activityType, list);
-    }
-    list.push(t);
+// ─── Open World ───────────────────────────────────────────────────────────────
+
+function processOpenWorld(state: EngineState, results: MatchResult[]): void {
+  const queue = state.queues.open_world;
+  const now = state.deps.clock.nowMs();
+  for (const entry of queue.values()) {
+    const worldId = leastPopulatedWorldId(state);
+    const match: MatchResult = {
+      matchId: state.deps.idGenerator.generate(),
+      bracketType: 'open_world',
+      playerIds: [entry.playerId],
+      assignedWorldId: worldId,
+      estimatedStartMs: now,
+    };
+    results.push(match);
+    state.deps.logger.info('open_world match=' + match.matchId + ' player=' + entry.playerId + ' world=' + worldId);
   }
-  return map;
+  queue.clear();
 }
 
-function formGroupsForActivity(
+// ─── ELO Bracket ─────────────────────────────────────────────────────────────
+
+function processEloBracket(
   state: EngineState,
-  activity: string,
-  pool: MutableTicket[],
-  formed: MatchGroup[],
+  bracket: Exclude<BracketType, 'open_world'>,
+  results: MatchResult[],
 ): void {
-  const used = new Set<string>();
-  for (const anchor of pool) {
-    if (used.has(anchor.ticketId)) continue;
-    const compatible = findCompatible(anchor, pool, used, state.config);
-    if (compatible.length < state.config.minGroupSize) continue;
-    formGroup(state, activity, compatible, formed, used);
+  const queue = state.queues[bracket];
+  const size = BRACKET_SIZES[bracket];
+  const sorted = [...queue.values()].sort((a, b) => a.skillRating - b.skillRating);
+  const matched = new Set<string>();
+  const now = state.deps.clock.nowMs();
+
+  for (let i = 0; i < sorted.length; i++) {
+    const anchor = sorted[i];
+    if (anchor === undefined || matched.has(anchor.playerId)) continue;
+
+    const group: QueueEntry[] = [anchor];
+    for (let j = i + 1; j < sorted.length && group.length < size; j++) {
+      const candidate = sorted[j];
+      if (candidate === undefined || matched.has(candidate.playerId)) continue;
+      if (candidate.skillRating - anchor.skillRating > ELO_SPREAD_LIMIT) break;
+      group.push(candidate);
+    }
+
+    if (group.length < size) continue;
+
+    const worldId = selectWorldForGroup(state, group);
+    const match: MatchResult = {
+      matchId: state.deps.idGenerator.generate(),
+      bracketType: bracket,
+      playerIds: group.map((e) => e.playerId),
+      assignedWorldId: worldId,
+      estimatedStartMs: now,
+    };
+    results.push(match);
+
+    for (const entry of group) {
+      matched.add(entry.playerId);
+      queue.delete(entry.playerId);
+    }
+    state.deps.logger.info('match=' + match.matchId + ' bracket=' + bracket);
   }
 }
 
-function findCompatible(
-  anchor: MutableTicket,
-  pool: MutableTicket[],
-  used: Set<string>,
-  config: MatchmakingConfig,
-): MutableTicket[] {
-  const group: MutableTicket[] = [anchor];
-  for (const candidate of pool) {
-    if (group.length >= config.maxGroupSize) break;
-    if (candidate.ticketId === anchor.ticketId) continue;
-    if (used.has(candidate.ticketId)) continue;
-    if (!isCompatible(anchor, candidate)) continue;
-    group.push(candidate);
-  }
-  return group;
-}
+// ─── World Selection ──────────────────────────────────────────────────────────
 
-function isCompatible(a: MutableTicket, b: MutableTicket): boolean {
-  if (a.skillMax < b.skillMin || b.skillMax < a.skillMin) return false;
-  if (a.worldId !== null && b.worldId !== null && a.worldId !== b.worldId) {
-    return false;
-  }
-  return true;
-}
+function leastPopulatedWorldId(state: EngineState): string {
+  const { worldIds, worldRoster } = state.deps;
+  if (worldIds.length === 0) return 'default';
 
-function formGroup(
-  state: EngineState,
-  activity: string,
-  tickets: MutableTicket[],
-  formed: MatchGroup[],
-  used: Set<string>,
-): void {
-  const group: MatchGroup = {
-    groupId: state.deps.idGenerator.next(),
-    activityType: activity,
-    ticketIds: tickets.map((t) => t.ticketId),
-    dynastyIds: tickets.map((t) => t.dynastyId),
-    formedAt: state.deps.clock.nowMicroseconds(),
-  };
-  for (const t of tickets) {
-    t.status = 'matched';
-    used.add(t.ticketId);
-  }
-  state.totalMatched += tickets.length;
-  state.groups.push(group);
-  formed.push(group);
-}
+  let bestId = worldIds[0] ?? 'default';
+  let bestCount = worldRoster.getActivePlayerCount(bestId);
 
-// ─── Queries ────────────────────────────────────────────────────────
-
-function dynastyTickets(state: EngineState, dynastyId: string): ReadonlyArray<MatchTicket> {
-  const result: MatchTicket[] = [];
-  for (const ticket of state.tickets.values()) {
-    if (ticket.dynastyId === dynastyId) {
-      result.push(toReadonly(ticket) as MatchTicket);
+  for (let i = 1; i < worldIds.length; i++) {
+    const wid = worldIds[i];
+    if (wid === undefined) continue;
+    const count = worldRoster.getActivePlayerCount(wid);
+    if (count < bestCount) {
+      bestCount = count;
+      bestId = wid;
     }
   }
-  return result;
+  return bestId;
 }
 
-// ─── Sweep ──────────────────────────────────────────────────────────
-
-function sweepImpl(state: EngineState): number {
-  const now = state.deps.clock.nowMicroseconds();
-  let expired = 0;
-  for (const ticket of state.tickets.values()) {
-    if (ticket.status === 'waiting' && ticket.expiresAt <= now) {
-      ticket.status = 'expired';
-      expired += 1;
+function selectWorldForGroup(state: EngineState, group: ReadonlyArray<QueueEntry>): string {
+  const { worldIds, worldRoster } = state.deps;
+  const preferredSet = new Set<string>();
+  for (const entry of group) {
+    for (const wid of entry.preferredWorldIds) {
+      preferredSet.add(wid);
     }
   }
-  state.totalExpired += expired;
-  return expired;
+
+  const candidates = worldIds.filter((wid) => preferredSet.has(wid));
+  if (candidates.length > 0) {
+    let bestId = candidates[0] ?? 'default';
+    let bestCount = worldRoster.getActivePlayerCount(bestId);
+    for (const wid of candidates) {
+      const count = worldRoster.getActivePlayerCount(wid);
+      if (count < bestCount) {
+        bestCount = count;
+        bestId = wid;
+      }
+    }
+    return bestId;
+  }
+
+  return leastPopulatedWorldId(state);
 }
 
-// ─── Helpers ────────────────────────────────────────────────────────
+// ─── Stats ────────────────────────────────────────────────────────────────────
 
-function toReadonly(ticket: MutableTicket | undefined): MatchTicket | undefined {
-  return ticket;
+function bracketStats(state: EngineState, bracket: BracketType): BracketStats {
+  const queue = state.queues[bracket];
+  const depth = queue.size;
+  if (depth === 0) return { depth: 0, averageWaitMs: 0 };
+
+  const now = state.deps.clock.nowMs();
+  let totalWaitMs = 0;
+  for (const entry of queue.values()) {
+    totalWaitMs += now - entry.queuedAt;
+  }
+  return { depth, averageWaitMs: totalWaitMs / depth };
 }
-
-// ─── Stats ──────────────────────────────────────────────────────────
 
 function computeStats(state: EngineState): MatchmakingStats {
-  let waiting = 0;
-  for (const ticket of state.tickets.values()) {
-    if (ticket.status === 'waiting') waiting += 1;
-  }
   return {
-    waitingTickets: waiting,
-    totalSubmitted: state.totalSubmitted,
-    totalMatched: state.totalMatched,
-    totalExpired: state.totalExpired,
-    totalCancelled: state.totalCancelled,
-    groupsFormed: state.groups.length,
+    solo_1v1: bracketStats(state, 'solo_1v1'),
+    duo_2v2: bracketStats(state, 'duo_2v2'),
+    squad_4v4: bracketStats(state, 'squad_4v4'),
+    open_world: bracketStats(state, 'open_world'),
   };
 }

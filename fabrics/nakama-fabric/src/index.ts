@@ -233,15 +233,18 @@ export type {
   TradeEngineConfig,
   TradeStats,
 } from './trade-engine.js';
-export { createMatchmakingEngine } from './matchmaking.js';
+export { createMatchmakingEngine, BRACKET_SIZES, ELO_SPREAD_LIMIT } from './matchmaking.js';
 export type {
   MatchmakingEngine,
   MatchmakingDeps,
-  MatchmakingConfig,
-  MatchStatus,
-  MatchTicket,
-  SubmitTicketParams,
-  MatchGroup,
+  MatchClock,
+  MatchIdGenerator,
+  MatchLogger,
+  WorldRosterPort,
+  BracketType,
+  QueueEntry,
+  MatchResult,
+  BracketStats,
   MatchmakingStats,
 } from './matchmaking.js';
 export { createInventoryService } from './inventory.js';

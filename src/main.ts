@@ -122,9 +122,31 @@ async function main(): Promise<void> {
   });
   logger.info({}, 'Game orchestrator assembled');
 
+  // 5b. Seed all 9 canonical worlds at boot
+  const { seedAllWorlds } = await import('./world-seed-boot.js');
+  seedAllWorlds(orchestrator, logger);
+
   // 6. Selvage — Fastify WebSocket transport
   const { createFastifyTransport } = await import('@loom/selvage');
-  const transport = createFastifyTransport({ host: env.host, port: env.port });
+  const { createAuthRoutes } = await import('./routes/auth.js');
+  const { createSupportRoutes } = await import('../tools/support/src/support-webhook.js');
+  const transport = createFastifyTransport({
+    host: env.host,
+    port: env.port,
+    routeRegistrars: [
+      createAuthRoutes({
+        nakamaHost: process.env['NAKAMA_HOST'] ?? '127.0.0.1',
+        nakamaPort: parseInt(process.env['NAKAMA_PORT'] ?? '7350', 10),
+        serverKey: process.env['NAKAMA_SERVER_KEY'] ?? 'defaultkey',
+      }),
+      createSupportRoutes({
+        sharedSecret: process.env['SUPPORT_MODERATION_SECRET'] ?? '',
+        ...(process.env['SUPPORT_DISCORD_WEBHOOK_URL']
+          ? { discordWebhookUrl: process.env['SUPPORT_DISCORD_WEBHOOK_URL'] }
+          : {}),
+      }),
+    ],
+  });
 
   // 7. Network server wiring (connection manager, snapshot builder, codec)
   const {

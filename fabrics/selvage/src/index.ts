@@ -635,6 +635,7 @@ export type {
 // ── Phase 1 Infrastructure Adapters ─────────────────────────────
 
 export { createFastifyTransport } from './fastify-transport.js';
+export type { FastifyAppLike, RouteRegistrar } from './fastify-transport.js';
 
 // ── Phase 2 Infrastructure Adapters ─────────────────────────────
 
@@ -819,6 +820,49 @@ export type {
 // ── Voice Chat Rooms ────────────────────────────────────────────
 
 export { createVoiceChatRoomManager, ROOM_CAPACITY, INACTIVE_TIMEOUT_MS } from './voice-chat-rooms.js';
+
+// ── Network Condition Simulator (Phase 17.3) ─────────────────────────────────
+export {
+  createNetworkConditionSim,
+  PROFILE_PERFECT,
+  PROFILE_BROADBAND,
+  PROFILE_4G,
+  PROFILE_3G,
+  PROFILE_SATELLITE,
+  PROFILE_BAD,
+} from './network-condition-sim.js';
+export type { NetworkProfile, NetworkPacket, NetworkSimStats, NetworkConditionSimulator } from './network-condition-sim.js';
+
+// ── Protocol Evolution (Phase 17.3) ──────────────────────────────────────────
+export {
+  createProtocolRegistry,
+  parseVersion,
+  formatVersion,
+  compareVersions as compareProtocolVersions,
+} from './protocol-evolution.js';
+export type { ProtocolVersion, MessageSchema, MigrationFn, ValidationResult, ProtocolRegistry } from './protocol-evolution.js';
+
+// ── Economy API (Open Economy Transparency Layer) ────────────────────────────
+export {
+  filterGiniHistory,
+  filterLevyRateHistory,
+  buildEconomicExport,
+  exportToJSONL,
+  createRateLimitState,
+  checkRateLimit,
+  recordRequest,
+  ACADEMIC_EXPORT_DAILY_LIMIT,
+} from './economy-api.js';
+export type {
+  GiniDataPoint,
+  AggregateTransactionRecord,
+  CommonsFundSnapshot,
+  WealthBand,
+  LevyRateRecord,
+  DynastyTransactionSummary,
+  EconomicExportRecord,
+  RateLimitState,
+} from './economy-api.js';
 export type {
   VoiceClockPort,
   VoiceIdPort,

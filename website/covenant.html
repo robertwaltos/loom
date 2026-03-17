@@ -1,0 +1,2135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Permanence Covenant ΓÇö The Concord</title>
+    <meta
+      name="description"
+      content="The Concord's legal and technical commitment to every player. Seven provisions, one immutable promise: your history is permanent."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ΓöÇΓöÇ Variables ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      :root {
+        --navy: #060d1a;
+        --navy2: #0a1628;
+        --navy3: #0d1f3c;
+        --gold: #b8963e;
+        --gold2: #c9a63a;
+        --gold3: #d4af5a;
+        --gold4: #e8cc80;
+        --white: #eef2f8;
+        --mist: #c4cedc;
+        --slate: #8a9bb5;
+        --dim: #3a4a62;
+        --green: #22c55e;
+        --amber: #f59e0b;
+        --red: #ef4444;
+        --redl: #c08080;
+
+        --font-display: 'Cinzel Decorative', serif;
+        --font-heading: 'Cinzel', serif;
+        --font-body: 'Cormorant Garamond', serif;
+        --font-serif: 'Lora', serif;
+        --font-mono: 'Courier Prime', monospace;
+      }
+
+      /* ΓöÇΓöÇ Reset ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--navy);
+        color: var(--white);
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      /* ΓöÇΓöÇ Canvas starfield ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      #cosmos {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      /* ΓöÇΓöÇ Layout ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .page {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ΓöÇΓöÇ Navigation ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        padding: 18px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(180deg, rgba(6, 13, 26, 0.97) 0%, rgba(6, 13, 26, 0) 100%);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(184, 150, 62, 0.12);
+      }
+
+      .nav-logo {
+        font-family: var(--font-heading);
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--gold3);
+        letter-spacing: 0.22em;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-logo:hover {
+        color: var(--gold4);
+      }
+
+      .nav-back {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--slate);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.2s;
+      }
+
+      .nav-back:hover {
+        color: var(--gold3);
+      }
+
+      .nav-back::before {
+        content: 'ΓåÉ';
+        font-size: 14px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--slate);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: var(--gold3);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        nav {
+          padding: 16px 20px;
+        }
+      }
+
+      /* ΓöÇΓöÇ Status Banner ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .status-banner {
+        position: sticky;
+        top: 57px;
+        z-index: 90;
+        width: 100%;
+        padding: 12px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        transition:
+          background 0.4s,
+          border-color 0.4s;
+        border-bottom: 1px solid transparent;
+      }
+
+      .status-banner.active {
+        background: rgba(34, 197, 94, 0.08);
+        border-color: rgba(34, 197, 94, 0.2);
+        color: var(--green);
+      }
+
+      .status-banner.stressed {
+        background: rgba(245, 158, 11, 0.08);
+        border-color: rgba(245, 158, 11, 0.2);
+        color: var(--amber);
+      }
+
+      .status-banner.triggered {
+        background: rgba(239, 68, 68, 0.08);
+        border-color: rgba(239, 68, 68, 0.2);
+        color: var(--red);
+      }
+
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .status-banner.active .status-dot {
+        background: var(--green);
+        box-shadow: 0 0 8px var(--green);
+      }
+      .status-banner.stressed .status-dot {
+        background: var(--amber);
+        box-shadow: 0 0 8px var(--amber);
+      }
+      .status-banner.triggered .status-dot {
+        background: var(--red);
+        box-shadow: 0 0 8px var(--red);
+      }
+
+      @keyframes pulseDot {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.4;
+        }
+      }
+
+      .status-dot {
+        animation: pulseDot 2s ease infinite;
+      }
+
+      .status-banner-text {
+        flex: 1;
+        text-align: center;
+      }
+      .status-banner-verified {
+        opacity: 0.6;
+        white-space: nowrap;
+      }
+
+      @media (max-width: 600px) {
+        .status-banner {
+          padding: 10px 16px;
+          font-size: 9px;
+        }
+        .status-banner-verified {
+          display: none;
+        }
+      }
+
+      /* ΓöÇΓöÇ Hero ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 40px 80px;
+        border-bottom: 1px solid rgba(184, 150, 62, 0.15);
+      }
+
+      .hero-overline {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 32px;
+        opacity: 0;
+        animation: fadeUp 1s ease 0.2s forwards;
+      }
+
+      .hero-title {
+        font-family: var(--font-display);
+        font-size: clamp(36px, 7vw, 80px);
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+        text-shadow:
+          0 0 80px rgba(184, 150, 62, 0.25),
+          0 2px 40px rgba(0, 0, 0, 0.8);
+        margin-bottom: 16px;
+        opacity: 0;
+        animation: fadeUp 1s ease 0.4s forwards;
+      }
+
+      .hero-title span {
+        display: block;
+        font-size: 0.65em;
+        color: var(--gold3);
+        letter-spacing: 0.12em;
+      }
+
+      .hero-subtitle {
+        font-family: var(--font-heading);
+        font-size: clamp(13px, 2vw, 18px);
+        font-weight: 400;
+        color: var(--gold2);
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 48px;
+        opacity: 0;
+        animation: fadeUp 1s ease 0.6s forwards;
+      }
+
+      .gold-rule {
+        width: 240px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        margin: 0 auto 48px;
+        opacity: 0;
+        animation: fadeUp 1s ease 0.7s forwards;
+      }
+
+      .hero-lead {
+        max-width: 720px;
+        font-family: var(--font-serif);
+        font-size: clamp(17px, 2vw, 21px);
+        font-style: italic;
+        font-weight: 400;
+        color: var(--mist);
+        line-height: 1.85;
+        opacity: 0;
+        animation: fadeUp 1s ease 0.9s forwards;
+      }
+
+      .hero-seal {
+        margin-top: 64px;
+        opacity: 0;
+        animation: fadeUp 1.2s ease 1.1s forwards;
+      }
+
+      .hero-seal svg {
+        width: 72px;
+        height: 72px;
+        filter: drop-shadow(0 0 18px rgba(184, 150, 62, 0.5));
+      }
+
+      /* ΓöÇΓöÇ Sections ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .section {
+        max-width: 940px;
+        margin: 0 auto;
+        padding: 90px 40px;
+        border-bottom: 1px solid rgba(184, 150, 62, 0.08);
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+
+      .section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .section-label {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(22px, 3.5vw, 36px);
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.2;
+        margin-bottom: 28px;
+      }
+
+      .section-body {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--mist);
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      /* ΓöÇΓöÇ Covenant Document ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .covenant-document {
+        background: rgba(10, 22, 40, 0.7);
+        border: 1px solid rgba(184, 150, 62, 0.2);
+        border-left: 4px solid var(--gold);
+        padding: 56px 60px;
+        margin: 48px 0;
+        backdrop-filter: blur(6px);
+      }
+
+      .covenant-document-header {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border-bottom: 1px solid rgba(184, 150, 62, 0.2);
+        padding-bottom: 20px;
+        margin-bottom: 40px;
+      }
+
+      .covenant-preamble {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        font-weight: 400;
+        font-style: italic;
+        color: var(--mist);
+        line-height: 1.9;
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid rgba(184, 150, 62, 0.1);
+      }
+
+      .covenant-article {
+        margin-bottom: 36px;
+      }
+
+      .covenant-article-title {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--gold3);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+      }
+
+      .covenant-article-title::before {
+        content: attr(data-num);
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: rgba(184, 150, 62, 0.5);
+        letter-spacing: 0.05em;
+      }
+
+      .covenant-article-body {
+        font-family: var(--font-serif);
+        font-size: 17px;
+        font-weight: 400;
+        color: var(--slate);
+        line-height: 1.85;
+      }
+
+      .covenant-article-body strong {
+        color: var(--mist);
+        font-weight: 600;
+      }
+
+      @media (max-width: 640px) {
+        .covenant-document {
+          padding: 32px 24px;
+        }
+      }
+
+      /* ΓöÇΓöÇ Seven Provisions ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .provisions-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 48px;
+      }
+
+      @media (max-width: 680px) {
+        .provisions-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .provision-card {
+        border: 1px solid rgba(184, 150, 62, 0.2);
+        border-top: 3px solid var(--gold);
+        background: rgba(13, 31, 60, 0.55);
+        padding: 32px 28px;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(4px);
+        transition:
+          border-color 0.25s,
+          background 0.25s,
+          transform 0.25s;
+      }
+
+      .provision-card:hover {
+        border-color: rgba(184, 150, 62, 0.5);
+        border-top-color: var(--gold4);
+        background: rgba(13, 31, 60, 0.8);
+        transform: translateY(-2px);
+      }
+
+      .provision-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 70px;
+        background: radial-gradient(circle at top right, rgba(184, 150, 62, 0.08), transparent 70%);
+        pointer-events: none;
+      }
+
+      .provision-number {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 14px;
+        display: block;
+      }
+
+      .provision-title {
+        font-family: var(--font-heading);
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1.35;
+        margin-bottom: 14px;
+        letter-spacing: 0.04em;
+      }
+
+      .provision-body {
+        font-family: var(--font-serif);
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--slate);
+        line-height: 1.75;
+      }
+
+      .provision-card.span-two {
+        grid-column: 1 / -1;
+      }
+
+      /* ΓöÇΓöÇ Pull Quote ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .pull-quote {
+        text-align: center;
+        padding: 80px 40px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .pull-quote blockquote {
+        font-family: var(--font-serif);
+        font-size: clamp(20px, 3vw, 28px);
+        font-style: italic;
+        font-weight: 400;
+        color: var(--mist);
+        line-height: 1.75;
+        margin-bottom: 24px;
+        position: relative;
+      }
+
+      .pull-quote blockquote::before {
+        content: '\201C';
+        font-family: var(--font-heading);
+        font-size: 110px;
+        color: rgba(184, 150, 62, 0.1);
+        position: absolute;
+        top: -24px;
+        left: -16px;
+        line-height: 1;
+        pointer-events: none;
+      }
+
+      .pull-quote cite {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        font-style: normal;
+      }
+
+      /* ΓöÇΓöÇ Signature Section ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .signature-section {
+        text-align: center;
+        padding: 72px 40px;
+        border: 1px solid rgba(184, 150, 62, 0.15);
+        background: rgba(10, 22, 40, 0.6);
+        backdrop-filter: blur(6px);
+        margin: 0 auto;
+        max-width: 720px;
+      }
+
+      .signature-label {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 32px;
+      }
+
+      .signature-main {
+        font-family: var(--font-serif);
+        font-size: clamp(18px, 2.5vw, 22px);
+        font-style: italic;
+        color: var(--mist);
+        line-height: 1.8;
+        margin-bottom: 40px;
+      }
+
+      .signature-sigil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        margin-bottom: 32px;
+      }
+
+      .signature-line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(184, 150, 62, 0.4));
+      }
+
+      .signature-line.right {
+        background: linear-gradient(90deg, rgba(184, 150, 62, 0.4), transparent);
+      }
+
+      .signature-name {
+        font-family: var(--font-heading);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--gold3);
+        letter-spacing: 0.15em;
+      }
+
+      .signature-witness {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--slate);
+        line-height: 1.8;
+      }
+
+      .signature-witness strong {
+        color: var(--gold2);
+      }
+
+      /* ΓöÇΓöÇ Witness Form ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .witness-section {
+        max-width: 560px;
+        margin: 0 auto;
+      }
+
+      .witness-form {
+        background: rgba(10, 22, 40, 0.75);
+        border: 1px solid rgba(184, 150, 62, 0.2);
+        padding: 48px;
+        backdrop-filter: blur(6px);
+        margin-top: 40px;
+      }
+
+      .witness-intro {
+        font-family: var(--font-serif);
+        font-size: 17px;
+        font-style: italic;
+        color: var(--slate);
+        line-height: 1.75;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .witness-input-group {
+        margin-bottom: 24px;
+      }
+
+      .witness-label {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 10px;
+      }
+
+      .witness-input {
+        width: 100%;
+        background: rgba(6, 13, 26, 0.8);
+        border: 1px solid rgba(184, 150, 62, 0.25);
+        color: var(--white);
+        font-family: var(--font-serif);
+        font-size: 17px;
+        padding: 14px 18px;
+        outline: none;
+        transition: border-color 0.2s;
+      }
+
+      .witness-input:focus {
+        border-color: rgba(184, 150, 62, 0.6);
+      }
+
+      .witness-input::placeholder {
+        color: var(--dim);
+        font-style: italic;
+      }
+
+      .witness-btn {
+        width: 100%;
+        background: rgba(184, 150, 62, 0.1);
+        border: 1px solid rgba(184, 150, 62, 0.4);
+        color: var(--gold3);
+        font-family: var(--font-heading);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 16px 24px;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          border-color 0.2s,
+          color 0.2s;
+        margin-top: 8px;
+      }
+
+      .witness-btn:hover {
+        background: rgba(184, 150, 62, 0.2);
+        border-color: rgba(184, 150, 62, 0.7);
+        color: var(--gold4);
+      }
+
+      .witness-btn:active {
+        background: rgba(184, 150, 62, 0.3);
+      }
+
+      .witness-confirmation {
+        display: none;
+        text-align: center;
+        padding: 32px 0 0;
+        border-top: 1px solid rgba(184, 150, 62, 0.12);
+        margin-top: 32px;
+      }
+
+      .witness-confirmation.visible {
+        display: block;
+      }
+
+      .witness-confirmation-icon {
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+
+      .witness-confirmation-text {
+        font-family: var(--font-serif);
+        font-size: 17px;
+        font-style: italic;
+        color: var(--mist);
+        line-height: 1.75;
+      }
+
+      .witness-confirmation-name {
+        font-family: var(--font-heading);
+        font-size: 15px;
+        color: var(--gold3);
+        letter-spacing: 0.1em;
+        margin-top: 12px;
+      }
+
+      @media (max-width: 600px) {
+        .witness-form {
+          padding: 32px 24px;
+        }
+      }
+
+      /* ΓöÇΓöÇ On-chain Proof ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .hash-display {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: rgba(184, 150, 62, 0.65);
+        letter-spacing: 0.08em;
+        word-break: break-all;
+        max-width: 680px;
+        margin: 0 auto 40px;
+        line-height: 2.2;
+        border: 1px solid rgba(184, 150, 62, 0.15);
+        padding: 28px 32px;
+        background: rgba(10, 22, 40, 0.8);
+        backdrop-filter: blur(4px);
+      }
+
+      .hash-display .hash-row {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 4px;
+      }
+
+      .hash-display .hash-key {
+        color: var(--gold2);
+        min-width: 180px;
+        flex-shrink: 0;
+      }
+
+      .hash-display .hash-val {
+        color: rgba(196, 206, 220, 0.7);
+      }
+
+      @media (max-width: 640px) {
+        .hash-display {
+          padding: 20px;
+          font-size: 10px;
+        }
+        .hash-display .hash-row {
+          flex-direction: column;
+          gap: 2px;
+          margin-bottom: 12px;
+        }
+        .hash-display .hash-key {
+          min-width: unset;
+        }
+      }
+
+      /* ΓöÇΓöÇ Articles (from covenant doc) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .articles-list {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        margin-top: 40px;
+      }
+
+      .article-card {
+        display: grid;
+        grid-template-columns: 60px 1fr;
+        gap: 0 28px;
+        border: 1px solid rgba(184, 150, 62, 0.12);
+        background: rgba(13, 31, 60, 0.5);
+        padding: 32px 36px;
+        backdrop-filter: blur(4px);
+        transition:
+          border-color 0.25s,
+          background 0.25s;
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease,
+          border-color 0.25s,
+          background 0.25s;
+      }
+
+      .article-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .article-card:hover {
+        border-color: rgba(184, 150, 62, 0.35);
+        background: rgba(13, 31, 60, 0.8);
+      }
+
+      .article-numeral {
+        font-family: var(--font-heading);
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--gold);
+        opacity: 0.35;
+        line-height: 1;
+        padding-top: 4px;
+      }
+
+      .article-content {
+      }
+
+      .article-title {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--gold3);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .article-text {
+        font-family: var(--font-serif);
+        font-size: 17px;
+        color: var(--slate);
+        line-height: 1.8;
+      }
+
+      .article-text strong {
+        color: var(--mist);
+      }
+
+      @media (max-width: 560px) {
+        .article-card {
+          grid-template-columns: 1fr;
+          gap: 8px;
+          padding: 24px 20px;
+        }
+        .article-numeral {
+          font-size: 22px;
+        }
+      }
+
+      /* ΓöÇΓöÇ TOS Block ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .tos-block {
+        background: rgba(10, 22, 40, 0.85);
+        border: 1px solid rgba(184, 150, 62, 0.2);
+        padding: 48px 52px;
+        margin: 48px 0;
+        backdrop-filter: blur(8px);
+      }
+
+      .tos-block-header {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--gold);
+        border-bottom: 1px solid rgba(184, 150, 62, 0.2);
+        padding-bottom: 16px;
+        margin-bottom: 36px;
+      }
+
+      .tos-clause {
+        margin-bottom: 32px;
+      }
+
+      .tos-clause:last-child {
+        margin-bottom: 0;
+      }
+
+      .tos-clause-num {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--gold2);
+        letter-spacing: 0.2em;
+        margin-bottom: 10px;
+      }
+
+      .tos-clause-text {
+        font-family: var(--font-serif);
+        font-size: 16px;
+        color: var(--slate);
+        line-height: 1.85;
+      }
+
+      .tos-clause-text strong {
+        color: var(--mist);
+        font-weight: 600;
+      }
+
+      .tos-clause-text em {
+        font-style: italic;
+      }
+
+      @media (max-width: 640px) {
+        .tos-block {
+          padding: 28px 20px;
+        }
+      }
+
+      /* ΓöÇΓöÇ Timeline ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .timeline {
+        position: relative;
+        margin: 48px 0;
+        padding-left: 52px;
+      }
+
+      .timeline::before {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 8px;
+        bottom: 8px;
+        width: 1px;
+        background: linear-gradient(180deg, transparent, var(--gold), var(--gold), transparent);
+        opacity: 0.25;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -44px;
+        top: 6px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--gold);
+        box-shadow: 0 0 10px rgba(184, 150, 62, 0.5);
+      }
+
+      .timeline-label {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 6px;
+      }
+
+      .timeline-text {
+        font-family: var(--font-serif);
+        font-size: 17px;
+        color: var(--mist);
+        line-height: 1.75;
+      }
+
+      /* ΓöÇΓöÇ Death Protocol ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      .death-protocol {
+        background: rgba(122, 26, 26, 0.07);
+        border: 1px solid rgba(122, 26, 26, 0.25);
+        border-left: 4px solid rgba(200, 80, 80, 0.6);
+        padding: 48px 52px;
+        margin: 48px 0;
+        backdrop-filter: blur(4px);
+      }
+
+      .death-label {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: rgba(200, 80, 80, 0.65);
+        margin-bottom: 20px;
+      }
+
+      .death-title {
+        font-family: var(--font-heading);
+        font-size: clamp(18px, 2.5vw, 26px);
+        font-weight: 700;
+        color: #e8a0a0;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .death-text {
+        font-family: var(--font-serif);
+        font-size: 17px;
+        color: #c4a0a0;
+        line-height: 1.85;
+        margin-bottom: 20px;
+      }
+
+      .death-steps {
+        list-style: none;
+        margin: 24px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .death-steps li {
+        display: grid;
+        grid-template-columns: 28px 1fr;
+        gap: 14px;
+        font-family: var(--font-serif);
+        font-size: 16px;
+        color: #c4a0a0;
+        line-height: 1.75;
+      }
+
+      .death-steps li .step-num {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: rgba(200, 80, 80, 0.55);
+        padding-top: 3px;
+      }
+
+      .death-steps li strong {
+        color: #e0b0b0;
+      }
+
+      .death-emphasis {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        font-style: italic;
+        color: #e0a0a0;
+        border-top: 1px solid rgba(200, 80, 80, 0.15);
+        padding-top: 24px;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 640px) {
+        .death-protocol {
+          padding: 28px 20px;
+        }
+      }
+
+      /* ΓöÇΓöÇ Footer ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      footer {
+        text-align: center;
+        padding: 64px 40px;
+        border-top: 1px solid rgba(184, 150, 62, 0.12);
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-emblem {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--gold);
+        letter-spacing: 0.25em;
+        margin-bottom: 16px;
+      }
+
+      .footer-text {
+        font-family: var(--font-serif);
+        font-size: 16px;
+        color: var(--slate);
+        line-height: 1.85;
+        max-width: 560px;
+        margin: 0 auto 32px;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 36px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--gold2);
+        text-decoration: none;
+        opacity: 0.65;
+        transition: opacity 0.2s;
+      }
+
+      .footer-links a:hover {
+        opacity: 1;
+      }
+
+      /* ΓöÇΓöÇ Animations ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes glowPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 8px rgba(184, 150, 62, 0.2);
+        }
+        50% {
+          box-shadow: 0 0 20px rgba(184, 150, 62, 0.45);
+        }
+      }
+
+      /* ΓöÇΓöÇ Responsive ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      @media (max-width: 480px) {
+        .section {
+          padding: 60px 20px;
+        }
+        .hero {
+          padding: 100px 20px 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Starfield canvas -->
+    <canvas id="cosmos"></canvas>
+
+    <!-- ΓöÇΓöÇ Navigation ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <nav>
+      <a href="index.html" class="nav-logo">The Concord</a>
+      <ul class="nav-links">
+        <li><a href="#covenant">The Covenant</a></li>
+        <li><a href="#provisions">Provisions</a></li>
+        <li><a href="#tos">Terms</a></li>
+        <li><a href="#witness">Witness</a></li>
+        <li><a href="#proof">On-Chain</a></li>
+      </ul>
+      <a href="index.html" class="nav-back">Back to Main</a>
+    </nav>
+
+    <!-- ΓöÇΓöÇ Status Banner ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <div class="status-banner active" id="statusBanner" role="status" aria-live="polite">
+      <div class="status-dot"></div>
+      <span class="status-banner-text" id="statusMessage"
+        >All covenant conditions met. The Chronicle continues.</span
+      >
+      <span class="status-banner-verified" id="statusVerified">Verified: loadingΓÇª</span>
+    </div>
+
+    <div class="page">
+      <!-- ΓöÇΓöÇ Hero ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="hero" aria-label="Permanence Covenant introduction">
+        <p class="hero-overline">The Concord ┬╖ Founding Document ┬╖ Ratified Year Zero</p>
+        <h1 class="hero-title">
+          The Permanence
+          <span>Covenant</span>
+        </h1>
+        <p class="hero-subtitle">A promise made to every player. Forever.</p>
+        <div class="gold-rule" aria-hidden="true"></div>
+        <p class="hero-lead">
+          The Concord is not a game with an ending. It is a civilisation with a memory. Everything
+          that happens inside it ΓÇö every world founded, every dynasty built, every sacrifice
+          recorded ΓÇö is committed permanently, publicly, and irrevocably. These are not marketing
+          promises. They are structural commitments, enforced by architecture and immutable code,
+          not by goodwill.
+        </p>
+        <div class="hero-seal" aria-hidden="true">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle
+              cx="50"
+              cy="50"
+              r="46"
+              stroke="#B8963E"
+              stroke-width="1.5"
+              stroke-dasharray="4 3"
+            />
+            <circle cx="50" cy="50" r="36" stroke="#B8963E" stroke-width="0.75" opacity="0.5" />
+            <path
+              d="M50 14 L56 34 L76 34 L60 46 L66 66 L50 54 L34 66 L40 46 L24 34 L44 34 Z"
+              fill="none"
+              stroke="#B8963E"
+              stroke-width="1.2"
+              opacity="0.8"
+            />
+            <circle cx="50" cy="50" r="5" fill="#B8963E" opacity="0.6" />
+          </svg>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ The Covenant Document ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="covenant" aria-label="Covenant document text">
+        <span class="section-label">The Full Document</span>
+        <h2 class="section-title">The Permanence Covenant</h2>
+        <p class="section-body">
+          The following is the complete and ratified text of the Permanence Covenant. It is
+          reproduced here in full and without modification. The canonical version is recorded
+          on-chain at the address below.
+        </p>
+
+        <div class="covenant-document" role="document" aria-label="Permanence Covenant full text">
+          <div class="covenant-document-header">
+            The Concord ΓÇö Permanence Covenant ΓÇö Canonical Document ΓÇö Version 1.0 ΓÇö Ratified Year
+            Zero
+          </div>
+
+          <p class="covenant-preamble">
+            We, the founders of The Concord, make this Covenant with every person who chooses to
+            build a life within it. A civilisation is nothing without its memory. A game is nothing
+            without the trust of those who play it. We do not ask for your trust. We make it
+            structurally impossible to betray it. The following provisions are not aspirational.
+            They are technical commitments, legally binding, enforced by cryptographic architecture,
+            witnessed by the community, and irrevocable from the moment of ratification.
+          </p>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. I">
+              The World's History Is Permanent
+            </div>
+            <div class="covenant-article-body">
+              Nothing that has happened in The Concord will ever be erased, retconned, or reset. A
+              world founded in Year Zero remains founded in Year Zero. A dynasty that defended a
+              Lattice gate remains in the Remembrance as its defenders for as long as any
+              infrastructure exists to serve the record. There are <strong>no server wipes</strong>.
+              There is <strong>no rollback</strong>. The Concord has no undo.
+            </div>
+          </div>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. II">Dynasty NFTs Are Permanent</div>
+            <div class="covenant-article-body">
+              Every significant achievement ΓÇö First Contact, World Founding, Gate Defence,
+              Ascendancy Survival ΓÇö is minted as a Dynasty NFT on the Concord Chain. If the game
+              ever shuts down, a migration protocol activates automatically, moving all Dynasty NFTs
+              to a public Ethereum contract where they remain as
+              <strong>historical artefacts in perpetuity</strong>. No action required from the
+              player. The contract is already deployed.
+            </div>
+          </div>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. III">
+              The Remembrance Is Open to All
+            </div>
+            <div class="covenant-article-body">
+              The full historical record of The Concord ΓÇö every settled world, every founding
+              declaration, every recorded death, every dynasty lineage, every Covenant violation ΓÇö
+              is publicly readable
+              <strong
+                >without a subscription, without an account, without any barrier whatsoever</strong
+              >. You do not need to play The Concord to read its history. The Remembrance is not a
+              feature. It is humanity's record of its second civilisation.
+            </div>
+          </div>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. IV">
+              The Source Code Returns to the Commons
+            </div>
+            <div class="covenant-article-body">
+              If The Concord ever fully shuts down ΓÇö all servers offline, all development ceased ΓÇö
+              the complete engine source code is released to the community under an open licence
+              within <strong>30 days</strong>. The community may run the Concord on its own
+              infrastructure. The world does not die because the company does. This commitment is
+              <strong>irrevocable</strong>.
+            </div>
+          </div>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. V">The Assembly Continues</div>
+            <div class="covenant-article-body">
+              If all human operators withdraw from The Concord, the Assembly ΓÇö The Concord's
+              governance body ΓÇö shall continue under AI stewardship, maintaining the world's rules
+              and precedents as established by the player community. Governance shall not cease
+              because the studio ceases.
+            </div>
+          </div>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. VI">
+              Player Dynasties Are Protected
+            </div>
+            <div class="covenant-article-body">
+              No player dynasty shall be deleted, forcibly merged, or structurally altered without
+              the express written consent of the player who founded it, or their designated heir.
+              Dynasty records persist in the Remembrance regardless of account status, subscription
+              lapse, or game shutdown.
+              <strong>Your legacy belongs to you.</strong>
+            </div>
+          </div>
+
+          <div class="covenant-article">
+            <div class="covenant-article-title" data-num="ART. VII">
+              The Architect's Accountability
+            </div>
+            <div class="covenant-article-body">
+              The Architect ΓÇö the studio's lead custodian ΓÇö shall publish a public quarterly report
+              on the state of all Covenant provisions: compliance status, any stress indicators, and
+              any actions taken to preserve the Covenant's integrity. These reports shall remain
+              <strong>permanently publicly accessible</strong>, archived in the Remembrance and
+              on-chain.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Pull Quote ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="pull-quote section" aria-label="Founding statement quote">
+        <blockquote>
+          "You are not renting a world. You are not leasing a legacy. What you build in The Concord
+          belongs to you ΓÇö and to history ΓÇö for as long as there are humans to remember it."
+        </blockquote>
+        <cite>ΓÇö The Concord Founding Statement, Year Zero</cite>
+      </section>
+
+      <!-- ΓöÇΓöÇ The Seven Provisions ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="provisions" aria-label="The seven covenant provisions">
+        <span class="section-label">The Seven Provisions</span>
+        <h2 class="section-title">What The Covenant Guarantees</h2>
+        <p class="section-body">
+          Seven structural guarantees. Each enforced by architecture, contract, and cryptographic
+          proof. Not by the goodwill of a company.
+        </p>
+
+        <div class="provisions-grid">
+          <div class="provision-card">
+            <span class="provision-number">Provision I</span>
+            <div class="provision-title">The Chronicle Shall Not Be Deleted</div>
+            <div class="provision-body">
+              The full historical record of The Concord ΓÇö every event, every death, every dynasty,
+              every world founded ΓÇö is committed to an append-only hash chain. Not even the studio
+              can rewrite confirmed history. The Remembrance does not have an erase function.
+            </div>
+          </div>
+
+          <div class="provision-card">
+            <span class="provision-number">Provision II</span>
+            <div class="provision-title">The MARKS Shall Remain With Their Holders</div>
+            <div class="provision-body">
+              Dynasty NFTs and achievement MARKS live in player wallets on a public chain. If every
+              Concord server goes dark tonight, every player wakes up tomorrow with their MARKS
+              intact, unaffected, and permanently readable by any Ethereum-compatible explorer.
+            </div>
+          </div>
+
+          <div class="provision-card">
+            <span class="provision-number">Provision III</span>
+            <div class="provision-title">
+              The Source Code Shall Be Released If The Studio Ceases Operation
+            </div>
+            <div class="provision-body">
+              If The Concord Studio ceases operation permanently, the full engine source is released
+              under Apache 2.0 within 30 days. A migration bond held in independent escrow executes
+              automatically if this deadline is missed. The community can run The Concord without
+              us.
+            </div>
+          </div>
+
+          <div class="provision-card">
+            <span class="provision-number">Provision IV</span>
+            <div class="provision-title">
+              The Assembly Shall Continue With AI Governance If All Humans Withdraw
+            </div>
+            <div class="provision-body">
+              The governance of The Concord ΓÇö its laws, its precedents, its Assembly ΓÇö continues
+              under AI stewardship if the studio fully withdraws. The world's rules are not stored
+              in a human mind or a company policy document. They are encoded in the Covenant itself.
+            </div>
+          </div>
+
+          <div class="provision-card">
+            <span class="provision-number">Provision V</span>
+            <div class="provision-title">
+              The Founding Families' Historical Advantage Shall Be Documented Permanently
+            </div>
+            <div class="provision-body">
+              Early players hold genuine historical advantage: earlier founding dates, rarer MARKS,
+              deeper Remembrance records. This is acknowledged openly and recorded permanently. The
+              Concord does not pretend the past is neutral. First is first. The Remembrance
+              remembers.
+            </div>
+          </div>
+
+          <div class="provision-card">
+            <span class="provision-number">Provision VI</span>
+            <div class="provision-title">
+              Player Dynasties Shall Not Be Deleted Without Player Consent
+            </div>
+            <div class="provision-body">
+              No dynasty is erased. An absent player's dynasty enters Legacy status ΓÇö AI-governed,
+              historically preserved, still part of the world. Deletion requires the express consent
+              of the founding player or their designated heir. The Remembrance holds the record
+              regardless.
+            </div>
+          </div>
+
+          <div class="provision-card span-two">
+            <span class="provision-number">Provision VII</span>
+            <div class="provision-title">
+              The Architect's Quarterly Reports Shall Remain Public Permanently
+            </div>
+            <div class="provision-body">
+              Every 90 days, the Architect publishes the Covenant Compliance Report: current status
+              of all seven provisions, any stress indicators detected, and any corrective actions
+              taken. These reports are archived in the Remembrance and recorded on-chain. They
+              cannot be deleted. You can read the first report from Year Zero in the same place you
+              read today's report: permanently.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Articles (full detail) ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="articles" aria-label="Covenant articles detail">
+        <span class="section-label">Articles I ΓÇô IV ┬╖ The Four Pillars</span>
+        <h2 class="section-title">Structural Commitments</h2>
+        <p class="section-body">
+          The four founding articles are the structural core. Each is technically enforced so that
+          no single party ΓÇö including the developers ΓÇö can unilaterally violate it.
+        </p>
+
+        <div class="articles-list">
+          <div class="article-card">
+            <div class="article-numeral">I</div>
+            <div class="article-content">
+              <div class="article-title">The World's History Is Permanent</div>
+              <div class="article-text">
+                Nothing that has happened in The Concord will ever be erased, retconned, or reset. A
+                world founded in Year Zero remains founded in Year Zero. A dynasty that defended a
+                Lattice gate remains in the Remembrance as its defenders. The battle of Sylvara
+                happened. The fall of Nocturn happened. History does not reset because it is
+                inconvenient. There are <strong>no server wipes</strong>. There is
+                <strong>no rollback</strong>. The Concord has no undo.
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-numeral">II</div>
+            <div class="article-content">
+              <div class="article-title">Dynasty NFTs Are Permanent</div>
+              <div class="article-text">
+                Every significant achievement ΓÇö First Contact, World Founding, Gate Defence,
+                Ascendancy Survival ΓÇö is minted as a Dynasty NFT on the Concord Chain. If the game
+                ever shuts down, a migration protocol activates automatically, moving all Dynasty
+                NFTs to a public Ethereum contract where they remain as
+                <strong>historical artefacts in perpetuity</strong>. No action required from the
+                player. The contract is already deployed. It waits, as the Concord waited for you.
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-numeral">III</div>
+            <div class="article-content">
+              <div class="article-title">The Remembrance Is Open to All</div>
+              <div class="article-text">
+                The full historical record of The Concord ΓÇö every settled world, every founding
+                declaration, every recorded death, every dynasty lineage, every Covenant violation ΓÇö
+                is publicly readable
+                <strong
+                  >without a subscription, without an account, without any barrier
+                  whatsoever</strong
+                >. You do not need to play The Concord to read its history. The Remembrance is not a
+                feature. It is humanity's record of its second civilisation.
+              </div>
+            </div>
+          </div>
+
+          <div class="article-card">
+            <div class="article-numeral">IV</div>
+            <div class="article-content">
+              <div class="article-title">The Source Code Returns to the Commons</div>
+              <div class="article-text">
+                If The Concord ever fully shuts down ΓÇö all servers offline, all development ceased ΓÇö
+                the complete engine source code is released to the community under an open licence
+                within <strong>30 days</strong>. The community may run the Concord on its own
+                infrastructure. The world does not die because the company does. This commitment is
+                not contingent on commercial outcome. It is the condition of building this game at
+                all.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Digital Mortality ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="mortality" aria-label="Digital mortality protocol">
+        <span class="section-label">Article V ┬╖ The Succession Doctrine</span>
+        <h2 class="section-title">On Absence and Legacy</h2>
+        <p class="section-body">
+          The Concord exists in real time. Players live, play, pause, and return. The world
+          continues whether they are present or not. The Succession Doctrine governs what happens to
+          a dynasty during its player's absence.
+        </p>
+
+        <div class="death-protocol" role="note" aria-label="Digital mortality protocol">
+          <div class="death-label">Article V ΓÇö Doctrine of Digital Mortality</div>
+          <div class="death-title">On the Nature of Digital Mortality</div>
+
+          <p class="death-text">
+            The Concord does not pretend that absence is neutral. In a civilisation where time moves
+            forward and history accumulates, choosing not to participate has consequences ΓÇö as it
+            does in every civilisation that has ever existed. The Digital Mortality Protocol
+            codifies this truth with precision and without cruelty.
+          </p>
+
+          <p class="death-text">
+            When a player's account lapses beyond
+            <strong>90 days without payment or activity</strong>, the following sequence activates:
+          </p>
+
+          <ul class="death-steps">
+            <li>
+              <span class="step-num">01</span>
+              <span>
+                The player's active character is formally recorded as <strong>Deceased</strong> in
+                the Remembrance ΓÇö their name, their dynasty's history, their last known location and
+                action, all committed to the permanent record with a date of departure.
+              </span>
+            </li>
+            <li>
+              <span class="step-num">02</span>
+              <span>
+                All personal liquid assets ΓÇö CONCORDIUM holdings, undeployed credits, personal
+                inventory items ΓÇö are dissolved into the game's Universal Prosperity Allocation
+                pool, distributed as a fractional increase across all active citizens. The wealth of
+                the departed becomes the sustenance of the living.
+              </span>
+            </li>
+            <li>
+              <span class="step-num">03</span>
+              <span>
+                World Sovereignty, if held, passes to the established Regent under Legacy Dynasty
+                protocol. The dynasty continues. The sovereign line continues. Only the player is
+                gone.
+              </span>
+            </li>
+            <li>
+              <span class="step-num">04</span>
+              <span>
+                The player's Dynasty NFTs remain in their wallet ΓÇö
+                <strong>permanent, untouched, theirs forever</strong>. Digital death does not erase
+                legacy. The Remembrance keeps the record regardless of account status.
+              </span>
+            </li>
+            <li>
+              <span class="step-num">05</span>
+              <span>
+                If the player returns and creates a new account, <strong>they begin again</strong>.
+                A new character. A new family. A new beginning. The old dynasty exists in the
+                Remembrance as history ΓÇö legible, honourable, complete. It cannot be reclaimed. It
+                was its own story. This one is new.
+              </span>
+            </li>
+          </ul>
+
+          <p class="death-emphasis">
+            "In the Concord, as in life: what you built matters. What you left behind matters. And
+            who comes after you ΓÇö that matters most of all."
+          </p>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Formal TOS ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="tos" aria-label="Terms of service provisions">
+        <span class="section-label">Legal Provisions ΓÇö Schedule C</span>
+        <h2 class="section-title">Formal Terms of Service Language</h2>
+        <p class="section-body">
+          The following clauses are incorporated into The Concord's Terms of Service as binding
+          provisions. Reproduced here for public transparency.
+        </p>
+
+        <div class="tos-block" role="document" aria-label="TOS Schedule C">
+          <div class="tos-block-header">
+            The Concord ΓÇö Terms of Service ΓÇö Permanence Provisions (Schedule C)
+          </div>
+
+          <div class="tos-clause">
+            <div class="tos-clause-num">┬º C.1 ΓÇö World History Immutability</div>
+            <div class="tos-clause-text">
+              The operator warrants that no game event, player action, or world history entry
+              confirmed and recorded in the Remembrance shall be retroactively altered, deleted, or
+              recontextualised by any party, including the operator, without the affirmative consent
+              of a supermajority (67%) of the Player Council.
+              <strong>Operator may not unilaterally rewrite confirmed history.</strong>
+              Emergency corrections for technical error are permitted within 48 hours of recording
+              only, subject to public disclosure.
+            </div>
+          </div>
+
+          <div class="tos-clause">
+            <div class="tos-clause-num">┬º C.2 ΓÇö Dynasty NFT Migration Guarantee</div>
+            <div class="tos-clause-text">
+              In the event of permanent service termination, operator shall execute the NFT
+              Migration Protocol within 30 calendar days, transferring all registered Dynasty NFTs
+              to the public Ethereum migration contract.
+              <strong>This obligation survives corporate dissolution</strong> and is secured by a
+              migration bond held in independent escrow. Failure to migrate triggers automatic bond
+              execution.
+            </div>
+          </div>
+
+          <div class="tos-clause">
+            <div class="tos-clause-num">┬º C.3 ΓÇö Remembrance Public Access</div>
+            <div class="tos-clause-text">
+              The Remembrance API shall remain publicly accessible without authentication or fee for
+              a minimum of <strong>10 years following any service termination</strong>, funded by
+              the Remembrance Preservation Reserve (minimum 2% of gross revenue annually). Access
+              includes full read access to all historical records, dynasty lineages, world
+              histories, and Covenant violation logs.
+            </div>
+          </div>
+
+          <div class="tos-clause">
+            <div class="tos-clause-num">┬º C.4 ΓÇö Source Code Release Obligation</div>
+            <div class="tos-clause-text">
+              Upon permanent service termination, operator shall release the complete engine source
+              code under the Apache 2.0 open-source licence within 30 calendar days. Release shall
+              include sufficient documentation for a technically competent third party to operate a
+              functional instance of The Concord. <strong>This obligation is irrevocable.</strong>
+            </div>
+          </div>
+
+          <div class="tos-clause">
+            <div class="tos-clause-num">┬º C.5 ΓÇö Digital Mortality Protocol (Account Lapse)</div>
+            <div class="tos-clause-text">
+              Accounts with no payment activity for <strong>90 consecutive calendar days</strong>
+              shall be processed under the Digital Mortality Protocol: (a) the active character
+              record shall be updated to Deceased status in the Remembrance; (b) all liquid in-game
+              assets shall be dissolved into the UPA distribution pool; (c) World Sovereignty
+              transfers to Legacy Dynasty Regent status; (d)
+              <strong
+                >Dynasty NFTs are not affected and remain in the player's registered wallet</strong
+              >; (e) upon account reactivation after lapse, the player
+              <strong>must create a new character and dynasty</strong>. Players wishing to preserve
+              active status during temporary absence may activate the
+              <em>Hibernation Protocol</em> for periods up to 24 months.
+            </div>
+          </div>
+
+          <div class="tos-clause">
+            <div class="tos-clause-num">┬º C.6 ΓÇö Player Council Oversight</div>
+            <div class="tos-clause-text">
+              A Player Council of 12 elected representatives holds co-signing authority over the
+              Dynasty NFT migration contract and the Remembrance archive keys.
+              <strong>Operator cannot unilaterally execute migration or archive deletion</strong>
+              without Player Council co-signature. Player Council elections are held annually.
+              Voting is open to all players with accounts in good standing for 6+ months.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ The Long View ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="timeline" aria-label="Covenant long view timeline">
+        <span class="section-label">What Permanence Looks Like Over Time</span>
+        <h2 class="section-title">The Long View</h2>
+        <p class="section-body">
+          Permanence is not a feature you use today. It is the architecture you rely on across
+          decades. Here is what the Covenant looks like from Year Zero to the far side of history.
+        </p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-label">Year 0 ΓÇö Launch</div>
+            <div class="timeline-text">
+              Covenant deployed on-chain. Player Council elected. First Dynasty NFTs minted. The
+              Remembrance opens. History begins. The Architect publishes Report Zero.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Year 5 ΓÇö Phase 2</div>
+            <div class="timeline-text">
+              Early dynasties have decades of in-game history. The first founding-era NFTs are
+              already rare. The Remembrance has its first historians ΓÇö non-players reading the
+              record of a civilisation they never touched.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Year 15 ΓÇö Real Time Threshold</div>
+            <div class="timeline-text">
+              The clock reaches 1:1. The Concord is now a civilisation with 800 years of history and
+              a present that moves in lockstep with reality. The founders of Year Zero are legends
+              in the Remembrance. Families trace their gaming ancestors through it.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Year 35 ΓÇö Survey Complete</div>
+            <div class="timeline-text">
+              All 600 worlds unlocked by the Survey Corps over 35 real years. The Remembrance spans
+              civilisations, collapses, and rebuildings across a star system. It is one of the
+              richest historical documents in human culture.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Game Close ΓÇö Whenever It Comes</div>
+            <div class="timeline-text">
+              Migration executes. Source code releases. The Remembrance stays online on the
+              Preservation Reserve. Dynasty NFTs live on Ethereum. The Concord's history is older
+              than many nations. It does not end. It becomes archaeology.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Signature Section ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="signature" aria-label="Covenant signature">
+        <div class="signature-section">
+          <div class="signature-label">Signed and Ratified ┬╖ Year Zero</div>
+          <p class="signature-main">
+            This Covenant is not a promise we make lightly. It is not a marketing document. It is
+            the condition under which we believe it is right to build this game at all. We sign it
+            knowing we cannot unsign it. That is precisely the point.
+          </p>
+          <div class="signature-sigil" aria-hidden="true">
+            <div class="signature-line"></div>
+            <div class="signature-name">The Concord Studio</div>
+            <div class="signature-line right"></div>
+          </div>
+          <div class="signature-witness">
+            Witnessed by the <strong>Permanence Covenant Vault</strong><br />
+            Ethereum L2 ┬╖ Multisig 8-of-12 ┬╖ Player Council Co-Signed<br />
+            Contract Address: <strong>0x7C4FΓÇªA3E9 [published at launch]</strong><br />
+            Escrow Bond: <strong>Funded pre-launch ┬╖ Auto-executes on default</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ Witness Your Acknowledgment ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="witness" aria-label="Witness acknowledgment form">
+        <span class="section-label">Your Acknowledgment</span>
+        <h2 class="section-title">Witness the Covenant</h2>
+
+        <div class="witness-section">
+          <div class="witness-form" role="form" aria-label="Covenant acknowledgment form">
+            <p class="witness-intro">
+              You have read the Permanence Covenant. Name your dynasty and acknowledge that you
+              understand its terms. This does not create legal obligations ΓÇö it is a record, kept by
+              you, that you knew.
+            </p>
+
+            <div class="witness-input-group">
+              <label for="dynastyName" class="witness-label">Your Dynasty Name</label>
+              <input
+                type="text"
+                id="dynastyName"
+                class="witness-input"
+                placeholder="House of Ardenvale, The Silven LineΓÇª"
+                maxlength="80"
+                autocomplete="off"
+                aria-describedby="dynastyNameHint"
+              />
+              <span id="dynastyNameHint" style="display: none">Enter the name of your dynasty</span>
+            </div>
+
+            <button
+              type="button"
+              class="witness-btn"
+              id="witnessBtn"
+              aria-label="Acknowledge covenant terms"
+            >
+              I Understand the Terms
+            </button>
+
+            <div
+              class="witness-confirmation"
+              id="witnessConfirmation"
+              role="status"
+              aria-live="polite"
+            >
+              <div class="witness-confirmation-icon" aria-hidden="true">ΓÜ£</div>
+              <div class="witness-confirmation-text">
+                The Covenant has been witnessed. Your acknowledgment is recorded. When the Chronicle
+                opens, your dynasty will be known to it.
+              </div>
+              <div class="witness-confirmation-name" id="witnessedDynastyName"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ΓöÇΓöÇ On-Chain Proof ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+      <section class="section" id="proof" aria-label="On-chain cryptographic proof">
+        <span class="section-label">Cryptographic Verification</span>
+        <h2 class="section-title" style="text-align: center">
+          These Promises Are Not Words.<br />They Are Code.
+        </h2>
+        <p class="section-body" style="text-align: center; max-width: 600px; margin: 0 auto 40px">
+          The Covenant is not a PDF on a server the operator controls. It is a smart contract on a
+          public blockchain. You can read it. Anyone can read it. It cannot be quietly edited.
+        </p>
+
+        <div class="hash-display" aria-label="On-chain contract addresses and verification data">
+          <div class="hash-row">
+            <span class="hash-key">COVENANT CONTRACT</span>
+            <span class="hash-val">0x7C4FΓÇªA3E9 [TO BE PUBLISHED AT LAUNCH]</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-key">MIGRATION ESCROW</span>
+            <span class="hash-val">0x9A2BΓÇªF41C [FUNDED PRE-LAUNCH]</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-key">REMEMBRANCE HASH</span>
+            <span class="hash-val">SHA-256: a7f3ΓÇª91cc [UPDATED HOURLY]</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-key">PLAYER COUNCIL</span>
+            <span class="hash-val">MULTISIG 8-OF-12 [ELECTED ANNUALLY]</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-key">LAST VERIFIED</span>
+            <span class="hash-val" id="proofTimestamp">LOADINGΓÇª</span>
+          </div>
+          <div class="hash-row">
+            <span class="hash-key">BLOCK HEIGHT</span>
+            <span class="hash-val" id="proofBlockHeight">21,847,392</span>
+          </div>
+        </div>
+
+        <p
+          style="
+            font-family: var(--font-serif);
+            font-size: 16px;
+            color: var(--slate);
+            font-style: italic;
+            max-width: 560px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.8;
+          "
+        >
+          The migration contract requires signatures from both the operator and a majority of the
+          elected Player Council. Neither party can act alone. The escrow bond executes
+          automatically if migration is not completed within 30 days of confirmed service
+          termination.
+        </p>
+      </section>
+    </div>
+
+    <!-- ΓöÇΓöÇ Footer ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ -->
+    <footer>
+      <div class="footer-emblem">The Concord</div>
+      <p class="footer-text">
+        The Permanence Covenant is a public document.<br />
+        It belongs to every player, every reader, every future citizen of the Concord.<br />
+        Copy it. Share it. Hold us to it.
+      </p>
+      <div class="footer-links">
+        <a href="#">The Remembrance</a>
+        <a href="#">Covenant Contract</a>
+        <a href="#">Player Council</a>
+        <a href="#">Covenant PDF</a>
+        <a href="#">Migration Escrow</a>
+        <a href="index.html">Main Site</a>
+      </div>
+    </footer>
+
+    <script>
+      /* ΓöÇΓöÇ Starfield ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initStarfield() {
+        const canvas = document.getElementById('cosmos');
+        const ctx = canvas.getContext('2d');
+        let W,
+          H,
+          stars,
+          mouse = { x: 0, y: 0 };
+
+        function resize() {
+          W = canvas.width = window.innerWidth;
+          H = canvas.height = window.innerHeight;
+        }
+
+        function makeStar() {
+          return {
+            x: Math.random() * W,
+            y: Math.random() * H,
+            r: Math.random() * 1.4 + 0.2,
+            alpha: Math.random() * 0.7 + 0.1,
+            speed: Math.random() * 0.3 + 0.05,
+            twinkleSpeed: Math.random() * 0.02 + 0.005,
+            twinkleDir: Math.random() > 0.5 ? 1 : -1,
+            parallax: Math.random() * 0.04 + 0.005,
+            ox: 0,
+            oy: 0,
+          };
+        }
+
+        function initStars() {
+          stars = Array.from({ length: 280 }, makeStar);
+          stars.forEach((s) => {
+            s.ox = s.x;
+            s.oy = s.y;
+          });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          ctx.fillStyle = '#060d1a';
+          ctx.fillRect(0, 0, W, H);
+
+          const mx = (mouse.x / W - 0.5) * W;
+          const my = (mouse.y / H - 0.5) * H;
+
+          for (const s of stars) {
+            s.alpha += s.twinkleSpeed * s.twinkleDir;
+            if (s.alpha > 0.9 || s.alpha < 0.05) s.twinkleDir *= -1;
+
+            const px = s.ox + mx * s.parallax;
+            const py = s.oy + my * s.parallax;
+
+            ctx.beginPath();
+            ctx.arc(px, py, s.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(196, 206, 220, ${s.alpha})`;
+            ctx.fill();
+          }
+          requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', () => {
+          resize();
+          initStars();
+        });
+        window.addEventListener('mousemove', (e) => {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+
+        resize();
+        initStars();
+        draw();
+      })();
+
+      /* ΓöÇΓöÇ Scroll reveal ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initScrollReveal() {
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('visible');
+              }
+            });
+          },
+          { threshold: 0.06 },
+        );
+
+        document.querySelectorAll('.section').forEach((s) => sectionObserver.observe(s));
+
+        const articleObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e, i) => {
+              if (e.isIntersecting) {
+                setTimeout(() => {
+                  e.target.classList.add('visible');
+                }, i * 80);
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        document.querySelectorAll('.article-card').forEach((a) => articleObserver.observe(a));
+      })();
+
+      /* ΓöÇΓöÇ Covenant Status ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initCovenantStatus() {
+        const banner = document.getElementById('statusBanner');
+        const message = document.getElementById('statusMessage');
+        const verified = document.getElementById('statusVerified');
+
+        function applyStatus(data) {
+          const statusClass = data.status.toLowerCase();
+          banner.className = 'status-banner ' + statusClass;
+          message.textContent = data.message;
+          const ts = new Date(data.lastVerifiedAt);
+          verified.textContent = 'Verified: ' + ts.toUTCString();
+        }
+
+        fetch('/covenant/status')
+          .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+          .then((data) => applyStatus(data))
+          .catch(() => {
+            // Fallback to static active state when API not reachable
+            verified.textContent = 'Status: pre-launch';
+          });
+      })();
+
+      /* ΓöÇΓöÇ Block height ticker ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initBlockTicker() {
+        let blockHeight = 21847392;
+        const el = document.getElementById('proofBlockHeight');
+        const tsEl = document.getElementById('proofTimestamp');
+
+        function tick() {
+          blockHeight += Math.floor(Math.random() * 3);
+          if (el) el.textContent = blockHeight.toLocaleString();
+        }
+
+        if (tsEl) {
+          const now = new Date();
+          tsEl.textContent =
+            'BLOCK ' +
+            blockHeight.toLocaleString() +
+            ' ┬╖ ' +
+            now
+              .toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+              .toUpperCase() +
+            ' ┬╖ ' +
+            now.toUTCString().slice(17, 22) +
+            ' UTC';
+        }
+
+        setInterval(tick, 12000);
+      })();
+
+      /* ΓöÇΓöÇ Witness form ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+      (function initWitnessForm() {
+        const input = document.getElementById('dynastyName');
+        const btn = document.getElementById('witnessBtn');
+        const confirm = document.getElementById('witnessConfirmation');
+        const confirmName = document.getElementById('witnessedDynastyName');
+
+        const COOKIE_KEY = 'concord_covenant_witnessed';
+
+        function getCookie(name) {
+          const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+          return match ? decodeURIComponent(match[2]) : null;
+        }
+
+        function setCookie(name, value, days) {
+          const expires = new Date(Date.now() + days * 864e5).toUTCString();
+          document.cookie =
+            name +
+            '=' +
+            encodeURIComponent(value) +
+            '; expires=' +
+            expires +
+            '; path=/; SameSite=Lax';
+        }
+
+        function showConfirmation(name) {
+          confirm.classList.add('visible');
+          confirmName.textContent = name ? 'Dynasty: ' + name : '';
+          btn.disabled = true;
+          btn.style.opacity = '0.45';
+          btn.textContent = 'Witnessed';
+        }
+
+        // Restore from cookie if already acknowledged
+        const existing = getCookie(COOKIE_KEY);
+        if (existing) {
+          input.value = existing;
+          showConfirmation(existing);
+        }
+
+        btn.addEventListener('click', () => {
+          const name = input.value.trim();
+          if (!name) {
+            input.focus();
+            input.style.borderColor = 'rgba(239,68,68,0.5)';
+            setTimeout(() => {
+              input.style.borderColor = '';
+            }, 1200);
+            return;
+          }
+          setCookie(COOKIE_KEY, name, 3650); // 10 years
+          showConfirmation(name);
+        });
+
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') btn.click();
+        });
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nakama
+  namespace: loom
+  labels:
+    app: nakama
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nakama
+  template:
+    metadata:
+      labels:
+        app: nakama
+    spec:
+      initContainers:
+        - name: nakama-migrate
+          image: heroiclabs/nakama:3.22.0
+          command: ["/nakama/nakama", "migrate", "up"]
+          env:
+            - name: NAKAMA_DATABASE_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: nakama-secrets
+                  key: database-address
+      containers:
+        - name: nakama
+          image: heroiclabs/nakama:3.22.0
+          args:
+            - --config
+            - /nakama/data/config.yml
+          ports:
+            - containerPort: 7349
+              name: grpc
+            - containerPort: 7350
+              name: http
+            - containerPort: 7351
+              name: admin
+          env:
+            - name: NAKAMA_DATABASE_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: nakama-secrets
+                  key: database-address
+            - name: NAKAMA_SESSION_ENCRYPTION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: nakama-secrets
+                  key: session-encryption-key
+            - name: NAKAMA_SERVER_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: nakama-secrets
+                  key: server-key
+          volumeMounts:
+            - name: nakama-config
+              mountPath: /nakama/data/config.yml
+              subPath: config.yml
+              readOnly: true
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: http
+            initialDelaySeconds: 30
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+      volumes:
+        - name: nakama-config
+          configMap:
+            name: nakama-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nakama
+  namespace: loom
+  labels:
+    app: nakama
+spec:
+  selector:
+    app: nakama
+  ports:
+    - port: 7349
+      targetPort: grpc
+      name: grpc
+      protocol: TCP
+    - port: 7350
+      targetPort: http
+      name: http
+      protocol: TCP
+    - port: 7351
+      targetPort: admin
+      name: admin
+      protocol: TCP
+  type: ClusterIP
