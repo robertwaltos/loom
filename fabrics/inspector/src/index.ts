@@ -510,3 +510,9 @@ export type {
   ErrorTracker,
   ErrorTrackerStats,
 } from './error-tracker.js';
+
+// ── Phase 23: Contract Ports ──────────────────────────────────────
+export { createMockCovenantContractPort, covenantStatusFromCode, covenantCodeFromStatus, applyChainState } from './covenant-contract-port.js';
+export type { CovenantContractPort, CovenantContractState, BlockchainTx, MockTxOptions } from './covenant-contract-port.js';
+export { hashRecord, buildMerkleTree, buildMerkleProof, verifyMerkleProof, buildBatch, createMockWitnessRegistryPort } from './witness-contract-port.js';
+export type { WitnessRecord, WitnessRecordType, WitnessBatch, BatchSubmitResult, VerifyResult, WitnessRegistryPort } from './witness-contract-port.js';
