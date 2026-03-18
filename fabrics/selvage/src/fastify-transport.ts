@@ -14,11 +14,19 @@ import type {
   TransportHandlers,
 } from './network-server.js';
 
+/** Minimal Fastify reply interface for route registrars */
+export interface FastifyReplyLike {
+  code(statusCode: number): FastifyReplyLike;
+  status(statusCode: number): FastifyReplyLike;
+  send(payload?: unknown): FastifyReplyLike;
+}
+
 // Minimal Fastify app interface exposed to route registrars
 export interface FastifyAppLike {
-  get(path: string, handler: (req: unknown, reply: unknown) => Promise<unknown> | unknown): void;
-  post(path: string, handler: (req: unknown, reply: unknown) => Promise<unknown> | unknown): void;
-  delete(path: string, handler: (req: unknown, reply: unknown) => Promise<unknown> | unknown): void;
+  get(path: string, handler: (req: unknown, reply: FastifyReplyLike) => Promise<unknown> | unknown): void;
+  post(path: string, handler: (req: unknown, reply: FastifyReplyLike) => Promise<unknown> | unknown): void;
+  delete(path: string, handler: (req: unknown, reply: FastifyReplyLike) => Promise<unknown> | unknown): void;
+  patch(path: string, handler: (req: unknown, reply: FastifyReplyLike) => Promise<unknown> | unknown): void;
 }
 
 export type RouteRegistrar = (app: FastifyAppLike) => void | Promise<void>;

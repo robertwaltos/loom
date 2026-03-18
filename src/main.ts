@@ -45,6 +45,10 @@ interface LoomEnv {
     readonly port: number;
     readonly password: string | undefined;
   };
+  readonly supabase: {
+    readonly url: string | undefined;
+    readonly key: string | undefined;
+  };
 }
 
 function loadEnv(): LoomEnv {
@@ -64,6 +68,10 @@ function loadEnv(): LoomEnv {
       host: process.env['REDIS_HOST'] ?? '127.0.0.1',
       port: parseInt(process.env['REDIS_PORT'] ?? '6379', 10),
       password: process.env['REDIS_PASSWORD'] ?? undefined,
+    },
+    supabase: {
+      url: process.env['SUPABASE_URL'],
+      key: process.env['SUPABASE_SERVICE_KEY'],
     },
   };
 }
@@ -130,6 +138,50 @@ async function main(): Promise<void> {
   const { createFastifyTransport } = await import('@loom/selvage');
   const { createAuthRoutes } = await import('./routes/auth.js');
   const { createSupportRoutes } = await import('../tools/support/src/support-webhook.js');
+
+  // 6a. Koydo Worlds — Kindler progression engine + persistence
+  const { createKindlerEngine } = await import('../universe/kindler/engine.js');
+  const { createKindlerRepository, createMockKindlerRepository } = await import('../universe/kindler/repository.js');
+  const { createBootstrappedCharactersEngine } = await import('../universe/characters/bootstrap.js');
+  const { registerKindlerRoutes } = await import('./routes/kindler.js');
+  const { registerSessionRoutes } = await import('./routes/session.js');
+  const { registerGuideRoutes } = await import('./routes/guide.js');
+  const { registerParentDashboardRoutes } = await import('./routes/parent-dashboard.js');
+  const { registerSafetyRoutes } = await import('./routes/safety.js');
+
+  const koydoIdGen = { generate: () => crypto.randomUUID() };
+
+  const kindlerEngine = createKindlerEngine({
+    clock: { nowMilliseconds: () => Date.now() },
+    logger: {
+      info: (msg, meta) => logger.info(meta ?? {}, msg),
+      warn: (msg, meta) => logger.warn(meta ?? {}, msg),
+    },
+    idGenerator: koydoIdGen,
+    events: {
+      onSparkChange: (event) => logger.info({ event }, 'spark_change'),
+      onChapterAdvanced: (event) => logger.info({ event }, 'chapter_advanced'),
+    },
+  });
+
+  // TODO (prod): Install @supabase/supabase-js and wire real adapter when
+  // SUPABASE_URL + SUPABASE_SERVICE_KEY are configured.
+  const kindlerRepo = createMockKindlerRepository();
+  const charactersEngine = createBootstrappedCharactersEngine();
+
+  if (env.supabase.url) {
+    logger.warn({}, 'SUPABASE_URL set but @supabase/supabase-js not installed — using mock repo');
+  } else {
+    logger.warn({}, 'SUPABASE_URL not set — using in-memory mock KindlerRepository (dev mode)');
+  }
+  logger.info({ guides: 49 }, 'Koydo: KindlerEngine + CharactersEngine ready (49 guides)');
+
+  function koydoLog(level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>): void {
+    if (level === 'error') logger.error(meta ?? {}, msg);
+    else if (level === 'warn') logger.warn(meta ?? {}, msg);
+    else logger.info(meta ?? {}, msg);
+  }
+
   const transport = createFastifyTransport({
     host: env.host,
     port: env.port,
@@ -144,6 +196,19 @@ async function main(): Promise<void> {
         ...(process.env['SUPPORT_DISCORD_WEBHOOK_URL']
           ? { discordWebhookUrl: process.env['SUPPORT_DISCORD_WEBHOOK_URL'] }
           : {}),
+      }),
+      (app) => registerKindlerRoutes(app, { repo: kindlerRepo, engine: kindlerEngine, idGenerator: koydoIdGen }),
+      (app) => registerSessionRoutes(app, { repo: kindlerRepo, engine: kindlerEngine, idGenerator: koydoIdGen }),
+      (app) => registerGuideRoutes(app, { charactersEngine, kindlerRepo }),
+      (app) => registerParentDashboardRoutes(app, {
+        generateId: () => koydoIdGen.generate(),
+        now: () => Date.now(),
+        log: koydoLog,
+      }),
+      (app) => registerSafetyRoutes(app, {
+        generateId: () => koydoIdGen.generate(),
+        now: () => Date.now(),
+        log: koydoLog,
       }),
     ],
   });

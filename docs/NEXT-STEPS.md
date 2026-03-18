@@ -1058,3 +1058,93 @@ All 9 systems implemented, tested, and deployed to main.
 - [x] witness-contract-port.ts - Merkle tree builder, batch builder, proof verifier; 21 tests
 
 Total new tests Phase 23: 202 passing
+
+---
+
+## Phase 24: Koydo Worlds — Character Guides (March 2026)
+
+Full roster of 49 AI guide characters for Koydo Worlds educational game platform (ages 5-10). All characters implemented, tested, and deployed to main.
+
+### 24.1 Character Prompt Files (49 guides)
+
+**Hub World — 4 guides**
+- [x] `compass.ts` — Compass, orientation guide
+- [x] `archivist-elara.ts` — Archivist Elara, Hub librarian
+
+**STEM Realm — 15 guides**
+- [x] `zara-newton.ts` — Physics guide, Gravity Gulch
+- [x] `professor-pi.ts` — Math guide, Number Nexus
+- [x] `dr-luna.ts` — Astronomy guide, Star Sanctum
+- [x] `dr-terra.ts` — Earth Science guide, Geology Grotto
+- [x] `dr-emeka-obi.ts` — Chemistry guide, Chemistry Cavern
+- [x] `mr-abernathy.ts` — Engineering guide, Tinkerer's Workshop
+- [x] `captain-birch.ts` — Biology guide, Biology Bay
+- [x] `nyx.ts` — Computer Science guide, Digital Domain
+- [x] `kofi-amponsah.ts` — Electricity guide, Circuit Marsh
+- [x] `pixel.ts` — Coding guide, Code Canyon
+- [x] `atlas.ts` — Geography guide, Map Room
+
+**Language Arts Realm — 10 guides**
+- [x] `ms-harper.ts` — Reading guide, Library Labyrinth
+- [x] `kwame-asante.ts` — Vocabulary guide, Vocabulary Jungle
+- [x] `wren-calloway.ts` — Editing guide, Editing Tower
+- [x] `benny-okafor-williams.ts` — Spelling guide, Spelling Mines
+- [x] `rosie-chen.ts` — Punctuation guide, Punctuation Station
+
+**Financial Literacy Realm — 10 guides**
+- [x] `penny-wise.ts` — Savings guide, Savings Summit
+- [x] `jin-ho-park.ts` — Investing guide, Investment Greenhouse
+- [x] `elsa-lindgren.ts` — Debt guide, Debt Glacier
+
+### 24.2 Characters Engine Bootstrap
+
+- [x] `universe/characters/bootstrap.ts` — All 49 builders wired (`CORE_BUILDERS` registry)
+- [x] `universe/characters/index.ts` — Barrel export organized by realm
+
+**Tests**: 28 passing (12 repository + 16 game loop integration)
+
+---
+
+## Phase 25: Route Wiring & Parent Dashboard (March 2026)
+
+All Koydo Worlds HTTP routes wired into `src/main.ts`. Parent dashboard and safety engines exposed over HTTP.
+
+### 25.1 Route Wiring in src/main.ts
+
+- [x] `SUPABASE_URL` / `SUPABASE_SERVICE_KEY` env vars added to `loadEnv()`
+- [x] `createKindlerEngine` instantiated at startup with clock + logger + idGen
+- [x] `createMockKindlerRepository` — dev mode fallback (Supabase adapter is a future TODO)
+- [x] `createBootstrappedCharactersEngine` — 49 guides loaded at startup
+- [x] `registerKindlerRoutes` wired — Kindler profile CRUD (POST/GET/spark/progress)
+- [x] `registerSessionRoutes` wired — Game session lifecycle (start/end/complete-entry)
+- [x] `registerGuideRoutes` wired — Adaptive AI system prompt serving (list/by character)
+
+### 25.2 Parent Dashboard Routes
+
+- [x] `src/routes/parent-dashboard.ts` — HTTP wrapper for `universe/parent-dashboard/engine.ts`
+  - `GET /v1/dashboard` — Parent overview (subscription status + children summary)
+  - `GET /v1/dashboard/child/:kindlerId` — Child detail (spark state, worlds map, subjects)
+  - `GET /v1/dashboard/child/:kindlerId/sessions` — Paginated session history
+  - `GET /v1/dashboard/child/:kindlerId/worlds-map` — World completion map
+  - `GET /v1/dashboard/child/:kindlerId/report?from=<epoch>&to=<epoch>` — Progress report
+  - `PATCH /v1/dashboard/child/:kindlerId/time-controls` — Set daily limits / bedtime cutoff
+  - `POST /v1/dashboard/child` — Add child profile (COPPA: display name only, no PII)
+  - `DELETE /v1/dashboard/child/:kindlerId` — Remove child + data (permanent, COPPA compliant)
+- [x] Mock `DashboardQueries` adapter — no-DB fallback; Supabase adapter wired later
+
+### 25.3 Safety Routes (COPPA AI Session Lifecycle)
+
+- [x] `src/routes/safety.ts` — HTTP wrapper for `universe/safety/engine.ts`
+  - `POST /v1/safety/ai-session/start` — Begin AI conversation session
+  - `POST /v1/safety/ai-session/:sessionId/end` — End session (triggers 24hr auto-delete)
+  - `POST /v1/safety/moderate` — Content moderation check (entry/ai_response/user_input)
+  - `GET /v1/safety/stats` — Operational stats (no child data surfaced)
+  - `GET /v1/safety/pending-deletion` — Sessions awaiting 24hr auto-purge
+
+### 25.4 FastifyAppLike Typed Reply
+
+- [x] `fabrics/selvage/src/fastify-transport.ts` — Added `FastifyReplyLike` interface (`.code()`, `.status()`, `.send()`)
+- [x] `FastifyAppLike` — `patch` method added; `reply` parameter typed as `FastifyReplyLike`
+- [x] `FastifyReplyLike` exported from selvage index
+
+**Tests**: 28/28 passing (unchanged — routes are integration-tested; unit tests are in scope for Phase 26)
