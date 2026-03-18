@@ -158,6 +158,8 @@ async function main(): Promise<void> {
   const { registerWorldsRoutes } = await import('./routes/worlds.js');
   const { registerAdventuresRoutes } = await import('./routes/adventures.js');
   const { registerQuizRoutes } = await import('./routes/quiz.js');
+  const { registerMiniGamesRoutes } = await import('./routes/mini-games.js');
+  const { createMiniGamesRegistry } = await import('../fabrics/loom-core/src/mini-games-registry.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -181,6 +183,7 @@ async function main(): Promise<void> {
   const contentEngine = createBootstrappedContentEngine();
   const adventuresEngine = createBootstrappedAdventuresEngine();
   const worldsEngine = createWorldsEngine({ worlds: ALL_WORLDS });
+  const miniGamesRegistry = createMiniGamesRegistry();
 
   // In-memory luminance store: all 50 worlds start at 0.5 (dimming) until Kindlers restore them
   const now = Date.now();
@@ -259,6 +262,7 @@ async function main(): Promise<void> {
       (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
       (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
       (app) => registerQuizRoutes(app, { contentEngine }),
+      (app) => registerMiniGamesRoutes(app, { registry: miniGamesRegistry }),
     ],
   });
 
