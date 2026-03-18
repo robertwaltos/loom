@@ -148,15 +148,18 @@ async function main(): Promise<void> {
   const { createBootstrappedContentEngine } = await import('../universe/content/bootstrap.js');
   const { createWorldsEngine } = await import('../universe/worlds/engine.js');
   const { ALL_WORLDS } = await import('../universe/worlds/registry.js');
-  const { applyRestoration, calculateRestorationDelta, resolveFadingStage } = await import('../universe/fading/engine.js');
+  const { applyRestoration, applyNaturalDecay, calculateRestorationDelta, resolveFadingStage } = await import('../universe/fading/engine.js');
   const { createPgLuminanceRepository } = await import('../universe/fading/pg-luminance-repository.js');
   const { createPgDashboardQueries } = await import('../universe/parent-dashboard/pg-queries.js');
+  const { createPgSafetySessionStore } = await import('../universe/safety/pg-session-store.js');
+  const { createPgRevenueRepository } = await import('../universe/revenue/pg-repository.js');
   const { createBootstrappedAdventuresEngine } = await import('../universe/adventures/bootstrap.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
   const { registerParentDashboardRoutes } = await import('./routes/parent-dashboard.js');
   const { registerSafetyRoutes } = await import('./routes/safety.js');
+  const { registerRevenueRoutes } = await import('./routes/revenue.js');
   const { registerWorldsRoutes } = await import('./routes/worlds.js');
   const { registerAdventuresRoutes } = await import('./routes/adventures.js');
   const { registerQuizRoutes } = await import('./routes/quiz.js');
@@ -188,6 +191,10 @@ async function main(): Promise<void> {
   const adventuresEngine = createBootstrappedAdventuresEngine();
   const worldsEngine = createWorldsEngine({ worlds: ALL_WORLDS });
   const miniGamesRegistry = createMiniGamesRegistry();
+
+  // PG repositories for safety sessions and revenue events
+  const pgSafetySessionStore = createPgSafetySessionStore(pgPool);
+  const pgRevenueRepo = createPgRevenueRepository(pgPool);
 
   // Luminance store: hydrated from world_luminance table at boot; falls back to 0.5/dimming defaults
   const pgLuminanceRepo = createPgLuminanceRepository(pgPool);
@@ -279,6 +286,7 @@ async function main(): Promise<void> {
         generateId: () => koydoIdGen.generate(),
         now: () => Date.now(),
         log: koydoLog,
+        pgSessionStore: pgSafetySessionStore,
       }),
       (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
       (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
@@ -289,6 +297,12 @@ async function main(): Promise<void> {
         log: koydoLog,
         deleteSparkLogs: (kindlerId) => kindlerRepo.deleteSparkLogs(kindlerId),
         deleteSessions: (kindlerId) => kindlerRepo.deleteSessions(kindlerId),
+      }),
+      (app) => registerRevenueRoutes(app, {
+        generateId: () => koydoIdGen.generate(),
+        now: () => Date.now(),
+        log: koydoLog,
+        pgRepo: pgRevenueRepo,
       }),
     ],
   });
@@ -544,10 +558,51 @@ async function main(): Promise<void> {
 
   logger.info({ address, grpcAddress }, 'Loom server is live');
 
+  // ─── Background Schedulers ──────────────────────────────────────────────────
+
+  // World fading natural decay — runs every 15 minutes.
+  // Applies passive luminance loss to every world based on time since last restoration.
+  const DECAY_INTERVAL_MS = 15 * 60 * 1000;
+  const decayInterval = setInterval(() => {
+    const now = Date.now();
+    for (const [worldId, current] of luminanceStore) {
+      const inactiveHours = (now - current.lastRestoredAt) / (1000 * 60 * 60);
+      if (inactiveHours < 0.25) continue; // skip worlds active within last 15 min
+      const { updated } = applyNaturalDecay(current, inactiveHours);
+      if (updated.luminance === current.luminance) continue;
+      luminanceStore.set(worldId, updated);
+      pgLuminanceRepo.save(updated).catch((err: unknown) => {
+        logger.warn({ err, worldId }, 'koydo:fading:decay_persist_failed');
+      });
+      logger.info({ worldId, luminance: updated.luminance, stage: updated.stage }, 'koydo:fading:natural_decay');
+    }
+  }, DECAY_INTERVAL_MS);
+
+  // COPPA safety session cleanup — runs hourly.
+  // Hard-deletes ai_conversation_sessions rows past their auto_delete_at timestamp.
+  const SAFETY_CLEANUP_INTERVAL_MS = 60 * 60 * 1000;
+  const safetyCleanupInterval = setInterval(() => {
+    const now = Date.now();
+    pgSafetySessionStore.deleteExpired(now).then((count) => {
+      if (count > 0) {
+        logger.info({ count }, 'koydo:safety:expired_sessions_deleted');
+      }
+    }).catch((err: unknown) => {
+      logger.warn({ err }, 'koydo:safety:cleanup_failed');
+    });
+  }, SAFETY_CLEANUP_INTERVAL_MS);
+
+  logger.info(
+    { decayIntervalMs: DECAY_INTERVAL_MS, cleanupIntervalMs: SAFETY_CLEANUP_INTERVAL_MS },
+    'koydo:schedulers:started (decay + COPPA safety cleanup)',
+  );
+
   // 12. Graceful shutdown
   const shutdown = async (): Promise<void> => {
     logger.info({}, 'Shutdown signal received');
     clearInterval(streamingInterval);
+    clearInterval(decayInterval);
+    clearInterval(safetyCleanupInterval);
     orchestrator.stop();
     networkServer.stop();
     await bridgeTransport.stop();

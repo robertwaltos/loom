@@ -14,6 +14,7 @@ import {
   createSafetyEngine,
   type SafetyEngineDeps,
 } from '../../universe/safety/engine.js';
+import type { PgSafetySessionStore } from '../../universe/safety/pg-session-store.js';
 import type { ModerationFlag } from '../../universe/safety/types.js';
 
 // ─── Deps ──────────────────────────────────────────────────────────
@@ -22,6 +23,8 @@ export interface SafetyRoutesDeps {
   readonly generateId: () => string;
   readonly now: () => number;
   readonly log: (level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>) => void;
+  /** Optional PG store — mirrors session lifecycle for COPPA audit. */
+  readonly pgSessionStore?: PgSafetySessionStore;
 }
 
 // ─── Route Registration ────────────────────────────────────────────
@@ -37,10 +40,11 @@ export function registerSafetyRoutes(
   };
 
   const engine = createSafetyEngine(engineDeps);
+  const store = deps.pgSessionStore;
 
   // POST /v1/safety/ai-session/start
   // Body: { kindlerId, characterId, worldId }
-  app.post('/v1/safety/ai-session/start', (req, reply) => {
+  app.post('/v1/safety/ai-session/start', async (req, reply) => {
     const body = (req as unknown as { body: Record<string, unknown> }).body ?? {};
     const kindlerId = typeof body['kindlerId'] === 'string' ? body['kindlerId'] : null;
     const characterId = typeof body['characterId'] === 'string' ? body['characterId'] : null;
@@ -52,6 +56,11 @@ export function registerSafetyRoutes(
 
     try {
       const session = engine.createAiSession(kindlerId, characterId, worldId);
+      if (store !== undefined) {
+        store.save(session).catch((err: unknown) => {
+          deps.log('warn', 'ai_session_persist_failed', { sessionId: session.id, error: String(err) });
+        });
+      }
       return reply.status(201).send({ ok: true, session });
     } catch (err) {
       deps.log('error', 'ai_session_start_failed', { kindlerId, error: String(err) });
@@ -60,13 +69,18 @@ export function registerSafetyRoutes(
   });
 
   // POST /v1/safety/ai-session/:sessionId/end
-  app.post('/v1/safety/ai-session/:sessionId/end', (req, reply) => {
+  app.post('/v1/safety/ai-session/:sessionId/end', async (req, reply) => {
     const params = (req as unknown as { params: Record<string, unknown> }).params;
     const sessionId = typeof params['sessionId'] === 'string' ? params['sessionId'] : null;
     if (sessionId === null) return reply.status(422).send({ ok: false, error: 'Invalid sessionId' });
 
     try {
       const session = engine.endAiSession(sessionId);
+      if (store !== undefined) {
+        store.save(session).catch((err: unknown) => {
+          deps.log('warn', 'ai_session_end_persist_failed', { sessionId, error: String(err) });
+        });
+      }
       return reply.send({ ok: true, session });
     } catch (err) {
       deps.log('warn', 'ai_session_end_failed', { sessionId, error: String(err) });
