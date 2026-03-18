@@ -55,9 +55,9 @@ function validateRegisterInput(body: unknown): RegisterRequest | null {
     username: b['username'],
     email: b['email'],
     password: b['password'],
-    displayName: typeof b['displayName'] === 'string' ? b['displayName'] : b['username'],
-    ageTier: typeof b['ageTier'] === 'number' ? b['ageTier'] : undefined,
-    parentalConsentToken: typeof b['parentalConsentToken'] === 'string' ? b['parentalConsentToken'] : undefined,
+    displayName: typeof b['displayName'] === 'string' ? b['displayName'] : b['username'] as string,
+    ...(typeof b['ageTier'] === 'number' ? { ageTier: b['ageTier'] } : {}),
+    ...(typeof b['parentalConsentToken'] === 'string' ? { parentalConsentToken: b['parentalConsentToken'] } : {}),
   };
 }
 

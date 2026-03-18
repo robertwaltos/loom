@@ -221,7 +221,7 @@ describe('GET /v1/mini-games/:worldId', () => {
 
 // ─── Inline Fastify mock ──────────────────────────────────────────
 
-interface MockReply {
+interface InjectResult {
   status: number;
   body: unknown;
 }
@@ -236,7 +236,7 @@ function makeMockApp() {
     async inject(method: string, path: string, opts?: {
       params?: Record<string, string>;
       query?: Record<string, string>;
-    }): Promise<MockReply> {
+    }): Promise<InjectResult> {
       const routeKey = `${method}:${path}`;
       const handler = routes.get(routeKey);
       if (!handler) return { status: 404, body: { ok: false, error: 'No route', code: 'NOT_FOUND' } };
