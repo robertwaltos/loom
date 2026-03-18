@@ -14,6 +14,30 @@
 
 // ─── Shared Response Envelope ──────────────────────────────────────
 
+// ─── Parent Account Domain Types ──────────────────────────────────
+
+export type SubscriptionStatus = 'trial' | 'active' | 'cancelled' | 'expired';
+export type ConsentMethod = 'credit_card_micro' | 'email_plus1' | 'phone_verification' | 'manual_review';
+
+export interface ParentTimeControls {
+  readonly maxDailyMinutes: number | null;
+  readonly bedtimeCutoff: string | null; // "HH:MM" local
+  readonly notificationsEnabled: boolean;
+}
+
+/** COPPA-compliant parent account record. No child PII ever stored here. */
+export interface ParentAccount {
+  readonly id: string;                      // opaque UUID from auth provider
+  readonly consentVerified: boolean;
+  readonly consentVerifiedAt: number | null; // epoch ms
+  readonly consentMethod: ConsentMethod | null;
+  readonly subscriptionStatus: SubscriptionStatus;
+  readonly timeControls: ParentTimeControls;
+  readonly createdAt: number;               // epoch ms
+}
+
+// ─── Shared Response Envelope ──────────────────────────────────────
+
 export interface ApiSuccess<T> {
   readonly ok: true;
   readonly data: T;

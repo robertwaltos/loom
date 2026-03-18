@@ -19,6 +19,8 @@ export interface LeaderboardRoutesDeps {
   readonly leaderboardRepo: PgLeaderboardRepository;
   readonly now: () => number;
   readonly log: (level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>) => void;
+  /** Required for DELETE endpoints (operations use cases). */
+  readonly moderationSecret?: string;
 }
 
 // ─── Route Registration ────────────────────────────────────────────
@@ -117,6 +119,33 @@ export function registerLeaderboardRoutes(
     } catch (err) {
       deps.log('error', 'leaderboard:snapshot_failed', { boardId, playerId, error: String(err) });
       return reply.status(500).send({ ok: false, error: 'Failed to save snapshot' });
+    }
+  });
+
+  // DELETE /v1/leaderboard/:boardId/player/:playerId (ops, secret-guarded)
+  // Removes all snapshot rows for a player from a board.
+  app.delete('/v1/leaderboard/:boardId/player/:playerId', async (req, reply) => {
+    const headers = (req as unknown as { headers: Record<string, string | string[] | undefined> }).headers;
+    const secret = headers['x-moderation-secret'];
+    if (!deps.moderationSecret || secret !== deps.moderationSecret) {
+      return reply.status(403).send({ ok: false, error: 'Forbidden', code: 'FORBIDDEN' });
+    }
+
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const boardId = typeof params['boardId'] === 'string' ? params['boardId'] : null;
+    const playerId = typeof params['playerId'] === 'string' ? params['playerId'] : null;
+
+    if (boardId === null || playerId === null) {
+      return reply.status(422).send({ ok: false, error: 'boardId and playerId are required' });
+    }
+
+    try {
+      const deleted = await deps.leaderboardRepo.deletePlayerScores(boardId, playerId);
+      deps.log('info', 'leaderboard:player_deleted', { boardId, playerId, deleted });
+      return reply.send({ ok: true, deleted });
+    } catch (err) {
+      deps.log('error', 'leaderboard:delete_failed', { boardId, playerId, error: String(err) });
+      return reply.status(500).send({ ok: false, error: 'Failed to delete player scores' });
     }
   });
 }

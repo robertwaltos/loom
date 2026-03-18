@@ -160,6 +160,8 @@ async function main(): Promise<void> {
   const { createPgFeatureFlagsRepository } = await import('../universe/feature-flags/pg-repository.js');
   const { createPgModerationRepository } = await import('../universe/moderation/pg-repository.js');
   const { createPgContentRepository } = await import('../universe/content/pg-repository.js');
+  const { createPgAdventureProgressRepository } = await import('../universe/adventures/pg-repository.js');
+  const { createPgParentRepository } = await import('../universe/parent-dashboard/pg-parent-repository.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
@@ -212,6 +214,8 @@ async function main(): Promise<void> {
   const pgFeatureFlagsRepo = createPgFeatureFlagsRepository(pgPool);
   const pgModerationRepo = createPgModerationRepository(pgPool);
   const pgContentRepo = createPgContentRepository(pgPool);
+  const pgAdventureProgressRepo = createPgAdventureProgressRepository(pgPool);
+  const pgParentRepo = createPgParentRepository(pgPool);
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -333,6 +337,7 @@ async function main(): Promise<void> {
         now: () => Date.now(),
         log: koydoLog,
         queries: pgDashboardQueries,
+        pgParentRepo,
       }),
       (app) => registerSafetyRoutes(app, {
         generateId: () => koydoIdGen.generate(),
@@ -342,7 +347,7 @@ async function main(): Promise<void> {
         analyticsEmitter,
       }),
       (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
-      (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
+      (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine, pgProgressRepo: pgAdventureProgressRepo }),
       (app) => registerQuizRoutes(app, { contentEngine, analyticsEmitter }),
       (app) => registerMiniGamesRoutes(app, { registry: miniGamesRegistry }),
       (app) => registerAccountRoutes(app, {
@@ -368,6 +373,9 @@ async function main(): Promise<void> {
         leaderboardRepo: pgLeaderboardRepo,
         now: () => Date.now(),
         log: koydoLog,
+        ...(process.env['SUPPORT_MODERATION_SECRET']
+          ? { moderationSecret: process.env['SUPPORT_MODERATION_SECRET'] }
+          : {}),
       }),
       (app) => registerFeatureFlagRoutes(app, {
         flagsRepo: pgFeatureFlagsRepo,

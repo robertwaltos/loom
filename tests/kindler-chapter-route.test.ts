@@ -291,6 +291,8 @@ function makeMockApp() {
       routes.set(`GET:${path}`, handler);
     },
     post: (_path: string, _handler: unknown) => undefined,
+    patch: (_path: string, _handler: unknown) => undefined,
+    delete: (_path: string, _handler: unknown) => undefined,
     async inject(method: string, path: string, params?: Record<string, string>): Promise<InjectResult> {
       const routeKey = `${method}:${path}`;
       const handler = routes.get(routeKey);

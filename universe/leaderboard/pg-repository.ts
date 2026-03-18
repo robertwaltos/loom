@@ -21,6 +21,8 @@ export interface PgLeaderboardRepository {
   getPlayerRank(boardId: string, playerId: string): Promise<LeaderboardSnapshot | null>;
   /** Count distinct players with snapshots on a board. */
   getPlayerCount(boardId: string): Promise<number>;
+  /** Delete all snapshot rows for a player on a board. Returns rows deleted. */
+  deletePlayerScores(boardId: string, playerId: string): Promise<number>;
 }
 
 // ─── Factory ──────────────────────────────────────────────────────
@@ -103,6 +105,15 @@ export function createPgLeaderboardRepository(pool: Pool): PgLeaderboardReposito
         [boardId],
       );
       return parseInt(result.rows[0]?.count ?? '0', 10);
+    },
+
+    async deletePlayerScores(boardId, playerId) {
+      const result = await pool.query(
+        `DELETE FROM loom_leaderboard_snapshots
+         WHERE board_id = $1 AND player_id = $2`,
+        [boardId, playerId],
+      );
+      return result.rowCount ?? 0;
     },
   };
 }

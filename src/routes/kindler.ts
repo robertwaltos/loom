@@ -142,6 +142,42 @@ function validateCreateInput(body: unknown): CreateKindlerRequest | null {
   return { displayName: b['displayName'], ageTier: b['ageTier'], avatarId: b['avatarId'] };
 }
 
+interface PatchKindlerFields {
+  readonly displayName?: string;
+  readonly ageTier?: AgeTier;
+  readonly avatarId?: string;
+}
+
+/** Returns null if body is invalid/empty. */
+function parsePatch(body: unknown): PatchKindlerFields | null {
+  if (typeof body !== 'object' || body === null) return null;
+  const b = body as Record<string, unknown>;
+
+  let displayName: string | undefined;
+  let ageTier: AgeTier | undefined;
+  let avatarId: string | undefined;
+
+  if ('displayName' in b) {
+    if (typeof b['displayName'] !== 'string' || b['displayName'].length < 2 || b['displayName'].length > 20) return null;
+    displayName = b['displayName'];
+  }
+  if ('ageTier' in b) {
+    if (b['ageTier'] !== 1 && b['ageTier'] !== 2 && b['ageTier'] !== 3) return null;
+    ageTier = b['ageTier'] as AgeTier;
+  }
+  if ('avatarId' in b) {
+    if (typeof b['avatarId'] !== 'string' || b['avatarId'].length === 0) return null;
+    avatarId = b['avatarId'];
+  }
+
+  if (displayName === undefined && ageTier === undefined && avatarId === undefined) return null;
+  const result: { displayName?: string; ageTier?: AgeTier; avatarId?: string } = {};
+  if (displayName !== undefined) result.displayName = displayName;
+  if (ageTier !== undefined) result.ageTier = ageTier;
+  if (avatarId !== undefined) result.avatarId = avatarId;
+  return result;
+}
+
 function extractParentId(req: { headers: Record<string, unknown> }): string | null {
   const auth = req.headers['authorization'];
   if (typeof auth !== 'string') return null;
@@ -211,6 +247,39 @@ export function registerKindlerRoutes(app: FastifyAppLike, deps: KindlerRoutesDe
     engine.registerKindler(profile);
 
     return reply.code(201).send(toKindlerResponse(profile));
+  });
+
+  // PATCH /v1/kindler/:id — update displayName, ageTier, or avatarId
+  app.patch('/v1/kindler/:id', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const id = typeof params['id'] === 'string' ? params['id'] : null;
+    if (id === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid id', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+
+    const profile = await repo.findById(id);
+    if (profile === null) {
+      const err: ErrorResponse = { ok: false, error: 'Not found', code: 'NOT_FOUND' };
+      return reply.code(404).send(err);
+    }
+
+    const patch = parsePatch((req as unknown as { body: unknown }).body);
+    if (patch === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid or empty patch', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+
+    const updated: KindlerProfile = {
+      ...profile,
+      displayName: patch.displayName !== undefined ? patch.displayName : profile.displayName,
+      ageTier: patch.ageTier !== undefined ? patch.ageTier : profile.ageTier,
+      avatarId: patch.avatarId !== undefined ? patch.avatarId : profile.avatarId,
+    };
+
+    await repo.save(updated);
+    engine.registerKindler(updated);
+    return reply.send(toKindlerResponse(updated));
   });
 
   // GET /v1/kindler/:id — get Kindler profile
