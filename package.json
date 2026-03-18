@@ -21,7 +21,8 @@
     "typecheck": "tsc --build",
     "clean": "tsc --build --clean",
     "check": "npm run typecheck && npm run lint && npm run test",
-    "dev": "tsx watch"
+    "dev": "tsx watch",
+    "db:seed:content": "tsx db/seed-content.ts"
   },
   "engines": {
     "node": ">=22.0.0"
