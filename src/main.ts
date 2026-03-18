@@ -158,6 +158,7 @@ async function main(): Promise<void> {
   const { registerWorldsRoutes } = await import('./routes/worlds.js');
   const { registerAdventuresRoutes } = await import('./routes/adventures.js');
   const { registerQuizRoutes } = await import('./routes/quiz.js');
+  const { registerAccountRoutes } = await import('./routes/account.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -259,6 +260,18 @@ async function main(): Promise<void> {
       (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
       (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
       (app) => registerQuizRoutes(app, { contentEngine }),
+      (app) => registerAccountRoutes(app, {
+        repo: kindlerRepo,
+        log: koydoLog,
+        deleteSparkLogs: async (kindlerId) => {
+          // In-memory mock: no-op; production would delete from kindler_spark_log
+          logger.info({ kindlerId }, 'account:deleteSparkLogs (stub — production wires to DB)');
+        },
+        deleteSessions: async (kindlerId) => {
+          // In-memory mock: no-op; production would delete from kindler_sessions
+          logger.info({ kindlerId }, 'account:deleteSessions (stub — production wires to DB)');
+        },
+      }),
     ],
   });
 
