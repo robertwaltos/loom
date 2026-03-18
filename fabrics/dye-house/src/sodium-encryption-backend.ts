@@ -9,7 +9,10 @@
  * Tier: 0
  */
 
+import { createRequire } from 'node:module';
 import type { EncryptionBackend } from './encryption-service.js';
+
+const require = createRequire(import.meta.url);
 
 interface SodiumCryptoBox {
   readonly crypto_aead_xchacha20poly1305_ietf_KEYBYTES: number;

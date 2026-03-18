@@ -8,7 +8,10 @@
  * Tier: 0
  */
 
+import { createRequire } from 'node:module';
 import type { Logger as LoomLogger } from './logger.js';
+
+const require = createRequire(import.meta.url);
 
 interface PinoLike {
   info(obj: Record<string, unknown>, msg: string): void;
@@ -23,8 +26,7 @@ export function createPinoLogger(name?: string): LoomLogger & { child(bindings: 
 
   function getInstance(): PinoLike {
     if (!pinoInstance) {
-      // Lazy require avoids issues when pino isn't available (e.g. in tests)
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
+// eslint-disable-next-line @typescript-eslint/no-require-imports
       const pino = require('pino') as (opts: Record<string, unknown>) => PinoLike;
       pinoInstance = pino({ name: name ?? 'loom' });
     }
