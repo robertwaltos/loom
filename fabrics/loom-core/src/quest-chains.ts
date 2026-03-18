@@ -178,9 +178,9 @@ const QUEST_CHAINS: ReadonlyArray<QuestChainDefinition> = [
   {
     questId: 'the-startup', name: 'The Startup', category: 'financial-literacy',
     description: 'Start a virtual business from idea through budgeting to market day to paying taxes',
-    worldIds: ['entrepreneurs-workshop', 'budget-kitchen', 'market-square', 'tax-office'],
+    worldIds: ['entrepreneur-workshop', 'budget-kitchen', 'market-square', 'tax-office'],
     steps: [
-      { stepIndex: 0, worldId: 'entrepreneurs-workshop', description: 'Develop the business idea' },
+      { stepIndex: 0, worldId: 'entrepreneur-workshop', description: 'Develop the business idea' },
       { stepIndex: 1, worldId: 'budget-kitchen', description: 'Create the budget' },
       { stepIndex: 2, worldId: 'market-square', description: 'Launch on market day' },
       { stepIndex: 3, worldId: 'tax-office', description: 'File taxes on earnings' },

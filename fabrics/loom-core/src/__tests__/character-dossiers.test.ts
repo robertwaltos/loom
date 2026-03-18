@@ -71,6 +71,26 @@ describe('getByWorld', () => {
     expect(registry.getById('atlas')?.primaryWorld).toBe('threadway-network');
   });
 
+  it('returns the canon-aligned Magnet Hills, Circuit Marsh, and Body Atlas guide assignments', () => {
+    const registry = createCharacterDossierRegistry();
+
+    expect(registry.getById('lena')?.fullName).toBe('Lena Fischer');
+    expect(registry.getById('lena')?.primaryWorld).toBe('magnet-hills');
+    expect(registry.getByWorld('magnet-hills').some((d) => d.characterId === 'lena')).toBe(true);
+
+    expect(registry.getById('kofi')?.fullName).toBe('Kofi Asante-Boateng');
+    expect(registry.getById('kofi')?.primaryWorld).toBe('circuit-marsh');
+    expect(registry.getById('kofi')?.role).toBe('stem_technology');
+
+    expect(registry.getById('dr-obi')?.fullName).toBe('Dr. Emeka Obi');
+    expect(registry.getById('dr-obi')?.primaryWorld).toBe('body-atlas');
+    expect(registry.getByWorld('body-atlas').some((d) => d.characterId === 'dr-obi')).toBe(true);
+
+    expect(registry.getById('hugo')?.fullName).toBe('Hugo Fontaine');
+    expect(registry.getById('hugo')?.primaryWorld).toBe('greenhouse-spiral');
+    expect(registry.getByWorld('greenhouse-spiral').some((d) => d.characterId === 'hugo')).toBe(true);
+  });
+
   it('returns empty array for unknown world', () => {
     const registry = createCharacterDossierRegistry();
     expect(registry.getByWorld('world-xyz-unknown')).toHaveLength(0);

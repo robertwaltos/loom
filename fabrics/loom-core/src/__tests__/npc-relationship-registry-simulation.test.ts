@@ -33,6 +33,18 @@ describe('NpcRelationshipRegistry — simulation', () => {
       expect(rel!.characterBWorldId).toBe('circuit-marsh');
     });
 
+    it('returns the canon-aligned lena-dr-obi and jin-ho-priya world links', () => {
+      const lenaDrObi = registry.getRelationship('lena-dr-obi');
+      expect(lenaDrObi).toBeDefined();
+      expect(lenaDrObi!.characterAWorldId).toBe('magnet-hills');
+      expect(lenaDrObi!.characterBWorldId).toBe('body-atlas');
+
+      const jinHoPriya = registry.getRelationship('jin-ho-priya');
+      expect(jinHoPriya).toBeDefined();
+      expect(jinHoPriya!.characterAWorldId).toBe('investment-greenhouse');
+      expect(jinHoPriya!.characterBWorldId).toBe('market-square');
+    });
+
     it('returns undefined for an unknown id', () => {
       expect(registry.getRelationship('no-such-pair')).toBeUndefined();
     });

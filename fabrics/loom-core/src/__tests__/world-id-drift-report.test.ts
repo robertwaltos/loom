@@ -8,10 +8,10 @@ import {
 describe('createWorldIdDriftReport', () => {
   const report = createWorldIdDriftReport();
 
-  it('tracks 7 world-linked registries', () => {
-    expect(TOTAL_WORLD_ID_DRIFT_REGISTRIES).toBe(7);
-    expect(report.totalRegistries).toBe(7);
-    expect(report.getRegistryProfiles()).toHaveLength(7);
+  it('tracks 14 world-linked registries', () => {
+    expect(TOTAL_WORLD_ID_DRIFT_REGISTRIES).toBe(14);
+    expect(report.totalRegistries).toBe(14);
+    expect(report.getRegistryProfiles()).toHaveLength(14);
   });
 
   it('reuses the shared singleton report export', () => {
@@ -20,81 +20,164 @@ describe('createWorldIdDriftReport', () => {
     );
   });
 
-  it('encyclopedia entries remain the biggest legacy hotspot in the current report', () => {
+  it('encyclopedia entries no longer carry unresolved legacy world ids after science-lab cleanup', () => {
     const profile = report.getRegistryProfile('encyclopedia-entries');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(5);
-    expect(profile!.unresolvedLegacyReferences).toBe(8);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(3);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('character dossiers show zero resolved aliases, four unresolved legacy IDs (science-lab + threadway-network special-space), and zero untracked IDs after cast cleanup', () => {
+  it('character dossiers now only carry supported special references after canon guide cleanup', () => {
     const profile = report.getRegistryProfile('character-dossiers');
     expect(profile).toBeDefined();
     expect(profile!.resolvedAliasReferences).toBe(0);
-    expect(profile!.unresolvedLegacyReferences).toBe(4);
+    expect(profile!.specialReferenceReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
-    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([
-      'science-lab',
-      'threadway-network',
-    ]);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual(['threadway-network']);
   });
 
   it('curriculum map carries exactly one rename-style alias reference', () => {
     const profile = report.getRegistryProfile('curriculum-map');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(1);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('npc relationship drift includes alias, unresolved legacy, and untracked references', () => {
-    const profile = report.getRegistryProfile('npc-relationship-registry');
+  it('mini-games registry is fully canonical after the entrepreneur workshop cleanup', () => {
+    const profile = report.getRegistryProfile('mini-games-registry');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(1);
-    expect(profile!.unresolvedLegacyReferences).toBe(2);
-    expect(profile!.untrackedNoncanonicalReferences).toBe(2);
+    expect(profile!.totalReferences).toBe(50);
+    expect(profile!.canonicalReferences).toBe(50);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
   });
 
-  it('quest chains currently carry one alias world and one unresolved special-space world across definitions and steps', () => {
+  it('npc relationship drift now only contains supported special references after guide realignment', () => {
+    const profile = report.getRegistryProfile('npc-relationship-registry');
+    expect(profile).toBeDefined();
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+  });
+
+  it('quest chains now carry only supported special references across definitions and steps', () => {
     const profile = report.getRegistryProfile('quest-chains');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(2);
-    expect(profile!.unresolvedLegacyReferences).toBe(4);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(4);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+  });
+
+  it('seasonal content is fully canonical once event scopes stop overloading world ids', () => {
+    const profile = report.getRegistryProfile('seasonal-content');
+    expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(22);
+    expect(profile!.canonicalReferences).toBe(22);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
   });
 
   it('threadway network currently only drifts on the entrepreneur workshop rename', () => {
     const profile = report.getRegistryProfile('threadway-network');
     expect(profile).toBeDefined();
-    expect(profile!.resolvedAliasReferences).toBe(2);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
     expect(profile!.untrackedNoncanonicalReferences).toBe(0);
   });
 
-  it('hidden zones expose any-threadway as an untracked special reference', () => {
+  it('visitor characters only drift on supported forgetting-well appearances', () => {
+    const profile = report.getRegistryProfile('visitor-characters');
+    expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(34);
+    expect(profile!.canonicalReferences).toBe(32);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(2);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual(['forgetting-well']);
+  });
+
+  it('world soundscape profiles are fully canonical across all 50 worlds', () => {
+    const profile = report.getRegistryProfile('world-soundscape-profiles');
+    expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(50);
+    expect(profile!.canonicalReferences).toBe(50);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
+  });
+
+  it('world fading profiles are fully canonical across all 50 worlds', () => {
+    const profile = report.getRegistryProfile('world-fading-profiles');
+    expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(50);
+    expect(profile!.canonicalReferences).toBe(50);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
+  });
+
+  it('world restoration atlas is fully canonical across all 50 worlds', () => {
+    const profile = report.getRegistryProfile('world-restoration-atlas');
+    expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(50);
+    expect(profile!.canonicalReferences).toBe(50);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
+  });
+
+  it('world ambient atlas is fully canonical across all 50 worlds', () => {
+    const profile = report.getRegistryProfile('world-ambient-atlas');
+    expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(50);
+    expect(profile!.canonicalReferences).toBe(50);
+    expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
+    expect(profile!.unresolvedLegacyReferences).toBe(0);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
+  });
+
+  it('hidden zones are fully canonical once threadway scope is modeled explicitly', () => {
     const profile = report.getRegistryProfile('hidden-zones');
     expect(profile).toBeDefined();
+    expect(profile!.totalReferences).toBe(8);
+    expect(profile!.canonicalReferences).toBe(8);
     expect(profile!.resolvedAliasReferences).toBe(0);
+    expect(profile!.specialReferenceReferences).toBe(0);
     expect(profile!.unresolvedLegacyReferences).toBe(0);
-    expect(profile!.untrackedNoncanonicalReferences).toBe(1);
-    expect(profile!.uniqueNoncanonicalWorldIds).toEqual(['any-threadway']);
+    expect(profile!.untrackedNoncanonicalReferences).toBe(0);
+    expect(profile!.uniqueNoncanonicalWorldIds).toEqual([]);
   });
 
-  it('science-lab appears only as unresolved legacy drift across current registries', () => {
+  it('science-lab no longer appears in active drift references after the bucket is fully redistributed', () => {
     const references = report.getReferencesForWorldId('science-lab');
-    expect(references).toHaveLength(8);
-    expect(new Set(references.map((reference) => reference.status))).toEqual(
-      new Set(['unresolved-legacy']),
-    );
+    expect(references).toHaveLength(0);
   });
 
-  it('surfaces the current set of untracked noncanonical IDs for future resolution work', () => {
-    expect(report.getUntrackedWorldIds()).toEqual([
-      'all-worlds',
-      'any-threadway',
-      'garden-of-growth',
-    ]);
+  it('shows no remaining untracked noncanonical IDs after the greenhouse relationship cleanup', () => {
+    expect(report.getUntrackedWorldIds()).toEqual([]);
   });
 
   it('lists every registry that still has at least one noncanonical reference', () => {
@@ -104,12 +187,10 @@ describe('createWorldIdDriftReport', () => {
         .map((profile) => profile.registryId),
     ).toEqual([
       'character-dossiers',
-      'curriculum-map',
       'encyclopedia-entries',
       'npc-relationship-registry',
       'quest-chains',
-      'threadway-network',
-      'hidden-zones',
+      'visitor-characters',
     ]);
   });
 });

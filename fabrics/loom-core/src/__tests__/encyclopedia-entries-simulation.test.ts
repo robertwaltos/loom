@@ -59,6 +59,27 @@ describe('EncyclopediaRegistry — simulation', () => {
     it('returns empty array for an unknown world', () => {
       expect(registry.getEntriesByWorld('nonexistent-world')).toHaveLength(0);
     });
+
+    it('returns the cleaned alias-backed encyclopedia entries under canonical world ids', () => {
+      expect(registry.getEntriesByWorld('meadow-lab').map((entry) => entry.entryId)).toEqual(
+        expect.arrayContaining(['ml-darwin', 'ml-mendel']),
+      );
+      expect(registry.getEntriesByWorld('entrepreneur-workshop').map((entry) => entry.entryId)).toEqual(
+        expect.arrayContaining(['ew-assembly-line', 'ew-microfinance']),
+      );
+      expect(registry.getEntriesByWorld('tax-office').map((entry) => entry.entryId)).toContain(
+        'tot-public-goods',
+      );
+      expect(registry.getEntriesByWorld('greenhouse-spiral').map((entry) => entry.entryId)).toEqual(
+        expect.arrayContaining(['sl-periodic-table', 'sl-photosynthesis']),
+      );
+      expect(registry.getEntriesByWorld('body-atlas').map((entry) => entry.entryId)).toEqual(
+        expect.arrayContaining(['sl-dna', 'sl-germ-theory']),
+      );
+      expect(registry.getEntriesByWorld('magnet-hills').map((entry) => entry.entryId)).toContain(
+        'sl-gravity',
+      );
+    });
   });
 
   describe('getEntriesByDomain', () => {

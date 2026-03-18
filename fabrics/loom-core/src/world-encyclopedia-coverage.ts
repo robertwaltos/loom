@@ -17,7 +17,6 @@ import { WORLD_DESIGN_ATLAS } from './world-design-atlas.js';
 // ── Constants ────────────────────────────────────────────────────
 
 export const TOTAL_WORLD_ENCYCLOPEDIA_COVERAGE_PROFILES = 50;
-export const TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS = 6;
 export const ACTUAL_ENCYCLOPEDIA_ENTRY_TOTAL = ENCYCLOPEDIA_ENTRIES.length;
 
 // ── Types ────────────────────────────────────────────────────────
@@ -94,6 +93,8 @@ const LEGACY_ENCYCLOPEDIA_WORLD_COVERAGE: ReadonlyArray<LegacyEncyclopediaWorldC
   legacyWorldId,
   totalEntries: ENCYCLOPEDIA_ENTRIES.filter((entry) => entry.worldId === legacyWorldId).length,
 })).sort((left, right) => left.legacyWorldId.localeCompare(right.legacyWorldId));
+
+export const TOTAL_LEGACY_ENCYCLOPEDIA_WORLD_IDS = LEGACY_ENCYCLOPEDIA_WORLD_COVERAGE.length;
 
 // ── Implementation ───────────────────────────────────────────────
 

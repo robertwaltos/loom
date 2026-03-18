@@ -22,6 +22,8 @@ describe('hidden-zones simulation', () => {
     const hz = makeHz();
     const zone = hz.getZoneById('the-in-between');
     expect(zone).toBeDefined();
+    expect(zone!.accessWorldId).toBeNull();
+    expect(zone!.accessScopeId).toBe('any-threadway');
   });
 
   it('exposes the dream-archive zone', () => {

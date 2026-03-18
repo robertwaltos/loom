@@ -21,6 +21,16 @@ describe('seasonal-content simulation', () => {
     expect(sc.getMonthlyEvents().length).toBe(12);
   });
 
+  it('models global event reach through affectedScopeIds instead of fake world ids', () => {
+    const sc = makeSc();
+    const january = sc.getActiveEvent(1);
+    const march = sc.getActiveEvent(3);
+    expect(january.affectedWorldIds).toEqual([]);
+    expect(january.affectedScopeIds).toEqual(['all']);
+    expect(march.affectedWorldIds).toEqual([]);
+    expect(march.affectedScopeIds).toEqual(['all-female-guides']);
+  });
+
   it('returns 6 time-locked content items', () => {
     const sc = makeSc();
     expect(sc.getAllTimeLockedContent().length).toBe(6);

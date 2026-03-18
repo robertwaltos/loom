@@ -106,6 +106,17 @@ describe('threadway-network simulation', () => {
       const connected = tw.getConnectedWorlds('__fake_world__');
       expect(connected).toHaveLength(0);
     });
+
+    it('uses the canonical entrepreneur workshop id across routing threadways', () => {
+      const tw = makeTw();
+      const finance = tw.getThreadwayById('entrepreneur→job-fair');
+      const crossroads = tw.getThreadwayById('code-canyon↔entrepreneur');
+
+      expect(finance?.fromWorldId).toBe('entrepreneur-workshop');
+      expect(crossroads?.toWorldId).toBe('entrepreneur-workshop');
+      expect(tw.getConnectedWorlds('entrepreneur-workshop').length).toBeGreaterThan(0);
+      expect(tw.getConnectedWorlds('entrepreneurs-workshop')).toHaveLength(0);
+    });
   });
 
   // ── evaluateDiscovery ─────────────────────────────────────────────

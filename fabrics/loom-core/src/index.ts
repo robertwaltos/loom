@@ -1583,6 +1583,20 @@ export type {
   WorldEncyclopediaCoveragePort,
 } from './world-encyclopedia-coverage.js';
 
+// ── World Special Reference Registry ────────────────────────────
+
+export {
+  createWorldSpecialReferenceRegistry,
+  TOTAL_WORLD_SPECIAL_REFERENCES,
+  WORLD_SPECIAL_REFERENCE_REGISTRY,
+  WORLD_SPECIAL_REFERENCES,
+} from './world-special-reference-registry.js';
+export type {
+  WorldSpecialReference,
+  WorldSpecialReferenceKind,
+  WorldSpecialReferenceRegistryPort,
+} from './world-special-reference-registry.js';
+
 // ── World ID Resolution ────────────────────────────────────────
 
 export {
@@ -1617,6 +1631,20 @@ export type {
   WorldIdDriftReportPort,
   WorldIdDriftStatus,
 } from './world-id-drift-report.js';
+
+// ── World Special Reference Registry ────────────────────────────────────────
+
+export {
+  createWorldSpecialReferenceRegistry,
+  TOTAL_WORLD_SPECIAL_REFERENCES,
+  WORLD_SPECIAL_REFERENCE_REGISTRY,
+  WORLD_SPECIAL_REFERENCES,
+} from './world-special-reference-registry.js';
+export type {
+  WorldSpecialReference,
+  WorldSpecialReferenceKind,
+  WorldSpecialReferenceRegistryPort,
+} from './world-special-reference-registry.js';
 
 // Plugin System
 export { createPluginSystem } from './plugin-system.js';

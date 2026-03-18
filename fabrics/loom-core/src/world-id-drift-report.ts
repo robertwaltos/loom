@@ -2,26 +2,38 @@
  * World ID Drift Report
  *
  * Cross-registry audit of world ID references within loom-core. This read
- * model classifies each reference as canonical, alias-resolved, unresolved
- * legacy, or untracked noncanonical so downstream cleanup work can be planned
- * from measured drift instead of ad hoc searches.
+ * model classifies each reference as canonical, alias-resolved, special
+ * reference, unresolved legacy, or untracked noncanonical so downstream
+ * cleanup work can be planned from measured drift instead of ad hoc searches.
  */
 
 import { CHARACTER_DOSSIERS } from './character-dossiers.js';
 import { createCurriculumMap } from './curriculum-map.js';
 import { ENCYCLOPEDIA_ENTRIES } from './encyclopedia-entries.js';
 import { createHiddenZones } from './hidden-zones.js';
+import { createMiniGamesRegistry } from './mini-games-registry.js';
 import { CHARACTER_RELATIONSHIPS } from './npc-relationship-registry.js';
 import { createQuestChains } from './quest-chains.js';
+import { createSeasonalContent } from './seasonal-content.js';
+import { createVisitorCharacters } from './visitor-characters.js';
+import { createWorldAmbientAtlas } from './world-ambient-atlas.js';
+import { createWorldFadingProfiles } from './world-fading-profiles.js';
+import { createWorldRestorationAtlas } from './world-restoration-atlas.js';
+import { createWorldSoundscapeProfiles } from './world-soundscape-profiles.js';
 import {
   WORLD_ID_RESOLUTION,
   type WorldIdResolutionPort,
 } from './world-id-resolution.js';
+import {
+  WORLD_SPECIAL_REFERENCE_REGISTRY,
+  type WorldSpecialReferenceKind,
+  type WorldSpecialReferenceRegistryPort,
+} from './world-special-reference-registry.js';
 import { createThreadwayNetwork } from './threadway-network.js';
 
 // ── Constants ────────────────────────────────────────────────────
 
-export const TOTAL_WORLD_ID_DRIFT_REGISTRIES = 7;
+export const TOTAL_WORLD_ID_DRIFT_REGISTRIES = 14;
 
 // ── Types ────────────────────────────────────────────────────────
 
@@ -29,14 +41,22 @@ export type WorldIdDriftRegistryId =
   | 'character-dossiers'
   | 'curriculum-map'
   | 'encyclopedia-entries'
+  | 'mini-games-registry'
   | 'npc-relationship-registry'
   | 'quest-chains'
+  | 'seasonal-content'
   | 'threadway-network'
+  | 'visitor-characters'
+  | 'world-ambient-atlas'
+  | 'world-fading-profiles'
+  | 'world-restoration-atlas'
+  | 'world-soundscape-profiles'
   | 'hidden-zones';
 
 export type WorldIdDriftStatus =
   | 'canonical'
   | 'resolved-alias'
+  | 'special-reference'
   | 'unresolved-legacy'
   | 'untracked-noncanonical';
 
@@ -46,6 +66,7 @@ export interface WorldIdDriftReference {
   readonly fieldPath: string;
   readonly referencedWorldId: string;
   readonly status: WorldIdDriftStatus;
+  readonly specialReferenceKind?: WorldSpecialReferenceKind;
   readonly canonicalWorldId?: string;
   readonly canonicalWorldName?: string;
   readonly guideId?: string;
@@ -57,6 +78,7 @@ export interface RegistryWorldIdDriftProfile {
   readonly totalReferences: number;
   readonly canonicalReferences: number;
   readonly resolvedAliasReferences: number;
+  readonly specialReferenceReferences: number;
   readonly unresolvedLegacyReferences: number;
   readonly untrackedNoncanonicalReferences: number;
   readonly uniqueNoncanonicalWorldIds: ReadonlyArray<string>;
@@ -90,6 +112,13 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
   const quests = createQuestChains();
   const threadways = createThreadwayNetwork();
   const hiddenZones = createHiddenZones();
+  const miniGames = createMiniGamesRegistry();
+  const seasonalContent = createSeasonalContent();
+  const visitors = createVisitorCharacters();
+  const ambientAtlas = createWorldAmbientAtlas();
+  const fadingProfiles = createWorldFadingProfiles();
+  const restorationAtlas = createWorldRestorationAtlas();
+  const soundscapeProfiles = createWorldSoundscapeProfiles();
 
   const curriculumSeeds: ReadonlyArray<ReferenceSeed> = [
     ...curriculum.getSTEMAlignments().map((alignment) => ({
@@ -149,12 +178,14 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
   ]);
 
   const hiddenZoneSeeds = hiddenZones.getAllZones().flatMap((zone) => [
-    {
-      registryId: 'hidden-zones' as const,
-      recordId: zone.zoneId,
-      fieldPath: 'accessWorldId',
-      referencedWorldId: zone.accessWorldId,
-    },
+    ...(zone.accessWorldId === null
+      ? []
+      : [{
+          registryId: 'hidden-zones' as const,
+          recordId: zone.zoneId,
+          fieldPath: 'accessWorldId',
+          referencedWorldId: zone.accessWorldId,
+        }]),
     ...(zone.discoveryTrigger.requiredWorldId === null
       ? []
       : [{
@@ -164,6 +195,75 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
           referencedWorldId: zone.discoveryTrigger.requiredWorldId,
         }]),
   ]);
+
+  const miniGameSeeds: ReadonlyArray<ReferenceSeed> = miniGames.getAllGames().map((game) => ({
+    registryId: 'mini-games-registry' as const,
+    recordId: game.gameId,
+    fieldPath: 'worldId',
+    referencedWorldId: game.worldId,
+  }));
+
+  const visitorSeeds: ReadonlyArray<ReferenceSeed> = [
+    ...visitors.getRecurringVisitors().flatMap((visitor) =>
+      visitor.worldIds.map((worldId, index) => ({
+        registryId: 'visitor-characters' as const,
+        recordId: visitor.characterId,
+        fieldPath: `worldIds[${index}]`,
+        referencedWorldId: worldId,
+      })),
+    ),
+    ...visitors.getLegendaryFigures().map((figure) => ({
+      registryId: 'visitor-characters' as const,
+      recordId: figure.characterId,
+      fieldPath: 'worldId',
+      referencedWorldId: figure.worldId,
+    })),
+  ];
+
+  const seasonalSeeds: ReadonlyArray<ReferenceSeed> = [
+    ...seasonalContent.getMonthlyEvents().flatMap((event) =>
+      event.affectedWorldIds.map((worldId, index) => ({
+        registryId: 'seasonal-content' as const,
+        recordId: `${event.month}-${event.name}`,
+        fieldPath: `affectedWorldIds[${index}]`,
+        referencedWorldId: worldId,
+      })),
+    ),
+    ...seasonalContent.getAllTimeLockedContent().map((content) => ({
+      registryId: 'seasonal-content' as const,
+      recordId: content.contentId,
+      fieldPath: 'worldId',
+      referencedWorldId: content.worldId,
+    })),
+  ];
+
+  const soundscapeSeeds: ReadonlyArray<ReferenceSeed> = soundscapeProfiles.all().map((profile) => ({
+    registryId: 'world-soundscape-profiles' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
+  const fadingSeeds: ReadonlyArray<ReferenceSeed> = fadingProfiles.all().map((profile) => ({
+    registryId: 'world-fading-profiles' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
+  const ambientSeeds: ReadonlyArray<ReferenceSeed> = ambientAtlas.all().map((profile) => ({
+    registryId: 'world-ambient-atlas' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
+
+  const restorationSeeds: ReadonlyArray<ReferenceSeed> = restorationAtlas.all().map((profile) => ({
+    registryId: 'world-restoration-atlas' as const,
+    recordId: profile.worldId,
+    fieldPath: 'worldId',
+    referencedWorldId: profile.worldId,
+  }));
 
   return [
     ...CHARACTER_DOSSIERS.map((dossier) => ({
@@ -179,6 +279,7 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
       fieldPath: 'worldId',
       referencedWorldId: entry.worldId,
     })),
+    ...miniGameSeeds,
     ...CHARACTER_RELATIONSHIPS.flatMap((relationship) => [
       {
         registryId: 'npc-relationship-registry' as const,
@@ -194,7 +295,13 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
       },
     ]),
     ...questSeeds,
+    ...seasonalSeeds,
     ...threadwaySeeds,
+    ...visitorSeeds,
+    ...ambientSeeds,
+    ...fadingSeeds,
+    ...restorationSeeds,
+    ...soundscapeSeeds,
     ...hiddenZoneSeeds,
   ];
 }
@@ -204,7 +311,19 @@ function extractReferenceSeeds(): ReadonlyArray<ReferenceSeed> {
 function classifyReference(
   seed: ReferenceSeed,
   resolution: WorldIdResolutionPort,
+  specialReferences: WorldSpecialReferenceRegistryPort,
 ): WorldIdDriftReference {
+  const specialReference = specialReferences.getReference(seed.referencedWorldId);
+
+  if (specialReference) {
+    return {
+      ...seed,
+      status: 'special-reference',
+      specialReferenceKind: specialReference.kind,
+      evidence: specialReference.evidence,
+    };
+  }
+
   const result = resolution.resolve(seed.referencedWorldId);
 
   if (!result) {
@@ -233,9 +352,16 @@ function buildRegistryProfiles(
     'character-dossiers',
     'curriculum-map',
     'encyclopedia-entries',
+    'mini-games-registry',
     'npc-relationship-registry',
     'quest-chains',
+    'seasonal-content',
     'threadway-network',
+    'visitor-characters',
+    'world-ambient-atlas',
+    'world-fading-profiles',
+    'world-restoration-atlas',
+    'world-soundscape-profiles',
     'hidden-zones',
   ];
 
@@ -253,6 +379,9 @@ function buildRegistryProfiles(
       resolvedAliasReferences: registryReferences.filter(
         (reference) => reference.status === 'resolved-alias',
       ).length,
+      specialReferenceReferences: registryReferences.filter(
+        (reference) => reference.status === 'special-reference',
+      ).length,
       unresolvedLegacyReferences: registryReferences.filter(
         (reference) => reference.status === 'unresolved-legacy',
       ).length,
@@ -269,7 +398,13 @@ function buildRegistryProfiles(
 }
 
 const WORLD_ID_DRIFT_REFERENCES: ReadonlyArray<WorldIdDriftReference> =
-  extractReferenceSeeds().map((seed) => classifyReference(seed, WORLD_ID_RESOLUTION));
+  extractReferenceSeeds().map((seed) =>
+    classifyReference(
+      seed,
+      WORLD_ID_RESOLUTION,
+      WORLD_SPECIAL_REFERENCE_REGISTRY,
+    ),
+  );
 
 const REGISTRY_WORLD_ID_DRIFT_PROFILES = buildRegistryProfiles(
   WORLD_ID_DRIFT_REFERENCES,
@@ -324,6 +459,7 @@ export function createWorldIdDriftReport(): WorldIdDriftReportPort {
       return REGISTRY_WORLD_ID_DRIFT_PROFILES.filter(
         (profile) =>
           profile.resolvedAliasReferences > 0 ||
+          profile.specialReferenceReferences > 0 ||
           profile.unresolvedLegacyReferences > 0 ||
           profile.untrackedNoncanonicalReferences > 0,
       );

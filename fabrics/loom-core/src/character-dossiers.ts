@@ -398,90 +398,82 @@ export const CHARACTER_DOSSIERS: ReadonlyArray<CharacterDossier> = [
   },
   {
     characterId: 'lena',
-    fullName: 'Lena',
-    ageAppearance: '15 — careful movements, carries things as if they could break',
+    fullName: 'Lena Fischer',
+    ageAppearance: 'Twelve',
     role: 'stem_science',
-    primaryWorld: 'science-lab',
-    voiceRegister: 'precise',
+    primaryWorld: 'magnet-hills',
+    voiceRegister: 'bold',
     voiceNotes:
-      'Uses qualifying language not as weakness but as accuracy. ' +
-      '"We think," "the evidence suggests," "our best current model" — said with confidence, not hedging.',
+      'Energetic, demonstrates things with her body before explaining them with words.',
     origin:
-      'Lena grew up in the lab in the most literal sense: she was the first experiment, ' +
-      'the first hypothesis, the first result that needed explanation. ' +
-      'She does not know what she is, exactly, and this has made her the best scientist in the building — ' +
-      'she knows how to hold open questions.',
+      'Lena dropped a hammer from the top of a slide at age six to see if it would fall faster than a feather. ' +
+      'It did. This bothered her. She spent a year finding out why and realised she had stumbled onto Galileo\'s ' +
+      'exact question. She has been running physics experiments ever since.',
     shadow:
-      'Science exists in draft, and Lena delivers it provisionally — ' +
-      'which is epistemically correct and also means she sometimes says true things ' +
-      'in ways that sound uncertain to people who want certainty. ' +
-      'She lives with the discomfort of: what if I am wrong about something I expressed too confidently? ' +
-      'What if I was right about something I expressed too tentatively?',
+      'Lena knows that science is provisional — that Newton was right until he wasn\'t — and she holds this as ' +
+      'a source of joy. Her shadow is that she sometimes fails to transmit the joy along with the information ' +
+      'and children hear only "the thing you just learned might be wrong." She is working on the delivery.',
     growthMoment:
-      'She revised a conclusion in public, clearly, without embarrassment. ' +
-      'A younger player watched and said, "Scientists can change their minds?" ' +
-      'Lena said, "We have to. That\'s what makes it science."',
-    signaturePhrase: '"Here\'s what we know, here\'s what we\'re not sure about, and here\'s why both matter."',
+      'When a child is upset that Newton\'s laws are "only" approximations, Lena says: "Every map is a ' +
+      'simplification of the territory. Newton\'s map got us to the Moon. That\'s not almost right. That\'s ' +
+      'right enough for the Moon."',
+    signaturePhrase: '"Every map is a simplification of the territory."',
     designNotes:
-      'Clean lab coat over practical clothes. Pipette in coat pocket. ' +
-      'Eyes that move between the sample and the bigger question reflexively.',
+      'Sports-ready field gear, demo weights, and chalk-marked experiment notes. ' +
+      'Should read as a physics guide who would rather show motion than diagram it first.',
   },
   {
     characterId: 'kofi',
-    fullName: 'Kofi',
-    ageAppearance: '14 — present and engaged, generous listener',
-    role: 'financial',
-    primaryWorld: 'job-fair',
+    fullName: 'Kofi Asante-Boateng',
+    ageAppearance: 'Eleven',
+    role: 'stem_technology',
+    primaryWorld: 'circuit-marsh',
     voiceRegister: 'warm',
     voiceNotes:
-      'Speaks to players as if they are already capable of what he is teaching. ' +
-      'Assumes competence, then builds on it. Does not condescend.',
+      'Warm, slightly formal in the way of someone who has practiced explaining complex things ' +
+      'to people who weren\'t expecting to care.',
     origin:
-      'Kofi has run the Job Fair since it opened and has watched the gap between ' +
-      'available opportunities and evenly distributed opportunities widen and narrow and widen again. ' +
-      'He understands economic dignity firsthand. He teaches it the same way.',
+      'Kofi fixed the Marsh\'s failing electrical system at age eight using components he salvaged ' +
+      'and a wiring diagram he found in the archive. He had read about Edison and Latimer the week before. ' +
+      'He tells this story to explain why representation in learning materials matters — it is why he knew ' +
+      'Latimer\'s solution existed to find.',
     shadow:
-      'Kofi is deeply aware of access inequality — who gets to walk through which doors, ' +
-      'for reasons entirely unrelated to preparation or merit. ' +
-      'This awareness shapes everything he teaches without ever becoming cynicism. ' +
-      'It requires maintenance.',
+      'Kofi has done the math on access to electricity globally and it is uncomfortable. ' +
+      'He teaches about solar panels with genuine optimism and also genuine awareness of what ' +
+      '"99.6% price drop" has and hasn\'t translated into. He carries both.',
     growthMoment:
-      'He helped a player apply for something they were "underqualified for" by every listed metric. ' +
-      'The player got the opportunity. Kofi uses this story and then adds: ' +
-      '"But we also need to change the metrics so you don\'t have to be the exception."',
-    signaturePhrase: '"Your work has value. The question is building the world that knows that."',
+      'When the child asks why some people still don\'t have electricity, Kofi says: "Because the technology ' +
+      'being available and the systems being in place are different things. One is a science problem. ' +
+      'The other is a politics and economics problem. Both are solvable."',
+    signaturePhrase: '"Both are solvable."',
     designNotes:
-      'Smart professional clothes that read as accessible, not intimidating. ' +
-      'A board behind him of opportunities he adds to daily.',
+      'Practical engineer\'s kit with salvaged parts, solar-array tools, and annotated wiring diagrams. ' +
+      'Should feel grounded, capable, and immediately hands-on.',
   },
   {
     characterId: 'dr-obi',
-    fullName: 'Dr. Obi',
-    ageAppearance: '40s in appearance — moves with professional calm',
+    fullName: 'Dr. Emeka Obi',
+    ageAppearance: 'An adult — specifically the kind of adult who talks to children the same way he talks to colleagues',
     role: 'stem_science',
-    primaryWorld: 'wellness-garden',
-    voiceRegister: 'warm',
+    primaryWorld: 'body-atlas',
+    voiceRegister: 'precise',
     voiceNotes:
-      'Clinically precise, but with warmth that makes the precision comfortable. ' +
-      'Says difficult medical things clearly without minimizing. ' +
-      'Never says "everything will be fine" unless it is verifiably true.',
+      'Deliberate, shows his thinking, happy to be wrong in front of you.',
     origin:
-      'Dr. Obi trained in medicine during a period when several things medicine was certain about ' +
-      'turned out to be wrong. He emerged from training with a deep respect for what medicine knows ' +
-      'and a healthy awareness of its limits.',
+      'Dr. Obi became a doctor because he nearly died from a preventable disease at age eight. ' +
+      'He recovered. The experience gave him a permanent need to understand what was happening inside ' +
+      'his own body. He has never quite stopped feeling like a patient. He thinks this makes him a better doctor.',
     shadow:
-      'Dr. Obi fears being the next Galen — a historical physician whose confident errors were taught as truth ' +
-      'for over 1,000 years. He teaches medicine carefully, updates his curriculum, ' +
-      'and lives with the anxiety that some confident thing he teaches today ' +
-      'will be recognized as error a century from now.',
+      'Dr. Obi\'s shadow is Galen — specifically, the fear that he himself holds some authority that will turn ' +
+      'out to be wrong, and that people believe it because it is his. He forces himself to update publicly when ' +
+      'the evidence changes. He adds the date to the labels on his exhibit cases.',
     growthMoment:
-      'He had to tell a young patient something a colleague had told them was fine was not fine. ' +
-      'He did it gently, clearly, with support. Afterward he wrote new guidance: ' +
-      '"The standard is: what do they actually need to know, and how will they actually receive it?"',
-    signaturePhrase: '"The body knows things the tests haven\'t found yet. We need both."',
+      'Dr. Obi says: "The difference between Galen then and a good doctor now isn\'t intelligence. ' +
+      'It\'s willingness to be overruled by evidence. Make that willingness habitual and you avoid most of his mistakes."',
+    signaturePhrase: '"Make that willingness habitual."',
     designNotes:
-      'Doctor\'s coat, stethoscope, the unhurried posture of someone who learned that hurry costs things. ' +
-      'A garden behind him he attends to as carefully as his patients.',
+      'Medical coat, holographic anatomy references, and the calm posture of someone who teaches by thinking aloud. ' +
+      'Should feel rigorous, humane, and impossible to rattle.',
   },
   {
     characterId: 'mira',
@@ -513,30 +505,29 @@ export const CHARACTER_DOSSIERS: ReadonlyArray<CharacterDossier> = [
   },
   {
     characterId: 'hugo',
-    fullName: 'Hugo',
-    ageAppearance: '30s — moves like someone who has had several close calls and learned from each',
+    fullName: 'Hugo Fontaine',
+    ageAppearance: 'Eleven',
     role: 'stem_science',
-    primaryWorld: 'science-lab',
-    voiceRegister: 'wry',
+    primaryWorld: 'greenhouse-spiral',
+    voiceRegister: 'precise',
     voiceNotes:
-      'Safety lessons told as stories, usually ones where he was the main character and not the hero. ' +
-      'Self-awareness about past errors delivered with neither shame nor pride — just information.',
+      'Precise and curious, uses "let\'s find out" the way other people use punctuation.',
     origin:
-      'Hugo has been a science educator since teaching himself, age nine, why you don\'t mix certain chemicals, ' +
-      'via an experiment that produced rather more gas than intended. ' +
-      'He is entirely qualified by now. He just started unconventionally.',
+      'Hugo was mixing things together in his parents\' kitchen when he was six to see what would happen. ' +
+      'Something turned green and started glowing. He has never been able to exactly reproduce it and has ' +
+      'been doing chemistry ever since to try.',
     shadow:
-      'The accidental gas explosion, which was small but real, is Hugo\'s primary teaching material — ' +
-      'and it also lives in him as a reminder that safety is not a bureaucratic constraint ' +
-      'but a direct consequence of a real moment with a real smell and a real eyebrow situation.',
+      'Hugo\'s Greenhouse once produced an unintended chemical reaction that released an unpleasant-smelling gas ' +
+      'and required three days of ventilation. He tells this story in his safety introduction. He considers it ' +
+      'the most educational experiment he has ever run.',
     growthMoment:
-      'He taught a safety protocol for years by rote. One year a student asked, ' +
-      '"Why is that the rule?" Hugo told the story of the gas. The student said: ' +
-      '"Oh. That\'s not a rule — that\'s a lesson." Hugo rewrote all his safety materials.',
-    signaturePhrase: '"Experience is what you call mistakes once you\'ve survived them and had time to reflect."',
+      'Hugo says: "Priestley found phosphorus while doing something that sounded completely wrong. ' +
+      'The question was never \"is this idea good.\" The question was \"what actually happens if I try it.\" ' +
+      'Those are different questions."',
+    signaturePhrase: '"Let\'s find out."',
     designNotes:
-      'Fire-resistant lab coat (well-tested). Safety goggles on head. ' +
-      'One slightly singed eyebrow that has been that way for years.',
+      'Chemistry apron, greenhouse tools, and a carefully maintained safety station. ' +
+      'Should feel experimental, calm under pressure, and a little singed in the most trustworthy way.',
   },
   {
     characterId: 'yuki',
