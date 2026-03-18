@@ -179,4 +179,40 @@ describe('KindlerRepository (mock)', () => {
     const all = await repo.loadSparkLog('k-001', 100);
     expect(all).toHaveLength(10);
   });
+
+  // ─── COPPA deletion ───────────────────────────────────────────────
+
+  it('deleteSparkLogs removes all spark entries for a kindler', async () => {
+    const repo = createMockKindlerRepository();
+    await repo.appendSparkEntry(makeSparkEntry('k-001'));
+    await repo.appendSparkEntry({ ...makeSparkEntry('k-002'), id: 'spark-002', kindlerId: 'k-002' });
+    await repo.deleteSparkLogs('k-001');
+    const deleted = await repo.loadSparkLog('k-001');
+    expect(deleted).toHaveLength(0);
+    // k-002 untouched
+    const other = await repo.loadSparkLog('k-002');
+    expect(other).toHaveLength(1);
+  });
+
+  it('deleteSessions removes all sessions for a kindler', async () => {
+    const repo = createMockKindlerRepository();
+    await repo.saveSession(makeSession('k-001'));
+    await repo.saveSession({ ...makeSession('k-002'), id: 'sess-002', kindlerId: 'k-002' });
+    await repo.deleteSessions('k-001');
+    const deleted = await repo.loadSession('sess-001');
+    expect(deleted).toBeNull();
+    // k-002 untouched
+    const other = await repo.loadSession('sess-002');
+    expect(other).not.toBeNull();
+  });
+
+  it('deleteSparkLogs is idempotent (no-op when no entries)', async () => {
+    const repo = createMockKindlerRepository();
+    await expect(repo.deleteSparkLogs('no-such-kindler')).resolves.toBeUndefined();
+  });
+
+  it('deleteSessions is idempotent (no-op when no sessions)', async () => {
+    const repo = createMockKindlerRepository();
+    await expect(repo.deleteSessions('no-such-kindler')).resolves.toBeUndefined();
+  });
 });
