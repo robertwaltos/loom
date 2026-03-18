@@ -213,3 +213,32 @@ export interface RoyaltyLedgerRow {
   readonly payment_status: 'not_due' | 'pending' | 'paid';
   readonly created_at: number;
 }
+
+// ─── Loom Engine Tables (shared infrastructure) ────────────────────
+
+/**
+ * loom_achievements row.
+ * NOTE: unlocked_at is TIMESTAMPTZ — the pg driver returns it as a Date object.
+ */
+export interface LoomAchievementRow {
+  readonly achievement_id: string;
+  readonly player_id: string;
+  readonly unlocked_at: Date;
+  readonly progress: number;        // 0-100
+  readonly metadata: Record<string, unknown> | null;
+}
+
+/**
+ * loom_leaderboard_snapshots row.
+ * NOTE: snapshot_at is TIMESTAMPTZ — returned as Date.
+ * NOTE: id (BIGSERIAL) and score (NUMERIC) are returned as strings by the pg driver.
+ */
+export interface LoomLeaderboardSnapshotRow {
+  readonly id: string;              // BIGSERIAL → string from pg
+  readonly board_id: string;
+  readonly player_id: string;
+  readonly display_name: string;
+  readonly score: string;           // NUMERIC(30,0) → string from pg
+  readonly rank: number;
+  readonly snapshot_at: Date;
+}

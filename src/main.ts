@@ -153,6 +153,8 @@ async function main(): Promise<void> {
   const { createPgDashboardQueries } = await import('../universe/parent-dashboard/pg-queries.js');
   const { createPgSafetySessionStore } = await import('../universe/safety/pg-session-store.js');
   const { createPgRevenueRepository } = await import('../universe/revenue/pg-repository.js');
+  const { createPgAchievementsRepository } = await import('../universe/achievements/pg-repository.js');
+  const { createPgLeaderboardRepository } = await import('../universe/leaderboard/pg-repository.js');
   const { createBootstrappedAdventuresEngine } = await import('../universe/adventures/bootstrap.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
@@ -160,6 +162,8 @@ async function main(): Promise<void> {
   const { registerParentDashboardRoutes } = await import('./routes/parent-dashboard.js');
   const { registerSafetyRoutes } = await import('./routes/safety.js');
   const { registerRevenueRoutes } = await import('./routes/revenue.js');
+  const { registerAchievementsRoutes } = await import('./routes/achievements.js');
+  const { registerLeaderboardRoutes } = await import('./routes/leaderboard.js');
   const { registerWorldsRoutes } = await import('./routes/worlds.js');
   const { registerAdventuresRoutes } = await import('./routes/adventures.js');
   const { registerQuizRoutes } = await import('./routes/quiz.js');
@@ -195,6 +199,8 @@ async function main(): Promise<void> {
   // PG repositories for safety sessions and revenue events
   const pgSafetySessionStore = createPgSafetySessionStore(pgPool);
   const pgRevenueRepo = createPgRevenueRepository(pgPool);
+  const pgAchievementsRepo = createPgAchievementsRepository(pgPool);
+  const pgLeaderboardRepo = createPgLeaderboardRepository(pgPool);
 
   // Luminance store: hydrated from world_luminance table at boot; falls back to 0.5/dimming defaults
   const pgLuminanceRepo = createPgLuminanceRepository(pgPool);
@@ -303,6 +309,18 @@ async function main(): Promise<void> {
         now: () => Date.now(),
         log: koydoLog,
         pgRepo: pgRevenueRepo,
+      }),
+      (app) => registerAchievementsRoutes(app, {
+        repo: kindlerRepo,
+        achievementsRepo: pgAchievementsRepo,
+        now: () => Date.now(),
+        log: koydoLog,
+      }),
+      (app) => registerLeaderboardRoutes(app, {
+        repo: kindlerRepo,
+        leaderboardRepo: pgLeaderboardRepo,
+        now: () => Date.now(),
+        log: koydoLog,
       }),
     ],
   });
