@@ -162,6 +162,7 @@ async function main(): Promise<void> {
   const { createPgContentRepository } = await import('../universe/content/pg-repository.js');
   const { createPgAdventureProgressRepository } = await import('../universe/adventures/pg-repository.js');
   const { createPgParentRepository } = await import('../universe/parent-dashboard/pg-parent-repository.js');
+  const { createPgMiniGameRepository } = await import('../universe/mini-games/pg-repository.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
@@ -174,6 +175,7 @@ async function main(): Promise<void> {
   const { registerAdventuresRoutes } = await import('./routes/adventures.js');
   const { registerQuizRoutes } = await import('./routes/quiz.js');
   const { registerMiniGamesRoutes } = await import('./routes/mini-games.js');
+  const { registerContentRoutes } = await import('./routes/content.js');
   const { createMiniGamesRegistry } = await import('../fabrics/loom-core/src/mini-games-registry.js');
   const { registerAccountRoutes } = await import('./routes/account.js');
   const { registerFeatureFlagRoutes } = await import('./routes/feature-flags.js');
@@ -216,6 +218,7 @@ async function main(): Promise<void> {
   const pgContentRepo = createPgContentRepository(pgPool);
   const pgAdventureProgressRepo = createPgAdventureProgressRepository(pgPool);
   const pgParentRepo = createPgParentRepository(pgPool);
+  const pgMiniGameRepo = createPgMiniGameRepository(pgPool);
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -346,10 +349,17 @@ async function main(): Promise<void> {
         pgSessionStore: pgSafetySessionStore,
         analyticsEmitter,
       }),
-      (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
+      (app) => registerWorldsRoutes(app, {
+        worldsEngine,
+        contentEngine,
+        luminanceStore,
+        pgLuminanceRepo,
+        onRestoreEvent: onEntryCompleted,
+      }),
       (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine, pgProgressRepo: pgAdventureProgressRepo }),
       (app) => registerQuizRoutes(app, { contentEngine, analyticsEmitter }),
-      (app) => registerMiniGamesRoutes(app, { registry: miniGamesRegistry }),
+      (app) => registerMiniGamesRoutes(app, { registry: miniGamesRegistry, pgMiniGameRepo }),
+      (app) => registerContentRoutes(app, { contentEngine }),
       (app) => registerAccountRoutes(app, {
         repo: kindlerRepo,
         log: koydoLog,

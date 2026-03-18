@@ -14,7 +14,8 @@ import type { FastifyAppLike } from '@loom/selvage';
 import type { WorldsEngine } from '../../universe/worlds/engine.js';
 import type { ContentEngine } from '../../universe/content/engine.js';
 import type { WorldLuminance, WorldDefinition, Realm } from '../../universe/worlds/types.js';
-import type { RealWorldEntry } from '../../universe/content/types.js';
+import type { RealWorldEntry, DifficultyTier } from '../../universe/content/types.js';
+import type { PgLuminanceRepository, LuminanceLogEntry } from '../../universe/fading/pg-luminance-repository.js';
 
 // ─── Deps ──────────────────────────────────────────────────────────
 
@@ -23,6 +24,10 @@ export interface WorldsRoutesDeps {
   readonly contentEngine: ContentEngine;
   /** Mutable in-memory store — updated by session complete-entry */
   readonly luminanceStore: Map<string, WorldLuminance>;
+  /** Optional: enables luminance history endpoint */
+  readonly pgLuminanceRepo?: PgLuminanceRepository;
+  /** Optional: called when a kindler triggers a manual world restore */
+  readonly onRestoreEvent?: (worldId: string, kindlerId: string, tier: DifficultyTier) => void;
 }
 
 // ─── Response shapes ──────────────────────────────────────────────
@@ -79,6 +84,20 @@ interface WorldEntriesResponse {
   readonly worldId: string;
   readonly entries: readonly EntrySummary[];
   readonly total: number;
+}
+
+interface LuminanceHistoryResponse {
+  readonly ok: true;
+  readonly worldId: string;
+  readonly history: readonly LuminanceLogEntry[];
+  readonly total: number;
+}
+
+interface RestoreResponse {
+  readonly ok: true;
+  readonly worldId: string;
+  readonly kindlerId: string;
+  readonly queued: boolean;
 }
 
 interface ErrorResponse {
@@ -159,7 +178,7 @@ function entryToSummary(entry: RealWorldEntry): EntrySummary {
 // ─── Route Registration ────────────────────────────────────────────
 
 export function registerWorldsRoutes(app: FastifyAppLike, deps: WorldsRoutesDeps): void {
-  const { worldsEngine, contentEngine, luminanceStore } = deps;
+  const { worldsEngine, contentEngine, luminanceStore, pgLuminanceRepo, onRestoreEvent } = deps;
 
   // GET /v1/worlds — list all worlds (optional ?realm= query param)
   app.get('/v1/worlds', async (req, reply) => {
@@ -216,6 +235,58 @@ export function registerWorldsRoutes(app: FastifyAppLike, deps: WorldsRoutesDeps
       worlds: worlds.map(w => worldToSummary(w, luminanceStore)),
       total: worlds.length,
     };
+    return reply.send(res);
+  });
+
+  // GET /v1/worlds/:worldId/luminance/history — luminance change log
+  // Registered BEFORE /:worldId to avoid Fastify route conflict
+  app.get('/v1/worlds/:worldId/luminance/history', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const query = (req as unknown as { query: Record<string, unknown> }).query;
+    const worldId = typeof params['worldId'] === 'string' ? params['worldId'] : null;
+    if (worldId === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid worldId', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    if (pgLuminanceRepo === undefined) {
+      const err: ErrorResponse = { ok: false, error: 'History unavailable', code: 'UNAVAILABLE' };
+      return reply.code(503).send(err);
+    }
+    const rawLimit = typeof query['limit'] === 'string' ? parseInt(query['limit'], 10) : 50;
+    const rawOffset = typeof query['offset'] === 'string' ? parseInt(query['offset'], 10) : 0;
+    const limit = Number.isFinite(rawLimit) && rawLimit > 0 ? Math.min(rawLimit, 200) : 50;
+    const offset = Number.isFinite(rawOffset) && rawOffset >= 0 ? rawOffset : 0;
+    const history = await pgLuminanceRepo.loadHistory(worldId, limit, offset);
+    const res: LuminanceHistoryResponse = { ok: true, worldId, history, total: history.length };
+    return reply.send(res);
+  });
+
+  // POST /v1/worlds/:worldId/restore — kindler triggers world restore
+  // Registered BEFORE /:worldId to avoid Fastify route conflict
+  app.post('/v1/worlds/:worldId/restore', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const body = (req as unknown as { body: unknown }).body as Record<string, unknown> | null | undefined;
+    const worldId = typeof params['worldId'] === 'string' ? params['worldId'] : null;
+    if (worldId === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid worldId', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    const world = worldsEngine.getWorldById(worldId);
+    if (world === undefined) {
+      const err: ErrorResponse = { ok: false, error: `World '${worldId}' not found`, code: 'NOT_FOUND' };
+      return reply.code(404).send(err);
+    }
+    const kindlerId = typeof body?.['kindlerId'] === 'string' ? body['kindlerId'] : null;
+    if (kindlerId === null || kindlerId.length === 0) {
+      const err: ErrorResponse = { ok: false, error: 'kindlerId is required', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    const rawTier = typeof body?.['difficultyTier'] === 'number' ? body['difficultyTier'] : 1;
+    const tier: DifficultyTier = rawTier === 1 || rawTier === 2 || rawTier === 3 ? rawTier : 1;
+    if (onRestoreEvent !== undefined) {
+      onRestoreEvent(worldId, kindlerId, tier);
+    }
+    const res: RestoreResponse = { ok: true, worldId, kindlerId, queued: true };
     return reply.send(res);
   });
 

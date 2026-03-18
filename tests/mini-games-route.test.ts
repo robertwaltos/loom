@@ -233,6 +233,9 @@ function makeMockApp() {
     get: (path: string, handler: (req: unknown, reply: unknown) => unknown) => {
       routes.set(`GET:${path}`, handler);
     },
+    post: (path: string, handler: (req: unknown, reply: unknown) => unknown) => {
+      routes.set(`POST:${path}`, handler);
+    },
     async inject(method: string, path: string, opts?: {
       params?: Record<string, string>;
       query?: Record<string, string>;
