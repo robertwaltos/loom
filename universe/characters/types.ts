@@ -30,7 +30,7 @@ export type DisabilityType =
   | 'hand_tremor'         // Kofi Amponsah
   | 'autism'              // Yuki
   | 'wheelchair_user'     // (TBD)
-  | 'dyslexia'            // (TBD)
+  | 'dyslexia'            // Oliver Marsh
   | 'stutter'             // (TBD)
   | 'other';
 
@@ -133,6 +133,14 @@ export const CHARACTER_ROSTER = {
   'hassan-yilmaz':        { world: 'folklore-bazaar',      subject: 'Folklore' },
   'farah-al-rashid':      { world: 'translation-garden',   subject: 'Languages' },
   'nadia-volkov':         { world: 'diary-lighthouse',     subject: 'Diary Writing' },
+  'oliver-marsh':         { world: 'reading-reef',         subject: 'Reading' },
+  'kwame-asante':         { world: 'vocabulary-jungle',    subject: 'Vocabulary' },
+  'lila-johansson-park':  { world: 'grammar-bridge',       subject: 'Grammar' },
+  'theo-papadopoulos':    { world: 'debate-arena',         subject: 'Debate / Argumentation' },
+  'ines-moreau':          { world: 'illustration-cove',    subject: 'Illustration / Visual Storytelling' },
+  'wren-calloway':        { world: 'editing-tower',        subject: 'Editing' },
+  'benny-okafor-williams': { world: 'spelling-mines',      subject: 'Spelling' },
+  'rosie-chen':           { world: 'punctuation-station',  subject: 'Punctuation' },
 
   // Realm of Exchange (Financial Literacy)
   'tia-carmen-herrera':   { world: 'market-square',           subject: 'Money Basics' },
@@ -140,14 +148,22 @@ export const CHARACTER_ROSTER = {
   'diego-montoya-silva':  { world: 'entrepreneurs-workshop',  subject: 'Entrepreneurship' },
   'tomas-reyes':          { world: 'barter-docks',            subject: 'Barter Systems' },
   'sam-worthington':      { world: 'tax-office',              subject: 'Taxes' },
+  'priya-nair':           { world: 'budget-kitchen',          subject: 'Budgeting' },
+  'nia-oduya':            { world: 'needs-wants-bridge',      subject: 'Needs vs Wants' },
+  'jin-ho-park':          { world: 'investment-greenhouse',   subject: 'Investing' },
+  'elsa-lindgren':        { world: 'debt-glacier',            subject: 'Debt' },
+  'babatunde-afolabi':    { world: 'job-fair',                subject: 'Careers' },
+  'mei-lin-wu':           { world: 'charity-harbor',          subject: 'Philanthropy' },
 
   // The Crossroads (Cross-Disciplinary)
-  'luna':                 { world: 'music-meadow',    subject: 'Music' },
-  'old-rowan':            { world: 'thinking-grove',  subject: 'Philosophy' },
-  'hana':                 { world: 'wellness-garden', subject: 'Mindfulness' },
-  'rami':                 { world: 'time-gallery',    subject: 'History' },
-  'the-librarian':        { world: 'great-archive',   subject: 'Hub' },
-  'compass':              { world: 'great-archive',   subject: 'Navigation Guide' },
+  'luna':                 { world: 'music-meadow',         subject: 'Music' },
+  'old-rowan':            { world: 'thinking-grove',       subject: 'Philosophy' },
+  'hana':                 { world: 'wellness-garden',      subject: 'Mindfulness' },
+  'rami':                 { world: 'time-gallery',         subject: 'History' },
+  'kenzo-nakamura-osei':  { world: 'workshop-crossroads',  subject: 'Making / Design / Technology' },
+  'solana-bright':        { world: 'discovery-trail',      subject: 'Cross-disciplinary / Wonder' },
+  'the-librarian':        { world: 'great-archive',        subject: 'Hub' },
+  'compass':              { world: 'great-archive',        subject: 'Navigation Guide' },
 } as const;
 
 export type CharacterId = keyof typeof CHARACTER_ROSTER;
