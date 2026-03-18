@@ -1,10 +1,12 @@
 /**
  * Kindler Routes — Child profile creation and management.
  *
- * POST /v1/kindler           — Create a new Kindler (child) profile
- * GET  /v1/kindler/:id       — Get Kindler profile
- * GET  /v1/kindler/:id/spark — Get current Spark state
+ * POST /v1/kindler              — Create a new Kindler (child) profile
+ * GET  /v1/kindler/:id         — Get Kindler profile
+ * GET  /v1/kindler/:id/spark   — Get current Spark state
  * GET  /v1/kindler/:id/progress — Get entry completion history
+ * GET  /v1/kindler/:id/chapter  — Get current chapter info and progress toward next
+ * GET  /v1/kindler/:id/dashboard — Get dashboard summary (spark, chapter, worlds)
  *
  * All routes require Authorization: Bearer <parent-token>
  * COPPA: no real names — displayName is a nickname, no DOB stored.
@@ -15,8 +17,9 @@
 
 import type { FastifyAppLike } from '@loom/selvage';
 import type { KindlerRepository } from '../../universe/kindler/repository.js';
+import { CHAPTER_THRESHOLDS } from '../../universe/kindler/engine.js';
 import type { KindlerEngine } from '../../universe/kindler/engine.js';
-import type { KindlerProfile, AgeTier } from '../../universe/kindler/types.js';
+import type { KindlerProfile, AgeTier, Chapter } from '../../universe/kindler/types.js';
 
 // ─── Request / Response shapes ────────────────────────────────────
 
@@ -66,6 +69,66 @@ interface ErrorResponse {
   readonly ok: false;
   readonly error: string;
   readonly code: string;
+}
+
+// ─── Chapter helpers ──────────────────────────────────────────────
+
+const CHAPTER_ORDER: readonly Chapter[] = [
+  'first_light', 'threadways_open', 'deep_fade', 'the_source', 'kindlers_legacy',
+];
+
+interface ChapterInfo {
+  readonly current: Chapter;
+  readonly nextChapter: Chapter | null;
+  readonly thresholdForNext: number | null;
+  readonly worldsRestored: number;
+  readonly worldsNeeded: number;
+  readonly isMaxChapter: boolean;
+}
+
+function buildChapterInfo(profile: KindlerProfile): ChapterInfo {
+  const currentIdx = CHAPTER_ORDER.indexOf(profile.currentChapter);
+  const nextChapter = CHAPTER_ORDER[currentIdx + 1] ?? null;
+  const thresholdForNext = nextChapter !== null ? CHAPTER_THRESHOLDS[nextChapter] : null;
+  const worldsRestored = profile.worldsRestored.length;
+  const worldsNeeded = thresholdForNext !== null ? Math.max(0, thresholdForNext - worldsRestored) : 0;
+  return {
+    current: profile.currentChapter,
+    nextChapter,
+    thresholdForNext,
+    worldsRestored,
+    worldsNeeded,
+    isMaxChapter: nextChapter === null,
+  };
+}
+
+interface ChapterResponse {
+  readonly ok: true;
+  readonly chapter: ChapterInfo;
+}
+
+interface DashboardResponse {
+  readonly ok: true;
+  readonly dashboard: {
+    readonly kindlerId: string;
+    readonly displayName: string;
+    readonly ageTier: AgeTier;
+    readonly entriesCompleted: number;
+    readonly spark: {
+      readonly level: number;
+      readonly trend: string;
+      readonly streakDays: number;
+    };
+    readonly chapter: {
+      readonly current: Chapter;
+      readonly nextChapter: Chapter | null;
+      readonly worldsNeeded: number;
+    };
+    readonly worlds: {
+      readonly visited: number;
+      readonly restored: number;
+    };
+  };
 }
 
 // ─── Validation ───────────────────────────────────────────────────
@@ -221,6 +284,76 @@ export function registerKindlerRoutes(app: FastifyAppLike, deps: KindlerRoutesDe
         adventureType: p.adventureType,
         score: p.score,
       })),
+    };
+    return reply.send(res);
+  });
+
+  // GET /v1/kindler/:id/chapter — get current chapter info
+  app.get('/v1/kindler/:id/chapter', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const id = typeof params['id'] === 'string' ? params['id'] : null;
+    if (id === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid id', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+
+    const profile = await repo.findById(id);
+    if (profile === null) {
+      const err: ErrorResponse = { ok: false, error: 'Not found', code: 'NOT_FOUND' };
+      return reply.code(404).send(err);
+    }
+
+    const res: ChapterResponse = { ok: true, chapter: buildChapterInfo(profile) };
+    return reply.send(res);
+  });
+
+  // GET /v1/kindler/:id/dashboard — get dashboard summary
+  app.get('/v1/kindler/:id/dashboard', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const id = typeof params['id'] === 'string' ? params['id'] : null;
+    if (id === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid id', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+
+    const profile = await repo.findById(id);
+    if (profile === null) {
+      const err: ErrorResponse = { ok: false, error: 'Not found', code: 'NOT_FOUND' };
+      return reply.code(404).send(err);
+    }
+
+    try {
+      engine.getSparkState(id);
+    } catch {
+      engine.registerKindler(profile);
+    }
+
+    const spark = engine.getSparkState(id);
+    const progList = await repo.loadProgress(id);
+    const chapterInfo = buildChapterInfo(profile);
+
+    const res: DashboardResponse = {
+      ok: true,
+      dashboard: {
+        kindlerId: profile.id,
+        displayName: profile.displayName,
+        ageTier: profile.ageTier,
+        entriesCompleted: progList.length,
+        spark: {
+          level: spark.level,
+          trend: spark.trend,
+          streakDays: spark.streakDays,
+        },
+        chapter: {
+          current: chapterInfo.current,
+          nextChapter: chapterInfo.nextChapter,
+          worldsNeeded: chapterInfo.worldsNeeded,
+        },
+        worlds: {
+          visited: profile.worldsVisited.length,
+          restored: profile.worldsRestored.length,
+        },
+      },
     };
     return reply.send(res);
   });
