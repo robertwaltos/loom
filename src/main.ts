@@ -143,7 +143,7 @@ async function main(): Promise<void> {
 
   // 6a. Koydo Worlds — Kindler progression engine + persistence
   const { createKindlerEngine } = await import('../universe/kindler/engine.js');
-  const { createKindlerRepository, createMockKindlerRepository } = await import('../universe/kindler/repository.js');
+  const { createPgKindlerRepository } = await import('../universe/kindler/pg-repository.js');
   const { createBootstrappedCharactersEngine } = await import('../universe/characters/bootstrap.js');
   const { createBootstrappedContentEngine } = await import('../universe/content/bootstrap.js');
   const { createWorldsEngine } = await import('../universe/worlds/engine.js');
@@ -177,9 +177,10 @@ async function main(): Promise<void> {
     },
   });
 
-  // TODO (prod): Install @supabase/supabase-js and wire real adapter when
-  // SUPABASE_URL + SUPABASE_SERVICE_KEY are configured.
-  const kindlerRepo = createMockKindlerRepository();
+  const kindlerRepo = createPgKindlerRepository(pgPool, {
+    error: (meta, msg) => logger.error(meta, msg),
+    warn: (meta, msg) => logger.warn(meta, msg),
+  });
   const charactersEngine = createBootstrappedCharactersEngine();
   const contentEngine = createBootstrappedContentEngine();
   const adventuresEngine = createBootstrappedAdventuresEngine();
@@ -213,11 +214,7 @@ async function main(): Promise<void> {
     return entry?.difficultyTier ?? null;
   }
 
-  if (env.supabase.url) {
-    logger.warn({}, 'SUPABASE_URL set but @supabase/supabase-js not installed — using mock repo');
-  } else {
-    logger.warn({}, 'SUPABASE_URL not set — using in-memory mock KindlerRepository (dev mode)');
-  }
+  logger.info({ host: env.pg.host, database: env.pg.database }, 'KindlerRepository: PostgreSQL-backed (kindler_profiles, kindler_progress, kindler_spark_log)');
   logger.info({ guides: 49, worlds: ALL_WORLDS.length, contentEntries: contentEngine.getStats().totalEntries, adventureConfigs: adventuresEngine.getStats().totalConfigs }, 'Koydo: KindlerEngine + CharactersEngine + WorldsEngine + ContentEngine + AdventuresEngine ready');
 
   function koydoLog(level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>): void {
