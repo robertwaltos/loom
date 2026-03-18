@@ -149,12 +149,15 @@ async function main(): Promise<void> {
   const { createWorldsEngine } = await import('../universe/worlds/engine.js');
   const { ALL_WORLDS } = await import('../universe/worlds/registry.js');
   const { applyRestoration, calculateRestorationDelta, resolveFadingStage } = await import('../universe/fading/engine.js');
+  const { createBootstrappedAdventuresEngine } = await import('../universe/adventures/bootstrap.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
   const { registerParentDashboardRoutes } = await import('./routes/parent-dashboard.js');
   const { registerSafetyRoutes } = await import('./routes/safety.js');
   const { registerWorldsRoutes } = await import('./routes/worlds.js');
+  const { registerAdventuresRoutes } = await import('./routes/adventures.js');
+  const { registerQuizRoutes } = await import('./routes/quiz.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -176,6 +179,7 @@ async function main(): Promise<void> {
   const kindlerRepo = createMockKindlerRepository();
   const charactersEngine = createBootstrappedCharactersEngine();
   const contentEngine = createBootstrappedContentEngine();
+  const adventuresEngine = createBootstrappedAdventuresEngine();
   const worldsEngine = createWorldsEngine({ worlds: ALL_WORLDS });
 
   // In-memory luminance store: all 50 worlds start at 0.5 (dimming) until Kindlers restore them
@@ -210,7 +214,7 @@ async function main(): Promise<void> {
   } else {
     logger.warn({}, 'SUPABASE_URL not set — using in-memory mock KindlerRepository (dev mode)');
   }
-  logger.info({ guides: 49, worlds: ALL_WORLDS.length, contentEntries: contentEngine.getStats().totalEntries }, 'Koydo: KindlerEngine + CharactersEngine + WorldsEngine + ContentEngine ready');
+  logger.info({ guides: 49, worlds: ALL_WORLDS.length, contentEntries: contentEngine.getStats().totalEntries, adventureConfigs: adventuresEngine.getStats().totalConfigs }, 'Koydo: KindlerEngine + CharactersEngine + WorldsEngine + ContentEngine + AdventuresEngine ready');
 
   function koydoLog(level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>): void {
     if (level === 'error') logger.error(meta ?? {}, msg);
@@ -253,6 +257,8 @@ async function main(): Promise<void> {
         log: koydoLog,
       }),
       (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
+      (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
+      (app) => registerQuizRoutes(app, { contentEngine }),
     ],
   });
 
