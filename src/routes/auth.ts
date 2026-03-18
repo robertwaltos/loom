@@ -20,6 +20,8 @@ interface RegisterRequest {
   readonly email: string;
   readonly password: string;
   readonly displayName?: string;
+  readonly ageTier?: number;
+  readonly parentalConsentToken?: string;
 }
 
 interface LoginRequest {
@@ -54,7 +56,14 @@ function validateRegisterInput(body: unknown): RegisterRequest | null {
     email: b['email'],
     password: b['password'],
     displayName: typeof b['displayName'] === 'string' ? b['displayName'] : b['username'],
+    ageTier: typeof b['ageTier'] === 'number' ? b['ageTier'] : undefined,
+    parentalConsentToken: typeof b['parentalConsentToken'] === 'string' ? b['parentalConsentToken'] : undefined,
   };
+}
+
+/** Returns true if the ageTier indicates a player under 13 (all Kindler tiers are ages 5–10). */
+function isUnderThirteen(ageTier: number | undefined): boolean {
+  return ageTier === 1 || ageTier === 2 || ageTier === 3;
 }
 
 function validateLoginInput(body: unknown): LoginRequest | null {
@@ -94,6 +103,15 @@ export function createAuthRoutes(deps: {
           ok: false,
           error: 'Invalid input: username ≥3 chars, valid email, password ≥8 chars required',
           code: 'INVALID_INPUT',
+        } satisfies ErrorResponse);
+      }
+
+      // ── Age Gate (COPPA) ─────────────────────────────────────────
+      if (isUnderThirteen(input.ageTier) && !input.parentalConsentToken) {
+        return r.code(403).send({
+          ok: false,
+          error: 'Players under 13 require parental consent. Please complete verification at /v1/auth/parental-consent.',
+          code: 'parental_consent_required',
         } satisfies ErrorResponse);
       }
 

@@ -160,6 +160,7 @@ async function main(): Promise<void> {
   const { registerQuizRoutes } = await import('./routes/quiz.js');
   const { registerMiniGamesRoutes } = await import('./routes/mini-games.js');
   const { createMiniGamesRegistry } = await import('../fabrics/loom-core/src/mini-games-registry.js');
+  const { registerAccountRoutes } = await import('./routes/account.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -263,6 +264,18 @@ async function main(): Promise<void> {
       (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
       (app) => registerQuizRoutes(app, { contentEngine }),
       (app) => registerMiniGamesRoutes(app, { registry: miniGamesRegistry }),
+      (app) => registerAccountRoutes(app, {
+        repo: kindlerRepo,
+        log: koydoLog,
+        deleteSparkLogs: async (kindlerId) => {
+          // In-memory mock: no-op; production would delete from kindler_spark_log
+          logger.info({ kindlerId }, 'account:deleteSparkLogs (stub — production wires to DB)');
+        },
+        deleteSessions: async (kindlerId) => {
+          // In-memory mock: no-op; production would delete from kindler_sessions
+          logger.info({ kindlerId }, 'account:deleteSessions (stub — production wires to DB)');
+        },
+      }),
     ],
   });
 
