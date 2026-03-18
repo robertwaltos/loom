@@ -148,4 +148,34 @@ describe('PgAnalyticsRepository', () => {
       expect(params[1]).toBe(200);
     });
   });
+
+  describe('getStats', () => {
+    it('returns event counts grouped by type', async () => {
+      const pool = makePool([
+        { event_type: 'entry_completed', count: '100' },
+        { event_type: 'session_started', count: '50' },
+      ]);
+      const repo = createPgAnalyticsRepository(pool as never);
+      const stats = await repo.getStats();
+      expect(stats).toHaveLength(2);
+      expect(stats[0]).toEqual({ eventType: 'entry_completed', count: 100 });
+      expect(stats[1]).toEqual({ eventType: 'session_started', count: 50 });
+    });
+
+    it('uses COUNT(*) GROUP BY event_type SQL', async () => {
+      const pool = makePool([]);
+      const repo = createPgAnalyticsRepository(pool as never);
+      await repo.getStats();
+      const [sql] = (pool.query as ReturnType<typeof vi.fn>).mock.calls[0] as [string];
+      expect(sql).toContain('COUNT(*)');
+      expect(sql).toContain('GROUP BY event_type');
+    });
+
+    it('returns empty array when no events', async () => {
+      const pool = makePool([]);
+      const repo = createPgAnalyticsRepository(pool as never);
+      const stats = await repo.getStats();
+      expect(stats).toHaveLength(0);
+    });
+  });
 });

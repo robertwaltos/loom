@@ -34,13 +34,25 @@ export interface AnalyticsEmitPayload {
 
 // ─── Public Interface ──────────────────────────────────────────────
 
+export interface AnalyticsEventTypeStat {
+  readonly eventType: string;
+  readonly count: number;
+}
+
+/** Fire-and-forget emitter interface — routes depend on this, not the full PgAnalyticsRepository. */
+export interface AnalyticsEmitter {
+  emit(event: AnalyticsEmitPayload): void;
+}
+
 export interface PgAnalyticsRepository {
   /** Fire-and-forget: insert one analytics event row. */
   emit(event: AnalyticsEmitPayload): Promise<void>;
-  /** Fetch the most recent N events (ops/debug use only). */
-  getRecent(limit?: number): Promise<readonly AnalyticsEvent[]>;
+  /** Fetch the most recent N events (ops/debug use only). Paginated with offset. */
+  getRecent(limit?: number, offset?: number): Promise<readonly AnalyticsEvent[]>;
   /** Fetch events for a specific player (parent dashboard use). */
   getByPlayer(playerId: string, limit?: number): Promise<readonly AnalyticsEvent[]>;
+  /** Event counts grouped by event_type — ops health check. */
+  getStats(): Promise<readonly AnalyticsEventTypeStat[]>;
 }
 
 // ─── Factory ──────────────────────────────────────────────────────
@@ -65,7 +77,7 @@ export function createPgAnalyticsRepository(pool: Pool): PgAnalyticsRepository {
       );
     },
 
-    async getRecent(limit = 100) {
+    async getRecent(limit = 100, offset = 0) {
       const result = await pool.query<{
         id: string;
         event_type: string;
@@ -80,8 +92,8 @@ export function createPgAnalyticsRepository(pool: Pool): PgAnalyticsRepository {
                 properties, server_time, client_time
          FROM loom_analytics_events
          ORDER BY server_time DESC
-         LIMIT $1`,
-        [limit],
+         LIMIT $1 OFFSET $2`,
+        [limit, offset],
       );
       return result.rows.map(rowToEvent);
     },
@@ -106,6 +118,19 @@ export function createPgAnalyticsRepository(pool: Pool): PgAnalyticsRepository {
         [playerId, limit],
       );
       return result.rows.map(rowToEvent);
+    },
+
+    async getStats() {
+      const result = await pool.query<{ event_type: string; count: string }>(
+        `SELECT event_type, COUNT(*) AS count
+         FROM loom_analytics_events
+         GROUP BY event_type
+         ORDER BY count DESC`,
+      );
+      return result.rows.map(r => ({
+        eventType: r.event_type,
+        count: parseInt(r.count, 10),
+      }));
     },
   };
 }

@@ -159,6 +159,7 @@ async function main(): Promise<void> {
   const { createPgAnalyticsRepository } = await import('../universe/analytics/pg-repository.js');
   const { createPgFeatureFlagsRepository } = await import('../universe/feature-flags/pg-repository.js');
   const { createPgModerationRepository } = await import('../universe/moderation/pg-repository.js');
+  const { createPgContentRepository } = await import('../universe/content/pg-repository.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
@@ -175,6 +176,7 @@ async function main(): Promise<void> {
   const { registerAccountRoutes } = await import('./routes/account.js');
   const { registerFeatureFlagRoutes } = await import('./routes/feature-flags.js');
   const { registerModerationRoutes } = await import('./routes/moderation.js');
+  const { registerAnalyticsRoutes } = await import('./routes/analytics.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -209,6 +211,16 @@ async function main(): Promise<void> {
   const pgAnalyticsRepo = createPgAnalyticsRepository(pgPool);
   const pgFeatureFlagsRepo = createPgFeatureFlagsRepository(pgPool);
   const pgModerationRepo = createPgModerationRepository(pgPool);
+  const pgContentRepo = createPgContentRepository(pgPool);
+
+  // Fire-and-forget analytics emitter — all routes share this instance
+  const analyticsEmitter = {
+    emit: (e: Parameters<typeof pgAnalyticsRepo.emit>[0]) => {
+      pgAnalyticsRepo.emit(e).catch((err: unknown) => {
+        logger.warn({ err }, 'koydo:analytics:emit_failed');
+      });
+    },
+  };
 
   // Luminance store: hydrated from world_luminance table at boot; falls back to 0.5/dimming defaults
   const pgLuminanceRepo = createPgLuminanceRepository(pgPool);
@@ -229,6 +241,23 @@ async function main(): Promise<void> {
   } catch (err) {
     logger.warn({ err }, 'koydo:fading:hydration failed — using in-memory defaults');
   }
+
+  // Content seeding: upsert curriculum content into real_world_entries + entry_quiz_questions.
+  // Skip if DB already has rows (idempotent on conflict — safe to re-run).
+  pgContentRepo.countEntries().then((count) => {
+    if (count > 0) {
+      logger.info({ count }, 'koydo:content:already seeded — skipping');
+      return;
+    }
+    const allEntries = contentEngine.getAllEntries();
+    const allQuizzes = contentEngine.getAllQuizzes();
+    pgContentRepo.seedEntries(allEntries)
+      .then(({ inserted }) => logger.info({ inserted }, 'koydo:content:entries seeded'))
+      .catch((err: unknown) => logger.warn({ err }, 'koydo:content:entry seed failed'));
+    pgContentRepo.seedQuizzes(allQuizzes)
+      .then(({ inserted }) => logger.info({ inserted }, 'koydo:content:quizzes seeded'))
+      .catch((err: unknown) => logger.warn({ err }, 'koydo:content:quiz seed failed'));
+  }).catch((err: unknown) => logger.warn({ err }, 'koydo:content:count check failed'));
 
   function onEntryCompleted(worldId: string, kindlerId: string, tier: 1 | 2 | 3): void {
     const current = luminanceStore.get(worldId);
@@ -296,8 +325,9 @@ async function main(): Promise<void> {
         idGenerator: koydoIdGen,
         getEntryTier,
         onEntryCompleted,
+        analyticsEmitter,
       }),
-      (app) => registerGuideRoutes(app, { charactersEngine, kindlerRepo }),
+      (app) => registerGuideRoutes(app, { charactersEngine, kindlerRepo, analyticsEmitter }),
       (app) => registerParentDashboardRoutes(app, {
         generateId: () => koydoIdGen.generate(),
         now: () => Date.now(),
@@ -309,10 +339,11 @@ async function main(): Promise<void> {
         now: () => Date.now(),
         log: koydoLog,
         pgSessionStore: pgSafetySessionStore,
+        analyticsEmitter,
       }),
       (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
       (app) => registerAdventuresRoutes(app, { adventuresEngine, worldsEngine }),
-      (app) => registerQuizRoutes(app, { contentEngine }),
+      (app) => registerQuizRoutes(app, { contentEngine, analyticsEmitter }),
       (app) => registerMiniGamesRoutes(app, { registry: miniGamesRegistry }),
       (app) => registerAccountRoutes(app, {
         repo: kindlerRepo,
@@ -344,6 +375,10 @@ async function main(): Promise<void> {
       }),
       (app) => registerModerationRoutes(app, {
         moderationRepo: pgModerationRepo,
+        moderationSecret: process.env['SUPPORT_MODERATION_SECRET'],
+      }),
+      (app) => registerAnalyticsRoutes(app, {
+        analyticsRepo: pgAnalyticsRepo,
         moderationSecret: process.env['SUPPORT_MODERATION_SECRET'],
       }),
     ],

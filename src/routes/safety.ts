@@ -16,6 +16,7 @@ import {
 } from '../../universe/safety/engine.js';
 import type { PgSafetySessionStore } from '../../universe/safety/pg-session-store.js';
 import type { ModerationFlag } from '../../universe/safety/types.js';
+import type { AnalyticsEmitter } from '../../universe/analytics/pg-repository.js';
 
 // ─── Deps ──────────────────────────────────────────────────────────
 
@@ -25,6 +26,8 @@ export interface SafetyRoutesDeps {
   readonly log: (level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>) => void;
   /** Optional PG store — mirrors session lifecycle for COPPA audit. */
   readonly pgSessionStore?: PgSafetySessionStore;
+  /** Optional: fire-and-forget analytics emitter. */
+  readonly analyticsEmitter?: AnalyticsEmitter;
 }
 
 // ─── Route Registration ────────────────────────────────────────────
@@ -41,6 +44,7 @@ export function registerSafetyRoutes(
 
   const engine = createSafetyEngine(engineDeps);
   const store = deps.pgSessionStore;
+  const analyticsEmitter = deps.analyticsEmitter;
 
   // POST /v1/safety/ai-session/start
   // Body: { kindlerId, characterId, worldId }
@@ -61,6 +65,12 @@ export function registerSafetyRoutes(
           deps.log('warn', 'ai_session_persist_failed', { sessionId: session.id, error: String(err) });
         });
       }
+      analyticsEmitter?.emit({
+        eventType: 'ai_session_started',
+        playerId: kindlerId,
+        sessionId: session.id,
+        properties: { characterId, worldId },
+      });
       return reply.status(201).send({ ok: true, session });
     } catch (err) {
       deps.log('error', 'ai_session_start_failed', { kindlerId, error: String(err) });
@@ -81,6 +91,7 @@ export function registerSafetyRoutes(
           deps.log('warn', 'ai_session_end_persist_failed', { sessionId, error: String(err) });
         });
       }
+      analyticsEmitter?.emit({ eventType: 'ai_session_ended', sessionId });
       return reply.send({ ok: true, session });
     } catch (err) {
       deps.log('warn', 'ai_session_end_failed', { sessionId, error: String(err) });

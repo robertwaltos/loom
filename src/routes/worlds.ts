@@ -219,6 +219,32 @@ export function registerWorldsRoutes(app: FastifyAppLike, deps: WorldsRoutesDeps
     return reply.send(res);
   });
 
+  // GET /v1/worlds/:worldId/luminance — dedicated luminance snapshot
+  // Registered BEFORE /:worldId to avoid Fastify route conflict
+  app.get('/v1/worlds/:worldId/luminance', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const worldId = typeof params['worldId'] === 'string' ? params['worldId'] : null;
+    if (worldId === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid worldId', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    const world = worldsEngine.getWorldById(worldId);
+    if (world === undefined) {
+      const err: ErrorResponse = { ok: false, error: `World '${worldId}' not found`, code: 'NOT_FOUND' };
+      return reply.code(404).send(err);
+    }
+    const lum = luminanceStore.get(worldId);
+    return reply.send({
+      ok: true,
+      worldId,
+      luminance: lum?.luminance ?? 0.5,
+      stage: lum?.stage ?? 'dimming',
+      lastRestoredAt: lum?.lastRestoredAt ?? 0,
+      totalKindlersContributed: lum?.totalKindlersContributed ?? 0,
+      activeKindlerCount: lum?.activeKindlerCount ?? 0,
+    });
+  });
+
   // GET /v1/worlds/:worldId — world detail + current luminance
   app.get('/v1/worlds/:worldId', async (req, reply) => {
     const params = (req as unknown as { params: Record<string, unknown> }).params;

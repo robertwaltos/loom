@@ -18,6 +18,7 @@ import type { FastifyAppLike } from '@loom/selvage';
 import type { KindlerRepository } from '../../universe/kindler/repository.js';
 import type { KindlerEngine } from '../../universe/kindler/engine.js';
 import type { SparkCause, KindlerSession } from '../../universe/kindler/types.js';
+import type { AnalyticsEmitter } from '../../universe/analytics/pg-repository.js';
 
 // ─── Request shapes ───────────────────────────────────────────────
 
@@ -116,10 +117,12 @@ export interface SessionRoutesDeps {
   readonly getEntryTier?: (entryId: string) => 1 | 2 | 3 | null;
   /** Optional: notified after entry completion so the caller can update luminance state. */
   readonly onEntryCompleted?: (worldId: string, kindlerId: string, tier: 1 | 2 | 3) => void;
+  /** Optional: fire-and-forget analytics emitter (no PII). */
+  readonly analyticsEmitter?: AnalyticsEmitter;
 }
 
 export function registerSessionRoutes(app: FastifyAppLike, deps: SessionRoutesDeps): void {
-  const { repo, engine, idGenerator, getEntryTier, onEntryCompleted } = deps;
+  const { repo, engine, idGenerator, getEntryTier, onEntryCompleted, analyticsEmitter } = deps;
 
   // POST /v1/session/start
   app.post('/v1/session/start', async (req, reply) => {
@@ -143,6 +146,7 @@ export function registerSessionRoutes(app: FastifyAppLike, deps: SessionRoutesDe
 
     const session = engine.startSession(kindlerId);
     await repo.saveSession(session);
+    analyticsEmitter?.emit({ eventType: 'session_started', playerId: kindlerId, sessionId: session.id });
     return reply.code(201).send(sessionToResponse(session));
   });
 
@@ -238,6 +242,7 @@ export function registerSessionRoutes(app: FastifyAppLike, deps: SessionRoutesDe
     }
 
     engine.markWorldRestored(kindlerId, worldId);
+    analyticsEmitter?.emit({ eventType: 'world_restored', playerId: kindlerId, worldId, sessionId });
 
     const sparkState = engine.getSparkState(kindlerId);
     const res: SparkEventResponse = {
@@ -279,6 +284,7 @@ export function registerSessionRoutes(app: FastifyAppLike, deps: SessionRoutesDe
 
     const completed = engine.endSession(sessionId, worldsVisited, guidesInteracted, entriesCompleted);
     await repo.saveSession(completed);
+    analyticsEmitter?.emit({ eventType: 'session_ended', playerId: kindlerId, sessionId });
 
     // Persist updated kindler profile
     const profile = await repo.findById(kindlerId);

@@ -41,6 +41,10 @@ export interface ContentEngine {
   validatePrerequisites(completedIds: readonly string[], targetId: string): readonly string[];
   getUnlockChain(entryId: string): readonly string[];
   getStats(): ContentEngineStats;
+  /** All entries (all statuses) — for DB seeding. */
+  getAllEntries(): readonly RealWorldEntry[];
+  /** All quiz questions — for DB seeding. */
+  getAllQuizzes(): readonly EntryQuizQuestion[];
 }
 
 // ─── Internal Context ──────────────────────────────────────────────
@@ -145,5 +149,7 @@ export function createContentEngine(deps: ContentEngineDeps): ContentEngine {
     validatePrerequisites: (ids, target) => checkPrerequisites(ctx, ids, target),
     getUnlockChain: (id) => buildUnlockChain(ctx, id),
     getStats: () => contentStats(ctx),
+    getAllEntries: () => ctx.deps.entries,
+    getAllQuizzes: () => ctx.deps.quizzes,
   };
 }

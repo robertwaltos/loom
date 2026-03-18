@@ -19,6 +19,7 @@ import type { CharactersEngine } from '../../universe/characters/engine.js';
 import type { KindlerRepository } from '../../universe/kindler/repository.js';
 import type { AdaptivePromptLayer } from '../../universe/characters/types.js';
 import { CHARACTER_ROSTER } from '../../universe/characters/types.js';
+import type { AnalyticsEmitter } from '../../universe/analytics/pg-repository.js';
 
 // ─── Response shapes ──────────────────────────────────────────────
 
@@ -82,10 +83,12 @@ function inferVocabularyLevel(tier: 1 | 2 | 3): 'simple' | 'intermediate' | 'adv
 export interface GuideRoutesDeps {
   readonly charactersEngine: CharactersEngine;
   readonly kindlerRepo: KindlerRepository;
+  /** Optional: fire-and-forget analytics emitter. */
+  readonly analyticsEmitter?: AnalyticsEmitter;
 }
 
 export function registerGuideRoutes(app: FastifyAppLike, deps: GuideRoutesDeps): void {
-  const { charactersEngine, kindlerRepo } = deps;
+  const { charactersEngine, kindlerRepo, analyticsEmitter } = deps;
 
   // GET /v1/guide — list all available guides
   app.get('/v1/guide', (_req, reply) => {
@@ -142,6 +145,11 @@ export function registerGuideRoutes(app: FastifyAppLike, deps: GuideRoutesDeps):
     }
 
     const sysPrompt = charactersEngine.buildSystemPrompt(characterId, layer);
+    analyticsEmitter?.emit({
+      eventType: 'guide_accessed',
+      playerId: kindlerId,
+      properties: { characterId },
+    });
     const res: GuidePromptResponse = {
       ok: true,
       characterId,

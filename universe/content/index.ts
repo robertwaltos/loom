@@ -1,5 +1,6 @@
 export * from './types.js';
 export * from './engine.js';
+export * from './pg-repository.js';
 export * from './curriculum/mappings.js';
 export * from './entries/cloud-kingdom.js';
 export * from './entries/great-archive.js';

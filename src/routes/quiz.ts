@@ -15,11 +15,14 @@
 import type { FastifyAppLike } from '@loom/selvage';
 import type { ContentEngine } from '../../universe/content/engine.js';
 import type { EntryQuizQuestion, DifficultyTier } from '../../universe/content/types.js';
+import type { AnalyticsEmitter } from '../../universe/analytics/pg-repository.js';
 
 // ─── Deps ──────────────────────────────────────────────────────────
 
 export interface QuizRoutesDeps {
   readonly contentEngine: ContentEngine;
+  /** Optional: fire-and-forget analytics emitter. */
+  readonly analyticsEmitter?: AnalyticsEmitter;
 }
 
 // ─── Response shapes ──────────────────────────────────────────────
@@ -72,7 +75,7 @@ function questionToSummary(q: EntryQuizQuestion): QuizQuestionSummary {
 // ─── Route Registration ────────────────────────────────────────────
 
 export function registerQuizRoutes(app: FastifyAppLike, deps: QuizRoutesDeps): void {
-  const { contentEngine } = deps;
+  const { contentEngine, analyticsEmitter } = deps;
 
   // GET /v1/quiz/entry/:entryId/summary — question counts per tier
   app.get('/v1/quiz/entry/:entryId/summary', async (req, reply) => {
@@ -155,6 +158,7 @@ export function registerQuizRoutes(app: FastifyAppLike, deps: QuizRoutesDeps): v
       questions: questions.map(questionToSummary),
       total: questions.length,
     };
+    analyticsEmitter?.emit({ eventType: 'quiz_viewed', properties: { entryId } });
     return reply.send(res);
   });
 }
