@@ -156,6 +156,9 @@ async function main(): Promise<void> {
   const { createPgAchievementsRepository } = await import('../universe/achievements/pg-repository.js');
   const { createPgLeaderboardRepository } = await import('../universe/leaderboard/pg-repository.js');
   const { createBootstrappedAdventuresEngine } = await import('../universe/adventures/bootstrap.js');
+  const { createPgAnalyticsRepository } = await import('../universe/analytics/pg-repository.js');
+  const { createPgFeatureFlagsRepository } = await import('../universe/feature-flags/pg-repository.js');
+  const { createPgModerationRepository } = await import('../universe/moderation/pg-repository.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
@@ -170,6 +173,8 @@ async function main(): Promise<void> {
   const { registerMiniGamesRoutes } = await import('./routes/mini-games.js');
   const { createMiniGamesRegistry } = await import('../fabrics/loom-core/src/mini-games-registry.js');
   const { registerAccountRoutes } = await import('./routes/account.js');
+  const { registerFeatureFlagRoutes } = await import('./routes/feature-flags.js');
+  const { registerModerationRoutes } = await import('./routes/moderation.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -201,6 +206,9 @@ async function main(): Promise<void> {
   const pgRevenueRepo = createPgRevenueRepository(pgPool);
   const pgAchievementsRepo = createPgAchievementsRepository(pgPool);
   const pgLeaderboardRepo = createPgLeaderboardRepository(pgPool);
+  const pgAnalyticsRepo = createPgAnalyticsRepository(pgPool);
+  const pgFeatureFlagsRepo = createPgFeatureFlagsRepository(pgPool);
+  const pgModerationRepo = createPgModerationRepository(pgPool);
 
   // Luminance store: hydrated from world_luminance table at boot; falls back to 0.5/dimming defaults
   const pgLuminanceRepo = createPgLuminanceRepository(pgPool);
@@ -231,6 +239,14 @@ async function main(): Promise<void> {
     logger.info({ worldId, luminance: updated.luminance, stage: updated.stage }, 'koydo:fading:restored');
     pgLuminanceRepo.save(updated).catch((err: unknown) => {
       logger.warn({ err, worldId }, 'koydo:fading:persist failed');
+    });
+    pgAnalyticsRepo.emit({
+      eventType: 'entry_completed',
+      playerId: kindlerId,
+      worldId,
+      properties: { tier },
+    }).catch((err: unknown) => {
+      logger.warn({ err }, 'koydo:analytics:emit_failed');
     });
   }
 
@@ -321,6 +337,14 @@ async function main(): Promise<void> {
         leaderboardRepo: pgLeaderboardRepo,
         now: () => Date.now(),
         log: koydoLog,
+      }),
+      (app) => registerFeatureFlagRoutes(app, {
+        flagsRepo: pgFeatureFlagsRepo,
+        moderationSecret: process.env['SUPPORT_MODERATION_SECRET'],
+      }),
+      (app) => registerModerationRoutes(app, {
+        moderationRepo: pgModerationRepo,
+        moderationSecret: process.env['SUPPORT_MODERATION_SECRET'],
       }),
     ],
   });

@@ -1,0 +1,1168 @@
+
+> project-loom@0.1.0 test
+> vitest run
+
+
+[1m[46m RUN [49m[22m [36mv4.0.18 [39m[90mD:/PythonProjects/Koydo_Loom[39m
+
+ [31mΓ¥»[39m tests/kindler-chapter-route.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m contracts/protocols/src/__tests__/protocol-evolution.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/redis-cache-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [31mΓ¥»[39m fabrics/loom-core/src/__tests__/wire-codec-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/selvage/src/__tests__/bridge-world-state-adapter-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/selvage/src/__tests__/bridge-integration.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/loom-core/src/__tests__/wire-codec.test.ts [2m([22m[2m0 test[22m[2m)[22m
+{"level":30,"time":1773816154311,"pid":70476,"hostname":"Alienware00","name":"delegate-test","requestId":"123","msg":"test message"}
+{"level":40,"time":1773816154313,"pid":70476,"hostname":"Alienware00","name":"loom","msg":"warning"}
+{"level":50,"time":1773816154314,"pid":70476,"hostname":"Alienware00","name":"loom","stack":"trace","msg":"error occurred"}
+{"level":30,"time":1773816154317,"pid":70476,"hostname":"Alienware00","name":"parent","service":"my-service","x":1,"msg":"child message"}
+{"level":40,"time":1773816154318,"pid":70476,"hostname":"Alienware00","name":"parent","component":"router","msg":"w"}
+{"level":50,"time":1773816154318,"pid":70476,"hostname":"Alienware00","name":"parent","component":"router","msg":"e"}
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/pino-logger-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 75[2mms[22m[39m
+ [31mΓ¥»[39m fabrics/loom-core/src/__tests__/vertical-integration-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/loom-core/src/__tests__/vertical-integration.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m tests/characters-engine.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 80[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/sodium-encryption-backend-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/world-history.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/fastify-transport-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/anti-cheat.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 62[2mms[22m[39m
+ [32mΓ£ô[39m tests/visual-effects-flow.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-fading-profiles.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 53[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/grpc-transport-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 29[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-soundscape-profiles.test.ts [2m([22m[2m55 tests[22m[2m)[22m[32m 54[2mms[22m[39m
+ [32mΓ£ô[39m tests/revenue-engine.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 44[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/bible-world-simulation.test.ts [2m([22m[2m49 tests[22m[2m)[22m[32m 51[2mms[22m[39m
+ [32mΓ£ô[39m universe/revenue/__tests__/revenue-engine-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/perf-optimization.test.ts [2m([22m[2m44 tests[22m[2m)[22m[32m 36[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/dungeon-generator.test.ts [2m([22m[2m71 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32mΓ£ô[39m universe/worlds/__tests__/worlds-registry-simulation.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-repair.test.ts [2m([22m[2m98 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/character-biography.test.ts [2m([22m[2m83 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/faction-history.test.ts [2m([22m[2m83 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [31mΓ¥»[39m fabrics/nakama-fabric/src/__tests__/ubk.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/survey-corps-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/nakama-fabric/src/__tests__/ubk-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/nakama-fabric/src/__tests__/mortality-timings-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/silfen-weave/src/__tests__/survey-pacing.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/transit-weave-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/nakama-fabric/src/__tests__/mortality-timings.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/crafting-economy-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/player-connect-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/cross-fabric-orchestration.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/silfen-weave/src/__tests__/survey-pacing-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/nakama-fabric/src/__tests__/commons-fund-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/trade-diplomacy-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/player-session-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/spawn-budget.test.ts [2m([22m[2m81 tests[22m[2m)[22m[32m 47[2mms[22m[39m
+ [31mΓ¥»[39m tests/full-stack-tick-simulation.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/mortality-connect-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/corridor-stability-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/bridge-spawn-pipeline.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m fabrics/nakama-fabric/src/__tests__/commons-fund.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/archive-chronicle-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [31mΓ¥»[39m tests/dynasty-lifecycle-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bridge-grpc-transport-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 156[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/corridor-network.test.ts [2m([22m[2m61 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32mΓ£ô[39m tests/metahuman-system-flow.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-continuity.test.ts [2m([22m[2m62 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/weather-forecast.test.ts [2m([22m[2m77 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/interaction-chronicle-simulation.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-generator.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/competitive-pvp-simulation.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chronicle-builder.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-legacy-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/loot-table.test.ts [2m([22m[2m49 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/investment-fund.test.ts [2m([22m[2m71 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-design-atlas.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/quest-engine.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+stderr | fabrics/inspector/src/__tests__/error-tracker.test.ts > multiple reporters > reporter error does not prevent other reporters from running
+[ErrorTracker] reporter threw synchronously: Error: reporter crash
+    at D:/PythonProjects/Koydo_Loom/fabrics/inspector/src/__tests__/error-tracker.test.ts:147:33
+    at dispatch (D:/PythonProjects/Koydo_Loom/fabrics/inspector/src/error-tracker.ts:196:24)
+    at capture (D:/PythonProjects/Koydo_Loom/fabrics/inspector/src/error-tracker.ts:238:5)
+    at Object.captureMessage (D:/PythonProjects/Koydo_Loom/fabrics/inspector/src/error-tracker.ts:253:16)
+    at D:/PythonProjects/Koydo_Loom/fabrics/inspector/src/__tests__/error-tracker.test.ts:149:7
+    at file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:145:11
+    at file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:915:26
+    at file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:1243:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:1209:10)
+
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/error-tracker.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/frequency-lock.test.ts [2m([22m[2m60 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/plugin-system-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/content-moderation-simulation.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/time-compression-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/character-portrait-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/procedural-quest.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-war-ai.test.ts [2m([22m[2m73 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-art-culture.test.ts [2m([22m[2m80 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-diplomacy-ai.test.ts [2m([22m[2m74 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m tests/fading-engine.test.ts [2m([22m[2m67 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/achievement-engine.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/grpc-bridge.test.ts [2m([22m[2m57 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-religion.test.ts [2m([22m[2m61 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/governance-engine-simulation.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/economy-maturation-simulation.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/economic-crisis.test.ts [2m([22m[2m68 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/encyclopedia-entries-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chronicle.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/perf-optimization-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-family.test.ts [2m([22m[2m93 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/treaty-archive.test.ts [2m([22m[2m67 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-crowd-simulation.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/witness-protocol-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-market.test.ts [2m([22m[2m57 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-physics.test.ts [2m([22m[2m70 tests[22m[2m)[22m[32m 30[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/mentorship-engine.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m tests/kindler-engine.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m tools/economy-simulator/__tests__/economy-simulator.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-personality.test.ts [2m([22m[2m41 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-trade-ai.test.ts [2m([22m[2m58 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/auction-engine.test.ts [2m([22m[2m52 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/bridge-loom-ue5/src/__tests__/pixel-streaming-simulation.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/survey-mission.test.ts [2m([22m[2m43 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-philosophy.test.ts [2m([22m[2m74 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-memory.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/survey-corps.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/zero-trust-engine.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-stream.test.ts [2m([22m[2m46 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-government.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/continuity-bonds.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/ml-pipeline-simulation.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-topology.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/oauth-provider.test.ts [2m([22m[2m66 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/saga-orchestrator.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/compliance-engine-simulation.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m universe/kindler/__tests__/kindler-engine-simulation.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/audio-engine.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/public-api.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-streaming-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trade-commerce.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/hash-service.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [31mΓ¥»[39m tests/inspector-health-flow.test.ts [2m([22m[2m0 test[22m[2m)[22m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/bible-appearance-mapper-simulation.test.ts [2m([22m[2m47 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/timeline-service-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/guild-expansion-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/governance-engine.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/api-doc-generator.test.ts [2m([22m[2m74 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-restoration-atlas.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/gns-transport-simulation.test.ts [2m([22m[2m35 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/political-influence.test.ts [2m([22m[2m43 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m tests/bible-v5-expansion-systems.test.ts [2m([22m[2m72 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/black-market.test.ts [2m([22m[2m46 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/snapshot-store.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/faction-engine.test.ts [2m([22m[2m38 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m universe/parent-dashboard/__tests__/parent-dashboard-engine-simulation.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trade-dispute-engine.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m tools/modding-sdk/__tests__/modding-sdk.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/corridor-maintenance-simulation.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-espionage.test.ts [2m([22m[2m46 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/load-tester.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/insurance-market.test.ts [2m([22m[2m65 tests[22m[2m)[22m[32m 26[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/tax-collector.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/regression-detector.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-speech-synthesis.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/wormhole-stabilizer.test.ts [2m([22m[2m76 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/dialogue-bridge.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/circuit-breaker.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/dialogue-bridge-simulation.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/world-chronicle.test.ts [2m([22m[2m60 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/playable-world-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 27[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/nakama-client-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/resource-scarcity.test.ts [2m([22m[2m63 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/procedural-quest-generator-simulation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/day-night-cycle.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/data-integrity-simulation.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/pg-persistence-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 52[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-appearance-builder-simulation.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/certificate-manager.test.ts [2m([22m[2m78 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/ip-filter.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/security-hardening-simulation.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/alliance-engine.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-emergent-intelligence-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-mortality.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/chaos-engineer.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-succession.test.ts [2m([22m[2m54 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/ability-system.test.ts [2m([22m[2m42 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/war-engine-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/status-effect-simulation.test.ts [2m([22m[2m35 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/terrain-erosion.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/status-effect.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/secrets-rotation.test.ts [2m([22m[2m45 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/achievement-system.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/action-dispatch-system.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/webhook-registry.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/faction-politics.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/genealogy-tree.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/estate-dispersal.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-fading-profiles-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/tests/sealed-chambers.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/wallet-sync-system-simulation.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/world-history-index.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/cqrs-handler.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-specialization.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/sla-monitor.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-bookings.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/network-visualizer.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/weather-system.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/scene-graph.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/trace-collector.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/adaptive-world-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-network.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/audit-trail.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-creation-pipeline.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/resonance-amplifier.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+stderr | fabrics/nakama-fabric/src/__tests__/analytics-pipeline.test.ts > AnalyticsPipeline > sink error does not break other sinks
+Analytics sink error: Error: bad sink
+    at D:/PythonProjects/Koydo_Loom/fabrics/nakama-fabric/src/__tests__/analytics-pipeline.test.ts:71:13
+    at D:/PythonProjects/Koydo_Loom/fabrics/nakama-fabric/src/analytics-pipeline.ts:94:17
+    at Array.map (<anonymous>)
+    at dispatchAndAwait (D:/PythonProjects/Koydo_Loom/fabrics/nakama-fabric/src/analytics-pipeline.ts:92:13)
+    at Object.flush (D:/PythonProjects/Koydo_Loom/fabrics/nakama-fabric/src/analytics-pipeline.ts:131:13)
+    at D:/PythonProjects/Koydo_Loom/fabrics/nakama-fabric/src/__tests__/analytics-pipeline.test.ts:78:20
+    at file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:145:11
+    at file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:915:26
+    at file:///D:/PythonProjects/Koydo_Loom/node_modules/@vitest/runner/dist/index.js:1243:20
+    at new Promise (<anonymous>)
+
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-ambient-atlas.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/quest-tracker.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/cost-analyser.test.ts [2m([22m[2m51 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/analytics-pipeline.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-dialogue-engine.test.ts [2m([22m[2m35 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/survey-corps-reputation.test.ts [2m([22m[2m43 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/world-atlas.test.ts [2m([22m[2m35 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/remembrance-system-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/governance-assembly-simulation.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rate-limiter.test.ts [2m([22m[2m41 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/interaction-system.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bandwidth-predictor-simulation.test.ts [2m([22m[2m35 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m tests/content-engine.test.ts [2m([22m[2m42 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/sse-stream.test.ts [2m([22m[2m39 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/loom-weather.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/foundation-archive-simulation.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/dynasty-portfolio.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-influence.test.ts [2m([22m[2m44 tests[22m[2m)[22m[32m 25[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/voice-chat-rooms.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/alliance-chat.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/player-analytics-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m tests/db-mappers.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-quest-giver.test.ts [2m([22m[2m35 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-scheduler.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/respawn-system-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-crafting-ai.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/npc-relationship-registry-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-economy.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/achievement-system-simulation.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-knowledge.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-market-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/alert-engine.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bridge-grpc-server.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m universe/safety/__tests__/safety-engine-simulation.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/player-economy-report.test.ts [2m([22m[2m61 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-encyclopedia-coverage.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/black-market-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/resource-exchange-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/lore-compendium.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/in-process-event-bus.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-heritage.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/monetary-policy.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/contraband-registry.test.ts [2m([22m[2m48 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-corridor.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/cosmic-event.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/input-validation-simulation.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-insurance.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/survey-mission-orchestrator.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/rental-market.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/alliance-chat-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/treaty-engine.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/bible-appearance-mapper.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/ascendancy-engine-simulation.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/circuit-breaker-simulation.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/zero-trust-gateway.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-mythology.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m tests/safety-engine.test.ts [2m([22m[2m42 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/event-archive.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/star-map.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-knowledge-system.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-economy.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/portal-registry.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/achievement-engine-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m tests/mini-games-route.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/load-balancer.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-social-network.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-faction-ai.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/component-archetype.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-query.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-capacity.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/survey-corps.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/session-gateway.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/websocket-gateway.test.ts [2m([22m[2m37 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-migration.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/resource-profiler.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/chronicle-service.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/leitmotif-catalog-simulation.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/witness-contract-port.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/lattice-node-simulation.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/loan-system.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m universe/fading/__tests__/fading-engine-simulation.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/event-arena.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/corridor-stability.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/heir-registry.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/continuity-protocol.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/metahuman-system-simulation.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/http-router.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/performance-profiler.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/regression-detector-simulation.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/capacity-planner.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-event-engine.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/continuity-orchestrator.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/ui-state-engine.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/terrain-engine.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/character-creation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/navigation-mesh.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m universe/content/__tests__/content-engine-simulation.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/request-router.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-social.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/corridor-maintenance.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/save-game.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-network-simulation.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/policy-enforcer.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/spectator-camera.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/matchmaking.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/settlement-engine.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/state-snapshot.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/sync-protocol-simulation.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/access-log.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/leaderboard.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/npc-ai-simulation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/collision-system.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-engine.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/chaos-engine-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/system-registry.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-memory-v2.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/udp-protocol-simulation.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/economy-api.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m tools/npc-personality-editor/__tests__/npc-personality-editor.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/constitutional-amendment.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/chat-channel-manager.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/spatial-index.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/behavior-tree-v2.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/alliance-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m contracts/bridge-loom/src/adapters/__tests__/godot-adapter.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-tiers.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/workflow-engine.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m tests/media-pipeline.test.ts [2m([22m[2m40 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/resource-profiler-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/constitution-vault.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/esports-engine-simulation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-memory-system.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-aggregator.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/constitution-vault-simulation.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/rbac-engine.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/voice-transcription.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/game-orchestrator.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/guild-system.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-language.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/system-scheduler.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/navigation-graph.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-seed-system-simulation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-anchor.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/tick-loop.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/trace-collector-system.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/legal-registry.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-discovery.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/encrypt-service.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-lifecycle.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/token-bucket-limiter.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/alliance-leaderboard-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-recipe-registry.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-expansion-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/character-creation-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-node.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/input-mapper.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/visual-effects-system-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-bus.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/wealth-redistribution.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/api-versioning.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/market-registry.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/world-shadow-economy.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/trace-collector-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/encryption-service.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-spawn-lifecycle.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/message-router.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m tests/game-loop-integration.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/protocol-evolution.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metric-registry.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/policy-vault.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/auction-house-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-relationship.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/auction-house.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/archive-browser.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-analytics.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-emotion.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/wallet-economy-simulation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-registry.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/cache-layer.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-scheduler.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/tax-collection.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m tools/world-editor/__tests__/world-editor.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/continuity-protocol-simulation.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-schedule.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trade-engine.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/notification-channel.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-reputation-global.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m tests/infrastructure-evolution-flow.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/load-balancer-system.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/frequency-matcher.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/data-masker.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-migration.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-progression.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/behavior-tree-simulation.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/diplomacy-engine.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/exploration-tracker.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m tests/asset-optimization-flow.test.ts [2m([22m[2m32 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/cross-world-messaging-simulation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/market-registry-simulation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/depth-scoring.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/modding-sdk.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/session-mgr.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/trace-collector-system-simulation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/perf-profiler.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/webhook-dispatcher.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/marks-registry.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/survey-vessel-simulation.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/dependency-graph.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m universe/db/__tests__/db-mappers-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/permission-gate.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m tests/adventures-engine.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/secret-sharing.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/respawn-system.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/constitutional-amendment-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/localization-engine-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/stream-gateway.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-recipe-registry-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/diplomacy-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/behavior-tree.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/world-population.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-schedule-v2.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/dependency-graph-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/consequence-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chronicle-search.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/audit-log.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/cross-world-messaging.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/alert-manager.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/forgetting-well.test.ts [2m([22m[2m30 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m tests/mobile-client-flow.test.ts [2m([22m[2m31 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/quality-gate.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/sla-monitor-system.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/faction-territory.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/estate-system-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/sealed-chambers-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/config-loader.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-decision.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/request-deduplicator.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/circuit-breaker-system.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-registry.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32mΓ£ô[39m tests/worlds-route.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-dashboard.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/gravity-well.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/sla-monitor-simulation.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/sla-monitor-system-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-connectivity.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-economy-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/nakama-orchestrator.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trade-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m universe/characters/__tests__/characters-engine-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/assembly.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m universe/media-pipeline/__tests__/character-pipeline-simulation.test.ts [2m([22m[2m33 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/network-condition-sim.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/achievement-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-bootstrap.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/carbon-credit.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-ledger.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-combat-ai.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-event-bus.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-five-pillars-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/diagnostic-reporter.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/engine-abstraction-simulation.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m contracts/bridge-loom/src/adapters/__tests__/unity-adapter.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-connect-orchestrator.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/tax-collection-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-emotion-system.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/key-rotation-system.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/npc-relationship-registry.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/access-control.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/replication-log.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m tests/parent-dashboard-api.test.ts [2m([22m[2m36 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-dialogue.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/population-economy.test.ts [2m([22m[2m34 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/achievement-system.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-anomaly.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/forgetting-well-simulation.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-validator.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/wealth-redistribution-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/biome-engine.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/access-control-system.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m tests/worlds-engine.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/loom-core.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/session-manager.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/asset-optimization-simulation.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m tests/accessibility-flow.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/covenant-contract-port.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/assembly-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-routine.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/chat-moderation-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/continuity-bonds-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m tools/devportal/src/__tests__/devportal-server.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-career-path.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/signal-relay.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/resource-distribution.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/anomaly-detector-system.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/alerting-engine.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/tax-collector-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/heartbeat-monitor.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m universe/worlds/__tests__/starter-worlds.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-combat-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bandwidth-optimizer-simulation.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-journal.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/sealed-chambers.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/contraband-registry-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-relationship-system.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-goal-planner.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-issuance.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/lattice-node.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-aggregator-system.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/survey-vessel.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/p2p-mesh.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-id-resolution.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/chaos-engineer-simulation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/coherence-monitor.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/query-index.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/lattice-integrity.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/health-check.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/cross-world-broadcast.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m tools/dev-portal/__tests__/dev-portal.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m tests/engine-abstraction-flow.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/threadway-network-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/feature-flags.test.ts [2m([22m[2m25 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/retention-policy-v2.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/consequence-engine.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/threshold-alert-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/encyclopedia-entries.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trading-post.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-politics.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-errors-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m contracts/entities/src/__tests__/gameplay-components.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-manager.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/shuttle-orchestrator.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/anomaly-detector.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-event-bus.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chronicle-hasher.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/event-sourcing.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/reputation-bond.test.ts [2m([22m[2m26 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-manager.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/capacity-planner-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/data-export.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-goal.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/token-vault.test.ts [2m([22m[2m29 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-varantha-station-simulation.test.ts [2m([22m[2m28 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/auction-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/bridge-service.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/archive-index.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/inventory.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/audit-log-system.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/character-dossiers.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-ledger-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/performance-profiler.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chat-archive-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-queue.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/migration-engine.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/network-server.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-migration.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/mobile-client-system-simulation.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/weave-system.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/rate-limiter-system.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/session-manager.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-correlation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-event-scheduler.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/wallet-sync-system.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/permission-policy.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-leaderboard.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/uptime-monitor-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m universe/adventures/__tests__/adventures-engine-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/command-bus.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/input-validation.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/game-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-census-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/action-dispatcher.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/system-dependency.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/infrastructure-evolution-simulation.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/timescale-store-simulation.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-errors.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-faction.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/state-snapshot.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/presence-tracker.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-sourcing.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/load-tester-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-event-log.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/visual-state-mapper.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m tools/plugin-ci/__tests__/plugin-ci.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-traits.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/time-service.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/rate-limiter.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m tests/pixel-streaming-simulation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/document-store.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-template.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-veil-of-kass-simulation.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/state-recovery.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-inventory.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-aggregator-system-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/kindler-progression-simulation.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-treasury.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/threshold-alert.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-aggregator-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-pool.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-alkahest-simulation.test.ts [2m([22m[2m24 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/ascendancy-engine.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/character-dossiers-simulation.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/otel-tracer-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-replay.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m contracts/entities/src/__tests__/component-registry.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/resource-pool.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/backup-scheduler.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/character-bible-registry.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 14[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/survey-roster.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-auth.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-499-threshold-simulation.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-alliance-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/config-registry.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-connection-system.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/auth-provider.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-orchestrator.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/spawn-system.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-meridians-rest-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/audit-log.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/shuttle-system.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-deep-tidal-simulation.test.ts [2m([22m[2m27 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/anomaly-detector-system-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/key-rotation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-bible-registry.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/ip-allowlist.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/aggregate-snapshot-store.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-alliance.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/cost-analyser-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/inspector-integration.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m tools/network-simulator/__tests__/network-simulator.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/temporal-worker-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-group.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/prometheus-metrics-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-amber-reach-simulation.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/session-store.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/guild-registry.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/anomaly-detector-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rollback-netcode.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/component-store.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/selvage-adapters.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/movement-system.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/diagnostic-reporter-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/retention-policy.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-id-drift-report.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/sealed-chambers-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/alert-manager-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-iron-meridian-simulation.test.ts [2m([22m[2m20 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m contracts/protocols/src/__tests__/message-payloads.test.ts [2m([22m[2m17 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/service-registry.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m universe/kindler/__tests__/kindler-repository.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/document-vault.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rate-guard.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/credential-vault.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/curriculum-map-simulation.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/threat-scorer.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/state-sync-v2.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/transit-request.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-resource-map.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/chat-channel-manager-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/npc-ai-system-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-skill.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m contracts/design/src/__tests__/design-tokens.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/token-refresh.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/quarterly-tithe.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-cooldown.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-reputation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/chat-moderation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/perf-profiler-simulation.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/pg-event-archive-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/subscription-tiers.test.ts [2m([22m[2m16 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-selenes-cradle-simulation.test.ts [2m([22m[2m21 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/errors.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/alert-engine-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/accessibility-system-simulation.test.ts [2m([22m[2m22 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/hidden-zones-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/visitor-characters-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/p2p-mesh-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-portal.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/civic-score-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-notification.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-weather.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-ledger.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/alerting-engine-simulation.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/mini-games-registry-simulation.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/quest-chains-simulation.test.ts [2m([22m[2m14 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/voice-chat-rooms-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/task-scheduler.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/uptime-monitor.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-census.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/health-check-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/seasonal-content-simulation.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/heir-registry-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/faction-politics-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/message-codec-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/selvage-errors.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metric-exporter.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/priority-queue.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m tests/quiz-route.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-reputation.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/request-pipeline.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/webhook-dispatcher-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/bible-world-seed-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/quality-gate-simulation.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metric-exporter-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/response-cache.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m contracts/entities/src/__tests__/entity.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-time-zone.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/performance-profiler-simulation.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/snapshot-builder.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/genesis-vault.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/csrf-guard.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bandwidth-tracker.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/data-compactor.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/loom-core-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/mortality-connect-adapter.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/message-codec.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/request-pipeline-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/server-protocol.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/message-queue.test.ts [2m([22m[2m13 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/stream-gateway-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/spectator-camera-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/service-health.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-errors.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m contracts/protocols/src/__tests__/wire-message.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-migration-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/civic-score.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/network-server-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/snapshot-builder-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/continuity-orchestrator-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/logger.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/transit-weave-adapter.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rate-bucket.test.ts [2m([22m[2m11 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/session-gateway-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entry-types-simulation.test.ts [2m([22m[2m12 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/api-versioning-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/message-router-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-filter-matcher.test.ts [2m([22m[2m9 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/insurance-market-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-manager-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/faction-engine-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metric-registry-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/sse-stream-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/marks-registry-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/load-balancer-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/message-queue-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/presence-tracker-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bridge-grpc-server-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-levy-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/load-balancer-system-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-dashboard-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/in-process-event-bus-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/wealth-zones.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/wealth-zones-simulation.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m tests/adventures-route.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m tools/discord-bot/__tests__/discord-bot.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-leaderboard-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/api-doc-generator-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/stellar-standard.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/crafting-specialization-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/request-router-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/quest-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/shuttle-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/action-dispatcher-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-heritage-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-espionage-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/corridor-network-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/inspector/src/__tests__/metrics-registry-simulation.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/investment-fund-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-bus-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-factory.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/selvage-errors-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m contracts/events/src/__tests__/event.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/session-manager-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/http-router-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chronicle-errors-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/webhook-registry-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/transit-request-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/cache-layer-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/subscription-tiers-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rate-limiter-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/guild-registry-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/archive/src/__tests__/chronicle-errors.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/cross-world-broadcast-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/survey-mission-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/navigation-graph-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/loan-system-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-issuance-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/matchmaking-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/interaction-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m contracts/entities/src/__tests__/shared-types.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-correlation-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/id-generator.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-manager-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/circuit-breaker-system-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/response-cache-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/websocket-gateway-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/server-protocol-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/dye-house/src/__tests__/node-hash-backend-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/population-economy-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/mentorship-engine-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-constants.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/grpc-bridge-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/coherence-monitor-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rate-bucket-simulation.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/network-visualizer-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-stream-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/world-reputation-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/state-sync-v2-simulation.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/quarterly-tithe-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/nakama-system.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/inventory-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/carbon-credit-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/tick-loop-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/scene-graph-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/survey-corps-reputation-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-query-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/survey-corps-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-event-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/spawn-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/faction-territory-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/guild-system-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/settlement-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/heartbeat-monitor-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/economic-crisis-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/state-snapshot-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-generator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-constants-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/weave-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/survey-corps-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/frequency-lock-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/loot-table-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rollback-netcode-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/rate-guard-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/monetary-policy-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-event-log-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/movement-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-topology-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/genesis-vault-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/cosmic-event-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/loom-weather-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/player-economy-report-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-pool-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trading-post-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/stellar-standard-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/clock.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/chronicle-service-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-event-bus-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/connection-auth-simulation.test.ts [2m([22m[2m4 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-anchor-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/bandwidth-tracker-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-speech-synthesis-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/spatial-index-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/navigation-mesh-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-spawn-lifecycle-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/signal-relay-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-connectivity-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/system-scheduler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-event-scheduler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-bootstrap-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/cqrs-handler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-economy-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-reputation-global-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trade-dispute-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/resonance-amplifier-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-treasury-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/visual-state-mapper-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-corridor-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-continuity-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/world-population-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/inspector-integration-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/portal-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-validator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/service-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-analytics-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-succession-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-family-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/selvage-adapters-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/treaty-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/resource-scarcity-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-mortality-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/workflow-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/event-arena-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/dynasty-notification-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/kalon-levy.test.ts [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/voice-transcription-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/resource-distribution-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-dialogue-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/corridor-stability-simulation.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/audio-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-mythology-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-knowledge-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-migration-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-memory-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/ui-state-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-filter-matcher-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/bridge-service-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-capacity-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/component-archetype-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/survey-mission-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-ledger-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-social-network-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-replay-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-journal-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-resource-map-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/config-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-religion-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/task-scheduler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-physics-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/weather-forecast-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/lattice-integrity-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/star-map-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/service-health-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/system-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-factory-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-lifecycle-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/spawn-budget-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/behavior-tree-v2-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-schedule-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-template-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-repair-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-career-path-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-war-ai-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-art-culture-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/selvage/src/__tests__/request-deduplicator-simulation.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/action-dispatch-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-time-zone-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/command-bus-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/world-bible-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-connect-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/config-loader-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/shuttle-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-crafting-ai-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/component-store-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-personality-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/rental-market-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/mortality-connect-adapter-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/ability-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/procedural-quest-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-scheduler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/reputation-bond-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/nakama-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/estate-dispersal-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/exploration-tracker-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-creation-pipeline-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-knowledge-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-quest-giver-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/terrain-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/saga-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-progression-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/system-dependency-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/weather-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/frequency-matcher-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-scheduler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/lattice-node-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/world-shadow-economy-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/priority-queue-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-anomaly-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/clock-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/logger-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/dungeon-generator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/political-influence-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-diplomacy-ai-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-politics-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/id-generator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-schedule-v2-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-philosophy-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-dialogue-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-memory-v2-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/quest-tracker-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-portal-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/terrain-erosion-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/wormhole-stabilizer-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-bookings-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/performance-profiler-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/transit-weave-adapter-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-migration-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-event-bus-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-memory-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-errors-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-relationship-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-discovery-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-government-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-emotion-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-insurance-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/weave-orchestrator-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/gravity-well-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-queue-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/save-game-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-traits-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/survey-roster-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/collision-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/event-sourcing-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/resource-pool-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/time-service-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-combat-ai-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-group-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-faction-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-emotion-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/transit-cooldown-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-reputation-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/entity-influence-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-decision-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-tiers-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/nakama-fabric/src/__tests__/trade-commerce-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/biome-engine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/player-connection-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-routine-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-goal-planner-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/input-mapper-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-faction-ai-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/errors-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-trade-ai-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-skill-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/character-bible-registry-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-social-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-language-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/day-night-cycle-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-relationship-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/silfen-weave/src/__tests__/world-weather-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-goal-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/shuttle/src/__tests__/npc-inventory-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32mΓ£ô[39m fabrics/loom-core/src/__tests__/nakama-system-simulation.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ» Failed Suites 30 ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+
+ FAIL  tests/archive-chronicle-flow.test.ts [ tests/archive-chronicle-flow.test.ts ]
+ FAIL  tests/bridge-spawn-pipeline.test.ts [ tests/bridge-spawn-pipeline.test.ts ]
+ FAIL  tests/corridor-stability-flow.test.ts [ tests/corridor-stability-flow.test.ts ]
+ FAIL  tests/crafting-economy-flow.test.ts [ tests/crafting-economy-flow.test.ts ]
+ FAIL  tests/cross-fabric-orchestration.test.ts [ tests/cross-fabric-orchestration.test.ts ]
+ FAIL  tests/dynasty-lifecycle-flow.test.ts [ tests/dynasty-lifecycle-flow.test.ts ]
+ FAIL  tests/full-stack-tick-simulation.test.ts [ tests/full-stack-tick-simulation.test.ts ]
+ FAIL  tests/inspector-health-flow.test.ts [ tests/inspector-health-flow.test.ts ]
+ FAIL  tests/mortality-connect-flow.test.ts [ tests/mortality-connect-flow.test.ts ]
+ FAIL  tests/player-connect-flow.test.ts [ tests/player-connect-flow.test.ts ]
+ FAIL  tests/player-session-flow.test.ts [ tests/player-session-flow.test.ts ]
+ FAIL  tests/survey-corps-flow.test.ts [ tests/survey-corps-flow.test.ts ]
+ FAIL  tests/trade-diplomacy-flow.test.ts [ tests/trade-diplomacy-flow.test.ts ]
+ FAIL  tests/transit-weave-flow.test.ts [ tests/transit-weave-flow.test.ts ]
+ FAIL  contracts/protocols/src/__tests__/protocol-evolution.test.ts [ contracts/protocols/src/__tests__/protocol-evolution.test.ts ]
+ FAIL  fabrics/nakama-fabric/src/__tests__/commons-fund-simulation.test.ts [ fabrics/nakama-fabric/src/__tests__/commons-fund-simulation.test.ts ]
+ FAIL  fabrics/nakama-fabric/src/__tests__/commons-fund.test.ts [ fabrics/nakama-fabric/src/__tests__/commons-fund.test.ts ]
+ FAIL  fabrics/nakama-fabric/src/__tests__/mortality-timings-simulation.test.ts [ fabrics/nakama-fabric/src/__tests__/mortality-timings-simulation.test.ts ]
+ FAIL  fabrics/nakama-fabric/src/__tests__/mortality-timings.test.ts [ fabrics/nakama-fabric/src/__tests__/mortality-timings.test.ts ]
+ FAIL  fabrics/nakama-fabric/src/__tests__/ubk-simulation.test.ts [ fabrics/nakama-fabric/src/__tests__/ubk-simulation.test.ts ]
+ FAIL  fabrics/nakama-fabric/src/__tests__/ubk.test.ts [ fabrics/nakama-fabric/src/__tests__/ubk.test.ts ]
+ FAIL  fabrics/selvage/src/__tests__/bridge-integration.test.ts [ fabrics/selvage/src/__tests__/bridge-integration.test.ts ]
+ FAIL  fabrics/selvage/src/__tests__/bridge-world-state-adapter-simulation.test.ts [ fabrics/selvage/src/__tests__/bridge-world-state-adapter-simulation.test.ts ]
+ FAIL  fabrics/loom-core/src/__tests__/vertical-integration-simulation.test.ts [ fabrics/loom-core/src/__tests__/vertical-integration-simulation.test.ts ]
+ FAIL  fabrics/loom-core/src/__tests__/vertical-integration.test.ts [ fabrics/loom-core/src/__tests__/vertical-integration.test.ts ]
+ FAIL  fabrics/loom-core/src/__tests__/wire-codec-simulation.test.ts [ fabrics/loom-core/src/__tests__/wire-codec-simulation.test.ts ]
+ FAIL  fabrics/loom-core/src/__tests__/wire-codec.test.ts [ fabrics/loom-core/src/__tests__/wire-codec.test.ts ]
+ FAIL  fabrics/silfen-weave/src/__tests__/survey-pacing-simulation.test.ts [ fabrics/silfen-weave/src/__tests__/survey-pacing-simulation.test.ts ]
+ FAIL  fabrics/silfen-weave/src/__tests__/survey-pacing.test.ts [ fabrics/silfen-weave/src/__tests__/survey-pacing.test.ts ]
+Error: Transform failed with 1 error:
+D:/PythonProjects/Koydo_Loom/contracts/protocols/src/protocol-evolution.ts:1:12: ERROR: Expected ";" but found "'contracts/protocols/src/protocol-evolution.ts'"
+  Plugin: vite:esbuild
+  File: D:/PythonProjects/Koydo_Loom/contracts/protocols/src/protocol-evolution.ts:1:12
+  
+  Expected ";" but found "'contracts/protocols/src/protocol-evolution.ts'"
+  1  |  fatal: path 'contracts/protocols/src/protocol-evolution.ts' exists on disk, but not in 'upstream/main'
+     |              ^
+  2  |  
+  
+ Γ¥» failureErrorWithLog node_modules/esbuild/lib/main.js:1467:15
+ Γ¥» node_modules/esbuild/lib/main.js:736:50
+ Γ¥» responseCallbacks.<computed> node_modules/esbuild/lib/main.js:603:9
+ Γ¥» handleIncomingPacket node_modules/esbuild/lib/main.js:658:12
+ Γ¥» Socket.readFromStdout node_modules/esbuild/lib/main.js:581:7
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/30]ΓÄ»
+
+ FAIL  tests/kindler-chapter-route.test.ts [ tests/kindler-chapter-route.test.ts ]
+Error: Transform failed with 5 errors:
+D:/PythonProjects/Koydo_Loom/tests/kindler-chapter-route.test.ts:280:6: ERROR: The symbol "BASE_PROFILE" has already been declared
+D:/PythonProjects/Koydo_Loom/tests/kindler-chapter-route.test.ts:294:6: ERROR: The symbol "RESTORED_PROFILE" has already been declared
+D:/PythonProjects/Koydo_Loom/tests/kindler-chapter-route.test.ts:301:6: ERROR: The symbol "MAX_CHAPTER_PROFILE" has already been declared
+D:/PythonProjects/Koydo_Loom/tests/kindler-chapter-route.test.ts:308:9: ERROR: The symbol "makeRepo" has already been declared
+D:/PythonProjects/Koydo_Loom/tests/kindler-chapter-route.test.ts:323:9: ERROR: The symbol "makeEngine" has already been declared
+  Plugin: vite:esbuild
+  File: D:/PythonProjects/Koydo_Loom/tests/kindler-chapter-route.test.ts:280:6
+  
+  The symbol "BASE_PROFILE" has already been declared
+  278 |  // ΓöÇΓöÇΓöÇ Minimal test doubles ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+  279 |  
+  280 |  const BASE_PROFILE: KindlerProfile = {
+      |        ^
+  281 |    id: 'k1',
+  282 |    parentAccountId: 'p1',
+  
+  The symbol "RESTORED_PROFILE" has already been declared
+  292 |  };
+  293 |  
+  294 |  const RESTORED_PROFILE: KindlerProfile = {
+      |        ^
+  295 |    ...BASE_PROFILE,
+  296 |    id: 'k2',
+  
+  The symbol "MAX_CHAPTER_PROFILE" has already been declared
+  299 |  };
+  300 |  
+  301 |  const MAX_CHAPTER_PROFILE: KindlerProfile = {
+      |        ^
+  302 |    ...BASE_PROFILE,
+  303 |    id: 'k3',
+  
+  The symbol "makeRepo" has already been declared
+  306 |  };
+  307 |  
+  308 |  function makeRepo(profiles: Record<string, KindlerProfile>): KindlerRepository {
+      |           ^
+  309 |    return {
+  310 |      findById: async (id) => profiles[id] ?? null,
+  
+  The symbol "makeEngine" has already been declared
+  321 |  }
+  322 |  
+  323 |  function makeEngine(profile: KindlerProfile): KindlerEngine {
+      |           ^
+  324 |    const spark: SparkState = {
+  325 |      kindlerId: profile.id,
+  
+ Γ¥» failureErrorWithLog node_modules/esbuild/lib/main.js:1467:15
+ Γ¥» node_modules/esbuild/lib/main.js:736:50
+ Γ¥» responseCallbacks.<computed> node_modules/esbuild/lib/main.js:603:9
+ Γ¥» handleIncomingPacket node_modules/esbuild/lib/main.js:658:12
+ Γ¥» Socket.readFromStdout node_modules/esbuild/lib/main.js:581:7
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/30]ΓÄ»
+
+
+[2m Test Files [22m [1m[31m30 failed[39m[22m[2m | [22m[1m[32m985 passed[39m[22m[90m (1015)[39m
+[2m      Tests [22m [1m[32m16560 passed[39m[22m[90m (16560)[39m
+[2m   Start at [22m 01:42:33
+[2m   Duration [22m 22.55s[2m (transform 187.71s, setup 0ms, import 234.89s, tests 13.31s, environment 236ms)[22m
+
