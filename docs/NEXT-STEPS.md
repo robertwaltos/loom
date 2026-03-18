@@ -1200,3 +1200,60 @@ Luminance stages: `radiant (≥0.9) → glowing (≥0.65) → dimming (≥0.40) 
 No FOMO mechanics. No daily login penalties. Returning players always feel rewarded.
 
 **Tests**: 12 new worlds tests + all 28 prior tests = **40/40 passing**
+
+---
+
+## Phase 27: Adventures Engine + Quiz Routes (March 2026)
+
+**Branch**: `silk/adventures-quiz`
+
+### What was built
+
+**`universe/adventures/bootstrap.ts`** (new)
+- `createBootstrappedAdventuresEngine()` — loads all 36 adventure configs (9 worlds × 4 entries each)
+- Single bootstrap point for production and tests
+
+**`src/routes/adventures.ts`** (new) — 2 HTTP endpoints
+- `GET /v1/adventures/:worldId` — adventure configs for a world (type, tier, interaction mode, estimated minutes)
+- `GET /v1/adventures/entry/:entryId` — adventure config for a specific entry
+
+**`src/routes/quiz.ts`** (new) — 2 HTTP endpoints
+- `GET /v1/quiz/entry/:entryId` — quiz questions for an entry (optional `?tier=1|2|3` filter)
+- `GET /v1/quiz/entry/:entryId/summary` — question count per tier
+- COPPA note: `correctIndex` is intentionally omitted from quiz responses (answer key suppression)
+
+**`src/main.ts`** (updated)
+- `AdventuresEngine` from `createBootstrappedAdventuresEngine()` wired at startup
+- `registerAdventuresRoutes` and `registerQuizRoutes` added to route registrar array
+- Startup log now includes `adventureConfigs` count
+
+**`tests/adventures-route.test.ts`** (new) — 5 tests
+**`tests/quiz-route.test.ts`** (new) — 8 tests
+
+### Route summary (all live endpoints as of Phase 27)
+
+| Method | Path | Purpose |
+|--------|------|---------|
+| POST | /v1/kindler | Register a Kindler |
+| GET | /v1/kindler/:id | Get Kindler profile |
+| DELETE | /v1/kindler/:id | Delete Kindler (COPPA) |
+| GET | /v1/kindler/:id/spark | Spark state |
+| GET | /v1/kindler/:id/progress | All progress |
+| POST | /v1/session/start | Start learning session |
+| POST | /v1/session/:id/complete-entry | Complete entry + apply fading |
+| POST | /v1/session/:id/mark-world-restored | Mark world restored |
+| POST | /v1/session/:id/end | End session |
+| GET | /v1/session/:id | Get session |
+| GET | /v1/guide/:guideId | Guide profile + prompts |
+| GET | /v1/worlds | List all 50 worlds |
+| GET | /v1/worlds/realm/:realm | Worlds by realm |
+| GET | /v1/worlds/:worldId | World + luminance |
+| GET | /v1/worlds/:worldId/entries | Published entries |
+| GET | /v1/adventures/:worldId | Adventure configs |
+| GET | /v1/adventures/entry/:entryId | Entry adventure config |
+| GET | /v1/quiz/entry/:entryId | Quiz questions |
+| GET | /v1/quiz/entry/:entryId/summary | Quiz tier counts |
+| GET | /v1/parent-dashboard/:parentId/... | 8 parent dashboard endpoints |
+| POST | /v1/safety/... | 5 AI safety endpoints |
+
+**Tests**: 13 new + 40 prior = **53/53 passing**
