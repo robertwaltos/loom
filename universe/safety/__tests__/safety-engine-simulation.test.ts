@@ -10,7 +10,7 @@
 
 import { describe, it, expect, vi } from 'vitest';
 import { createSafetyEngine } from '../engine.js';
-import type { SafetyEngineDeps, SafetyEngineConfig } from '../types.js';
+import type { SafetyEngineDeps, SafetyEngineConfig } from '../engine.js';
 
 // ─── Helpers ──────────────────────────────────────────────────────
 
@@ -215,8 +215,8 @@ describe('buildModerationResult', () => {
 
   it('returns flagged for non-blocking flags', () => {
     const engine = makeSafetyEngine();
-    // off_topic is non-blocking
-    const result = engine.buildModerationResult('content-2', 'ai_response', ['off_topic']);
+    // cultural_sensitivity is non-blocking
+    const result = engine.buildModerationResult('content-2', 'ai_response', ['cultural_sensitivity']);
     expect(result.rating).toBe('flagged');
   });
 
@@ -252,15 +252,15 @@ describe('buildModerationResult', () => {
 
   it('blocked takes priority over flagged when mixed', () => {
     const engine = makeSafetyEngine();
-    const result = engine.buildModerationResult('c8', 'ai_response', ['off_topic', 'violence']);
+    const result = engine.buildModerationResult('c8', 'ai_response', ['cultural_sensitivity', 'violence']);
     expect(result.rating).toBe('blocked');
   });
 
   it('result carries the flags array and contentId', () => {
     const engine = makeSafetyEngine();
-    const result = engine.buildModerationResult('my-content', 'quiz_question', ['off_topic']);
+    const result = engine.buildModerationResult('my-content', 'entry', ['cultural_sensitivity']);
     expect(result.contentId).toBe('my-content');
-    expect(result.flags).toContain('off_topic');
+    expect(result.flags).toContain('cultural_sensitivity');
   });
 
   it('increments totalModerationResults stat', () => {

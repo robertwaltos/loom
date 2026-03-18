@@ -246,10 +246,10 @@ async function handleGetSessionHistory(
     req.cursor,
   );
 
-  const nextCursor =
-    result.sessions.length === pageSize
-      ? String(result.sessions[result.sessions.length - 1].startedAt)
-      : null;
+  const lastSession = result.sessions.length === pageSize
+    ? result.sessions[result.sessions.length - 1]
+    : undefined;
+  const nextCursor = lastSession != null ? String(lastSession.startedAt) : null;
 
   deps.log('info', 'dashboard_session_history', {
     parentId,

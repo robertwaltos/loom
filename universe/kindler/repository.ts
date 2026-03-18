@@ -70,6 +70,11 @@ export interface KindlerRepository {
   saveSession(session: KindlerSession): Promise<void>;
   loadSession(sessionId: string): Promise<KindlerSession | null>;
   saveSessionReport(report: SessionReport): Promise<void>;
+
+  /** COPPA: hard-delete all spark log rows for this kindler */
+  deleteSparkLogs(kindlerId: string): Promise<void>;
+  /** COPPA: hard-delete all session rows for this kindler */
+  deleteSessions(kindlerId: string): Promise<void>;
 }
 
 // ─── Internal Helpers ──────────────────────────────────────────────
@@ -178,10 +183,20 @@ export function createKindlerRepository(db: SupabaseClient): KindlerRepository {
       const { error } = await db.from('session_reports').upsert(row);
       assertOk(error, 'saveSessionReport');
     },
+
+    async deleteSparkLogs(kindlerId) {
+      const { error } = await db.from('kindler_spark_log').delete().eq('kindler_id', kindlerId);
+      assertOk(error, 'deleteSparkLogs');
+    },
+
+    async deleteSessions(kindlerId) {
+      const { error } = await db.from('kindler_sessions').delete().eq('kindler_id', kindlerId);
+      assertOk(error, 'deleteSessions');
+    },
   };
 }
 
-// ─── In-Memory Mock (for testing) ─────────────────────────────────
+// ─── In-Memory Mock(for testing) ─────────────────────────────────
 
 export function createMockKindlerRepository(): KindlerRepository & {
   _profiles: Map<string, KindlerProfile>;
@@ -230,5 +245,13 @@ export function createMockKindlerRepository(): KindlerRepository & {
     async loadSession(id) { return _sessions.get(id) ?? null; },
 
     async saveSessionReport(report) { _reports.set(report.id, report); },
+
+    async deleteSparkLogs(kindlerId) { _sparkLogs.delete(kindlerId); },
+
+    async deleteSessions(kindlerId) {
+      for (const [id, session] of _sessions) {
+        if (session.kindlerId === kindlerId) _sessions.delete(id);
+      }
+    },
   };
 }

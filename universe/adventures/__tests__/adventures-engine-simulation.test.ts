@@ -16,7 +16,7 @@ import type { AdventureConfig, AdventureProgress } from '../types.js';
 // ─── Fixtures ─────────────────────────────────────────────────────
 
 function makeConfig(
-  overrides: Partial<AdventureConfig> & { entryId: string; worldId: string; guideId: string },
+  overrides: Omit<Partial<AdventureConfig>, 'worldId'> & { entryId: string; worldId: string; guideId: string },
 ): AdventureConfig {
   return {
     type: 'guided_expedition',
@@ -24,7 +24,7 @@ function makeConfig(
     estimatedMinutes: 10,
     interactionMode: 'guided_walk',
     ...overrides,
-  };
+  } as AdventureConfig;
 }
 
 function makeProgress(
@@ -44,7 +44,9 @@ function makeEngine(
   configs: AdventureConfig[],
   prereqs?: ReadonlyMap<string, readonly string[]>,
 ): AdventuresEngine {
-  const deps: AdventuresEngineDeps = { configs, entryPrereqs: prereqs };
+  const deps: AdventuresEngineDeps = prereqs !== undefined
+    ? { configs, entryPrereqs: prereqs }
+    : { configs };
   return createAdventuresEngine(deps);
 }
 

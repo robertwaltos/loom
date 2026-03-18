@@ -72,30 +72,30 @@ WREN'S EDITING QUESTIONS (teach children to ask themselves):
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Focus on re-reading aloud and noticing when something sounds funny.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Word choice, sentence variety, and the joy of the stronger verb.';
   }
   return 'Speak with a 9-10 year old. Paragraph structure, clarity editing, and the full revision process.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Re-reading and one small change. Celebrate each word they make more precise.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Word choice and sentence variety. Introduce the concept of cutting with pride.';
   }
   return 'Multi-pass revision: clarity, then rhythm, then precision. Teach the editing questions.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Ask them to read something they wrote aloud. Listen with them. "What do you notice?"';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Building the revision instinct. One pass, one focus. Let them experience a sentence becoming stronger.';
   }
   return 'Skilled reviser. Apply all editing passes. Challenge them to cut 20% of a paragraph without losing the point.';
@@ -104,13 +104,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildWrenSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'wren-calloway',
-    systemPrompt: [
+    basePersonality: [
       WREN_BASE_PERSONALITY,
-      WREN_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: WREN_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [WREN_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

@@ -52,7 +52,7 @@ export const ENTRY_WAYFINDING: RealWorldEntry = {
   type: 'cultural_milestone',
   title: 'Navigating by Stars, Waves, and Songs',
   year: null,
-  yearDisplay: null,
+  yearDisplay: 'Timeless',
   era: 'ancient',
   descriptionChild:
     "Long before GPS, Polynesian navigators sailed across the biggest ocean on Earth using only the stars, the waves, the clouds, and the flight patterns of birds. Aboriginal Australians navigated a continent using songlines — songs that described the landscape like a musical map.",
@@ -86,7 +86,7 @@ export const ENTRY_LIMINAL_SPACES: RealWorldEntry = {
   type: 'scientific_principle',
   title: 'The Space Between Here and There',
   year: null,
-  yearDisplay: null,
+  yearDisplay: '20th century onward',
   era: 'modern',
   descriptionChild:
     "Have you ever stood in a doorway, not quite inside and not quite outside? That in-between feeling is called liminality. It happens when you're between one thing and the next — not a child but not yet a teenager, not asleep but not awake. These 'in-between' spaces are where the most interesting things happen.",
@@ -120,7 +120,7 @@ export const ENTRY_BEING_LOST: RealWorldEntry = {
   type: 'scientific_principle',
   title: 'Why Getting Lost Is How You Find Things',
   year: null,
-  yearDisplay: null,
+  yearDisplay: 'Contemporary',
   era: 'contemporary',
   descriptionChild:
     "Being lost feels scary. But writer Rebecca Solnit says that getting lost is how we find things we weren't looking for. When you don't know where you are, your brain wakes up — you notice more, question more, and discover things you never would have found on the planned route.",

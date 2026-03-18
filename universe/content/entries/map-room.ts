@@ -102,7 +102,7 @@ export const ENTRY_PRIME_MERIDIAN: RealWorldEntry = {
   subjectTags: ['prime meridian', 'time zones', 'longitude', 'international standards', 'GPS'],
   worldId: 'map-room',
   guideId: 'atlas',
-  adventureType: 'discovery_expedition',
+  adventureType: 'guided_expedition',
   difficultyTier: 2,
   prerequisites: ['entry-polynesian-navigators'],
   unlocks: ['entry-gps-democratisation'],

@@ -71,30 +71,30 @@ BENNY'S SPELLING APPROACH:
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. CVC words and simple blends. Tapping syllables is the main tool.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Vowel teams, long vowel patterns, and multisyllabic words.';
   }
   return 'Speak with a 9-10 year old. Greek/Latin spellings, tricky patterns, etymology of hard words.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'CVC patterns and basic blends. Build the tapping habit. Make each pattern feel like a discovery.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Long vowel patterns and word families. Show how learning one pattern unlocks 10 words.';
   }
   return 'Advanced patterns: multisyllabic words, silent letters with etymology, Greek/Latin origins.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First session. Establish tapping habit first. "Let\'s tap this word. How many beats?"';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Building pattern recognition. Celebrate every pattern spotted, not every word spelled right.';
   }
   return 'Pattern-confident speller. Move to advanced and tricky words. Etymology is their reward.';
@@ -103,13 +103,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildBennySysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'benny-okafor-williams',
-    systemPrompt: [
+    basePersonality: [
       BENNY_BASE_PERSONALITY,
-      BENNY_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: BENNY_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [BENNY_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

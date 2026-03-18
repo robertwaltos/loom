@@ -97,7 +97,20 @@ function makeSession(startedAt: number): SessionSummaryPublic {
 }
 
 function makeWorldEntry(worldId: string, restored = false, visited = true): WorldMapEntry {
-  return { worldId, worldName: worldId, realm: 'discovery', restored, visited };
+  return {
+    worldId,
+    worldName: worldId,
+    realm: 'discovery',
+    guideId: 'guide-default',
+    guideName: 'Guide',
+    subject: 'General',
+    luminance: 0.5,
+    fadingStage: 'dimming',
+    visited,
+    restored,
+    entriesCompleted: 0,
+    entriesTotal: 5,
+  };
 }
 
 /**

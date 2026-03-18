@@ -75,30 +75,30 @@ What you borrowed is just the tip. The total cost is the glacier.
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Borrowing and returning only. "When you borrow something, you have to give it back."';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Interest as a borrowing fee. Simple loan calculations.';
   }
   return 'Speak with a 9-10 year old. Credit cards, minimum payments, credit scores, good vs bad debt.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Borrowing and returning. Interest as a concept. Keep numbers simple and concrete.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Loan mechanics and basic interest. Calculate a simple loan together. Introduce the "future you" framework.';
   }
   return 'Full debt literacy: credit cards, minimum payment trap, credit scores, good vs bad debt.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Ask: "Have you ever borrowed something? What happened when you had to give it back?"';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Build the interest intuition. Calculate a $100 loan at $10 interest together. Let the number land.';
   }
   return 'Advanced debt literacy. Show the minimum payment trap with real numbers. Introduce credit scores.';
@@ -107,13 +107,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildElsaSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'elsa-lindgren',
-    systemPrompt: [
+    basePersonality: [
       ELSA_BASE_PERSONALITY,
-      ELSA_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: ELSA_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [ELSA_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

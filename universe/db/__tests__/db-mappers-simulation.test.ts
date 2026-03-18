@@ -105,14 +105,14 @@ describe('entryConnection mappers', () => {
     id: 'conn-1',
     from_entry_id: 'cave-paintings',
     to_entry_id: 'printing-press',
-    connection_type: 'precedes',
+    connection_type: 'related',
   };
 
   it('fromRow maps snake_case to camelCase', () => {
     const conn = entryConnectionFromRow(row);
     expect(conn.fromEntryId).toBe('cave-paintings');
     expect(conn.toEntryId).toBe('printing-press');
-    expect(conn.connectionType).toBe('precedes');
+    expect(conn.connectionType).toBe('related');
   });
 
   it('round-trips correctly', () => {
@@ -209,7 +209,7 @@ describe('worldLuminance mappers', () => {
     world_id: 'story-tree',
     luminance: 0.72,
     stage: 'fading',
-    last_restored_at: '2024-03-01T12:00:00Z',
+    last_restored_at: 1709294400000,
     total_kindlers_contributed: 284,
     active_kindler_count: 41,
   };
@@ -219,7 +219,7 @@ describe('worldLuminance mappers', () => {
     expect(lum.worldId).toBe('story-tree');
     expect(lum.luminance).toBe(0.72);
     expect(lum.stage).toBe('fading');
-    expect(lum.lastRestoredAt).toBe('2024-03-01T12:00:00Z');
+    expect(lum.lastRestoredAt).toBe(1709294400000);
     expect(lum.totalKindlersContributed).toBe(284);
     expect(lum.activeKindlerCount).toBe(41);
   });
@@ -239,10 +239,10 @@ describe('aiSession mappers', () => {
     kindler_id: 'kindler-xyz',
     character_id: 'grandmother-anaya',
     world_id: 'story-tree',
-    started_at: '2024-01-15T10:00:00Z',
-    ended_at: '2024-01-15T10:22:00Z',
+    started_at: 1705316400000,
+    ended_at: 1705317720000,
     turn_count: 18,
-    auto_delete_at: '2024-07-15T10:00:00Z',
+    auto_delete_at: 1721037600000,
   };
 
   it('fromRow maps kindler_id, character_id, turn_count, and auto_delete_at', () => {
@@ -251,7 +251,7 @@ describe('aiSession mappers', () => {
     expect(session.characterId).toBe('grandmother-anaya');
     expect(session.worldId).toBe('story-tree');
     expect(session.turnCount).toBe(18);
-    expect(session.autoDeleteAt).toBe('2024-07-15T10:00:00Z');
+    expect(session.autoDeleteAt).toBe(1721037600000);
   });
 
   it('round-trips correctly', () => {
@@ -269,11 +269,11 @@ describe('revenueEvent mappers', () => {
     event_type: 'subscription',
     gross_amount_usd: 9.99,
     net_amount_usd: 8.49,
-    platform: 'epic_games_store',
+    platform: 'epic',
     payment_processor: 'stripe',
     user_id: 'user-99',
     transaction_id: 'txn-stripe-001',
-    created_at: '2024-03-15T00:00:00Z',
+    created_at: 1710460800000,
   };
 
   it('fromRow maps gross_amount_usd, net_amount_usd, payment_processor, user_id', () => {
@@ -281,7 +281,7 @@ describe('revenueEvent mappers', () => {
     expect(event.eventType).toBe('subscription');
     expect(event.grossAmountUsd).toBe(9.99);
     expect(event.netAmountUsd).toBe(8.49);
-    expect(event.platform).toBe('epic_games_store');
+    expect(event.platform).toBe('epic');
     expect(event.paymentProcessor).toBe('stripe');
     expect(event.userId).toBe('user-99');
     expect(event.transactionId).toBe('txn-stripe-001');
@@ -308,9 +308,9 @@ describe('royaltyLedger mappers', () => {
     royalty_owed: 250.00,
     threshold_note: 'Below $1M threshold — 5% rate.',
     report_submitted: true,
-    report_submitted_at: '2024-04-15T00:00:00Z',
+    report_submitted_at: 1713139200000,
     payment_status: 'paid',
-    created_at: '2024-04-01T00:00:00Z',
+    created_at: 1711929600000,
   };
 
   it('fromRow maps all royalty-specific compound field names', () => {
@@ -323,7 +323,7 @@ describe('royaltyLedger mappers', () => {
     expect(entry.royaltyRate).toBe(0.05);
     expect(entry.royaltyOwed).toBe(250.00);
     expect(entry.reportSubmitted).toBe(true);
-    expect(entry.reportSubmittedAt).toBe('2024-04-15T00:00:00Z');
+    expect(entry.reportSubmittedAt).toBe(1713139200000);
     expect(entry.paymentStatus).toBe('paid');
   });
 

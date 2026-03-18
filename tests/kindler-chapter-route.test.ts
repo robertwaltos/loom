@@ -50,6 +50,8 @@ function makeRepo(profiles: Record<string, KindlerProfile>): KindlerRepository {
     saveSession: async () => undefined,
     loadSession: async () => null,
     saveSessionReport: async () => undefined,
+    deleteSparkLogs: async () => undefined,
+    deleteSessions: async () => undefined,
   };
 }
 

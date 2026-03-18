@@ -270,7 +270,7 @@ describe('getEntriesForStandardCode', () => {
     });
     const results = engine.getEntriesForStandardCode('CCSS.ELA.RL.3.1');
     expect(results.length).toBe(1);
-    expect(results[0].id).toBe('e1');
+    expect(results[0]!.id).toBe('e1');
   });
 
   it('returns empty when no entries map to that standard code', () => {

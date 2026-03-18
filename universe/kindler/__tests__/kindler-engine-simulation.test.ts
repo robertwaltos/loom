@@ -14,7 +14,8 @@ import {
   SPARK_DELTAS,
   CHAPTER_THRESHOLDS,
 } from '../engine.js';
-import type { KindlerEngineDeps, KindlerEngineConfig, KindlerProfile, AgeTier } from '../types.js';
+import type { KindlerEngineDeps, KindlerEngineConfig } from '../engine.js';
+import type { KindlerProfile, AgeTier } from '../types.js';
 
 // ─── Helpers ──────────────────────────────────────────────────────
 
@@ -242,7 +243,7 @@ describe('markWorldRestored / chapter advancement', () => {
       engine.markWorldRestored('k1', `world-${i}`);
     }
     const calls = (events.onChapterAdvanced as ReturnType<typeof vi.fn>).mock.calls.filter(
-      ([arg]: [{ newChapter: string }]) => arg.newChapter === 'threadways_open',
+      (call: unknown[]) => (call[0] as { newChapter: string }).newChapter === 'threadways_open',
     );
     expect(calls.length).toBe(1);
   });
@@ -255,7 +256,7 @@ describe('markWorldRestored / chapter advancement', () => {
       engine.markWorldRestored('k1', `world-${i}`);
     }
     const chapters = (events.onChapterAdvanced as ReturnType<typeof vi.fn>).mock.calls.map(
-      ([arg]: [{ newChapter: string }]) => arg.newChapter,
+      (call: unknown[]) => (call[0] as { newChapter: string }).newChapter,
     );
     expect(chapters).toContain('threadways_open');
     expect(chapters).toContain('deep_fade');

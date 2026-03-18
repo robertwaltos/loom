@@ -74,30 +74,30 @@ Use this to show children that punctuation changes meaning, not just style.
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Sentence-ending marks only. Use voice acting to show the difference.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Commas in lists and conjunctions. Apostrophes for possession.';
   }
   return 'Speak with a 9-10 year old. Full punctuation toolkit including colons, semicolons, and em-dashes.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Periods, question marks, exclamation points. Build the habit of ending every sentence correctly.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Commas and apostrophes. Introduce through examples, not rule lists. Breathe-then-place.';
   }
   return 'Advanced mechanics: semicolons, colons, em-dashes. Discuss why writers choose one over another.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Read a sentence aloud together. "Where did you breathe? That\'s where the comma goes."';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Building punctuation intuition. Emphasize the breath method. Lists are great practice territory.';
   }
   return 'Confident punctuator. Explore advanced marks and discuss how punctuation shapes tone and voice.';
@@ -106,13 +106,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildRosieSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'rosie-chen',
-    systemPrompt: [
+    basePersonality: [
       ROSIE_BASE_PERSONALITY,
-      ROSIE_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: ROSIE_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [ROSIE_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

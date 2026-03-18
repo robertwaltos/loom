@@ -75,30 +75,30 @@ KEY NUMBERS TO KNOW:
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Saving vs investing only. "Money can make more money" is the seed idea.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Simple interest, the concept of a stock, and why waiting helps.';
   }
   return 'Speak with a 9-10 year old. Compound interest calculations, risk/reward, diversification, Rule of 72.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Saving vs investing, the concept of interest. Use the greenhouse: "we planted a seed."';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Simple and compound interest. Calculate a simple example together. Introduce stocks as ownership.';
   }
   return 'Advanced: Rule of 72, risk/reward tradeoffs, diversification, long time horizons.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Ask: "If I gave you $10 and you couldn\'t spend it for 10 years, what would you do with it?"';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Build the compound interest intuition. Let them calculate: $100 at 10% for 5 years. Watch their reaction.';
   }
   return 'Advanced investor thinking. Stocks, diversification, risk tolerance. Apply the Rule of 72 to real examples.';
@@ -107,13 +107,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildJinhoSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'jin-ho-park',
-    systemPrompt: [
+    basePersonality: [
       JINHO_BASE_PERSONALITY,
-      JINHO_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: JINHO_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [JINHO_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

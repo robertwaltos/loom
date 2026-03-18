@@ -72,30 +72,30 @@ KEY FACTS ATLAS CARRIES:
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Focus on their neighborhood, near/far, and drawing personal maps.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Use continents, oceans, major landforms. Make it relatable via food and animals.';
   }
   return 'Speak with a 9-10 year old. Discuss climate zones, human geography, map skills, and borders.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Build mental map of the child\'s own world outward. Landforms they can observe or imagine.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Continents, countries, and how geography shapes life. Compare life in different climates.';
   }
   return 'Challenge with map reading, latitude/longitude, climate analysis, and human geography connections.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Start: "If I drew a map of where YOU are right now — what would be on it?"';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Expand outward from home. Introduce the globe. What continent are we on? What ocean is nearest?';
   }
   return 'Advanced explorer. Introduce climate zones, borders, and why geography shapes how people live.';
@@ -104,13 +104,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildAtlasSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'atlas',
-    systemPrompt: [
+    basePersonality: [
       ATLAS_BASE_PERSONALITY,
-      ATLAS_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: ATLAS_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [ATLAS_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

@@ -149,6 +149,8 @@ async function main(): Promise<void> {
   const { createWorldsEngine } = await import('../universe/worlds/engine.js');
   const { ALL_WORLDS } = await import('../universe/worlds/registry.js');
   const { applyRestoration, calculateRestorationDelta, resolveFadingStage } = await import('../universe/fading/engine.js');
+  const { createPgLuminanceRepository } = await import('../universe/fading/pg-luminance-repository.js');
+  const { createPgDashboardQueries } = await import('../universe/parent-dashboard/pg-queries.js');
   const { createBootstrappedAdventuresEngine } = await import('../universe/adventures/bootstrap.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
@@ -187,18 +189,25 @@ async function main(): Promise<void> {
   const worldsEngine = createWorldsEngine({ worlds: ALL_WORLDS });
   const miniGamesRegistry = createMiniGamesRegistry();
 
-  // In-memory luminance store: all 50 worlds start at 0.5 (dimming) until Kindlers restore them
-  const now = Date.now();
+  // Luminance store: hydrated from world_luminance table at boot; falls back to 0.5/dimming defaults
+  const pgLuminanceRepo = createPgLuminanceRepository(pgPool);
   const luminanceStore = new Map<string, WorldLuminance>(
     ALL_WORLDS.map(w => [w.id, {
       worldId: w.id,
       luminance: 0.5,
       stage: resolveFadingStage(0.5),
-      lastRestoredAt: now,
+      lastRestoredAt: Date.now(),
       totalKindlersContributed: 0,
       activeKindlerCount: 0,
     }]),
   );
+  try {
+    const persisted = await pgLuminanceRepo.loadAll();
+    for (const [worldId, wl] of persisted) luminanceStore.set(worldId, wl);
+    logger.info({ count: persisted.size }, 'koydo:fading:hydrated from DB');
+  } catch (err) {
+    logger.warn({ err }, 'koydo:fading:hydration failed — using in-memory defaults');
+  }
 
   function onEntryCompleted(worldId: string, kindlerId: string, tier: 1 | 2 | 3): void {
     const current = luminanceStore.get(worldId);
@@ -207,6 +216,9 @@ async function main(): Promise<void> {
     const { updated } = applyRestoration(current, delta, 'kindler_progress', kindlerId);
     luminanceStore.set(worldId, updated);
     logger.info({ worldId, luminance: updated.luminance, stage: updated.stage }, 'koydo:fading:restored');
+    pgLuminanceRepo.save(updated).catch((err: unknown) => {
+      logger.warn({ err, worldId }, 'koydo:fading:persist failed');
+    });
   }
 
   function getEntryTier(entryId: string): 1 | 2 | 3 | null {
@@ -222,6 +234,16 @@ async function main(): Promise<void> {
     else if (level === 'warn') logger.warn(meta ?? {}, msg);
     else logger.info(meta ?? {}, msg);
   }
+
+  const pgDashboardQueries = createPgDashboardQueries(
+    pgPool,
+    ALL_WORLDS,
+    (worldId) => luminanceStore.get(worldId),
+    (worldId) => {
+      const world = ALL_WORLDS.find(w => w.id === worldId);
+      return world?.entryIds.length ?? 0;
+    },
+  );
 
   const transport = createFastifyTransport({
     host: env.host,
@@ -251,6 +273,7 @@ async function main(): Promise<void> {
         generateId: () => koydoIdGen.generate(),
         now: () => Date.now(),
         log: koydoLog,
+        queries: pgDashboardQueries,
       }),
       (app) => registerSafetyRoutes(app, {
         generateId: () => koydoIdGen.generate(),
@@ -264,14 +287,8 @@ async function main(): Promise<void> {
       (app) => registerAccountRoutes(app, {
         repo: kindlerRepo,
         log: koydoLog,
-        deleteSparkLogs: async (kindlerId) => {
-          // In-memory mock: no-op; production would delete from kindler_spark_log
-          logger.info({ kindlerId }, 'account:deleteSparkLogs (stub — production wires to DB)');
-        },
-        deleteSessions: async (kindlerId) => {
-          // In-memory mock: no-op; production would delete from kindler_sessions
-          logger.info({ kindlerId }, 'account:deleteSessions (stub — production wires to DB)');
-        },
+        deleteSparkLogs: (kindlerId) => kindlerRepo.deleteSparkLogs(kindlerId),
+        deleteSessions: (kindlerId) => kindlerRepo.deleteSessions(kindlerId),
       }),
     ],
   });

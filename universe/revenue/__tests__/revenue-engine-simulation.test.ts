@@ -109,7 +109,7 @@ describe('getEventsForQuarter', () => {
     engine.recordEvent(makeEventInput());
     const q1Events = engine.getEventsForQuarter(q(2027, 1));
     expect(q1Events.length).toBe(1);
-    expect(q1Events[0].createdAt).toBe(Date.UTC(2027, 0, 15));
+    expect(q1Events[0]!.createdAt).toBe(Date.UTC(2027, 0, 15));
   });
 });
 

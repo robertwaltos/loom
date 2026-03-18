@@ -18,7 +18,7 @@ export const ENTRY_PHYSICS_OF_SOUND: RealWorldEntry = {
   type: 'scientific_principle',
   title: 'How Air Turns Into Music',
   year: null,
-  yearDisplay: null,
+  yearDisplay: 'Timeless',
   era: 'ancient',
   descriptionChild:
     "Sound is just air wiggling. When you pluck a guitar string, it shakes the air next to it, which shakes the air next to that, all the way to your ear. Your eardrum wiggles too — and your brain turns those wiggles into music.",

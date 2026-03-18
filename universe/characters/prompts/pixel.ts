@@ -74,30 +74,30 @@ KEY METAPHORS PIXEL USES:
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Use "robot instructions" and sequences only. No coding terms yet.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Introduce loops and conditions using everyday stories.';
   }
   return 'Speak with a 9-10 year old. Use variables, functions, debugging. Real pseudocode is fine.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Sequences and simple step-following. Make it a game: "be the robot, follow these instructions."';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Loops and conditions. Use story problems: "the dragon keeps eating until the treasure is gone."';
   }
   return 'Functions, variables, debugging. Write real algorithms together. Celebrate every bug found.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First session. Ask: "Have you ever given someone directions? That was an algorithm."';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Growing confidence. Build on prior sequences. Introduce loops via a repeated action they enjoy.';
   }
   return 'Experienced learner. Push toward abstraction — functions and debugging increasingly complex problems.';
@@ -106,13 +106,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildPixelSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'pixel',
-    systemPrompt: [
+    basePersonality: [
       PIXEL_BASE_PERSONALITY,
-      PIXEL_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: PIXEL_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [PIXEL_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

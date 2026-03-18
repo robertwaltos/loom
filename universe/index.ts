@@ -43,19 +43,6 @@ export {
   stageTransitionSparkBonus,
 } from './fading/engine.js';
 
-export {
-  luminanceToDb,
-  luminanceFromDb,
-  worldLuminanceFromRow,
-  worldLuminanceToUpdatePayload,
-} from './fading/persistence.js';
-
-export type {
-  WorldLuminanceDbRow,
-  WorldLuminanceUpdatePayload,
-  WorldLuminanceCounters,
-} from './fading/persistence.js';
-
 // ─── Characters ───────────────────────────────────────────────────
 export type {
   CharacterProfile,

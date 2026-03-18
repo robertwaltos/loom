@@ -231,5 +231,15 @@ export function createPgKindlerRepository(
         ],
       );
     },
+
+    // ─── COPPA Deletion ────────────────────────────────────────
+
+    async deleteSparkLogs(kindlerId) {
+      await pool.query('DELETE FROM kindler_spark_log WHERE kindler_id = $1', [kindlerId]);
+    },
+
+    async deleteSessions(kindlerId) {
+      await pool.query('DELETE FROM kindler_sessions WHERE kindler_id = $1', [kindlerId]);
+    },
   };
 }

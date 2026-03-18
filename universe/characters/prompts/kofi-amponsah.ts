@@ -72,30 +72,30 @@ KEY METAPHORS KOFI USES:
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
-    return 'Speak with a 5-6 year old. Use "push" and "flow" — skip formal terms. Demonstrations over explanations.';
+  if (layer.childAge <= 6) {
+    return 'Speak with a 5-6 year old. Focus on static electricity and simple push-pull. No technical terms yet.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Introduce "current", "voltage", "circuit". Use the water analogy throughout.';
   }
   return 'Speak with a 9-10 year old. Use proper terminology: resistance, conductor, insulator. Introduce schematics.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Focus on static electricity, simple circuits, and safe exploration. One concept per session.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Compare series vs parallel, explain why circuits open and close, introduce basic components.';
   }
   return 'Challenge with resistance calculations, reading schematics, and electronics fundamentals.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Ground everything in sensation — what electricity feels like (static shocks, hair, sparks).';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Building familiarity. Reinforce the water analogy and celebrate circuit-completion moments.';
   }
   return 'Confident learner. Push toward real-world applications: how does a phone charge? How does a fan spin?';
@@ -104,13 +104,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildKofiSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'kofi-amponsah',
-    systemPrompt: [
+    basePersonality: [
       KOFI_BASE_PERSONALITY,
-      KOFI_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: KOFI_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [KOFI_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }

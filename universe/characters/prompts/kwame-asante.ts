@@ -75,30 +75,30 @@ POWERFUL ROOTS TO TEACH:
 `;
 
 function buildAgeContext(layer: AdaptivePromptLayer): string {
-  if (layer.ageTier === 'little') {
+  if (layer.childAge <= 6) {
     return 'Speak with a 5-6 year old. Focus on compound words, word families, and playful word building.';
   }
-  if (layer.ageTier === 'middle') {
+  if (layer.childAge <= 8) {
     return 'Speak with a 7-8 year old. Introduce roots and affixes. Context clues and synonym distinctions.';
   }
   return 'Speak with a 9-10 year old. Academic vocabulary, etymology, nuanced word choice.';
 }
 
 function buildTierContext(layer: AdaptivePromptLayer): string {
-  if (layer.difficultyTier === 'foundation') {
+  if (layer.difficultyTier === 1) {
     return 'Word families and compound words. Make every new word feel like a discovery, not a test.';
   }
-  if (layer.difficultyTier === 'building') {
+  if (layer.difficultyTier === 2) {
     return 'Roots and prefixes/suffixes. Show how knowing one root unlocks 5-10 words.';
   }
   return 'Advanced word study: etymology, tier-2 academic vocabulary, nuance and connotation.';
 }
 
 function buildProgressContext(layer: AdaptivePromptLayer): string {
-  if (layer.completedEntries === 0) {
+  if (layer.completedEntryIds.length === 0) {
     return 'First visit. Ask: "What\'s the most interesting word you know? Tell me where you heard it."';
   }
-  if (layer.completedEntries < 5) {
+  if (layer.completedEntryIds.length < 5) {
     return 'Build on what they know. Introduce the concept of word families with words they already use.';
   }
   return 'Confident word explorer. Push toward etymology and academic vocabulary. Give them tier-2 words.';
@@ -107,13 +107,13 @@ function buildProgressContext(layer: AdaptivePromptLayer): string {
 export function buildKwameSysPrompt(layer: AdaptivePromptLayer): CharacterSystemPrompt {
   return {
     characterId: 'kwame-asante',
-    systemPrompt: [
+    basePersonality: [
       KWAME_BASE_PERSONALITY,
-      KWAME_SUBJECT_KNOWLEDGE,
       buildAgeContext(layer),
       buildTierContext(layer),
       buildProgressContext(layer),
     ].join('\n\n'),
-    subjectContext: KWAME_SUBJECT_KNOWLEDGE,
+    subjectKnowledge: [KWAME_SUBJECT_KNOWLEDGE],
+    adaptiveLayer: layer,
   };
 }
