@@ -112,10 +112,14 @@ export interface SessionRoutesDeps {
   readonly repo: KindlerRepository;
   readonly engine: KindlerEngine;
   readonly idGenerator: { generate: () => string };
+  /** Optional: called after a Kindler completes an entry to apply world fading restoration. */
+  readonly getEntryTier?: (entryId: string) => 1 | 2 | 3 | null;
+  /** Optional: notified after entry completion so the caller can update luminance state. */
+  readonly onEntryCompleted?: (worldId: string, kindlerId: string, tier: 1 | 2 | 3) => void;
 }
 
 export function registerSessionRoutes(app: FastifyAppLike, deps: SessionRoutesDeps): void {
-  const { repo, engine, idGenerator } = deps;
+  const { repo, engine, idGenerator, getEntryTier, onEntryCompleted } = deps;
 
   // POST /v1/session/start
   app.post('/v1/session/start', async (req, reply) => {
@@ -182,6 +186,12 @@ export function registerSessionRoutes(app: FastifyAppLike, deps: SessionRoutesDe
 
     const progress = engine.recordProgress(kindlerId, entryId, worldId, adventureType, score);
     await repo.saveProgress(progress);
+
+    // Notify fading engine so the world luminance reflects completed lessons
+    if (getEntryTier !== undefined && onEntryCompleted !== undefined) {
+      const tier = getEntryTier(entryId);
+      if (tier !== null) onEntryCompleted(worldId, kindlerId, tier);
+    }
 
     const sparkState = engine.getSparkState(kindlerId);
     const res: SparkEventResponse = {

@@ -1148,3 +1148,55 @@ All Koydo Worlds HTTP routes wired into `src/main.ts`. Parent dashboard and safe
 - [x] `FastifyReplyLike` exported from selvage index
 
 **Tests**: 28/28 passing (unchanged — routes are integration-tested; unit tests are in scope for Phase 26)
+
+---
+
+## Phase 26: Worlds API + Fading Engine Integration (March 2026)
+
+**Branch**: `silk/worlds-api`
+
+### What was built
+
+**`universe/content/bootstrap.ts`** (new)
+- `createBootstrappedContentEngine()` — imports all 50 world entry arrays + 9 quiz sets + curriculum maps
+- Exports `ALL_CONTENT_ENTRIES`, `ALL_CONTENT_QUIZZES` for inspection
+- Single bootstrap point for production server and tests
+
+**`src/routes/worlds.ts`** (new) — 4 HTTP endpoints
+- `GET /v1/worlds` — list all 50 worlds; optional `?realm=discovery|expression|exchange|crossroads` filter
+- `GET /v1/worlds/realm/:realm` — convenience realm-scoped endpoint
+- `GET /v1/worlds/:worldId` — world detail with current luminance + fading stage + entry count
+- `GET /v1/worlds/:worldId/entries` — published entries for a world (title, tier, adventure type, etc.)
+
+**`src/routes/session.ts`** (updated)
+- `SessionRoutesDeps` extended with optional `getEntryTier` and `onEntryCompleted` callbacks
+- `complete-entry` handler now triggers fading restoration when callbacks are provided
+
+**`src/main.ts`** (updated)
+- Added `WorldsEngine` from `createWorldsEngine({ worlds: ALL_WORLDS })` (all 50 worlds)
+- Added `ContentEngine` from `createBootstrappedContentEngine()`
+- Added in-memory `luminanceStore: Map<string, WorldLuminance>` — all 50 worlds init at 0.5 (dimming)
+- Added `onEntryCompleted` callback wired into session routes — calls `applyRestoration()` on every entry completion
+- Added `getEntryTier` lookup wired into session routes
+- Logs `koydo:fading:restored` on luminance changes
+- Registered `registerWorldsRoutes` with all deps
+
+**`tests/worlds-route.test.ts`** (new) — 12 tests
+- All 4 endpoints tested: listing, realm filter, invalid realm rejection, world detail, entries, 404s
+- Inline test doubles for `WorldsEngine`, `ContentEngine`, luminance store, and minimal Fastify harness
+
+### Architecture: The Fading Engine
+
+Every time a Kindler completes a lesson, the world's luminance increases. No world ever goes below `MIN_LUMINANCE = 0.03`. The restoration delta is indexed by difficulty tier:
+
+| Tier | Ages | Restoration |
+|------|------|-------------|
+| 1 | 5-6 | +0.05 luminance |
+| 2 | 7-8 | +0.07 luminance |
+| 3 | 9-10 | +0.10 luminance |
+
+Luminance stages: `radiant (≥0.9) → glowing (≥0.65) → dimming (≥0.40) → fading (≥0.15) → deep_fade (<0.15)`
+
+No FOMO mechanics. No daily login penalties. Returning players always feel rewarded.
+
+**Tests**: 12 new worlds tests + all 28 prior tests = **40/40 passing**

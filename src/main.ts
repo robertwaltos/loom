@@ -26,6 +26,8 @@
  * Tier: 0
  */
 
+import type { WorldLuminance } from '../universe/worlds/types.js';
+
 // ─── Environment Config ─────────────────────────────────────────
 
 interface LoomEnv {
@@ -143,11 +145,16 @@ async function main(): Promise<void> {
   const { createKindlerEngine } = await import('../universe/kindler/engine.js');
   const { createKindlerRepository, createMockKindlerRepository } = await import('../universe/kindler/repository.js');
   const { createBootstrappedCharactersEngine } = await import('../universe/characters/bootstrap.js');
+  const { createBootstrappedContentEngine } = await import('../universe/content/bootstrap.js');
+  const { createWorldsEngine } = await import('../universe/worlds/engine.js');
+  const { ALL_WORLDS } = await import('../universe/worlds/registry.js');
+  const { applyRestoration, calculateRestorationDelta, resolveFadingStage } = await import('../universe/fading/engine.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
   const { registerParentDashboardRoutes } = await import('./routes/parent-dashboard.js');
   const { registerSafetyRoutes } = await import('./routes/safety.js');
+  const { registerWorldsRoutes } = await import('./routes/worlds.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -168,13 +175,42 @@ async function main(): Promise<void> {
   // SUPABASE_URL + SUPABASE_SERVICE_KEY are configured.
   const kindlerRepo = createMockKindlerRepository();
   const charactersEngine = createBootstrappedCharactersEngine();
+  const contentEngine = createBootstrappedContentEngine();
+  const worldsEngine = createWorldsEngine({ worlds: ALL_WORLDS });
+
+  // In-memory luminance store: all 50 worlds start at 0.5 (dimming) until Kindlers restore them
+  const now = Date.now();
+  const luminanceStore = new Map<string, WorldLuminance>(
+    ALL_WORLDS.map(w => [w.id, {
+      worldId: w.id,
+      luminance: 0.5,
+      stage: resolveFadingStage(0.5),
+      lastRestoredAt: now,
+      totalKindlersContributed: 0,
+      activeKindlerCount: 0,
+    }]),
+  );
+
+  function onEntryCompleted(worldId: string, kindlerId: string, tier: 1 | 2 | 3): void {
+    const current = luminanceStore.get(worldId);
+    if (current === undefined) return;
+    const delta = calculateRestorationDelta({ difficultyTier: tier, isCollaborative: false, returnBonus: false });
+    const { updated } = applyRestoration(current, delta, 'kindler_progress', kindlerId);
+    luminanceStore.set(worldId, updated);
+    logger.info({ worldId, luminance: updated.luminance, stage: updated.stage }, 'koydo:fading:restored');
+  }
+
+  function getEntryTier(entryId: string): 1 | 2 | 3 | null {
+    const entry = contentEngine.getEntryById(entryId);
+    return entry?.difficultyTier ?? null;
+  }
 
   if (env.supabase.url) {
     logger.warn({}, 'SUPABASE_URL set but @supabase/supabase-js not installed — using mock repo');
   } else {
     logger.warn({}, 'SUPABASE_URL not set — using in-memory mock KindlerRepository (dev mode)');
   }
-  logger.info({ guides: 49 }, 'Koydo: KindlerEngine + CharactersEngine ready (49 guides)');
+  logger.info({ guides: 49, worlds: ALL_WORLDS.length, contentEntries: contentEngine.getStats().totalEntries }, 'Koydo: KindlerEngine + CharactersEngine + WorldsEngine + ContentEngine ready');
 
   function koydoLog(level: 'info' | 'warn' | 'error', msg: string, meta?: Record<string, unknown>): void {
     if (level === 'error') logger.error(meta ?? {}, msg);
@@ -198,7 +234,13 @@ async function main(): Promise<void> {
           : {}),
       }),
       (app) => registerKindlerRoutes(app, { repo: kindlerRepo, engine: kindlerEngine, idGenerator: koydoIdGen }),
-      (app) => registerSessionRoutes(app, { repo: kindlerRepo, engine: kindlerEngine, idGenerator: koydoIdGen }),
+      (app) => registerSessionRoutes(app, {
+        repo: kindlerRepo,
+        engine: kindlerEngine,
+        idGenerator: koydoIdGen,
+        getEntryTier,
+        onEntryCompleted,
+      }),
       (app) => registerGuideRoutes(app, { charactersEngine, kindlerRepo }),
       (app) => registerParentDashboardRoutes(app, {
         generateId: () => koydoIdGen.generate(),
@@ -210,6 +252,7 @@ async function main(): Promise<void> {
         now: () => Date.now(),
         log: koydoLog,
       }),
+      (app) => registerWorldsRoutes(app, { worldsEngine, contentEngine, luminanceStore }),
     ],
   });
 
