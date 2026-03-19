@@ -54,8 +54,8 @@ _Five:_ It knows which players have read the Adeyemi suppression Chronicle entri
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a man of apparent age 54, rendered as a photorealistic figure of mixed Southern European, Turkish, and Georgian heritage. Warm olive-brown complexion — Mediterranean with a deeper Caucasian warmth. Dark hair heavily silvered at the temples and crown, dark at the interior. Dark amber-hazel eyes carrying the particular quality of someone who has already calculated the outcome of this conversation. Strong, defined bone structure — prominent cheekbones, heavy jaw, slightly aquiline nose — Byzantine in its gravity. A vertical line between the brows. Broad-shouldered. A high-quality dark coat with no insignia. He is seated across a simple table, hands resting still, looking directly at the viewer. Photorealistic. Single overhead cinematic light source. Background: deep abstracted space, a faint Lattice grid visible, seven-sided geometry in the shadows.
-> **Grok:** Ultra-realistic portrait. A man of apparent 54, mixed Greek-Byzantine, Turkish, and Georgian features. Warm olive-brown complexion, Caucasian bone structure. Dark hair, heavy silver at temples. Dark amber-hazel eyes. Warm olive-brown skin, prominent cheekbones, defined jaw. Dark coat, no insignia. Seated at a table. Background: abstracted Lattice geometry in darkness behind him.
+> **Gemini:** Full-body portrait of a mature Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Photorealistic. Cinematic light. Background: deep abstracted space, a faint Lattice grid visible, seven-sided geometry in the shadows.
+> **Grok:** Ultra-realistic portrait. A mature Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Warm olive-brown complexion, Caucasian bone structure. Dark hair, heavy silver at temples. Warm olive-brown complexion, caucasian bone s. Background: abstracted Lattice geometry in darkness behind him.
 
 ---
 
@@ -350,8 +350,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. In a sparse government research facility — the gate aperture visible through reinforced glass behind her, the first stable full-scale gate in the history of the human species. She is looking at it, not at the camera. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Warm medium complexion with latin american he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. In a sparse government research facility — the gate aperture visible through reinforced glass behind her, the first stable full-scale gate in the history of the human species. She is looking at it, not at the camera. Cinematic directional lighting. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Warm light. Background: neutral background.
 
 ---
 
@@ -373,8 +373,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Black-brown eyes. in a sparse private space — the Senate investigation transcripts on a table behind him. Post-disclosure civilian lighting — grey, reduced. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Black-brown eyes. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Warm tan-brown complexion with indigenous-spa. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. in a sparse private space — the Senate investigation transcripts on a table behind him. Post-disclosure civilian lighting — grey, reduced. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Warm tan-brown complexion with indigenous-spa. Background: neutral background.
 
 ---
 
@@ -396,8 +396,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. In an undisclosed private space — nothing that identifies where he is. The quality of great sustained age and deliberate self-erasure. Private space indirect ambient lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Warm medium complexion with latin american he. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Polish man. Fair complexion. Short brown hair. Pale green eyes. In an undisclosed private space — nothing that identifies where he is. The quality of great sustained age and deliberate self-erasure. Private space indirect ambient lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Polish man. Fair complexion. Short brown hair. Pale green eyes. Warm brown skin, strong african-american features. Warm medium complexion with latin american heritage. Warm brown skin, strong african-american feat. Background: neutral background.
 
 ---
 
@@ -419,8 +419,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Close-cropped hair. Deep brown eyes. wear — she ran a division that officially didn't exist, in a program that officially didn't exist, studying a question that officially hadn't been asked. Eyes that have just spent three years building a scientific framework for encountering the genuinely unknown. In the xenophysics division lab — probe transit data on multiple screens, the resonance response reading in a corner display she is not looking at. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Close-cropped hair. Deep brown eyes. Light complexion with warm undertone. Chestnut hair neatly pinned. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 36-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. wear — she ran a division that officially didn't exist, in a program that officially didn't exist, studying a question that officially hadn't been asked. Eyes that have just spent three years building a scientific framework for encountering the genuinely unknown. In the xenophysics division lab — probe transit data on multiple screens, the resonance response reading in a corner display she is not looking at. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Deep rich brown skin, central african features. Light complexion with warm undertone. Warm undertone. Background: neutral background.
 
 ---
 
@@ -442,8 +442,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Warm dark brown eyes. Glossy black hair. Warm dark eyes. Glossy black hair. Warm dark eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Warm dark brown eyes. Rich warm brown complexion. Rich warm brown complexion. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 41-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Close-cropped black hair. Warm dark brown eyes. Glossy black hair. Warm dark eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Deep brown skin, strong central african features. Rich warm brown complexion. Warm dark brown eyes. Background: neutral background.
 
 ---
 
@@ -465,8 +465,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Straight brown hair. Steel blue eyes. Straight brown hair. Steel blue eyes. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 29-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. USN lieutenant commander, regulation braid. About to be the first human through a wormhole gate. Amber cold precise lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Close-cropped brown hair. Steel blue eyes. Straight brown hair. Steel blue eyes. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. USN lieutenant commander, regulation braid. About to be the first human through a wormhole gate. Amber cold precise lighting. Background: neutral background.
 
 ---
 
@@ -488,8 +488,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. wear — a psychologist in a physics program. Natural black hair with significant greying. Eyes that have been assessing people's readiness for things that would change their experience of being human, and that cleared someone in Year 8 who did not come back. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Straight black hair worn practical. Straight black hair worn practical. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 48-year-old Japanese man. Light complexion with warm undertone. Short black hair. Warm dark eyes. wear — a psychologist in a physics program. Natural black hair with significant greying. Eyes that have been assessing people's readiness for things that would change their experience of being human, and that cleared someone in Year 8 who did not come back. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Japanese man. Light complexion with warm undertone. Short black hair. Warm dark eyes. Straight black hair worn practical. Straight black hair worn practical. Warm light. Background: neutral background.
 
 ---
 
@@ -511,8 +511,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Black hair arranged. Deep hazel eyes. Neatly trimmed black hair. Deep brown eyes. Neatly trimmed black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Black hair arranged. Deep hazel eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 24-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Black hair arranged. Deep hazel eyes. Neatly trimmed black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 24-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm medium-olive complexion with persian features. Light complexion with warm undertone. Warm medium-olive complexion with persian fea. Background: neutral background.
 
 ---
 
@@ -534,8 +534,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. wear — a scientist who spent seven classified years building a framework that outlived her. Natural silver-white hair in a loose professional style. Eyes watching her work being used by people who don't know it is hers. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Seven classified years building what became the Survey Corps methodology. Died before the classification lifted. Survey corps methodology. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. wear — a scientist who spent seven classified years building a framework that outlived her. Natural silver-white hair in a loose professional style. Eyes watching her work being used by people who don't know it is hers. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Seven classified years building what became the Survey Corps methodology. Died before the classification lifted. Survey corps methodology. Background: neutral background.
 
 ---
 
@@ -557,8 +557,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. Close-cropped light blonde. Clear blue eyes. Close-cropped light blonde. Clear blue eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. Close-cropped light blonde. Close-cropped light blonde. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
 
 ---
 
@@ -586,8 +586,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. in a precise professional style. Eyes that authorised everything and declassified selectively and left for another world. Post-disclosure public appearance — formal controlled lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 58-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Warm mediterranean tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 58-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. in a precise professional style. Eyes that authorised everything and declassified selectively and left for another world. Post-disclosure public appearance — formal controlled lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Light blonde hair worn neat. Olive complexion with warm mediterranean tone. Warm mediterranean tone. Background: neutral background.
 
 ---
 
@@ -609,8 +609,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Natural black hair neat. Warm dark brown eyes. Natural black hair neat. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm deep brown skin with southern african fe. Background: neutral background.
+> **Gemini:** Full-body portrait of a 53-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Black close-cropped. Warm brown eyes. Natural black hair neat. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Warm tan-brown complexion. Warm deep brown skin with southern african features. Warm tan-brown complexion. Background: neutral background.
 
 ---
 
@@ -632,8 +632,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. in a structured professional style. Eyes that ran an investigation that got one conviction and knew a better deal had been on the table. Congressional or post-government office formal lighting. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Very fair complexion with freckles. Very fair complexion with freckles. Formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 61-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. in a structured professional style. Eyes that ran an investigation that got one conviction and knew a better deal had been on the table. Congressional or post-government office formal lighting. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Very fair complexion with freckles. Very fair complexion with freckles. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -655,8 +655,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Dark wavy hair pulled back. Chestnut brown eyes. Dark wavy hair pulled back. Chestnut brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Warm mediterranean tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Neatly trimmed black hair. Black-brown eyes. Dark wavy hair pulled back. Chestnut brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
 
 ---
 
@@ -678,8 +678,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. wear — no program affiliation, entirely State Department. Natural silver-black hair in a precise diplomatic style. Eyes that briefed the Security Council on the existence of wormhole transit with 72 hours of preparation and no briefing materials. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Light brown hair worn neat. Light brown hair worn neat. Formal diplomatic wear. Background: neutral background.
+> **Gemini:** Full-body portrait of a 49-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. wear — no program affiliation, entirely State Department. Natural silver-black hair in a precise diplomatic style. Eyes that briefed the Security Council on the existence of wormhole transit with 72 hours of preparation and no briefing materials. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Light brown hair worn neat. Light brown hair worn neat. Formal diplomatic wear. Background: neutral background.
 
 ---
 
@@ -707,8 +707,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Black hair neatly arranged. Deep brown eyes. Black hair neatly arranged. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Light even complexion with warm undertone. Black hair neatly arranged. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 34-year-old Polish woman. Fair complexion with cool undertone. Ash brown hair. Slate blue eyes. Close-cropped dark hair. Warm brown eyes. Black hair neatly arranged. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Polish woman. Fair complexion with cool undertone. Ash brown hair. Slate blue eyes. Light even complexion with warm undertone. Black hair neatly arranged. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -730,8 +730,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Natural black hair. Warm dark brown eyes. in a large unstructured natural style. Eyes that are running an accountability campaign against the people who opened a door to the stars and asking them to explain themselves. In a public community space — emigration lottery information boards behind her. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Natural black hair. Warm dark brown eyes. Rich warm brown complexion. Rich warm brown complexion. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. in a large unstructured natural style. Eyes that are running an accountability campaign against the people who opened a door to the stars and asking them to explain themselves. In a public community space — emigration lottery information boards behind her. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Deep rich brown skin, central african features. Rich warm brown complexion. Natural black hair. Background: neutral background.
 
 ---
 
@@ -753,8 +753,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. in a minimised window, her verification paper being written in real time. This is during the thirty-six hours. Academic office after-hours warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. Natural black hair, early silver. Had been independently working toward the same conclusion for 14 months. Natural black hair, early silver. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. in a minimised window, her verification paper being written in real time. This is during the thirty-six hours. Academic office after-hours warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Natural black hair, early silver. Had been independently working toward the same conclusion for 14 months. Warm tan complexion. Background: neutral background.
 
 ---
 
@@ -776,8 +776,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Short brown hair. Green eyes. Short brown hair. Green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 42-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Former USN captain, civilian clothes. Founded the Earth First movement by refusing emigration assignment. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 42-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Dark hair short. Dark brown eyes. Short brown hair. Green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Former USN captain, civilian clothes. Founded the Earth First movement by refusing emigration assignment. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -799,8 +799,8 @@ _Dating convention: Earth Phase events are given as approximate real-world years
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 28-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Black short cropped. Warm brown eyes. Cinematic directional lighting. Photorealistic. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 28-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Practical everyday clothes. Applied to the lottery without telling his wife. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 28-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Black close-cropped. Warm hazel. Black short cropped. Warm brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 28-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Practical everyday clothes. Applied to the lottery without telling his wife. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -875,8 +875,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. A partial tattoo visible on the left inner wrist. She is standing looking directly at frame with the expression of someone who knows a route by heart but is measuring something in the distance. Warm amber mercantile lighting. Photorealistic. Cinematic directional lighting. Background: trade station concourse — vessel silhouettes in the distance.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Warm medium-brown complexion with golden tone. Black hair in a clean style. Warm medium-brown complexion with golden tone. Background: cargo bay at dusk.
+> **Gemini:** Full-body portrait of a 54-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Warm amber mercantile lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: trade station concourse — vessel silhouettes in the distance.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Dark blonde close-cropped. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Background: cargo bay at dusk.
 
 ---
 
@@ -902,8 +902,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Close-cropped natural. Deep brown eyes. Close-cropped natural. Deep brown eyes. Photorealistic. Amber lighting. Background: Assembly anteroom — policy documents stacked on a desk behind him.
-> **Grok:** Ultra-realistic portrait. A 67-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm deep brown skin with southern african fe. Background: legal documents.
+> **Gemini:** Full-body portrait of a 67-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Short dark curly hair. Dark brown eyes. Close-cropped natural. Deep brown eyes. Photorealistic. Amber lighting. Background: Assembly anteroom — policy documents stacked on a desk behind him.
+> **Grok:** Ultra-realistic portrait. A 67-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm brown complexion. Background: legal documents.
 
 ---
 
@@ -929,8 +929,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Neat dark hair. Warm brown eyes. Neat dark hair. Warm brown eyes. Photorealistic. Warm light. Background: Varantha Station market floor — price indicators visible behind her.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Deep green close-cut jacket. A thin measurement band on her wrist — the only ornament. Warm light. Background: market data displays.
+> **Gemini:** Full-body portrait of a 38-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Light brown short. Clear blue eyes. Neat dark hair. Warm brown eyes. Photorealistic. Warm light. Background: Varantha Station market floor — price indicators visible behind her.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Deep green close-cut jacket. A thin measurement band on her wrist — the only ornament. Warm light. Background: market data displays.
 
 ---
 
@@ -956,8 +956,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 71-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. in the deep stillness of someone who has already decided. He has been funding something new for three years without explaining why. Amber mercantile lighting — evening. Photorealistic. Cinematic directional lighting. Background: Amber Reach trading floor — the machines running without him.
-> **Grok:** Ultra-realistic portrait. A 71-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Deep warm brown skin, west african features. Deep warm brown skin, west african features. Warm brown skin, west african features. Background: a trade floor that belongs to him but doesn't need him.
+> **Gemini:** Full-body portrait of a 71-year-old Dutch man. Fair complexion. Light brown short. Green eyes. in the deep stillness of someone who has already decided. He has been funding something new for three years without explaining why. Amber mercantile lighting — evening. Photorealistic. Cinematic directional lighting. Background: Amber Reach trading floor — the machines running without him.
+> **Grok:** Ultra-realistic portrait. A 71-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Deep warm brown skin, west african features. Deep warm brown skin, west african features. Warm brown skin, west african features. Background: a trade floor that belongs to him but doesn't need him.
 
 ---
 
@@ -983,8 +983,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Photorealistic. Cinematic directional lighting. Background: Covenant-administered world skyline — Lattice node glowing in the far distance.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Warm medium-brown complexion. Warm medium-brown complexion. Warm medium-brown complexion. Background: Covenant architecture at distance.
+> **Gemini:** Full-body portrait of a 43-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Covenant-administered world skyline — Lattice node glowing in the far distance.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Light complexion with cool undertone. Warm medium-brown complexion. Cool undertone. Background: Covenant architecture at distance.
 
 ---
 
@@ -1010,8 +1010,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. in the controlled posture of someone who grew up on Pale Circuit and never fully stopped watching. Pale Circuit ambient lighting — faint blue-violet node glow. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: Pale Circuit market — node cluster visible through the window behind her.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Deep rich brown skin, central african features. Deep rich brown skin, central african features. Natural black hair. Background: world in contested status.
+> **Gemini:** Full-body portrait of a 29-year-old German man. Fair complexion. Close-cropped brown hair. Grey eyes. in the controlled posture of someone who grew up on Pale Circuit and never fully stopped watching. Pale Circuit ambient lighting — faint blue-violet node glow. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: Pale Circuit market — node cluster visible through the window behind her.
+> **Grok:** Ultra-realistic portrait. A 29-year-old German man. Fair complexion. Close-cropped brown hair. Grey eyes. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Warm olive-brown complexion with middle easte. Background: world in contested status.
 
 ---
 
@@ -1037,8 +1037,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. in the posture of someone who built a room and has not found the door out. Commercial station formal lighting. Photorealistic. Formal lighting. Background: Varantha Station Admiralty chamber — the institution arranged around him.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Deep rich brown skin with igbo west african features. Deep rich brown skin with igbo west african features. Natural black hair neat. Background: the Admiralty chamber.
+> **Gemini:** Full-body portrait of a 58-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. in the posture of someone who built a room and has not found the door out. Commercial station formal lighting. Photorealistic. Formal lighting. Background: Varantha Station Admiralty chamber — the institution arranged around him.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Warm medium-brown complexion. Deep rich brown skin with igbo west african features. Warm medium-brown complexion. Background: the Admiralty chamber.
 
 ---
 
@@ -1064,8 +1064,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Japanese man. Light complexion with warm undertone. Short black hair. Warm dark eyes. Warm ochre travel coat — long-worn and trusted; field repair visible on the right sleeve. Black natural coils medium length, slightly travel-tousled. A compass pendant at the collar. Photorealistic. Cinematic directional lighting. Background: a small colony landing bay — intimate, local, not a major port.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Japanese man. Light complexion with warm undertone. Short black hair. Warm dark eyes. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 33-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Short black hair. Warm dark eyes. Warm ochre travel coat — long-worn and trusted; field repair visible on the right sleeve. Black natural coils medium length, slightly travel-tousled. Photorealistic. Cinematic directional lighting. Background: a small colony landing bay — intimate, local, not a major port.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Light complexion with warm undertone. Light porcelain complexion with cool undertone. Warm undertone. Background: neutral background.
 
 ---
 
@@ -1091,8 +1091,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Natural black coils neat. Deep brown eyes. Natural black coils neat. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm brown skin with east african features. Warm brown skin with east african features. Warm brown skin with east african features. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Black close-cropped. Black-brown eyes. Natural black coils neat. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Warm tan-brown complexion. Warm brown skin with east african features. Warm tan-brown complexion. Background: neutral background.
 
 ---
 
@@ -1118,8 +1118,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. in the Concord and has been holding something for four years without deciding what to do with it. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an information trading office — reference documents visible but unreadable.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. in the Concord and has been holding something for four years without deciding what to do with it. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an information trading office — reference documents visible but unreadable.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: neutral background.
 
 ---
 
@@ -1147,8 +1147,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Photorealistic. Cinematic directional lighting. Background: Amber Reach trade floor — cargo handlers visible in the background.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Deep warm brown skin with rich west african undertone. Natural coils arranged neat. Warm brown skin with rich west african undert. Background: cargo bay.
+> **Gemini:** Full-body portrait of a 22-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Photorealistic. Cinematic directional lighting. Background: Amber Reach trade floor — cargo handlers visible in the background.
+> **Grok:** Ultra-realistic portrait. A 22-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Very deep brown skin, strong west african features. Deep warm brown skin with rich west african undertone. Warm eyes. Background: cargo bay.
 
 ---
 
@@ -1174,8 +1174,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Light brown pulled back. Pale green eyes. Light brown pulled back. Pale green eyes. Photorealistic. Cinematic directional lighting. Background: sealed cargo facility — handling protocols posted on the wall.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Fair complexion with cool undertone. Fair complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Short black hair. Deep brown eyes. Light brown pulled back. Pale green eyes. Photorealistic. Warm light. Background: sealed cargo facility — handling protocols posted on the wall.
+> **Grok:** Ultra-realistic portrait. A 64-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Fair complexion with cool undertone. Fair complexion with cool undertone. Warm light. Background: neutral background.
 
 ---
 
@@ -1201,8 +1201,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. in the last two years because she met the heirs. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: estate auction room — items laid out, no people.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Charcoal formal auction coat. Straight black hair in a chignon. Formal auction coat. Background: estate holdings room.
+> **Gemini:** Full-body portrait of a 36-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. in the last two years because she met the heirs. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Warm light. Background: estate auction room — items laid out, no people.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Charcoal formal auction coat. Straight black hair in a chignon. Warm light. Background: estate holdings room.
 
 ---
 
@@ -1228,8 +1228,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Short black hair. Dark brown eyes. Short black hair. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Varantha Station Senior Factor office — no Admiralty insignia visible.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Light complexion with cool undertone. Light complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 49-year-old French man. Light complexion. Short brown hair. Hazel eyes. Short black hair. Dark brown eyes. Short black hair. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Varantha Station Senior Factor office — no Admiralty insignia visible.
+> **Grok:** Ultra-realistic portrait. A 49-year-old French man. Light complexion. Short brown hair. Hazel eyes. Light complexion with cool undertone. Light complexion with cool undertone. Cool undertone. Background: neutral background.
 
 ---
 
@@ -1255,8 +1255,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Natural short hair. Dark expressive eyes. Natural short hair. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: Amber Reach trading floor — everything running smoothly.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Deep brown skin, igbo features. Deep brown skin, igbo features. Natural short hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 41-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Medium blonde. Clear blue eyes. Natural short hair. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: Amber Reach trading floor — everything running smoothly.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Deep brown skin, igbo features. Deep brown skin, igbo features. Natural short hair. Background: neutral background.
 
 ---
 
@@ -1282,8 +1282,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Dark blonde pulled back. Pale green eyes. Dark blonde pulled back. Pale green eyes. Photorealistic. Cinematic directional lighting. Background: the ethical trade certification office he founded.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Warm russet coat with his own certification seal embossed on it. Close-cropped black hair with silver. Warm russet coat with his own certification s. Background: neutral background.
+> **Gemini:** Full-body portrait of a 55-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Dark brown short. Deep hazel. Dark blonde pulled back. Pale green eyes. Photorealistic. Cinematic directional lighting. Background: the ethical trade certification office he founded.
+> **Grok:** Ultra-realistic portrait. A 55-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Warm russet coat with his own certification seal embossed on it. Close-cropped black hair with silver. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -1309,8 +1309,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Polish woman. Fair complexion with cool undertone. Ash brown hair. Slate blue eyes. Close-cropped natural hair. Deep brown eyes. Close-cropped natural hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: a room she has already assessed — exits noted.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Polish woman. Fair complexion with cool undertone. Ash brown hair. Slate blue eyes. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Natural hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 24-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Ash brown hair. Slate blue eyes. Close-cropped natural hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: a room she has already assessed — exits noted.
+> **Grok:** Ultra-realistic portrait. A 24-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Fair complexion with cool undertone. Deep rich brown skin with igbo west african features. Cool undertone. Background: neutral background.
 
 ---
 
@@ -1336,8 +1336,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. in the direction that was easier to settle. The losing dynasty has not recovered. His expression holds that knowledge precisely. Photorealistic. Cinematic directional lighting. Background: a mediation chamber — no faction identifiers visible.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Warm complexion with southern european-latin. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. in the direction that was easier to settle. The losing dynasty has not recovered. His expression holds that knowledge precisely. Photorealistic. Cinematic directional lighting. Background: a mediation chamber — no faction identifiers visible.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Light complexion with warm undertone. Light warm complexion with southern european-latin tone. Warm undertone. Background: neutral background.
 
 ---
 
@@ -1363,8 +1363,8 @@ The Lattice has been deciding since Year -4. The probe transit was Year -4. The 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Medium brown hair. Grey eyes. Medium brown hair. Grey eyes. Photorealistic. Cinematic directional lighting. Background: Deep Tidal vessel bay — his satchel the only personal item.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Fair complexion with cool undertone. Fair complexion with cool undertone. Cool undertone. Background: Deep Tidal vessel bay.
+> **Gemini:** Full-body portrait of a 27-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Close-cropped black hair. Deep amber eyes. Medium brown hair. Grey eyes. Photorealistic. Cinematic directional lighting. Background: Deep Tidal vessel bay — his satchel the only personal item.
+> **Grok:** Ultra-realistic portrait. A 27-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Fair complexion with cool undertone. Fair complexion with cool undertone. Warm olive complexion. Background: Deep Tidal vessel bay.
 
 ---
 
@@ -1398,8 +1398,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Glossy black hair. Warm dark eyes. Glossy black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Light even complexion with warm undertone. Light even complexion with warm undertone. Warm undertone. Background: agricultural field — harvest visible.
+> **Gemini:** Full-body portrait of a mature Dutch man. Fair complexion. Light brown short. Green eyes. Short black hair. Warm dark eyes. Glossy black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Light complexion with cool undertone. Light even complexion with warm undertone. Cool undertone. Background: agricultural field — harvest visible.
 
 ---
 
@@ -1425,8 +1425,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Natural coils arranged. Dark expressive eyes. Natural coils arranged. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Rich deep brown skin with east african features. Rich deep brown skin with east african features. Natural coils arranged. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Black short cropped. Amber brown. Natural coils arranged. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Rich deep brown skin with east african features. Rich deep brown skin with east african features. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -1452,8 +1452,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. A personal pen clipped to her left-breast notebook. She is the Corps' foremost expert on anomalous Lattice node behaviour. Four sets of findings classified. Photorealistic. Clinical lighting. Background: anomalous node data display — reading unusual.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Deep brown skin with warm west african undertone. Natural black hair in a neat arrangement. Warm west african undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old Austrian woman. Fair complexion. Medium brown straight. Grey-green eyes. Dark brown hair worn neat. Dark brown eyes. A personal pen clipped to her left-breast notebook. She is the Corps' foremost expert on anomalous Lattice node behaviour. Photorealistic. Clinical lighting. Background: anomalous node data display — reading unusual.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Austrian woman. Fair complexion. Medium brown straight. Grey-green eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: neutral background.
 
 ---
 
@@ -1479,8 +1479,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Natural short hair. Deep brown eyes. Natural short hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: calibration instruments on a workbench — one reading unusual.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Warm deep brown skin, southern african features. Warm deep brown skin, southern african features. Warm deep brown skin, southern african featur. Background: neutral background.
+> **Gemini:** Full-body portrait of a 39-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Auburn short cropped. Blue-green eyes. Natural short hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: calibration instruments on a workbench — one reading unusual.
+> **Grok:** Ultra-realistic portrait. A 39-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Fair complexion with light freckles. Warm deep brown skin, southern african features. Warm deep brown skin, southern african featur. Background: neutral background.
 
 ---
 
@@ -1506,8 +1506,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Red-brown hair short. Pale blue eyes. Red-brown hair short. Pale blue eyes. Photorealistic. Neutral lighting. Background: a ship corridor — Alkahest origin nowhere visible.
-> **Grok:** Ultra-realistic portrait. A 26-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Fair complexion with light freckles. Fair complexion with light freckles. Natural coils. Background: neutral background.
+> **Gemini:** Full-body portrait of a 26-year-old Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. Photorealistic. Neutral lighting. Background: a ship corridor — Alkahest origin nowhere visible.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Cool undertone. Background: neutral background.
 
 ---
 
@@ -1533,8 +1533,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Dutch man. Fair complexion. Light brown short. Green eyes. Close-cropped dark blonde. Slate blue eyes. Close-cropped dark blonde. Slate blue eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Dutch man. Fair complexion. Light brown short. Green eyes. Close-cropped dark blonde. Close-cropped dark blonde. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Light brown short. Green eyes. Close-cropped dark blonde. Slate blue eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Close-cropped dark blonde. Close-cropped dark blonde. Cinematic lighting. Background: neutral background.
 
 ---
 
@@ -1560,8 +1560,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: deep-space medical bay — single light source, instruments ready.
+> **Gemini:** Full-body portrait of a mature Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm tan-brown complexion with indigenous-spa. Background: deep-space medical bay — single light source, instruments ready.
 
 ---
 
@@ -1587,8 +1587,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old German man. Fair complexion. Close-cropped brown hair. Grey eyes. Black hair pinned neat. Warm brown eyes. Black hair pinned neat. Warm brown eyes. Photorealistic. Warm light. Background: signal array — one transmission highlighted.
-> **Grok:** Ultra-realistic portrait. A 33-year-old German man. Fair complexion. Close-cropped brown hair. Grey eyes. Listening eyes with a permanent slight tilt. The right ear always has an earpiece in it. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 33-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Close-cropped brown hair. Grey eyes. Black hair pinned neat. Warm brown eyes. Photorealistic. Warm light. Background: signal array — one transmission highlighted.
+> **Grok:** Ultra-realistic portrait. A 33-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Listening eyes with a permanent slight tilt. The right ear always has an earpiece in it. Warm light. Background: neutral background.
 
 ---
 
@@ -1614,8 +1614,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Dark experienced brown eyes with a permanent squint from thirty-five years of manifest work. A personal ledger under her left arm — twelve years of anomalies she has never reported. She can tell what mission a ship is running by looking at what it carries. Photorealistic. Cinematic directional lighting. Background: survey vessel cargo bay — manifests posted.
-> **Grok:** Ultra-realistic portrait. A 56-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Rich deep brown skin with east african features. Natural black hair in a neat style. Natural black hair in a neat style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 56-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Dark brown short. Deep brown. Dark experienced brown eyes with a permanent squint from thirty-five years of manifest work. A personal ledger under her left arm — twelve years of anomalies she has never reported. Photorealistic. Cinematic directional lighting. Background: survey vessel cargo bay — manifests posted.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -1641,8 +1641,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 23-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm deep brown skin, caribbean features. Background: outer arc navigation console — Bako Vane's station visible in background.
+> **Gemini:** Full-body portrait of a mature Italian man. Olive complexion. Dark brown hair. Dark brown eyes. Black short cropped. Amber brown. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 23-year-old Italian man. Olive complexion. Dark brown hair. Dark brown eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm olive complexion. Background: outer arc navigation console — Bako Vane's station visible in background.
 
 ---
 
@@ -1668,8 +1668,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Platinum blonde hair worn practical. Pale blue eyes. Platinum blonde hair worn practical. Pale blue eyes. Photorealistic. Survey lighting. Background: an uncharted world's surface — first footprint.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Platinum blonde hair worn practical. Platinum blonde hair worn practical. Natural coils. Background: neutral background.
+> **Gemini:** Full-body portrait of a 37-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Dark brown hair worn neat. Dark brown eyes. Platinum blonde hair worn practical. Pale blue eyes. Photorealistic. Survey lighting. Background: an uncharted world's surface — first footprint.
+> **Grok:** Ultra-realistic portrait. A 37-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm tan-brown complexion with indigenous-spa. Background: neutral background.
 
 ---
 
@@ -1695,8 +1695,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Black hair arranged practical. Warm brown eyes. Black hair arranged practical. Warm brown eyes. Photorealistic. Cinematic directional lighting. Background: comparison of field notes and official filed version — the gap visible.
-> **Grok:** Ultra-realistic portrait. A 42-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Warm medium-brown complexion. Black hair arranged practical. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 42-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Medium blonde. Clear blue eyes. Black hair arranged practical. Warm brown eyes. Photorealistic. Cinematic directional lighting. Background: comparison of field notes and official filed version — the gap visible.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Warm medium-brown complexion. Black hair arranged practical. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -1722,8 +1722,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 62-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Deep chestnut. Deep hazel. Deep chestnut. Deep hazel. Photorealistic. Cinematic directional lighting. Background: engineering bay mid-repair — tools everywhere.
-> **Grok:** Ultra-realistic portrait. A 62-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Heavily adapted and repaired engineering coat. Silver-black practical hair. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 62-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Deep chestnut. Deep hazel. Deep chestnut. Deep hazel. Photorealistic. Cinematic directional lighting. Background: engineering bay mid-repair — tools everywhere.
+> **Grok:** Ultra-realistic portrait. A 62-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Heavily adapted and repaired engineering coat. Silver-black practical hair. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -1749,8 +1749,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 28-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Natural short hair. Dark expressive eyes. Natural short hair. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: comms array with one anomalous reading highlighted.
-> **Grok:** Ultra-realistic portrait. A 28-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Rich deep brown skin, east african features. Rich deep brown skin, east african features. Natural short hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 28-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Black close-cropped. Deep brown eyes. Natural short hair. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: comms array with one anomalous reading highlighted.
+> **Grok:** Ultra-realistic portrait. A 28-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Warm medium-brown complexion. Rich deep brown skin, east african features. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -1776,8 +1776,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Dark hair short. Dark brown eyes. Dark hair short. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: an uncharted world surface — unidentified plant species visible.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Field-adapted grey jacket with a specimen clasp. In her quarters there is a cutting from World 211 that does something she cannot explain. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 35-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. Short blonde hair. Blue eyes. Dark hair short. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: an uncharted world surface — unidentified plant species visible.
+> **Grok:** Ultra-realistic portrait. A 35-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. Field-adapted grey jacket with a specimen clasp. In her quarters there is a cutting from World 211 that does something she cannot explain. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -1809,8 +1809,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old French man. Light complexion. Short brown hair. Hazel eyes. Close-cropped black hair. Deep amber eyes. Close-cropped black hair. Deep amber eyes. Photorealistic. Cinematic directional lighting. Background: a mission log board — three completed missions, three captains' names.
-> **Grok:** Ultra-realistic portrait. A 45-year-old French man. Light complexion. Short brown hair. Hazel eyes. Navy first mate coat, thirty years in the fabric. Silver-black practical hair. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 45-year-old Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Short brown hair. Hazel eyes. Close-cropped black hair. Deep amber eyes. Photorealistic. Cinematic directional lighting. Background: a mission log board — three completed missions, three captains' names.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Navy first mate coat, thirty years in the fabric. Silver-black practical hair. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -1836,8 +1836,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 72-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. in a traditional gathered wrap. A prayer cord on the left wrist. She has privately read Brother Ekundayo's pre-conversion physics papers and finds his mathematics more compelling than Covenant doctrine. Photorealistic. Cinematic directional lighting. Background: Selene's Cradle community space — the light of a place people feel welcome.
-> **Grok:** Ultra-realistic portrait. A 72-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Warm medium complexion with latin american he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 72-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Natural short hair. Dark expressive eyes. in a traditional gathered wrap. A prayer cord on the left wrist. She has privately read Brother Ekundayo's pre-conversion physics papers and finds his mathematics more compelling than Covenant doctrine. Photorealistic. Cinematic directional lighting. Background: Selene's Cradle community space — the light of a place people feel welcome.
+> **Grok:** Ultra-realistic portrait. A 72-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Natural short hair. Dark expressive eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Amber eyes. Background: neutral background.
 
 ---
 
@@ -1863,8 +1863,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Strawberry blonde. Green eyes. Strawberry blonde. Green eyes. Photorealistic. Warm lighting. Background: Lattice sigil on the wall behind him — students' chairs visible.
-> **Grok:** Ultra-realistic portrait. A 38-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Precisely worn Covenant Deacon's vestment. Earnest technically precise eyes. Natural coils, neat. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Neatly cropped dark hair. Pale blue eyes. Strawberry blonde. Green eyes. Photorealistic. Warm lighting. Background: Lattice sigil on the wall behind him — students' chairs visible.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Precisely worn Covenant Deacon's vestment. Earnest technically precise eyes. Natural coils, neat. Background: neutral background.
 
 ---
 
@@ -1890,8 +1890,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm tan-brown complexion with indigenous-spa. Background: a Lattice sanctuary at dawn, light just arriving.
+> **Gemini:** Full-body portrait of a mature South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Dark hair short. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 45-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm olive complexion. Background: a Lattice sanctuary at dawn, light just arriving.
 
 ---
 
@@ -1919,8 +1919,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Close-cropped natural hair. Dark expressive eyes. Close-cropped natural hair. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: Amber Reach commercial district — Covenant robe the only devotional element visible.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown skin with rich west african undert. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Neat dark hair. Warm brown eyes. Close-cropped natural hair. Dark expressive eyes. Photorealistic. Warm light. Background: Amber Reach commercial district — Covenant robe the only devotional element visible.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm light. Background: neutral background.
 
 ---
 
@@ -1946,8 +1946,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 63-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. in a precise flat archival arrangement. Dark careful knowing brown eyes. Pale grey document-handling gloves. Photorealistic. Warm lighting. Background: deep archive shelves — sealed documents receding into shadow.
-> **Grok:** Ultra-realistic portrait. A 63-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown skin, african-american features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 63-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. in a precise flat archival arrangement. Dark careful knowing brown eyes. Pale grey document-handling gloves. Photorealistic. Warm lighting. Background: deep archive shelves — sealed documents receding into shadow.
+> **Grok:** Ultra-realistic portrait. A 63-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown eyes. Background: neutral background.
 
 ---
 
@@ -1973,8 +1973,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Dutch man. Fair complexion. Light brown short. Green eyes. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Dutch man. Fair complexion. Light brown short. Green eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. Light brown short. Green eyes. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
 
 ---
 
@@ -2000,8 +2000,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 19-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Photorealistic. Warm lighting. Background: novice learning space — other novices in background.
-> **Grok:** Ultra-realistic portrait. A 19-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Warm mediterranean tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 19-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Short black hair. Dark brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Photorealistic. Warm light. Background: novice learning space — other novices in background.
+> **Grok:** Ultra-realistic portrait. A 19-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Warm light. Background: neutral background.
 
 ---
 
@@ -2027,8 +2027,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Austrian woman. Fair complexion. Medium brown straight. Grey-green eyes. Natural short hair. Warm dark brown eyes. Natural short hair. Warm dark brown eyes. Photorealistic. Warm lighting. Background: pastoral community room — the sky not visible.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Austrian woman. Fair complexion. Medium brown straight. Grey-green eyes. Deep brown skin, igbo features. Deep brown skin, igbo features. Natural short hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 41-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Medium brown straight. Grey-green eyes. Natural short hair. Warm dark brown eyes. Photorealistic. Warm lighting. Background: pastoral community room — the sky not visible.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Deep brown skin, igbo features. Deep brown skin, igbo features. Natural short hair. Background: neutral background.
 
 ---
 
@@ -2054,8 +2054,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 78-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. in the full formal Elder's style. She has an informal compact with the Second Elder to slow-walk any expansion initiatives they believe are not ready. She has prevented two approved expansions in ten years without the other Elders knowing. Photorealistic. Warm lighting. Background: an external relations reception room — other-world diplomats visible in background.
-> **Grok:** Ultra-realistic portrait. A 78-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Very deep brown skin, strong west african features. Very dark expressive eyes. Formal compact. Background: neutral background.
+> **Gemini:** Full-body portrait of a 78-year-old Dutch man. Fair complexion. Light brown short. Green eyes. in the full formal Elder's style. She has an informal compact with the Second Elder to slow-walk any expansion initiatives they believe are not ready. She has prevented two approved expansions in ten years without the other Elders knowing. Photorealistic. Warm lighting. Background: an external relations reception room — other-world diplomats visible in background.
+> **Grok:** Ultra-realistic portrait. A 78-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Formal compact. Background: neutral background.
 
 ---
 
@@ -2081,8 +2081,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. Neatly trimmed black hair. Black-brown eyes. Neatly trimmed black hair. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: an intimate community gathering space on a small world.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 33-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Dark close-cropped hair. Black-brown eyes. Neatly trimmed black hair. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: an intimate community gathering space on a small world.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm tan complexion. Background: neutral background.
 
 ---
 
@@ -2108,8 +2108,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Black hair worn practical. Dark brown eyes. Black hair worn practical. Dark brown eyes. Photorealistic. Warm lighting. Background: a Covenant school classroom — students' chairs, Lattice sigil on the wall.
-> **Grok:** Ultra-realistic portrait. A 56-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Warm tan complexion with golden undertone. Black hair worn practical. Warm tan complexion with golden undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 56-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Short brown hair. Green eyes. Black hair worn practical. Dark brown eyes. Photorealistic. Warm lighting. Background: a Covenant school classroom — students' chairs, Lattice sigil on the wall.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Warm tan complexion with golden undertone. Black hair worn practical. Warm tan complexion with golden undertone. Background: neutral background.
 
 ---
 
@@ -2141,8 +2141,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 21-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Pale cream Covenant novice's robe — worn with material precision over Pale Circuit survivalist instincts. Black dense natural coils cropped short. Pale grey eyes — unusual; the Pale Circuit variant from generations near nodes. Photorealistic. Warm lighting. Background: novice hall — the theology on the wall more decorative than she thinks the subject deserves.
-> **Grok:** Ultra-realistic portrait. A 21-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm deep brown skin, caribbean features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 21-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Rich dark brown hair. Warm brown eyes. Brown close-cropped. Warm hazel eyes. Pale cream Covenant novice's robe — worn with material precision over Pale Circuit survivalist instincts. Black dense natural coils cropped short. Photorealistic. Warm lighting. Background: novice hall — the theology on the wall more decorative than she thinks the subject deserves.
+> **Grok:** Ultra-realistic portrait. A 21-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Rich dark brown hair. Warm brown eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -2168,8 +2168,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. She has governed the most complex world in the Concord for fourteen years. She is in private communication with the Meridian's Rest Governor about a voting formula that systematically disadvantages younger worlds. Neither has raised it in Assembly. Photorealistic. Formal lighting. Background: Amber Reach governance hall — the world's population visible through the window.
-> **Grok:** Ultra-realistic portrait. A 59-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 59-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. in the Concord for fourteen years. She is in private communication with the Meridian's Rest Governor about a voting formula that systematically disadvantages younger worlds. Neither has raised it in Assembly. Photorealistic. Formal lighting. Background: Amber Reach governance hall — the world's population visible through the window.
+> **Grok:** Ultra-realistic portrait. A 59-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
 
 ---
 
@@ -2195,8 +2195,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Deep navy Governor's formal coat — Meridian's Rest founding seal at the collar. Black-silver natural coils, short and neat. He governs the second-oldest colony — the world most associated with the Founding. Photorealistic. Formal lighting. Background: Meridian's Rest — founding monument visible through the window.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Warm medium-brown complexion with golden tone. Black hair in a clean style. Warm medium-brown complexion with golden tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Dark curly hair worn loose. Dark brown eyes. Dark wavy hair pulled back. Chestnut brown eyes. Deep navy Governor's formal coat — Meridian's Rest founding seal at the collar. Black-silver natural coils, short and neat. Photorealistic. Formal lighting. Background: Meridian's Rest — founding monument visible through the window.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Dark curly hair worn loose. Dark brown eyes. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Warm mediterranean tone. Background: neutral background.
 
 ---
 
@@ -2222,8 +2222,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old Italian man. Olive complexion. Dark brown hair. Dark brown eyes. She has been quietly building independent world-level institutions on Deep Tidal outside Survey Corps jurisdiction for fifteen years. The Survey Corps has not noticed. She does not know if this is preparedness or conspiracy. Photorealistic. Cinematic directional lighting. Background: Deep Tidal administrative space — independent institution documents on the desk.
-> **Grok:** Ultra-realistic portrait. A 67-year-old Italian man. Olive complexion. Dark brown hair. Dark brown eyes. Rich warm brown complexion. Black hair worn in a traditional style. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 67-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Black hair arranged practical. Deep brown eyes. Dark brown hair. Dark brown eyes. She has been quietly building independent world-level institutions on Deep Tidal outside Survey Corps jurisdiction for fifteen years. The Survey Corps has not noticed. Photorealistic. Cinematic directional lighting. Background: Deep Tidal administrative space — independent institution documents on the desk.
+> **Grok:** Ultra-realistic portrait. A 67-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Black hair arranged practical. Deep brown eyes. Rich warm brown complexion. Black hair worn in a traditional style. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -2249,8 +2249,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Light blonde hair. Ice blue eyes. Light blonde hair. Ice blue eyes. Photorealistic. Cinematic directional lighting. Background: Veil of Kass environment — node activity visible.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Crisis-variant grey-green governance coat. High-baseline alert dark eyes. Natural coils. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Black short cropped. Warm brown eyes. Light blonde hair. Ice blue eyes. Photorealistic. Cinematic directional lighting. Background: Veil of Kass environment — node activity visible.
+> **Grok:** Ultra-realistic portrait. A 44-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Crisis-variant grey-green governance coat. High-baseline alert dark eyes. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -2276,8 +2276,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. in the Concord governing the most dangerous world. Pale Circuit's Lattice Integrity has been declining in a non-random pattern below the mandatory reporting threshold. He has not reported it because it would remove him from managing the crisis. Photorealistic. Cinematic directional lighting. Background: Pale Circuit environment — node cluster in contested state.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm deep brown skin, caribbean features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Hazel-brown eyes. in the Concord governing the most dangerous world. Pale Circuit's Lattice Integrity has been declining in a non-random pattern below the mandatory reporting threshold. He has not reported it because it would remove him from managing the crisis. Photorealistic. Cinematic directional lighting. Background: Pale Circuit environment — node cluster in contested state.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Hazel-brown eyes. Light even complexion with warm undertone. Warm deep brown skin, caribbean features. Warm undertone. Background: neutral background.
 
 ---
 
@@ -2303,8 +2303,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Neatly trimmed black hair. Black-brown eyes. Neatly trimmed black hair. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: Selene's Cradle — Covenant architecture visible, the Governor's seal on the desk.
+> **Gemini:** Full-body portrait of a mature Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Auburn short cropped. Hazel-green eyes. Neatly trimmed black hair. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Fair complexion with light freckles. Light complexion with warm undertone. Warm undertone. Background: Selene's Cradle — Covenant architecture visible, the Governor's seal on the desk.
 
 ---
 
@@ -2330,8 +2330,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Short platinum blonde. Pale blue eyes. Short platinum blonde. Pale blue eyes. Photorealistic. Warm lighting. Background: a small informal meeting space — young researchers' work visible on the table.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Deep warm brown patron's coat, quality material, zero ceremony. Silver somewhat ungoverned hair. Warm brown patron's coat, quality material, z. Background: neutral background.
+> **Gemini:** Full-body portrait of a 61-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Dark brown wavy hair. Dark brown eyes. Short platinum blonde. Pale blue eyes. Photorealistic. Warm lighting. Background: a small informal meeting space — young researchers' work visible on the table.
+> **Grok:** Ultra-realistic portrait. A 61-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Warm medium complexion with latin american heritage. Deep warm brown patron's coat, quality material, zero ceremony. Warm medium complexion with latin american he. Background: neutral background.
 
 ---
 
@@ -2357,8 +2357,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. in a precise professional arrangement. Her dynasty records include a document clearly written before Year 3 that describes the Founding Event in terms absent from any public Chronicle. It should not exist in her records. Photorealistic. Cinematic directional lighting. Background: dynasty records visible — Year 3 founding documents.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. Warm medium-brown complexion. Warm medium-brown complexion. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. in a precise professional arrangement. Her dynasty records include a document clearly written before Year 3 that describes the Founding Event in terms absent from any public Chronicle. It should not exist in her records. Photorealistic. Cinematic directional lighting. Background: dynasty records visible — Year 3 founding documents.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Warm deep brown skin, caribbean features. Warm medium-brown complexion. Warm deep brown skin, caribbean features. Background: neutral background.
 
 ---
 
@@ -2384,8 +2384,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Photorealistic. Cinematic directional lighting. Background: The Watcher telescope array in background — his civilian equipment in the foreground.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Warm medium-olive complexion with persian features. Warm medium-olive complexion with persian features. Warm medium-olive complexion with persian fea. Background: neutral background.
+> **Gemini:** Full-body portrait of a 33-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Photorealistic. Cinematic directional lighting. Background: The Watcher telescope array in background — his civilian equipment in the foreground.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Warm olive-tan complexion. Warm medium-olive complexion with persian features. Warm olive-tan complexion. Background: neutral background.
 
 ---
 
@@ -2411,8 +2411,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 77-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Natural short hair. Dark expressive eyes. Black hair arranged clean. Black-brown eyes. Black hair arranged clean. Black-brown eyes. Photorealistic. Warm light. Background: Alkahest founding square — historical markers visible but softened by time.
-> **Grok:** Ultra-realistic portrait. A 77-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Natural short hair. Dark expressive eyes. Black hair arranged clean. Black hair arranged clean. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 77-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Natural short hair. Dark expressive eyes. Black hair arranged clean. Black-brown eyes. Photorealistic. Warm light. Background: Alkahest founding square — historical markers visible but softened by time.
+> **Grok:** Ultra-realistic portrait. A 77-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Rich deep brown skin, east african features. Black hair arranged clean. Natural short hair. Background: neutral background.
 
 ---
 
@@ -2438,8 +2438,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. in the shoulders; the coat of someone who inherited at 22. Black natural loose-wave hair in a practical arrangement, sometimes hurried. The dynasty seal ring slightly loose. Photorealistic. Cinematic directional lighting. Background: dynasty records and incident report on the desk.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Navy dynasty coat slightly too large at the shoulders. She inherited at 22 when her parents died. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. in the shoulders; the coat of someone who inherited at 22. Black natural loose-wave hair in a practical arrangement, sometimes hurried. The dynasty seal ring slightly loose. Photorealistic. Cinematic directional lighting. Background: dynasty records and incident report on the desk.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: neutral background.
 
 ---
 
@@ -2471,8 +2471,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Black hair neatly arranged. Warm hazel. Black hair neatly arranged. Warm hazel. Photorealistic. Cinematic directional lighting. Background: stable commercial operations visible through the window.
-> **Grok:** Ultra-realistic portrait. A 54-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Warm olive-tan complexion. Black hair neatly arranged. Warm olive-tan complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 54-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Close-cropped black hair. Deep brown eyes. Black hair neatly arranged. Warm hazel. Photorealistic. Cinematic directional lighting. Background: stable commercial operations visible through the window.
+> **Grok:** Ultra-realistic portrait. A 54-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Warm olive-tan complexion. Black hair neatly arranged. Warm olive-tan complexion. Background: neutral background.
 
 ---
 
@@ -2498,8 +2498,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Dark blonde hair neatly arranged. Grey-blue eyes. Dark blonde hair neatly arranged. Grey-blue eyes. Photorealistic. Cinematic directional lighting. Background: Chronicle archive research space — Year 1–8 records visible.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Natural coils with early silver. Background: neutral background.
+> **Gemini:** Full-body portrait of a 39-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Rich brown hair. Warm brown eyes. Dark blonde hair neatly arranged. Grey-blue eyes. Photorealistic. Cinematic directional lighting. Background: Chronicle archive research space — Year 1–8 records visible.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Light warm complexion with southern european-latin tone. Fair complexion, light freckles. Warm complexion with southern european-latin. Background: neutral background.
 
 ---
 
@@ -2525,8 +2525,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: theoretical Lattice behaviour model on the board behind him — the non-natural implication visible in the notation.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Warm brown skin with east african features. Natural black hair in a neat arrangement. Warm brown skin with east african features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 34-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: theoretical Lattice behaviour model on the board behind him — the non-natural implication visible in the notation.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Warm brown skin with east african features. Natural black hair in a neat arrangement. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -2552,8 +2552,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. A personally annotated copy of the Permanence Covenant always present. She proposed a formal review of the Covenant. She has been understood for two years as someone wanting to challenge it. Photorealistic. Formal lighting. Background: Assembly chamber — the Permanence Covenant displayed on the wall.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. Warm golden-brown complexion. Dark brown hair worn in a braid. Warm golden-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 41-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Golden blonde hair worn practical. Blue eyes. A personally annotated copy of the Permanence Covenant always present. She proposed a formal review of the Covenant. Photorealistic. Formal lighting. Background: Assembly chamber — the Permanence Covenant displayed on the wall.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Golden blonde hair worn practical. Warm golden-brown complexion. Warm golden-brown complexion. Background: neutral background.
 
 ---
 
@@ -2579,8 +2579,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Black close-cropped. Warm hazel eyes. Black close-cropped. Warm hazel eyes. Photorealistic. Cinematic directional lighting. Background: outer arc aggregate data display — the twelve-year deviation trend visible.
-> **Grok:** Ultra-realistic portrait. A 27-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Pattern-seeking frustrated dark eyes. He has twelve years of aggregate outer arc data showing systematic increasing Lattice deviation. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 27-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Close-cropped black hair. Deep brown eyes. Black close-cropped. Warm hazel eyes. Photorealistic. Cinematic directional lighting. Background: outer arc aggregate data display — the twelve-year deviation trend visible.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Pattern-seeking frustrated dark eyes. He has twelve years of aggregate outer arc data showing systematic increasing Lattice deviation. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -2608,8 +2608,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 32-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Dark hair short. Deep brown eyes. Dark hair short. Deep brown eyes. Photorealistic. Clinical lighting. Background: Architect's communication interface — Chronicle filing section showing: zero entries.
-> **Grok:** Ultra-realistic portrait. A 32-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Warm tan-brown complexion. Warm tan-brown complexion. Warm tan-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 32-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Deep chestnut. Deep hazel. Dark hair short. Deep brown eyes. Photorealistic. Clinical lighting. Background: Architect's communication interface — Chronicle filing section showing: zero entries.
+> **Grok:** Ultra-realistic portrait. A 32-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Warm tan-brown complexion. Warm tan-brown complexion. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -2635,8 +2635,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Dutch man. Fair complexion. Light brown short. Green eyes. in an accessible professional arrangement. She is the most significant mediator between what the Chronicle says and what people believe it says. In Year 57 she received an anonymous Chronicle entry making a specific claim about the Vael Ordinance 7 objection. Photorealistic. Warm lighting. Background: Chronicle records and interpretation documents — the anonymous entry just visible.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Warm dark grey press coat. Natural coils with silver. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 36-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. in an accessible professional arrangement. She is the most significant mediator between what the Chronicle says and what people believe it says. In Year 57 she received an anonymous Chronicle entry making a specific claim about the Vael Ordinance 7 objection. Photorealistic. Warm lighting. Background: Chronicle records and interpretation documents — the anonymous entry just visible.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Warm dark grey press coat. Natural coils with silver. Warm dark grey press coat. Background: neutral background.
 
 ---
 
@@ -2662,8 +2662,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Black hair worn neat. Dark brown eyes. Black hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Veil of Kass — sub-threshold node locations overlaid on map.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 43-year-old Colombian woman. Warm medium complexion with latin american heritage. Black hair neat. Warm hazel eyes. Light brown hair worn neat. Blue eyes. Black hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Veil of Kass — sub-threshold node locations overlaid on map.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Colombian woman. Warm medium complexion with latin american heritage. Black hair neat. Warm hazel eyes. Light brown hair worn neat. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Background: neutral background.
 
 ---
 
@@ -2689,8 +2689,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. in a warm practical arrangement. Dark warm thoughtful brown eyes. An annotation stylus always present. Photorealistic. Warm lighting. Background: classroom with Founding history displayed — the Architect's name on the board.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Warm olive-tan complexion. Black hair neatly arranged. Warm olive-tan complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. in a warm practical arrangement. Dark warm thoughtful brown eyes. An annotation stylus always present. Photorealistic. Warm lighting. Background: classroom with Founding history displayed — the Architect's name on the board.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Close-cropped dark blonde. Warm olive-tan complexion. Warm olive-tan complexion. Background: neutral background.
 
 ---
 
@@ -2716,8 +2716,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Rich dark brown hair. Warm brown eyes. in a precise controlled arrangement. Dark permanently consequential brown eyes. She is the Chronicle Office Senior Verifier — the last editorial decision before the permanent record. Photorealistic. Formal lighting. Background: Chronicle filing system — the Year 44 entry open, its 34 citations visible.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Rich dark brown hair. Warm brown eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Clinical lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Black-brown eyes. in a precise controlled arrangement. Dark permanently consequential brown eyes. She is the Chronicle Office Senior Verifier — the last editorial decision before the permanent record. Photorealistic. Formal lighting. Background: Chronicle filing system — the Year 44 entry open, its 34 citations visible.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Black-brown eyes. Warm medium-olive complexion with persian features. Fair complexion, light freckles. Warm medium-olive complexion with persian fea. Background: neutral background.
 
 ---
 
@@ -2743,8 +2743,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Sleek black hair. Clear dark eyes. Sleek black hair. Clear dark eyes. Photorealistic. Formal lighting. Background: Permanence Covenant text visible — Article 4 section.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Light porcelain complexion with cool undertone. Light porcelain complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 37-year-old German man. Fair complexion. Short blonde hair. Blue eyes. Black hair arranged clean. Black-brown eyes. Sleek black hair. Clear dark eyes. Photorealistic. Warm light. Background: Permanence Covenant text visible — Article 4 section.
+> **Grok:** Ultra-realistic portrait. A 37-year-old German man. Fair complexion. Short blonde hair. Blue eyes. Black hair arranged clean. Light porcelain complexion with cool undertone. Warm light. Background: neutral background.
 
 ---
 
@@ -2776,8 +2776,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Dark curly hair worn loose. Dark brown eyes. in the Concord without access to their design documentation. He has been logging a consistent upward output increase in those nodes for four years. The filing system has no category for it. Photorealistic. Cinematic directional lighting. Background: Alkahest node array — the oldest infrastructure in the Concord; the output indicator reading slightly higher than yesterday.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Dark curly hair worn loose. Dark brown eyes. Golden blonde hair worn practical. Golden blonde hair worn practical. Natural coils. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. in the Concord without access to their design documentation. He has been logging a consistent upward output increase in those nodes for four years. The filing system has no category for it. Photorealistic. Cinematic directional lighting. Background: Alkahest node array — the oldest infrastructure in the Concord; the output indicator reading slightly higher than yesterday.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Warm brown complexion with brazilian mixed heritage. Dark curly hair worn loose. Warm brown complexion with brazilian mixed he. Background: neutral background.
 
 ---
 
@@ -2803,8 +2803,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Black hair arranged practical. Deep brown eyes. in a military that has not conducted an operation in 43 years. She has begun to wonder if the absence of operations means the Concord is safe or means the threat is not the kind that operations can address. Defence Forces training facility lighting. Photorealistic. Cinematic directional lighting. Background: training range — the equipment perfect and unused.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Black hair arranged practical. Deep brown eyes. Fair complexion with cool undertone. Fair complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 48-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. in a military that has not conducted an operation in 43 years. She has begun to wonder if the absence of operations means the Concord is safe or means the threat is not the kind that operations can address. Defence Forces training facility lighting. Photorealistic. Cinematic directional lighting. Background: training range — the equipment perfect and unused.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Warm olive-brown complexion with middle eastern features. Black hair arranged practical. Warm olive-brown complexion with middle easte. Background: neutral background.
 
 ---
 
@@ -2830,8 +2830,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Rich dark brown curls. Hazel-brown eyes. Rich dark brown curls. Hazel-brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces intelligence display — Lattice data open on the monitor behind him.
-> **Grok:** Ultra-realistic portrait. A 34-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 34-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Dark hair short. Deep brown eyes. Rich dark brown curls. Hazel-brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces intelligence display — Lattice data open on the monitor behind him.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -2857,8 +2857,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 23-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Hazel-brown eyes. Black close-cropped. Brown-black eyes. Black close-cropped. Brown-black eyes. Photorealistic. Cinematic directional lighting. Background: Forces training barracks — outer arc data on her personal device.
-> **Grok:** Ultra-realistic portrait. A 23-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Hazel-brown eyes. Forces working dress, fresh corporal insignia. Earnest dark eyes holding a private alarm. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 23-year-old Portuguese woman. Warm olive complexion. Dark brown wavy hair. Dark brown eyes. Close-cropped black hair. Hazel-brown eyes. Black close-cropped. Brown-black eyes. Photorealistic. Cinematic directional lighting. Background: Forces training barracks — outer arc data on her personal device.
+> **Grok:** Ultra-realistic portrait. A 23-year-old Portuguese woman. Warm olive complexion. Dark brown wavy hair. Dark brown eyes. Forces working dress, fresh corporal insignia. Earnest dark eyes holding a private alarm. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -2884,8 +2884,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. in a precise military arrangement. A personal data device with an unofficial operational playbook. She has been maintaining a personal operational archive for three years because she doesn't trust the official system. Photorealistic. Cinematic directional lighting. Background: garrison command post — unofficial incident response documentation visible.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Deep warm brown skin, west african features. Deep warm brown skin, west african features. Warm brown skin, west african features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 41-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. in a precise military arrangement. A personal data device with an unofficial operational playbook. She has been maintaining a personal operational archive for three years because she doesn't trust the official system. Photorealistic. Cinematic directional lighting. Background: garrison command post — unofficial incident response documentation visible.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: neutral background.
 
 ---
 
@@ -2911,8 +2911,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Close-cropped black hair. Deep brown eyes. Close-cropped black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: weapons systems in perfect maintenance condition — never used.
-> **Grok:** Ultra-realistic portrait. A 52-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Grey Forces technical coat. Close-cropped silver-black hair. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old French woman. Light complexion with warm undertone. Dark hair in a practical chignon. Warm brown eyes. Chestnut hair neatly pinned. Hazel eyes. Close-cropped black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: weapons systems in perfect maintenance condition — never used.
+> **Grok:** Ultra-realistic portrait. A 52-year-old French woman. Light complexion with warm undertone. Dark hair in a practical chignon. Warm brown eyes. Light complexion with warm undertone. Chestnut hair neatly pinned. Warm undertone. Background: neutral background.
 
 ---
 
@@ -2938,8 +2938,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. in the Forces on the secure screen. Photorealistic. Formal lighting. Background: Forces intelligence station — the most classified assessment in the Forces on the secure screen.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Light warm complexion with southern european-latin tone. Light warm complexion with southern european-latin tone. Warm complexion with southern european-latin. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. in the Forces on the secure screen. Photorealistic. Formal lighting. Background: Forces intelligence station — the most classified assessment in the Forces on the secure screen.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Light warm complexion with southern european-latin tone. Light warm complexion with southern european-latin tone. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -2965,8 +2965,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Dark brown hair arranged practical. Deep brown eyes. Dark brown hair arranged practical. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces medical bay — prepared equipment; a personal communication device visible.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Warm medium complexion with latin american he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Dark wavy hair pulled back. Chestnut brown eyes. Dark brown hair arranged practical. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces medical bay — prepared equipment; a personal communication device visible.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Warm mediterranean tone. Background: neutral background.
 
 ---
 
@@ -2992,8 +2992,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces supply chain management station — official planning documents visible alongside his personal calculation.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Warm mediterranean tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Straight black hair worn practical. Dark brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces supply chain management station — official planning documents visible alongside his personal calculation.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: neutral background.
 
 ---
 
@@ -3019,8 +3019,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Natural black hair neat. Warm dark brown eyes. Natural black hair neat. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces training hall — enlisted ranks visible in formation; she is apart from them.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm deep brown skin with southern african fe. Background: neutral background.
+> **Gemini:** Full-body portrait of a 58-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Light blonde hair. Ice blue eyes. Natural black hair neat. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces training hall — enlisted ranks visible in formation; she is apart from them.
+> **Grok:** Ultra-realistic portrait. A 58-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm deep brown skin with southern african fe. Background: neutral background.
 
 ---
 
@@ -3052,8 +3052,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 19-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Close-cropped natural hair. Deep brown eyes. He has been sharing Defence Forces observations informally with Pale Circuit merchant Kioni Osei-Delgado (021). Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: Forces training barracks — Pale Circuit patch visible on the shoulder.
-> **Grok:** Ultra-realistic portrait. A 19-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Natural hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 19-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Deep brown eyes. Dark brown hair. Warm brown eyes. Close-cropped natural hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: Forces training barracks — Pale Circuit patch visible on the shoulder.
+> **Grok:** Ultra-realistic portrait. A 19-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Deep brown eyes. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Warm brown eyes. Background: neutral background.
 
 ---
 
@@ -3079,8 +3079,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 68-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. in a precise archival arrangement. Pale grey document-handling gloves. She has held materials from Amara Okafor-Nwosu for forty-seven years — given with instructions not to file until permission comes. Photorealistic. Warm lighting. Background: private archive — sealed materials going back forty-seven years; Amara's sealed materials visible.
-> **Grok:** Ultra-realistic portrait. A 68-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Light warm complexion with southern european-latin tone. Light warm complexion with southern european-latin tone. Warm complexion with southern european-latin. Background: neutral background.
+> **Gemini:** Full-body portrait of a 68-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. in a precise archival arrangement. Pale grey document-handling gloves. She has held materials from Amara Okafor-Nwosu for forty-seven years — given with instructions not to file until permission comes. Photorealistic. Warm lighting. Background: private archive — sealed materials going back forty-seven years; Amara's sealed materials visible.
+> **Grok:** Ultra-realistic portrait. A 68-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Dark blonde close-cropped. Light warm complexion with southern european-latin tone. Warm complexion with southern european-latin. Background: neutral background.
 
 ---
 
@@ -3106,8 +3106,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Straight black hair worn neat. Dark brown eyes. Straight black hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Light porcelain complexion with cool undertone. Straight black hair worn neat. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature French man. Light complexion. Short brown hair. Hazel eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Straight black hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature French man. Light complexion. Short brown hair. Hazel eyes. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Warm mediterranean tone. Background: neutral background.
 
 ---
 
@@ -3133,8 +3133,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. in a slightly over-precise arrangement. She has concluded that one significant survivable failure predicts long-term dynasty resilience. She has not published because the policy implication is that the system should allow more dynasties to fail. Photorealistic. Cinematic directional lighting. Background: dynasty longitudinal behaviour data on the display — the survivable-failure correlation clearly visible.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Deep brown skin, strong central african features. Deep brown skin, strong central african features. Warm grey research coat. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. in a slightly over-precise arrangement. She has concluded that one significant survivable failure predicts long-term dynasty resilience. She has not published because the policy implication is that the system should allow more dynasties to fail. Photorealistic. Cinematic directional lighting. Background: dynasty longitudinal behaviour data on the display — the survivable-failure correlation clearly visible.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. Light warm complexion with southern european-latin tone. Deep brown skin, strong central african features. Warm complexion with southern european-latin. Background: neutral background.
 
 ---
 
@@ -3160,8 +3160,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Short blonde hair. Grey-blue eyes. Short blonde hair. Grey-blue eyes. Photorealistic. Amber lighting. Background: Compact Interpretation chamber — the Permanence Covenant displayed prominently.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Deep burgundy-grey judicial coat. Authoritative dark eyes that carry the weight of 847 irreversible decisions. Amber formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. Dark hair short. Brown eyes. Short blonde hair. Grey-blue eyes. Photorealistic. Amber lighting. Background: Compact Interpretation chamber — the Permanence Covenant displayed prominently.
+> **Grok:** Ultra-realistic portrait. A 64-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. Deep burgundy-grey judicial coat. Authoritative dark eyes that carry the weight of 847 irreversible decisions. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -3197,12 +3197,8 @@ _(Working ship level — not command)_
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Black close-cropped. Amber-brown eyes. Black close-cropped. Amber-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. They are present in the frame but the frame cannot fully resolve them. Behind them, filing cabinets receding into dark — 62 years of Chronicle entries. Warm olive complexion. Background: neutral background.# THE CONCORD — CHARACTER BIBLE VOL.3
-
-## Characters 101–200
-
-_Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members · Outer arc settlers · KALON system administrators · World governors · Chronicle Office staff · Ascendancy-adjacent figures · Expansion-era survivors_
+> **Gemini:** Full-body portrait of a mature Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Dark blonde close-cropped. Light brown eyes. Black close-cropped. Amber-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Dark blonde close-cropped. They are present in the frame but the frame cannot fully resolve them. Warm olive complexion. Background: neutral background.# THE CONCORD — CHARACTER BIBLE VOL.3 ## Characters 101–200 _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members · Outer arc settlers · KALON system administrators · World governors · Chronicle Office staff · Ascendancy-adjacent figures · Expansion-era survivors_.
 
 ---
 
@@ -3225,8 +3221,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. in the Alkahest community sanctuary, one of the node arrays visible through the high window, faintly active. A covered journal on the bench beside her. Covenant sanctuary warm amber lighting. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Black hair worn in a practical style. Black hair worn in a practical style. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 49-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. in the Alkahest community sanctuary, one of the node arrays visible through the high window, faintly active. A covered journal on the bench beside her. Covenant sanctuary warm amber lighting. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Light complexion with cool undertone. Black hair worn in a practical style. Cool undertone. Background: neutral background.
 
 ---
 
@@ -3249,8 +3245,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Colombian woman. Warm medium complexion with latin american heritage. Black hair neat. Warm hazel eyes. in a professional structured style. Eyes that have spent 14 years watching procedural rules defeat substantive justice before the argument begins. At a legal terminal — 340 case database on secondary screen, current outer arc dispute on primary. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Colombian woman. Warm medium complexion with latin american heritage. Black hair neat. Warm hazel eyes. Light porcelain complexion with cool undertone. Light porcelain complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. in a professional structured style. Eyes that have spent 14 years watching procedural rules defeat substantive justice before the argument begins. At a legal terminal — 340 case database on secondary screen, current outer arc dispute on primary. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. Warm medium complexion with latin american heritage. Light porcelain complexion with cool undertone. Warm medium complexion with latin american he. Background: neutral background.
 
 ---
 
@@ -3273,8 +3269,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Glossy black hair. Warm dark eyes. Glossy black hair. Warm dark eyes. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Light even complexion with warm undertone. Light even complexion with warm undertone. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 35-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Short black hair. Deep brown eyes. Glossy black hair. Warm dark eyes. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 35-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Light even complexion with warm undertone. Light even complexion with warm undertone. Warm light. Background: neutral background.
 
 ---
 
@@ -3297,8 +3293,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Black-brown eyes. Warm brown hair. Amber eyes. Warm brown hair. Amber eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Black-brown eyes. Light complexion with warm undertone. Light complexion with warm undertone. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 53-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Close-cropped dark hair. Black-brown eyes. Warm brown hair. Amber eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Warm medium-brown complexion. Light complexion with warm undertone. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -3321,8 +3317,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old German man. Fair complexion. Short blonde hair. Blue eyes. in deep forest green — World 44 industrial seal. Close-cropped greying black hair. Eyes making risk calculations on behalf of 4,000 people who don't know the calculation is being made. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 58-year-old German man. Fair complexion. Short blonde hair. Blue eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 58-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. in deep forest green — World 44 industrial seal. Close-cropped greying black hair. Eyes making risk calculations on behalf of 4,000 people who don't know the calculation is being made. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
 ### 106 · LIEUTENANT SOLA SUNDARAM-OKONKWO
 
 **Tier:** 3
@@ -3342,8 +3338,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. in a private screen partition she has minimised but not closed. Survey vessel approach lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Natural black hair in a neat style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. in a private screen partition she has minimised but not closed. Survey vessel approach lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Warm medium-brown complexion. Rich deep brown skin with east african features. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -3366,8 +3362,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 23-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Glossy black hair. Warm dark eyes. Glossy black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 23-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Rich warm brown complexion. Rich warm brown complexion. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 23-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Short platinum blonde. Light grey eyes. Glossy black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 23-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Rich warm brown complexion. Rich warm brown complexion. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -3390,8 +3386,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Black close-cropped. Brown-black eyes. Black close-cropped. Brown-black eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Alkahest senior factor coat, terracotta-gold. Silver close-cropped hair. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 58-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Black close-cropped. Black-brown eyes. Black close-cropped. Brown-black eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 58-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Warm tan-brown complexion. Alkahest senior factor coat, terracotta-gold. Warm tan-brown complexion. Background: neutral background.
 
 ---
 
@@ -3414,8 +3410,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 81-year-old Portuguese woman. Warm olive complexion. Dark brown wavy hair. Dark brown eyes. in deep amber — External Affairs seat insignia. White natural hair, close-cropped. Eyes that have been managing what is disclosed and what is held for 28 years. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 81-year-old Portuguese woman. Warm olive complexion. Dark brown wavy hair. Dark brown eyes. Covenant Elder amber robes. Has been protecting the Covenant's silence on node output data for four years. Amber robes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 81-year-old North Indian man. Warm brown complexion. Black close-cropped. Warm hazel eyes. in deep amber — External Affairs seat insignia. White natural hair, close-cropped. Eyes that have been managing what is disclosed and what is held for 28 years. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 81-year-old North Indian man. Warm brown complexion. Black close-cropped. Warm hazel eyes. Covenant Elder amber robes. Has been protecting the Covenant's silence on node output data for four years. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -3438,8 +3434,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. in deep charcoal — second-tier financial insignia. Close-cropped black hair beginning to grey. Eyes that have been doing complete analysis with incomplete information for nine years and have just decided to stop qualifying it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Warm medium-brown complexion. Warm medium-brown complexion. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. in deep charcoal — second-tier financial insignia. Close-cropped black hair beginning to grey. Eyes that have been doing complete analysis with incomplete information for nine years and have just decided to stop qualifying it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. Light even complexion with warm undertone. Black hair neatly arranged. Warm undertone. Background: neutral background.
 ### 111 · ARCHIVIST DAYO ACHEBE-FERRARA
 
 **Tier:** 3
@@ -3459,8 +3455,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 73-year-old French woman. Light complexion with warm undertone. Dark hair in a practical chignon. Warm brown eyes. in deep slate blue — Senior Archivist insignia at the collar. Silver-white natural hair, close-cropped. Eyes that have catalogued 47 years of what humanity chose to record. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 73-year-old French woman. Light complexion with warm undertone. Dark hair in a practical chignon. Warm brown eyes. Slate blue archivist's coat. He has been holding a Founding-era entry from Amara Okafor-Nwosu for 47 years. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 73-year-old French woman. Light complexion with warm undertone. Warm brown hair. Amber eyes. in deep slate blue — Senior Archivist insignia at the collar. Silver-white natural hair, close-cropped. Eyes that have catalogued 47 years of what humanity chose to record. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 73-year-old French woman. Light complexion with warm undertone. Warm brown hair. Amber eyes. Light complexion with warm undertone. Dark hair in a practical chignon. Warm undertone. Background: neutral background.
 
 ---
 
@@ -3483,8 +3479,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. in deep amber — newest-issue junior councillor mark. Natural black hair in a professional structured style. Eyes that found something they weren't looking for eight months ago. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Light porcelain complexion with cool undertone. Light porcelain complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 34-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. in deep amber — newest-issue junior councillor mark. Natural black hair in a professional structured style. Eyes that found something they weren't looking for eight months ago. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Light porcelain complexion with cool undertone. Light porcelain complexion with cool undertone. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -3507,8 +3503,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 68-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. in deep burgundy — Lattice Institute senior research mark, access restriction badge at the left breast. Eyes that have been carrying classified correct findings for 24 years and received a private communication from the Architect four years ago that confirmed the timeline has accelerated. At a research station he can only use for approved work. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 68-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Warm medium-brown complexion. Dark brown hair worn neat. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 68-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Close-cropped natural. Deep brown eyes. in deep burgundy — Lattice Institute senior research mark, access restriction badge at the left breast. Eyes that have been carrying classified correct findings for 24 years and received a private communication from the Architect four years ago that confirmed the timeline has accelerated. At a research station he can only use for approved work. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 68-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Close-cropped natural. Deep brown eyes. Warm medium-brown complexion. Dark brown hair worn neat. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -3531,8 +3527,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Light brown hair pulled back. Hazel eyes. Light brown hair pulled back. Hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Fair complexion, light freckles. Light brown hair pulled back. Survey corps personnel command. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Black close-cropped. Warm hazel. Light brown hair pulled back. Hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Fair complexion, light freckles. Light brown hair pulled back. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -3555,8 +3551,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Natural black hair worn practical. Warm dark brown eyes. Natural black hair worn practical. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 27-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown skin, african-american features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 27-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Dark hair short. Deep brown eyes. Natural black hair worn practical. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown complexion. Background: neutral background.
 ### 116 · FACTOR LUCA OKONKWO-REINHOLT
 
 **Tier:** 3
@@ -3576,8 +3572,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Deep brown eyes. Hub station port authority practical lighting. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 42-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Deep brown eyes. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Warm olive-brown complexion with middle easte. Background: neutral background.
+> **Gemini:** Full-body portrait of a 42-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Natural short hair. Deep brown eyes. Hub station port authority practical lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Warm deep brown skin, southern african features. Warm olive-brown complexion with middle eastern features. Warm deep brown skin, southern african featur. Background: neutral background.
 
 ---
 
@@ -3600,8 +3596,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. in a secondary partition, the secured investment allocation on primary. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown skin with rich west african undert. Background: neutral background.
+> **Gemini:** Full-body portrait of a 43-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. in a secondary partition, the secured investment allocation on primary. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: neutral background.
 
 ---
 
@@ -3624,8 +3620,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old French man. Light complexion. Short brown hair. Hazel eyes. Close-cropped brown hair. Grey eyes. Close-cropped brown hair. Grey eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 45-year-old French man. Light complexion. Short brown hair. Hazel eyes. Alkahest community physician. Three symptom clusters in four years: 14, 23, 37. Natural hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 45-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Short brown hair. Hazel eyes. Close-cropped brown hair. Grey eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Alkahest community physician. Three symptom clusters in four years: 14, 23, 37. Natural hair. Background: neutral background.
 
 ---
 
@@ -3648,8 +3644,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. in deep burgundy — Assembly Studies professorship mark. Close-cropped black hair with silver. Eyes holding two findings and their connection for four years. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 57-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. Assembly Studies professor, deep burgundy. Silver-threading black hair. Warm medium complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 57-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. in deep burgundy — Assembly Studies professorship mark. Close-cropped black hair with silver. Eyes holding two findings and their connection for four years. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. Assembly Studies professor, deep burgundy. Silver-threading black hair. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -3672,8 +3668,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. in deep rust-brown — Route 7 patch at the left shoulder; worn at the hem. Eyes that are always measuring the cost of what just happened. Standing at a Veil Station customs checkpoint. Photorealistic. Fluorescent lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. Warm brown skin, refined east african features. Warm brown skin, refined east african features. Warm brown skin, refined east african feature. Background: neutral background.
+> **Gemini:** Full-body portrait of a 39-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. in deep rust-brown — Route 7 patch at the left shoulder; worn at the hem. Eyes that are always measuring the cost of what just happened. Standing at a Veil Station customs checkpoint. Photorealistic. Fluorescent lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
 ### 121 · CAPTAIN KOLADE OSEI-SOLBERG
 
 **Tier:** 3
@@ -3693,8 +3689,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Straight black hair worn neat. Dark brown eyes. Straight black hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Light porcelain complexion with cool undertone. Straight black hair worn neat. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Warm dark brown eyes. Red-auburn hair worn loose. Green eyes. Straight black hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 46-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Warm dark brown eyes. Very fair complexion with freckles. Red-auburn hair worn loose. Cool undertone. Background: neutral background.
 
 ---
 
@@ -3717,8 +3713,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. in deep charcoal — 22-year service mark. Eyes holding a 16-year-old communication from the Architect and trying to understand it. At his legal office — Year 89 legal opinion on primary screen, the Architect's classified direct communication in a protected partition. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Warm medium-brown complexion. Black hair arranged practical. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. in deep charcoal — 22-year service mark. Eyes holding a 16-year-old communication from the Architect and trying to understand it. At his legal office — Year 89 legal opinion on primary screen, the Architect's classified direct communication in a protected partition. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 64-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Warm medium-brown complexion. Black hair arranged practical. Warm light. Background: neutral background.
 
 ---
 
@@ -3741,8 +3737,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. Deep black waves. Deep brown. Deep black waves. Deep brown. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. Warm olive-tan complexion. Warm olive-tan complexion. Warm olive-tan complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 24-year-old Austrian woman. Fair complexion. Warm brown. Light brown eyes. Close-cropped natural hair. Dark expressive eyes. Deep black waves. Deep brown. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 24-year-old Austrian woman. Fair complexion. Warm brown. Light brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown skin with rich west african undert. Background: neutral background.
 
 ---
 
@@ -3765,8 +3761,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 71-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. in deep slate — 45-year historical division mark. Eyes that have spent eight years sitting with what they found. At historical archive terminal — his definitive Survey Corps history on the reference shelf, a restricted Year 2 entry about World 247 on screen. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 71-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Deep brown skin with warm west african undertone. Natural black hair in a neat arrangement. Warm west african undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 71-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. in deep slate — 45-year historical division mark. Eyes that have spent eight years sitting with what they found. At historical archive terminal — his definitive Survey Corps history on the reference shelf, a restricted Year 2 entry about World 247 on screen. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 71-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. Light complexion with cool undertone. Deep brown skin with warm west african undertone. Cool undertone. Background: neutral background.
 
 ---
 
@@ -3789,8 +3785,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. in deep forest green — World 312 seal. Close-cropped black hair with early grey. Eyes governing someone else's wound for 9 years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Warm complexion with southern european-latin. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. in deep forest green — World 312 seal. Close-cropped black hair with early grey. Eyes governing someone else's wound for 9 years. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Warm light. Background: neutral background.
 ### 126 · PRIVATE EMEKA OSEI-FERRARA
 
 **Tier:** 2
@@ -3810,8 +3806,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 25-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Black hair pinned neat. Warm brown eyes. Black hair pinned neat. Warm brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 25-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Defence Forces, Architect access security. The Architect spoke to him three times. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 25-year-old Colombian woman. Warm medium complexion with latin american heritage. Rich brown hair. Brown eyes. Black close-cropped. Warm brown eyes. Black hair pinned neat. Warm brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 25-year-old Colombian woman. Warm medium complexion with latin american heritage. Rich brown hair. Brown eyes. Warm tan-brown complexion. Defence Forces, Architect access security. Warm tan-brown complexion. Background: neutral background.
 
 ---
 
@@ -3834,8 +3830,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Eyes carrying a 14-year-old account. At his Assembly position — Year 62 action archive on one screen. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 57-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Natural black hair in a neat style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 57-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Short black hair. Deep brown eyes. Eyes carrying a 14-year-old account. At his Assembly position — Year 62 action archive on one screen. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm light. Background: neutral background.
 
 ---
 
@@ -3858,8 +3854,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 63-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. in deep burgundy — Institute senior professorship mark. Eyes running a private model for three years and not liking what it produces. At research station — private divergent model on secondary partition, institutional projections on primary. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 63-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Lattice Physics professor, deep burgundy robes. Silver close-cropped hair. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 63-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. in deep burgundy — Institute senior professorship mark. Eyes running a private model for three years and not liking what it produces. At research station — private divergent model on secondary partition, institutional projections on primary. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 63-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Close-cropped dark blonde. Lattice Physics professor, deep burgundy robes. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -3882,8 +3878,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 89-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. in deep amber — Seat 7 insignia woven at the hem. Eyes that carry a specific vote from 28 years ago. Standing in the Covenant Elder chamber — the Year 77 classification records visible on the archive display behind him. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 89-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Covenant Elder robes, deep amber, Seat 7. He voted for a physics classification he knew was wrong. Formal covenant lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 89-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. in deep amber — Seat 7 insignia woven at the hem. Eyes that carry a specific vote from 28 years ago. Standing in the Covenant Elder chamber — the Year 77 classification records visible on the archive display behind him. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 89-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. Covenant Elder robes, deep amber, Seat 7. He voted for a physics classification he knew was wrong. Formal covenant lighting. Background: neutral background.
 
 ---
 
@@ -3906,8 +3902,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 66-year-old North Indian man. Warm brown complexion. Black close-cropped. Warm hazel eyes. in deep amber-grey — the interdisciplinary colour of an institute that is neither fully Covenant nor fully physics. Silver hair in a structured academic style. Eyes that have been waiting for the other person to go first for two years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 66-year-old North Indian man. Warm brown complexion. Black close-cropped. Warm hazel eyes. Lattice Studies scholar, amber-grey coat. In two-year private correspondence with a Lattice physicist. Warm hazel eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 66-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. in deep amber-grey — the interdisciplinary colour of an institute that is neither fully Covenant nor fully physics. Silver hair in a structured academic style. Eyes that have been waiting for the other person to go first for two years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 66-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Lattice Studies scholar, amber-grey coat. In two-year private correspondence with a Lattice physicist. Warm brown complexion. Background: neutral background.
 ### 131 · COMMANDER ADISA ACHEBE-NAKAMURA
 
 **Tier:** 3
@@ -3927,8 +3923,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. Close-cropped natural. Deep brown eyes. Close-cropped natural. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 59-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm deep brown skin with southern african fe. Background: neutral background.
+> **Gemini:** Full-body portrait of a 59-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Short black hair. Warm dark eyes. Close-cropped natural. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 59-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Warm deep brown skin with southern african features. Warm deep brown skin with southern african features. Warm dark eyes. Background: neutral background.
 
 ---
 
@@ -3951,8 +3947,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old French woman. Light complexion with warm undertone. Warm brown hair. Amber eyes. wear with no caucus thread — the deliberate absence of affiliation. Natural black hair worn in a structured style. Eyes reading two caucuses simultaneously and trusting neither. Photorealistic. Neutral lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 38-year-old French woman. Light complexion with warm undertone. Warm brown hair. Amber eyes. Warm brown complexion with brazilian mixed heritage. Natural dark coils styled practical. Warm brown complexion with brazilian mixed he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Dark brown eyes. wear with no caucus thread — the deliberate absence of affiliation. Natural black hair worn in a structured style. Eyes reading two caucuses simultaneously and trusting neither. Photorealistic. Neutral lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Light complexion with warm undertone. Warm brown complexion with brazilian mixed heritage. Warm undertone. Background: neutral background.
 
 ---
 
@@ -3975,8 +3971,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Polish man. Fair complexion. Short brown hair. Blue-grey eyes. in a structured academic style. At research station — Kwame's preliminary data from Year 218 on one screen, her Year 219 funding request on another. Cinematic directional lighting. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Straight black hair worn practical. Straight black hair worn practical. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. in a structured academic style. At research station — Kwame's preliminary data from Year 218 on one screen, her Year 219 funding request on another. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Straight black hair worn practical. Straight black hair worn practical. Warm light. Background: neutral background.
 
 ---
 
@@ -3999,8 +3995,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Close-cropped natural. Deep brown eyes. in deep slate blue — outer arc regional insignia. Natural black hair with silver threading, worn practical. Eyes that observe everything and record most of it. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Close-cropped natural. Deep brown eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 54-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Hazel-brown eyes. in deep slate blue — outer arc regional insignia. Natural black hair with silver threading, worn practical. Eyes that observe everything and record most of it. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Hazel-brown eyes. Rich deep brown skin with east african features. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
 
 ---
 
@@ -4023,8 +4019,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 66-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Eyes that have been looking at one photograph for eight years. At her research station — 38 years of social history on shelves, the Year 3 Chronicle annotation photograph in a closed folder on the desk. Academic institute warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 66-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Warm deep brown skin with southern african features. Natural coils in a structured arrangement. Warm deep brown skin with southern african fe. Background: neutral background.
+> **Gemini:** Full-body portrait of a 66-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. in a closed folder on the desk. Academic institute warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 66-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. Light complexion with cool undertone. Warm deep brown skin with southern african features. Cool undertone. Background: neutral background.
 ### 136 · LIEUTENANT TEMI OSEI-BRANDT
 
 **Tier:** 2
@@ -4044,8 +4040,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Close-cropped hair. Deep brown eyes. Close-cropped hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Deep rich brown skin, central african features. Deep rich brown skin, central african features. Survey corps approach analyst, _iron current_. Background: neutral background.
+> **Gemini:** Full-body portrait of a 27-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Short black hair. Chestnut brown eyes. Close-cropped hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Deep rich brown skin, central african features. Deep rich brown skin, central african features. Survey corps approach analyst, _iron current_. Background: neutral background.
 
 ---
 
@@ -4068,8 +4064,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. in the World 441 settlement — Lattice node array visible in background, one faintly pulsing. World 441 frontier lighting — slightly uncertain. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Natural hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 34-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. in the World 441 settlement — Lattice node array visible in background, one faintly pulsing. World 441 frontier lighting — slightly uncertain. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: neutral background.
 
 ---
 
@@ -4092,8 +4088,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Short black hair. Warm hazel eyes. Short black hair. Warm hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Defence Forces boundary patrol sergeant. Twelve years of unofficial Ascendancy community liaison filed as routine monitoring. Warm hazel eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Glossy black hair. Deep black-brown eyes. Short black hair. Warm hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Light porcelain complexion with cool undertone. Defence Forces boundary patrol sergeant. Cool undertone. Background: neutral background.
 
 ---
 
@@ -4116,8 +4112,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 62-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. in deep burgundy — Ascendancy Studies professorship mark. Close-cropped silver-black hair. Eyes that have spent 34 years studying a movement he hasn't had full access to — and has had full access he cannot yet file for three years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 62-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Deep brown skin, strong central african features. Deep brown skin, strong central african features. Warm dark brown eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 62-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. in deep burgundy — Ascendancy Studies professorship mark. Close-cropped silver-black hair. Eyes that have spent 34 years studying a movement he hasn't had full access to — and has had full access he cannot yet file for three years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 62-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. Warm medium-brown complexion. Deep brown skin, strong central african features. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -4140,8 +4136,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. Close-cropped black hair. Deep brown eyes. Close-cropped black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. Deep brown skin, strong central african features. Deep brown skin, strong central african features. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Close-cropped black hair. Deep brown eyes. Close-cropped black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Deep brown skin, strong central african features. Deep brown skin, strong central african features. Cinematic lighting. Background: neutral background.
 ### 141 · FACTOR YETUNDE OSEI-LINDSTRÖM
 
 **Tier:** 2
@@ -4161,8 +4157,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Warm medium-brown complexion. Dark brown hair worn neat. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Light brown hair worn neat. Blue eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Light brown hair worn neat. Warm medium-brown complexion. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -4185,8 +4181,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 74-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Warm dark brown eyes. in deep forest green — World 56 Pale Circuit seal. Patient eyes watching a system outgrow itself three times. At the Pale Circuit routing display — current transaction volume visible, second expansion under construction. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 74-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Warm dark brown eyes. Warm golden-brown complexion. Black hair neatly arranged. Warm golden-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 74-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. in deep forest green — World 56 Pale Circuit seal. Patient eyes watching a system outgrow itself three times. At the Pale Circuit routing display — current transaction volume visible, second expansion under construction. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 74-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Warm deep brown skin, southern african features. Warm golden-brown complexion. Warm deep brown skin, southern african featur. Background: neutral background.
 
 ---
 
@@ -4209,8 +4205,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Straight black hair. Warm dark eyes. Straight black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 22-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Short brown hair. Pale green eyes. Straight black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 22-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Background: neutral background.
 
 ---
 
@@ -4233,8 +4229,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Austrian woman. Fair complexion. Warm brown. Light brown eyes. in deep teal — first-term delegate mark. Natural black hair in structured professional style. Eyes reading institutional silence and close to understanding its shape. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Austrian woman. Fair complexion. Warm brown. Light brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown skin with rich west african undert. Background: neutral background.
+> **Gemini:** Full-body portrait of a 40-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. in deep teal — first-term delegate mark. Natural black hair in structured professional style. Eyes reading institutional silence and close to understanding its shape. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 40-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown. Background: neutral background.
 
 ---
 
@@ -4257,8 +4253,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 68-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. in deep slate — senior institute professorship mark. Silver hair in a structured style. Eyes that have been reading the Architect's Year 102 Chronicle entry for three years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 68-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. Deep rich brown skin, central african features. Deep rich brown skin, central african features. Natural black hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 68-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. in deep slate — senior institute professorship mark. Silver hair in a structured style. Eyes that have been reading the Architect's Year 102 Chronicle entry for three years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 68-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Light blonde hair worn neat. Deep rich brown skin, central african features. Natural black hair. Background: neutral background.
 ### 146 · COMMISSIONER ADAEZE ACHEBE-SVENSSON
 
 **Tier:** 3
@@ -4278,8 +4274,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 62-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. in deep burgundy — Regional Seat 4 insignia. Silver-black hair in a precise professional style. Eyes that built the framework and have been living inside it for 16 years. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 62-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Deep rich brown skin, central african features. Deep rich brown skin, central african features. Formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 62-year-old Spanish woman. Warm olive complexion. Rich brown hair. Warm brown eyes. in deep burgundy — Regional Seat 4 insignia. Silver-black hair in a precise professional style. Eyes that built the framework and have been living inside it for 16 years. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 62-year-old Spanish woman. Warm olive complexion. Rich brown hair. Warm brown eyes. Fair complexion, light freckles. Light brown hair pulled back. Formal lighting. Background: neutral background.
 
 ---
 
@@ -4302,8 +4298,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Colombian woman. Warm medium complexion with latin american heritage. Rich brown hair. Brown eyes. in deep slate blue — 19-year archive service mark. Natural black hair mostly silver. Eyes that have been sitting with a one-year-old attribution inconsistency. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Colombian woman. Warm medium complexion with latin american heritage. Rich brown hair. Brown eyes. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 61-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. in deep slate blue — 19-year archive service mark. Natural black hair mostly silver. Eyes that have been sitting with a one-year-old attribution inconsistency. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Warm medium complexion with latin american heritage. Light porcelain complexion with cool undertone. Warm medium complexion with latin american he. Background: neutral background.
 
 ---
 
@@ -4326,8 +4322,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 23-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Dark close-cropped hair. Black-brown eyes. Dark close-cropped hair. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 23-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Survey Corps life support ensign, _Outer Standard_. Filed a 14-minute atmosphere anomaly as sensor error. Warm tan complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 23-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Dark brown eyes. Neatly trimmed black hair. Black-brown eyes. Dark close-cropped hair. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 23-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Dark brown eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
 
 ---
 
@@ -4350,8 +4346,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 66-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. in a partition he is still studying. Inner arc Chronicle coordination lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 66-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Deep brown skin, west african features. Deep brown skin, west african features. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 66-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. in a partition he is still studying. Inner arc Chronicle coordination lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 66-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Light porcelain complexion with cool undertone. Straight black hair worn neat. Cool undertone. Background: neutral background.
 
 ---
 
@@ -4375,8 +4371,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. in the frame — only the evidence: maps that should not exist, coordinates that should not be known, worlds drawn in perfect detail before any human vessel reached them. The Architect's notation in the corner: "The maps are correct. This is the second time I have seen them." Photorealistic. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. Deep brown skin, west african features. Deep brown skin, west african features. Natural short hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. in the frame — only the evidence: maps that should not exist, coordinates that should not be known, worlds drawn in perfect detail before any human vessel reached them. The Architect's notation in the corner: "The maps are correct. This is the second time I have seen them." Photorealistic. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Natural coils in a clean style. Background: neutral background.
 ### 151 · CAPTAIN BISI OSEI-VOSS (TRANSPORT)
 
 **Tier:** 2
@@ -4396,8 +4392,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. in dark navy — long-range route designation patch. Silver-threading natural black hair in a practical style. Eyes reading scheduling patterns nobody else is tracking. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Ash blonde in a neat arrangement. Ash blonde in a neat arrangement. Survey corps long-range transport captain, dark. Background: neutral background.
+> **Gemini:** Full-body portrait of a 47-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. in dark navy — long-range route designation patch. Silver-threading natural black hair in a practical style. Eyes reading scheduling patterns nobody else is tracking. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Ash blonde in a neat arrangement. Ash blonde in a neat arrangement. Amber eyes. Background: neutral background.
 
 ---
 
@@ -4420,8 +4416,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Warm brown. Light brown eyes. Warm brown. Light brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. World 247 community advocate, deep teal practical wear. Silver-black pulled-back hair, loose strands. Warm brown. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Close-cropped brown hair. Steel blue eyes. Warm brown. Light brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. World 247 community advocate, deep teal practical wear. Silver-black pulled-back hair, loose strands. Warm brown. Background: neutral background.
 
 ---
 
@@ -4444,8 +4440,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Natural black hair worn practical. Warm dark brown eyes. Natural black hair worn practical. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown skin, african-american features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 37-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Dark hair short. Dark brown eyes. Natural black hair worn practical. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 37-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -4468,8 +4464,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Light brown hair pulled back. Hazel eyes. Light brown hair pulled back. Hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Fair complexion, light freckles. Light brown hair pulled back. Survey corps captain, _threshold_, midnight blu. Background: neutral background.
+> **Gemini:** Full-body portrait of a 43-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. Neatly trimmed black hair. Deep brown eyes. Light brown hair pulled back. Hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
 
 ---
 
@@ -4492,8 +4488,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Hazel-brown eyes. in deep slate — chief research physician mark. Close-cropped silver-black hair. Eyes that have identified a pattern in the medical records they cannot publish. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Hazel-brown eyes. Warm brown skin with east african features. Warm brown skin with east african features. Warm brown skin with east african features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 55-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. in deep slate — chief research physician mark. Close-cropped silver-black hair. Eyes that have identified a pattern in the medical records they cannot publish. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Warm medium-brown complexion. Warm brown skin with east african features. Warm medium-brown complexion. Background: neutral background.
 ### 156 · SENIOR SISTER YEMI OSEI-CARDOSO (FRONTIER)
 
 **Tier:** 3
@@ -4513,8 +4509,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. in the World 77 gathering space — Covenant-adjacent but distinctly frontier in arrangement. Frontier community warm amber lighting. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Dark expressive eyes. Black hair arranged clean. Black hair arranged clean. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. in the World 77 gathering space — Covenant-adjacent but distinctly frontier in arrangement. Frontier community warm amber lighting. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 64-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown skin with rich west african undert. Background: neutral background.
 
 ---
 
@@ -4537,8 +4533,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. in the resupply data they weren't looking for. At a logistics processing station — routing anomaly visible in background flow data behind routine manifests. Hub Station Vela logistics bay lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 26-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Warm golden-brown complexion. Dark brown hair worn in a braid. Warm golden-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 26-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. in the resupply data they weren't looking for. At a logistics processing station — routing anomaly visible in background flow data behind routine manifests. Hub Station Vela logistics bay lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Warm medium-brown complexion. Warm golden-brown complexion. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -4561,8 +4557,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. in the Chronicle behind his portrait. The emergency vote notation below. Assembly historical archive lighting — past tense and sealed. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Warm deep brown skin, caribbean features. Warm deep brown skin, caribbean features. Warm deep brown skin, caribbean features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 55-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. in the Chronicle behind his portrait. The emergency vote notation below. Assembly historical archive lighting — past tense and sealed. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Warm deep brown skin, caribbean features. Warm deep brown skin, caribbean features. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -4585,8 +4581,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. in deep charcoal — Vigil Protocol certification mark at the collar. Natural black hair going silver. Eyes that have administered 23 transitions between life and loss and are still thinking about one of them two years later. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Continuity law advocate, charcoal coat. Silvering natural black hair. Warm complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old Ethiopian woman. Warm brown skin with east african features. Natural black coils neat. Deep brown eyes. in deep charcoal — Vigil Protocol certification mark at the collar. Natural black hair going silver. Eyes that have administered 23 transitions between life and loss and are still thinking about one of them two years later. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Ethiopian woman. Warm brown skin with east african features. Natural black coils neat. Deep brown eyes. Rich deep brown skin, east african features. Continuity law advocate, charcoal coat. Natural black hair. Background: neutral background.
 
 ---
 
@@ -4609,8 +4605,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. Black close-cropped. Black-brown eyes. Black close-cropped. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. Midnight blue Survey Corps command coat. Born in transit between World 89 and World 90. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 47-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Warm red-brown hair. Hazel-green eyes. Black close-cropped. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Very fair complexion with freckles. Midnight blue Survey Corps command coat. Warm red-brown hair. Background: neutral background.
 ### 161 · COMMISSIONER EMEKA OSEI-STRAND
 
 **Tier:** 3
@@ -4630,8 +4626,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. in deep burgundy — financial integrity seat insignia. Close-cropped silver-black hair. Eyes that have been watching a velocity number approach a threshold and not being able to stop it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 57-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Fair complexion with cool undertone. Dark blonde hair worn neat. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 57-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. in deep burgundy — financial integrity seat insignia. Close-cropped silver-black hair. Eyes that have been watching a velocity number approach a threshold and not being able to stop it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Fair complexion with cool undertone. Dark blonde hair worn neat. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -4654,8 +4650,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Natural black hair mostly silver, worn practical. Eyes carrying a 14-year-old decision. Standing at the edge of her fields — Amara's updated yield map visible inside the farmhouse. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm deep brown skin, caribbean features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 54-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Black hair neatly arranged. Deep brown eyes. Natural black hair mostly silver, worn practical. Eyes carrying a 14-year-old decision. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Light even complexion with warm undertone. Black hair neatly arranged. Warm undertone. Background: neutral background.
 
 ---
 
@@ -4678,8 +4674,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. in an otherwise dense Year 67 administrative document. Archive research station cool lighting. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 27-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. in an otherwise dense Year 67 administrative document. Archive research station cool lighting. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Light complexion with cool undertone. Warm brown complexion with brazilian mixed heritage. Cool undertone. Background: neutral background.
 
 ---
 
@@ -4702,8 +4698,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Close-cropped natural silver hair. Eyes that have been reading evidence for 14 years and know when evidence meets its own standards. At quality review station — a Year 101 review note marked RECOMMENDED visible on one screen, the DENIED stamp over it on another. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Neatly trimmed black hair. Black-brown eyes. Close-cropped natural silver hair. Eyes that have been reading evidence for 14 years and know when evidence meets its own standards. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
 
 ---
 
@@ -4726,8 +4722,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. Red-auburn hair worn loose. Green eyes. Red-auburn hair worn loose. Green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 29-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. Very fair complexion with freckles. Red-auburn hair worn loose. Survey corps outer arc deployments. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Dark hair short. Dark brown eyes. Red-auburn hair worn loose. Green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Very fair complexion with freckles. Red-auburn hair worn loose. Warm brown complexion. Background: neutral background.
 ### 166 · PROFESSOR FUNKE OSEI-LINDQVIST (ECONOMICS)
 
 **Tier:** 3
@@ -4747,8 +4743,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. in deep burgundy — 22-year Institute mark. Silver-black close-cropped hair. Eyes that have been watching a statistical anomaly go unanswered for six years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Very fair complexion with freckles. Very fair complexion with freckles. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 61-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. in deep burgundy — 22-year Institute mark. Silver-black close-cropped hair. Eyes that have been watching a statistical anomaly go unanswered for six years. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Very fair complexion with freckles. Very fair complexion with freckles. Warm light. Background: neutral background.
 
 ---
 
@@ -4771,8 +4767,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 79-year-old Spanish woman. Warm olive complexion. Rich brown hair. Warm brown eyes. in the frame but implicit in its absence. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Spanish woman. Warm olive complexion. Rich brown hair. Warm brown eyes. Warm medium-olive complexion with persian features. Warm medium-olive complexion with persian features. Warm medium-olive complexion with persian fea. Background: neutral background.
+> **Gemini:** Full-body portrait of a 79-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. in the frame but implicit in its absence. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Warm medium-olive complexion with persian features. Warm medium-olive complexion with persian features. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -4795,8 +4791,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. in a recent log he filed as background resonance and has not thought about since. Remote station practical lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Survey Corps station officer, World 499. Has been on the world with the Ferreira-Asante signal for two years. Amber eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old German man. Fair complexion. Short blonde hair. Blue eyes. in a recent log he filed as background resonance and has not thought about since. Remote station practical lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 31-year-old German man. Fair complexion. Short blonde hair. Blue eyes. Dark blonde close-cropped. Survey Corps station officer, World 499. Survey corps station officer, world 499. Background: neutral background.
 
 ---
 
@@ -4819,8 +4815,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Dark brown eyes. in a structured academic style. Eyes that have been looking at a three-day gap for three years. At research station — Founding record showing Year 1 Day 14 first gate activation on primary, Year 3 personal Chronicle entry referencing Day 11 on secondary. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Dark brown eyes. Lattice History researcher, amber-grey robes. Structured natural black hair. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. in a structured academic style. Eyes that have been looking at a three-day gap for three years. At research station — Founding record showing Year 1 Day 14 first gate activation on primary, Year 3 personal Chronicle entry referencing Day 11 on secondary. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. Lattice History researcher, amber-grey robes. Structured natural black hair. Warm complexion. Background: neutral background.
 
 ---
 
@@ -4843,8 +4839,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Natural short hair. Warm dark brown eyes. Natural short hair. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Colombian man. Warm medium complexion. Brown close-cropped. Warm hazel eyes. Warm brown skin, refined east african features. Warm brown skin, refined east african features. Warm brown skin, refined east african feature. Background: neutral background.
+> **Gemini:** Full-body portrait of a 48-year-old North Indian woman. Warm golden-brown complexion. Deep brown hair. Deep brown eyes. Brown close-cropped. Warm hazel eyes. Natural short hair. Warm dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 48-year-old North Indian woman. Warm golden-brown complexion. Deep brown hair. Deep brown eyes. Warm brown skin, refined east african features. Warm brown skin, refined east african features. Warm medium complexion. Background: neutral background.
 ### 171 · ADVOCATE TAIWO OSEI-REINHOLT (WORLD 143)
 
 **Tier:** 2
@@ -4864,8 +4860,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Deep brown hair. Deep brown eyes. Deep brown hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Greek woman. Warm olive-tan complexion. Deep black waves. Deep brown. Warm golden-brown complexion. Warm golden-brown complexion. Warm golden-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Deep black waves. Deep brown. Deep brown hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Warm olive-tan complexion. Warm golden-brown complexion. Warm olive-tan complexion. Background: neutral background.
 
 ---
 
@@ -4888,8 +4884,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Dark brown hair arranged practical. Deep brown eyes. Academic institute warm lighting. Photorealistic. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 59-year-old Portuguese man. Warm olive complexion. Black short cropped. Amber brown. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Warm medium complexion with latin american he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 59-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. Black short cropped. Amber brown. Dark brown hair arranged practical. Deep brown eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 59-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -4912,8 +4908,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Dark brown wavy hair. Dark brown eyes. Dark brown wavy hair. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Defence Forces outer arc garrison medical officer. Regulation natural black hair. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 39-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. Dark hair short. Dark brown eyes. Dark brown wavy hair. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. Defence Forces outer arc garrison medical officer. Regulation natural black hair. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -4936,8 +4932,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. in deep charcoal — senior auditor insignia. Close-cropped silver-black hair. Eyes that have been looking at 0.00001% for five years. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 54-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown skin, african-american features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 54-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. in deep charcoal — senior auditor insignia. Close-cropped silver-black hair. Eyes that have been looking at 0.00001% for five years. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Light complexion with warm undertone. Chestnut hair neatly pinned. Warm undertone. Background: neutral background.
 
 ---
 
@@ -4960,8 +4956,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. Natural black hair loose under a simple covering. Eyes at the beginning of understanding something that has been going on for 14 years without her. At the World 91 frontier community gathering space — the informal boundary visible through the window, Ascendancy-adjacent territory beyond it. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 26-year-old Dutch woman. Fair complexion. Light brown neat. Grey-blue eyes. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 26-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Light brown neat. Grey-blue eyes. Natural black hair loose under a simple covering. Eyes at the beginning of understanding something that has been going on for 14 years without her. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Cool undertone. Background: neutral background.
 ### 176 · COMMANDER ADAEZE OSEI-LINDQVIST (OUTER ARC COMMAND)
 
 **Tier:** 3
@@ -4981,8 +4977,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Natural silver-black hair in regulation style. Eyes signing off on classifications she doesn't fully trust for twelve years. At outer arc command station — the two unanswered mobile-lab memorandum acknowledgements filed alongside instrument variance logs. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Warm olive-brown complexion with middle easte. Background: neutral background.
+> **Gemini:** Full-body portrait of a 45-year-old Polish woman. Fair complexion with cool undertone. Dark blonde hair worn neat. Blue-grey eyes. Close-cropped light blonde. Clear blue eyes. Natural silver-black hair in regulation style. Eyes signing off on classifications she doesn't fully trust for twelve years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Polish woman. Fair complexion with cool undertone. Dark blonde hair worn neat. Blue-grey eyes. Close-cropped light blonde. Warm olive-brown complexion with middle eastern features. Warm olive-brown complexion with middle easte. Background: neutral background.
 
 ---
 
@@ -5005,8 +5001,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. in deep amber — 24-year service mark, senior councillor insignia. Eyes carrying 24 years of institutional memory and one three-year-old academic reference. At Assembly caucus station — the founding Doctrine paper behind him on the reference shelf, the academic journal reference closed in a partition. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Light complexion with warm undertone. Dark brown hair worn loose. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. in deep amber — 24-year service mark, senior councillor insignia. Eyes carrying 24 years of institutional memory and one three-year-old academic reference. At Assembly caucus station — the founding Doctrine paper behind him on the reference shelf, the academic journal reference closed in a partition. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 64-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Light porcelain complexion with cool undertone. Straight black hair worn neat. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5029,8 +5025,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Black close-cropped. Warm hazel eyes. Black close-cropped. Warm hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Survey Corps ensign, eight months in. Re-filed her first anomaly reading as instrument variance at commanding officer's request. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 22-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Close-cropped light blonde. Ice blue eyes. Black close-cropped. Warm hazel eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 22-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Close-cropped light blonde. Survey Corps ensign, eight months in. Survey corps ensign, eight months in. Background: neutral background.
 
 ---
 
@@ -5053,8 +5049,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. in deep charcoal — constitutional interpretation certification mark. Eyes that have spent 18 years giving correct advice to an institution that can be overruled by a higher authority without explanation. At constitutional law station — his Year 97 advisory opinion on primary screen, the Architect's public statement tabling the amendment in a secondary window. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Assembly constitutional advocate, 18 years, deep charcoal coat. Silver close-cropped hair. Amber lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 58-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Deep brown eyes. in deep charcoal — constitutional interpretation certification mark. Eyes that have spent 18 years giving correct advice to an institution that can be overruled by a higher authority without explanation. At constitutional law station — his Year 97 advisory opinion on primary screen, the Architect's public statement tabling the amendment in a secondary window. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Deep brown eyes. Light warm complexion with southern european-latin tone. Assembly constitutional advocate, 18 years, deep charcoal coat. Warm complexion with southern european-latin. Background: neutral background.
 
 ---
 
@@ -5077,8 +5073,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Ethiopian woman. Warm brown skin with east african features. Natural black coils neat. Deep brown eyes. Black close-cropped. Amber-brown eyes. Black close-cropped. Amber-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Ethiopian woman. Warm brown skin with east african features. Natural black coils neat. Deep brown eyes. Defence Forces communications, Alkahest garrison. Born Covenant, still attending events, still monitoring the feed. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 27-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Natural black coils neat. Deep brown eyes. Black close-cropped. Amber-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Warm brown skin with east african features. Defence Forces communications, Alkahest garrison. Warm brown skin with east african features. Background: neutral background.
 ### 181 · SENIOR DELEGATE ADAEZE OSEI-KONSTANTINOU
 
 **Tier:** 3
@@ -5098,8 +5094,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. in deep teal — 31-year service mark, co-author policy insignia. Silver-white close-cropped hair. Eyes defending a framework she wrote 31 years ago and privately updated for the third time five years ago. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 67-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Warm medium-brown complexion with golden tone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 67-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. in deep teal — 31-year service mark, co-author policy insignia. Silver-white close-cropped hair. Eyes defending a framework she wrote 31 years ago and privately updated for the third time five years ago. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 67-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Light complexion with cool undertone. Warm medium-brown complexion with golden tone. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5122,8 +5118,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Medium brown hair. Grey eyes. Medium brown hair. Grey eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Fair complexion with cool undertone. Fair complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 53-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. Black close-cropped. Warm hazel. Medium brown hair. Grey eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. Fair complexion with cool undertone. Fair complexion with cool undertone. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -5146,8 +5142,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. in a structured academic style. Eyes that have been sitting with the phrase "Lattice consciousness" for three years. At research station — the six public MARK categories on display, a hidden seventh in a protected partition. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Dark expressive eyes. in a structured academic style. Eyes that have been sitting with the phrase "Lattice consciousness" for three years. At research station — the six public MARK categories on display, a hidden seventh in a protected partition. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Dark expressive eyes. Fair complexion with light freckles. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
 
 ---
 
@@ -5170,8 +5166,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Black hair arranged clean. Black-brown eyes. Black hair arranged clean. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Warm tan-brown complexion with indigenous-spa. Background: neutral background.
+> **Gemini:** Full-body portrait of a 41-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
 
 ---
 
@@ -5194,8 +5190,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. in deep teal — senior member, 16-year committee mark. Close-cropped silver-black hair. Eyes that have been receiving informal briefings about a problem for six years while championing the investment that accelerated it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 59-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm deep brown skin, caribbean features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 59-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Natural coils arranged neat. Deep brown eyes. in deep teal — senior member, 16-year committee mark. Close-cropped silver-black hair. Eyes that have been receiving informal briefings about a problem for six years while championing the investment that accelerated it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 59-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Natural coils arranged neat. Deep brown eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm brown complexion. Background: neutral background.
 ### 186 · COORDINATOR ADAEZE OSEI-STRAND (COMPACT REGISTRY)
 
 **Tier:** 3
@@ -5215,8 +5211,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. in deep slate — world registry seal at the collar. Natural silver-black hair in a professional structured style. Eyes that have been maintaining a canonical record with a discrepancy in it for six years. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Very fair complexion with freckles. Very fair complexion with freckles. Formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. in deep slate — world registry seal at the collar. Natural silver-black hair in a professional structured style. Eyes that have been maintaining a canonical record with a discrepancy in it for six years. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Very fair complexion with freckles. Very fair complexion with freckles. Formal lighting. Background: neutral background.
 
 ---
 
@@ -5239,8 +5235,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 78-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. in the corner, the HOLD entry waiting there for 47 years. Private residence morning window lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 78-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Warm medium complexion with latin american he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 78-year-old Dutch man. Fair complexion. Light brown short. Green eyes. in the corner, the HOLD entry waiting there for 47 years. Private residence morning window lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 78-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Warm medium complexion with latin american heritage. Warm medium complexion with latin american heritage. Warm medium complexion with latin american he. Background: neutral background.
 
 ---
 
@@ -5263,8 +5259,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Close-cropped black hair. Hazel-brown eyes. Close-cropped black hair. Hazel-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Defence Forces border security, World 67. Three months ago an Ascendancy-adjacent community member told him: "We know about the Lattice anomalies. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 24-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Natural short hair. Deep brown eyes. Close-cropped black hair. Hazel-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 24-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Deep brown skin, igbo features. Defence Forces border security, World 67. Natural short hair. Background: neutral background.
 
 ---
 
@@ -5287,8 +5283,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old German man. Fair complexion. Short blonde hair. Blue eyes. in deep terracotta — 103-year dynasty seal. Silver-white close-cropped hair. Eyes maintaining a dynasty whose founding his granddaughter found the edge of nine years ago. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 67-year-old German man. Fair complexion. Short blonde hair. Blue eyes. Light complexion with warm undertone. Light complexion with warm undertone. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 67-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. in deep terracotta — 103-year dynasty seal. Silver-white close-cropped hair. Eyes maintaining a dynasty whose founding his granddaughter found the edge of nine years ago. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 67-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Light complexion with warm undertone. Light complexion with warm undertone. Warm undertone. Background: neutral background.
 
 ---
 
@@ -5311,8 +5307,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. Close-cropped black hair. Deep black-brown eyes. Close-cropped black hair. Deep black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. Light complexion with cool undertone. Light complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 33-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. Short black hair. Warm hazel eyes. Close-cropped black hair. Deep black-brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. Light complexion with cool undertone. Light complexion with cool undertone. Warm hazel eyes. Background: neutral background.
 ### 191 · COUNCILLOR ADISA OSEI-REINHOLT (ARCHITECT LIAISON)
 
 **Tier:** 3
@@ -5332,8 +5328,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 60-year-old North Indian woman. Warm golden-brown complexion. Deep brown hair. Deep brown eyes. in deep teal — 14-year committee mark. Close-cropped silver-black hair. Eyes that have been trying to find "before the second activation" in the public record for eight years. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 60-year-old North Indian woman. Warm golden-brown complexion. Deep brown hair. Deep brown eyes. Assembly Architect Liaison Committee, 14 years, deep teal. Silver-black close-cropped hair. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 60-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. in deep teal — 14-year committee mark. Close-cropped silver-black hair. Eyes that have been trying to find "before the second activation" in the public record for eight years. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 60-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm golden-brown complexion. Assembly Architect Liaison Committee, 14 years, deep teal. Warm golden-brown complexion. Background: neutral background.
 
 ---
 
@@ -5356,8 +5352,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. in deep charcoal — compliance certification seal at the left breast. Natural black hair in a professional style. Eyes that certified something correctly and have been thinking about whether correct and sufficient are the same thing for 18 months. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. in deep charcoal — compliance certification seal at the left breast. Natural black hair in a professional style. Eyes that certified something correctly and have been thinking about whether correct and sufficient are the same thing for 18 months. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Black hair arranged clean. Light even complexion with warm undertone. Warm light. Background: neutral background.
 
 ---
 
@@ -5380,8 +5376,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 88-year-old North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. in the deepest amber — founding generation insignia that no one else in the current council wears. Eyes that have been living with an 88-year-old agreement for 88 years. In the Covenant Elder chamber — the founding documents on display behind her. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature North Indian man. Warm brown complexion. Dark hair short. Dark brown eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm tan-brown complexion with indigenous-spa. Background: neutral background.
+> **Gemini:** Full-body portrait of a 88-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. in the deepest amber — founding generation insignia that no one else in the current council wears. Eyes that have been living with an 88-year-old agreement for 88 years. In the Covenant Elder chamber — the founding documents on display behind her. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -5404,8 +5400,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. in a private protected partition. Survey Corps technical division precise lighting. Cinematic directional lighting. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. Survey Corps approach standards, technical division, midnight blue coat. Silver-black close-cropped hair. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 47-year-old Caribbean woman of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm dark brown eyes. in a private protected partition. Survey Corps technical division precise lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Caribbean woman of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm dark brown eyes. Deep brown skin, west african features. Survey Corps approach standards, technical division, midnight blue coat. Natural short hair. Background: neutral background.
 
 ---
 
@@ -5428,8 +5424,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Natural coils structured neat. Dark expressive eyes. Natural coils structured neat. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 26-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Deep brown skin with warm west african undertone. Natural coils structured neat. Warm west african undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 26-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Dark brown hair. Deep amber eyes. Natural coils structured neat. Dark expressive eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Deep brown skin with warm west african undertone. Natural coils structured neat. Amber eyes. Background: neutral background.
 ### 196 · ADVISOR EMEKA OKAFOR-VASQUEZ
 
 **Tier:** 4
@@ -5449,8 +5445,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. in the quality of the space: organised with the specific efficiency of someone who has had 119 years to optimise how they live. The Chronicle interface in the corner shows zero personal entries. The Founding seal is on the wall. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Warm brown skin with east african features. Natural black hair in a neat arrangement. Warm brown skin with east african features. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. in the quality of the space: organised with the specific efficiency of someone who has had 119 years to optimise how they live. The Chronicle interface in the corner shows zero personal entries. The Founding seal is on the wall. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Light complexion with cool undertone. Warm brown skin with east african features. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5473,8 +5469,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old Polish woman. Fair complexion with cool undertone. Dark blonde hair worn neat. Blue-grey eyes. in deep burgundy — Seat 2 insignia. Close-cropped silver-black hair. Eyes that have spent 13 years accurately explaining to people why the legal system will not help them. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 56-year-old Polish woman. Fair complexion with cool undertone. Dark blonde hair worn neat. Blue-grey eyes. Light blonde hair worn neat. Light blonde hair worn neat. Formal inquiry in year 98 asking whether a 96-y. Background: neutral background.
+> **Gemini:** Full-body portrait of a 56-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. in deep burgundy — Seat 2 insignia. Close-cropped silver-black hair. Eyes that have spent 13 years accurately explaining to people why the legal system will not help them. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Fair complexion with cool undertone. Dark blonde hair worn neat. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5497,8 +5493,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. in the archive for eight months and just found their 14th discrepancy — the most significant one yet. At archive research station — two documents on split display: World 247's official Year 8 survey record beside the surveying officer's personal entry from three days before. Archive research station cool precise lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 24-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Dark blonde close-cropped. Dark blonde close-cropped. Survey history junior researcher, eight months. Background: neutral background.
+> **Gemini:** Full-body portrait of a 24-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Deep black hair. Warm hazel eyes. in the archive for eight months and just found their 14th discrepancy — the most significant one yet. At archive research station — two documents on split display: World 247's official Year 8 survey record beside the surveying officer's personal entry from three days before. Archive research station cool precise lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 24-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Deep black hair. Warm hazel eyes. Fair complexion, light freckles. Light brown hair pulled back. Survey history junior researcher, eight months. Background: neutral background.
 
 ---
 
@@ -5521,8 +5517,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. in a regulation practical style. Eyes that have been looking at a three-year private reconstruction and trying to decide if they are right. At recovery command station — _Pioneer Mark_ incident summary on one screen, her private reconstruction document on another. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 44-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Deep brown skin, igbo features. Deep brown skin, igbo features. Warm dark brown eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 44-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. in a regulation practical style. Eyes that have been looking at a three-year private reconstruction and trying to decide if they are right. At recovery command station — _Pioneer Mark_ incident summary on one screen, her private reconstruction document on another. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Warm dark brown eyes. Background: neutral background.
 
 ---
 
@@ -5545,8 +5541,8 @@ _Vol.3 Focus: The Survey Corps mid-ranks · Lattice Covenant community members �
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature Colombian woman. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Deep brown eyes. Short brown hair. Amber eyes. Short brown hair. Amber eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature Colombian woman. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Deep brown eyes. Processing environment, dense and cool, 105 years of continuous operation visible in the quality of the infrastructure. The private log open on one display: 105 identical entries. Amber eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Dark brown hair arranged practical. Deep brown eyes. Short brown hair. Amber eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Warm medium complexion with latin american heritage. Dark brown hair arranged practical. Warm medium complexion with latin american he. Background: neutral background.
 
 ---
 
@@ -5589,8 +5585,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 71-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. in deep amber — 25-year caucus service mark. Silver hair in a structured style. Eyes holding an unfinished correction and 25 years of consequence. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 71-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: neutral background.
+> **Gemini:** Full-body portrait of a 71-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Dark expressive eyes. in deep amber — 25-year caucus service mark. Silver hair in a structured style. Eyes holding an unfinished correction and 25 years of consequence. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 71-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Dark expressive eyes. Light complexion with cool undertone. Warm medium-olive complexion with persian features. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5613,8 +5609,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Black hair neatly arranged. Warm hazel. Black hair neatly arranged. Warm hazel. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Warm olive-tan complexion. Black hair neatly arranged. Warm olive-tan complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 48-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Glossy black hair. Deep black-brown eyes. Black hair neatly arranged. Warm hazel. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 48-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Light porcelain complexion with cool undertone. Warm olive-tan complexion. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5637,8 +5633,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. in a secondary partition, the secured investment allocation on primary. Assembly infrastructure committee lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed he. Background: neutral background.
+> **Gemini:** Full-body portrait of a 43-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. in a secondary partition, the secured investment allocation on primary. Assembly infrastructure committee lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm brown complexion with brazilian mixed heritage. Warm brown complexion with brazilian mixed heritage. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -5661,8 +5657,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Dark expressive eyes. Natural black hair going silver, worn practical. Eyes serving communities the framework ignores. Standing in her cargo bay — 14 community supply manifests on the wall. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Dark expressive eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. Natural short hair. Dark expressive eyes. Natural black hair going silver, worn practical. Eyes serving communities the framework ignores. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. Deep brown skin, west african features. Very deep rich brown skin, west african features. Natural short hair. Background: neutral background.
 
 ---
 
@@ -5685,8 +5681,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Natural black hair close-cropped. Eyes that have been looking at a private copy of classified data for two years. At analysis station — World 539's registry entry showing CLASSIFIED on primary screen, personal device in pocket. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Black hair worn in a practical style. Black hair worn in a practical style. Warm olive complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 36-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. Short black hair. Dark brown eyes. Natural black hair close-cropped. Eyes that have been looking at a private copy of classified data for two years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. Light complexion with warm undertone. Black hair worn in a practical style. Warm undertone. Background: neutral background.
 ### 206 · SENIOR SISTER YEMI OSEI-CARDOSO
 
 **Tier:** 3
@@ -5706,8 +5702,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Natural coils arranged neat. Deep brown eyes. in the World 77 gathering space — Covenant-adjacent but distinctly frontier in arrangement. Frontier community warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Nigerian woman of Yoruba heritage. Deep warm brown skin with rich west african undertone. Natural coils arranged neat. Deep brown eyes. Light warm complexion with southern european-latin tone. Light warm complexion with southern european-latin tone. Warm complexion with southern european-latin. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. in the World 77 gathering space — Covenant-adjacent but distinctly frontier in arrangement. Frontier community warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 64-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Deep warm brown skin with rich west african undertone. Natural coils arranged neat. Warm brown skin with rich west african undert. Background: neutral background.
 
 ---
 
@@ -5730,8 +5726,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Dark blonde pulled back. Pale green eyes. Dark blonde pulled back. Pale green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Defence Forces communications, Alkahest garrison. Born Covenant, still attending events, still monitoring the feed. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 27-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Short dark hair. Warm brown eyes. Dark blonde pulled back. Pale green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Defence Forces communications, Alkahest garrison. Born Covenant, still attending events, still monitoring the feed. Warm olive complexion. Background: neutral background.
 
 ---
 
@@ -5754,8 +5750,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old Dutch man. Fair complexion. Light brown short. Green eyes. in deep burgundy — Assembly Studies professorship mark. Close-cropped black hair with silver. Eyes holding two findings and their connection for four years. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 57-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Warm medium-brown complexion. Warm medium-brown complexion. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 57-year-old Austrian man. Fair complexion. Brown short. Blue eyes. in deep burgundy — Assembly Studies professorship mark. Close-cropped black hair with silver. Eyes holding two findings and their connection for four years. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Austrian man. Fair complexion. Brown short. Blue eyes. Warm medium-brown complexion. Warm medium-brown complexion. Warm medium-brown complexion. Background: neutral background.
 
 ---
 
@@ -5778,8 +5774,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Short black hair. Dark brown eyes. Short black hair. Dark brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 46-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Deep survey pioneer, outer arc command. Highest personal instrument variance rate in corps history. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 46-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. Dark brown hair. Dark brown eyes. Short black hair. Dark brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. Deep survey pioneer, outer arc command. Highest personal instrument variance rate in corps history. Survey pioneer, outer arc command. Background: neutral background.
 
 ---
 
@@ -5802,8 +5798,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. in deep amber — caucus whip insignia. Natural black hair with silver, worn back precisely. Eyes holding the actual vote count and the stated vote count and the growing distance between them. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Returnist caucus whip, deep amber. Has known about the 23% voting divergence for 5 years. Warm tan complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 55-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Dark expressive eyes. in deep amber — caucus whip insignia. Natural black hair with silver, worn back precisely. Eyes holding the actual vote count and the stated vote count and the growing distance between them. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Returnist caucus whip, deep amber. Has known about the 23% voting divergence for 5 years. Warm olive complexion. Background: neutral background.
 ### 211 · SETTLER TAIWO OSEI-REINHOLT
 
 **Tier:** 2
@@ -5823,8 +5819,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. in the settlement council space — holding an unsent document. Frontier settlement practical afternoon lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Hazel-brown eyes. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. in the settlement council space — holding an unsent document. Frontier settlement practical afternoon lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -5847,8 +5843,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 60-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. in a structured professional style. Eyes reading inheritance architecture for 35 years and not always liking what it produces. At her legal chamber — 17 years of failed reform requests on secondary display, Year 88 estate structure in archive. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 60-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Inheritance law advocate, Compact continuity coat. Silver-black structured hair. Amber formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 60-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. in a structured professional style. Eyes reading inheritance architecture for 35 years and not always liking what it produces. At her legal chamber — 17 years of failed reform requests on secondary display, Year 88 estate structure in archive. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 60-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Warm tan-brown complexion. Inheritance law advocate, Compact continuity coat. Warm tan-brown complexion. Background: neutral background.
 
 ---
 
@@ -5871,8 +5867,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Warm medium-brown complexion. Dark brown hair worn neat. Warm medium-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Dark brown hair worn neat. Dark brown eyes. Dark brown hair worn neat. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Warm olive-brown complexion with middle easte. Background: neutral background.
 
 ---
 
@@ -5895,8 +5891,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 74-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. in deep forest green — World 56 Pale Circuit seal. Patient eyes watching a system outgrow itself three times. At the Pale Circuit routing display — current transaction volume visible, second expansion under construction. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 74-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Very fair complexion with freckles. Very fair complexion with freckles. Formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 74-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. in deep forest green — World 56 Pale Circuit seal. Patient eyes watching a system outgrow itself three times. At the Pale Circuit routing display — current transaction volume visible, second expansion under construction. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 74-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Light porcelain complexion with cool undertone. Very fair complexion with freckles. Cool undertone. Background: neutral background.
 
 ---
 
@@ -5919,8 +5915,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 63-year-old Caribbean woman of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm dark brown eyes. in deep burgundy — Institute senior professorship mark. Eyes running a private model for three years and not liking what it produces. At research station — his private divergent model on secondary partition, institutional projections on primary. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 63-year-old Caribbean woman of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm dark brown eyes. Light even complexion with warm undertone. Light even complexion with warm undertone. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 63-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Green-brown eyes. in deep burgundy — Institute senior professorship mark. Eyes running a private model for three years and not liking what it produces. At research station — his private divergent model on secondary partition, institutional projections on primary. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 63-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Green-brown eyes. Warm deep brown skin, caribbean features. Natural black coils in a practical arrangement. Warm deep brown skin, caribbean features. Background: neutral background.
 ### 216 · DELEGATE BISI OSEI-NAKAMURA
 
 **Tier:** 3
@@ -5940,8 +5936,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Strawberry blonde. Green eyes. Strawberry blonde. Green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 57-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. World 312 Assembly delegate. Has held a community account that contradicts the official classification for 14 years. Natural hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 57-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Brown close-cropped. Deep brown eyes. Strawberry blonde. Green eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. World 312 Assembly delegate. Has held a community account that contradicts the official classification for 14 years. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -5964,8 +5960,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Close-cropped silver-black hair. Eyes that wrote the standards being applied and have known for four years what they produce. At technical standards station — Year 88 standards document on primary, private recalibration analysis on secondary. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 59-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Rich warm brown complexion. Black hair worn in a traditional style. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 59-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Short black hair. Dark brown eyes. Close-cropped silver-black hair. Eyes that wrote the standards being applied and have known for four years what they produce. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 59-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Light complexion with warm undertone. Rich warm brown complexion. Warm undertone. Background: neutral background.
 
 ---
 
@@ -5988,8 +5984,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 71-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. in deep slate — 45-year historical division mark. Eyes that have spent eight years sitting with what they found in Year 97. At historical archive terminal — his definitive Survey Corps history on the reference shelf, a restricted Year 2 entry about World 247 open on screen. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 71-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 71-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. in deep slate — 45-year historical division mark. Eyes that have spent eight years sitting with what they found in Year 97. At historical archive terminal — his definitive Survey Corps history on the reference shelf, a restricted Year 2 entry about World 247 open on screen. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 71-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Deep brown skin, igbo features. Light complexion with warm undertone. Natural short hair. Background: neutral background.
 
 ---
 
@@ -6012,8 +6008,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 25-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Deep black hair. Warm hazel eyes. Dark hair short. Deep brown eyes. Dark hair short. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 25-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Deep black hair. Warm hazel eyes. Warm tan-brown complexion. Warm tan-brown complexion. Warm tan-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 25-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Deep black hair. Warm hazel eyes. Dark hair short. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 25-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Warm olive-brown complexion with middle eastern features. Warm tan-brown complexion. Warm olive-brown complexion with middle easte. Background: neutral background.
 
 ---
 
@@ -6036,8 +6032,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. in deep charcoal — 22-year service mark. Eyes holding a 16-year-old communication from the Architect and trying to understand it. At his legal office — Year 89 legal opinion on primary screen, the Architect's classified direct communication in a protected partition. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. Dark blonde close-cropped. Dark blonde close-cropped. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 64-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. in deep charcoal — 22-year service mark. Eyes holding a 16-year-old communication from the Architect and trying to understand it. At his legal office — Year 89 legal opinion on primary screen, the Architect's classified direct communication in a protected partition. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 64-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Dark blonde close-cropped. Dark blonde close-cropped. Cinematic lighting. Background: neutral background.
 ### 221 · SETTLER NGOZI OSEI-LINDSTRÖM
 
 **Tier:** 2
@@ -6057,8 +6053,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Natural black hair mostly silver, worn practical. Eyes carrying a 14-year-old decision. Standing at the edge of her fields — Amara's updated yield map visible inside the farmhouse. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
+> **Gemini:** Full-body portrait of a 54-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Short black hair. Dark brown eyes. Natural black hair mostly silver, worn practical. Eyes carrying a 14-year-old decision. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 54-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Light complexion with warm undertone. Very deep rich brown skin, west african features. Warm undertone. Background: neutral background.
 
 ---
 
@@ -6081,8 +6077,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 68-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Dark expressive eyes. in deep slate — senior institute professorship mark. Silver hair in a structured style. Eyes that have been reading the Architect's Year 102 Chronicle entry for three years. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 68-year-old South African man. Warm deep brown skin, southern african features. Natural short hair. Dark expressive eyes. Chronicle Studies professor, slate robes. Has known for 17 years her work won't be implemented in her lifetime. Cool institute lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 68-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. in deep slate — senior institute professorship mark. Silver hair in a structured style. Eyes that have been reading the Architect's Year 102 Chronicle entry for three years. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 68-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Warm deep brown skin, southern african features. Chronicle Studies professor, slate robes. Warm deep brown skin, southern african featur. Background: neutral background.
 
 ---
 
@@ -6105,8 +6101,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Glossy black hair. Deep brown eyes. Glossy black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 31-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 31-year-old French man. Light complexion. Short brown hair. Amber eyes. Dark brown hair. Warm brown eyes. Glossy black hair. Deep brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 31-year-old French man. Light complexion. Short brown hair. Amber eyes. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Warm brown eyes. Background: neutral background.
 
 ---
 
@@ -6129,8 +6125,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. in the World 441 settlement — Lattice node array visible in background, one faintly pulsing. World 441 frontier lighting — slightly disrupted, slightly uncertain. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Light porcelain complexion with cool undertone. Light porcelain complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 34-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. in the World 441 settlement — Lattice node array visible in background, one faintly pulsing. World 441 frontier lighting — slightly disrupted, slightly uncertain. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Warm tan-brown complexion. Light porcelain complexion with cool undertone. Warm tan-brown complexion. Background: neutral background.
 
 ---
 
@@ -6153,8 +6149,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. wear with no caucus thread — the deliberate absence of affiliation is the loudest signal in the room. Natural black hair worn in a structured style. Eyes reading two caucuses simultaneously and trusting neither. Photorealistic. Neutral lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Dutch woman. Fair complexion. Golden blonde hair worn practical. Blue eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown skin, african-american features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 38-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. wear with no caucus thread — the deliberate absence of affiliation is the loudest signal in the room. Natural black hair worn in a structured style. Eyes reading two caucuses simultaneously and trusting neither. Photorealistic. Neutral lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Golden blonde hair worn practical. Warm brown skin, african-american features. Warm brown skin, african-american features. Background: neutral background.
 ### 226 · CHRONICLER FUNKE OSEI-MARCHETTI
 
 **Tier:** 3
@@ -6174,8 +6170,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. in deep slate blue — outer arc regional insignia. Natural black hair with silver threading, worn practical. Eyes that observe everything and record most of it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Deep brown eyes. Light porcelain complexion with cool undertone. Light porcelain complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 54-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. in deep slate blue — outer arc regional insignia. Natural black hair with silver threading, worn practical. Eyes that observe everything and record most of it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 54-year-old French man. Light complexion. Dark brown hair. Warm brown eyes. Deep brown skin, strong central african features. Light porcelain complexion with cool undertone. Cool undertone. Background: neutral background.
 
 ---
 
@@ -6198,8 +6194,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 62-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. in deep burgundy — Ascendancy Studies professorship mark. Close-cropped silver-black hair. Eyes that have spent 34 years studying a movement he hasn't had full access to — and has had access he cannot yet file for three years. Photorealistic. Formal lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 62-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Formal lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 62-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. in deep burgundy — Ascendancy Studies professorship mark. Close-cropped silver-black hair. Eyes that have spent 34 years studying a movement he hasn't had full access to — and has had access he cannot yet file for three years. Photorealistic. Formal lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 62-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Formal lighting. Background: neutral background.
 
 ---
 
@@ -6222,8 +6218,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 25-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Close-cropped black hair. Clear dark eyes. Close-cropped black hair. Clear dark eyes. Photorealistic. Clinical lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 25-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Light complexion with cool undertone. Light complexion with cool undertone. Cool undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 25-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Platinum blonde hair worn practical. Pale blue eyes. Neatly trimmed black hair. Black-brown eyes. Close-cropped black hair. Clear dark eyes. Photorealistic. Clinical lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 25-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Platinum blonde hair worn practical. Pale blue eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: neutral background.
 
 ---
 
@@ -6246,8 +6242,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Austrian man. Fair complexion. Brown short. Blue eyes. in deep forest green — World 312 seal. Close-cropped black hair with early grey. Eyes governing someone else's wound for 9 years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Austrian man. Fair complexion. Brown short. Blue eyes. World 312 governor, forest green coat. Early grey close-cropped hair. Cinematic lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old French man. Light complexion. Short brown hair. Hazel eyes. in deep forest green — World 312 seal. Close-cropped black hair with early grey. Eyes governing someone else's wound for 9 years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old French man. Light complexion. Short brown hair. Hazel eyes. World 312 governor, forest green coat. Early grey close-cropped hair. Cinematic lighting. Background: neutral background.
 
 ---
 
@@ -6270,8 +6266,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 66-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. in deep amber-grey — the interdisciplinary colour of an institute that is neither fully Covenant nor fully physics. Silver hair in a structured academic style. Eyes that have been waiting for the other person to go first for two years. Photorealistic. Cool lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 66-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. Lattice Studies scholar, amber-grey coat. In two-year private correspondence with a Lattice physicist. Cool lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 66-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. in deep amber-grey — the interdisciplinary colour of an institute that is neither fully Covenant nor fully physics. Silver hair in a structured academic style. Eyes that have been waiting for the other person to go first for two years. Photorealistic. Cool lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 66-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Warm brown skin with east african features. Lattice Studies scholar, amber-grey coat. Warm brown skin with east african features. Background: neutral background.
 ### 231 · FACTOR YETUNDE OSEI-LINDSTRÖM
 
 **Tier:** 2
@@ -6291,8 +6287,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Glossy black hair. Deep brown eyes. Glossy black hair. Deep brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Emerging outer arc factor, three years in. Practical coat, margin-arithmetic eyes. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Black-brown eyes. Close-cropped black hair. Dark expressive eyes. Glossy black hair. Deep brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Black hair arranged clean. Black-brown eyes. Deep warm brown skin, west african features. Emerging outer arc factor, three years in. Warm brown skin, west african features. Background: neutral background.
 
 ---
 
@@ -6315,8 +6311,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Natural black hair in regulation style. Exceptionally alert eyes — the eyes of someone who sees patterns before she understands what they mean. At an intelligence analysis console — three annotation layers on a dataset, two from analysts she doesn't know. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Warm medium-olive complexion with persian features. Black hair in a practical style. Warm medium-olive complexion with persian fea. Background: neutral background.
+> **Gemini:** Full-body portrait of a 22-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Brown close-cropped. Deep brown eyes. Natural black hair in regulation style. Exceptionally alert eyes — the eyes of someone who sees patterns before she understands what they mean. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 22-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Warm medium-olive complexion with persian features. Black hair in a practical style. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -6339,8 +6335,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Golden blonde hair worn practical. Blue eyes. Golden blonde hair worn practical. Blue eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Korean woman. Light porcelain complexion with cool undertone. Straight black hair worn neat. Dark brown eyes. Golden blonde hair worn practical. Golden blonde hair worn practical. Survey corps personnel command. Background: neutral background.
+> **Gemini:** Full-body portrait of a 52-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Close-cropped hair. Deep brown eyes. Straight black hair worn neat. Dark brown eyes. Golden blonde hair worn practical. Blue eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Close-cropped hair. Deep brown eyes. Light porcelain complexion with cool undertone. Straight black hair worn neat. Cool undertone. Background: neutral background.
 
 ---
 
@@ -6363,8 +6359,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Light blonde hair. Ice blue eyes. Light blonde hair. Ice blue eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Alkahest community physician. Three symptom clusters in four years: 14, 23, 37. Natural hair. Background: neutral background.
+> **Gemini:** Full-body portrait of a 45-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Warm dark brown eyes. Close-cropped dark hair. Warm brown eyes. Light blonde hair. Ice blue eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Cameroonian man of Central African heritage. Deep brown skin, strong central african features. Close-cropped black hair. Warm dark brown eyes. Alkahest community physician. Three symptom clusters in four years: 14, 23, 37. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -6387,8 +6383,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. in deep teal — first-term delegate mark. Natural black hair in structured professional style. Eyes reading institutional silence and close to understanding its shape. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Deep brown skin with warm west african undertone. Natural black hair in a neat arrangement. Warm west african undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 40-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. in deep teal — first-term delegate mark. Natural black hair in structured professional style. Eyes reading institutional silence and close to understanding its shape. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 40-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Deep brown skin with warm west african undertone. Natural black hair in a neat arrangement. Warm olive complexion. Background: neutral background.
 ### 236 · PROFESSOR TAIWO OSEI-CARDOSO
 
 **Tier:** 3
@@ -6408,8 +6404,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 66-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Green-brown eyes. Eyes that have been looking at one photograph for eight years. At her research station — 38 years of social history on shelves, the Year 3 Chronicle annotation photograph in a closed folder on the desk. Academic institute warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 66-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Green-brown eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 66-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. in a closed folder on the desk. Academic institute warm lighting. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 66-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Light even complexion with warm undertone. Black hair in a clean style. Warm complexion. Background: neutral background.
 
 ---
 
@@ -6432,8 +6428,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Straight black hair worn practical. Dark brown eyes. Straight black hair worn practical. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 53-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Black hair arranged. Deep hazel eyes. Short brown hair. Blue-grey eyes. Straight black hair worn practical. Dark brown eyes. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Black hair arranged. Deep hazel eyes. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: neutral background.
 
 ---
 
@@ -6456,8 +6452,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Black close-cropped. Warm brown eyes. Black close-cropped. Warm brown eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Senegalese woman of West African heritage. Very deep rich brown skin, west african features. Natural black hair in a structured style. Dark warm eyes. Warm tan-brown complexion. Warm tan-brown complexion. Warm tan-brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a 24-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Photorealistic. Warm lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 24-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Very deep rich brown skin, west african features. Natural black hair in a structured style. Natural black hair in a structured style. Background: neutral background.
 
 ---
 
@@ -6480,8 +6476,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. in the resupply data they weren't looking for. At a logistics processing station — routing anomaly visible in background flow data behind routine manifests. Hub Station Vela logistics bay lighting — busy and functional. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 26-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Dark blonde hair neatly arranged. Grey-blue eyes. Defence Forces logistics, Hub Station Vela. Has been keeping a personal log of routing discrepancies for six months — 14 entries. Amber eyes. Background: neutral background.
+> **Gemini:** Full-body portrait of a 26-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. in the resupply data they weren't looking for. At a logistics processing station — routing anomaly visible in background flow data behind routine manifests. Hub Station Vela logistics bay lighting — busy and functional. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Japanese woman. Light even complexion with warm undertone. Black hair in a clean style. Black-brown eyes. Fair complexion, light freckles. Dark blonde hair neatly arranged. Amber eyes. Background: neutral background.
 
 ---
 
@@ -6504,8 +6500,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 66-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. in a partition he is still studying. Inner arc Chronicle coordination lighting — high volume, functional. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 66-year-old Chinese woman. Warm light complexion. Black hair arranged clean. Black-brown eyes. Warm deep brown skin, southern african features. Warm deep brown skin, southern african features. Warm deep brown skin, southern african featur. Background: neutral background.
+> **Gemini:** Full-body portrait of a 66-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. in a partition he is still studying. Inner arc Chronicle coordination lighting — high volume, functional. Cinematic directional lighting. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 66-year-old German woman. Fair complexion. Light blonde hair worn neat. Blue eyes. Black hair arranged clean. Warm deep brown skin, southern african features. Warm light. Background: neutral background.
 ### 241 · LIEUTENANT SOLA SUNDARAM-OKONKWO
 
 **Tier:** 3
@@ -6525,8 +6521,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. in a private screen partition she has minimised but not closed. Survey vessel approach lighting — the frequency window display active. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Warm olive-brown complexion with middle easte. Background: neutral background.
+> **Gemini:** Full-body portrait of a 29-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. in a private screen partition she has minimised but not closed. Survey vessel approach lighting — the frequency window display active. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Warm medium complexion. Background: neutral background.
 
 ---
 
@@ -6549,8 +6545,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 89-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. in deep amber — Seat 7 insignia woven at the hem. Eyes that carry a specific vote from 28 years ago. Standing in the Covenant Elder chamber — the Year 77 classification records visible on the archive display behind him. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 89-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Covenant Elder robes, deep amber, Seat 7. He voted for a physics classification he knew was wrong. Formal covenant lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 89-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. in deep amber — Seat 7 insignia woven at the hem. Eyes that carry a specific vote from 28 years ago. Standing in the Covenant Elder chamber — the Year 77 classification records visible on the archive display behind him. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 89-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Fair complexion, light freckles. Light brown hair pulled back. Formal covenant lighting. Background: neutral background.
 
 ---
 
@@ -6573,8 +6569,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. in deep charcoal — second-tier financial insignia. Close-cropped black hair beginning to grey. Eyes that have been doing complete analysis with incomplete information for nine years and have just decided to stop qualifying it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Deep warm brown skin with rich west african undertone. Close-cropped natural hair. Warm brown skin with rich west african undert. Background: neutral background.
+> **Gemini:** Full-body portrait of a 51-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. in deep charcoal — second-tier financial insignia. Close-cropped black hair beginning to grey. Eyes that have been doing complete analysis with incomplete information for nine years and have just decided to stop qualifying it. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Fair complexion with light freckles. Deep warm brown skin with rich west african undertone. Warm brown skin with rich west african undert. Background: neutral background.
 
 ---
 
@@ -6597,8 +6593,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old French man. Light complexion. Short brown hair. Amber eyes. Natural black hair pulled back in regulation style. Dark focused eyes that process things before she speaks. Standing at the helm position of a survey approach — the resonance display behind her showing a pattern she has seen before. Photorealistic. Cinematic directional lighting. Background: Survey vessel bridge, outer arc star field ahead.
-> **Grok:** Ultra-realistic portrait. A 47-year-old French man. Light complexion. Short brown hair. Amber eyes. Warm brown skin with east african features. Natural black hair in a neat arrangement. Warm brown skin with east african features. Background: neutral background.
+> **Gemini:** Full-body portrait of a 47-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Short brown hair. Amber eyes. Natural black hair pulled back in regulation style. Dark focused eyes that process things before she speaks. Photorealistic. Cinematic directional lighting. Background: Survey vessel bridge, outer arc star field ahead.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Polish man. Fair complexion. Short brown hair. Blue-grey eyes. Warm brown skin with east african features. Natural black hair in a neat arrangement. Amber eyes. Background: neutral background.
 
 ---
 
@@ -6621,8 +6617,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 73-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. in deep slate blue — Senior Archivist insignia at the collar. Silver-white natural hair, close-cropped. Eyes that have catalogued 47 years of what humanity chose to record. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 73-year-old Japanese man. Light complexion with warm undertone. Short black hair. Dark brown eyes. Deep brown skin with warm west african undertone. Deep brown skin with warm west african undertone. Warm west african undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 73-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. in deep slate blue — Senior Archivist insignia at the collar. Silver-white natural hair, close-cropped. Eyes that have catalogued 47 years of what humanity chose to record. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 73-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Warm brown eyes. Light complexion with warm undertone. Deep brown skin with warm west african undertone. Warm undertone. Background: neutral background.
 
 ---
 
@@ -6645,8 +6641,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. in deep rust-brown — Route 7 patch at the left shoulder; worn at the hem. Eyes that are always measuring the cost of what just happened. Standing at a Veil Station customs checkpoint — the impound records behind him on a display. Photorealistic. Fluorescent lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Background: neutral background.
+> **Gemini:** Full-body portrait of a 39-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Natural black hair. Warm dark brown eyes. in deep rust-brown — Route 7 patch at the left shoulder; worn at the hem. Eyes that are always measuring the cost of what just happened. Standing at a Veil Station customs checkpoint — the impound records behind him on a display. Photorealistic. Fluorescent lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Cameroonian woman of Central African heritage. Deep rich brown skin, central african features. Natural black hair. Warm dark brown eyes. Fair complexion with light freckles. Warm tan complexion with golden undertone. Warm tan complexion with golden undertone. Background: neutral background.
 
 ---
 
@@ -6669,8 +6665,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature French man. Light complexion. Dark brown hair. Warm brown eyes. in deep burgundy — the oldest-service mark at the left breast. Silver-black hair in a structured academic style. Eyes that have been asking the same question for 85 years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature French man. Light complexion. Dark brown hair. Warm brown eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Natural black hair in a neat style. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. in deep burgundy — the oldest-service mark at the left breast. Silver-black hair in a structured academic style. Eyes that have been asking the same question for 85 years. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Filipino man. Warm tan complexion. Dark close-cropped hair. Black-brown eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm brown eyes. Background: neutral background.
 
 ---
 
@@ -6693,8 +6689,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. Auburn short cropped. Hazel-green eyes. Auburn short cropped. Hazel-green eyes. Photorealistic. Amber lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Ghanaian man. Deep brown skin, west african features. Natural short hair. Deep brown eyes. Fair complexion with light freckles. Fair complexion with light freckles. Amber lighting. Background: neutral background.
+> **Gemini:** Full-body portrait of a 35-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Natural short hair. Deep brown eyes. Auburn short cropped. Hazel-green eyes. Photorealistic. Amber lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 35-year-old Colombian man. Warm medium complexion. Dark hair short. Dark brown eyes. Deep brown skin, west african features. Fair complexion with light freckles. Natural short hair. Background: neutral background.
 
 ---
 
@@ -6717,8 +6713,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Platinum blonde hair worn practical. Pale blue eyes. Short black hair. Dark brown eyes. Photorealistic. Warm light. Photorealistic. Warm light. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Platinum blonde hair worn practical. Pale blue eyes. Alkahest senior factor coat, terracotta-gold. Silver close-cropped hair. Warm light. Background: neutral background.
+> **Gemini:** Full-body portrait of a 58-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Platinum blonde hair worn practical. Pale blue eyes. Short black hair. Dark brown eyes. Photorealistic. Warm light. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Platinum blonde hair worn practical. Alkahest senior factor coat, terracotta-gold. Warm light. Background: neutral background.
 
 ---
 
@@ -6742,8 +6738,8 @@ _Vol.4 Focus: The Returnist caucus · Outer arc world populations · Characters 
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a mature French man. Light complexion. Short brown hair. Hazel eyes. in the frame — only the evidence: maps that should not exist, coordinates that should not be known, worlds drawn in perfect detail before any human vessel reached them. The Architect's notation visible in the corner: "The maps are correct. This is the second time I have seen them." The frame is lit by the maps themselves. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
-> **Grok:** Ultra-realistic portrait. A mature French man. Light complexion. Short brown hair. Hazel eyes. 47 of them, spread and overlapping, covering worlds not surveyed for decades after their drawing. The notation system wasn't formalised for 23 more years. Warm brown complexion. Background: neutral background.
+> **Gemini:** Full-body portrait of a mature Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. in the frame — only the evidence: maps that should not exist, coordinates that should not be known, worlds drawn in perfect detail before any human vessel reached them. The Architect's notation visible in the corner: "The maps are correct. This is the second time I have seen them." The frame is lit by the maps themselves. Photorealistic. Cinematic directional lighting. Background: neutral dramatic background.
+> **Grok:** Ultra-realistic portrait. A mature Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. 47 of them, spread and overlapping, covering worlds not surveyed for decades after their drawing. The notation system wasn't formalised for 23 more years. Warm brown complexion. Background: neutral background.
 
 ---
 
@@ -6794,8 +6790,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Short dark hair with early grey at the temples. Dark brown eyes, tired. Shoulders slightly rounded as though bracing against an invisible weight. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier settlement with prefab structures under pale amber sky.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Short dark hair greying at temples. Worn utility jacket over layered frontier clothing. Warm olive complexion. Background: dusty settlement with low metallic buildings under wide sky.
+> **Gemini:** Full-body portrait of a 44-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Short dark hair. Warm brown eyes. Short dark hair with early grey at the temples. Dark brown eyes, tired. Photorealistic. Cinematic directional lighting. Background: a frontier settlement with prefab structures under pale amber sky.
+> **Grok:** Ultra-realistic portrait. A 44-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Short dark hair greying at temples. Worn utility jacket over layered frontier clothing. Warm olive complexion. Background: dusty settlement with low metallic buildings under wide sky.
 
 ---
 
@@ -6820,8 +6816,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Thick dark hair, slightly unkempt. Dark brown eyes with an anxious, watchful expression. Lean build, standing near a console with one hand resting on headphones around his neck. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a dim communications room with flickering displays.
-> **Grok:** Ultra-realistic portrait. A 31-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Dark utility coveralls with comm patches. Warm medium-brown skin. Background: shadowed communications array interior with blue-green indicator lights.
+> **Gemini:** Full-body portrait of a 31-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Black close-cropped. Black-brown eyes. Thick dark hair, slightly unkempt. Dark brown eyes with an anxious, watchful expression. Photorealistic. Cinematic directional lighting. Background: a dim communications room with flickering displays.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Dark utility coveralls with comm patches. Warm brown complexion. Background: shadowed communications array interior with blue-green indicator lights.
 
 ---
 
@@ -6846,8 +6842,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Light brown hair cropped short. Pale blue-grey eyes with deep fatigue lines. Tall, lean frame, hands calloused. Photorealistic. Photorealistic. Cinematic directional lighting. Background: open frontier farmland with dark soil and distant prefab greenhouses.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Fair skin with sun damage. Stained work coveralls with rolled sleeves. Cinematic lighting. Background: frontier agricultural field with alien-tinted soil under pale sky.
+> **Gemini:** Full-body portrait of a 38-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Short blonde hair. Blue eyes. Light brown hair cropped short. Pale blue-grey eyes with deep fatigue lines. Photorealistic. Cinematic directional lighting. Background: open frontier farmland with dark soil and distant prefab greenhouses.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Fair skin with sun damage. Stained work coveralls with rolled sleeves. Cinematic lighting. Background: frontier agricultural field with alien-tinted soil under pale sky.
 
 ---
 
@@ -6872,8 +6868,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Dark hair streaked with silver, pulled back. Dark brown eyes, sharp and judicial. Standing posture, arms at sides, chin raised. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier courtroom — makeshift, clean, with Concord insignia on the wall.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Dark hair with silver streaks pulled back. Formal frontier magistrate's coat over practical clothing. Warm olive skin. Background: austere frontier judicial chamber with natural light through narrow windows.
+> **Gemini:** Full-body portrait of a 52-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Chestnut hair arranged. Hazel eyes. Dark hair streaked with silver, pulled back. Dark brown eyes, sharp and judicial. Photorealistic. Cinematic directional lighting. Background: a frontier courtroom — makeshift, clean, with Concord insignia on the wall.
+> **Grok:** Ultra-realistic portrait. A 52-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Light warm complexion with southern european-latin tone. Dark hair with silver streaks pulled back. Warm complexion with southern european-latin. Background: austere frontier judicial chamber with natural light through narrow windows.
 
 ---
 
@@ -6898,8 +6894,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Sandy blonde hair, short and practical. Grey-blue eyes with a guarded, wary expression. Medium build, hands scarred from electrical work. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier power station with exposed conduit and humming generators.
-> **Grok:** Ultra-realistic portrait. A 27-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Fair skin with small burn scars on hands. Heavy-duty technician's vest with tool loops. Warm amber lighting from conventional generat. Background: industrial power station interior with warm amber lighting from conventional generators.
+> **Gemini:** Full-body portrait of a 27-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Short blonde hair. Pale green eyes. Sandy blonde hair, short and practical. Grey-blue eyes with a guarded, wary expression. Photorealistic. Cinematic directional lighting. Background: a frontier power station with exposed conduit and humming generators.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Fair skin with small burn scars on hands. Heavy-duty technician's vest with tool loops. Warm amber lighting from conventional generat. Background: industrial power station interior with warm amber lighting from conventional generators.
 
 ---
 
@@ -6924,8 +6920,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Dark straight hair, slightly windswept. Dark brown eyes, intense and focused. Lean build carrying survey equipment. Photorealistic. Photorealistic. Warm light. Background: an alien plateau with subtly wrong geometry under overcast sky.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Field survey jacket with multiple pockets and a slung instrument case. Warm light. Background: rocky frontier terrain with an eerie quality to the horizon line.
+> **Gemini:** Full-body portrait of a 35-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Neat dark hair. Black-brown eyes. Dark straight hair, slightly windswept. Dark brown eyes, intense and focused. Photorealistic. Warm light. Background: an alien plateau with subtly wrong geometry under overcast sky.
+> **Grok:** Ultra-realistic portrait. A 35-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Field survey jacket with multiple pockets and a slung instrument case. Warm light. Background: rocky frontier terrain with an eerie quality to the horizon line.
 
 ---
 
@@ -6950,8 +6946,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Cinematic directional lighting. Photorealistic. Warm light. Background: a well-organized frontier supply depot with stacked containers.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Clean depot manager's uniform with inventory tablet in hand. Warm light. Background: orderly supply warehouse with labeled containers under fluorescent lighting.
+> **Gemini:** Full-body portrait of a 41-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Short black hair. Dark brown eyes. Cinematic directional lighting. Photorealistic. Photorealistic. Warm light. Background: a well-organized frontier supply depot with stacked containers.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Clean depot manager's uniform with inventory tablet in hand. Warm light. Background: orderly supply warehouse with labeled containers under fluorescent lighting.
 
 ---
 
@@ -6976,8 +6972,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. in a practical bun with silver threads. Dark brown eyes, compassionate but wary. Medium build in a medical coat over frontier clothing. Photorealistic. Cinematic directional lighting. Background: a frontier clinic interior with mismatched equipment and handwritten charts on the wall.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Dark hair with silver in a bun. Medical coat over layered frontier clothing. Warm complexion. Background: small frontier medical clinic with analog instruments and paper records.
+> **Gemini:** Full-body portrait of a 48-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. in a practical bun with silver threads. Dark brown eyes, compassionate but wary. Medium build in a medical coat over frontier clothing. Photorealistic. Cinematic directional lighting. Background: a frontier clinic interior with mismatched equipment and handwritten charts on the wall.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Light porcelain complexion with cool undertone. Dark hair with silver in a bun. Cool undertone. Background: small frontier medical clinic with analog instruments and paper records.
 
 ---
 
@@ -7002,8 +6998,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Dark straight hair, dusty from construction work. Dark brown eyes, focused and determined. Athletic build in construction safety gear. Photorealistic. Photorealistic. Warm light. Background: a frontier construction site with a half-built structure and exposed foundation.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Heavy construction jacket with safety harness. Warm light. Background: frontier building site with raw materials and structural scaffolding.
+> **Gemini:** Full-body portrait of a 33-year-old Filipino woman. Warm tan complexion with golden undertone. Black hair arranged clean. Black-brown eyes. Short black hair. Deep brown eyes. Dark straight hair, dusty from construction work. Dark brown eyes, focused and determined. Photorealistic. Warm light. Background: a frontier construction site with a half-built structure and exposed foundation.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Filipino woman. Warm tan complexion with golden undertone. Black hair arranged clean. Black-brown eyes. Heavy construction jacket with safety harness. Warm light. Background: frontier building site with raw materials and structural scaffolding.
 
 ---
 
@@ -7028,8 +7024,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Filipino woman. Warm tan complexion with golden undertone. Black hair arranged clean. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: a small Lattice relay station with pulsing indicators in a dim room.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Filipino woman. Warm tan complexion with golden undertone. Black hair arranged clean. Black-brown eyes. Relay operator's uniform with comm headset around neck. Warm medium complexion. Background: cramped Lattice relay station with blue-lit console panels.
+> **Gemini:** Full-body portrait of a 29-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Photorealistic. Cinematic directional lighting. Background: a small Lattice relay station with pulsing indicators in a dim room.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Warm tan complexion with golden undertone. Black hair arranged clean. Warm tan complexion with golden undertone. Background: cramped Lattice relay station with blue-lit console panels.
 
 ---
 
@@ -7054,8 +7050,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Silver-blonde hair cropped military-short. Pale blue eyes, watchful and strained. Tall, broad-shouldered, standing with arms crossed. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier settlement perimeter at dusk with sensor posts and distant dark terrain.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Security uniform with tactical vest. Cinematic lighting. Background: settlement perimeter fence at twilight with sensor equipment.
+> **Gemini:** Full-body portrait of a 46-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Short platinum blonde. Pale blue eyes. Silver-blonde hair cropped military-short. Pale blue eyes, watchful and strained. Photorealistic. Cinematic directional lighting. Background: a frontier settlement perimeter at dusk with sensor posts and distant dark terrain.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Security uniform with tactical vest. Cinematic lighting. Background: settlement perimeter fence at twilight with sensor equipment.
 
 ---
 
@@ -7080,8 +7076,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Dark blonde hair, short. Grey-green eyes, earnest and burdened expression. Medium build in water systems technician gear. Photorealistic. Photorealistic. Cinematic directional lighting. Background: underground aquifer access point with pipes and monitoring equipment.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Fair skin with Slavic bone structure. Water technician's coveralls with chemical testing kit. Cinematic lighting. Background: underground water treatment facility with metallic pipes and blue-tinted lighting.
+> **Gemini:** Full-body portrait of a 36-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Close-cropped dark blonde. Grey eyes. Dark blonde hair, short. Grey-green eyes, earnest and burdened expression. Photorealistic. Cinematic directional lighting. Background: underground aquifer access point with pipes and monitoring equipment.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Close-cropped dark blonde. Fair skin with Slavic bone structure. Cinematic lighting. Background: underground water treatment facility with metallic pipes and blue-tinted lighting.
 
 ---
 
@@ -7106,8 +7102,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Dark brown eyes, sharp and frustrated. Lean build in field research clothing with botanical collection tools. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an alien forest with bioluminescent plants and unusual leaf structures.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Field botanist's vest with sample containers and magnification loupe. Warm complexion. Background: frontier wilderness with alien vegetation in muted green and violet tones.
+> **Gemini:** Full-body portrait of a 39-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. in field research clothing with botanical collection tools. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an alien forest with bioluminescent plants and unusual leaf structures.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Light even complexion with warm undertone. Field botanist's vest with sample containers and magnification loupe. Warm undertone. Background: frontier wilderness with alien vegetation in muted green and violet tones.
 
 ---
 
@@ -7132,8 +7128,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Cinematic directional lighting. Photorealistic. Warm light. Background: a frontier shuttle bay with a small craft and open sky beyond.
-> **Grok:** Ultra-realistic portrait. A 26-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Warm light-brown complexion. Frontier pilot's flight suit with manual nav tools clipped to chest. Warm light. Background: shuttle cockpit with manual instruments and wide viewport.
+> **Gemini:** Full-body portrait of a 26-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Close-cropped dark hair. Deep brown eyes. Cinematic directional lighting. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier shuttle bay with a small craft and open sky beyond.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Warm light-brown complexion. Frontier pilot's flight suit with manual nav tools clipped to chest. Warm brown complexion. Background: shuttle cockpit with manual instruments and wide viewport.
 
 ---
 
@@ -7158,8 +7154,8 @@ Outermost explored and settled worlds. Concord authority is thin, enforcement sp
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Dark hair with silver at the temples, neatly kept. Dark brown eyes, analytical and restless. Medium build in assessor's formal frontier attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a KALON assessment office with holographic flow charts and Lattice readout displays.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Pakistani man. Warm medium-brown complexion. Dark hair short. Dark brown eyes. Dark hair greying at temples. Medium-brown skin with South Asian features. Warm medium-brown skin. Background: frontier assessment office with glowing flow diagrams on wall displays.
+> **Gemini:** Full-body portrait of a 43-year-old South Indian woman. Rich warm brown complexion. Dark black hair neat. Deep brown eyes. Dark hair short. Dark brown eyes. Dark hair with silver at the temples, neatly kept. Dark brown eyes, analytical and restless. Photorealistic. Cinematic directional lighting. Background: a KALON assessment office with holographic flow charts and Lattice readout displays.
+> **Grok:** Ultra-realistic portrait. A 43-year-old South Indian woman. Rich warm brown complexion. Dark black hair neat. Deep brown eyes. Warm medium-brown complexion. Dark hair greying at temples. Warm medium-brown complexion. Background: frontier assessment office with glowing flow diagrams on wall displays.
 
 ---
 
@@ -7190,8 +7186,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old South Indian woman. Rich warm brown complexion. Dark black hair neat. Deep brown eyes. Dark hair with prominent silver strands, pulled into a low knot. Dark brown eyes, commanding and guarded. Medium build with the bearing of someone accustomed to authority. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a bustling trade station with cargo manifests and holographic route maps.
-> **Grok:** Ultra-realistic portrait. A 55-year-old South Indian woman. Rich warm brown complexion. Dark black hair neat. Deep brown eyes. Dark hair with silver, tied back. Practical but expensive trader's coat with KALON credit chips visible in breast pocket. Warm deep-brown skin. Background: trade hub interior with stacked cargo and glowing manifests.
+> **Gemini:** Full-body portrait of a 55-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Dark black hair neat. Deep brown eyes. Dark hair with prominent silver strands, pulled into a low knot. Dark brown eyes, commanding and guarded. Photorealistic. Cinematic directional lighting. Background: a bustling trade station with cargo manifests and holographic route maps.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Rich warm brown complexion. Dark hair with silver, tied back. Warm brown complexion. Background: trade hub interior with stacked cargo and glowing manifests.
 
 ---
 
@@ -7216,8 +7212,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a cargo bay interior with secured crates and manifest screens.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Warm medium-brown complexion. Hauler's leather jacket over utility layers. Warm medium-brown complexion. Background: freighter cargo hold with netting and heavy containers.
+> **Gemini:** Full-body portrait of a 37-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Chestnut brown hair. Pale blue eyes. Dark hair short. Deep brown eyes. Cinematic directional lighting. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a cargo bay interior with secured crates and manifest screens.
+> **Grok:** Ultra-realistic portrait. A 37-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Chestnut brown hair. Pale blue eyes. Warm tan-brown complexion. Warm medium-brown complexion. Warm tan-brown complexion. Background: freighter cargo hold with netting and heavy containers.
 
 ---
 
@@ -7242,8 +7238,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Chestnut brown hair. Pale blue eyes. Auburn hair, shoulder length, slightly wavy. Grey-green eyes, penetrating and composed. Slim build in understated but expensive trading-floor attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private office with multiple market displays showing KALON flow charts.
-> **Grok:** Ultra-realistic portrait. A 42-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Chestnut brown hair. Pale blue eyes. Auburn shoulder-length hair. Tailored dark jacket over a high-collared blouse. Cinematic lighting. Background: sleek private trading office with blue-lit KALON market displays.
+> **Gemini:** Full-body portrait of a 42-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Chestnut brown hair. Pale blue eyes. Auburn hair, shoulder length, slightly wavy. Grey-green eyes, penetrating and composed. Photorealistic. Cinematic directional lighting. Background: a private office with multiple market displays showing KALON flow charts.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Fair complexion, light freckles. Auburn shoulder-length hair. Cinematic lighting. Background: sleek private trading office with blue-lit KALON market displays.
 
 ---
 
@@ -7268,8 +7264,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a narrow ship corridor with cargo netting and a viewport showing transit space.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Worn courier's jacket with hidden pockets. Warm complexion. Background: small cargo ship interior with minimal decoration and functional fixtures.
+> **Gemini:** Full-body portrait of a 24-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Short black hair. Dark brown eyes. Cinematic directional lighting. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a narrow ship corridor with cargo netting and a viewport showing transit space.
+> **Grok:** Ultra-realistic portrait. A 24-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Light complexion with cool undertone. Worn courier's jacket with hidden pockets. Cool undertone. Background: small cargo ship interior with minimal decoration and functional fixtures.
 
 ---
 
@@ -7294,8 +7290,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Dark hair streaked with grey, neatly kept. Dark brown eyes, contemplative and weary. Medium build in scholar's attire that has seen better days. Photorealistic. Photorealistic. Warm light. Background: a study filled with data projections of historical trade route maps, warm amber lighting.
-> **Grok:** Ultra-realistic portrait. A 50-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Light warm skin aged with lines. Worn academic jacket over comfortable clothing. Warm light. Background: a cluttered research office with projected route maps on walls.
+> **Gemini:** Full-body portrait of a 50-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Neat dark hair. Warm brown eyes. Dark hair streaked with grey, neatly kept. Dark brown eyes, contemplative and weary. Photorealistic. Warm light. Background: a study filled with data projections of historical trade route maps, warm amber lighting.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Light warm skin aged with lines. Worn academic jacket over comfortable clothing. Warm light. Background: a cluttered research office with projected route maps on walls.
 
 ---
 
@@ -7320,8 +7316,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. in a salvage dealer's practical gear with tool belt. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a frontier salvage yard with stacked wreckage and scattered components.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Salvage dealer's heavy jacket with multiple tool loops. Warm olive complexion. Background: open-air salvage yard with metallic debris under hazy sky.
+> **Gemini:** Full-body portrait of a 34-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. in a salvage dealer's practical gear with tool belt. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a frontier salvage yard with stacked wreckage and scattered components.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Salvage dealer's heavy jacket with multiple tool loops. Warm olive complexion. Background: open-air salvage yard with metallic debris under hazy sky.
 
 ---
 
@@ -7346,8 +7342,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Dark hair, receding slightly, well-groomed. Dark brown eyes, cautious and meticulous. Medium build in neat business attire suitable for a trade hub. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a busy freight exchange office with contract displays and communication terminals.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Dark receding hair, groomed. Crisp business jacket over trade-floor attire. Warm olive complexion. Background: freight brokerage interior with contract screens and manifests.
+> **Gemini:** Full-body portrait of a 40-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Short black hair. Chestnut brown eyes. Dark hair, receding slightly, well-groomed. Dark brown eyes, cautious and meticulous. Photorealistic. Cinematic directional lighting. Background: a busy freight exchange office with contract displays and communication terminals.
+> **Grok:** Ultra-realistic portrait. A 40-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark receding hair, groomed. Crisp business jacket over trade-floor attire. Warm olive complexion. Background: freight brokerage interior with contract screens and manifests.
 
 ---
 
@@ -7372,8 +7368,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark hair with grey, short and neat. Dark brown eyes behind thin-framed spectacles, expression steady and unyielding. Medium build in professional but worn clothing. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private office with financial projections and KALON flow diagrams stacked on every surface.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark brown eyes behind spectacles. Professional but slightly shabby suit. Warm complexion. Background: modest office crammed with KALON audit records and data projections.
+> **Gemini:** Full-body portrait of a 47-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Short black hair. Dark brown eyes. Dark hair with grey, short and neat. Dark brown eyes behind thin-framed spectacles, expression steady and unyielding. Photorealistic. Cinematic directional lighting. Background: a private office with financial projections and KALON flow diagrams stacked on every surface.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Light complexion with cool undertone. Dark brown eyes behind spectacles. Cool undertone. Background: modest office crammed with KALON audit records and data projections.
 
 ---
 
@@ -7398,8 +7394,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Dark hair, loose to shoulders. Dark brown eyes, sharp and assessing. Medium build in practical frontier clothing with an appraiser's loupe on a chain. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private appraisal room with artifacts on felt-lined trays under focused light.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Chestnut hair arranged. Hazel eyes. Dark shoulder-length hair. Practical jacket with appraiser's tools and magnification lenses. Warm olive complexion. Background: small artifact appraisal chamber with focused lighting and examination surfaces.
+> **Gemini:** Full-body portrait of a 38-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Chestnut hair arranged. Hazel eyes. Dark hair, loose to shoulders. Dark brown eyes, sharp and assessing. Photorealistic. Cinematic directional lighting. Background: a private appraisal room with artifacts on felt-lined trays under focused light.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Light warm complexion with southern european-latin tone. Dark shoulder-length hair. Warm complexion with southern european-latin. Background: small artifact appraisal chamber with focused lighting and examination surfaces.
 
 ---
 
@@ -7424,8 +7420,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Dark hair with silver streaks, styled simply. Dark brown eyes, warm but with a core of steel. Medium build in high-quality trader's attire that signals authority without ostentation. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private communications hub with multiple screens showing trade network status across worlds.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Korean woman. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Warm dark eyes. Elegant but practical high-collar trade coordinator's jacket. Warm complexion. Background: communications center with network displays and trade route holograms.
+> **Gemini:** Full-body portrait of a 51-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Dark hair with silver streaks, styled simply. Dark brown eyes, warm but with a core of steel. Medium build in high-quality trader's attire that signals authority without ostentation. Photorealistic. Cinematic directional lighting. Background: a private communications hub with multiple screens showing trade network status across worlds.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Light porcelain complexion with cool undertone. Black hair in a clean arrangement. Cool undertone. Background: communications center with network displays and trade route holograms.
 
 ---
 
@@ -7450,8 +7446,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Blonde hair thinning, combed back. Blue eyes, direct and unsettled. Tall, solid build in warehouse manager's clothing. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a vast frontier warehouse with stacked sealed crates, dim industrial lighting.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Dutch man. Fair complexion. Light brown short. Green eyes. Warehouse operator's vest over heavy shirt. Fair Northern European skin. Overhead light. Background: deep warehouse interior with rows of sealed containers under overhead lights.
+> **Gemini:** Full-body portrait of a 45-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Light brown short. Green eyes. Blonde hair thinning, combed back. Blue eyes, direct and unsettled. Photorealistic. Cinematic directional lighting. Background: a vast frontier warehouse with stacked sealed crates, dim industrial lighting.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Warehouse operator's vest over heavy shirt. Fair Northern European skin. Overhead light. Background: deep warehouse interior with rows of sealed containers under overhead lights.
 
 ---
 
@@ -7476,8 +7472,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Dark hair with auburn highlights, pulled back. Dark brown eyes, shrewd and resolute. Medium build in professional frontier attire — practical but authoritative. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier banking office with analog ledgers and a single secured terminal.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Mexican woman of Indigenous-Spanish heritage. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Dark brown eyes. Warm medium-brown complexion. Dark hair with auburn tints, tied back. Warm medium-brown complexion. Background: compact frontier financial office with secured storage and manual ledger systems.
+> **Gemini:** Full-body portrait of a 49-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Hazel eyes. Dark brown hair worn neat. Dark brown eyes. Dark hair with auburn highlights, pulled back. Dark brown eyes, shrewd and resolute. Photorealistic. Cinematic directional lighting. Background: a frontier banking office with analog ledgers and a single secured terminal.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Hazel eyes. Warm tan-brown complexion with indigenous-spanish heritage. Dark brown hair worn neat. Warm tan-brown complexion with indigenous-spa. Background: compact frontier financial office with secured storage and manual ledger systems.
 
 ---
 
@@ -7502,8 +7498,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 32-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Hazel eyes. in a mechanic's grease-stained coveralls. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a crowded ship repair workshop with components on shelves and a partially disassembled engine.
-> **Grok:** Ultra-realistic portrait. A 32-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Hazel eyes. Grease-stained mechanic's coveralls with tool harness. Cinematic lighting. Background: ship workshop interior with engine parts and diagnostic equipment.
+> **Gemini:** Full-body portrait of a 32-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. in a mechanic's grease-stained coveralls. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a crowded ship repair workshop with components on shelves and a partially disassembled engine.
+> **Grok:** Ultra-realistic portrait. A 32-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Grease-stained mechanic's coveralls with tool harness. Warm complexion. Background: ship workshop interior with engine parts and diagnostic equipment.
 
 ---
 
@@ -7528,8 +7524,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. in a navigator's jacket with analog instruments. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a ship's navigation station with star charts and Lattice overlay displays.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Light grey eyes. Navigator's dark jacket with celestial instruments clipped to chest. Cinematic lighting. Background: ship bridge with star charts and navigation displays showing gaps.
+> **Gemini:** Full-body portrait of a 29-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. in a navigator's jacket with analog instruments. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a ship's navigation station with star charts and Lattice overlay displays.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Navigator's dark jacket with celestial instruments clipped to chest. Cinematic lighting. Background: ship bridge with star charts and navigation displays showing gaps.
 
 ---
 
@@ -7554,8 +7550,8 @@ Merchants who operate on extreme, irregular, or unofficial trade routes. They mo
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Dark hair, professionally styled. Dark brown eyes, warm but scrutinizing. Medium build in diplomatic attire — formal but not ostentatious. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a negotiation chamber with two delegations' seats and a central Chronicle verification terminal.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Formal diplomatic jacket with trade liaison insignia. Warm olive complexion. Background: austere negotiation room with Chronicle access terminal and dual delegation seating.
+> **Gemini:** Full-body portrait of a 44-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Deep black hair. Hazel-brown eyes. Dark hair, professionally styled. Dark brown eyes, warm but scrutinizing. Photorealistic. Cinematic directional lighting. Background: a negotiation chamber with two delegations' seats and a central Chronicle verification terminal.
+> **Grok:** Ultra-realistic portrait. A 44-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Formal diplomatic jacket with trade liaison insignia. Warm olive complexion. Background: austere negotiation room with Chronicle access terminal and dual delegation seating.
 
 ---
 
@@ -7586,8 +7582,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. in a Survey Corps field uniform. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the interior of a Survey Corps expedition shuttle with mission displays and equipment racks.
-> **Grok:** Ultra-realistic portrait. A 36-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Survey Corps field jacket with team leader insignia. Survey corps field jacket with team leader insi. Background: expedition staging area with gear and survey equipment.
+> **Gemini:** Full-body portrait of a 36-year-old German woman. Fair complexion. Medium blonde hair. Grey eyes. in a Survey Corps field uniform. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the interior of a Survey Corps expedition shuttle with mission displays and equipment racks.
+> **Grok:** Ultra-realistic portrait. A 36-year-old German woman. Fair complexion. Medium blonde hair. Grey eyes. Survey Corps field jacket with team leader insignia. Survey corps field jacket with team leader insi. Survey corps field jacket with team leader insi. Background: expedition staging area with gear and survey equipment.
 
 ---
 
@@ -7612,8 +7608,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old German woman. Fair complexion. Medium blonde hair. Grey eyes. Grey-green eyes, intense and determined. Lean build in Survey Corps field gear with geological instruments. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a frontier geological survey site with exposed rock layers and subsurface scanning equipment.
-> **Grok:** Ultra-realistic portrait. A 33-year-old German woman. Fair complexion. Medium blonde hair. Grey eyes. Light brown hair in ponytail. Survey Corps geophysics uniform with sensor equipment. Survey corps geophysics uniform with sensor equ. Background: rocky frontier terrain with geological survey instruments and exposed strata.
+> **Gemini:** Full-body portrait of a 33-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Medium blonde hair. Grey eyes. Grey-green eyes, intense and determined. Lean build in Survey Corps field gear with geological instruments. Photorealistic. Cinematic directional lighting. Background: a frontier geological survey site with exposed rock layers and subsurface scanning equipment.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Light brown hair in ponytail. Survey Corps geophysics uniform with sensor equipment. Survey corps geophysics uniform with sensor equ. Background: rocky frontier terrain with geological survey instruments and exposed strata.
 
 ---
 
@@ -7638,8 +7634,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 28-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Dark hair, short. Dark brown eyes, earnest and slightly lost. Lean build in Survey Corps communications specialist uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a ship's communications bay with relay equipment and signal monitoring displays.
-> **Grok:** Ultra-realistic portrait. A 28-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Warm medium-brown complexion. Survey Corps comm specialist jumpsuit. Warm medium-brown complexion. Background: survey ship communications center with relay arrays and signal dashboards.
+> **Gemini:** Full-body portrait of a 28-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Short black hair. Warm dark eyes. Dark hair, short. Dark brown eyes, earnest and slightly lost. Photorealistic. Cinematic directional lighting. Background: a ship's communications bay with relay equipment and signal monitoring displays.
+> **Grok:** Ultra-realistic portrait. A 28-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Warm medium-brown complexion. Warm medium-brown complexion. Warm medium-brown complexion. Background: survey ship communications center with relay arrays and signal dashboards.
 
 ---
 
@@ -7664,8 +7660,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. in a Survey Corps medical officer's uniform with field medical kit. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a field medical station inside a survey ship with xenobiological sample containers.
-> **Grok:** Ultra-realistic portrait. A 40-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Survey Corps medical officer's uniform with emergency kit. Warm medium-brown skin. Background: expedition medical bay with containment equipment and biological sample storage.
+> **Gemini:** Full-body portrait of a 40-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. in a Survey Corps medical officer's uniform with field medical kit. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a field medical station inside a survey ship with xenobiological sample containers.
+> **Grok:** Ultra-realistic portrait. A 40-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Survey Corps medical officer's uniform with emergency kit. Warm brown complexion. Background: expedition medical bay with containment equipment and biological sample storage.
 
 ---
 
@@ -7690,8 +7686,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 30-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. in a Survey Corps pilot's flight suit. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a survey shuttle cockpit with dual navigation displays and manual controls.
-> **Grok:** Ultra-realistic portrait. A 30-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Survey Corps pilot's flight suit. Warm olive skin. Background: shuttle cockpit with manual instruments and viewport showing frontier space.
+> **Gemini:** Full-body portrait of a 30-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. in a Survey Corps pilot's flight suit. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a survey shuttle cockpit with dual navigation displays and manual controls.
+> **Grok:** Ultra-realistic portrait. A 30-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Survey Corps pilot's flight suit. Warm olive complexion. Background: shuttle cockpit with manual instruments and viewport showing frontier space.
 
 ---
 
@@ -7716,8 +7712,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Dark brown eyes, focused with dark circles of exhaustion. Slim build in a Survey Corps research uniform surrounded by audio analysis equipment. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a research lab with acoustic waveform displays on multiple screens.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Survey Corps researcher's uniform. Warm complexion. Background: xenolinguistics lab with sound analysis displays and spectrograms.
+> **Gemini:** Full-body portrait of a 37-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. in a Survey Corps research uniform surrounded by audio analysis equipment. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a research lab with acoustic waveform displays on multiple screens.
+> **Grok:** Ultra-realistic portrait. A 37-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Light even complexion with warm undertone. Black hair neatly arranged. Warm undertone. Background: xenolinguistics lab with sound analysis displays and spectrograms.
 
 ---
 
@@ -7742,8 +7738,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Dark hair, neat. Dark brown eyes, organized and vigilant. Sturdy build in Survey Corps quartermaster's uniform with inventory tools. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a supply depot with organized equipment racks and manifest displays.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Survey Corps quartermaster's uniform with inventory tablet. Warm olive skin. Background: orderly expedition supply staging area with packed equipment.
+> **Gemini:** Full-body portrait of a 34-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Dark brown short. Deep hazel. Dark hair, neat. Dark brown eyes, organized and vigilant. Photorealistic. Cinematic directional lighting. Background: a supply depot with organized equipment racks and manifest displays.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Survey Corps quartermaster's uniform with inventory tablet. Warm olive complexion. Background: orderly expedition supply staging area with packed equipment.
 
 ---
 
@@ -7768,8 +7764,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Photorealistic. Warm light. Background: a Lattice mapping station with three-dimensional node projections floating in the air.
-> **Grok:** Ultra-realistic portrait. A 42-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Survey Corps mapping specialist uniform. Warm light. Background: holographic Lattice node map display with clusters of connection lines.
+> **Gemini:** Full-body portrait of a 42-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Photorealistic. Warm light. Background: a Lattice mapping station with three-dimensional node projections floating in the air.
+> **Grok:** Ultra-realistic portrait. A 42-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Survey Corps mapping specialist uniform. Warm light. Background: holographic Lattice node map display with clusters of connection lines.
 
 ---
 
@@ -7794,8 +7790,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. in a Survey Corps field commander's uniform. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an expedition field camp on a frontier world with exposed rock and survey equipment.
-> **Grok:** Ultra-realistic portrait. A 45-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Survey Corps commander's field jacket with rank insignia. Survey corps commander's field jacket with rank. Background: frontier expedition camp with terrain vehicles and field equipment.
+> **Gemini:** Full-body portrait of a 45-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. in a Survey Corps field commander's uniform. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an expedition field camp on a frontier world with exposed rock and survey equipment.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Survey Corps commander's field jacket with rank insignia. Survey corps commander's field jacket with rank. Survey corps commander's field jacket with rank. Background: frontier expedition camp with terrain vehicles and field equipment.
 
 ---
 
@@ -7820,8 +7816,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Dark hair, neatly parted. Dark brown eyes, quiet and observant behind thin glasses. Slight build in Survey Corps archival division uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a classified archive room with sealed data containers and dim security lighting.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Dark brown eyes behind thin glasses. Survey Corps archival specialist uniform. Warm complexion. Background: secured archive facility with rows of sealed data storage under low amber light.
+> **Gemini:** Full-body portrait of a 31-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. Neatly trimmed black hair. Deep brown eyes. Dark hair, neatly parted. Dark brown eyes, quiet and observant behind thin glasses. Photorealistic. Cinematic directional lighting. Background: a classified archive room with sealed data containers and dim security lighting.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: secured archive facility with rows of sealed data storage under low amber light.
 
 ---
 
@@ -7846,8 +7842,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. in a high-ranking Survey Corps science officer's uniform. Cinematic directional lighting. Photorealistic. Warm light. Background: a Corps command center with classified briefing screens and a sealed archive door.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. Dark hair with silver, jaw length. Survey Corps Chief Science Officer uniform with rank insignia. Warm light. Background: Corps command facility with secured displays and formal briefing table.
+> **Gemini:** Full-body portrait of a 49-year-old Greek man. Warm olive complexion. Black close-cropped. Brown-black eyes. in a high-ranking Survey Corps science officer's uniform. Cinematic directional lighting. Photorealistic. Warm light. Background: a Corps command center with classified briefing screens and a sealed archive door.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Greek man. Warm olive complexion. Black close-cropped. Brown-black eyes. Dark hair with silver, jaw length. Survey Corps Chief Science Officer uniform with rank insignia. Warm light. Background: Corps command facility with secured displays and formal briefing table.
 
 ---
 
@@ -7872,8 +7868,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Greek man. Warm olive complexion. Black close-cropped. Brown-black eyes. Dark curly hair, short. Dark brown eyes, intense and restless. Sturdy build in Survey Corps geological survey gear. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier excavation site at the permitted depth with exposed rock layers.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Greek man. Warm olive complexion. Black close-cropped. Brown-black eyes. Survey Corps geological field gear with sample containers. Warm olive skin. Background: excavation trench with layered rock and depth measurement markers.
+> **Gemini:** Full-body portrait of a 35-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Black close-cropped. Brown-black eyes. Dark curly hair, short. Dark brown eyes, intense and restless. Photorealistic. Cinematic directional lighting. Background: a frontier excavation site at the permitted depth with exposed rock layers.
+> **Grok:** Ultra-realistic portrait. A 35-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Survey Corps geological field gear with sample containers. Warm olive complexion. Background: excavation trench with layered rock and depth measurement markers.
 
 ---
 
@@ -7898,8 +7894,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Light brown hair pulled back. Blue-grey eyes, precise and frustrated. Slim build in Survey Corps atmospheric research uniform with sampling equipment. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a portable atmospheric analysis station on a frontier world with wide alien sky.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Light brown hair, pulled back. Survey Corps atmospheric scientist uniform with analysis instruments. Survey corps atmospheric scientist uniform with. Background: open frontier terrain with atmospheric sampling masts and processing equipment.
+> **Gemini:** Full-body portrait of a 39-year-old Pakistani woman. Warm medium-brown complexion. Black hair arranged practical. Warm brown eyes. Light brown hair worn neat. Blue eyes. Light brown hair pulled back. Blue-grey eyes, precise and frustrated. Photorealistic. Cinematic directional lighting. Background: a portable atmospheric analysis station on a frontier world with wide alien sky.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Pakistani woman. Warm medium-brown complexion. Black hair arranged practical. Warm brown eyes. Light brown hair worn neat. Light brown hair, pulled back. Survey corps atmospheric scientist uniform with. Background: open frontier terrain with atmospheric sampling masts and processing equipment.
 
 ---
 
@@ -7924,8 +7920,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Pakistani woman. Warm medium-brown complexion. Black hair arranged practical. Warm brown eyes. Dark hair under a work cap. Dark brown eyes, calm and watchful. Athletic build in Survey Corps engineering coveralls with tools in hand. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a field engineering workshop with fabrication equipment and half-assembled instruments.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Pakistani woman. Warm medium-brown complexion. Black hair arranged practical. Warm brown eyes. Survey Corps engineer's coveralls. Warm medium-brown skin. Background: compact workshop with fabrication tools and instrument components.
+> **Gemini:** Full-body portrait of a 27-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Black hair arranged practical. Warm brown eyes. Dark hair under a work cap. Dark brown eyes, calm and watchful. Photorealistic. Cinematic directional lighting. Background: a field engineering workshop with fabrication equipment and half-assembled instruments.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Warm medium-brown complexion. Black hair arranged practical. Warm medium-brown complexion. Background: compact workshop with fabrication tools and instrument components.
 
 ---
 
@@ -7950,8 +7946,8 @@ Children who grew up inside the Survey Corps — raised on ships, in outposts, a
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Dark hair cut very short. Dark brown eyes, thoughtful and sorrowful. Medium build in Survey Corps academic uniform with a data tablet and stylus. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a historian's office with shelves of data crystals and projected timeline displays.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Survey Corps historian's uniform with academic insignia. Warm deep-brown skin. Background: study with shelves of records and a glowing timeline projection.
+> **Gemini:** Full-body portrait of a 43-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Close-cropped black hair. Warm dark brown eyes. Dark hair cut very short. Dark brown eyes, thoughtful and sorrowful. Photorealistic. Cinematic directional lighting. Background: a historian's office with shelves of data crystals and projected timeline displays.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Warm deep brown skin, caribbean features. Survey Corps historian's uniform with academic insignia. Warm deep brown skin, caribbean features. Background: study with shelves of records and a glowing timeline projection.
 
 ---
 
@@ -7982,8 +7978,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Dark hair with silver, swept back. Dark brown eyes, commanding and patient. Medium build in Assembly formal attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an Assembly chamber corridor with high ceilings and formal insignia.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Dark hair with silver swept back. Assembly delegate's formal coat with faction insignia. Warm olive complexion. Background: Assembly corridor with marble-like walls and formal lighting.
+> **Gemini:** Full-body portrait of a 53-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Warm dark hair practical. Green-brown eyes. Dark hair with silver, swept back. Dark brown eyes, commanding and patient. Photorealistic. Cinematic directional lighting. Background: an Assembly chamber corridor with high ceilings and formal insignia.
+> **Grok:** Ultra-realistic portrait. A 53-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Light warm complexion with southern european-latin tone. Dark hair with silver swept back. Warm complexion with southern european-latin. Background: Assembly corridor with marble-like walls and formal lighting.
 
 ---
 
@@ -8008,8 +8004,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Dark brown eyes, intelligent and wary. Slim build in Assembly staff attire. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly committee room with briefing displays and formal seating.
-> **Grok:** Ultra-realistic portrait. A 34-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Assembly analyst's professional attire. Warm deep-brown skin. Background: committee briefing room with data screens and formal table.
+> **Gemini:** Full-body portrait of a 34-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Dark brown eyes, intelligent and wary. Slim build in Assembly staff attire. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly committee room with briefing displays and formal seating.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Rich warm brown complexion. Black hair worn in a traditional style. Warm brown complexion. Background: committee briefing room with data screens and formal table.
 
 ---
 
@@ -8034,8 +8030,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Greying auburn hair. Blue-green eyes, burdened and resolute. Tall, slightly stooped build in Chronicle Magistrate's formal robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the Chronicle archive chamber — a vast formal space with data terminals and the glow of stored records.
-> **Grok:** Ultra-realistic portrait. A 56-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Fair complexion with ruddy undertone. Chronicle Magistrate's dark formal robes with judicial insignia. Formal robes with judicial insignia. Background: Chronicle archive with towering data stacks and formal judicial lighting.
+> **Gemini:** Full-body portrait of a 56-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Auburn short cropped. Blue-green eyes. Greying auburn hair. Blue-green eyes, burdened and resolute. Photorealistic. Cinematic directional lighting. Background: the Chronicle archive chamber — a vast formal space with data terminals and the glow of stored records.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Fair complexion with light freckles. Fair complexion with ruddy undertone. Formal robes with judicial insignia. Background: Chronicle archive with towering data stacks and formal judicial lighting.
 
 ---
 
@@ -8060,8 +8056,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 30-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Light brown hair. Blue-grey eyes, earnest and strained. Lean build in Assembly clerical attire, slightly disheveled from overwork. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a cluttered clerk's office with stacked petition documents and processing terminals.
-> **Grok:** Ultra-realistic portrait. A 30-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Fair skin with Slavic bone structure. Assembly clerk's attire, slightly wrinkled. Cinematic lighting. Background: bureaucratic office with petition documents and data terminals stacked high.
+> **Gemini:** Full-body portrait of a 30-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Short brown hair. Pale green eyes. Light brown hair. Blue-grey eyes, earnest and strained. Photorealistic. Cinematic directional lighting. Background: a cluttered clerk's office with stacked petition documents and processing terminals.
+> **Grok:** Ultra-realistic portrait. A 30-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Fair skin with Slavic bone structure. Assembly clerk's attire, slightly wrinkled. Cinematic lighting. Background: bureaucratic office with petition documents and data terminals stacked high.
 
 ---
 
@@ -8086,8 +8082,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Dark hair with grey at temples, neatly styled. Dark brown eyes, disciplined and frustrated. Medium build in Assembly formal attire with Expansionist faction insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a policy planning office with projected maps of unmapped frontier corridors.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Dark hair greying at temples. Assembly formal suit with Expansionist insignia. Warm complexion. Background: policy office with frontier expansion maps and planning displays.
+> **Gemini:** Full-body portrait of a 47-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Neatly trimmed black hair. Black-brown eyes. Dark hair with grey at temples, neatly styled. Dark brown eyes, disciplined and frustrated. Photorealistic. Cinematic directional lighting. Background: a policy planning office with projected maps of unmapped frontier corridors.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: policy office with frontier expansion maps and planning displays.
 
 ---
 
@@ -8112,8 +8108,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Blonde hair, short and neat. Blue eyes, direct and increasingly troubled. Medium build in Assembly regulatory inspector's uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a KALON processing facility with interface terminals and inspection equipment.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Dutch man. Fair complexion. Short blonde hair. Blue eyes. Assembly inspector's uniform with regulatory insignia. Fair Northern European skin. Cinematic lighting. Background: industrial KALON facility with interface panels and processing equipment.
+> **Gemini:** Full-body portrait of a 39-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Short blonde hair. Blue eyes. Blonde hair, short and neat. Blue eyes, direct and increasingly troubled. Photorealistic. Cinematic directional lighting. Background: a KALON processing facility with interface terminals and inspection equipment.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Assembly inspector's uniform with regulatory insignia. Fair Northern European skin. Cinematic lighting. Background: industrial KALON facility with interface panels and processing equipment.
 
 ---
 
@@ -8138,8 +8134,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Dark brown eyes, conflicted and kind. Medium build in Assembly Education Directorate professional attire. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an educational content development office with curriculum displays and learning materials.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Dark shoulder-length hair. Professional Education Directorate attire. Warm complexion. Background: curriculum development office with educational displays and document workstations.
+> **Gemini:** Full-body portrait of a 41-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Warm brown eyes. Black hair neatly arranged. Deep brown eyes. Dark brown eyes, conflicted and kind. Medium build in Assembly Education Directorate professional attire. Photorealistic. Cinematic directional lighting. Background: an educational content development office with curriculum displays and learning materials.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Warm brown eyes. Light even complexion with warm undertone. Black hair neatly arranged. Warm undertone. Background: curriculum development office with educational displays and document workstations.
 
 ---
 
@@ -8164,8 +8160,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Warm brown eyes. Dark hair heavily greyed, receding. Dark brown eyes, shrewd and weary. Medium build in expensive Assembly formal attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a secured committee chamber with classified briefing screens and heavy doors.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Iranian man of Persian heritage. Warm olive complexion. Dark hair short. Warm brown eyes. Warm medium-olive complexion. Olive complexion with Persian features. Warm medium-olive complexion. Background: high-security committee room with sealed briefing displays.
+> **Gemini:** Full-body portrait of a 58-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Dark hair short. Warm brown eyes. Dark hair heavily greyed, receding. Dark brown eyes, shrewd and weary. Photorealistic. Cinematic directional lighting. Background: a secured committee chamber with classified briefing screens and heavy doors.
+> **Grok:** Ultra-realistic portrait. A 58-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Warm medium-olive complexion. Olive complexion with Persian features. Warm olive complexion. Background: high-security committee room with sealed briefing displays.
 
 ---
 
@@ -8190,8 +8186,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Dark blonde hair, neatly combed. Blue eyes, analytical and restrained. Slim build in Assembly financial analyst attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a budget analysis office with financial projections and spending charts on multiple screens.
-> **Grok:** Ultra-realistic portrait. A 36-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Assembly analyst's professional attire. Cinematic lighting. Background: financial analysis office with budget displays and tabulated spending data.
+> **Gemini:** Full-body portrait of a 36-year-old South African woman. Warm deep brown skin with southern african features. Natural black hair neat. Warm dark brown eyes. Close-cropped brown hair. Steel blue eyes. Dark blonde hair, neatly combed. Blue eyes, analytical and restrained. Photorealistic. Cinematic directional lighting. Background: a budget analysis office with financial projections and spending charts on multiple screens.
+> **Grok:** Ultra-realistic portrait. A 36-year-old South African woman. Warm deep brown skin with southern african features. Natural black hair neat. Warm dark brown eyes. Assembly analyst's professional attire. Cinematic lighting. Background: financial analysis office with budget displays and tabulated spending data.
 
 ---
 
@@ -8216,8 +8212,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old South African woman. Warm deep brown skin with southern african features. Natural black hair neat. Warm dark brown eyes. Dark hair cropped close. Dark brown eyes, warm and determined. Strong build in professional Assembly attire with frontier development insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier development planning office with infrastructure projections on wall displays.
-> **Grok:** Ultra-realistic portrait. A 50-year-old South African woman. Warm deep brown skin with southern african features. Natural black hair neat. Warm dark brown eyes. Deep-brown skin with Southern African features. Assembly director's professional attire. Warm deep-brown skin. Background: development planning office with infrastructure maps and communication plans.
+> **Gemini:** Full-body portrait of a 50-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Natural black hair neat. Warm dark brown eyes. Dark hair cropped close. Dark brown eyes, warm and determined. Photorealistic. Cinematic directional lighting. Background: a frontier development planning office with infrastructure projections on wall displays.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Warm deep brown skin with southern african features. Deep-brown skin with Southern African features. Warm deep brown skin with southern african fe. Background: development planning office with infrastructure maps and communication plans.
 
 ---
 
@@ -8242,8 +8238,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Red-brown hair, short. Blue eyes, carefully neutral expression. Medium build in Assembly press liaison attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a press briefing room with Assembly insignia and communication terminals.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Fair complexion with freckles. Assembly press liaison's formal jacket. Formal jacket. Background: press briefing room with podium and Assembly branding.
+> **Gemini:** Full-body portrait of a 33-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Auburn short cropped. Blue-green eyes. Red-brown hair, short. Blue eyes, carefully neutral expression. Photorealistic. Cinematic directional lighting. Background: a press briefing room with Assembly insignia and communication terminals.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Fair complexion with light freckles. Fair complexion with freckles. Formal jacket. Background: press briefing room with podium and Assembly branding.
 
 ---
 
@@ -8268,8 +8264,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Dark hair greying, slicked back. Dark brown eyes, cold and calculating on the surface. Medium build in expensive Assembly formal attire. Photorealistic. Photorealistic. Warm light. Background: an Assembly party caucus room with sealed doors and strategy displays.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Greying dark hair slicked back. Expensive Assembly formal suit. Warm light. Background: Continuationist caucus room with party insignia and tactical planning displays.
+> **Gemini:** Full-body portrait of a 52-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Amber-brown eyes. Short black hair. Deep brown eyes. Dark hair greying, slicked back. Dark brown eyes, cold and calculating on the surface. Photorealistic. Warm light. Background: an Assembly party caucus room with sealed doors and strategy displays.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Amber-brown eyes. Greying dark hair slicked back. Expensive Assembly formal suit. Warm light. Background: Continuationist caucus room with party insignia and tactical planning displays.
 
 ---
 
@@ -8294,8 +8290,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Amber-brown eyes. Dark hair covered by a professional headscarf. Dark brown eyes, fierce and precise. Medium build in Assembly judiciary advocate's attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier tribunal chamber with legal displays and evidence presentation equipment.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Amber-brown eyes. Warm olive to medium-brown complexion. Dark hair under professional headscarf. Warm olive to medium-brown complexion. Background: tribunal hearing room with legal data displays and witness stands.
+> **Gemini:** Full-body portrait of a 45-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Deep brown eyes. Dark hair covered by a professional headscarf. Dark brown eyes, fierce and precise. Medium build in Assembly judiciary advocate's attire. Photorealistic. Cinematic directional lighting. Background: a frontier tribunal chamber with legal displays and evidence presentation equipment.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Deep brown eyes. Warm olive-brown complexion with middle eastern features. Dark hair in a clean style. Warm olive-brown complexion with middle easte. Background: tribunal hearing room with legal data displays and witness stands.
 
 ---
 
@@ -8320,8 +8316,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Deep brown eyes. Dark hair, very short. Dark brown eyes, meticulous and troubled. Lean build in Assembly Census Directorate professional attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a census data processing center with population maps and demographic charts.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Deep brown eyes. Deep warm-brown skin with East African features. Census Directorate professional attire. Cinematic lighting. Background: data processing office with population projections and census terminals.
+> **Gemini:** Full-body portrait of a 38-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Natural short hair. Dark expressive eyes. Close-cropped black hair. Deep brown eyes. Dark hair, very short. Dark brown eyes, meticulous and troubled. Photorealistic. Cinematic directional lighting. Background: a census data processing center with population maps and demographic charts.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Natural short hair. Dark expressive eyes. Rich deep brown skin, east african features. Deep warm-brown skin with East African features. Cinematic lighting. Background: data processing office with population projections and census terminals.
 
 ---
 
@@ -8346,8 +8342,8 @@ The politicians, administrators, and bureaucrats who operate the Concord's gover
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Natural short hair. Dark expressive eyes. Dark hair with grey, cropped. Dark brown eyes, dignified and frustrated. Tall, authoritative build in Assembly Ethics Commissioner's formal attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the Ethics Commission office — austere, formal, with governance documents displayed on the walls.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Natural short hair. Dark expressive eyes. Deep warm brown skin with West African features. Ethics Commissioner's formal dark suit with insignia. Warm brown skin with west african features. Background: formal ethics office with governance documents and Commissioner's seal.
+> **Gemini:** Full-body portrait of a 54-year-old South Indian woman. Rich warm brown complexion. Glossy black hair. Warm dark eyes. Natural short hair. Dark expressive eyes. Dark hair with grey, cropped. Dark brown eyes, dignified and frustrated. Photorealistic. Cinematic directional lighting. Background: the Ethics Commission office — austere, formal, with governance documents displayed on the walls.
+> **Grok:** Ultra-realistic portrait. A 54-year-old South Indian woman. Rich warm brown complexion. Glossy black hair. Warm dark eyes. Deep warm brown skin, west african features. Deep warm brown skin with West African features. Warm brown skin, west african features. Background: formal ethics office with governance documents and Commissioner's seal.
 
 ---
 
@@ -8378,8 +8374,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old South Indian woman. Rich warm brown complexion. Glossy black hair. Warm dark eyes. Dark hair with silver, loosely draped. Dark brown eyes, penetrating and contemplative. Medium build in Covenant scholar's robes with subtle scientific instruments. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Covenant study near a Lattice node with religious texts and data instruments side by side.
-> **Grok:** Ultra-realistic portrait. A 46-year-old South Indian woman. Rich warm brown complexion. Glossy black hair. Warm dark eyes. Covenant scholar's robes with discreet sensor equipment. Warm deep-brown skin. Background: Covenant frontier chapel-study with Lattice node visible through window.
+> **Gemini:** Full-body portrait of a 46-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Natural dark coils styled practical. Deep brown eyes. Glossy black hair. Warm dark eyes. Dark hair with silver, loosely draped. Dark brown eyes, penetrating and contemplative. Photorealistic. Cinematic directional lighting. Background: a Covenant study near a Lattice node with religious texts and data instruments side by side.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Natural dark coils styled practical. Deep brown eyes. Rich warm brown complexion. Covenant scholar's robes with discreet sensor equipment. Warm brown complexion. Background: Covenant frontier chapel-study with Lattice node visible through window.
 
 ---
 
@@ -8404,8 +8400,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 32-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Natural dark coils styled practical. Deep brown eyes. Dark curly hair, loose. Dark brown eyes, compassionate and uncertain. Slender build in Covenant frontier chaplain's robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a small frontier chapel with Lattice-inspired religious art and candlelight.
-> **Grok:** Ultra-realistic portrait. A 32-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Natural dark coils styled practical. Deep brown eyes. Covenant chaplain's simple robes. Warm brown complexion. Background: humble frontier chapel with Lattice-motif decorations and soft light.
+> **Gemini:** Full-body portrait of a 32-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Natural dark coils styled practical. Deep brown eyes. Dark curly hair, loose. Dark brown eyes, compassionate and uncertain. Photorealistic. Cinematic directional lighting. Background: a small frontier chapel with Lattice-inspired religious art and candlelight.
+> **Grok:** Ultra-realistic portrait. A 32-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Warm brown complexion with brazilian mixed heritage. Natural dark coils styled practical. Warm brown complexion with brazilian mixed he. Background: humble frontier chapel with Lattice-motif decorations and soft light.
 
 ---
 
@@ -8430,8 +8426,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Dark hair under a Covenant head covering. Dark brown eyes, precise and anxious. Medium build in Covenant archivist's formal robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the Archive of Revelations — shelves of recorded testimonies and a central database terminal.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Iranian woman of Persian heritage. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Dark brown eyes. Warm medium-olive complexion. Olive complexion with Persian features. Warm medium-olive complexion. Background: archive chamber with organized testimony records and data terminals.
+> **Gemini:** Full-body portrait of a 44-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Dark brown hair worn neat. Dark brown eyes. Dark hair under a Covenant head covering. Dark brown eyes, precise and anxious. Photorealistic. Cinematic directional lighting. Background: the Archive of Revelations — shelves of recorded testimonies and a central database terminal.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Warm medium-olive complexion with persian features. Dark brown hair worn neat. Warm medium-olive complexion with persian fea. Background: archive chamber with organized testimony records and data terminals.
 
 ---
 
@@ -8456,8 +8452,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Dark curly hair with dust from construction. Dark brown eyes, broad and haunted. Large, powerful build in work clothes covered in concrete dust. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a half-built frontier chapel with construction materials and an open foundation pit.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Construction work clothes with concrete dust. Warm olive skin. Background: frontier chapel construction site with stone and building materials.
+> **Gemini:** Full-body portrait of a 40-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Black close-cropped. Warm hazel. Dark curly hair with dust from construction. Dark brown eyes, broad and haunted. Photorealistic. Cinematic directional lighting. Background: a half-built frontier chapel with construction materials and an open foundation pit.
+> **Grok:** Ultra-realistic portrait. A 40-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Construction work clothes with concrete dust. Warm olive complexion. Background: frontier chapel construction site with stone and building materials.
 
 ---
 
@@ -8482,8 +8478,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Dark hair with silver at temples. Dark brown eyes, calm but troubled. Lean build in Covenant missionary's robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier Covenant mission building with World 496's landscape stretching to the horizon.
-> **Grok:** Ultra-realistic portrait. A 42-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Covenant missionary's simple robes. Warm olive complexion. Background: small frontier mission with vast empty landscape beyond.
+> **Gemini:** Full-body portrait of a 42-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Short dark hair. Warm brown eyes. Dark hair with silver at temples. Dark brown eyes, calm but troubled. Photorealistic. Cinematic directional lighting. Background: a frontier Covenant mission building with World 496's landscape stretching to the horizon.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Covenant missionary's simple robes. Warm olive complexion. Background: small frontier mission with vast empty landscape beyond.
 
 ---
 
@@ -8508,8 +8504,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Dark hair, slightly long for a Covenant figure. Dark brown eyes, intense and yearning. Slim build in Covenant Cantor's performance robes with a resonance harp. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Covenant performance chamber near a Lattice node with acoustic panels and soft node-glow.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Black-brown eyes. Covenant Cantor's robes with resonance instrument. Warm complexion. Background: acoustic performance space near a glowing Lattice node.
+> **Gemini:** Full-body portrait of a 36-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Neatly trimmed black hair. Black-brown eyes. Dark hair, slightly long for a Covenant figure. Dark brown eyes, intense and yearning. Photorealistic. Cinematic directional lighting. Background: a Covenant performance chamber near a Lattice node with acoustic panels and soft node-glow.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: acoustic performance space near a glowing Lattice node.
 
 ---
 
@@ -8534,8 +8530,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Red-auburn hair streaked with grey, loose. Green eyes, compassionate and deeply tired. Medium build in Covenant counsellor's informal robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a quiet counselling room with warm lighting, Covenant texts, and a window overlooking a settlement.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Fair complexion with freckles. Red-auburn hair with grey. Soft robes. Background: warm counselling space with Covenant books and calming ambient light.
+> **Gemini:** Full-body portrait of a 48-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Red-auburn hair worn loose. Green eyes. Red-auburn hair streaked with grey, loose. Green eyes, compassionate and deeply tired. Photorealistic. Cinematic directional lighting. Background: a quiet counselling room with warm lighting, Covenant texts, and a window overlooking a settlement.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Very fair complexion with freckles. Red-auburn hair worn loose. Soft robes. Background: warm counselling space with Covenant books and calming ambient light.
 
 ---
 
@@ -8560,8 +8556,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Dark hair heavily greyed, unkempt. Dark brown eyes behind thick spectacles, expression of deep weariness. Thin build in Covenant scholar's robes surrounded by manuscript fragments. Photorealistic. Photorealistic. Warm light. Background: a translation workshop with projected text fragments and linguistic analysis tools.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Dark brown eyes behind thick glasses. Covenant scholar's worn robes. Warm light. Background: dim manuscript study with projected pre-Founding text and reference materials.
+> **Gemini:** Full-body portrait of a 53-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Neat dark hair. Warm brown eyes. Dark hair heavily greyed, unkempt. Dark brown eyes behind thick spectacles, expression of deep weariness. Photorealistic. Warm light. Background: a translation workshop with projected text fragments and linguistic analysis tools.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Dark brown eyes behind thick glasses. Covenant scholar's worn robes. Warm light. Background: dim manuscript study with projected pre-Founding text and reference materials.
 
 ---
 
@@ -8586,8 +8582,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 30-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Photorealistic. Cinematic directional lighting. Background: a frontier road with a Lattice node visible in the middle distance.
-> **Grok:** Ultra-realistic portrait. A 30-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Covenant pilgrim guide's robes with travel gear. Warm complexion. Background: frontier path with distant Lattice node glowing on horizon.
+> **Gemini:** Full-body portrait of a 30-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: a frontier road with a Lattice node visible in the middle distance.
+> **Grok:** Ultra-realistic portrait. A 30-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Light complexion with cool undertone. Covenant pilgrim guide's robes with travel gear. Cool undertone. Background: frontier path with distant Lattice node glowing on horizon.
 
 ---
 
@@ -8612,8 +8608,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Black hair, short. Dark brown eyes, warm but anxious. Medium build in Covenant community organizer's practical robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier Covenant settlement with communal buildings and a Lattice node at center.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm medium-brown complexion. Covenant organizer's robes. Warm medium-brown complexion. Background: frontier Covenant settlement with communal structures and distant node.
+> **Gemini:** Full-body portrait of a 35-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Black close-cropped. Black-brown eyes. Black hair, short. Dark brown eyes, warm but anxious. Photorealistic. Cinematic directional lighting. Background: a frontier Covenant settlement with communal buildings and a Lattice node at center.
+> **Grok:** Ultra-realistic portrait. A 35-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Warm tan-brown complexion. Warm medium-brown complexion. Warm tan-brown complexion. Background: frontier Covenant settlement with communal structures and distant node.
 
 ---
 
@@ -8638,8 +8634,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. White-blonde hair, long for his culture, slightly wild. Pale blue eyes, sharp and defiant. Lean, angular build in worn civilian clothing — no Covenant robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a sparse private study with forbidden texts and manuscript drafts scattered on a desk.
-> **Grok:** Ultra-realistic portrait. A 50-year-old Scandinavian man of Nordic heritage. Very fair complexion. Short platinum blonde. Pale blue eyes. Worn civilian jacket — no religious insignia. Cinematic lighting. Background: austere personal study with scattered texts and handwritten notes.
+> **Gemini:** Full-body portrait of a 50-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Short platinum blonde. Pale blue eyes. White-blonde hair, long for his culture, slightly wild. Pale blue eyes, sharp and defiant. Photorealistic. Cinematic directional lighting. Background: a sparse private study with forbidden texts and manuscript drafts scattered on a desk.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Worn civilian jacket — no religious insignia. Cinematic lighting. Background: austere personal study with scattered texts and handwritten notes.
 
 ---
 
@@ -8664,8 +8660,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 28-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. in a Covenant chapel, the node glowing softly. Photorealistic. Cinematic directional lighting. Background: a Lattice node alcove in a Covenant chapel, the node glowing softly.
-> **Grok:** Ultra-realistic portrait. A 28-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Deep amber eyes. Covenant Node Tender's robes with tools. Warm olive complexion. Background: Lattice node chamber with soft glow and Covenant religious fixtures.
+> **Gemini:** Full-body portrait of a 28-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. in a Covenant chapel, the node glowing softly. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Lattice node alcove in a Covenant chapel, the node glowing softly.
+> **Grok:** Ultra-realistic portrait. A 28-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Covenant Node Tender's robes with tools. Warm olive complexion. Background: Lattice node chamber with soft glow and Covenant religious fixtures.
 
 ---
 
@@ -8690,8 +8686,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Dark brown hair with auburn tint. Blue-green eyes, charismatic but guilt-shadowed. Medium build in Covenant outreach minister's approachable robes. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Covenant outreach center on a mid-range world with community gathering space.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Pale blue eyes. Cinematic lighting. Background: welcoming Covenant community center with gathering benches and informational displays.
+> **Gemini:** Full-body portrait of a 38-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Red-brown hair short. Pale blue eyes. Dark brown hair with auburn tint. Blue-green eyes, charismatic but guilt-shadowed. Photorealistic. Cinematic directional lighting. Background: a Covenant outreach center on a mid-range world with community gathering space.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Fair complexion with light freckles. Cinematic lighting. Background: welcoming Covenant community center with gathering benches and informational displays.
 
 ---
 
@@ -8716,8 +8712,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Dark hair heavily silvered. Dark brown eyes, scholarly and burdened. Medium build in Covenant academic's robes with historian's insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a historical research library with Covenant founding documents and projected archival records.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Covenant historian's robes. Warm complexion. Background: Covenant library with founding documents and historical projections.
+> **Gemini:** Full-body portrait of a 55-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Close-cropped black hair. Clear dark eyes. Dark hair heavily silvered. Dark brown eyes, scholarly and burdened. Photorealistic. Cinematic directional lighting. Background: a historical research library with Covenant founding documents and projected archival records.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Light complexion with cool undertone. Covenant historian's robes. Cool undertone. Background: Covenant library with founding documents and historical projections.
 
 ---
 
@@ -8742,8 +8738,8 @@ Religious figures operating at the frontier, where the Covenant's theology — t
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Dark hair cropped very close. Dark brown eyes, vigilant and grounded. Powerful build in Covenant security attire with practical frontier equipment. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Covenant settlement perimeter with a Lattice node chapel visible and security monitoring equipment.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Dark expressive eyes. Deep warm brown skin with West African features. Covenant security vest over practical clothing. Warm brown skin with west african features. Background: Covenant settlement with node chapel and security perimeter.
+> **Gemini:** Full-body portrait of a 43-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm dark brown eyes. Close-cropped black hair. Dark expressive eyes. Dark hair cropped very close. Dark brown eyes, vigilant and grounded. Photorealistic. Cinematic directional lighting. Background: a Covenant settlement perimeter with a Lattice node chapel visible and security monitoring equipment.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm dark brown eyes. Deep brown skin, west african features. Deep warm brown skin with West African features. Warm brown skin with west african features. Background: Covenant settlement with node chapel and security perimeter.
 
 ---
 
@@ -8774,8 +8770,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm dark brown eyes. Grey-streaked dark hair in short natural style. Dark brown eyes, authoritative and deeply concerned. Strong build in Lattice Technical senior engineer's uniform with specialized tools. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the interior of a primary Lattice node — vast, luminous, with visible infrastructure.
-> **Grok:** Ultra-realistic portrait. A 57-year-old Kenyan woman of East African heritage. Rich deep brown skin with east african features. Natural black hair in a neat style. Warm dark brown eyes. Grey-streaked natural dark hair. Deep warm-brown skin with East African features. Natural dark hair. Background: primary Lattice node interior with luminous infrastructure panels.
+> **Gemini:** Full-body portrait of a 57-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Warm hazel eyes. Grey-streaked dark hair in short natural style. Dark brown eyes, authoritative and deeply concerned. Strong build in Lattice Technical senior engineer's uniform with specialized tools. Photorealistic. Cinematic directional lighting. Background: the interior of a primary Lattice node — vast, luminous, with visible infrastructure.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Warm hazel eyes. Rich deep brown skin with east african features. Natural black hair in a neat style. Natural black hair in a neat style. Background: primary Lattice node interior with luminous infrastructure panels.
 
 ---
 
@@ -8800,8 +8796,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Warm hazel eyes. Dark hair, short and neat. Dark brown eyes, technical and quietly defiant. Medium build in Lattice Technical power systems uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Lattice power monitoring station with energy output displays and calibration equipment.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Warm hazel eyes. Warm olive to medium-brown complexion. Medium-brown skin with dark features. Warm olive to medium-brown complexion. Background: Lattice power station with energy flow displays and measurement instruments.
+> **Gemini:** Full-body portrait of a 41-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Dark hair short. Warm hazel eyes. Dark hair, short and neat. Dark brown eyes, technical and quietly defiant. Photorealistic. Cinematic directional lighting. Background: a Lattice power monitoring station with energy output displays and calibration equipment.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Warm olive to medium-brown complexion. Medium-brown skin with dark features. Warm olive complexion. Background: Lattice power station with energy flow displays and measurement instruments.
 
 ---
 
@@ -8826,8 +8822,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. in an EVA maintenance suit with tools. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: exterior of a Lattice cable junction in space with cable bundles and repair equipment.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Fair skin with Slavic features. Cinematic lighting. Background: space-based Lattice cable junction with cable arrays and repair tools.
+> **Gemini:** Full-body portrait of a 34-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. in an EVA maintenance suit with tools. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: exterior of a Lattice cable junction in space with cable bundles and repair equipment.
+> **Grok:** Ultra-realistic portrait. A 34-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Close-cropped dark blonde. Fair skin with Slavic features. Cinematic lighting. Background: space-based Lattice cable junction with cable arrays and repair tools.
 
 ---
 
@@ -8852,8 +8848,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Dark red hair, shoulder length. Green eyes, sharp and frustrated. Medium build in Lattice Technical diagnostics lead uniform with custom instruments. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Lattice diagnostics lab with node comparison displays and custom testing equipment.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Fair complexion with freckles. Lattice Technical diagnostics uniform. Cinematic lighting. Background: diagnostics laboratory with node schematics and testing apparatus.
+> **Gemini:** Full-body portrait of a 46-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Red-auburn hair worn loose. Green eyes. Dark red hair, shoulder length. Green eyes, sharp and frustrated. Photorealistic. Cinematic directional lighting. Background: a Lattice diagnostics lab with node comparison displays and custom testing equipment.
+> **Grok:** Ultra-realistic portrait. A 46-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Very fair complexion with freckles. Red-auburn hair worn loose. Cinematic lighting. Background: diagnostics laboratory with node schematics and testing apparatus.
 
 ---
 
@@ -8878,8 +8874,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Brown hair heavily greyed, neatly parted. Blue eyes, measured and deeply thoughtful. Medium build in Lattice Technical analyst's professional attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a historical data analysis room with Year 1 Lattice logs projected on large displays.
-> **Grok:** Ultra-realistic portrait. A 51-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Lattice Technical analyst's professional jacket. Cinematic lighting. Background: data analysis office with historical Lattice log projections on screens.
+> **Gemini:** Full-body portrait of a 51-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Neatly cropped dark hair. Hazel eyes. Brown hair heavily greyed, neatly parted. Blue eyes, measured and deeply thoughtful. Photorealistic. Cinematic directional lighting. Background: a historical data analysis room with Year 1 Lattice logs projected on large displays.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Lattice Technical analyst's professional jacket. Cinematic lighting. Background: data analysis office with historical Lattice log projections on screens.
 
 ---
 
@@ -8904,8 +8900,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Dark curly hair. Dark brown eyes, persistent and slightly amused. Medium build in Lattice Technical field repair gear with heavy tools. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier Lattice node exterior with storm damage and visible self-repair crystalline growth.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Greek man. Warm olive complexion. Dark brown short. Deep brown. Lattice Technical field repair suit with tool harness. Warm olive skin. Background: damaged frontier Lattice node with crystalline growth patterns on its surface.
+> **Gemini:** Full-body portrait of a 37-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Dark brown short. Deep brown. Dark curly hair. Dark brown eyes, persistent and slightly amused. Photorealistic. Cinematic directional lighting. Background: a frontier Lattice node exterior with storm damage and visible self-repair crystalline growth.
+> **Grok:** Ultra-realistic portrait. A 37-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Lattice Technical field repair suit with tool harness. Warm olive complexion. Background: damaged frontier Lattice node with crystalline growth patterns on its surface.
 
 ---
 
@@ -8930,8 +8926,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Dark hair, slightly messy from long hours. Dark brown eyes, intense with the focus of someone reading invisible text. Medium build in Lattice Technical analyst's uniform. Photorealistic. Photorealistic. Warm light. Background: a network monitoring station with data flow visualizations showing layered traffic patterns.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Lattice Technical analyst's uniform. Warm light. Background: network analysis station with multi-layered traffic flow displays.
+> **Gemini:** Full-body portrait of a 44-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Neat dark hair. Black-brown eyes. Dark hair, slightly messy from long hours. Dark brown eyes, intense with the focus of someone reading invisible text. Photorealistic. Warm light. Background: a network monitoring station with data flow visualizations showing layered traffic patterns.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Lattice Technical analyst's uniform. Warm light. Background: network analysis station with multi-layered traffic flow displays.
 
 ---
 
@@ -8956,8 +8952,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark hair, neatly styled. Dark brown eyes, creative and constrained. Slim build in Lattice Technical engineering attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an interface design workshop with prototype hardware and diagnostic equipment.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Lattice Technical engineer's jacket. Warm complexion. Background: hardware workshop with interface prototypes and testing instruments.
+> **Gemini:** Full-body portrait of a 31-year-old Greek woman. Warm olive-tan complexion. Black hair neatly arranged. Warm hazel. Short black hair. Dark brown eyes. Dark hair, neatly styled. Dark brown eyes, creative and constrained. Photorealistic. Cinematic directional lighting. Background: an interface design workshop with prototype hardware and diagnostic equipment.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Greek woman. Warm olive-tan complexion. Black hair neatly arranged. Warm hazel. Light complexion with cool undertone. Lattice Technical engineer's jacket. Cool undertone. Background: hardware workshop with interface prototypes and testing instruments.
 
 ---
 
@@ -8982,8 +8978,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Greek woman. Warm olive-tan complexion. Black hair neatly arranged. Warm hazel. Dark hair with grey streaks, pulled back tightly. Dark brown eyes, serious and protective. Medium build in Lattice Technical safety officer's uniform with safety inspection equipment. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a node inspection area with safety barriers and monitoring equipment.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Greek woman. Warm olive-tan complexion. Black hair neatly arranged. Warm hazel. Dark hair with grey, pulled back. Olive Mediterranean complexion. Warm olive skin. Background: Lattice node inspection zone with safety barriers and warning indicators.
+> **Gemini:** Full-body portrait of a 48-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Black hair neatly arranged. Warm hazel. Dark hair with grey streaks, pulled back tightly. Dark brown eyes, serious and protective. Photorealistic. Cinematic directional lighting. Background: a node inspection area with safety barriers and monitoring equipment.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Warm olive-tan complexion. Black hair neatly arranged. Warm olive-tan complexion. Background: Lattice node inspection zone with safety barriers and warning indicators.
 
 ---
 
@@ -9008,8 +9004,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Dark hair, short. Dark brown eyes, puzzled and determined. Muscular build in Lattice Technical construction engineer's gear. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Lattice relay installation site with new equipment and commissioning tools.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Colombian man. Warm medium complexion. Dark hair short. Brown eyes. Warm olive to medium-brown complexion. Medium-brown skin with Latin features. Warm olive to medium-brown complexion. Background: Lattice relay installation with new hardware and testing equipment.
+> **Gemini:** Full-body portrait of a 33-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Amber-brown eyes. Dark hair short. Brown eyes. Dark hair, short. Dark brown eyes, puzzled and determined. Photorealistic. Cinematic directional lighting. Background: a Lattice relay installation site with new equipment and commissioning tools.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Amber-brown eyes. Warm olive to medium-brown complexion. Medium-brown skin with Latin features. Warm medium complexion. Background: Lattice relay installation with new hardware and testing equipment.
 
 ---
 
@@ -9034,8 +9030,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Amber-brown eyes. Dark hair with grey, short. Dark brown eyes, sharp and unsettled. Lean build in Lattice Technical analyst's formal attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a cryptographic analysis laboratory with mathematical projections and encrypted data streams on displays.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Amber-brown eyes. Warm olive to medium-brown complexion. Lattice Technical cryptographic analyst's attire. Warm olive to medium-brown complexion. Background: crypto analysis lab with mathematical displays and data stream visualizations.
+> **Gemini:** Full-body portrait of a 47-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Black close-cropped. Amber-brown eyes. Dark hair with grey, short. Dark brown eyes, sharp and unsettled. Photorealistic. Cinematic directional lighting. Background: a cryptographic analysis laboratory with mathematical projections and encrypted data streams on displays.
+> **Grok:** Ultra-realistic portrait. A 47-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Warm olive to medium-brown complexion. Lattice Technical cryptographic analyst's attire. Warm olive complexion. Background: crypto analysis lab with mathematical displays and data stream visualizations.
 
 ---
 
@@ -9060,8 +9056,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Grey-brown hair, neatly combed. Blue eyes, patient and sad. Medium build in Lattice Technical instructor's uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Lattice Technical training facility with instructional displays and practice equipment.
-> **Grok:** Ultra-realistic portrait. A 52-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Lattice Technical instructor's uniform. Cinematic lighting. Background: training classroom with Lattice Technical equipment and instructional diagrams.
+> **Gemini:** Full-body portrait of a 52-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Short brown hair. Green eyes. Grey-brown hair, neatly combed. Blue eyes, patient and sad. Photorealistic. Cinematic directional lighting. Background: a Lattice Technical training facility with instructional displays and practice equipment.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Lattice Technical instructor's uniform. Cinematic lighting. Background: training classroom with Lattice Technical equipment and instructional diagrams.
 
 ---
 
@@ -9086,8 +9082,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Dark hair cut to chin length. Dark brown eyes, cautious and scientifically hungry. Slim build in Lattice Technical resonance specialist's uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a resonance testing chamber with acoustic panels and harmonic analysis equipment.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Japanese woman. Light even complexion with warm undertone. Black hair neatly arranged. Deep brown eyes. Lattice Technical specialist's uniform. Warm complexion. Background: acoustic testing laboratory with harmonic analysis displays and resonance equipment.
+> **Gemini:** Full-body portrait of a 39-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Ash blonde in a neat arrangement. Light grey eyes. Black hair neatly arranged. Deep brown eyes. Dark hair cut to chin length. Dark brown eyes, cautious and scientifically hungry. Photorealistic. Cinematic directional lighting. Background: a resonance testing chamber with acoustic panels and harmonic analysis equipment.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Ash blonde in a neat arrangement. Light grey eyes. Light even complexion with warm undertone. Black hair neatly arranged. Warm undertone. Background: acoustic testing laboratory with harmonic analysis displays and resonance equipment.
 
 ---
 
@@ -9112,8 +9108,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Ash blonde in a neat arrangement. Light grey eyes. Pale blue eyes, carrying enormous weight with calm. Tall, commanding build in Lattice Technical deputy director's formal uniform. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the Lattice Technical Directorate's command center with system-wide monitoring displays.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Ash blonde in a neat arrangement. Light grey eyes. Silver-blonde hair, precisely cut. Deputy Director's formal Lattice Technical uniform. Formal lattice technical uniform. Background: Lattice Technical command center with vast system monitoring arrays.
+> **Gemini:** Full-body portrait of a 54-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Pale blue eyes, carrying enormous weight with calm. Tall, commanding build in Lattice Technical deputy director's formal uniform. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the Lattice Technical Directorate's command center with system-wide monitoring displays.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Ash blonde in a neat arrangement. Silver-blonde hair, precisely cut. Formal lattice technical uniform. Background: Lattice Technical command center with vast system monitoring arrays.
 
 ---
 
@@ -9138,8 +9134,8 @@ Engineers and technicians who maintain the Lattice infrastructure — the physic
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Dark hair, short and practical. Dark brown eyes, composed under pressure. Athletic build in Lattice Technical emergency response uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an emergency coordination center with incident response displays and rapid-deployment equipment.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Lattice Technical emergency response uniform. Warm complexion. Background: emergency operations center with incident screens and communication equipment.
+> **Gemini:** Full-body portrait of a 35-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Close-cropped black hair. Clear dark eyes. Dark hair, short and practical. Dark brown eyes, composed under pressure. Photorealistic. Cinematic directional lighting. Background: an emergency coordination center with incident response displays and rapid-deployment equipment.
+> **Grok:** Ultra-realistic portrait. A 35-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Light complexion with cool undertone. Lattice Technical emergency response uniform. Cool undertone. Background: emergency operations center with incident screens and communication equipment.
 
 ---
 
@@ -9170,8 +9166,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Dark hair with distinguished silver, styled with precision. Grey-blue eyes, cold and calculating. Slim, controlled build in expensive civilian clothing — no uniform, no insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private office with no visible displays — minimalist, secured, nothing to read.
-> **Grok:** Ultra-realistic portrait. A 56-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Dark hair with silver, precisely styled. Light olive refined complexion. Cinematic lighting. Background: stark, minimalist private office with secured communications equipment.
+> **Gemini:** Full-body portrait of a 56-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Dark brown hair worn loose. Dark brown eyes. Dark hair with distinguished silver, styled with precision. Grey-blue eyes, cold and calculating. Photorealistic. Cinematic directional lighting. Background: a private office with no visible displays — minimalist, secured, nothing to read.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Light complexion with warm undertone. Dark brown hair worn loose. Warm undertone. Background: stark, minimalist private office with secured communications equipment.
 
 ---
 
@@ -9196,8 +9192,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Dark hair, tied back severely. Dark brown eyes, analytically intense. Slim build in CID intelligence analyst's dark civilian attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a high-security signals intelligence facility with decoded data streams and cryptanalysis displays.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Korean woman. Light porcelain complexion with cool undertone. Glossy black hair. Deep black-brown eyes. Dark professional CID attire. Warm complexion. Background: classified intelligence facility with encrypted data analysis terminals.
+> **Gemini:** Full-body portrait of a 43-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Glossy black hair. Deep black-brown eyes. Dark hair, tied back severely. Dark brown eyes, analytically intense. Photorealistic. Cinematic directional lighting. Background: a high-security signals intelligence facility with decoded data streams and cryptanalysis displays.
+> **Grok:** Ultra-realistic portrait. A 43-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Light porcelain complexion with cool undertone. Dark professional CID attire. Cool undertone. Background: classified intelligence facility with encrypted data analysis terminals.
 
 ---
 
@@ -9222,8 +9218,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Dark hair cropped close. Dark brown eyes, watchful and haunted. Athletic build in civilian frontier clothing — no identifying features. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier settlement street, blending in, with a distant Lattice node visible.
-> **Grok:** Ultra-realistic portrait. A 38-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Nondescript frontier civilian clothing. Warm brown skin. Background: frontier settlement with distant Lattice node glow.
+> **Gemini:** Full-body portrait of a 38-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Close-cropped black hair. Warm dark brown eyes. Dark hair cropped close. Dark brown eyes, watchful and haunted. Photorealistic. Cinematic directional lighting. Background: a frontier settlement street, blending in, with a distant Lattice node visible.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Warm brown skin, strong african-american features. Nondescript frontier civilian clothing. Warm brown skin, strong african-american feat. Background: frontier settlement with distant Lattice node glow.
 
 ---
 
@@ -9248,8 +9244,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Dark hair, receding slightly. Grey eyes, intense and paranoid. Medium build in CID civilian attire — deliberately unremarkable. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a secure room with no electronic equipment — paper documents, physical maps, analog communication tools.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Fair skin with Slavic bone structure. Unremarkable dark civilian clothing. Cinematic lighting. Background: analog-only secure room with paper documents and no screens.
+> **Gemini:** Full-body portrait of a 40-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Very dark expressive eyes. Close-cropped dark blonde. Slate blue eyes. Dark hair, receding slightly. Grey eyes, intense and paranoid. Photorealistic. Cinematic directional lighting. Background: a secure room with no electronic equipment — paper documents, physical maps, analog communication tools.
+> **Grok:** Ultra-realistic portrait. A 40-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Very dark expressive eyes. Close-cropped dark blonde. Fair skin with Slavic bone structure. Cinematic lighting. Background: analog-only secure room with paper documents and no screens.
 
 ---
 
@@ -9274,8 +9270,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Very dark expressive eyes. Dark hair, short. Dark brown eyes, controlled and conflicted. Tall, lean build in CID field attire — professional, non-descript. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier transit station, anonymous, passing through.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Very dark expressive eyes. Very deep rich brown skin. Very deep rich brown skin with West African features. Cinematic lighting. Background: anonymous frontier transit station corridor.
+> **Gemini:** Full-body portrait of a 45-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Deep brown eyes. Close-cropped black hair. Very dark expressive eyes. Dark hair, short. Dark brown eyes, controlled and conflicted. Photorealistic. Cinematic directional lighting. Background: a frontier transit station, anonymous, passing through.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Deep brown eyes. Very deep brown skin, strong west african features. Very dark expressive eyes. Cinematic lighting. Background: anonymous frontier transit station corridor.
 
 ---
 
@@ -9300,8 +9296,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 32-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Deep brown eyes. Dark hair, short. Dark brown eyes, alert and disoriented. Lean build in anonymous civilian clothing with concealed surveillance equipment. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a surveillance monitoring station with multiple target feeds on screens.
-> **Grok:** Ultra-realistic portrait. A 32-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Black close-cropped. Deep brown eyes. Warm olive to medium-brown complexion. Medium-brown skin with dark features. Warm olive to medium-brown complexion. Background: surveillance station with multiple monitoring screens.
+> **Gemini:** Full-body portrait of a 32-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Black close-cropped. Deep brown eyes. Dark hair, short. Dark brown eyes, alert and disoriented. Photorealistic. Cinematic directional lighting. Background: a surveillance monitoring station with multiple target feeds on screens.
+> **Grok:** Ultra-realistic portrait. A 32-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Warm olive to medium-brown complexion. Medium-brown skin with dark features. Warm olive complexion. Background: surveillance station with multiple monitoring screens.
 
 ---
 
@@ -9326,8 +9322,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Dark hair with grey, closely cropped. Blue-grey eyes, analytical and haunted. Medium build in CID analyst's professional dark clothing. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a modeling laboratory with biological-system projections and Lattice prediction displays.
-> **Grok:** Ultra-realistic portrait. A 49-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. CID analyst's dark professional attire. Cinematic lighting. Background: analysis laboratory with predictive model displays and system projections.
+> **Gemini:** Full-body portrait of a 49-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Short blonde hair. Pale green eyes. Dark hair with grey, closely cropped. Blue-grey eyes, analytical and haunted. Photorealistic. Cinematic directional lighting. Background: a modeling laboratory with biological-system projections and Lattice prediction displays.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. CID analyst's dark professional attire. Cinematic lighting. Background: analysis laboratory with predictive model displays and system projections.
 
 ---
 
@@ -9352,8 +9348,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 60-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Grey hair, thin, neatly maintained. Dark brown eyes carrying the weight of thirty-five years of secrets. Slight build in expensive, understated civilian clothing. Photorealistic. Photorealistic. Warm light. Background: a private, spartan office with a single locked cabinet and no visible technology.
-> **Grok:** Ultra-realistic portrait. A 60-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Expensive understated dark civilian clothing. Warm light. Background: minimalist secured office with single locked storage and bare walls.
+> **Gemini:** Full-body portrait of a 60-year-old Pakistani woman. Warm medium-brown complexion. Dark brown hair worn neat. Dark brown eyes. Neat dark hair. Black-brown eyes. Grey hair, thin, neatly maintained. Dark brown eyes carrying the weight of thirty-five years of secrets. Photorealistic. Warm light. Background: a private, spartan office with a single locked cabinet and no visible technology.
+> **Grok:** Ultra-realistic portrait. A 60-year-old Pakistani woman. Warm medium-brown complexion. Dark brown hair worn neat. Dark brown eyes. Expensive understated dark civilian clothing. Warm light. Background: minimalist secured office with single locked storage and bare walls.
 
 ---
 
@@ -9378,8 +9374,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Pakistani woman. Warm medium-brown complexion. Dark brown hair worn neat. Dark brown eyes. Dark hair, shoulder length, professional. Dark brown eyes, intelligent and slightly dissociated. Medium build in CID professional civilian attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a narrative operations center with perception modeling displays and public sentiment analytics.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Pakistani woman. Warm medium-brown complexion. Dark brown hair worn neat. Dark brown eyes. Dark shoulder-length hair. Professional CID civilian attire. Warm medium-brown skin. Background: intelligence operations room with perception analysis models on screens.
+> **Gemini:** Full-body portrait of a 41-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Dark brown hair worn neat. Dark brown eyes. Dark hair, shoulder length, professional. Dark brown eyes, intelligent and slightly dissociated. Photorealistic. Cinematic directional lighting. Background: a narrative operations center with perception modeling displays and public sentiment analytics.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Warm medium-brown complexion. Dark brown hair worn neat. Warm medium-brown complexion. Background: intelligence operations room with perception analysis models on screens.
 
 ---
 
@@ -9404,8 +9400,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. in formal civilian attire appropriate for Assembly briefings. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly Intelligence Committee briefing room, empty after a session, chairs pushed back.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Greek man. Warm olive complexion. Black close-cropped. Warm hazel. Dark hair greying at temples. Formal dark civilian briefing attire. Warm olive skin. Background: empty Assembly committee room after session with cleared briefing displays. ## INTELLIGENCE — CONTINUED (351-355) Finishing the CID group. The operatives who run the quiet machinery of Concord intelligence at the edges where oversight frays. --- # Concord Character Bible — Vol. 5 · Characters 351–363.
+> **Gemini:** Full-body portrait of a 46-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. in formal civilian attire appropriate for Assembly briefings. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly Intelligence Committee briefing room, empty after a session, chairs pushed back.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. Dark hair greying at temples. Formal dark civilian briefing attire. Warm olive complexion. Background: empty Assembly committee room after session with cleared briefing displays. ## INTELLIGENCE — CONTINUED (351-355) Finishing the CID group. The operatives who run the quiet machinery of Concord intelligence at the edges where oversight frays. --- # Concord Character Bible — Vol. 5 · Characters 351–363.
 
 ---
 
@@ -9430,8 +9426,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. Build: lean, contained. Clothing: Assembly-standard civilian professional attire — high-collar slate-grey jacket, no insignia. Photorealistic. Cinematic lighting. Photorealistic. Cinematic lighting. Background: Assembly administrative corridor, Concord Station, indirect overhead lighting, people blurred in transit behind her.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Chinese woman. Warm light complexion. Glossy black hair. Deep brown eyes. Warm ivory skin, jaw-length black hair, dark brown watchful eyes. Slim build, composed posture. Warm ivory skin, jaw-length black hair, dark. Background: Assembly corridor, Concord Station, shallow depth of field.
+> **Gemini:** Full-body portrait of a 37-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Glossy black hair. Deep brown eyes. Build: lean, contained. Clothing: Assembly-standard civilian professional attire — high-collar slate-grey jacket, no insignia. Photorealistic. Warm light. Background: Assembly administrative corridor, Concord Station, indirect overhead lighting, people blurred in transit behind her.
+> **Grok:** Ultra-realistic portrait. A 37-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Warm ivory skin, jaw-length black hair, dark brown watchful eyes. Slim build, composed posture. Warm light. Background: Assembly corridor, Concord Station, shallow depth of field.
 
 ---
 
@@ -9456,8 +9452,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Clothing: worn transit-worker jacket over CID field-plain civilian layers — functional, deliberately unremarkable. Photorealistic. Cinematic lighting. Background: Kessel Transit Hub docking level, cargo containers, low amber industrial light. Photorealistic. Cinematic lighting. Background: Kessel Transit Hub docking level, cargo containers, low amber industrial light.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Deep brown eyes. Warm brown skin, black-and-grey hair, dark brown eyes, compact build. Wearing a worn transit jacket, plain civilian clothes underneath. Warm brown skin, black-and-grey hair, dark br. Background: frontier transit hub docking bay, industrial amber lighting.
+> **Gemini:** Full-body portrait of a 44-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Black close-cropped. Deep brown eyes. Clothing: worn transit-worker jacket over CID field-plain civilian layers — functional, deliberately unremarkable. Photorealistic. Photorealistic. Cinematic lighting. Background: Kessel Transit Hub docking level, cargo containers, low amber industrial light. Photorealistic. Cinematic lighting. Background: Kessel Transit Hub docking level, cargo containers, low amber industrial light.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Warm medium-brown complexion. Warm brown skin, black-and-grey hair, dark brown eyes, compact build. Warm medium-brown complexion. Background: frontier transit hub docking bay, industrial amber lighting.
 
 ---
 
@@ -9482,8 +9478,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 31-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Clothing: CID technical division plain-clothes — dark fitted shirt, light tactical vest with no visible insignia, utilitarian. Photorealistic. Cinematic lighting. Background: Lattice relay station signals room, screens showing waveform data, blue-white console light. Photorealistic. Cinematic lighting. Background: Lattice relay station signals room, screens showing waveform data, blue-white console light.
-> **Grok:** Ultra-realistic portrait. A 31-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Wearing a dark shirt and plain tactical vest. Warm medium skin, short dark curly hair, dark. Background: Lattice relay station interior, blue-lit console screens, technical equipment.
+> **Gemini:** Full-body portrait of a 31-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Black wavy hair neat. Warm brown eyes. Short dark curly hair. Dark brown eyes. Clothing: CID technical division plain-clothes — dark fitted shirt, light tactical vest with no visible insignia, utilitarian. Photorealistic. Photorealistic. Cinematic lighting. Background: Lattice relay station signals room, screens showing waveform data, blue-white console light. Photorealistic. Cinematic lighting. Background: Lattice relay station signals room, screens showing waveform data, blue-white console light.
+> **Grok:** Ultra-realistic portrait. A 31-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Black wavy hair neat. Warm brown eyes. Wearing a dark shirt and plain tactical vest. Warm medium skin, short dark curly hair, dark. Warm brown complexion. Background: Lattice relay station interior, blue-lit console screens, technical equipment.
 
 ---
 
@@ -9508,8 +9504,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Black wavy hair neat. Warm brown eyes. Clothing: CID senior officer professional attire — dark structured jacket, single small service pin, no other insignia. Photorealistic. Cinematic lighting. Background: CID analysis wing, Concord Station, floor-to-ceiling data screens behind her, cool blue institutional light. Photorealistic. Cinematic lighting. Background: CID analysis wing, Concord Station, floor-to-ceiling data screens behind her, cool blue institutional light.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Black wavy hair neat. Warm brown eyes. Warm medium skin, dark silver-streaked hair pulled back, dark eyes, upright bearing. Wearing a dark structured jacket with a small pin. Warm medium skin, dark silver-streaked hair p. Background: CID intelligence analysis room, Concord Station, data screens, blue institutional lighting.
+> **Gemini:** Full-body portrait of a 51-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Black wavy hair neat. Warm brown eyes. Clothing: CID senior officer professional attire — dark structured jacket, single small service pin, no other insignia. Photorealistic. Photorealistic. Cinematic lighting. Background: CID analysis wing, Concord Station, floor-to-ceiling data screens behind her, cool blue institutional light. Photorealistic. Cinematic lighting. Background: CID analysis wing, Concord Station, floor-to-ceiling data screens behind her, cool blue institutional light.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Warm brown complexion with brazilian mixed heritage. Warm medium skin, dark silver-streaked hair pulled back, dark eyes, upright bearing. Warm brown complexion with brazilian mixed he. Background: CID intelligence analysis room, Concord Station, data screens, blue institutional lighting.
 
 ---
 
@@ -9534,8 +9530,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Photorealistic. Cinematic lighting. Background: CID field station transit lounge, Concord Station, neutral grey walls, indirect lighting, other figures in soft background.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Plain civilian jacket, no markings. Warm skin, dark brown hair, dark eyes, delibe. Background: CID field station interior, neutral grey, indirect ambient lighting.
+> **Gemini:** Full-body portrait of a 39-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Dark hair short. Warm brown eyes. Photorealistic. Cinematic lighting. Photorealistic. Cinematic lighting. Background: CID field station transit lounge, Concord Station, neutral grey walls, indirect lighting, other figures in soft background.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Plain civilian jacket, no markings. Warm skin, dark brown hair, dark eyes, delibe. Warm complexion. Background: CID field station interior, neutral grey, indirect ambient lighting.
 
 ---
 
@@ -9560,8 +9556,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Clothing: academic professional — dark trousers, a collared shirt open at the collar, no jacket; the look of someone who forgot formality was expected. Photorealistic. Cinematic lighting. Background: Concord Institute of Applied Networks library stacks, warm amber reading light, rows of archival data terminals. Photorealistic. Cinematic lighting. Background: Concord Institute of Applied Networks library stacks, warm amber reading light, rows of archival data terminals.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Light ivory skin, black-and-grey hair, dark brown eyes behind plain glasses, trim build. Wearing dark trousers and a collared shirt without jacket. Amber reading light. Background: academic institute library, archival terminals, amber reading light.
+> **Gemini:** Full-body portrait of a 47-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Close-cropped black hair. Clear dark eyes. Clothing: academic professional — dark trousers, a collared shirt open at the collar, no jacket; the look of someone who forgot formality was expected. Photorealistic. Photorealistic. Cinematic lighting. Background: Concord Institute of Applied Networks library stacks, warm amber reading light, rows of archival data terminals. Photorealistic. Cinematic lighting. Background: Concord Institute of Applied Networks library stacks, warm amber reading light, rows of archival data terminals.
+> **Grok:** Ultra-realistic portrait. A 47-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Light complexion with cool undertone. Light ivory skin, black-and-grey hair, dark brown eyes behind plain glasses, trim build. Cool undertone. Background: academic institute library, archival terminals, amber reading light.
 
 ---
 
@@ -9586,8 +9582,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Clothing: Survey Corps medical division — grey-blue field uniform with medical insignia patch, practical pockets. Photorealistic. Cinematic lighting. Background: Survey Corps medical bay aboard a vessel, clean sterile white surfaces, equipment racks, viewport showing deep space. Photorealistic. Cinematic lighting. Background: Survey Corps medical bay aboard a vessel, clean sterile white surfaces, equipment racks, viewport showing deep space.
-> **Grok:** Ultra-realistic portrait. A 42-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Fair skin, greying brown hair, grey-green eyes, medium build. Wearing a grey-blue Survey Corps medical uniform with insignia. Survey corps medical uniform with insignia. Background: ship medical bay interior, white clinical surfaces, deep space viewport.
+> **Gemini:** Full-body portrait of a 42-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Short brown hair. Green eyes. Clothing: Survey Corps medical division — grey-blue field uniform with medical insignia patch, practical pockets. Photorealistic. Photorealistic. Cinematic lighting. Background: Survey Corps medical bay aboard a vessel, clean sterile white surfaces, equipment racks, viewport showing deep space. Photorealistic. Cinematic lighting. Background: Survey Corps medical bay aboard a vessel, clean sterile white surfaces, equipment racks, viewport showing deep space.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Fair skin, greying brown hair, grey-green eyes, medium build. Wearing a grey-blue Survey Corps medical uniform with insignia. Survey corps medical uniform with insignia. Background: ship medical bay interior, white clinical surfaces, deep space viewport.
 
 ---
 
@@ -9612,8 +9608,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Clothing: Assembly civil service formal — dark navy long coat, white shirt, no decorations. Photorealistic. Cinematic lighting. Background: Assembly historical records hall, Concord Station, rows of archival nodes glowing amber, high stone-effect walls, dim reading light. Photorealistic. Cinematic lighting. Background: Assembly historical records hall, Concord Station, rows of archival nodes glowing amber, high stone-effect walls, dim reading light.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Portuguese man. Warm olive complexion. Black short cropped. Warm brown eyes. Light olive skin, silver hair, dark brown eyes, reading glasses on forehead, lean slightly stooped build. Wearing a dark navy Assembly coat, white shirt. Amber node lighting, concord station. Background: archival records hall, amber node lighting, Concord Station.
+> **Gemini:** Full-body portrait of a 58-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Black short cropped. Warm brown eyes. Clothing: Assembly civil service formal — dark navy long coat, white shirt, no decorations. Photorealistic. Photorealistic. Cinematic lighting. Background: Assembly historical records hall, Concord Station, rows of archival nodes glowing amber, high stone-effect walls, dim reading light. Photorealistic. Cinematic lighting. Background: Assembly historical records hall, Concord Station, rows of archival nodes glowing amber, high stone-effect walls, dim reading light.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Light olive skin, silver hair, dark brown eyes, reading glasses on forehead, lean slightly stooped build. Wearing a dark navy Assembly coat, white shirt. Warm olive complexion. Background: archival records hall, amber node lighting, Concord Station.
 
 ---
 
@@ -9638,8 +9634,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Clothing: Institute research professional — white lab coat over a dark shirt, ID badge, no other insignia. Photorealistic. Cinematic lighting. Background: Concord Institute cognitive research lab, neuroimaging equipment, screens showing brain connectivity maps, clinical white and blue light. Photorealistic. Cinematic lighting. Background: Concord Institute cognitive research lab, neuroimaging equipment, screens showing brain connectivity maps, clinical white and blue light.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Light olive skin, dark brown hair, dark hazel eyes, medium alert build. White lab coat over a dark shirt, research ID badge. Clinical lighting. Background: cognitive neuroscience lab, brain imaging equipment, blue-white clinical lighting.
+> **Gemini:** Full-body portrait of a 45-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Short dark hair. Warm brown eyes. Clothing: Institute research professional — white lab coat over a dark shirt, ID badge, no other insignia. Photorealistic. Photorealistic. Cinematic lighting. Background: Concord Institute cognitive research lab, neuroimaging equipment, screens showing brain connectivity maps, clinical white and blue light. Photorealistic. Cinematic lighting. Background: Concord Institute cognitive research lab, neuroimaging equipment, screens showing brain connectivity maps, clinical white and blue light.
+> **Grok:** Ultra-realistic portrait. A 45-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Light olive skin, dark brown hair, dark hazel eyes, medium alert build. White lab coat over a dark shirt, research ID badge. Warm olive complexion. Background: cognitive neuroscience lab, brain imaging equipment, blue-white clinical lighting.
 
 ---
 
@@ -9664,8 +9660,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. in a precise low knot, grey-blue eyes, tall straight-backed build, the posture of someone who has run institutions. Clothing: Medical Institute executive — dark tailored suit jacket over a white high-collar blouse, Institute director's pin at the lapel. Photorealistic. Cinematic lighting. Background: Concord Station Medical Institute director's office, floor-to-ceiling glass partition overlooking the medical wing below, cool grey and white.
-> **Grok:** Ultra-realistic portrait. A 54-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Fair skin, dark blonde silver-threaded hair in a low knot, grey-blue eyes, tall upright posture. Dark tailored jacket, white blouse, lapel pin. Cinematic lighting. Background: Medical Institute executive office, glass partition, medical wing visible below.
+> **Gemini:** Full-body portrait of a 54-year-old Spanish man. Warm olive complexion. Short dark hair. Dark brown eyes. in a precise low knot, grey-blue eyes, tall straight-backed build, the posture of someone who has run institutions. Clothing: Medical Institute executive — dark tailored suit jacket over a white high-collar blouse, Institute director's pin at the lapel. Photorealistic. Cinematic lighting. Background: Concord Station Medical Institute director's office, floor-to-ceiling glass partition overlooking the medical wing below, cool grey and white.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Spanish man. Warm olive complexion. Short dark hair. Dark brown eyes. Fair skin, dark blonde silver-threaded hair in a low knot, grey-blue eyes, tall upright posture. Dark tailored jacket, white blouse, lapel pin. Cinematic lighting. Background: Medical Institute executive office, glass partition, medical wing visible below.
 
 ---
 
@@ -9690,8 +9686,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Spanish man. Warm olive complexion. Short dark hair. Dark brown eyes. Clothing: academic casual — dark shirt, worn trousers, an old jacket with too many pockets; he looks like he lives in his work. Photorealistic. Cinematic lighting. Background: Concord University Outer Campus seminar room, Kessel Station, whiteboard covered in notation, warm artificial light, no windows. Photorealistic. Cinematic lighting. Background: Concord University Outer Campus seminar room, Kessel Station, whiteboard covered in notation, warm artificial light, no windows.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Spanish man. Warm olive complexion. Short dark hair. Dark brown eyes. Light olive skin, dark overgrown hair, intense dark brown eyes, lean build. Dark shirt, old jacket with pockets, worn trousers. Warm artificial light. Background: university seminar room, whiteboard with notation, warm artificial light.
+> **Gemini:** Full-body portrait of a 38-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Short dark hair. Dark brown eyes. Clothing: academic casual — dark shirt, worn trousers, an old jacket with too many pockets; he looks like he lives in his work. Photorealistic. Photorealistic. Cinematic lighting. Background: Concord University Outer Campus seminar room, Kessel Station, whiteboard covered in notation, warm artificial light, no windows. Photorealistic. Cinematic lighting. Background: Concord University Outer Campus seminar room, Kessel Station, whiteboard covered in notation, warm artificial light, no windows.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Light olive skin, dark overgrown hair, intense dark brown eyes, lean build. Dark shirt, old jacket with pockets, worn trousers. Warm olive complexion. Background: university seminar room, whiteboard with notation, warm artificial light.
 
 ---
 
@@ -9716,8 +9712,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Clothing: Concord Health Division professional — dark teal Division jacket with health insignia, white shirt beneath, ID lanyard. Photorealistic. Cinematic lighting. Background: Concord Station health monitoring unit, data screens showing population maps and trend graphs, blue-teal institutional light. Photorealistic. Cinematic lighting. Background: Concord Station health monitoring unit, data screens showing population maps and trend graphs, blue-teal institutional light.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Senegalese man of West African heritage. Very deep brown skin, strong west african features. Close-cropped black hair. Dark warm eyes. Very deep dark brown skin, close-cropped black hair, dark brown eyes, strong medium build. Wearing a dark teal health division jacket with insignia, white shirt, ID lanyard. Cinematic lighting. Background: health surveillance monitoring room, population data screens, blue-teal lighting.
+> **Gemini:** Full-body portrait of a 43-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Close-cropped black hair. Dark warm eyes. Clothing: Concord Health Division professional — dark teal Division jacket with health insignia, white shirt beneath, ID lanyard. Photorealistic. Photorealistic. Cinematic lighting. Background: Concord Station health monitoring unit, data screens showing population maps and trend graphs, blue-teal institutional light. Photorealistic. Cinematic lighting. Background: Concord Station health monitoring unit, data screens showing population maps and trend graphs, blue-teal institutional light.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Very deep brown skin, strong west african features. Very deep dark brown skin, close-cropped black hair, dark brown eyes, strong medium build. Warm eyes. Background: health surveillance monitoring room, population data screens, blue-teal lighting.
 
 ---
 
@@ -9742,8 +9738,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. in dark shirt, work trousers; no insignia, nothing that marks affiliation. Photorealistic. Cinematic lighting. Background: Kessel Station Lattice relay maintenance corridor, exposed conduit and node housings, industrial yellow-white work light.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Light olive skin, fully silver hair, careful dark brown eyes, lean build with worker's hands. Dark grey utility jacket, plain shirt, no insignia. Cinematic lighting. Background: Lattice relay maintenance corridor, Kessel Station, exposed infrastructure, yellow-white industrial light.
+> **Gemini:** Full-body portrait of a 61-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. in dark shirt, work trousers; no insignia, nothing that marks affiliation. Photorealistic. Cinematic lighting. Background: Kessel Station Lattice relay maintenance corridor, exposed conduit and node housings, industrial yellow-white work light.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Light olive skin, fully silver hair, careful dark brown eyes, lean build with worker's hands. Dark grey utility jacket, plain shirt, no insignia. Warm olive complexion. Background: Lattice relay maintenance corridor, Kessel Station, exposed infrastructure, yellow-white industrial light.
 
 ---
 
@@ -9776,8 +9772,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. in a field researcher's vest over a Concord Science Directorate jumpsuit. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a glass-walled research station overlooking an alien landscape with violet-green vegetation.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Chestnut brown eyes. Dark brown hair pulled back loosely. Dark brown eyes, watchful and composed. Warm olive skin. Background: xenobiology research station with specimen tanks and wide viewport onto alien terrain.
+> **Gemini:** Full-body portrait of a 47-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. in a field researcher's vest over a Concord Science Directorate jumpsuit. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a glass-walled research station overlooking an alien landscape with violet-green vegetation.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Olive complexion with warm mediterranean tone. Dark wavy hair pulled back. Warm mediterranean tone. Background: xenobiology research station with specimen tanks and wide viewport onto alien terrain.
 
 ---
 
@@ -9802,8 +9798,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Short dark hair with significant silver at the temples. Dark brown eyes behind wire-framed reading glasses pushed slightly down his nose. Medium build, slightly rounded at the shoulders. Concord Science Directorate formal wear, slightly rumpled, covered in hand-written notation on paper sheets tucked into pockets. Photorealistic. Cinematic directional lighting. Background: a theoretical physics workspace with holographic node-map projections filling the air around him.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Short dark hair with silver at the temples. Dark brown eyes behind wire-framed glasses. Warm olive complexion. Background: holographic lattice topology models suspended in a dim research office.
+> **Gemini:** Full-body portrait of a 53-year-old Filipino woman. Warm tan complexion with golden undertone. Dark brown hair neat. Warm brown eyes. Dark brown short. Dark brown eyes. Short dark hair with significant silver at the temples. Dark brown eyes behind wire-framed reading glasses pushed slightly down his nose. Photorealistic. Cinematic directional lighting. Background: a theoretical physics workspace with holographic node-map projections filling the air around him.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Filipino woman. Warm tan complexion with golden undertone. Dark brown hair neat. Warm brown eyes. Short dark hair with silver at the temples. Dark brown eyes behind wire-framed glasses. Warm olive complexion. Background: holographic lattice topology models suspended in a dim research office.
 
 ---
 
@@ -9828,8 +9824,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Filipino woman. Warm tan complexion with golden undertone. Dark brown hair neat. Warm brown eyes. in a practical high bun with a few escaping strands. Dark brown eyes, alert and assessing. Lean build in a medical authority uniform — white and slate grey — with a Concord Medical badge on the lapel and a diagnostic tablet tucked under one arm. Photorealistic. Clinical lighting. Background: a neurology bay with softly glowing diagnostic panels and a patient bed visible behind her.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Filipino woman. Warm tan complexion with golden undertone. Dark brown hair neat. Warm brown eyes. Dark brown eyes, sharp and focused. Clean medical authority uniform, slate grey and white. Warm medium brown skin. Background: neurology suite with glowing brain-scan displays and clean medical equipment.
+> **Gemini:** Full-body portrait of a 41-year-old Ghanaian woman. Deep brown skin with warm west african undertone. Natural coils structured neat. Dark expressive eyes. in a practical high bun with a few escaping strands. Dark brown eyes, alert and assessing. Lean build in a medical authority uniform — white and slate grey — with a Concord Medical badge on the lapel and a diagnostic tablet tucked under one arm. Photorealistic. Clinical lighting. Background: a neurology bay with softly glowing diagnostic panels and a patient bed visible behind her.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Ghanaian woman. Deep brown skin with warm west african undertone. Natural coils structured neat. Dark expressive eyes. Warm tan complexion with golden undertone. Dark brown eyes, sharp and focused. Warm tan complexion with golden undertone. Background: neurology suite with glowing brain-scan displays and clean medical equipment.
 
 ---
 
@@ -9854,8 +9850,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Ghanaian woman. Deep brown skin with warm west african undertone. Natural coils structured neat. Dark expressive eyes. Black hair in neatly arranged locs. Dark brown eyes, composed and careful. Medium build in Concord Science Directorate professional attire — charcoal grey jacket, formal cut. A data slate in one hand showing a complex waveform display. Photorealistic. Cinematic directional lighting. Background: a Lattice analytics center with wall-scale behavioral data displays casting blue light.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Ghanaian woman. Deep brown skin with warm west african undertone. Natural coils structured neat. Dark expressive eyes. Dark brown eyes, contained and assessing. Charcoal Directorate jacket, professional cut. Warm brown skin. Background: behavioral analytics room with floor-to-ceiling Lattice output visualizations in cool blue.
+> **Gemini:** Full-body portrait of a 45-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Natural coils structured neat. Dark expressive eyes. Black hair in neatly arranged locs. Dark brown eyes, composed and careful. Photorealistic. Cinematic directional lighting. Background: a Lattice analytics center with wall-scale behavioral data displays casting blue light.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Deep brown skin with warm west african undertone. Natural coils structured neat. Warm west african undertone. Background: behavioral analytics room with floor-to-ceiling Lattice output visualizations in cool blue.
 
 ---
 
@@ -9880,8 +9876,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. in a research laboratory coat over Directorate grey. A mineral sample suspended in an analysis housing held carefully in one hand. Cinematic warm-toned directional lighting. Photorealistic. Directional lighting. Background: a xenomaterials laboratory with geological core samples displayed in illuminated cases.
-> **Grok:** Ultra-realistic portrait. A 50-year-old Chinese man. Warm light complexion. Neat dark hair. Black-brown eyes. Silver-threaded black hair pushed back. Dark brown eyes with magnifying glasses pushed to his forehead. Cinematic lighting. Background: xenomaterials lab with illuminated specimen cases and precision instrumentation.
+> **Gemini:** Full-body portrait of a 50-year-old Filipino man. Warm tan complexion. Short black hair. Dark brown eyes. in a research laboratory coat over Directorate grey. A mineral sample suspended in an analysis housing held carefully in one hand. Cinematic warm-toned directional lighting. Photorealistic. Warm light. Background: a xenomaterials laboratory with geological core samples displayed in illuminated cases.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Filipino man. Warm tan complexion. Short black hair. Dark brown eyes. Silver-threaded black hair pushed back. Dark brown eyes with magnifying glasses pushed to his forehead. Warm light. Background: xenomaterials lab with illuminated specimen cases and precision instrumentation.
 
 ---
 
@@ -9906,8 +9902,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 35-year-old Filipino man. Warm tan complexion. Short black hair. Dark brown eyes. Short black hair. Dark brown eyes, focused and quick. Athletic build in medical authority scrubs with a trauma surgeon's utility vest over them, pockets occupied with instruments. Blood pressure not visible; expression calm. Photorealistic. Warm lighting. Background: a mobile surgical bay, compact and functional, equipment secured against every wall.
-> **Grok:** Ultra-realistic portrait. A 35-year-old Filipino man. Warm tan complexion. Short black hair. Dark brown eyes. Athletic build in trauma surgeon scrubs with utility vest. Warm medium-brown skin. Background: mobile surgical unit interior with compact medical equipment and harsh overhead lighting.
+> **Gemini:** Full-body portrait of a 35-year-old South African woman. Warm deep brown skin with southern african features. Natural coils in a structured arrangement. Dark expressive eyes. Short black hair. Dark brown eyes. Short black hair. Dark brown eyes, focused and quick. Photorealistic. Warm lighting. Background: a mobile surgical bay, compact and functional, equipment secured against every wall.
+> **Grok:** Ultra-realistic portrait. A 35-year-old South African woman. Warm deep brown skin with southern african features. Natural coils in a structured arrangement. Dark expressive eyes. Athletic build in trauma surgeon scrubs with utility vest. Warm tan complexion. Background: mobile surgical unit interior with compact medical equipment and harsh overhead lighting.
 
 ---
 
@@ -9932,8 +9928,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old South African woman. Warm deep brown skin with southern african features. Natural coils in a structured arrangement. Dark expressive eyes. Dark brown eyes, direct and unapologetic. Medium build in Sector Health Directorate formal attire — a structured teal and grey jacket — holding a data slate displaying a world-map epidemiological model. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Sector 9 health directorate briefing room with a large holographic world map showing health data points.
-> **Grok:** Ultra-realistic portrait. A 43-year-old South African woman. Warm deep brown skin with southern african features. Natural coils in a structured arrangement. Dark expressive eyes. Structured teal-grey Health Directorate jacket. Data slate with epidemiological world map. Warm medium brown skin. Background: health directorate briefing room with holographic population health displays.
+> **Gemini:** Full-body portrait of a 43-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Dark brown eyes, direct and unapologetic. Medium build in Sector Health Directorate formal attire — a structured teal and grey jacket — holding a data slate displaying a world-map epidemiological model. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Sector 9 health directorate briefing room with a large holographic world map showing health data points.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Warm deep brown skin with southern african features. Natural coils in a structured arrangement. Warm deep brown skin with southern african fe. Background: health directorate briefing room with holographic population health displays.
 
 ---
 
@@ -9958,8 +9954,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Blue-grey eyes, sharp and steady. Slim build in Chronicle Archive formal attire — deep charcoal with silver trim, the archivist's insignia on the lapel. Holding a bound document folder. Photorealistic. Cinematic directional lighting. Background: a Chronicle archive reading room with towering shelved document cases and a single illuminated work table.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Fair skin with fine archival-worker's lines. Dark brown and silver hair in a low knot. Formal attire, charcoal with silver trim and ar. Background: Chronicle archive with floor-to-ceiling document shelving and a single lit reading desk.
+> **Gemini:** Full-body portrait of a 58-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. Light brown pulled back. Pale green eyes. Blue-grey eyes, sharp and steady. Slim build in Chronicle Archive formal attire — deep charcoal with silver trim, the archivist's insignia on the lapel. Photorealistic. Cinematic directional lighting. Background: a Chronicle archive reading room with towering shelved document cases and a single illuminated work table.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. Fair complexion with cool undertone. Fair skin with fine archival-worker's lines. Cool undertone. Background: Chronicle archive with floor-to-ceiling document shelving and a single lit reading desk.
 
 ---
 
@@ -9984,8 +9980,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. A legal document in one hand, a stylus in the other, mid-annotation. Cinematic formal directional lighting. Photorealistic. Formal directional lighting. Background: a Chronicle adjudication chamber with a high table, formal document displays, and the Concord seal on the far wall.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Deep brown eyes. Dark brown eyes, controlled and precise. Chronicle Archive formal charcoal-silver attire, upright posture. Warm brown skin. Background: Chronicle adjudication chamber with formal document mounts and the Concord seal visible.
+> **Gemini:** Full-body portrait of a 49-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Cinematic formal directional lighting. Photorealistic. Formal directional lighting. Background: a Chronicle adjudication chamber with a high table, formal document displays, and the Concord seal on the far wall.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Warm deep brown skin, caribbean features. Dark brown eyes, controlled and precise. Warm deep brown skin, caribbean features. Background: Chronicle adjudication chamber with formal document mounts and the Concord seal visible.
 
 ---
 
@@ -10010,8 +10006,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Black hair, neat and precise. Dark brown eyes behind slim rectangular glasses, expression focused and slightly troubled. Slim build in Chronicle Archive research attire — structured grey jacket, Branch 2 insignia. One hand resting on a document verification terminal. Photorealistic. Cinematic directional lighting. Background: a Chronicle archive research bay with document verification terminals and floor-to-ceiling shelving.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark brown eyes behind slim rectangular glasses, slightly unsettled expression. Chronicle Archive grey research jacket. Cool lighting. Background: archive research bay with stacked document housings and blue-cool lighting.
+> **Gemini:** Full-body portrait of a 38-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Short black hair. Dark brown eyes. Black hair, neat and precise. Dark brown eyes behind slim rectangular glasses, expression focused and slightly troubled. Photorealistic. Cinematic directional lighting. Background: a Chronicle archive research bay with document verification terminals and floor-to-ceiling shelving.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Light complexion with cool undertone. Dark brown eyes behind slim rectangular glasses, slightly unsettled expression. Cool undertone. Background: archive research bay with stacked document housings and blue-cool lighting.
 
 ---
 
@@ -10036,8 +10032,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Dark brown hair, slightly longer and travel-worn. Dark brown eyes, observant and quietly amused. Medium build in Chronicle Archive field correspondent attire — a durable charcoal jacket with Branch 6 insignia over practical travel layers, a field document case strapped across his chest. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier settlement administrative office, papers and data tablets in organized disorder.
-> **Grok:** Ultra-realistic portrait. A 42-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Warm brown eyes. Dark brown hair, travel-worn. Dark brown eyes, quietly amused. Warm medium-brown skin. Background: frontier settlement administrative space with documents and data tablets stacked around a working desk.
+> **Gemini:** Full-body portrait of a 42-year-old African-American woman. Warm brown skin, african-american features. Natural black hair worn practical. Warm dark brown eyes. Black close-cropped. Warm brown eyes. Dark brown hair, slightly longer and travel-worn. Dark brown eyes, observant and quietly amused. Photorealistic. Cinematic directional lighting. Background: a frontier settlement administrative office, papers and data tablets in organized disorder.
+> **Grok:** Ultra-realistic portrait. A 42-year-old African-American woman. Warm brown skin, african-american features. Natural black hair worn practical. Warm dark brown eyes. Warm tan-brown complexion. Dark brown hair, travel-worn. Warm tan-brown complexion. Background: frontier settlement administrative space with documents and data tablets stacked around a working desk.
 
 ---
 
@@ -10062,8 +10058,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old African-American woman. Warm brown skin, african-american features. Natural black hair worn practical. Warm dark brown eyes. Dark brown eyes, steady, containing enormous accumulated experience. Medium-solid build in Chronicle Archive principal historian attire — a formal black and deep charcoal gown with the Founding Era Branch 1 insignia, worn with quiet authority. Hands folded over a closed document folio. Photorealistic. Cinematic directional lighting. Background: the Chronicle Archive's Founding Era reading room — high ceilings, old light, document cases sealed behind climate glass.
-> **Grok:** Ultra-realistic portrait. A 55-year-old African-American woman. Warm brown skin, african-american features. Natural black hair worn practical. Warm dark brown eyes. Warm medium-deep brown skin. Natural grey-streaked locs in a crown. Warm medium-deep brown skin. Background: Founding Era reading room with sealed climate-glass document cases and warm archival light.
+> **Gemini:** Full-body portrait of a 55-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Amber eyes. Natural black hair worn practical. Warm dark brown eyes. Dark brown eyes, steady, containing enormous accumulated experience. Medium-solid build in Chronicle Archive principal historian attire — a formal black and deep charcoal gown with the Founding Era Branch 1 insignia, worn with quiet authority. Photorealistic. Cinematic directional lighting. Background: the Chronicle Archive's Founding Era reading room — high ceilings, old light, document cases sealed behind climate glass.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Amber eyes. Warm brown skin, african-american features. Natural black hair worn practical. Warm brown skin, african-american features. Background: Founding Era reading room with sealed climate-glass document cases and warm archival light.
 
 ---
 
@@ -10088,8 +10084,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Amber eyes. Dark hair gone mostly silver, worn short and precisely kept. Dark brown eyes, measured and profoundly careful. Solid build, slightly stooped now, in Chronicle Branch 9 Director attire — formal black and midnight-blue, the Director's seal on the collar. Standing at a sealed document vault, one hand resting on the biometric lock. Photorealistic. Directional lighting. Background: the Branch 9 sealed vault corridor — floor-to-ceiling security housings, minimal light, absolute quiet.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Amber eyes. Light olive skin, deeply lined. Silver-dark hair, short and precise. Formal attire, black and midnight-blue. Background: sealed archive corridor with security-class document housings and minimal cold lighting.
+> **Gemini:** Full-body portrait of a 61-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Black close-cropped. Amber eyes. Dark hair gone mostly silver, worn short and precisely kept. Dark brown eyes, measured and profoundly careful. Photorealistic. Directional lighting. Background: the Branch 9 sealed vault corridor — floor-to-ceiling security housings, minimal light, absolute quiet.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Light olive skin, deeply lined. Silver-dark hair, short and precise. Warm olive complexion. Background: sealed archive corridor with security-class document housings and minimal cold lighting.
 
 ---
 
@@ -10122,8 +10118,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Black hair, close-cropped. Dark brown eyes, intense and troubled. Lean build in Chronicle Archive communications division attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Chronicle communications records center, transmission logs on curved displays, late-shift quiet.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Chinese man. Warm light complexion. Short black hair. Dark brown eyes. Troubled intense dark eyes. Chronicle communications division attire. Warm golden skin. Background: Chronicle communications records center, transmission log displays in late-shift quiet.
+> **Gemini:** Full-body portrait of a 39-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Short black hair. Dark brown eyes. Black hair, close-cropped. Dark brown eyes, intense and troubled. Photorealistic. Warm light. Background: a Chronicle communications records center, transmission logs on curved displays, late-shift quiet.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Troubled intense dark eyes. Chronicle communications division attire. Warm light. Background: Chronicle communications records center, transmission log displays in late-shift quiet.
 
 ---
 
@@ -10148,8 +10144,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Blonde hair heavily streaked with white. Light blue eyes, intense and haunted. Slim build in Chronicle Archive senior historian attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Founding era research chamber, display cases with Year 0 artifacts, restricted access terminals inactive.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. White-streaked blonde hair. Intense haunted blue eyes. Cinematic lighting. Background: Founding era research chamber, Year 0 artifact cases, inactive restricted terminals.
+> **Gemini:** Full-body portrait of a 49-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Light blonde hair. Ice blue eyes. Blonde hair heavily streaked with white. Light blue eyes, intense and haunted. Photorealistic. Cinematic directional lighting. Background: a Founding era research chamber, display cases with Year 0 artifacts, restricted access terminals inactive.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. White-streaked blonde hair. Intense haunted blue eyes. Cinematic lighting. Background: Founding era research chamber, Year 0 artifact cases, inactive restricted terminals.
 
 ---
 
@@ -10174,8 +10170,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Dark hair. Dark brown eyes, sharp and privately agitated. Lean build in Chronicle Archive formal proceedings attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the Assembly chamber gallery, Chronicler's station, floor debates visible below.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Argentine man of European-Latin heritage. Light warm complexion. Dark hair short. Warm brown eyes. Sharp privately troubled dark eyes. Chronicle Archive formal attire. Warm medium brown skin. Background: Assembly chamber Chronicler's gallery, debate floor visible.
+> **Gemini:** Full-body portrait of a 38-year-old Korean woman. Light porcelain complexion with cool undertone. Sleek black hair. Clear dark eyes. Dark hair short. Warm brown eyes. Dark hair. Dark brown eyes, sharp and privately agitated. Photorealistic. Cinematic directional lighting. Background: the Assembly chamber gallery, Chronicler's station, floor debates visible below.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Korean woman. Light porcelain complexion with cool undertone. Sleek black hair. Clear dark eyes. Sharp privately troubled dark eyes. Chronicle Archive formal attire. Warm complexion. Background: Assembly chamber Chronicler's gallery, debate floor visible.
 
 ---
 
@@ -10200,8 +10196,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Korean woman. Light porcelain complexion with cool undertone. Sleek black hair. Clear dark eyes. Dark brown eyes, technically focused and afraid. Trim build in Chronicle Archive technical division attire. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the Chronicle Archive's digital preservation center, server infrastructure visible, redundant node displays showing status.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Korean woman. Light porcelain complexion with cool undertone. Sleek black hair. Clear dark eyes. Black hair in a practical bun. Focused and afraid dark eyes. Warm ivory skin. Background: digital preservation center, server infrastructure, redundant node status displays.
+> **Gemini:** Full-body portrait of a 44-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Sleek black hair. Clear dark eyes. Dark brown eyes, technically focused and afraid. Trim build in Chronicle Archive technical division attire. Photorealistic. Cinematic directional lighting. Background: the Chronicle Archive's digital preservation center, server infrastructure visible, redundant node displays showing status.
+> **Grok:** Ultra-realistic portrait. A 44-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Light porcelain complexion with cool undertone. Black hair in a practical bun. Cool undertone. Background: digital preservation center, server infrastructure, redundant node status displays.
 
 ---
 
@@ -10226,8 +10222,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Grey hair, distinguished. Blue eyes, precise and increasingly alarmed. Solid build in senior Chronicle Archive formal attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Chronicle judicial records vault, case files in ordered rows, formal institutional architecture.
-> **Grok:** Ultra-realistic portrait. A 56-year-old British man of English-Irish heritage. Fair complexion. Short brown hair. Green eyes. Precise blue eyes, alarmed beneath calm. Senior Chronicle formal attire. Formal attire. Background: Chronicle judicial records vault, ordered case files, institutional architecture.
+> **Gemini:** Full-body portrait of a 56-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Short brown hair. Green eyes. Grey hair, distinguished. Blue eyes, precise and increasingly alarmed. Photorealistic. Cinematic directional lighting. Background: a Chronicle judicial records vault, case files in ordered rows, formal institutional architecture.
+> **Grok:** Ultra-realistic portrait. A 56-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Precise blue eyes, alarmed beneath calm. Senior Chronicle formal attire. Formal attire. Background: Chronicle judicial records vault, ordered case files, institutional architecture.
 
 ---
 
@@ -10252,8 +10248,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Black hair with grey at the temples. Dark brown eyes, patient and quietly sorrowful. Medium build in Chronicle Archive standard attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a colonial petition records office, stacked petition displays, a window overlooking a colony dome exterior.
-> **Grok:** Ultra-realistic portrait. A 48-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Black hair with grey temples. Patient sorrowful dark eyes. Cinematic lighting. Background: colonial petition office, stacked petition displays, colony dome exterior visible through window.
+> **Gemini:** Full-body portrait of a 48-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. Close-cropped black hair. Deep brown eyes. Black hair with grey at the temples. Dark brown eyes, patient and quietly sorrowful. Photorealistic. Cinematic directional lighting. Background: a colonial petition records office, stacked petition displays, a window overlooking a colony dome exterior.
+> **Grok:** Ultra-realistic portrait. A 48-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. Black hair with grey temples. Patient sorrowful dark eyes. Cinematic lighting. Background: colonial petition office, stacked petition displays, colony dome exterior visible through window.
 
 ---
 
@@ -10278,8 +10274,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. in the Chronicle Archive, sealed record cases behind him, a single terminal displaying classification access menus. Photorealistic. Cinematic directional lighting. Background: the Chief Archivist's office in the Chronicle Archive, sealed record cases behind him, a single terminal displaying classification access menus.
-> **Grok:** Ultra-realistic portrait. A 59-year-old South Indian man. Rich brown complexion. Short black hair. Warm dark eyes. Senior Chronicle Archive formal attire. Formal attire. Background: Chief Archivist's office, sealed record cases, classification access terminal.
+> **Gemini:** Full-body portrait of a 59-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. in the Chronicle Archive, sealed record cases behind him, a single terminal displaying classification access menus. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the Chief Archivist's office in the Chronicle Archive, sealed record cases behind him, a single terminal displaying classification access menus.
+> **Grok:** Ultra-realistic portrait. A 59-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. Senior Chronicle Archive formal attire. Warm dark eyes. Background: Chief Archivist's office, sealed record cases, classification access terminal.
 
 ---
 
@@ -10304,8 +10300,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. Black hair in close natural curls. Dark brown eyes, passionate and precise. Lean build in Chronicle Archive field attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier colony Chronicler's post on Vance's Landing, rough-hewn walls, a disputed resource site visible through a scratched viewport.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Ethiopian woman. Warm brown skin with east african features. Close-cropped natural. Warm dark brown eyes. Close natural black curls. Passionate precise dark eyes. Warm brown skin. Background: frontier Chronicler's post, rough walls, disputed resource site through a viewport.
+> **Gemini:** Full-body portrait of a 37-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Close-cropped natural. Warm dark brown eyes. Black hair in close natural curls. Dark brown eyes, passionate and precise. Photorealistic. Cinematic directional lighting. Background: a frontier colony Chronicler's post on Vance's Landing, rough-hewn walls, a disputed resource site visible through a scratched viewport.
+> **Grok:** Ultra-realistic portrait. A 37-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Warm brown skin with east african features. Close natural black curls. Warm brown skin with east african features. Background: frontier Chronicler's post, rough walls, disputed resource site through a viewport.
 
 ---
 
@@ -10330,8 +10326,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Dark brown hair worn loosely. Dark brown eyes, thoughtful and unsettled. Trim build in Chronicle Archive archival attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Covenant religious records archive, ritual documentation cases, a Covenant symbol visible on the wall above.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Italian woman. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Dark brown eyes. Unsettled thoughtful dark eyes. Cinematic lighting. Background: Covenant religious records archive, ritual document cases, Covenant symbol on wall.
+> **Gemini:** Full-body portrait of a 46-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Dark brown wavy hair worn loosely. Dark brown eyes. Dark brown hair worn loosely. Dark brown eyes, thoughtful and unsettled. Photorealistic. Cinematic directional lighting. Background: a Covenant religious records archive, ritual documentation cases, a Covenant symbol visible on the wall above.
+> **Grok:** Ultra-realistic portrait. A 46-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Olive complexion with warm mediterranean tone. Dark brown wavy hair worn loosely. Warm mediterranean tone. Background: Covenant religious records archive, ritual document cases, Covenant symbol on wall.
 
 ---
 
@@ -10356,8 +10352,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Black hair tied back practically. Dark brown eyes, tired and self-reliant. Sturdy build in farming work attire, stained from recent work. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a hydroponics bay on Kellan Colony, growing racks overhead, warm grow-lights.
-> **Grok:** Ultra-realistic portrait. A 39-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Tired self-reliant dark eyes. Farming work attire, stained. Warm grow-lights. Background: colony hydroponics bay, growing racks, warm grow-lights.
+> **Gemini:** Full-body portrait of a 39-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Close-cropped black hair. Deep brown eyes. Black hair tied back practically. Dark brown eyes, tired and self-reliant. Photorealistic. Cinematic directional lighting. Background: a hydroponics bay on Kellan Colony, growing racks overhead, warm grow-lights.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Tired self-reliant dark eyes. Farming work attire, stained. Warm grow-lights. Background: colony hydroponics bay, growing racks, warm grow-lights.
 
 ---
 
@@ -10382,8 +10378,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Brown hair heavily streaked with grey, worn practical. Blue-grey eyes, hardened but not unkind. Solid build in shopkeeper's work attire behind a supply counter. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a supply station hardware shop, shelves of components, a Lattice logistics terminal on the counter.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Cinematic lighting. Background: hardware supply shop, components on shelves, Lattice logistics terminal on counter.
+> **Gemini:** Full-body portrait of a 55-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Dark blonde arranged practical. Hazel eyes. Brown hair heavily streaked with grey, worn practical. Blue-grey eyes, hardened but not unkind. Photorealistic. Cinematic directional lighting. Background: a supply station hardware shop, shelves of components, a Lattice logistics terminal on the counter.
+> **Grok:** Ultra-realistic portrait. A 55-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Dark blonde arranged practical. Cinematic lighting. Background: hardware supply shop, components on shelves, Lattice logistics terminal on counter.
 
 ---
 
@@ -10408,8 +10404,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Dark blonde hair worn loose to the shoulder. Brown eyes, warm and quietly troubled. Medium build in civilian teacher attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a colony school classroom, student desks, a Lattice civics diagram projected on the wall.
-> **Grok:** Ultra-realistic portrait. A 44-year-old German woman. Fair complexion. Straight brown hair. Steel blue eyes. Dark blonde shoulder-length hair. Warm brown troubled eyes. Background: colony school classroom, student desks, Lattice civics diagram on projected wall.
+> **Gemini:** Full-body portrait of a 44-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Straight brown hair. Steel blue eyes. Dark blonde hair worn loose to the shoulder. Brown eyes, warm and quietly troubled. Photorealistic. Cinematic directional lighting. Background: a colony school classroom, student desks, a Lattice civics diagram projected on the wall.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Dark blonde shoulder-length hair. Warm brown troubled eyes. Background: colony school classroom, student desks, Lattice civics diagram on projected wall.
 
 ---
 
@@ -10434,8 +10430,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Dark hair, close-cropped. Dark brown eyes, practical and quietly unsettled. Lean build in maintenance technician coveralls. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Lattice node cluster maintenance bay on Farpoint Station, exposed infrastructure panels, warning lights.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Portuguese man. Warm olive complexion. Dark brown short. Dark brown eyes. Practical unsettled dark eyes. Warm skin. Background: Lattice node cluster bay, exposed panels, warning lights.
+> **Gemini:** Full-body portrait of a 36-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Grey-green eyes. Dark brown short. Dark brown eyes. Dark hair, close-cropped. Dark brown eyes, practical and quietly unsettled. Photorealistic. Cinematic directional lighting. Background: a Lattice node cluster maintenance bay on Farpoint Station, exposed infrastructure panels, warning lights.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Grey-green eyes. Practical unsettled dark eyes. Warm olive complexion. Background: Lattice node cluster bay, exposed panels, warning lights.
 
 ---
 
@@ -10467,8 +10463,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 54-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Grey-green eyes. Wears a colony merchant's practical clothing: worn canvas apron over a collared work shirt, trousers with deep pockets. Photorealistic. Cinematic lighting. Background: a colony market stall interior, bolts of fabric and grain sacks stacked, a Lattice node panel on the wall glowing amber.
-> **Grok:** Ultra-realistic portrait. A 54-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Grey-green eyes. Fair, weathered skin; silver-touched dark brown hair; grey-brown watchful eyes. Wide-shouldered, practical build. Warm amber lattice node light on the far wall. Background: dim market stall with warm amber Lattice node light on the far wall.
+> **Gemini:** Full-body portrait of a 54-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Wears a colony merchant's practical clothing: worn canvas apron over a collared work shirt, trousers with deep pockets. Photorealistic. Cinematic lighting. Background: a colony market stall interior, bolts of fabric and grain sacks stacked, a Lattice node panel on the wall glowing amber.
+> **Grok:** Ultra-realistic portrait. A 54-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Dark blonde close-cropped. Fair, weathered skin; silver-touched dark brown hair; grey-brown watchful eyes. Warm amber lattice node light on the far wall. Background: dim market stall with warm amber Lattice node light on the far wall.
 
 ---
 
@@ -10493,8 +10489,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. in a practical bun; blue-grey eyes that are alert and slightly assessing. Medium build, capable-looking, no-nonsense posture. Wears a textile cooperative worker's attire: linen work dress with rolled sleeves, a colourful station scarf used as an apron tie. Photorealistic. Cinematic lighting. Background: a laundry and textile repair shop at Velund Station, racks of folded clothing, a bright work lamp, colony transport hub windows in the background.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Polish woman. Fair complexion with cool undertone. Light brown pulled back. Pale green eyes. Fair, slightly weathered skin; dark brown hair pinned back; blue-grey watchful eyes. Work linen dress, rolled sleeves, colourful scarf tied at the waist. Cinematic lighting. Background: warm-lit textile cooperative, station windows behind.
+> **Gemini:** Full-body portrait of a 48-year-old South Indian woman. Rich warm brown complexion. Black hair in a practical arrangement. Black-brown eyes. in a practical bun; blue-grey eyes that are alert and slightly assessing. Medium build, capable-looking, no-nonsense posture. Wears a textile cooperative worker's attire: linen work dress with rolled sleeves, a colourful station scarf used as an apron tie. Photorealistic. Cinematic lighting. Background: a laundry and textile repair shop at Velund Station, racks of folded clothing, a bright work lamp, colony transport hub windows in the background.
+> **Grok:** Ultra-realistic portrait. A 48-year-old South Indian woman. Rich warm brown complexion. Black hair in a practical arrangement. Black-brown eyes. Fair complexion with cool undertone. Fair, slightly weathered skin; dark brown hair pinned back; blue-grey watchful eyes. Cool undertone. Background: warm-lit textile cooperative, station windows behind.
 
 ---
 
@@ -10519,8 +10515,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old South Indian woman. Rich warm brown complexion. Black hair in a practical arrangement. Black-brown eyes. in a loose plait over one shoulder; dark brown eyes with an attentive, slightly tired quality. Wears an agri-supervisor's practical gear: durable tan trousers, a colony field shirt with rolled sleeves, soil at her boots and forearms. Photorealistic. Cinematic lighting. Background: open agricultural field at a colony settlement, Lattice sensor posts visible at row intervals, warm late-afternoon light.
-> **Grok:** Ultra-realistic portrait. A 46-year-old South Indian woman. Rich warm brown complexion. Black hair in a practical arrangement. Black-brown eyes. Deep warm brown skin; black hair with silver threads in a loose plait; attentive dark brown eyes. Tan work trousers, colony field shirt, rolled sleeves, soil on her hands. Warm brown skin; black hair with silver threa. Background: colony agricultural field, Lattice sensor posts at the rows.
+> **Gemini:** Full-body portrait of a 46-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. in a loose plait over one shoulder; dark brown eyes with an attentive, slightly tired quality. Wears an agri-supervisor's practical gear: durable tan trousers, a colony field shirt with rolled sleeves, soil at her boots and forearms. Photorealistic. Cinematic lighting. Background: open agricultural field at a colony settlement, Lattice sensor posts visible at row intervals, warm late-afternoon light.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Rich warm brown complexion. Black hair in a practical arrangement. Warm brown complexion. Background: colony agricultural field, Lattice sensor posts at the rows.
 
 ---
 
@@ -10545,8 +10541,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Wears colony medical administration attire: clean pale grey tunic, dark trousers, a Lattice coordinator's badge at the lapel. Photorealistic. Cinematic lighting. Background: a Lattice medical node administration room, panels of soft blue light, organized filing racks, the warm ambient hum of the node visible behind her.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Light warm ivory skin; jaw-length black hair with silver threads; dark eyes behind slim frames. Pale grey administrative tunic, dark trousers, node coordinator badge. Warm ivory skin; jaw-length black hair with s. Background: Lattice medical administration room, blue node panels.
+> **Gemini:** Full-body portrait of a 52-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Deep brown eyes. Wears colony medical administration attire: clean pale grey tunic, dark trousers, a Lattice coordinator's badge at the lapel. Photorealistic. Cinematic lighting. Background: a Lattice medical node administration room, panels of soft blue light, organized filing racks, the warm ambient hum of the node visible behind her.
+> **Grok:** Ultra-realistic portrait. A 52-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Deep brown eyes. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: Lattice medical administration room, blue node panels.
 
 ---
 
@@ -10571,8 +10567,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Deep brown eyes. Wears a transit operator's practical uniform: colony-worn navy jacket with a transit authority patch, work trousers, heavy boots. Photorealistic. Cinematic lighting. Background: interior of a colony transit hub, shuttle bays visible through large windows, a Lattice traffic node panel on the wall.
-> **Grok:** Ultra-realistic portrait. A 61-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Deep brown eyes. Medium-deep brown skin, greying close-cut hair, warm tired dark eyes. Navy transit jacket with patch, work trousers, heavy boots. Warm tired dark eyes. Background: colony transit hub interior, shuttle bay windows, Lattice traffic panel.
+> **Gemini:** Full-body portrait of a 61-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Wears a transit operator's practical uniform: colony-worn navy jacket with a transit authority patch, work trousers, heavy boots. Photorealistic. Cinematic lighting. Background: interior of a colony transit hub, shuttle bays visible through large windows, a Lattice traffic node panel on the wall.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Warm brown skin, strong african-american features. Medium-deep brown skin, greying close-cut hair, warm tired dark eyes. Warm brown skin, strong african-american feat. Background: colony transit hub interior, shuttle bay windows, Lattice traffic panel.
 
 ---
 
@@ -10597,8 +10593,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Wears market-vendor attire: a bright woven textile shirt in warm earth tones, practical dark trousers, an apron with deep pockets. Photorealistic. Cinematic lighting. Background: a colony market stall with crates of produce and jars of preserved foods, warm overhead lighting, other vendor stalls visible beyond.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Ghanaian man. Deep brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Deep warm brown skin; close-cropped greying black hair; expressive dark eyes. Bright woven textile shirt in earth tones, dark trousers, market apron. Warm brown skin; close-cropped greying black. Background: colony market stall, produce and jars, warm light.
+> **Gemini:** Full-body portrait of a 55-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Wears market-vendor attire: a bright woven textile shirt in warm earth tones, practical dark trousers, an apron with deep pockets. Photorealistic. Cinematic lighting. Background: a colony market stall with crates of produce and jars of preserved foods, warm overhead lighting, other vendor stalls visible beyond.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Deep brown skin, west african features. Deep warm brown skin; close-cropped greying black hair; expressive dark eyes. Warm dark brown eyes. Background: colony market stall, produce and jars, warm light.
 
 ---
 
@@ -10623,8 +10619,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Wears homesteader gear: heavy-weave trousers, a worn flannel work shirt, a colony-issue outer vest, mud-worn boots. Photorealistic. Cinematic lighting. Background: an outer-ring frontier homestead, a root-crop field under colony sky, a Lattice weather post visible at the field edge.
-> **Grok:** Ultra-realistic portrait. A 50-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Fair weathered skin; faded silver-blonde short hair; calm blue-grey eyes. Heavy work trousers, flannel shirt, colony vest, muddy boots. Cinematic lighting. Background: frontier homestead, root-crop field, Lattice weather post at the edge.
+> **Gemini:** Full-body portrait of a 50-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Wears homesteader gear: heavy-weave trousers, a worn flannel work shirt, a colony-issue outer vest, mud-worn boots. Photorealistic. Cinematic lighting. Background: an outer-ring frontier homestead, a root-crop field under colony sky, a Lattice weather post visible at the field edge.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Close-cropped light blonde. Fair weathered skin; faded silver-blonde short hair; calm blue-grey eyes. Cinematic lighting. Background: frontier homestead, root-crop field, Lattice weather post at the edge.
 
 ---
 
@@ -10649,8 +10645,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Wears a Lattice maintenance technician's uniform: dark grey colony jumpsuit with relay-tech patches, a tool harness across the chest, worn work gloves tucked at the belt. Photorealistic. Cinematic lighting. Background: a Lattice relay node maintenance corridor, wall panels open to circuitry, ambient blue system light.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Kenyan man of East African heritage. Rich deep brown skin, east african features. Close-cropped black hair. Dark expressive eyes. Deep warm brown skin; short black hair; sharp evaluating dark eyes. Dark grey maintenance jumpsuit with patches, tool harness, gloves at the belt. Warm brown skin; short black hair; sharp eval. Background: Lattice node corridor, open panels, blue system ambient light.
+> **Gemini:** Full-body portrait of a 47-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Deep hazel eyes. Wears a Lattice maintenance technician's uniform: dark grey colony jumpsuit with relay-tech patches, a tool harness across the chest, worn work gloves tucked at the belt. Photorealistic. Cinematic lighting. Background: a Lattice relay node maintenance corridor, wall panels open to circuitry, ambient blue system light.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Deep hazel eyes. Rich deep brown skin, east african features. Deep warm brown skin; short black hair; sharp evaluating dark eyes. Warm brown skin; short black hair; sharp eval. Background: Lattice node corridor, open panels, blue system ambient light.
 
 ---
 
@@ -10675,8 +10671,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Deep hazel eyes. Wears an apothecary's working attire: a clean linen coat over a dark shirt, trousers, a small personal device clipped to his breast pocket for Lattice certification logs. Photorealistic. Cinematic lighting. Background: a colony apothecary stall, shelves of labelled preparations and dried botanicals, a Lattice certification panel on the side wall, warm lamp light.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Iranian man of Persian heritage. Warm olive complexion. Black close-cropped. Deep hazel eyes. Light olive skin; dark hair silvered at the temples; careful attentive dark eyes. Clean linen apothecary coat, dark shirt, certification device at breast. Warm lamp light. Background: colony apothecary stall, botanical shelves, warm lamp light.
+> **Gemini:** Full-body portrait of a 58-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Wears an apothecary's working attire: a clean linen coat over a dark shirt, trousers, a small personal device clipped to his breast pocket for Lattice certification logs. Photorealistic. Cinematic lighting. Background: a colony apothecary stall, shelves of labelled preparations and dried botanicals, a Lattice certification panel on the side wall, warm lamp light.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Light olive skin; dark hair silvered at the temples; careful attentive dark eyes. Clean linen apothecary coat, dark shirt, certification device at breast. Warm olive complexion. Background: colony apothecary stall, botanical shelves, warm lamp light.
 
 ---
 
@@ -10701,8 +10697,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Wears everyday colony teaching attire: a soft-coloured blouse, dark trousers, comfortable flat shoes, a lanyard with a school access chip. Photorealistic. Cinematic lighting. Background: a colony primary school classroom, small desks, a Lattice learning panel on one wall, bright overhead light.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Warm olive skin; dark hair pulled back; expressive dark eyes. Soft blouse, dark trousers, school lanyard. Warm olive skin; dark hair pulled back; expre. Background: colony primary classroom, child-sized desks, Lattice learning panel on the wall.
+> **Gemini:** Full-body portrait of a 44-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Wears everyday colony teaching attire: a soft-coloured blouse, dark trousers, comfortable flat shoes, a lanyard with a school access chip. Photorealistic. Cinematic lighting. Background: a colony primary school classroom, small desks, a Lattice learning panel on one wall, bright overhead light.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Olive complexion with warm mediterranean tone. Warm olive skin; dark hair pulled back; expressive dark eyes. Warm mediterranean tone. Background: colony primary classroom, child-sized desks, Lattice learning panel on the wall.
 
 ---
 
@@ -10727,8 +10723,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Wears food producer's practical attire: a linen work dress, a cloth apron stained from fermentation work, her hair sometimes tucked back. Photorealistic. Cinematic lighting. Background: a colony market stall with rows of preserved-food jars and fermentation crocks, warm light, Río Nuevo settlement architecture behind.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Warm light skin; dark brown-black loose hair to the shoulders; intense dark eyes. Linen work dress, cloth fermentation apron, worn hands. Warm light. Background: colony market stall, preserved-food jars, settlement background.
+> **Gemini:** Full-body portrait of a 40-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Green eyes. Wears food producer's practical attire: a linen work dress, a cloth apron stained from fermentation work, her hair sometimes tucked back. Photorealistic. Cinematic lighting. Background: a colony market stall with rows of preserved-food jars and fermentation crocks, warm light, Río Nuevo settlement architecture behind.
+> **Grok:** Ultra-realistic portrait. A 40-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Green eyes. Light warm complexion with southern european-latin tone. Warm light skin; dark brown-black loose hair to the shoulders; intense dark eyes. Warm complexion with southern european-latin. Background: colony market stall, preserved-food jars, settlement background.
 
 ---
 
@@ -10753,8 +10749,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Green eyes. Wears a Lattice apprentice coordinator's uniform: a clean dark navy colony administrative tunic, standard-issue trousers, an apprentice coordinator's badge clipped to his collar. Photorealistic. Cinematic lighting. Background: a Lattice public infrastructure coordination office, screens and routing panels on the walls, busy but organized.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Irish man. Fair complexion with light freckles. Red-brown hair short. Green eyes. Fair skin; short slightly unruly dark auburn hair; alert green-grey eyes. Dark navy colony admin tunic, apprentice coordinator badge at the collar. Cinematic lighting. Background: Lattice coordination office, routing panels, busy organized space.
+> **Gemini:** Full-body portrait of a 22-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Wears a Lattice apprentice coordinator's uniform: a clean dark navy colony administrative tunic, standard-issue trousers, an apprentice coordinator's badge clipped to his collar. Photorealistic. Cinematic lighting. Background: a Lattice public infrastructure coordination office, screens and routing panels on the walls, busy but organized.
+> **Grok:** Ultra-realistic portrait. A 22-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Fair complexion with light freckles. Fair skin; short slightly unruly dark auburn hair; alert green-grey eyes. Cinematic lighting. Background: Lattice coordination office, routing panels, busy organized space.
 
 ---
 
@@ -10779,8 +10775,8 @@ CID operatives — the Concord Intelligence Directorate's first ten entries. The
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 21-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Wears a junior agricultural technician's attire: a colony greenhouse work suit in muted green, rolled at the cuffs, a tech badge and personal device clipped to the chest. Photorealistic. Cinematic lighting. Background: a colony greenhouse complex interior, rows of crops under artificial grow-light, Lattice agri-sensor posts at intervals.
-> **Grok:** Ultra-realistic portrait. A 21-year-old Pakistani man. Warm medium-brown complexion. Black close-cropped. Warm brown eyes. Light warm brown skin; thick black hair pushed back; curious open dark eyes. Colony greenhouse work suit in muted green, tech badge at chest. Warm brown skin; thick black hair pushed back. Background: greenhouse complex interior, grow-light rows, Lattice agri-sensors.
+> **Gemini:** Full-body portrait of a 21-year-old Austrian man. Fair complexion. Brown short. Hazel eyes. Wears a junior agricultural technician's attire: a colony greenhouse work suit in muted green, rolled at the cuffs, a tech badge and personal device clipped to the chest. Photorealistic. Cinematic lighting. Background: a colony greenhouse complex interior, rows of crops under artificial grow-light, Lattice agri-sensor posts at intervals.
+> **Grok:** Ultra-realistic portrait. A 21-year-old Austrian man. Fair complexion. Brown short. Hazel eyes. Warm medium-brown complexion. Light warm brown skin; thick black hair pushed back; curious open dark eyes. Warm medium-brown complexion. Background: greenhouse complex interior, grow-light rows, Lattice agri-sensors.
 
 ---
 
@@ -10813,8 +10809,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Austrian man. Fair complexion. Brown short. Hazel eyes. Brown hair going grey, close-cropped. Blue-grey eyes with a careful, inward expression. Stocky build in Survey Corps field engineer coveralls, tool harness over the chest. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the interior of a Lattice relay station, curved conduit walls lit by amber maintenance lights.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Austrian man. Fair complexion. Brown short. Hazel eyes. Medium build in worn Survey Corps engineer coveralls with a tool harness. Survey corps engineer coveralls with a tool har. Background: Lattice relay station interior with amber indicator lighting and exposed conduit.
+> **Gemini:** Full-body portrait of a 48-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Brown short. Hazel eyes. Brown hair going grey, close-cropped. Blue-grey eyes with a careful, inward expression. Photorealistic. Cinematic directional lighting. Background: the interior of a Lattice relay station, curved conduit walls lit by amber maintenance lights.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Medium build in worn Survey Corps engineer coveralls with a tool harness. Survey corps engineer coveralls with a tool har. Survey corps engineer coveralls with a tool har. Background: Lattice relay station interior with amber indicator lighting and exposed conduit.
 
 ---
 
@@ -10839,8 +10835,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. in formal Covenant ceremonial robes — deep charcoal with silver Lattice-node embroidery at the hem and cuffs. Cinematic lighting with a faint blue-white ambient glow suggesting Lattice relay backlighting. Photorealistic. Cinematic lighting. Background: a Covenant sanctuary with geometric latticework architecture and lit relay shrines.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Slender in formal Covenant ceremonial robes, charcoal with silver embroidery. Formal covenant ceremonial robes, charcoal with. Background: Covenant sanctuary interior with glowing relay shrine columns.
+> **Gemini:** Full-body portrait of a 33-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. in formal Covenant ceremonial robes — deep charcoal with silver Lattice-node embroidery at the hem and cuffs. Cinematic lighting with a faint blue-white ambient glow suggesting Lattice relay backlighting. Photorealistic. Cinematic lighting. Background: a Covenant sanctuary with geometric latticework architecture and lit relay shrines.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Dark blonde close-cropped. Slender in formal Covenant ceremonial robes, charcoal with silver embroidery. Formal covenant ceremonial robes, charcoal with. Background: Covenant sanctuary interior with glowing relay shrine columns.
 
 ---
 
@@ -10865,8 +10861,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Dark, slightly wavy hair kept short. Dark brown eyes, attentive and guarded. Medium build in standard Assembly analyst attire — grey professional jacket, data-tablet tucked under one arm. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an Assembly infrastructure monitoring room with schematic displays covering three walls.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Medium build in grey Assembly professional jacket. Warm medium-brown skin. Background: infrastructure monitoring room with wall-spanning schematic displays.
+> **Gemini:** Full-body portrait of a 29-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Short dark curly hair. Dark brown eyes. Dark, slightly wavy hair kept short. Dark brown eyes, attentive and guarded. Photorealistic. Cinematic directional lighting. Background: an Assembly infrastructure monitoring room with schematic displays covering three walls.
+> **Grok:** Ultra-realistic portrait. A 29-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Medium build in grey Assembly professional jacket. Warm brown complexion. Background: infrastructure monitoring room with wall-spanning schematic displays.
 
 ---
 
@@ -10891,8 +10887,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Slender build in Medical Corps clinical coat over station professional attire. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Medical Corps neural diagnostics suite with interface scanning equipment and a clean white-and-blue examination bay.
-> **Grok:** Ultra-realistic portrait. A 41-year-old French woman. Light complexion with warm undertone. Chestnut hair neatly pinned. Hazel eyes. Dark brown hair in a back knot. Slender in a Medical Corps clinical coat. Clinical coat. Background: neural diagnostics suite with blue-white scanning equipment.
+> **Gemini:** Full-body portrait of a 41-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Chestnut hair neatly pinned. Hazel eyes. Slender build in Medical Corps clinical coat over station professional attire. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Medical Corps neural diagnostics suite with interface scanning equipment and a clean white-and-blue examination bay.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Light complexion with warm undertone. Chestnut hair neatly pinned. Warm undertone. Background: neural diagnostics suite with blue-white scanning equipment.
 
 ---
 
@@ -10917,8 +10913,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 28-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Black hair cut short, practical for a helmet. Dark brown eyes, alert and slightly watchful. Athletic build in Survey Corps pilot flight suit with personal nav-computer strapped to the forearm. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Survey Corps deep-range hangar with a jump-capable vessel behind her.
-> **Grok:** Ultra-realistic portrait. A 28-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Athletic build in Survey Corps flight suit with forearm nav-computer. Survey corps flight suit with forearm nav-compu. Background: deep-range hangar with jump vessel in dock.
+> **Gemini:** Full-body portrait of a 28-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Glossy black hair. Warm dark eyes. Black hair cut short, practical for a helmet. Dark brown eyes, alert and slightly watchful. Photorealistic. Cinematic directional lighting. Background: a Survey Corps deep-range hangar with a jump-capable vessel behind her.
+> **Grok:** Ultra-realistic portrait. A 28-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Light even complexion with warm undertone. Athletic build in Survey Corps flight suit with forearm nav-computer. Warm undertone. Background: deep-range hangar with jump vessel in dock.
 
 ---
 
@@ -10943,8 +10939,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Dark brown hair worn loose to the shoulders. Dark brown eyes, warm and sharp at the same time. Medium build in comfortable civilian teaching attire — layered station clothing. A small data-tablet in her hand. Photorealistic. Cinematic directional lighting. Background: a station secondary school classroom with Lattice interface terminals and student display boards.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Spanish woman. Warm olive complexion. Deep black hair. Hazel-brown eyes. Dark brown hair loose to the shoulders. Warm sharp dark brown eyes. Warm sharp dark brown eyes. Background: secondary school classroom with Lattice interface terminals.
+> **Gemini:** Full-body portrait of a 36-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Deep black hair. Hazel-brown eyes. Dark brown hair worn loose to the shoulders. Dark brown eyes, warm and sharp at the same time. Photorealistic. Cinematic directional lighting. Background: a station secondary school classroom with Lattice interface terminals and student display boards.
+> **Grok:** Ultra-realistic portrait. A 36-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Dark brown hair loose to the shoulders. Warm sharp dark brown eyes. Warm olive complexion. Background: secondary school classroom with Lattice interface terminals.
 
 ---
 
@@ -10969,8 +10965,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 30-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Dark brown eyes with a careful, slightly distant expression — the look of someone who has learned to watch rather than participate. Slender build in CID administrative attire — clean, unremarkable grey-blue station professional wear. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a CID records office with neat data-stack terminals and controlled access displays.
-> **Grok:** Ultra-realistic portrait. A 30-year-old South Indian woman. Rich warm brown complexion. Black hair worn in a traditional style. Dark brown eyes. Medium to deep brown skin. Black hair in a low braid. Cinematic lighting. Background: CID records office with data-stack terminals.
+> **Gemini:** Full-body portrait of a 30-year-old North Indian woman. Warm golden-brown complexion. Black hair neatly arranged. Warm hazel eyes. Dark brown eyes with a careful, slightly distant expression — the look of someone who has learned to watch rather than participate. Slender build in CID administrative attire — clean, unremarkable grey-blue station professional wear. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a CID records office with neat data-stack terminals and controlled access displays.
+> **Grok:** Ultra-realistic portrait. A 30-year-old North Indian woman. Warm golden-brown complexion. Black hair neatly arranged. Warm hazel eyes. Rich warm brown complexion. Black hair worn in a traditional style. Warm brown complexion. Background: CID records office with data-stack terminals.
 
 ---
 
@@ -10995,8 +10991,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 25-year-old North Indian woman. Warm golden-brown complexion. Black hair neatly arranged. Warm hazel eyes. Dark brown eyes, intelligent and watchful. Slight build in Chronicle Office archivist attire — neat formal civilian wear with a Chronicle identity sash. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Chronicle Office cataloguing floor with rows of data-archive terminals and filing towers.
-> **Grok:** Ultra-realistic portrait. A 25-year-old North Indian woman. Warm golden-brown complexion. Black hair neatly arranged. Warm hazel eyes. Black hair neatly pulled back. Slight build in Chronicle Office formal wear with an archivist sash. Warm brown skin. Background: Chronicle Office archival floor with data terminals.
+> **Gemini:** Full-body portrait of a 25-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Rich dark brown curls. Hazel-brown eyes. wear with a Chronicle identity sash. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Chronicle Office cataloguing floor with rows of data-archive terminals and filing towers.
+> **Grok:** Ultra-realistic portrait. A 25-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Rich dark brown curls. Hazel-brown eyes. Warm golden-brown complexion. Black hair neatly arranged. Warm golden-brown complexion. Background: Chronicle Office archival floor with data terminals.
 
 ---
 
@@ -11021,8 +11017,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Rich dark brown curls. Hazel-brown eyes. wear — practical layers with a small personal computing device worn at the wrist. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a commercial logistics analysis suite with Lattice network visualization displays.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Brazilian woman of mixed Afro-European heritage. Warm brown complexion with brazilian mixed heritage. Rich dark brown curls. Hazel-brown eyes. Alert intense dark brown eyes. Lean build in civilian station workwear with wrist-mounted computing device. Warm medium-brown skin. Background: logistics suite with Lattice network visualization displays.
+> **Gemini:** Full-body portrait of a 22-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. wear — practical layers with a small personal computing device worn at the wrist. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a commercial logistics analysis suite with Lattice network visualization displays.
+> **Grok:** Ultra-realistic portrait. A 22-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Warm brown complexion with brazilian mixed heritage. Alert intense dark brown eyes. Warm brown complexion with brazilian mixed he. Background: logistics suite with Lattice network visualization displays.
 
 ---
 
@@ -11047,8 +11043,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Blue-grey eyes, tired and experienced. Heavyset build in senior Assembly formal attire — dark structured jacket with Assembly insignia. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly deliberation chamber with ranked seating and holographic agenda displays.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Mostly grey brown hair, formal cut. Heavyset build in senior Assembly formal jacket with insignia. Formal cut. Background: Assembly chamber with holographic agenda displays.
+> **Gemini:** Full-body portrait of a 58-year-old Chinese woman. Warm light complexion. Straight black hair worn practical. Dark brown eyes. Close-cropped dark blonde. Slate blue eyes. Blue-grey eyes, tired and experienced. Heavyset build in senior Assembly formal attire — dark structured jacket with Assembly insignia. Photorealistic. Cinematic directional lighting. Background: an Assembly deliberation chamber with ranked seating and holographic agenda displays.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Chinese woman. Warm light complexion. Straight black hair worn practical. Dark brown eyes. Close-cropped dark blonde. Mostly grey brown hair, formal cut. Formal cut. Background: Assembly chamber with holographic agenda displays.
 
 ---
 
@@ -11073,8 +11069,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 20-year-old Chinese woman. Warm light complexion. Straight black hair worn practical. Dark brown eyes. in a straight, practical cut at the jaw. Dark brown eyes, focused and slightly too still for someone her age. Slim build in Lattice Engineering junior technician workwear — grey uniform with integration-division patches on the shoulders. Photorealistic. Cinematic directional lighting. Background: a Lattice systems integration bay on Station Three, with node-cluster diagnostic displays and clean white-lit work surfaces.
-> **Grok:** Ultra-realistic portrait. A 20-year-old Chinese woman. Warm light complexion. Straight black hair worn practical. Dark brown eyes. Black jaw-length straight hair. Focused, still dark brown eyes. Cinematic lighting. Background: Station Three integration bay with diagnostic node-cluster displays.
+> **Gemini:** Full-body portrait of a 20-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. in a straight, practical cut at the jaw. Dark brown eyes, focused and slightly too still for someone her age. Slim build in Lattice Engineering junior technician workwear — grey uniform with integration-division patches on the shoulders. Photorealistic. Warm light. Background: a Lattice systems integration bay on Station Three, with node-cluster diagnostic displays and clean white-lit work surfaces.
+> **Grok:** Ultra-realistic portrait. A 20-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. Straight black hair worn practical. Black jaw-length straight hair. Warm light. Background: Station Three integration bay with diagnostic node-cluster displays.
 
 ---
 
@@ -11099,8 +11095,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. Dark brown hair, slightly greying at the temples, kept at medium length. Dark brown eyes, perceptive and unhurried. Medium build in Medical Corps civilian consultation attire — dark trousers, a muted professional jacket, no insignia beyond a small Medical Corps identification clip. Photorealistic. Photorealistic. Warm light. Background: a Medical Corps psychological consultation room on Station Eleven, warmly lit, deliberately calm furnishings, a single Lattice display terminal on the wall.
-> **Grok:** Ultra-realistic portrait. A 45-year-old Italian man. Olive complexion. Short black hair. Warm hazel eyes. Dark brown slightly-greying hair at medium length. Perceptive dark brown eyes. Warm olive skin. Background: psychological consultation room, warm lighting, calm furnishings, single wall terminal.
+> **Gemini:** Full-body portrait of a 45-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Short black hair. Warm hazel eyes. Dark brown hair, slightly greying at the temples, kept at medium length. Dark brown eyes, perceptive and unhurried. Photorealistic. Warm light. Background: a Medical Corps psychological consultation room on Station Eleven, warmly lit, deliberately calm furnishings, a single Lattice display terminal on the wall.
+> **Grok:** Ultra-realistic portrait. A 45-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Dark brown slightly-greying hair at medium length. Perceptive dark brown eyes. Warm hazel eyes. Background: psychological consultation room, warm lighting, calm furnishings, single wall terminal.
 
 ---
 
@@ -11125,8 +11121,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 63-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Grey hair, cut short and kept neat. Blue-grey eyes, sharp and evaluating. Compact build in senior Survey Corps analyst attire — structured jacket with corps insignia and senior-rank designations. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the Survey Corps Central Planning floor, a wide space with mission-trajectory displays and orbital mapping projections.
-> **Grok:** Ultra-realistic portrait. A 63-year-old German woman. Fair complexion. Dark blonde pulled back. Pale green eyes. Sharp blue-grey evaluating eyes. Compact build in senior Survey Corps structured jacket with insignia. Survey corps structured jacket with insignia. Background: Survey Corps Central Planning floor with orbital mapping and mission-trajectory displays.
+> **Gemini:** Full-body portrait of a 63-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. Dark blonde pulled back. Pale green eyes. Grey hair, cut short and kept neat. Blue-grey eyes, sharp and evaluating. Photorealistic. Cinematic directional lighting. Background: the Survey Corps Central Planning floor, a wide space with mission-trajectory displays and orbital mapping projections.
+> **Grok:** Ultra-realistic portrait. A 63-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. Sharp blue-grey evaluating eyes. Compact build in senior Survey Corps structured jacket with insignia. Survey corps structured jacket with insignia. Background: Survey Corps Central Planning floor with orbital mapping and mission-trajectory displays.
 
 ---
 
@@ -11160,8 +11156,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 26-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. Light blue eyes, frustrated and quietly determined. Athletic build in Survey Corps field biology gear with sample containers at her belt. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: alien frontier terrain with sparse vegetation and portable lab equipment on a folding table.
-> **Grok:** Ultra-realistic portrait. A 26-year-old Scandinavian woman of Nordic heritage. Very fair complexion. White-blonde hair. Clear blue eyes. Platinum blonde hair tied back. Light blue eyes, determined. Survey corps field biology uniform. Background: alien terrain surface with portable laboratory setup and horizon sky.
+> **Gemini:** Full-body portrait of a 26-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. White-blonde hair. Clear blue eyes. Light blue eyes, frustrated and quietly determined. Athletic build in Survey Corps field biology gear with sample containers at her belt. Photorealistic. Cinematic directional lighting. Background: alien frontier terrain with sparse vegetation and portable lab equipment on a folding table.
+> **Grok:** Ultra-realistic portrait. A 26-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Platinum blonde hair tied back. Light blue eyes, determined. Survey corps field biology uniform. Background: alien terrain surface with portable laboratory setup and horizon sky.
 
 ---
 
@@ -11186,8 +11182,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 24-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Long dark hair loose over her shoulders. Dark brown eyes, inward and listening. Slim build in Covenant cantor ceremonial robes, simple and pale. One hand raised as if mid-note. Photorealistic. Cinematic directional lighting. Background: a Covenant resonance chamber with Lattice relay visible, ambient warm light, acoustic panels.
-> **Grok:** Ultra-realistic portrait. A 24-year-old Japanese woman. Light even complexion with warm undertone. Straight black hair worn practical. Dark brown eyes. Intent, inward dark brown eyes. Covenant cantor ceremonial robes. Warm complexion. Background: resonance chamber interior with relay glow and curved acoustic walls.
+> **Gemini:** Full-body portrait of a 24-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Straight black hair worn practical. Dark brown eyes. Long dark hair loose over her shoulders. Dark brown eyes, inward and listening. Photorealistic. Cinematic directional lighting. Background: a Covenant resonance chamber with Lattice relay visible, ambient warm light, acoustic panels.
+> **Grok:** Ultra-realistic portrait. A 24-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Light even complexion with warm undertone. Straight black hair worn practical. Warm undertone. Background: resonance chamber interior with relay glow and curved acoustic walls.
 
 ---
 
@@ -11212,8 +11208,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Short black hair, neatly kept. Dark brown eyes, alert and skeptical. Athletic build in Survey Corps pilot flight suit, helmet clipped to belt. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a shuttle cockpit with navigation displays, star charts, and the deep black of frontier space through the viewport.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Alert skeptical dark brown eyes. Survey Corps pilot flight suit. Warm complexion. Background: shuttle cockpit interior with nav holographics and star field viewport.
+> **Gemini:** Full-body portrait of a 27-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Neatly trimmed black hair. Deep brown eyes. Short black hair, neatly kept. Dark brown eyes, alert and skeptical. Photorealistic. Cinematic directional lighting. Background: a shuttle cockpit with navigation displays, star charts, and the deep black of frontier space through the viewport.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: shuttle cockpit interior with nav holographics and star field viewport.
 
 ---
 
@@ -11238,8 +11234,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 22-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Dark hair slightly long and unkempt from late nights. Brown eyes, curious and frustrated. Slim build in university student clothing — layered, practical. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a university research library on World 8, data terminals, stacked academic texts, soft reading light.
-> **Grok:** Ultra-realistic portrait. A 22-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Deep brown eyes. Curious frustrated brown eyes. Student clothing, casual layers. Warm medium-brown skin. Background: university library with research terminals and book stacks.
+> **Gemini:** Full-body portrait of a 22-year-old Greek woman. Warm olive-tan complexion. Rich dark brown. Brown-black eyes. Dark hair short. Deep brown eyes. Dark hair slightly long and unkempt from late nights. Brown eyes, curious and frustrated. Photorealistic. Cinematic directional lighting. Background: a university research library on World 8, data terminals, stacked academic texts, soft reading light.
+> **Grok:** Ultra-realistic portrait. A 22-year-old Greek woman. Warm olive-tan complexion. Rich dark brown. Brown-black eyes. Warm tan-brown complexion. Curious frustrated brown eyes. Warm tan-brown complexion. Background: university library with research terminals and book stacks.
 
 ---
 
@@ -11264,8 +11260,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 21-year-old Greek woman. Warm olive-tan complexion. Rich dark brown. Brown-black eyes. Dark curly hair worn loose at shoulder length. Dark brown eyes, observant and very careful. Slim build in Assembly intern professional attire — formal but young. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an Assembly administrative office, filing systems, governance displays, a corridor visible through a glass partition.
-> **Grok:** Ultra-realistic portrait. A 21-year-old Greek woman. Warm olive-tan complexion. Rich dark brown. Brown-black eyes. Dark curly shoulder-length hair. Quiet observant dark brown eyes. Warm olive skin. Background: Assembly filing room with document storage terminals and governance screens.
+> **Gemini:** Full-body portrait of a 21-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Dark brown eyes. Rich dark brown. Brown-black eyes. Dark curly hair worn loose at shoulder length. Dark brown eyes, observant and very careful. Photorealistic. Cinematic directional lighting. Background: an Assembly administrative office, filing systems, governance displays, a corridor visible through a glass partition.
+> **Grok:** Ultra-realistic portrait. A 21-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Dark brown eyes. Warm olive-tan complexion. Dark curly shoulder-length hair. Warm olive-tan complexion. Background: Assembly filing room with document storage terminals and governance screens.
 
 ---
 
@@ -11290,8 +11286,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 49-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Dark brown eyes. Grey-streaked dark hair, unkempt. Brown eyes, haunted and still focused. Lean build in worn field research gear, Survey Corps patches faded. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier research camp on World 499 with excavation equipment, alien terrain, and an amber-pale sky.
-> **Grok:** Ultra-realistic portrait. A 49-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Dark hair short. Dark brown eyes. Grey-streaked dark weathered hair. Survey Corps field research gear, worn. Warm medium-brown skin. Background: frontier excavation site with alien rock formations and camp equipment.
+> **Gemini:** Full-body portrait of a 49-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Dark hair short. Dark brown eyes. Grey-streaked dark hair, unkempt. Brown eyes, haunted and still focused. Photorealistic. Cinematic directional lighting. Background: a frontier research camp on World 499 with excavation equipment, alien terrain, and an amber-pale sky.
+> **Grok:** Ultra-realistic portrait. A 49-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Warm tan-brown complexion. Grey-streaked dark weathered hair. Warm tan-brown complexion. Background: frontier excavation site with alien rock formations and camp equipment.
 
 ---
 
@@ -11316,8 +11312,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Ice-blue eyes, exact and burdened. Lean build in Lattice Technical senior engineer attire — dark, functional, no decoration. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Lattice backbone operations center with massive network topology displays covering every surface.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Scandinavian woman of Nordic heritage. Very fair complexion. Light blonde hair. Ice blue eyes. Silver-blonde practical hair. Senior Lattice Technical uniform, dark. Cinematic lighting. Background: backbone operations center with layered network holographics and topology displays.
+> **Gemini:** Full-body portrait of a 53-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Light blonde hair. Ice blue eyes. Ice-blue eyes, exact and burdened. Lean build in Lattice Technical senior engineer attire — dark, functional, no decoration. Photorealistic. Cinematic directional lighting. Background: a Lattice backbone operations center with massive network topology displays covering every surface.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Silver-blonde practical hair. Senior Lattice Technical uniform, dark. Cinematic lighting. Background: backbone operations center with layered network holographics and topology displays.
 
 ---
 
@@ -11342,8 +11338,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Greying black hair, neatly kept. Dark brown eyes, calculating and very weary. Medium build in CID senior officer civilian attire — understated, dark, no insignia. Photorealistic. Photorealistic. Warm light. Background: a secure CID briefing room with sealed document cases, encrypted displays, no windows.
-> **Grok:** Ultra-realistic portrait. A 56-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Neatly greying black hair. Calculating weary dark brown eyes. Warm light. Background: classified briefing room with sealed file cases and dim encrypted terminal light.
+> **Gemini:** Full-body portrait of a 56-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Short black hair. Deep brown eyes. Greying black hair, neatly kept. Dark brown eyes, calculating and very weary. Photorealistic. Warm light. Background: a secure CID briefing room with sealed document cases, encrypted displays, no windows.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Neatly greying black hair. Calculating weary dark brown eyes. Warm light. Background: classified briefing room with sealed file cases and dim encrypted terminal light.
 
 ---
 
@@ -11368,8 +11364,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Greying red-brown hair. Green eyes, intense and chronically frustrated. Medium build in Assembly delegate formal attire, slightly disheveled from a long session. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the Assembly chamber, session ended, seats empty, governance lighting still on.
-> **Grok:** Ultra-realistic portrait. A 51-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Hazel-green eyes. Greying reddish-brown hair. Fair complexion with Celtic features. Formal clothing, slightly rumpled. Background: Assembly chamber with empty delegate seats and overhead governance lighting.
+> **Gemini:** Full-body portrait of a 51-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Auburn short cropped. Hazel-green eyes. Greying red-brown hair. Green eyes, intense and chronically frustrated. Photorealistic. Cinematic directional lighting. Background: the Assembly chamber, session ended, seats empty, governance lighting still on.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Fair complexion with light freckles. Greying reddish-brown hair. Formal clothing, slightly rumpled. Background: Assembly chamber with empty delegate seats and overhead governance lighting.
 
 ---
 
@@ -11394,8 +11390,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 62-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Grey beard neatly trimmed. Dark brown eyes, penetrating and scholarly. Medium build in Covenant senior theologian robes, layered. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Covenant theological library with ancient texts, Lattice diagrams on the walls, warm amber lamp light.
-> **Grok:** Ultra-realistic portrait. A 62-year-old Arab man of Middle Eastern heritage. Warm olive complexion. Dark hair short. Dark brown eyes. Warm olive to medium-brown complexion. Penetrating dark brown eyes. Warm olive to medium-brown complexion. Background: theological library with texts, manuscript cases, and Lattice schematics on shelves.
+> **Gemini:** Full-body portrait of a 62-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Dark hair short. Dark brown eyes. Grey beard neatly trimmed. Dark brown eyes, penetrating and scholarly. Photorealistic. Cinematic directional lighting. Background: a Covenant theological library with ancient texts, Lattice diagrams on the walls, warm amber lamp light.
+> **Grok:** Ultra-realistic portrait. A 62-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Warm olive to medium-brown complexion. Penetrating dark brown eyes. Warm olive complexion. Background: theological library with texts, manuscript cases, and Lattice schematics on shelves.
 
 ---
 
@@ -11420,8 +11416,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. White hair, thinning. Pale blue eyes, haunted and very far away. Lean build in civilian clothing with no insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a quiet cottage garden on a colony world, peaceful and isolated, soft grey-blue sky.
-> **Grok:** Ultra-realistic portrait. A 67-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Cinematic lighting. Background: peaceful colony cottage garden with low hedge and overcast sky.
+> **Gemini:** Full-body portrait of a 67-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Close-cropped light blonde. Ice blue eyes. White hair, thinning. Pale blue eyes, haunted and very far away. Photorealistic. Cinematic directional lighting. Background: a quiet cottage garden on a colony world, peaceful and isolated, soft grey-blue sky.
+> **Grok:** Ultra-realistic portrait. A 67-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Close-cropped light blonde. Cinematic lighting. Background: peaceful colony cottage garden with low hedge and overcast sky.
 
 ---
 
@@ -11446,8 +11442,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Dark hair with heavy grey at the temples and crown. Grey eyes, intense and very distant. Lean build in civilian technical attire — unremarkable, functional. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a secure cryptanalysis lab with signal decryption displays, waveform analysis terminals, dim focused light.
-> **Grok:** Ultra-realistic portrait. A 48-year-old German man. Fair complexion. Short blonde hair. Pale green eyes. Distant intense grey eyes. Technical civilian clothing, plain. Cinematic lighting. Background: cryptanalysis lab with decryption terminals, waveform displays, and low ambient light.
+> **Gemini:** Full-body portrait of a 48-year-old French man. Light complexion. Short brown hair. Amber eyes. Short blonde hair. Pale green eyes. Dark hair with heavy grey at the temples and crown. Grey eyes, intense and very distant. Photorealistic. Cinematic directional lighting. Background: a secure cryptanalysis lab with signal decryption displays, waveform analysis terminals, dim focused light.
+> **Grok:** Ultra-realistic portrait. A 48-year-old French man. Light complexion. Short brown hair. Amber eyes. Distant intense grey eyes. Technical civilian clothing, plain. Cinematic lighting. Background: cryptanalysis lab with decryption terminals, waveform displays, and low ambient light.
 
 ---
 
@@ -11472,8 +11468,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old French man. Light complexion. Short brown hair. Amber eyes. Distinguished grey hair. Dark brown eyes, measured and quietly worried. Medium build in Assembly delegate formal attire — authoritative, slightly tired. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an Assembly corridor with governance murals and stone columns, evening light through high windows.
-> **Grok:** Ultra-realistic portrait. A 58-year-old French man. Light complexion. Short brown hair. Amber eyes. Quietly worried dark brown eyes. Assembly delegate formal clothing. Formal clothing. Background: Assembly corridor with governance architecture and evening ambient light.
+> **Gemini:** Full-body portrait of a 58-year-old Ethiopian man. Warm brown skin, refined east african features. Close-cropped black hair. Warm dark brown eyes. Short brown hair. Amber eyes. Distinguished grey hair. Dark brown eyes, measured and quietly worried. Photorealistic. Cinematic directional lighting. Background: an Assembly corridor with governance murals and stone columns, evening light through high windows.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Ethiopian man. Warm brown skin, refined east african features. Close-cropped black hair. Warm dark brown eyes. Quietly worried dark brown eyes. Assembly delegate formal clothing. Amber eyes. Background: Assembly corridor with governance architecture and evening ambient light.
 
 ---
 
@@ -11503,8 +11499,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Ethiopian man. Warm brown skin, refined east african features. Close-cropped black hair. Warm dark brown eyes. Black hair kept short, close-cropped. Dark brown eyes, watchful and insomniac. Lean, precise build in Lattice Technical field engineer gear — worn but maintained. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the interior of a remote relay station, diagnostic panels glowing, deep Void Protocol darkness visible through a single viewport.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Ethiopian man. Warm brown skin, refined east african features. Close-cropped black hair. Warm dark brown eyes. Field engineer uniform with Lattice Technical insignia, worn from hard use. Warm brown skin. Background: remote relay station with glowing diagnostic panels and a dark viewport.
+> **Gemini:** Full-body portrait of a 41-year-old Ethiopian man. Warm brown skin, refined east african features. Natural short hair. Deep brown eyes. Close-cropped black hair. Warm dark brown eyes. Black hair kept short, close-cropped. Dark brown eyes, watchful and insomniac. Photorealistic. Cinematic directional lighting. Background: the interior of a remote relay station, diagnostic panels glowing, deep Void Protocol darkness visible through a single viewport.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Ethiopian man. Warm brown skin, refined east african features. Natural short hair. Deep brown eyes. Warm brown skin, refined east african features. Field engineer uniform with Lattice Technical insignia, worn from hard use. Warm brown skin, refined east african feature. Background: remote relay station with glowing diagnostic panels and a dark viewport.
 
 ---
 
@@ -11529,8 +11525,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Ethiopian man. Warm brown skin, refined east african features. Natural short hair. Deep brown eyes. Dark brown eyes, careful and tired behind wire-frame reading glasses. Slight build in Assembly administrative dress — neat, modest. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a deep Archive reading room with rows of sealed data terminals and amber overhead lighting.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Ethiopian man. Warm brown skin, refined east african features. Natural short hair. Deep brown eyes. Medium-deep warm brown skin. Silver-black close-cropped hair. Warm brown skin. Background: archive reading room with sealed data terminals and warm amber light.
+> **Gemini:** Full-body portrait of a 55-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Natural short hair. Deep brown eyes. Dark brown eyes, careful and tired behind wire-frame reading glasses. Slight build in Assembly administrative dress — neat, modest. Photorealistic. Cinematic directional lighting. Background: a deep Archive reading room with rows of sealed data terminals and amber overhead lighting.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Warm brown skin, refined east african features. Medium-deep warm brown skin. Warm brown skin, refined east african feature. Background: archive reading room with sealed data terminals and warm amber light.
 
 ---
 
@@ -11555,8 +11551,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Dark brown hair, slightly grey at the temples, worn neatly. Dark brown eyes, attentive and perpetually sorting. Medium build in Survey Corps administrative dress — professional, a little worn. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Survey Corps debrief room, one-way glass, a single chair under a neutral light.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Dark brown slightly greying hair. Attentive dark brown eyes. Warm olive skin. Background: debrief room with one-way glass and clean institutional lighting.
+> **Gemini:** Full-body portrait of a 47-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Dark brown hair. Deep amber eyes. Dark brown hair, slightly grey at the temples, worn neatly. Dark brown eyes, attentive and perpetually sorting. Photorealistic. Cinematic directional lighting. Background: a Survey Corps debrief room, one-way glass, a single chair under a neutral light.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Dark brown slightly greying hair. Attentive dark brown eyes. Amber eyes. Background: debrief room with one-way glass and clean institutional lighting.
 
 ---
 
@@ -11581,8 +11577,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Dark black hair, short and clean. Dark brown eyes, earnest and fractured. Lean, upright build in Covenant field chaplain attire — simple, worn from travel. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a small frontier chapel with Covenant iconography and a single dark viewport showing stars.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Earnest, fractured dark brown eyes. Covenant chaplain field attire, simple and well-worn. Warm medium brown skin. Background: small frontier chapel with Covenant symbols and a dark star-filled viewport.
+> **Gemini:** Full-body portrait of a 39-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Brown close-cropped. Deep brown eyes. Dark black hair, short and clean. Dark brown eyes, earnest and fractured. Photorealistic. Cinematic directional lighting. Background: a small frontier chapel with Covenant iconography and a single dark viewport showing stars.
+> **Grok:** Ultra-realistic portrait. A 39-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Earnest, fractured dark brown eyes. Covenant chaplain field attire, simple and well-worn. Warm medium complexion. Background: small frontier chapel with Covenant symbols and a dark star-filled viewport.
 
 ---
 
@@ -11607,8 +11603,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Sharp brown eyes, analytical and very still. Composed, lean build in CID analyst dress — tailored and unshowy. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a CID secure analysis office with network display screens and minimal furnishing.
-> **Grok:** Ultra-realistic portrait. A 44-year-old French woman. Light complexion with warm undertone. Dark brown hair worn loose. Dark brown eyes. Dark brown hair pulled back. CID analyst professional attire, tailored. Cinematic lighting. Background: secure CID office with network displays and clean institutional design.
+> **Gemini:** Full-body portrait of a 44-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Dark brown hair worn loose. Dark brown eyes. Sharp brown eyes, analytical and very still. Composed, lean build in CID analyst dress — tailored and unshowy. Photorealistic. Cinematic directional lighting. Background: a CID secure analysis office with network display screens and minimal furnishing.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Light complexion with warm undertone. Dark brown hair worn loose. Warm undertone. Background: secure CID office with network displays and clean institutional design.
 
 ---
 
@@ -11633,8 +11629,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Blonde hair gone mostly silver, worn short and practical. Blue-grey eyes, precise and permanently unconvinced. Compact, upright build in civilian clothes — neat, unadorned. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a modest private residence, a desk with physical storage units, no Lattice-connected terminals visible.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Dutch woman. Fair complexion. Medium blonde. Clear blue eyes. Fair skin, silver-blonde short hair. Civilian clothes, practical and unshowy. Cinematic lighting. Background: private home office, physical storage, no active screens.
+> **Gemini:** Full-body portrait of a 61-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Medium blonde. Clear blue eyes. Blonde hair gone mostly silver, worn short and practical. Blue-grey eyes, precise and permanently unconvinced. Photorealistic. Cinematic directional lighting. Background: a modest private residence, a desk with physical storage units, no Lattice-connected terminals visible.
+> **Grok:** Ultra-realistic portrait. A 61-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Fair skin, silver-blonde short hair. Civilian clothes, practical and unshowy. Cinematic lighting. Background: private home office, physical storage, no active screens.
 
 ---
 
@@ -11659,8 +11655,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Dark brown eyes, distant and precise simultaneously. Broad-shouldered, solid build in Survey Corps consultant attire — retired rank insignia visible. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Survey Corps operations room with star chart displays and a wide viewport showing deep space.
-> **Grok:** Ultra-realistic portrait. A 58-year-old African-American man. Warm brown skin, strong african-american features. Close-cropped black hair. Warm dark brown eyes. Silver-black close-cropped hair. Distant, precise dark brown eyes. Survey corps consultant dress with retired insi. Background: operations room with star charts and a deep-space viewport.
+> **Gemini:** Full-body portrait of a 58-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Close-cropped black hair. Warm dark brown eyes. Dark brown eyes, distant and precise simultaneously. Broad-shouldered, solid build in Survey Corps consultant attire — retired rank insignia visible. Photorealistic. Cinematic directional lighting. Background: a Survey Corps operations room with star chart displays and a wide viewport showing deep space.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Warm brown skin, strong african-american features. Silver-black close-cropped hair. Warm brown skin, strong african-american feat. Background: operations room with star charts and a deep-space viewport.
 
 ---
 
@@ -11685,8 +11681,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Dark brown hair, slightly disheveled, going grey. Blue-grey eyes, careful and watchful. Medium build, slightly soft, in civilian work clothes — plain, functional. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a modest home workspace with physical books, physical storage units, and a screen showing a technical document.
-> **Grok:** Ultra-realistic portrait. A 50-year-old Polish man. Fair complexion. Close-cropped dark blonde. Slate blue eyes. Plain civilian work clothes. Cinematic lighting. Background: home workspace with physical books, physical media storage, and a document on screen.
+> **Gemini:** Full-body portrait of a 50-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Close-cropped dark blonde. Slate blue eyes. Dark brown hair, slightly disheveled, going grey. Blue-grey eyes, careful and watchful. Photorealistic. Cinematic directional lighting. Background: a modest home workspace with physical books, physical storage units, and a screen showing a technical document.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Close-cropped dark blonde. Plain civilian work clothes. Cinematic lighting. Background: home workspace with physical books, physical media storage, and a document on screen.
 
 ---
 
@@ -11711,8 +11707,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Black hair, natural and close-cut. Dark brown eyes, focused and a little stubborn. Lean, athletic build in Survey Corps field cartographer gear, compact equipment harness visible. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a survey vessel cartography bay with spatial measurement arrays and a display showing the Void Protocol boundary zone.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Caribbean man of Afro-Caribbean heritage. Warm deep brown skin, caribbean features. Close-cropped black hair. Warm dark brown eyes. Stubborn, focused dark brown eyes. Survey Corps field gear with equipment harness. Warm deep brown skin. Background: cartography bay with spatial arrays and a boundary zone display.
+> **Gemini:** Full-body portrait of a 36-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Deep brown eyes. Close-cropped black hair. Warm dark brown eyes. Black hair, natural and close-cut. Dark brown eyes, focused and a little stubborn. Photorealistic. Cinematic directional lighting. Background: a survey vessel cartography bay with spatial measurement arrays and a display showing the Void Protocol boundary zone.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Deep brown eyes. Warm deep brown skin, caribbean features. Stubborn, focused dark brown eyes. Warm deep brown skin, caribbean features. Background: cartography bay with spatial arrays and a boundary zone display.
 
 ---
 
@@ -11737,8 +11733,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Deep brown eyes. Dark brown eyes, patient and measuring. Slight, compact build in civilian clothes — comfortable, unassuming. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a modest residential study with computational analysis tools, physical reference materials, and soft domestic lighting.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Indonesian man. Warm medium-brown complexion. Close-cropped dark hair. Deep brown eyes. Patient, measuring dark brown eyes. Civilian clothes, comfortable and plain. Warm medium brown skin. Background: home study with computational tools and soft warm lighting.
+> **Gemini:** Full-body portrait of a 64-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Close-cropped dark hair. Deep brown eyes. Dark brown eyes, patient and measuring. Slight, compact build in civilian clothes — comfortable, unassuming. Photorealistic. Cinematic directional lighting. Background: a modest residential study with computational analysis tools, physical reference materials, and soft domestic lighting.
+> **Grok:** Ultra-realistic portrait. A 64-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Warm medium-brown complexion. Patient, measuring dark brown eyes. Warm medium-brown complexion. Background: home study with computational tools and soft warm lighting.
 
 ---
 
@@ -11763,8 +11759,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Dark brown hair, neatly kept, slight grey beginning. Dark brown eyes, attentive and recording everything. Slim, precise build in Chronicle field recorder professional attire — portable recording equipment at the hip. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier court room on an outer world, sparse and functional, high ceilings and low light.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Neat dark brown hair with early grey. Attentive recording dark brown eyes. Warm olive skin. Background: sparse frontier courtroom with high ceiling and low ambient light.
+> **Gemini:** Full-body portrait of a 46-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Dark brown short. Deep hazel. Dark brown hair, neatly kept, slight grey beginning. Dark brown eyes, attentive and recording everything. Photorealistic. Cinematic directional lighting. Background: a frontier court room on an outer world, sparse and functional, high ceilings and low light.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Neat dark brown hair with early grey. Attentive recording dark brown eyes. Warm olive complexion. Background: sparse frontier courtroom with high ceiling and low ambient light.
 
 ---
 
@@ -11789,8 +11785,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Dark hair, slightly wavy, worn short. Dark brown eyes, methodical and privately alarmed. Medium build in Survey Corps Intelligence Coordination attire — clean, mid-rank professional. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Survey Corps data analysis bay with multiple active displays and secure terminal access panels.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Close-cropped dark hair. Deep brown eyes. Methodical, alarmed dark brown eyes. Survey Corps Intelligence Coordination uniform, mid-rank. Warm medium brown skin. Background: data analysis bay with multiple screens and secure terminal panels.
+> **Gemini:** Full-body portrait of a 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Close-cropped dark hair. Deep brown eyes. Dark hair, slightly wavy, worn short. Dark brown eyes, methodical and privately alarmed. Photorealistic. Cinematic directional lighting. Background: a Survey Corps data analysis bay with multiple active displays and secure terminal access panels.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Methodical, alarmed dark brown eyes. Survey Corps Intelligence Coordination uniform, mid-rank. Warm brown complexion. Background: data analysis bay with multiple screens and secure terminal panels.
 
 ---
 
@@ -11815,8 +11811,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. White hair, full, worn loosely. Dark brown eyes, ancient with a specific kind of knowledge that has been carried too long. Tall, upright build despite age — the posture of a man who still expects to be heard. Worn civilian clothes, academic but deliberately unsanctioned — no Covenant insignia. Photorealistic. Cinematic directional lighting. Background: an unlicensed lecture hall on a frontier world, rough walls, a small gathered audience, a single light above him.
-> **Grok:** Ultra-realistic portrait. A 67-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Warm olive skin, deeply lined. White full hair worn loose. Warm olive skin, deeply lined. Background: rough-walled frontier lecture space, small audience, single overhead light.
+> **Gemini:** Full-body portrait of a 67-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Short dark curly hair. Dark brown eyes. White hair, full, worn loosely. Dark brown eyes, ancient with a specific kind of knowledge that has been carried too long. Photorealistic. Cinematic directional lighting. Background: an unlicensed lecture hall on a frontier world, rough walls, a small gathered audience, a single light above him.
+> **Grok:** Ultra-realistic portrait. A 67-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Warm olive skin, deeply lined. White full hair worn loose. Warm brown complexion. Background: rough-walled frontier lecture space, small audience, single overhead light.
 
 ---
 
@@ -11845,8 +11841,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Blonde hair gone ash-grey, cut short and neat. Blue-grey eyes, precise and quietly troubled. Medium build; posture of a person who spends long hours seated at analysis consoles. Lattice Technical senior analyst attire — dark navy uniform, practical. Photorealistic. Cinematic directional lighting. Background: a Lattice statistical analysis center at night, wall-to-wall data displays casting cold blue light, otherwise empty.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Short ash-grey blonde hair. Blue-grey eyes, careful and burdened. Cold blue data light, empty workstations. Background: late-night Lattice analysis center, cold blue data light, empty workstations.
+> **Gemini:** Full-body portrait of a 47-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Close-cropped light blonde. Ice blue eyes. Blonde hair gone ash-grey, cut short and neat. Blue-grey eyes, precise and quietly troubled. Photorealistic. Cinematic directional lighting. Background: a Lattice statistical analysis center at night, wall-to-wall data displays casting cold blue light, otherwise empty.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Close-cropped light blonde. Short ash-grey blonde hair. Cold blue data light, empty workstations. Background: late-night Lattice analysis center, cold blue data light, empty workstations.
 
 ---
 
@@ -11871,8 +11867,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Close-cropped black hair with heavy silver at the temples. Dark brown eyes, philosophical and deeply watchful. Broad-shouldered, dignified build. University academic attire — dark structured jacket, no insignia. Photorealistic. Cinematic directional lighting. Background: a large University of Concord lecture hall at dusk, empty seats, light falling through high windows onto a single desk covered in papers.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Nigerian man of Yoruba heritage. Deep warm brown skin, west african features. Close-cropped black hair. Warm dark brown eyes. Close-cropped silver-black hair. Broad-shouldered in dark academic jacket. Warm brown skin. Background: empty university lecture hall, late afternoon light through tall windows.
+> **Gemini:** Full-body portrait of a 55-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Close-cropped black hair. Warm dark brown eyes. Close-cropped black hair with heavy silver at the temples. Dark brown eyes, philosophical and deeply watchful. Photorealistic. Cinematic directional lighting. Background: a large University of Concord lecture hall at dusk, empty seats, light falling through high windows onto a single desk covered in papers.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Deep warm brown skin, west african features. Close-cropped silver-black hair. Warm brown skin, west african features. Background: empty university lecture hall, late afternoon light through tall windows.
 
 ---
 
@@ -11897,8 +11893,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. in dark jacket, no rank insignia. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a dim CID archival office, walls of physical and digital case files, a single lamp illuminating a desk covered in cross-referenced documents.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Colombian man. Warm medium complexion. Brown close-cropped. Deep brown eyes. Dark brown slightly disheveled hair. Patient, precisely focused dark brown eyes. Warm medium skin. Background: late-night archival office, lamp-lit desk, walls of case files.
+> **Gemini:** Full-body portrait of a 41-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. in dark jacket, no rank insignia. Cinematic directional lighting. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a dim CID archival office, walls of physical and digital case files, a single lamp illuminating a desk covered in cross-referenced documents.
+> **Grok:** Ultra-realistic portrait. A 41-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Dark brown slightly disheveled hair. Patient, precisely focused dark brown eyes. Warm medium complexion. Background: late-night archival office, lamp-lit desk, walls of case files.
 
 ---
 
@@ -11923,8 +11919,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Assembly analyst attire — neat but slightly rumpled dark jacket. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly statistics office, late at night, multiple screens showing economic model outputs, one screen showing an anomalous residual cluster highlighted in amber.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Dark brown wavy hair, slightly unkempt. Analytically sharp dark brown eyes. Warm olive skin. Background: late-night government statistics office, screens showing data clusters.
+> **Gemini:** Full-body portrait of a 38-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Dark brown short. Dark brown eyes. Assembly analyst attire — neat but slightly rumpled dark jacket. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly statistics office, late at night, multiple screens showing economic model outputs, one screen showing an anomalous residual cluster highlighted in amber.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Dark brown wavy hair, slightly unkempt. Analytically sharp dark brown eyes. Warm olive complexion. Background: late-night government statistics office, screens showing data clusters.
 
 ---
 
@@ -11949,8 +11945,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Neat black hair, straight, cut conservatively. Dark brown eyes, careful and internally preoccupied. Slim build; the still quality of someone who has learned to conceal what they are thinking. Survey Corps Archive Division attire — clean dark uniform with archival division markings. Photorealistic. Cinematic directional lighting. Background: a Year 0 Records archive room, rows of sealed physical and digital storage, warm amber task-lighting on a single open workstation.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Japanese man. Light complexion with warm undertone. Neatly trimmed black hair. Deep brown eyes. Neat conservative black hair. Careful, preoccupied dark brown eyes. Warm ivory skin. Background: deep archive room, sealed storage rows, amber workstation light.
+> **Gemini:** Full-body portrait of a 44-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Neatly trimmed black hair. Deep brown eyes. Neat black hair, straight, cut conservatively. Dark brown eyes, careful and internally preoccupied. Photorealistic. Cinematic directional lighting. Background: a Year 0 Records archive room, rows of sealed physical and digital storage, warm amber task-lighting on a single open workstation.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Light complexion with warm undertone. Neatly trimmed black hair. Warm undertone. Background: deep archive room, sealed storage rows, amber workstation light.
 
 ---
 
@@ -11975,8 +11971,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Dark brown eyes with a quality of very careful watchfulness — not fear, but its precise precursor. Slender build; the contained stillness of someone holding something heavy very quietly. Lattice Technical researcher uniform, mobile station variant — dark grey, functional, compact. Photorealistic. Cinematic directional lighting. Background: the signal analysis bay of a mobile station, curved walls of instrument panels, a single readout showing a waveform with an eleven-second anomaly marked in amber.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Japanese woman. Light even complexion with warm undertone. Glossy black hair. Warm dark eyes. Black hair in a practical high knot. Very carefully watchful dark brown eyes. Warm golden skin. Background: curved mobile station signal bay, instrument panels, amber-marked anomaly display.
+> **Gemini:** Full-body portrait of a 36-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Glossy black hair. Warm dark eyes. Dark brown eyes with a quality of very careful watchfulness — not fear, but its precise precursor. Slender build; the contained stillness of someone holding something heavy very quietly. Photorealistic. Cinematic directional lighting. Background: the signal analysis bay of a mobile station, curved walls of instrument panels, a single readout showing a waveform with an eleven-second anomaly marked in amber.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Light even complexion with warm undertone. Black hair in a practical high knot. Warm undertone. Background: curved mobile station signal bay, instrument panels, amber-marked anomaly display.
 
 ---
 
@@ -12001,8 +11997,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Dark brown hair gone mostly silver. Dark brown eyes, sharp and unapologetically certain — the look of someone who has stopped performing doubt. Stocky, slightly heavy build; the physicality of a man who once walked a lot and now sits a great deal. Civilian attire — dark wool jacket over a plain shirt, no institutional insignia. Photorealistic. Warm light. Background: a private study, bookshelves, an open manuscript on the desk, a single window showing a night sky with no city light.
-> **Grok:** Ultra-realistic portrait. A 61-year-old Italian man. Olive complexion. Short black hair. Chestnut brown eyes. Mostly silver dark-brown hair. Unapologetically certain dark brown eyes. Warm light. Background: private study at night, open manuscript on desk, bookshelves, dark window.
+> **Gemini:** Full-body portrait of a 61-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Short black hair. Chestnut brown eyes. Dark brown hair gone mostly silver. Dark brown eyes, sharp and unapologetically certain — the look of someone who has stopped performing doubt. Photorealistic. Warm light. Background: a private study, bookshelves, an open manuscript on the desk, a single window showing a night sky with no city light.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Mostly silver dark-brown hair. Unapologetically certain dark brown eyes. Warm light. Background: private study at night, open manuscript on desk, bookshelves, dark window.
 
 ---
 
@@ -12027,8 +12023,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 50-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Black hair, short, very slightly salted with grey. Dark brown eyes with the specific alertness of a man who has been paying careful attention to something he cannot quite see for a long time. Medium-strong build; composed, deliberate posture. Assembly Intelligence Committee attire — dark formal jacket, committee insignia. Photorealistic. Cinematic directional lighting. Background: a sealed Assembly committee review room, a single document on an otherwise empty table, high frosted windows, institutional silence.
-> **Grok:** Ultra-realistic portrait. A 50-year-old Greek man. Warm olive complexion. Dark brown short. Dark brown eyes. Short black hair with grey. Alert, long-focused dark brown eyes. Warm medium olive skin. Background: sealed committee review room, document on table, frosted-glass windows.
+> **Gemini:** Full-body portrait of a 50-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Dark brown short. Dark brown eyes. Black hair, short, very slightly salted with grey. Dark brown eyes with the specific alertness of a man who has been paying careful attention to something he cannot quite see for a long time. Photorealistic. Cinematic directional lighting. Background: a sealed Assembly committee review room, a single document on an otherwise empty table, high frosted windows, institutional silence.
+> **Grok:** Ultra-realistic portrait. A 50-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Short black hair with grey. Alert, long-focused dark brown eyes. Warm olive complexion. Background: sealed committee review room, document on table, frosted-glass windows.
 
 ---
 
@@ -12053,8 +12049,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. in the corner with personal notes. Photorealistic. Cinematic directional lighting. Background: a relay maintenance bay on a working station, equipment racks, a private workbench in the corner with personal notes.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Nigerian man of Igbo heritage. Deep brown skin, igbo features. Natural short hair. Deep brown eyes. Medium to deep warm brown skin. Close-cropped black-grey hair. Warm brown skin. Background: relay maintenance bay, equipment racks, private workbench.
+> **Gemini:** Full-body portrait of a 53-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. in the corner with personal notes. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a relay maintenance bay on a working station, equipment racks, a private workbench in the corner with personal notes.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Deep brown skin, igbo features. Medium to deep warm brown skin. Natural short hair. Background: relay maintenance bay, equipment racks, private workbench.
 
 ---
 
@@ -12079,8 +12075,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. in the corner that is turned off. Photorealistic. Cinematic directional lighting. Background: a Survey Corps data modeling center, screens showing the official Meridian Fault model, a separate dark screen in the corner that is turned off.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Indonesian man. Warm medium-brown complexion. Short black hair. Warm dark eyes. Straight black hair, slightly overgrown. Suppressed, specific exhaustion in dark brown eyes. Warm medium brown skin. Background: data modeling center, official model on screens, one dark screen turned off.
+> **Gemini:** Full-body portrait of a 39-year-old Pakistani woman. Warm medium-brown complexion. Black hair. Deep brown eyes. in the corner that is turned off. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Survey Corps data modeling center, screens showing the official Meridian Fault model, a separate dark screen in the corner that is turned off.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Pakistani woman. Warm medium-brown complexion. Black hair. Deep brown eyes. Warm medium-brown complexion. Straight black hair, slightly overgrown. Warm medium-brown complexion. Background: data modeling center, official model on screens, one dark screen turned off.
 
 ---
 
@@ -12105,8 +12101,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Pakistani woman. Warm medium-brown complexion. Black hair. Deep brown eyes. Dark brown eyes, analytically precise with a quality of recent and significant disturbance she has not resolved. Composed posture — the stillness of someone who does not show what they are working through. Lattice Technical senior analyst attire — dark structured uniform. Photorealistic. Cinematic directional lighting. Background: a late-night Lattice behavioral analysis station, multiple displays showing anomaly trend curves, one chair across the desk slightly displaced as though recently occupied.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Pakistani woman. Warm medium-brown complexion. Black hair. Deep brown eyes. Light to medium warm brown skin. Dark brown hair in a low knot. Warm brown skin. Background: late-night analysis station, anomaly curve displays, displaced chair across the desk.
+> **Gemini:** Full-body portrait of a 43-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Black hair. Deep brown eyes. Dark brown eyes, analytically precise with a quality of recent and significant disturbance she has not resolved. Composed posture — the stillness of someone who does not show what they are working through. Photorealistic. Cinematic directional lighting. Background: a late-night Lattice behavioral analysis station, multiple displays showing anomaly trend curves, one chair across the desk slightly displaced as though recently occupied.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Warm medium-brown complexion. Light to medium warm brown skin. Warm medium-brown complexion. Background: late-night analysis station, anomaly curve displays, displaced chair across the desk.
 
 ---
 
@@ -12131,8 +12127,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Dark brown hair worn straight and practical, shoulder length. Dark brown eyes, professionally composed with a specific quality of alert and deliberate calm — the look of someone who has chosen not to show what they know. Upright posture. Chronicle senior analyst attire — neat dark jacket with Chronicle insignia. Photorealistic. Cinematic directional lighting. Background: a Chronicle records analysis office, walls of archived filings, a screen showing a cross-reference network with one highlighted cluster, ambient institutional light.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Colombian woman. Warm medium complexion with latin american heritage. Dark brown wavy hair. Dark brown eyes. Straight dark brown practical hair. Alert, deliberately calm dark brown eyes. Warm medium skin. Background: Chronicle records office, archived filings, cross-reference network on screen with highlighted cluster.
+> **Gemini:** Full-body portrait of a 46-year-old Spanish woman. Warm olive complexion. Dark brown hair neat. Deep amber eyes. Dark brown wavy hair. Dark brown eyes. Dark brown hair worn straight and practical, shoulder length. Dark brown eyes, professionally composed with a specific quality of alert and deliberate calm — the look of someone who has chosen not to show what they know. Photorealistic. Cinematic directional lighting. Background: a Chronicle records analysis office, walls of archived filings, a screen showing a cross-reference network with one highlighted cluster, ambient institutional light.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Spanish woman. Warm olive complexion. Dark brown hair neat. Deep amber eyes. Warm medium complexion with latin american heritage. Straight dark brown practical hair. Warm medium complexion with latin american he. Background: Chronicle records office, archived filings, cross-reference network on screen with highlighted cluster.
 
 ---
 
@@ -12157,8 +12153,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 58-year-old Spanish woman. Warm olive complexion. Dark brown hair neat. Deep amber eyes. Dark brown hair gone generously silver, worn loose to the jaw. Dark brown eyes, formidably precise with a quality of long and unresolved internal weight — not despair, but its composed cousin. Slight, upright build; the posture of a woman who has held something very heavy for a long time without showing it. Civilian attire — a dark structured coat, no institutional insignia, the coat of someone on leave. Photorealistic. Cinematic directional lighting. Background: a sparse private study, a single closed file on an otherwise bare desk, a large window showing a grey sky, absolute quiet.
-> **Grok:** Ultra-realistic portrait. A 58-year-old Spanish woman. Warm olive complexion. Dark brown hair neat. Deep amber eyes. Dark brown hair silvered at jaw length. Formidably precise, long-weighted dark brown eyes. Warm skin. Background: sparse private study, closed file on bare desk, large grey-sky window.
+> **Gemini:** Full-body portrait of a 58-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Dark brown hair neat. Deep amber eyes. Dark brown hair gone generously silver, worn loose to the jaw. Dark brown eyes, formidably precise with a quality of long and unresolved internal weight — not despair, but its composed cousin. Photorealistic. Cinematic directional lighting. Background: a sparse private study, a single closed file on an otherwise bare desk, a large window showing a grey sky, absolute quiet.
+> **Grok:** Ultra-realistic portrait. A 58-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Dark brown hair silvered at jaw length. Formidably precise, long-weighted dark brown eyes. Warm olive complexion. Background: sparse private study, closed file on bare desk, large grey-sky window.
 
 ---
 
@@ -12188,8 +12184,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Black hair, slightly overgrown, pushed back from his face. Dark brown eyes, attentive and careful. Lean build in Lattice Technical Division analyst attire — dark grey uniform, sleeves slightly pushed up. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a relay monitoring station with cascading data streams on wall-mounted displays and a single workstation showing a flagged packet log.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Korean man. Light complexion with cool undertone. Short black hair. Warm dark eyes. Overgrown black hair pushed back. Attentive dark brown eyes. Warm ivory skin. Background: relay monitoring station with data stream displays and a flagged incident log.
+> **Gemini:** Full-body portrait of a 34-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Short black hair. Warm dark eyes. Black hair, slightly overgrown, pushed back from his face. Dark brown eyes, attentive and careful. Photorealistic. Cinematic directional lighting. Background: a relay monitoring station with cascading data streams on wall-mounted displays and a single workstation showing a flagged packet log.
+> **Grok:** Ultra-realistic portrait. A 34-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Light complexion with cool undertone. Overgrown black hair pushed back. Cool undertone. Background: relay monitoring station with data stream displays and a flagged incident log.
 
 ---
 
@@ -12214,8 +12210,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Dark brown hair greying at the temples. Grey-blue eyes, precise and tired. Medium build in Assembly senior analyst formal attire — dark coat, pressed collar. Photorealistic. Photorealistic. Cinematic directional lighting. Background: an Assembly policy drafting office with stacked document files, a governance amendment on screen, and soft institutional lighting.
-> **Grok:** Ultra-realistic portrait. A 51-year-old German man. Fair complexion. Close-cropped brown hair. Steel blue eyes. Dark brown hair greying at the temples. Assembly formal coat with pressed collar. Formal coat with pressed collar. Background: policy drafting office with document stacks and a governance amendment on screen.
+> **Gemini:** Full-body portrait of a 51-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Close-cropped brown hair. Steel blue eyes. Dark brown hair greying at the temples. Grey-blue eyes, precise and tired. Photorealistic. Cinematic directional lighting. Background: an Assembly policy drafting office with stacked document files, a governance amendment on screen, and soft institutional lighting.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark brown hair greying at the temples. Assembly formal coat with pressed collar. Formal coat with pressed collar. Background: policy drafting office with document stacks and a governance amendment on screen.
 
 ---
 
@@ -12240,8 +12236,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 29-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Black hair, short and neat. Dark brown eyes, watchful and restrained. Athletic lean build in CID field operative attire — dark neutral jacket, functional clothing. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a domestic surveillance monitoring room with low lighting, behavioral pattern displays, and a single Covenant movement map on screen.
-> **Grok:** Ultra-realistic portrait. A 29-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark CID field jacket with functional cut. Cinematic lighting. Background: surveillance room with dim lighting and behavioral pattern monitors.
+> **Gemini:** Full-body portrait of a 29-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Short black hair. Dark brown eyes. Black hair, short and neat. Dark brown eyes, watchful and restrained. Photorealistic. Cinematic directional lighting. Background: a domestic surveillance monitoring room with low lighting, behavioral pattern displays, and a single Covenant movement map on screen.
+> **Grok:** Ultra-realistic portrait. A 29-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Light complexion with cool undertone. Dark CID field jacket with functional cut. Cool undertone. Background: surveillance room with dim lighting and behavioral pattern monitors.
 
 ---
 
@@ -12266,8 +12262,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Black hair, neatly combed with slight grey at the sides. Dark brown eyes, precise and guarded. Medium build in Lattice Medical Authority senior diagnostician attire — white coat over formal grey. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Tier-1 diagnostic facility with Lattice scan equipment, patient records on screen, and a private audit log partially visible.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Chinese man. Warm light complexion. Neat dark hair. Warm brown eyes. Neat black hair with grey at the sides. Precise guarded dark brown eyes. Warm golden skin. Background: diagnostic facility with scan equipment and private audit log on secondary screen.
+> **Gemini:** Full-body portrait of a 46-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Neat dark hair. Warm brown eyes. Black hair, neatly combed with slight grey at the sides. Dark brown eyes, precise and guarded. Photorealistic. Warm light. Background: a Tier-1 diagnostic facility with Lattice scan equipment, patient records on screen, and a private audit log partially visible.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Neat black hair with grey at the sides. Precise guarded dark brown eyes. Warm light. Background: diagnostic facility with scan equipment and private audit log on secondary screen.
 
 ---
 
@@ -12292,8 +12288,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 38-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Brown eyes, contemplative and careful. Slender build in Covenant doctrinal interpreter attire — muted dark layered clothing with a Covenant identity marker at the collar. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Covenant archive room with ambient Lattice interface display, study materials stacked on a table, soft low lighting.
-> **Grok:** Ultra-realistic portrait. A 38-year-old Austrian woman. Fair complexion. Dark blonde arranged practical. Hazel eyes. Dark brown hair in a low knot. Muted dark Covenant layered attire with identity marker at collar. Cinematic lighting. Background: Covenant archive room with ambient Lattice display and stacked doctrinal texts.
+> **Gemini:** Full-body portrait of a 38-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Dark blonde arranged practical. Hazel eyes. Brown eyes, contemplative and careful. Slender build in Covenant doctrinal interpreter attire — muted dark layered clothing with a Covenant identity marker at the collar. Photorealistic. Cinematic directional lighting. Background: a Covenant archive room with ambient Lattice interface display, study materials stacked on a table, soft low lighting.
+> **Grok:** Ultra-realistic portrait. A 38-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Dark blonde arranged practical. Dark brown hair in a low knot. Cinematic lighting. Background: Covenant archive room with ambient Lattice display and stacked doctrinal texts.
 
 ---
 
@@ -12318,8 +12314,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Light brown hair, weathered at the edges. Blue-grey eyes, practical and quietly unsettled. Solid medium build in Survey Corps field mapping attire — durable layered clothing, cartographer's tools at his belt. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier survey relay station with mapping displays, coordinate grids, and the pale light of an unfamiliar planet through a viewport.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Clear blue eyes. Weathered light brown hair. Survey Corps field attire with cartographer tools at belt. Survey corps field attire with cartographer too. Background: frontier relay station with mapping grids and pale alien light through a viewport.
+> **Gemini:** Full-body portrait of a 43-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Close-cropped light blonde. Clear blue eyes. Light brown hair, weathered at the edges. Blue-grey eyes, practical and quietly unsettled. Photorealistic. Cinematic directional lighting. Background: a frontier survey relay station with mapping displays, coordinate grids, and the pale light of an unfamiliar planet through a viewport.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Close-cropped light blonde. Weathered light brown hair. Survey corps field attire with cartographer too. Background: frontier relay station with mapping grids and pale alien light through a viewport.
 
 ---
 
@@ -12344,8 +12340,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 33-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Dark brown hair worn short, close to the jaw. Brown eyes, sharp and restrained. Lean build in CID analyst attire — dark structured jacket, clean and professional. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a CID intelligence analysis office with case files stacked near a secure terminal, low ambient lighting, and a Lattice query result partially visible on screen.
-> **Grok:** Ultra-realistic portrait. A 33-year-old Austrian woman. Fair complexion. Light brown hair worn neat. Blue eyes. Short dark brown hair at jaw length. Sharp restrained brown eyes. Cinematic lighting. Background: CID analysis office with case files and a Lattice query result visible on a secure terminal.
+> **Gemini:** Full-body portrait of a 33-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Light brown hair worn neat. Blue eyes. Dark brown hair worn short, close to the jaw. Brown eyes, sharp and restrained. Photorealistic. Cinematic directional lighting. Background: a CID intelligence analysis office with case files stacked near a secure terminal, low ambient lighting, and a Lattice query result partially visible on screen.
+> **Grok:** Ultra-realistic portrait. A 33-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Light brown hair worn neat. Short dark brown hair at jaw length. Cinematic lighting. Background: CID analysis office with case files and a Lattice query result visible on a secure terminal.
 
 ---
 
@@ -12370,8 +12366,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 47-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Blonde hair gone substantially grey. Blue-grey eyes, careful and haunted. Medium build in Chronicle senior recorder formal attire — dark coat, institutional styling. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Chronicle archive room with case files spanning a full wall, a Void Protocol case number visible on a document shelf, and a Lattice relay terminal with a dim screen.
-> **Grok:** Ultra-realistic portrait. A 47-year-old Scandinavian man of Nordic heritage. Very fair complexion. Close-cropped light blonde. Ice blue eyes. Chronicle formal dark coat. Formal dark coat. Background: archive room with full-wall case files, a Void Protocol document visible on a shelf, and a dim Lattice terminal.
+> **Gemini:** Full-body portrait of a 47-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Close-cropped light blonde. Ice blue eyes. Blonde hair gone substantially grey. Blue-grey eyes, careful and haunted. Photorealistic. Cinematic directional lighting. Background: a Chronicle archive room with case files spanning a full wall, a Void Protocol case number visible on a document shelf, and a Lattice relay terminal with a dim screen.
+> **Grok:** Ultra-realistic portrait. A 47-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Close-cropped light blonde. Chronicle formal dark coat. Formal dark coat. Background: archive room with full-wall case files, a Void Protocol document visible on a shelf, and a dim Lattice terminal.
 
 ---
 
@@ -12396,8 +12392,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. in a muted warm color, professional. Cinematic directional lighting. Photorealistic. Warm light. Background: an Assembly delegate office with regional infrastructure maps on the wall, a relay equity proposal visible on her desk, and institutional warm lighting.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Italian woman. Olive complexion with warm mediterranean tone. Deep brown hair. Deep amber eyes. Warm olive-light complexion. Dark brown hair loose to the shoulders. Warm olive-light complexion. Background: delegate office with infrastructure maps, relay equity documents on desk, institutional lighting.
+> **Gemini:** Full-body portrait of a 41-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. in a muted warm color, professional. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly delegate office with regional infrastructure maps on the wall, a relay equity proposal visible on her desk, and institutional warm lighting.
+> **Grok:** Ultra-realistic portrait. A 41-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Olive complexion with warm mediterranean tone. Warm olive-light complexion. Warm mediterranean tone. Background: delegate office with infrastructure maps, relay equity documents on desk, institutional lighting.
 
 ---
 
@@ -12422,8 +12418,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Dark brown hair going grey. Grey-blue eyes, practiced and privately unsettled. Solid build in Ascendancy operative field attire — dark coat over structured clothing, professional and unremarkable. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private Ascendancy operations office with minimal furnishings, a locked document cabinet, and low directed lighting.
-> **Grok:** Ultra-realistic portrait. A 52-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Pale blue eyes. Fair weathered complexion. Dark brown hair going grey. Cinematic lighting. Background: sparse private operations office with locked document cabinet and low directed lighting.
+> **Gemini:** Full-body portrait of a 52-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Neatly cropped dark hair. Pale blue eyes. Dark brown hair going grey. Grey-blue eyes, practiced and privately unsettled. Photorealistic. Cinematic directional lighting. Background: a private Ascendancy operations office with minimal furnishings, a locked document cabinet, and low directed lighting.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Fair weathered complexion. Dark brown hair going grey. Cinematic lighting. Background: sparse private operations office with locked document cabinet and low directed lighting.
 
 ---
 
@@ -12448,8 +12444,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 27-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Dark brown eyes, alert and intensely curious. Slim build in Lattice Technical Division maintenance engineer attire — mid-grey work uniform with tools at the belt. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a relay infrastructure maintenance corridor with exposed hardware panels, status indicators, and a personal data tablet displaying a row of flagged calibration logs.
-> **Grok:** Ultra-realistic portrait. A 27-year-old Korean man. Light complexion with cool undertone. Short black hair. Dark brown eyes. Practical black hair tied back. Alert intensely curious dark brown eyes. Warm skin. Background: relay maintenance corridor with hardware panels open, status indicators lit, and a tablet showing flagged calibration logs.
+> **Gemini:** Full-body portrait of a 27-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Short black hair. Dark brown eyes. Dark brown eyes, alert and intensely curious. Slim build in Lattice Technical Division maintenance engineer attire — mid-grey work uniform with tools at the belt. Photorealistic. Cinematic directional lighting. Background: a relay infrastructure maintenance corridor with exposed hardware panels, status indicators, and a personal data tablet displaying a row of flagged calibration logs.
+> **Grok:** Ultra-realistic portrait. A 27-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Light complexion with cool undertone. Practical black hair tied back. Cool undertone. Background: relay maintenance corridor with hardware panels open, status indicators lit, and a tablet showing flagged calibration logs.
 
 ---
 
@@ -12474,8 +12470,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Dark brown hair, slightly unkempt. Blue-grey eyes, precise and quietly stubborn. Medium lean build in Chronicle field recorder attire — practical layered clothing, a recording device worn at the lapel. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier relay hub with exposed technical infrastructure, a Lattice diagnostic display on the wall showing a cleared log, and a field recorder's kit laid out on a work surface.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Irish man. Fair complexion with light freckles. Auburn short cropped. Blue-green eyes. Dark brown slightly unkempt hair. Precise stubborn blue-grey eyes. Cinematic lighting. Background: frontier relay hub with exposed infrastructure and a cleared diagnostic display on the wall.
+> **Gemini:** Full-body portrait of a 36-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Auburn short cropped. Blue-green eyes. Dark brown hair, slightly unkempt. Blue-grey eyes, precise and quietly stubborn. Photorealistic. Cinematic directional lighting. Background: a frontier relay hub with exposed technical infrastructure, a Lattice diagnostic display on the wall showing a cleared log, and a field recorder's kit laid out on a work surface.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Fair complexion with light freckles. Dark brown slightly unkempt hair. Cinematic lighting. Background: frontier relay hub with exposed infrastructure and a cleared diagnostic display on the wall.
 
 ---
 
@@ -12500,8 +12496,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a private research office with pre-Concord technical documents spread across a large table, Year 0 notation visible on a display, and archived relay schematics pinned to the wall.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Chinese man. Warm light complexion. Short black hair. Deep brown eyes. Light warm ivory skin with age lines. Mostly white hair once black. Warm ivory skin with age lines. Background: private research office with pre-Concord documents spread on table, Year 0 notation on a display, relay schematics on the wall.
+> **Gemini:** Full-body portrait of a 55-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Deep brown eyes. Short black hair. Deep brown eyes. Cinematic directional lighting. Photorealistic. Photorealistic. Warm light. Background: a private research office with pre-Concord technical documents spread across a large table, Year 0 notation visible on a display, and archived relay schematics pinned to the wall.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Deep brown eyes. Light warm ivory skin with age lines. Mostly white hair once black. Warm light. Background: private research office with pre-Concord documents spread on table, Year 0 notation on a display, relay schematics on the wall.
 
 ---
 
@@ -12531,8 +12527,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Deep brown eyes. Dark brown eyes, analytical and careful. Slender build in Assembly policy analyst's formal attire — structured jacket, neutral tones. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: an Assembly infrastructure review office with large display panels showing Concord-wide resource allocation maps.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Deep brown eyes. Black hair in a low twist. Assembly formal jacket, neutral tones. Formal jacket, neutral tones. Background: infrastructure review office with allocation displays and physical paper notes on the desk.
+> **Gemini:** Full-body portrait of a 44-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. Close-cropped natural hair. Deep brown eyes. Dark brown eyes, analytical and careful. Slender build in Assembly policy analyst's formal attire — structured jacket, neutral tones. Photorealistic. Cinematic directional lighting. Background: an Assembly infrastructure review office with large display panels showing Concord-wide resource allocation maps.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. Deep rich brown skin with igbo west african features. Close-cropped natural hair. Natural hair. Background: infrastructure review office with allocation displays and physical paper notes on the desk.
 
 ---
 
@@ -12557,8 +12553,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 37-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. Photorealistic. Warm lighting. Background: a Covenant doctrinal hall with lattice-pattern iconography on the walls and candlelight.
-> **Grok:** Ultra-realistic portrait. A 37-year-old Nigerian woman of Igbo heritage. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Dark expressive eyes. Covenant ceremonial layered robes in ochre and white. Warm candlelight. Background: Covenant hall with lattice iconography and warm candlelight.
+> **Gemini:** Full-body portrait of a 37-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Photorealistic. Warm lighting. Background: a Covenant doctrinal hall with lattice-pattern iconography on the walls and candlelight.
+> **Grok:** Ultra-realistic portrait. A 37-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Deep rich brown skin with igbo west african features. Natural coils in a clean style. Natural coils in a clean style. Background: Covenant hall with lattice iconography and warm candlelight.
 
 ---
 
@@ -12583,8 +12579,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 51-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Black hair heavily greyed at the temples, closely cut. Dark brown eyes, deeply attentive and carrying a quiet bewilderment. Medium build in Lattice Technical senior architect's uniform — clean, precise, unadorned. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a relay optimization control center with cascading system architecture diagrams.
-> **Grok:** Ultra-realistic portrait. A 51-year-old South Indian man. Rich brown complexion. Close-cropped black hair. Deep brown eyes. Warm medium-deep brown skin. Closely cut black hair greying at the temples. Warm medium-deep brown skin. Background: relay optimization center with cascading architecture displays.
+> **Gemini:** Full-body portrait of a 51-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Close-cropped black hair. Deep brown eyes. Black hair heavily greyed at the temples, closely cut. Dark brown eyes, deeply attentive and carrying a quiet bewilderment. Photorealistic. Cinematic directional lighting. Background: a relay optimization control center with cascading system architecture diagrams.
+> **Grok:** Ultra-realistic portrait. A 51-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Warm medium-deep brown skin. Closely cut black hair greying at the temples. Warm medium-deep brown skin. Background: relay optimization center with cascading architecture displays.
 
 ---
 
@@ -12609,8 +12605,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Dark brown hair, somewhat dishevelled. Dark brown eyes, sharp and carrying suppressed urgency. Medium build in CID analyst's working attire — shirt slightly creased, jacket over the back of a chair. Photorealistic. Photorealistic. Warm light. Background: a CID analysis office with incident timelines and relay failure maps covering the walls.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Italian man. Olive complexion. Dark brown hair. Deep amber eyes. Warm light olive complexion. Somewhat dishevelled dark brown hair. Warm light. Background: CID office with incident timelines and relay network maps.
+> **Gemini:** Full-body portrait of a 46-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Dark brown hair. Deep amber eyes. Dark brown hair, somewhat dishevelled. Dark brown eyes, sharp and carrying suppressed urgency. Photorealistic. Warm light. Background: a CID analysis office with incident timelines and relay failure maps covering the walls.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm light olive complexion. Somewhat dishevelled dark brown hair. Amber eyes. Background: CID office with incident timelines and relay network maps.
 
 ---
 
@@ -12635,8 +12631,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Black hair, practical cut. Dark brown eyes, steady and carrying something unspoken. Medium build in Survey Corps deep-frontier expedition attire — worn, functional, with navigation instruments at the belt. Photorealistic. Photorealistic. Cool directional lighting. Background: a frontier survey vessel cockpit with star charts and signal mapping displays.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Mexican man of Indigenous-Spanish heritage. Warm tan-brown complexion. Black close-cropped. Black-brown eyes. Warm medium-brown complexion. Steady dark brown eyes with something held back. Warm medium-brown complexion. Background: frontier survey cockpit with star charts and signal displays.
+> **Gemini:** Full-body portrait of a 39-year-old Austrian man. Fair complexion. Brown short. Blue eyes. Black close-cropped. Black-brown eyes. Black hair, practical cut. Dark brown eyes, steady and carrying something unspoken. Photorealistic. Cool directional lighting. Background: a frontier survey vessel cockpit with star charts and signal mapping displays.
+> **Grok:** Ultra-realistic portrait. A 39-year-old Austrian man. Fair complexion. Brown short. Blue eyes. Warm tan-brown complexion. Warm medium-brown complexion. Warm tan-brown complexion. Background: frontier survey cockpit with star charts and signal displays.
 
 ---
 
@@ -12661,8 +12657,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Austrian man. Fair complexion. Brown short. Blue eyes. Dark brown hair heavily silvered. Grey-blue eyes, calm and carrying a resolved intelligence. Solid build, slightly stooped from decades at a desk, in Assembly senior director's formal attire. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a long-range planning office with fifty-year projection charts and historical trend overlays.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Austrian man. Fair complexion. Brown short. Blue eyes. Fair complexion, lightly weathered. Heavily silvered dark brown hair. Formal attire. Background: planning office with long-range projection charts and historical trend maps.
+> **Gemini:** Full-body portrait of a 53-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Brown short. Blue eyes. Dark brown hair heavily silvered. Grey-blue eyes, calm and carrying a resolved intelligence. Photorealistic. Cinematic directional lighting. Background: a long-range planning office with fifty-year projection charts and historical trend overlays.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Fair complexion, lightly weathered. Heavily silvered dark brown hair. Formal attire. Background: planning office with long-range projection charts and historical trend maps.
 
 ---
 
@@ -12687,8 +12683,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 42-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Dark brown hair, slightly long and pushed back. Blue-grey eyes, restless and precise. Medium lean build in Chronicle investigative historian's professional attire — layered, slightly academic. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Chronicle classified archive office with era-labeled storage containers and reconstruction notes pinned to a corkboard.
-> **Grok:** Ultra-realistic portrait. A 42-year-old Polish man. Fair complexion. Close-cropped dark blonde. Grey eyes. Dark brown hair pushed back. Chronicle professional attire, layered and academic. Cinematic lighting. Background: classified archive office with storage containers and handwritten reconstruction notes.
+> **Gemini:** Full-body portrait of a 42-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Close-cropped dark blonde. Grey eyes. Dark brown hair, slightly long and pushed back. Blue-grey eyes, restless and precise. Photorealistic. Cinematic directional lighting. Background: a Chronicle classified archive office with era-labeled storage containers and reconstruction notes pinned to a corkboard.
+> **Grok:** Ultra-realistic portrait. A 42-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Close-cropped dark blonde. Dark brown hair pushed back. Cinematic lighting. Background: classified archive office with storage containers and handwritten reconstruction notes.
 
 ---
 
@@ -12713,8 +12709,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. in an Assembly building, empty, late in the day. Photorealistic. Cinematic directional lighting. Background: a neutral corridor in an Assembly building, empty, late in the day.
-> **Grok:** Ultra-realistic portrait. A 48-year-old Spanish man. Warm olive complexion. Short dark hair. Warm brown eyes. Warm light olive complexion. Assembly liaison formal attire, understated. Warm light. Background: empty Assembly corridor, late day light through a window.
+> **Gemini:** Full-body portrait of a 48-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. in an Assembly building, empty, late in the day. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a neutral corridor in an Assembly building, empty, late in the day.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. Warm light olive complexion. Assembly liaison formal attire, understated. Warm olive complexion. Background: empty Assembly corridor, late day light through a window.
 
 ---
 
@@ -12739,8 +12735,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. Dark auburn hair worn practical, pulled back. Green-grey eyes, watchful and holding something unresolved. Lean athletic build in CID frontier field officer attire — functional, worn in. Photorealistic. Photorealistic. Cool directional lighting. Background: a CID frontier outpost on World 487 with communications arrays and personal field equipment.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Irish woman. Very fair complexion with freckles. Warm red-brown hair. Hazel-green eyes. Fair pale skin, faint freckles. Dark auburn hair pulled back. Cinematic lighting. Background: frontier outpost with communications equipment and personal field gear.
+> **Gemini:** Full-body portrait of a 36-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Dark brown eyes. Warm red-brown hair. Hazel-green eyes. Dark auburn hair worn practical, pulled back. Green-grey eyes, watchful and holding something unresolved. Photorealistic. Cool directional lighting. Background: a CID frontier outpost on World 487 with communications arrays and personal field equipment.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Dark brown eyes. Very fair complexion with freckles. Fair pale skin, faint freckles. Warm red-brown hair. Background: frontier outpost with communications equipment and personal field gear.
 
 ---
 
@@ -12765,8 +12761,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 40-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Dark brown eyes. in the late hours, displays showing quiet low-traffic network activity. Photorealistic. Cinematic directional lighting. Background: a Lattice Technical node monitoring station in the late hours, displays showing quiet low-traffic network activity.
-> **Grok:** Ultra-realistic portrait. A 40-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Dark brown eyes. Light warm skin, slight olive tone. Dark brown hair loose to the shoulders. Warm skin, slight olive tone. Background: node monitoring station in late-hour low-traffic operation with quiet display activity.
+> **Gemini:** Full-body portrait of a 40-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. in the late hours, displays showing quiet low-traffic network activity. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Lattice Technical node monitoring station in the late hours, displays showing quiet low-traffic network activity.
+> **Grok:** Ultra-realistic portrait. A 40-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Light warm complexion with southern european-latin tone. Dark brown hair worn neat. Warm complexion with southern european-latin. Background: node monitoring station in late-hour low-traffic operation with quiet display activity.
 
 ---
 
@@ -12791,8 +12787,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 45-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Medium brown hair, neat and understated. Blue-grey eyes, attentive and quietly tenacious. Medium lean build in civilian professional attire — clean, unassuming, the attire of someone who works with documents. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a personal home archive office with labeled storage and a single document displayed on a modest screen.
-> **Grok:** Ultra-realistic portrait. A 45-year-old British man of English-Irish heritage. Fair complexion. Neatly cropped dark hair. Hazel eyes. Quiet, tenacious blue-grey eyes. Civilian professional attire, unassuming. Cinematic lighting. Background: home archive office with labeled storage and a single document on screen.
+> **Gemini:** Full-body portrait of a 45-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Neatly cropped dark hair. Hazel eyes. Medium brown hair, neat and understated. Blue-grey eyes, attentive and quietly tenacious. Photorealistic. Cinematic directional lighting. Background: a personal home archive office with labeled storage and a single document displayed on a modest screen.
+> **Grok:** Ultra-realistic portrait. A 45-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Quiet, tenacious blue-grey eyes. Civilian professional attire, unassuming. Cinematic lighting. Background: home archive office with labeled storage and a single document on screen.
 
 ---
 
@@ -12817,8 +12813,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Dark brown hair, slightly salted. Dark brown eyes, careful and holding something he cannot put down. Medium athletic build in Survey Corps senior navigation officer uniform. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Survey Corps navigation bridge with transit corridor charts and sensor telemetry displays.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Portuguese man. Warm olive complexion. Dark brown short. Deep hazel. Light olive warm complexion. Dark brown hair, slightly salted. Warm complexion. Background: navigation bridge with transit corridor charts and sensor telemetry.
+> **Gemini:** Full-body portrait of a 44-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Dark brown short. Deep hazel. Dark brown hair, slightly salted. Dark brown eyes, careful and holding something he cannot put down. Photorealistic. Cinematic directional lighting. Background: a Survey Corps navigation bridge with transit corridor charts and sensor telemetry displays.
+> **Grok:** Ultra-realistic portrait. A 44-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Light olive warm complexion. Dark brown hair, slightly salted. Warm olive complexion. Background: navigation bridge with transit corridor charts and sensor telemetry.
 
 ---
 
@@ -12843,8 +12839,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 57-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Photorealistic. Cinematic directional lighting. Background: a spare, empty room — a single chair, a single window, the faint distant glow of a Lattice relay node through the glass, the only light in the frame.
-> **Grok:** Ultra-realistic portrait. A 57-year-old North Indian man. Warm brown complexion. Black close-cropped. Black-brown eyes. Light warm medium-brown complexion. Close dark hair, heavily silvered at temples and crown. Warm medium-brown complexion. Background: a bare quiet room with a single window, the distant glow of a Lattice relay node the only light outside the glass.
+> **Gemini:** Full-body portrait of a 57-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Photorealistic. Cinematic directional lighting. Background: a spare, empty room — a single chair, a single window, the faint distant glow of a Lattice relay node through the glass, the only light in the frame.
+> **Grok:** Ultra-realistic portrait. A 57-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Light warm medium-brown complexion. Close dark hair, heavily silvered at temples and crown. Warm brown complexion. Background: a bare quiet room with a single window, the distant glow of a Lattice relay node the only light outside the glass.
 
 ---
 
@@ -12878,8 +12874,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 52-year-old Austrian woman. Fair to light skin, fine-boned features, composed expression. Dark brown hair worn back severely. Grey-blue eyes, precise and very still. Fitted dark charcoal analyst's coat over high-collared grey underlayer. Photorealistic. Cinematic directional lighting. Background: a private research office with relay behavioral model displays on every surface, mathematical notation handwritten across two whiteboards.
-> **Grok:** Ultra-realistic portrait. A 52-year-old Austrian woman. Fair fine-boned face. Dark brown hair pinned back. Grey-blue eyes, calculating and contained. Dark charcoal analyst's coat. Background: a cluttered private office, relay behavioral models and handwritten mathematics covering every wall.
+> **Gemini:** Full-body portrait of a 52-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Hazel eyes. Dark brown hair worn back severely. Grey-blue eyes, precise and very still. Fitted dark charcoal analyst's coat over high-collared grey underlayer. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private research office with relay behavioral model displays on every surface, mathematical notation handwritten across two whiteboards.
+> **Grok:** Ultra-realistic portrait. A 52-year-old Argentine man of European-Latin heritage. Light warm complexion. Brown close-cropped. Hazel eyes. Dark brown hair pinned back. Grey-blue eyes, calculating and contained. Cinematic lighting. Background: a cluttered private office, relay behavioral models and handwritten mathematics covering every wall.
 
 ---
 
@@ -12904,8 +12900,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 46-year-old Scandinavian man. Fair skin, lean athletic build, calm open expression that does not quite reach his eyes. Light brown hair slightly longer than regulation. Blue-grey eyes, watchful. Formal Diplomatic Corps deep navy uniform, worn with quiet authority. Photorealistic. Cinematic directional lighting. Background: a frontier-world diplomatic reception room, the landscape of World 394 visible through wide windows — rocky terrain under a pale alien sky.
-> **Grok:** Ultra-realistic portrait. A 46-year-old Scandinavian man. Fair skin. Light brown hair. Blue-grey eyes, careful behind a diplomatic surface. Navy diplomatic uniform. Background: frontier diplomatic hall, alien rocky landscape through wide windows.
+> **Gemini:** Full-body portrait of a 46-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Light brown hair slightly longer than regulation. Blue-grey eyes, watchful. Formal Diplomatic Corps deep navy uniform, worn with quiet authority. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier-world diplomatic reception room, the landscape of World 394 visible through wide windows — rocky terrain under a pale alien sky.
+> **Grok:** Ultra-realistic portrait. A 46-year-old Portuguese woman. Warm olive complexion. Deep chestnut. Deep hazel. Blue-grey eyes, careful behind a diplomatic surface. Cinematic lighting. Background: frontier diplomatic hall, alien rocky landscape through wide windows.
 
 ---
 
@@ -12930,8 +12926,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 39-year-old Italian woman. Warm light olive skin, dark brown eyes, dark brown hair worn loose to the shoulders. Fine-boned, slightly understated bearing — someone who has learned to take up little space. Simple dark archival professional attire. Photorealistic. Cinematic directional lighting. Background: a physical archive room with sealed record cases on every shelf, no digital displays, low amber lighting.
-> **Grok:** Ultra-realistic portrait. A 39-year-old Italian woman. Warm olive skin. Dark brown eyes, very still. Dark brown hair loose. Simple dark professional attire. Background: a physical archive room, sealed record cases, amber lighting, no screens.
+> **Gemini:** Full-body portrait of a 39-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Chestnut brown hair. Pale blue eyes. Fine-boned, slightly understated bearing — someone who has learned to take up little space. Simple dark archival professional attire. Photorealistic. Cinematic directional lighting. Photorealistic. Warm light. Background: a physical archive room with sealed record cases on every shelf, no digital displays, low amber lighting.
+> **Grok:** Ultra-realistic portrait. A 39-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Chestnut brown hair. Pale blue eyes. Dark brown eyes, very still. Simple dark professional attire. Warm olive skin. Background: a physical archive room, sealed record cases, amber lighting, no screens.
 
 ---
 
@@ -12956,8 +12952,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 61-year-old British man. Fair skin, silver-white hair kept short and neat. Pale blue eyes, tired but sharp. Solid build going slightly soft with age. Formal Resource Allocation Council senior evaluator attire — deep charcoal suit, no decoration. Photorealistic. Cinematic directional lighting. Background: a Council evaluation chamber, multiple world investment models displayed on screens behind him.
-> **Grok:** Ultra-realistic portrait. A 61-year-old British man. Fair skin. Silver-white short hair. Blue eyes, tired and precise. Charcoal formal suit. Background: Council evaluation chamber, world investment models on screens.
+> **Gemini:** Full-body portrait of a 61-year-old Spanish man. Warm olive complexion. Short dark hair. Dark brown eyes. Pale blue eyes, tired but sharp. Solid build going slightly soft with age. Formal Resource Allocation Council senior evaluator attire — deep charcoal suit, no decoration. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a Council evaluation chamber, multiple world investment models displayed on screens behind him.
+> **Grok:** Ultra-realistic portrait. A 61-year-old Spanish man. Warm olive complexion. Short dark hair. Dark brown eyes. Blue eyes, tired and precise. Formal suit. Background: Council evaluation chamber, world investment models on screens.
 
 ---
 
@@ -12982,8 +12978,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 34-year-old Korean man. Light warm ivory skin, lean build, sharp attentive expression. Black hair slightly longer, pushed back from his face. Dark brown eyes, quick and analytical. Survey Corps field intelligence analyst uniform with frontier-tier equipment patches. Photorealistic. Cinematic directional lighting. Background: a frontier relay monitoring station, sparse and functional, with signal monitoring arrays visible through a narrow viewport.
-> **Grok:** Ultra-realistic portrait. A 34-year-old Korean man. Light ivory skin. Black hair pushed back. Dark brown eyes, fast and focused. Survey Corps field uniform, frontier equipment patches. Background: sparse frontier relay monitoring station, signal arrays visible through a viewport.
+> **Gemini:** Full-body portrait of a 34-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Black hair slightly longer, pushed back from his face. Dark brown eyes, quick and analytical. Survey Corps field intelligence analyst uniform with frontier-tier equipment patches. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier relay monitoring station, sparse and functional, with signal monitoring arrays visible through a narrow viewport.
+> **Grok:** Ultra-realistic portrait. A 34-year-old British woman of English-Irish heritage. Fair complexion, light freckles. Light brown hair pulled back. Hazel eyes. Dark brown eyes, fast and focused. Survey Corps field uniform, frontier equipment patches. Survey corps field uniform, frontier equipment. Background: sparse frontier relay monitoring station, signal arrays visible through a viewport.
 
 ---
 
@@ -13008,8 +13004,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 71-year-old Irish man. Fair, weathered skin with deep lines. White hair, thick and somewhat unkempt. Blue-grey eyes, very clear. Stocky build, still strong. Worn civilian clothing — well-used, frontier practical. Photorealistic. Cinematic directional lighting. Background: the exterior of a modest dwelling on World 7, open farmland, late afternoon light, horizon very flat and wide.
-> **Grok:** Ultra-realistic portrait. A 71-year-old Irish man. Fair weathered skin. White hair, thick. Blue-grey eyes, clear. Stocky strong build. Worn practical civilian clothing. Background: modest dwelling exterior on World 7, flat farmland, wide horizon.
+> **Gemini:** Full-body portrait of a 71-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. White hair, thick and somewhat unkempt. Blue-grey eyes, very clear. Stocky build, still strong. Worn civilian clothing — well-used, frontier practical. Photorealistic. Cinematic directional lighting. Background: the exterior of a modest dwelling on World 7, open farmland, late afternoon light, horizon very flat and wide.
+> **Grok:** Ultra-realistic portrait. A 71-year-old North Indian man. Warm brown complexion. Dark hair short. Deep brown eyes. Worn practical civilian clothing. Cinematic lighting. Background: modest dwelling exterior on World 7, flat farmland, wide horizon.
 
 ---
 
@@ -13034,8 +13030,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 55-year-old Chinese man. Light warm golden-ivory skin, composed and slightly gaunt from years of deep analytic work. Black hair, heavily silvered. Dark brown eyes, calm with an intensity that does not read as threatening. Clean, precise professional attire — dark jacket, no insignia. Photorealistic. Cinematic directional lighting. Background: a Lattice behavioral analysis center, long-format behavioral output displays covering an entire curved wall, a single workstation in the center.
-> **Grok:** Ultra-realistic portrait. A 55-year-old Chinese man. Light golden-ivory skin. Black hair, heavily silvered. Dark brown eyes, contained intensity. Dark precise jacket, no insignia. Background: behavioral analysis center, curved wall of output displays, single central workstation.
+> **Gemini:** Full-body portrait of a 55-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Hazel-brown eyes. Photorealistic. Cinematic directional lighting. Background: a Lattice behavioral analysis center, long-format behavioral output displays covering an entire curved wall, a single workstation in the center.
+> **Grok:** Ultra-realistic portrait. A 55-year-old Spanish man. Warm olive complexion. Close-cropped black hair. Hazel-brown eyes. Black hair, heavily silvered. Dark brown eyes, contained intensity. Cinematic lighting. Background: behavioral analysis center, curved wall of output displays, single central workstation.
 
 ---
 
@@ -13060,8 +13056,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 64-year-old Nigerian Igbo woman. Medium-deep warm brown skin, strong bone structure, an expression of settled and formidable authority. Black hair, close-cropped. Dark brown eyes, direct and uncompromising. Formal Ethics Board senior member attire — deep indigo structured jacket, understated but precise. Photorealistic. Cinematic directional lighting. Background: a formal board chamber, empty, the table long and unoccupied, her at one end.
-> **Grok:** Ultra-realistic portrait. A 64-year-old Nigerian Igbo woman. Medium-deep warm brown skin. Close-cropped black hair. Dark brown eyes, direct. Deep indigo structured jacket. Background: empty formal board chamber, long table, her at one end alone.
+> **Gemini:** Full-body portrait of a 64-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Black hair, close-cropped. Dark brown eyes, direct and uncompromising. Formal Ethics Board senior member attire — deep indigo structured jacket, understated but precise. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a formal board chamber, empty, the table long and unoccupied, her at one end.
+> **Grok:** Ultra-realistic portrait. A 64-year-old French man. Light complexion. Dark brown hair. Dark brown eyes. Medium-deep warm brown skin. Deep indigo structured jacket. Warm brown skin. Background: empty formal board chamber, long table, her at one end alone.
 
 ---
 
@@ -13086,8 +13082,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 41-year-old Nigerian Igbo woman. Medium brown warm skin, alert and focused expression. Black hair in tight coils, close to her head. Dark brown eyes, analytic and slightly guarded. Cryptography division senior attire — dark technical jacket with minimal insignia, precise. Photorealistic. Cinematic directional lighting. Background: a secure communications architecture center, encryption arrays and signal routing displays, single-person workstation.
-> **Grok:** Ultra-realistic portrait. A 41-year-old Nigerian Igbo woman. Medium warm brown skin. Black coiled hair, close. Dark brown eyes, watchful. Dark technical jacket, minimal insignia. Background: secure communications center, encryption arrays, single workstation.
+> **Gemini:** Full-body portrait of a 41-year-old North Indian woman. Warm golden-brown complexion. Black hair neatly arranged. Warm hazel eyes. Black hair in tight coils, close to her head. Dark brown eyes, analytic and slightly guarded. Cryptography division senior attire — dark technical jacket with minimal insignia, precise. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a secure communications architecture center, encryption arrays and signal routing displays, single-person workstation.
+> **Grok:** Ultra-realistic portrait. A 41-year-old North Indian woman. Warm golden-brown complexion. Black hair neatly arranged. Warm hazel eyes. Dark brown eyes, watchful. Dark technical jacket, minimal insignia. Warm brown skin. Background: secure communications center, encryption arrays, single workstation.
 
 ---
 
@@ -13112,8 +13108,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 48-year-old South Indian man. Medium-deep warm brown skin, lean and precise build. Black hair, close-cropped. Dark brown eyes, calm and very steady. Frontier medical division senior physician attire — functional, no ornamentation, worn with the ease of someone who works in it. Photorealistic. Cinematic directional lighting. Background: a frontier medical bay on World 431, sparse and well-maintained, a single operating table, equipment racks against the far wall.
-> **Grok:** Ultra-realistic portrait. A 48-year-old South Indian man. Medium-deep warm brown skin. Close-cropped black hair. Dark brown eyes, steady. Functional frontier medical attire, worn. Background: frontier medical bay, operating table, sparse equipment racks.
+> **Gemini:** Full-body portrait of a 48-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Black hair, close-cropped. Dark brown eyes, calm and very steady. Frontier medical division senior physician attire — functional, no ornamentation, worn with the ease of someone who works in it. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a frontier medical bay on World 431, sparse and well-maintained, a single operating table, equipment racks against the far wall.
+> **Grok:** Ultra-realistic portrait. A 48-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Rich brown hair. Warm brown eyes. Medium-deep warm brown skin. Functional frontier medical attire, worn. Warm brown skin. Background: frontier medical bay, operating table, sparse equipment racks.
 
 ---
 
@@ -13138,8 +13134,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 67-year-old Italian man. Warm light olive skin, silver hair worn short and neat. Dark hazel eyes, alert and administratively authoritative. Solid, slightly heavy build of someone who has sat in meetings for decades and maintained physical discipline as a deliberate practice. Formal senior council attire — deep charcoal structured jacket, Ascendancy council insignia, minimal. Photorealistic. Cinematic directional lighting. Background: the Resource Allocation Council chairman's office, large and spare, world maps and allocation models on the walls.
-> **Grok:** Ultra-realistic portrait. A 67-year-old Italian man. Light olive warm skin. Silver short hair. Dark hazel eyes, alert. Heavy solid build. Charcoal formal jacket, council insignia. Background: chairman's office, world maps and allocation models.
+> **Gemini:** Full-body portrait of a 67-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Dark hazel eyes, alert and administratively authoritative. Solid, slightly heavy build of someone who has sat in meetings for decades and maintained physical discipline as a deliberate practice. Formal senior council attire — deep charcoal structured jacket, Ascendancy council insignia, minimal. Photorealistic. Photorealistic. Warm light. Background: the Resource Allocation Council chairman's office, large and spare, world maps and allocation models on the walls.
+> **Grok:** Ultra-realistic portrait. A 67-year-old Argentine woman of European-Latin heritage. Light warm complexion with southern european-latin tone. Warm dark hair practical. Green-brown eyes. Charcoal formal jacket, council insignia. Warm skin. Background: chairman's office, world maps and allocation models.
 
 ---
 
@@ -13164,8 +13160,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 53-year-old Mexican man. Warm medium-brown skin, broad-shouldered build, direct and pragmatic expression. Black hair going salt-and-pepper. Dark brown eyes, steady and practical. Survey Corps regional director attire — functional dark jacket, regional insignia, worn with the ease of long use. Photorealistic. Cinematic directional lighting. Background: a regional administration center, seventeen world status displays on the wall, his desk facing them.
-> **Grok:** Ultra-realistic portrait. A 53-year-old Mexican man. Warm medium-brown skin. Salt-and-pepper black hair. Dark brown eyes, practical. Functional dark jacket, regional insignia. Background: regional administration center, seventeen world status displays.
+> **Gemini:** Full-body portrait of a 53-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Black hair going salt-and-pepper. Dark brown eyes, steady and practical. Survey Corps regional director attire — functional dark jacket, regional insignia, worn with the ease of long use. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a regional administration center, seventeen world status displays on the wall, his desk facing them.
+> **Grok:** Ultra-realistic portrait. A 53-year-old Irish woman. Very fair complexion with freckles. Red-auburn hair worn loose. Green eyes. Salt-and-pepper black hair. Dark brown eyes, practical. Warm medium-brown skin. Background: regional administration center, seventeen world status displays.
 
 ---
 
@@ -13190,8 +13186,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 59-year-old Austrian man. Fair to light skin, lean scholarly build. Dark brown hair gone heavily silver. Blue-grey eyes, intelligent and slightly melancholy. Simple academic professional attire — dark coat, no insignia. Photorealistic. Cinematic directional lighting. Background: a private research office, physical archive boxes, handwritten notes on every surface, a single lamp, no window.
-> **Grok:** Ultra-realistic portrait. A 59-year-old Austrian man. Fair light skin. Dark brown hair, heavily silvered. Blue-grey eyes, scholarly and quiet. Dark coat, no insignia. Background: private research office, archive boxes, handwritten notes, single lamp, no window.
+> **Gemini:** Full-body portrait of a 59-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Grey-green eyes. Dark brown hair gone heavily silver. Blue-grey eyes, intelligent and slightly melancholy. Simple academic professional attire — dark coat, no insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: a private research office, physical archive boxes, handwritten notes on every surface, a single lamp, no window.
+> **Grok:** Ultra-realistic portrait. A 59-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Grey-green eyes. Dark brown hair, heavily silvered. Blue-grey eyes, scholarly and quiet. Cinematic lighting. Background: private research office, archive boxes, handwritten notes, single lamp, no window.
 
 ---
 
@@ -13216,8 +13212,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Polish man. Fair to light skin, sturdy build, a practical and slightly wary expression. Dark brown hair, short. Grey-brown eyes, careful. Technical infrastructure engineer attire — dark utility jacket with relay systems insignia, tools at the belt. Photorealistic. Cinematic directional lighting. Background: a relay node maintenance corridor, access panels open, diagnostic displays active, deep within a Lattice infrastructure hub.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Polish man. Fair light skin. Dark brown short hair. Grey-brown eyes, wary. Dark utility jacket, relay systems insignia. Background: relay node maintenance corridor, open access panels, diagnostic displays.
+> **Gemini:** Full-body portrait of a 44-year-old South African man. Warm deep brown skin, southern african features. Close-cropped black hair. Deep brown eyes. in a Lattice infrastructure hub. Photorealistic. Cinematic directional lighting. Background: a relay node maintenance corridor, access panels open, diagnostic displays active, deep within a Lattice infrastructure hub.
+> **Grok:** Ultra-realistic portrait. A 44-year-old South African man. Warm deep brown skin, southern african features. Close-cropped black hair. Deep brown eyes. Dark utility jacket, relay systems insignia. Cinematic lighting. Background: relay node maintenance corridor, open access panels, diagnostic displays.
 
 ---
 
@@ -13242,8 +13238,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 56-year-old Spanish man. Light olive to warm skin, silver-touched dark hair worn back. Dark brown eyes, articulate and controlled. Elegant professional attire — dark suit, precise, the attire of someone who is always aware that they are being observed. Photorealistic. Cinematic directional lighting. Background: the Narrative Architecture Division's communications planning office, a large table with disclosure scenario documents, a public address terminal at the far end.
-> **Grok:** Ultra-realistic portrait. A 56-year-old Spanish man. Light olive warm skin. Silver-touched dark hair. Dark brown eyes, precise and controlled. Dark elegant suit. Background: communications planning office, disclosure scenario documents on a large table.
+> **Gemini:** Full-body portrait of a 56-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Dark brown eyes, articulate and controlled. Elegant professional attire — dark suit, precise, the attire of someone who is always aware that they are being observed. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: the Narrative Architecture Division's communications planning office, a large table with disclosure scenario documents, a public address terminal at the far end.
+> **Grok:** Ultra-realistic portrait. A 56-year-old Austrian man. Fair complexion. Dark blonde close-cropped. Light brown eyes. Dark brown eyes, precise and controlled. Warm skin. Background: communications planning office, disclosure scenario documents on a large table.
 
 ---
 
@@ -13268,8 +13264,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 43-year-old Irish woman. Fair to pale skin, dark red-brown hair worn to the shoulder. Green eyes, observant and carrying the specific watchfulness of someone who has been studying how people respond to large things for a long time. Professional research attire — dark jacket over a warm-toned underlayer. Photorealistic. Cinematic directional lighting. Background: a psychological research office, population impact models on screens, printed research documents on every surface.
-> **Grok:** Ultra-realistic portrait. A 43-year-old Irish woman. Fair pale skin. Dark red-brown hair to the shoulder. Green eyes, watchful. Dark jacket, warm underlayer. Background: psychological research office, population impact models on screens.
+> **Gemini:** Full-body portrait of a 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Green eyes, observant and carrying the specific watchfulness of someone who has been studying how people respond to large things for a long time. Professional research attire — dark jacket over a warm-toned underlayer. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a psychological research office, population impact models on screens, printed research documents on every surface.
+> **Grok:** Ultra-realistic portrait. A 43-year-old Brazilian man of mixed Afro-European heritage. Warm brown complexion. Short dark curly hair. Dark brown eyes. Dark red-brown hair to the shoulder. Dark jacket, warm underlayer. Warm underlayer. Background: psychological research office, population impact models on screens.
 
 ---
 
@@ -13294,8 +13290,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 36-year-old Argentine woman. Light to warm skin, dark brown hair worn loose and slightly unruly — someone who thinks faster than she maintains appearances. Dark brown eyes, intensely focused with an energy that is almost visible. Smart but informal attire — dark top, open jacket, the clothing of someone whose mind is elsewhere. Photorealistic. Cinematic directional lighting. Background: a private analysis workspace, systems theory diagrams covering two walls, a half-finished behavioral model on the central display.
-> **Grok:** Ultra-realistic portrait. A 36-year-old Argentine woman. Light warm skin. Dark brown hair, loose and slightly unruly. Dark brown eyes, intensely focused. Dark top, open jacket. Background: private analysis workspace, systems theory diagrams covering walls, behavioral model on central display.
+> **Gemini:** Full-body portrait of a 36-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Dark brown eyes, intensely focused with an energy that is almost visible. Smart but informal attire — dark top, open jacket, the clothing of someone whose mind is elsewhere. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a private analysis workspace, systems theory diagrams covering two walls, a half-finished behavioral model on the central display.
+> **Grok:** Ultra-realistic portrait. A 36-year-old Dutch man. Fair complexion. Light brown short. Clear blue eyes. Dark brown hair, loose and slightly unruly. Dark brown eyes, intensely focused. Warm skin. Background: private analysis workspace, systems theory diagrams covering walls, behavioral model on central display.
 
 ---
 
@@ -13320,8 +13316,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 60-year-old British man. Fair skin, silver-grey hair neat and slightly formal. Blue-grey eyes, measured and steady with something behind them that does not reach the surface easily. Solid, well-maintained build. Senior inner council attire — dark charcoal formal jacket, understated Ascendancy liaison insignia. Photorealistic. Cinematic directional lighting. Background: the liaison office — between two larger rooms, deliberately spare, a single table, no display screens, everything conducted in person.
-> **Grok:** Ultra-realistic portrait. A 60-year-old British man. Fair skin. Silver-grey neat hair. Blue-grey eyes, measured. Charcoal formal jacket, liaison insignia. Background: spare liaison office between two rooms, single table, no screens.
+> **Gemini:** Full-body portrait of a 60-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Blue-grey eyes, measured and steady with something behind them that does not reach the surface easily. Solid, well-maintained build. Senior inner council attire — dark charcoal formal jacket, understated Ascendancy liaison insignia. Photorealistic. Photorealistic. Cinematic directional lighting. Background: the liaison office — between two larger rooms, deliberately spare, a single table, no display screens, everything conducted in person.
+> **Grok:** Ultra-realistic portrait. A 60-year-old Polish man. Fair complexion. Short brown hair. Pale green eyes. Charcoal formal jacket, liaison insignia. Formal jacket, liaison insignia. Background: spare liaison office between two rooms, single table, no screens.
 
 ---
 
@@ -13346,8 +13342,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 44-year-old Portuguese man. Warm olive complexion, dark brown hair slightly salted. Dark brown eyes, careful and holding something he cannot put down. Medium athletic build in Survey Corps senior navigation officer uniform. Photorealistic. Cinematic directional lighting. Background: a Survey Corps navigation bridge with transit corridor charts and sensor telemetry displays.
-> **Grok:** Ultra-realistic portrait. A 44-year-old Portuguese man. Warm olive complexion. Dark brown hair, slightly salted. Dark brown eyes, watchful. Survey Corps navigation officer uniform. Background: navigation bridge with transit corridor charts and sensor telemetry.
+> **Gemini:** Full-body portrait of a 44-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Dark brown eyes, careful and holding something he cannot put down. Medium athletic build in Survey Corps senior navigation officer uniform. Photorealistic. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a Survey Corps navigation bridge with transit corridor charts and sensor telemetry displays.
+> **Grok:** Ultra-realistic portrait. A 44-year-old Korean man. Light complexion with cool undertone. Close-cropped black hair. Clear dark eyes. Dark brown hair, slightly salted. Dark brown eyes, watchful. Warm olive complexion. Background: navigation bridge with transit corridor charts and sensor telemetry.
 
 ---
 
@@ -13372,8 +13368,8 @@ Born between Year 43 and Year 88. No memory of a world without the Lattice. When
 
 **Visual Prompts:**
 
-> **Gemini:** Full-body portrait of a 72-year-old North Indian man. Light to warm medium-brown skin, deeply lined with age and thought. White hair, full and slightly long. Dark brown eyes, open and very still — the eyes of someone who has made peace with what they know. Slight, spare build. Simple attire — a plain dark kurta-style long coat, no insignia, no ornamentation. Photorealistic. Cinematic directional lighting. Background: a private contemplation room — bare stone walls, a single low chair, a wide window open to a view of deep space, a Lattice relay node visible in the far distance, steady and bright.
-> **Grok:** Ultra-realistic portrait. A 72-year-old North Indian man. Light warm medium-brown skin, deeply lined. White hair, full. Dark brown eyes, open and still. Simple dark kurta-style coat, no ornamentation. Background: bare stone contemplation room, wide window, deep space, a single Lattice relay node glowing in the far distance.
+> **Gemini:** Full-body portrait of a 72-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. in dark kurta-style long coat, no insignia, no ornamentation. Cinematic directional lighting. Photorealistic. Cinematic directional lighting. Background: a private contemplation room — bare stone walls, a single low chair, a wide window open to a view of deep space, a Lattice relay node visible in the far distance, steady and bright.
+> **Grok:** Ultra-realistic portrait. A 72-year-old Arab woman of Middle Eastern heritage. Warm olive-brown complexion with middle eastern features. Dark brown hair worn neat. Dark brown eyes. Light warm medium-brown skin, deeply lined. Dark brown eyes, open and still. Warm medium-brown skin, deeply lined. Background: bare stone contemplation room, wide window, deep space, a single Lattice relay node glowing in the far distance.
 
 ---
 
