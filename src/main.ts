@@ -188,6 +188,17 @@ async function main(): Promise<void> {
   const { registerQuestChainsRoutes } = await import('./routes/quest-chains.js');
   const { registerThreadwayRoutes } = await import('./routes/threadways.js');
   const { registerNotificationsRoutes } = await import('./routes/notifications.js');
+  const { registerSeasonalRoutes } = await import('./routes/seasonal.js');
+  const { registerLeitmotifRoutes } = await import('./routes/leitmotifs.js');
+  const { registerVisitorCharacterRoutes } = await import('./routes/visitor-characters.js');
+  const { registerProgressionRoutes } = await import('./routes/progression.js');
+  const { registerHiddenZoneRoutes } = await import('./routes/hidden-zones.js');
+  const { createSeasonalContent } = await import('../fabrics/loom-core/src/seasonal-content.js');
+  const { createLeitmotifCatalog } = await import('../fabrics/loom-core/src/leitmotif-catalog.js');
+  const { createVisitorCharacters } = await import('../fabrics/loom-core/src/visitor-characters.js');
+  const { createKindlerProgression } = await import('../fabrics/loom-core/src/kindler-progression.js');
+  const { createHiddenZones } = await import('../fabrics/loom-core/src/hidden-zones.js');
+  const { createPgHiddenZonesRepository } = await import('../universe/hidden-zones/pg-hidden-zones-repository.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -228,8 +239,14 @@ async function main(): Promise<void> {
   const pgMiniGameRepo = createPgMiniGameRepository(pgPool);
   const pgQuestRepo = createPgQuestChainsRepository(pgPool);
   const pgNotifRepo = createPgNotificationsRepository(pgPool);
+  const pgHiddenZonesRepo = createPgHiddenZonesRepository(pgPool);
   const questChains = createQuestChains();
   const threadwayNetwork = createThreadwayNetwork();
+  const seasonalContent = createSeasonalContent();
+  const leitmotifCatalog = createLeitmotifCatalog();
+  const visitorCharacters = createVisitorCharacters();
+  const kindlerProgression = createKindlerProgression();
+  const hiddenZones = createHiddenZones();
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -417,6 +434,15 @@ async function main(): Promise<void> {
         ...(process.env['SUPPORT_MODERATION_SECRET']
           ? { moderationSecret: process.env['SUPPORT_MODERATION_SECRET'] }
           : {}),
+      }),
+      (app) => registerSeasonalRoutes(app, { seasonal: seasonalContent }),
+      (app) => registerLeitmotifRoutes(app, { catalog: leitmotifCatalog }),
+      (app) => registerVisitorCharacterRoutes(app, { visitors: visitorCharacters }),
+      (app) => registerProgressionRoutes(app, { progression: kindlerProgression }),
+      (app) => registerHiddenZoneRoutes(app, {
+        hiddenZones,
+        pgHiddenZonesRepo,
+        kindlerRepo: kindlerRepo,
       }),
     ],
   });
