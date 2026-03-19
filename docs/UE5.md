@@ -1,7 +1,7 @@
 # The Concord — UE5 Plugin Reference
 
-> **Plugin baseline:** UE5.5
-> **Migration target:** UE5.7
+> **Engine version:** UE5.7 (canonical — installed and confirmed on dev machine)
+> **Migration status:** Targeting 5.7 from day one — no 5.5 migration needed
 > **Plugin location:** `fabrics/bridge-loom-ue5/`
 > **UProject:** `fabrics/bridge-loom-ue5/KoydoWorldsGame/KoydoWorlds.uproject`
 > **Stub project:** `ue5/KoydoLoom.uproject`
@@ -146,18 +146,18 @@ Game Features allow content to be loaded/unloaded at runtime without restarting 
 
 ---
 
-## How to Open the Project in UE5.5
+## How to Open the Project in UE5.7
 
-1. Open `fabrics/bridge-loom-ue5/KoydoWorldsGame/KoydoWorlds.uproject` in UE 5.5.
+1. Open `ue5/KoydoLoom.uproject` in UE 5.7.
 2. On first open, UE will ask to compile the BridgeLoom plugin. Click "Yes".
 3. After compilation, the editor opens with the plugin loaded.
 4. The stub project at `ue5/KoydoLoom.uproject` is a minimal host for testing plugin code in isolation.
 
 ---
 
-## UE5.5 → UE5.7 Migration Path
+## UE5.7 Migration Notes
 
-The plugin baseline is UE5.5. Target is UE5.7. This migration is engineering-owned and requires no art assets. Estimated effort: 4-6 engineering days.
+The project targets UE5.7 natively. A plain world with terrain and geometric figures has already been created and confirmed working in 5.7. The following known API changes from prior engine versions must be addressed when the C++ plugins are compiled against 5.7:
 
 ### Step-by-Step Migration Plan
 

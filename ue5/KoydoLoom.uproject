@@ -1,8 +1,8 @@
 {
     "FileVersion": 3,
-    "EngineAssociation": "5.5",
+    "EngineAssociation": "5.7",
     "Category": "Game",
-    "Description": "Koydo — persistent hyper-realistic world rendered by UE5. The Loom server is authoritative; UE5 is the rendering fabric.",
+    "Description": "Koydo — persistent hyper-realistic world rendered by UE5.7. The Loom server is authoritative; UE5 is the rendering fabric.",
     "Modules": [
         {
             "Name": "KoydoLoom",
