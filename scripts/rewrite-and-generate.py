@@ -807,7 +807,7 @@ def main():
 
     print(f"\n=== Done ===")
     print(f"  Generated: {success}")
-    print(f"  Kept Black: {kept}")
+    print(f"  Kept Black: {kept_black}  Kept current: {kept_current}")
     if failures:
         print(f"  Failures: {len(failures)}")
 
