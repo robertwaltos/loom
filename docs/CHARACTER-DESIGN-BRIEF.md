@@ -1110,62 +1110,63 @@ photorealistic fantasy character concept art, androgynous guide figure who appea
 ## SECTION 5: FAL.AI REFERENCE GENERATION LOG
 
 > **Model:** `fal-ai/flux-pro/v1.1` | **Resolution:** 768×1024 | **Steps:** 28
-> Status: Reference images to be generated and attached to this document.
-> **Estimated cost:** ~$0.05/image × 50 characters = ~$2.50 total
-> Note: These are reference starting points for the human artist — not final assets.
+> **Status: ALL 50 GENERATED** — 2026-03-18
+> **Actual cost:** ~$2.50 total (50 images @ ~$0.05/image)
+> **Location:** `docs/character-references/kindler-NN-slug.jpg`
+> Note: These are AI-generated reference starting points for the human artist — not final assets.
 
-| # | Character | Status |
-|---|-----------|--------|
-| 01 | Professor Nimbus | ⬜ pending |
-| 02 | Zara Ngozi | ⬜ pending |
-| 03 | Suki Tanaka-Reyes | ⬜ pending |
-| 04 | Baxter | ⬜ pending |
-| 05 | Riku Osei | ⬜ pending |
-| 06 | Dottie Chakravarti | ⬜ pending |
-| 07 | Cal | ⬜ pending |
-| 08 | Lena Sundstrom | ⬜ pending |
-| 09 | Kofi Amponsah | ⬜ pending |
-| 10 | Pixel | ⬜ pending |
-| 11 | Dr. Emeka Obi | ⬜ pending |
-| 12 | Mira Petrov | ⬜ pending |
-| 13 | Hugo Fontaine | ⬜ pending |
-| 14 | Yuki | ⬜ pending |
-| 15 | Atlas | ⬜ pending |
-| 16 | Grandmother Anaya | ⬜ pending |
-| 17 | Felix Barbosa | ⬜ pending |
-| 18 | Amara Diallo | ⬜ pending |
-| 19 | Oliver Marsh | ⬜ pending |
-| 20 | Lila Johansson-Park | ⬜ pending |
-| 21 | Kwame Asante | ⬜ pending |
-| 22 | Rosie Chen | ⬜ pending |
-| 23 | Theo Papadopoulos | ⬜ pending |
-| 24 | Nadia Volkov | ⬜ pending |
-| 25 | Benny Okafor-Williams | ⬜ pending |
-| 26 | Farah al-Rashid | ⬜ pending |
-| 27 | Captain Birch | ⬜ pending |
-| 28 | Ines Moreau | ⬜ pending |
-| 29 | Hassan Yilmaz | ⬜ pending |
-| 30 | Wren Calloway | ⬜ pending |
-| 31 | Tía Carmen Herrera | ⬜ pending |
-| 32 | Mr. Abernathy | ⬜ pending |
-| 33 | Priya Nair | ⬜ pending |
-| 34 | Diego Montoya-Silva | ⬜ pending |
-| 35 | Auntie Bee | ⬜ pending |
-| 36 | Jin-ho Park | ⬜ pending |
-| 37 | Nia Oduya | ⬜ pending |
-| 38 | Tomás Reyes | ⬜ pending |
-| 39 | Elsa Lindgren | ⬜ pending |
-| 40 | Babatunde Afolabi | ⬜ pending |
-| 41 | Mei-Lin Wu | ⬜ pending |
-| 42 | Sam Worthington | ⬜ pending |
-| 43 | The Librarian | ⬜ pending |
-| 44 | Kenzo Nakamura-Osei | ⬜ pending |
-| 45 | Solana Bright | ⬜ pending |
-| 46 | Old Rowan | ⬜ pending |
-| 47 | Hana Bergstrom | ⬜ pending |
-| 48 | Rami al-Farsi | ⬜ pending |
-| 49 | Luna Esperanza | ⬜ pending |
-| 50 | The Compass | ⬜ pending |
+| # | Character | Status | File |
+|---|-----------|--------|------|
+| 01 | Professor Nimbus | ✅ generated | `character-references/kindler-01-professor-nimbus.jpg` |
+| 02 | Zara Ngozi | ✅ generated | `character-references/kindler-02-zara-ngozi.jpg` |
+| 03 | Suki Tanaka-Reyes | ✅ generated | `character-references/kindler-03-suki-tanaka-reyes.jpg` |
+| 04 | Baxter | ✅ generated | `character-references/kindler-04-baxter.jpg` |
+| 05 | Riku Osei | ✅ generated | `character-references/kindler-05-riku-osei.jpg` |
+| 06 | Dottie Chakravarti | ✅ generated | `character-references/kindler-06-dottie-chakravarti.jpg` |
+| 07 | Cal | ✅ generated | `character-references/kindler-07-cal.jpg` |
+| 08 | Lena Sundstrom | ✅ generated | `character-references/kindler-08-lena-sundstrom.jpg` |
+| 09 | Kofi Amponsah | ✅ generated | `character-references/kindler-09-kofi-amponsah.jpg` |
+| 10 | Pixel | ✅ generated | `character-references/kindler-10-pixel.jpg` |
+| 11 | Dr. Emeka Obi | ✅ generated | `character-references/kindler-11-dr-emeka-obi.jpg` |
+| 12 | Mira Petrov | ✅ generated | `character-references/kindler-12-mira-petrov.jpg` |
+| 13 | Hugo Fontaine | ✅ generated | `character-references/kindler-13-hugo-fontaine.jpg` |
+| 14 | Yuki | ✅ generated | `character-references/kindler-14-yuki.jpg` |
+| 15 | Atlas | ✅ generated | `character-references/kindler-15-atlas.jpg` |
+| 16 | Grandmother Anaya | ✅ generated | `character-references/kindler-16-grandmother-anaya.jpg` |
+| 17 | Felix Barbosa | ✅ generated | `character-references/kindler-17-felix-barbosa.jpg` |
+| 18 | Amara Diallo | ✅ generated | `character-references/kindler-18-amara-diallo.jpg` |
+| 19 | Oliver Marsh | ✅ generated | `character-references/kindler-19-oliver-marsh.jpg` |
+| 20 | Lila Johansson-Park | ✅ generated | `character-references/kindler-20-lila-johansson-park.jpg` |
+| 21 | Kwame Asante | ✅ generated | `character-references/kindler-21-kwame-asante.jpg` |
+| 22 | Rosie Chen | ✅ generated | `character-references/kindler-22-rosie-chen.jpg` |
+| 23 | Theo Papadopoulos | ✅ generated | `character-references/kindler-23-theo-papadopoulos.jpg` |
+| 24 | Nadia Volkov | ✅ generated | `character-references/kindler-24-nadia-volkov.jpg` |
+| 25 | Benny Okafor-Williams | ✅ generated | `character-references/kindler-25-benny-okafor-williams.jpg` |
+| 26 | Farah al-Rashid | ✅ generated | `character-references/kindler-26-farah-al-rashid.jpg` |
+| 27 | Captain Birch | ✅ generated | `character-references/kindler-27-captain-birch.jpg` |
+| 28 | Ines Moreau | ✅ generated | `character-references/kindler-28-ines-moreau.jpg` |
+| 29 | Hassan Yilmaz | ✅ generated | `character-references/kindler-29-hassan-yilmaz.jpg` |
+| 30 | Wren Calloway | ✅ generated | `character-references/kindler-30-wren-calloway.jpg` |
+| 31 | Tia Carmen Herrera | ✅ generated | `character-references/kindler-31-tia-carmen-herrera.jpg` |
+| 32 | Mr. Abernathy | ✅ generated | `character-references/kindler-32-mr-abernathy.jpg` |
+| 33 | Priya Nair | ✅ generated | `character-references/kindler-33-priya-nair.jpg` |
+| 34 | Diego Montoya-Silva | ✅ generated | `character-references/kindler-34-diego-montoya-silva.jpg` |
+| 35 | Auntie Bee | ✅ generated | `character-references/kindler-35-auntie-bee.jpg` |
+| 36 | Jin-ho Park | ✅ generated | `character-references/kindler-36-jin-ho-park.jpg` |
+| 37 | Nia Oduya | ✅ generated | `character-references/kindler-37-nia-oduya.jpg` |
+| 38 | Tomas Reyes | ✅ generated | `character-references/kindler-38-tomas-reyes.jpg` |
+| 39 | Elsa Lindgren | ✅ generated | `character-references/kindler-39-elsa-lindgren.jpg` |
+| 40 | Babatunde Afolabi | ✅ generated | `character-references/kindler-40-babatunde-afolabi.jpg` |
+| 41 | Mei-Lin Wu | ✅ generated | `character-references/kindler-41-mei-lin-wu.jpg` |
+| 42 | Sam Worthington | ✅ generated | `character-references/kindler-42-sam-worthington.jpg` |
+| 43 | The Librarian | ✅ generated | `character-references/kindler-43-the-librarian.jpg` |
+| 44 | Kenzo Nakamura-Osei | ✅ generated | `character-references/kindler-44-kenzo-nakamura-osei.jpg` |
+| 45 | Solana Bright | ✅ generated | `character-references/kindler-45-solana-bright.jpg` |
+| 46 | Old Rowan | ✅ generated | `character-references/kindler-46-old-rowan.jpg` |
+| 47 | Hana Bergstrom | ✅ generated | `character-references/kindler-47-hana-bergstrom.jpg` |
+| 48 | Rami al-Farsi | ✅ generated | `character-references/kindler-48-rami-al-farsi.jpg` |
+| 49 | Luna Esperanza | ✅ generated | `character-references/kindler-49-luna-esperanza.jpg` |
+| 50 | The Compass | ✅ generated | `character-references/kindler-50-the-compass.jpg` |
 
 ---
 
