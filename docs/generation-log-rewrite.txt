@@ -1,0 +1,796 @@
+=== The Concord — Race/Gender Rewrite + Generation ===
+
+Loading character bibles...
+  Total characters: 270
+
+Assigning new ethnic/gender profiles...
+  White/Western:    81 (30%)
+  East+South+SE Asian: 80 (30%)
+  Latin American:   27 (10%)
+  MENA:             14 (5%)
+  Black/African:    68 (25%)
+  Female: 189 (70%)  Male: 81 (30%)
+
+Manifest saved: D:\pythonprojects\loom\loom\docs\character-manifest.json
+  [keep Black] 4-kwame-osei-adeyemi.jpg
+  [keep Black] 11-odalys-ferreira-asante.jpg
+  [keep Black] 14-amara-okafor-nwosu.jpg
+  [keep Black] 15-ikenna-oduya-voss.jpg
+  [keep Black] 017-commissioner-adisa-tanaka-voss.jpg
+  [keep Black] 019-master-factor-ebun-osei-nakamura.jpg
+  [keep Black] 021-factor-kioni-osei-delgado.jpg
+  [keep Black] 022-merchant-admiral-tunde-osei-ferrara.jpg
+  [keep Black] 024-factor-ibrahim-osei-khoury.jpg
+  [keep Black] 026-apprentice-factor-jaya-krishnamurthy-bell.jpg
+  [keep Black] 030-factor-marcus-osei-chen.jpg
+  [keep Black] 032-apprentice-factor-chisom-eze-osei.jpg
+  [keep Black] 036-chief-navigator-bako-vane.jpg
+  [keep Black] 037-survey-specialist-nneka-okafor-vasquez.jpg
+  [keep Black] 038-engineering-specialist-tom-s-osei-reyes.jpg
+  [keep Black] 043-cargo-master-efua-mensah-osei.jpg
+  [keep Black] 044-junior-navigator-pela-osu-tanaka.jpg
+  [keep Black] 048-communications-officer-dara-osei-hoffman.jpg
+  [keep Black] 054-brother-taiwo-osei-marchand.jpg
+  [keep Black] 055-sister-ngozi-osei-larsen.jpg
+  [keep Black] 058-brother-femi-osei-haugen.jpg
+  [keep Black] 059-elder-kemi-osei-strand.jpg
+  [keep Black] 062-novice-chiamaka-osei-petrov.jpg
+  [keep Black] 063-governor-adaeze-osei-carlson.jpg
+  [keep Black] 067-governor-adisa-osei-lindqvist.jpg
+  [keep Black] 076-dr-seun-osei-petrov.jpg
+  [keep Black] 089-captain-adaeze-osei-petersen.jpg
+  [keep Black] 094-sergeant-major-adaeze-osei-balogun.jpg
+  [keep Black] 095-private-emeka-osei-ferrari.jpg
+  [keep Black] 098-researcher-adaeze-osei-larsen.jpg
+  [keep Black] 105-governor-adisa-osei-marchetti.jpg
+  [keep Black] 106-lieutenant-sola-sundaram-okonkwo.jpg
+  [keep Black] 115-settler-amara-osei-reinholt.jpg
+  [keep Black] 117-delegate-taiwo-osei-nakamura-assembly.jpg
+  [keep Black] 120-factor-emeka-oduya-marchetti.jpg
+  [keep Black] 124-historian-taiwo-osei-solberg.jpg
+  [keep Black] 127-delegate-bisi-osei-nakamura.jpg
+  [keep Black] 131-commander-adisa-achebe-nakamura.jpg
+  [keep Black] 135-professor-taiwo-osei-cardoso-social-history.jpg
+  [keep Black] 136-lieutenant-temi-osei-brandt.jpg
+  [keep Black] 137-settler-kolade-osei-ferrara.jpg
+  [keep Black] 139-scholar-adisa-osei-cardoso-ascendancy.jpg
+  [keep Black] 140-medic-adisa-osei-brandt-frontier.jpg
+  [keep Black] 144-delegate-funke-osei-ferrara-world-33.jpg
+  [keep Black] 145-professor-adaeze-osei-solberg-chronicle-studies.jpg
+  [keep Black] 146-commissioner-adaeze-achebe-svensson.jpg
+  [keep Black] 149-chronicler-emeka-osei-voss-inner-arc.jpg
+  [keep Black] 150-the-cartographer.jpg
+  [keep Black] 153-factor-adisa-osei-tanaka-outer-arc-trade.jpg
+  [keep Black] 155-physician-yusuf-osei-reinholt.jpg
+  [keep Black] 158-delegate-taiwo-osei-nakamura-historical.jpg
+  [keep Black] 162-settler-ngozi-osei-lindstr-m-world-73.jpg
+  [keep Black] 170-commander-seun-achebe-ferrara-world-499.jpg
+  [keep Black] 174-auditor-emeka-osei-tanaka-kalon.jpg
+
+Deleted 9 portraits (race changed). Kept 54 Black portraits.
+
+Generating 216 portraits...
+
+[1/216] 1 · The Architect [Pakistani, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\1-the-architect.jpg
+
+[2/216] 2 · Itoro Adeyemi-Okafor [British, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\2-itoro-adeyemi-okafor.jpg
+
+[3/216] 3 · Commodore (Ret.) Seren Vael [Polish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\3-seren-vael.jpg
+
+[4/216] 5 · Nnamdi Achebe [Brazilian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\5-nnamdi-achebe.jpg
+
+[5/216] 6 · Selamat Osei [German, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\6-selamat-osei.jpg
+
+[6/216] 7 · Prof. Adetokunbo Falaye [Indian_North, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\7-adetokunbo-falaye.jpg
+
+[7/216] 8 · Miriam Voss-Carvalho [Arab, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\8-miriam-voss-carvalho.jpg
+
+[8/216] 9 · Admiral Yara Sundaram-Chen [Portuguese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\9-yara-sundaram-chen.jpg
+
+[9/216] 10 · Brother Ekundayo Manu [Chinese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\10-ekundayo-manu.jpg
+
+[10/216] 12 · Dagna Thorvaldsen-Mbeki [Filipino, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\12-dagna-thorvaldsen-mbeki.jpg
+
+[11/216] 13 · Luca Okonkwo-Reinholt [Spanish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\13-luca-okonkwo-reinholt.jpg
+
+[12/216] 016 · YETUNDE OSI-MARCHETTI [Indonesian, female]
+  [skip] 016-yetunde-osi-marchetti.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\016-yetunde-osi-marchetti.jpg
+
+[13/216] 018 · RENATA OKONKWO-SILVA [Chinese, male]
+  [skip] 018-renata-okonkwo-silva.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\018-renata-okonkwo-silva.jpg
+
+[14/216] 020 · YUSRA ADEYEMI-PETROV [Pakistani, male]
+  [skip] 020-yusra-adeyemi-petrov.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\020-yusra-adeyemi-petrov.jpg
+
+[15/216] 023 · FACTOR AMAHLE DLAMINI-OSEI [Korean, female]
+  [skip] 023-factor-amahle-dlamini-osei.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\023-factor-amahle-dlamini-osei.jpg
+
+[16/216] 025 · FACTOR SAOIRSE MCLOUGHLIN-OSEI [Iranian, female]
+  [skip] 025-factor-saoirse-mcloughlin-osei.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\025-factor-saoirse-mcloughlin-osei.jpg
+
+[17/216] 027 · FACTOR KWEKU ASANTE-MOREAU [Polish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\027-factor-kweku-asante-moreau.jpg
+
+[18/216] 028 · FACTOR BIANCA OSEI-TANNER [Indian_South, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\028-factor-bianca-osei-tanner.jpg
+
+[19/216] 029 · SENIOR FACTOR ODESSA OSEI-YAMAMOTO [Korean, male]
+  [skip] 029-senior-factor-odessa-osei-yamamoto.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\029-senior-factor-odessa-osei-yamamoto.jpg
+
+[20/216] 031 · FACTOR YEMI OSEI-DIALLO [German, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\031-factor-yemi-osei-diallo.jpg
+
+[21/216] 033 · FACTOR DAYO BALOGUN-OSEI [Argentine, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\033-factor-dayo-balogun-osei.jpg
+
+[22/216] 034 · SIOSAIA FONO-BELL [Polish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\034-siosaia-fono-bell.jpg
+
+[23/216] 035 · FACTOR NKECHI OSEI-RUSSO [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\035-factor-nkechi-osei-russo.jpg
+
+[24/216] 039 · SURVEY SPECIALIST ADAEZE NWOSU-OSEI [Irish, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\039-survey-specialist-adaeze-nwosu-osei.jpg
+
+[25/216] 040 · FIRST MATE RAEL OSU-MARCHETTI [Polish, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\040-first-mate-rael-osu-marchetti.jpg
+
+[26/216] 041 · MEDICAL OFFICER YINKA OSEI-IBRAHIM [Iranian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\041-medical-officer-yinka-osei-ibrahim.jpg
+
+[27/216] 042 · COMMUNICATIONS OFFICER TAIWO ADEYEMI-FOSS [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\042-communications-officer-taiwo-adeyemi-foss.jpg
+
+[28/216] 045 · SURVEY SPECIALIST CHIDI OKAFOR-BELL [Scandinavian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\045-survey-specialist-chidi-okafor-bell.jpg
+
+[29/216] 046 · SURVEY SPECIALIST AMARA OSEI-LINDQVIST [Pakistani, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\046-survey-specialist-amara-osei-lindqvist.jpg
+
+[30/216] 047 · CHIEF ENGINEER KOFI ASANTE-VOSS [Portuguese, female]
+  [skip] 047-chief-engineer-kofi-asante-voss.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\047-chief-engineer-kofi-asante-voss.jpg
+
+[31/216] 049 · SURVEY SPECIALIST GBEMINIYI OSEI-PARK [Iranian, male]
+  [skip] 049-survey-specialist-gbeminiyi-osei-park.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\049-survey-specialist-gbeminiyi-osei-park.jpg
+
+[32/216] 050 · FIRST MATE SEUN OSEI-BRANDT [Spanish, male]
+  [skip] 050-first-mate-seun-osei-brandt.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\050-first-mate-seun-osei-brandt.jpg
+
+[33/216] 051 · SECOND ELDER PATIENCE OSEI-ADEYEMI [Colombian, female]
+  [skip] 051-second-elder-patience-osei-adeyemi.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\051-second-elder-patience-osei-adeyemi.jpg
+
+[34/216] 052 · DEACON AMINU OSEI-NOVAK [Dutch, female]
+  [skip] 052-deacon-aminu-osei-novak.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\052-deacon-aminu-osei-novak.jpg
+
+[35/216] 053 · SISTER CHIAMAKA OSEI-BERG [Mexican, female]
+  [skip] 053-sister-chiamaka-osei-berg.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\053-sister-chiamaka-osei-berg.jpg
+
+[36/216] 056 · DEACON EMEKA OSEI-SANTOS [Japanese, female]
+  [skip] 056-deacon-emeka-osei-santos.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\056-deacon-emeka-osei-santos.jpg
+
+[37/216] 057 · NOVICE ADAEZE OSEI-JENSEN [Italian, female]
+  [skip] 057-novice-adaeze-osei-jensen.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\057-novice-adaeze-osei-jensen.jpg
+
+[38/216] 060 · DEACON IBRAHIM OSEI-WALSH [Japanese, male]
+  [skip] 060-deacon-ibrahim-osei-walsh.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\060-deacon-ibrahim-osei-walsh.jpg
+
+[39/216] 061 · SISTER ADUNOLA OSEI-FISCHER [Filipino, female]
+  [skip] 061-sister-adunola-osei-fischer.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\061-sister-adunola-osei-fischer.jpg
+
+[40/216] 064 · GOVERNOR NONSO OSEI-MBEKI [Indonesian, female]
+  [skip] 064-governor-nonso-osei-mbeki.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\064-governor-nonso-osei-mbeki.jpg
+
+[41/216] 065 · GOVERNOR ADAEZE OSEI-DUBOIS [Indian_South, female]
+  [skip] 065-governor-adaeze-osei-dubois.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\065-governor-adaeze-osei-dubois.jpg
+
+[42/216] 066 · GOVERNOR FUNKE OSEI-WAGNER [Scandinavian, female]
+  [skip] 066-governor-funke-osei-wagner.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\066-governor-funke-osei-wagner.jpg
+
+[43/216] 068 · GOVERNOR ADAORA OSEI-SORENSEN [Japanese, male]
+  [skip] 068-governor-adaora-osei-sorensen.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\068-governor-adaora-osei-sorensen.jpg
+
+[44/216] 069 · DYNAST KOLADE OSEI-PETERSEN [Scandinavian, male]
+  [skip] 069-dynast-kolade-osei-petersen.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\069-dynast-kolade-osei-petersen.jpg
+
+[45/216] 070 · DYNAST FUNMILAYO OSEI-CHEN [Indonesian, male]
+  [skip] 070-dynast-funmilayo-osei-chen.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\070-dynast-funmilayo-osei-chen.jpg
+
+[46/216] 071 · DYNAST EMEKA OSEI-BALOGUN [Iranian, female]
+  [skip] 071-dynast-emeka-osei-balogun.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\071-dynast-emeka-osei-balogun.jpg
+
+[47/216] 072 · DYNAST ADAEZE OSEI-BRANDT [Chinese, female]
+  [skip] 072-dynast-adaeze-osei-brandt.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\072-dynast-adaeze-osei-brandt.jpg
+
+[48/216] 073 · DYNAST TOLU OSEI-NAKAMURA [Portuguese, female]
+  [skip] 073-dynast-tolu-osei-nakamura.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\073-dynast-tolu-osei-nakamura.jpg
+
+[49/216] 074 · DYNAST UCHENNA OSEI-VOSS [Greek, female]
+  [skip] 074-dynast-uchenna-osei-voss.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\074-dynast-uchenna-osei-voss.jpg
+
+[50/216] 075 · PROFESSOR ADAEZE OSEI-HOFFMAN [British, female]
+  [skip] 075-professor-adaeze-osei-hoffman.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\075-professor-adaeze-osei-hoffman.jpg
+
+[51/216] 077 · ASSEMBLY DELEGATE ABENA OSEI-LINDQVIST [Indian_North, female]
+  [skip] 077-assembly-delegate-abena-osei-lindqvist.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\077-assembly-delegate-abena-osei-lindqvist.jpg
+
+[52/216] 078 · SURVEY CORPS ANALYST EMEKA OSEI-VASQUEZ [Indian_North, male]
+  [skip] 078-survey-corps-analyst-emeka-osei-vasquez.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\078-survey-corps-analyst-emeka-osei-vasquez.jpg
+
+[53/216] 079 · ARCHITECT'S AIDE ADAEZE OSEI-CHEN [Mexican, male]
+  [skip] 079-architect-s-aide-adaeze-osei-chen.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\079-architect-s-aide-adaeze-osei-chen.jpg
+
+[54/216] 080 · JOURNALIST ADAEZE OSEI-FERRARI [Arab, male]
+  [skip] 080-journalist-adaeze-osei-ferrari.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\080-journalist-adaeze-osei-ferrari.jpg
+
+[55/216] 081 · PHYSICIAN ADISA OSEI-RUSSO [Indonesian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\081-physician-adisa-osei-russo.jpg
+
+[56/216] 082 · TEACHER NGOZI OSEI-PETERSEN [Greek, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\082-teacher-ngozi-osei-petersen.jpg
+
+[57/216] 083 · CHRONICLER ADAEZE OSEI-NOVAK [British, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\083-chronicler-adaeze-osei-novak.jpg
+
+[58/216] 084 · ADVOCATE KEMI OSEI-DUBOIS [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\084-advocate-kemi-osei-dubois.jpg
+
+[59/216] 085 · ENGINEER TAIWO OSEI-FERRARA [Dutch, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\085-engineer-taiwo-osei-ferrara.jpg
+
+[60/216] 086 · SERGEANT ADEOLA OSEI-STRAND [Polish, female]
+  [skip] 086-sergeant-adeola-osei-strand.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\086-sergeant-adeola-osei-strand.jpg
+
+[61/216] 087 · LIEUTENANT EMEKA OSEI-TANAKA [Brazilian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\087-lieutenant-emeka-osei-tanaka.jpg
+
+[62/216] 088 · CORPORAL NGOZI OSEI-MOREAU [Greek, male]
+  [skip] 088-corporal-ngozi-osei-moreau.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\088-corporal-ngozi-osei-moreau.jpg
+
+[63/216] 090 · WEAPONS SPECIALIST CHUKWUEMEKA OSEI-LINDQVIST [Indian_South, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\090-weapons-specialist-chukwuemeka-osei-lindqvist.jpg
+
+[64/216] 091 · INTELLIGENCE ANALYST ADAEZE OSEI-DUBOIS [Argentine, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\091-intelligence-analyst-adaeze-osei-dubois.jpg
+
+[65/216] 092 · MEDIC AMARA OSEI-TANAKA [Colombian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\092-medic-amara-osei-tanaka.jpg
+
+[66/216] 093 · LOGISTICS OFFICER SEUN OSEI-VOSS [Italian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\093-logistics-officer-seun-osei-voss.jpg
+
+[67/216] 096 · ARCHIVIST ADAEZE OSEI-HAUGEN [Argentine, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\096-archivist-adaeze-osei-haugen.jpg
+
+[68/216] 097 · MEDIATOR TAIWO OSEI-SVENSSON [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\097-mediator-taiwo-osei-svensson.jpg
+
+[69/216] 099 · JUDGE ADISA OSEI-PETROV [Dutch, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\099-judge-adisa-osei-petrov.jpg
+
+[70/216] 100 · THE UNNAMED DYNAST [Arab, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\100-the-unnamed-dynast.jpg
+
+[71/216] 101 · SISTER NGOZI ACHEBE-SOLBERG [Spanish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\101-sister-ngozi-achebe-solberg.jpg
+
+[72/216] 102 · ADVOCATE YEMI OKAFOR-LINDQVIST [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\102-advocate-yemi-okafor-lindqvist.jpg
+
+[73/216] 103 · BROTHER KWEKU OSEI-NAKAMURA [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\103-brother-kweku-osei-nakamura.jpg
+
+[74/216] 104 · SURVEY COMMANDER BISI OSEI-VOSS [French, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\104-survey-commander-bisi-osei-voss.jpg
+
+[75/216] 107 · PRIVATE DAMI ACHEBE-REINHOLT [Indian_South, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\107-private-dami-achebe-reinholt.jpg
+
+[76/216] 108 · SENIOR FACTOR NKECHI OSEI-LINDSTRÖM [Greek, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\108-senior-factor-nkechi-osei-lindstr-m.jpg
+
+[77/216] 109 · ELDER TADE OSEI-SOLBERG [Indian_South, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\109-elder-tade-osei-solberg.jpg
+
+[78/216] 110 · DEPUTY CHIEF AUDITOR ADAEZE OSEI-TANAKA [Pakistani, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\110-deputy-chief-auditor-adaeze-osei-tanaka.jpg
+
+[79/216] 111 · ARCHIVIST DAYO ACHEBE-FERRARA [Portuguese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\111-archivist-dayo-achebe-ferrara.jpg
+
+[80/216] 112 · COUNCILLOR ADAEZE OSEI-VOSS [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\112-councillor-adaeze-osei-voss.jpg
+
+[81/216] 113 · PROFESSOR KWAME OSEI-ADEYEMI [Pakistani, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\113-professor-kwame-osei-adeyemi.jpg
+
+[82/216] 114 · COMMANDER ADAEZE OSEI-BRANDT [British, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\114-commander-adaeze-osei-brandt.jpg
+
+[83/216] 116 · FACTOR LUCA OKONKWO-REINHOLT [Arab, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\116-factor-luca-okonkwo-reinholt.jpg
+
+[84/216] 118 · MEDIC TAIWO OSEI-FERRARA [German, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\118-medic-taiwo-osei-ferrara.jpg
+
+[85/216] 119 · PROFESSOR FUNMILAYO OSEI-NAKAMURA [Colombian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\119-professor-funmilayo-osei-nakamura.jpg
+
+[86/216] 121 · CAPTAIN KOLADE OSEI-SOLBERG [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\121-captain-kolade-osei-solberg.jpg
+
+[87/216] 122 · SENIOR ADVOCATE BOLA OSEI-TANAKA [Pakistani, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\122-senior-advocate-bola-osei-tanaka.jpg
+
+[88/216] 123 · ENSIGN ADAEZE OSEI-MARCHETTI [Greek, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\123-ensign-adaeze-osei-marchetti.jpg
+
+[89/216] 125 · GOVERNOR BISI OSEI-SOLBERG [Argentine, female]
+  [skip] 125-governor-bisi-osei-solberg.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\125-governor-bisi-osei-solberg.jpg
+
+[90/216] 126 · PRIVATE EMEKA OSEI-FERRARA [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\126-private-emeka-osei-ferrara.jpg
+
+[91/216] 128 · PROFESSOR ADISA OSEI-MARCHETTI [Spanish, male]
+  [skip] 128-professor-adisa-osei-marchetti.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\128-professor-adisa-osei-marchetti.jpg
+
+[92/216] 129 · ELDER JIDE OSEI-VOSS [French, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\129-elder-jide-osei-voss.jpg
+
+[93/216] 130 · SENIOR SCHOLAR EMEKA OSEI-SOLBERG [Italian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\130-senior-scholar-emeka-osei-solberg.jpg
+
+[94/216] 132 · DELEGATE ADAEZE OSEI-MARCHETTI (INDEPENDENT) [Brazilian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\132-delegate-adaeze-osei-marchetti-independent.jpg
+
+[95/216] 133 · PROFESSOR YEMI OSEI-CARDOSO [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\133-professor-yemi-osei-cardoso.jpg
+
+[96/216] 134 · CHRONICLER FUNKE OSEI-MARCHETTI [Brazilian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\134-chronicler-funke-osei-marchetti.jpg
+
+[97/216] 138 · SERGEANT ADAEZE OSEI-NAKAMURA (BOUNDARY) [Italian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\138-sergeant-adaeze-osei-nakamura-boundary.jpg
+
+[98/216] 141 · FACTOR YETUNDE OSEI-LINDSTRÖM [Pakistani, female]
+  [skip] 141-factor-yetunde-osei-lindstr-m.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\141-factor-yetunde-osei-lindstr-m.jpg
+
+[99/216] 142 · GOVERNOR ADISA OSEI-TANAKA (PALE CIRCUIT) [Indian_North, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\142-governor-adisa-osei-tanaka-pale-circuit.jpg
+
+[100/216] 143 · PRIVATE ADAEZE OSEI-NAKAMURA (INTELLIGENCE) [Indonesian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\143-private-adaeze-osei-nakamura-intelligence.jpg
+
+[101/216] 147 · SENIOR ARCHIVIST KOLADE OSEI-CARDOSO [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\147-senior-archivist-kolade-osei-cardoso.jpg
+
+[102/216] 148 · ENSIGN BOLA OSEI-NAKAMURA [Filipino, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\148-ensign-bola-osei-nakamura.jpg
+
+[103/216] 151 · CAPTAIN BISI OSEI-VOSS (TRANSPORT) [Scandinavian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\151-captain-bisi-osei-voss-transport.jpg
+
+[104/216] 152 · ADVOCATE SEREN VAEL-ACHEBE [Austrian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\152-advocate-seren-vael-achebe.jpg
+
+[105/216] 154 · CAPTAIN NGOZI OSEI-LINDQVIST (SURVEY) [British, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\154-captain-ngozi-osei-lindqvist-survey.jpg
+
+[106/216] 156 · SENIOR SISTER YEMI OSEI-CARDOSO (FRONTIER) [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\156-senior-sister-yemi-osei-cardoso-frontier.jpg
+
+[107/216] 157 · PRIVATE TAIWO OSEI-CARDOSO (VELA LOGISTICS) [Indian_North, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\157-private-taiwo-osei-cardoso-vela-logistics.jpg
+
+[108/216] 159 · ADVOCATE KOLADE OSEI-LINDQVIST (CONTINUITY) [Argentine, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\159-advocate-kolade-osei-lindqvist-continuity.jpg
+
+[109/216] 160 · COMMANDER ADAEZE OSEI-MARCHETTI (SECOND SURVEY) [Indian_North, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\160-commander-adaeze-osei-marchetti-second-survey.jpg
+
+[110/216] 161 · COMMISSIONER EMEKA OSEI-STRAND [Polish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\161-commissioner-emeka-osei-strand.jpg
+
+[111/216] 163 · RESEARCHER BOLA OSEI-FERRARI [Brazilian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\163-researcher-bola-osei-ferrari.jpg
+
+[112/216] 164 · OFFICER TAIWO OSEI-MARCHETTI (CHRONICLE QUALITY) [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\164-officer-taiwo-osei-marchetti-chronicle-quality.jpg
+
+[113/216] 165 · PRIVATE EMEKA ACHEBE-LINDQVIST (COMMUNICATIONS) [Irish, female]
+  [skip] 165-private-emeka-achebe-lindqvist-communications.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\165-private-emeka-achebe-lindqvist-communications.jpg
+
+[114/216] 166 · PROFESSOR FUNKE OSEI-LINDQVIST (ECONOMICS) [Irish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\166-professor-funke-osei-lindqvist-economics.jpg
+
+[115/216] 167 · GOVERNOR ADAEZE OSEI-FERRARI (EXPANSION ERA) [Iranian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\167-governor-adaeze-osei-ferrari-expansion-era.jpg
+
+[116/216] 168 · LIEUTENANT ADISA OSEI-PETERSEN (WORLD 499) [French, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\168-lieutenant-adisa-osei-petersen-world-499.jpg
+
+[117/216] 169 · SCHOLAR BISI OSEI-NAKAMURA (LATTICE HISTORY) [Chinese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\169-scholar-bisi-osei-nakamura-lattice-history.jpg
+
+[118/216] 171 · ADVOCATE TAIWO OSEI-REINHOLT (WORLD 143) [Indian_North, female]
+  [skip] 171-advocate-taiwo-osei-reinholt-world-143.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\171-advocate-taiwo-osei-reinholt-world-143.jpg
+
+[119/216] 172 · PROFESSOR ADAEZE OSEI-BRANDT (FOUNDING HISTORY) [Colombian, female]
+  [skip] 172-professor-adaeze-osei-brandt-founding-history.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\172-professor-adaeze-osei-brandt-founding-history.jpg
+
+[120/216] 173 · MEDICAL OFFICER YEMI ACHEBE-TANAKA [Portuguese, female]
+  [skip] 173-medical-officer-yemi-achebe-tanaka.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\173-medical-officer-yemi-achebe-tanaka.jpg
+
+[121/216] 175 · SISTER ADAEZE OSEI-CARDOSO (FRONTIER COVENANT) [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\175-sister-adaeze-osei-cardoso-frontier-covenant.jpg
+
+[122/216] 176 · COMMANDER ADAEZE OSEI-LINDQVIST (OUTER ARC COMMAND) [Arab, female]
+  [skip] 176-commander-adaeze-osei-lindqvist-outer-arc-command.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\176-commander-adaeze-osei-lindqvist-outer-arc-command.jpg
+
+[123/216] 177 · COUNCILLOR TAIWO OSEI-BRANDT (SENIOR RETURNIST) [French, female]
+  [skip] 177-councillor-taiwo-osei-brandt-senior-returnist.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\177-councillor-taiwo-osei-brandt-senior-returnist.jpg
+
+[124/216] 178 · ENSIGN BISI OSEI-VOSS (APPROACH) [Indian_North, male]
+  [skip] 178-ensign-bisi-osei-voss-approach.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\178-ensign-bisi-osei-voss-approach.jpg
+
+[125/216] 179 · ADVOCATE KOLADE OSEI-LINDQVIST (ASSEMBLY CONSTITUTIONAL) [Dutch, male]
+  [skip] 179-advocate-kolade-osei-lindqvist-assembly-constitutional.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\179-advocate-kolade-osei-lindqvist-assembly-constitutional.jpg
+
+[126/216] 180 · PRIVATE ADISA OSEI-FERRARA (ALKAHEST) [Arab, male]
+  [skip] 180-private-adisa-osei-ferrara-alkahest.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\180-private-adisa-osei-ferrara-alkahest.jpg
+
+[127/216] 181 · SENIOR DELEGATE ADAEZE OSEI-KONSTANTINOU [Indonesian, female]
+  [skip] 181-senior-delegate-adaeze-osei-konstantinou.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\181-senior-delegate-adaeze-osei-konstantinou.jpg
+
+[128/216] 182 · LIEUTENANT COMMANDER BOLA OSEI-VOSS [Polish, female]
+  [skip] 182-lieutenant-commander-bola-osei-voss.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\182-lieutenant-commander-bola-osei-voss.jpg
+
+[129/216] 183 · SCHOLAR NGOZI OSEI-VOSS (MARK HISTORY) [Brazilian, female]
+  [skip] 183-scholar-ngozi-osei-voss-mark-history.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\183-scholar-ngozi-osei-voss-mark-history.jpg
+
+[130/216] 184 · CAPTAIN EMEKA OSEI-PETROV (SURVEY COMMAND) [Mexican, female]
+  [skip] 184-captain-emeka-osei-petrov-survey-command.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\184-captain-emeka-osei-petrov-survey-command.jpg
+
+[131/216] 185 · DELEGATE SEUN OSEI-NAKAMURA (ASSEMBLY INFRASTRUCTURE) [Caribbean_Black, female]
+  [skip] 185-delegate-seun-osei-nakamura-assembly-infrastructure.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\185-delegate-seun-osei-nakamura-assembly-infrastructure.jpg
+
+[132/216] 186 · COORDINATOR ADAEZE OSEI-STRAND (COMPACT REGISTRY) [Irish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\186-coordinator-adaeze-osei-strand-compact-registry.jpg
+
+[133/216] 187 · DOCTOR AMARA OKAFOR-NWOSU [Colombian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\187-doctor-amara-okafor-nwosu.jpg
+
+[134/216] 188 · PRIVATE TAIWO OSEI-NAKAMURA (BORDER SECURITY) [Spanish, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\188-private-taiwo-osei-nakamura-border-security.jpg
+
+[135/216] 189 · SENIOR FACTOR ADISA OSEI-CARDOSO (DYNASTY) [Japanese, male]
+  [skip] 189-senior-factor-adisa-osei-cardoso-dynasty.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\189-senior-factor-adisa-osei-cardoso-dynasty.jpg
+
+[136/216] 190 · LIEUTENANT EMEKA OSEI-STRAND (FIRST CONTACT) [Korean, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\190-lieutenant-emeka-osei-strand-first-contact.jpg
+
+[137/216] 191 · COUNCILLOR ADISA OSEI-REINHOLT (ARCHITECT LIAISON) [Spanish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\191-councillor-adisa-osei-reinholt-architect-liaison.jpg
+
+[138/216] 192 · FACTOR NGOZI OSEI-PETROV (COMPACT COMPLIANCE) [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\192-factor-ngozi-osei-petrov-compact-compliance.jpg
+
+[139/216] 193 · ELDER ADAEZE OSEI-LARSEN (COVENANT FOUNDING ERA) [Mexican, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\193-elder-adaeze-osei-larsen-covenant-founding-era.jpg
+
+[140/216] 194 · LIEUTENANT COMMANDER TAIWO OSEI-VOSS (SURVEY PLANNING) [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\194-lieutenant-commander-taiwo-osei-voss-survey-planning.jpg
+
+[141/216] 195 · PRIVATE ADAEZE OSEI-LINDQVIST (DEEP ARC SECURITY) [Ghanaian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\195-private-adaeze-osei-lindqvist-deep-arc-security.jpg
+
+[142/216] 196 · ADVISOR EMEKA OKAFOR-VASQUEZ [Ethiopian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\196-advisor-emeka-okafor-vasquez.jpg
+
+[143/216] 197 · COMMISSIONER TAIWO OSEI-LINDQVIST (COMPACT APPEALS) [German, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\197-commissioner-taiwo-osei-lindqvist-compact-appeals.jpg
+
+[144/216] 198 · RESEARCHER ADAEZE OSEI-MARCHETTI (YOUNG, SURVEY HISTORY) [Austrian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\198-researcher-adaeze-osei-marchetti-young-survey-history.jpg
+
+[145/216] 199 · CAPTAIN NGOZI OSEI-VOSS (RESCUE AND RECOVERY) [Nigerian_Igbo, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\199-captain-ngozi-osei-voss-rescue-and-recovery.jpg
+
+[146/216] 200 · THE ARCHITECT [French, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\200-the-architect.jpg
+
+[147/216] 201 · COUNCILLOR ADAEZE OSEI-REINHOLT [Iranian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\201-councillor-adaeze-osei-reinholt.jpg
+
+[148/216] 202 · COMMANDER SEUN ACHEBE-FERRARA [Greek, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\202-commander-seun-achebe-ferrara.jpg
+
+[149/216] 203 · DELEGATE TAIWO OSEI-NAKAMURA [Brazilian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\203-delegate-taiwo-osei-nakamura.jpg
+
+[150/216] 204 · FACTOR ADAEZE OSEI-BRANDT [Senegalese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\204-factor-adaeze-osei-brandt.jpg
+
+[151/216] 205 · LIEUTENANT EMEKA ACHEBE-LINDQVIST [Spanish, female]
+  [skip] 205-lieutenant-emeka-achebe-lindqvist.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\205-lieutenant-emeka-achebe-lindqvist.jpg
+
+[152/216] 206 · SENIOR SISTER YEMI OSEI-CARDOSO [Argentine, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\206-senior-sister-yemi-osei-cardoso.jpg
+
+[153/216] 207 · PRIVATE ADISA OSEI-FERRARA [German, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\207-private-adisa-osei-ferrara.jpg
+
+[154/216] 208 · PROFESSOR FUNMILAYO OSEI-NAKAMURA [Pakistani, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\208-professor-funmilayo-osei-nakamura.jpg
+
+[155/216] 209 · CAPTAIN KOLADE OSEI-SOLBERG [Chinese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\209-captain-kolade-osei-solberg.jpg
+
+[156/216] 210 · COUNCILLOR NGOZI OSEI-BRANDT [Filipino, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\210-councillor-ngozi-osei-brandt.jpg
+
+[157/216] 211 · SETTLER TAIWO OSEI-REINHOLT [Filipino, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\211-settler-taiwo-osei-reinholt.jpg
+
+[158/216] 212 · ADVOCATE BOLA OSEI-LINDQVIST [Scandinavian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\212-advocate-bola-osei-lindqvist.jpg
+
+[159/216] 213 · SERGEANT ADAEZE OSEI-NAKAMURA [Pakistani, female]
+  [skip] 213-sergeant-adaeze-osei-nakamura.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\213-sergeant-adaeze-osei-nakamura.jpg
+
+[160/216] 214 · GOVERNOR ADISA OSEI-TANAKA [Irish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\214-governor-adisa-osei-tanaka.jpg
+
+[161/216] 215 · PROFESSOR ADISA OSEI-MARCHETTI [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\215-professor-adisa-osei-marchetti.jpg
+
+[162/216] 216 · DELEGATE BISI OSEI-NAKAMURA [Dutch, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\216-delegate-bisi-osei-nakamura.jpg
+
+[163/216] 217 · COMMANDER ADISA ACHEBE-NAKAMURA [Indian_South, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\217-commander-adisa-achebe-nakamura.jpg
+
+[164/216] 218 · HISTORIAN TAIWO OSEI-SOLBERG [Japanese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\218-historian-taiwo-osei-solberg.jpg
+
+[165/216] 219 · PRIVATE EMEKA OSEI-FERRARA [Mexican, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\219-private-emeka-osei-ferrara.jpg
+
+[166/216] 220 · SENIOR ADVOCATE BOLA OSEI-TANAKA [Austrian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\220-senior-advocate-bola-osei-tanaka.jpg
+
+[167/216] 221 · SETTLER NGOZI OSEI-LINDSTRÖM [Senegalese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\221-settler-ngozi-osei-lindstr-m.jpg
+
+[168/216] 222 · PROFESSOR ADAEZE OSEI-SOLBERG [Dutch, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\222-professor-adaeze-osei-solberg.jpg
+
+[169/216] 223 · MEDIC ADISA OSEI-BRANDT [Filipino, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\223-medic-adisa-osei-brandt.jpg
+
+[170/216] 224 · SETTLER KOLADE OSEI-FERRARA [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\224-settler-kolade-osei-ferrara.jpg
+
+[171/216] 225 · DELEGATE ADAEZE OSEI-MARCHETTI [African_American, female]
+  [skip] 225-delegate-adaeze-osei-marchetti.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\225-delegate-adaeze-osei-marchetti.jpg
+
+[172/216] 226 · CHRONICLER FUNKE OSEI-MARCHETTI [Korean, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\226-chronicler-funke-osei-marchetti.jpg
+
+[173/216] 227 · PROFESSOR KOLADE OSEI-LINDQVIST [British, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\227-professor-kolade-osei-lindqvist.jpg
+
+[174/216] 228 · ENSIGN TAIWO OSEI-NAKAMURA [Korean, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\228-ensign-taiwo-osei-nakamura.jpg
+
+[175/216] 229 · GOVERNOR BISI OSEI-SOLBERG [Austrian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\229-governor-bisi-osei-solberg.jpg
+
+[176/216] 230 · SENIOR SCHOLAR EMEKA OSEI-SOLBERG [French, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\230-senior-scholar-emeka-osei-solberg.jpg
+
+[177/216] 231 · FACTOR YETUNDE OSEI-LINDSTRÖM [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\231-factor-yetunde-osei-lindstr-m.jpg
+
+[178/216] 232 · PRIVATE ADAEZE OSEI-NAKAMURA [Iranian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\232-private-adaeze-osei-nakamura.jpg
+
+[179/216] 233 · COMMANDER ADAEZE OSEI-BRANDT [Dutch, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\233-commander-adaeze-osei-brandt.jpg
+
+[180/216] 234 · MEDIC TAIWO OSEI-FERRARA [Scandinavian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\234-medic-taiwo-osei-ferrara.jpg
+
+[181/216] 235 · DELEGATE FUNKE OSEI-FERRARA [Ghanaian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\235-delegate-funke-osei-ferrara.jpg
+
+[182/216] 236 · PROFESSOR TAIWO OSEI-CARDOSO [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\236-professor-taiwo-osei-cardoso.jpg
+
+[183/216] 237 · CAPTAIN BISI OSEI-VOSS [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\237-captain-bisi-osei-voss.jpg
+
+[184/216] 238 · JUNIOR FACTOR ADISA OSEI-CARDOSO [Mexican, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\238-junior-factor-adisa-osei-cardoso.jpg
+
+[185/216] 239 · PRIVATE TAIWO OSEI-CARDOSO [Italian, male]
+  [skip] 239-private-taiwo-osei-cardoso.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\239-private-taiwo-osei-cardoso.jpg
+
+[186/216] 240 · CHRONICLER EMEKA OSEI-VOSS [South_African, male]
+  [skip] 240-chronicler-emeka-osei-voss.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\240-chronicler-emeka-osei-voss.jpg
+
+[187/216] 241 · LIEUTENANT SOLA SUNDARAM-OKONKWO [Arab, female]
+  [skip] 241-lieutenant-sola-sundaram-okonkwo.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\241-lieutenant-sola-sundaram-okonkwo.jpg
+
+[188/216] 242 · ELDER JIDE OSEI-VOSS [German, female]
+  [skip] 242-elder-jide-osei-voss.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\242-elder-jide-osei-voss.jpg
+
+[189/216] 243 · DEPUTY AUDITOR ADAEZE OSEI-TANAKA [Nigerian_Yoruba, female]
+  [skip] 243-deputy-auditor-adaeze-osei-tanaka.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\243-deputy-auditor-adaeze-osei-tanaka.jpg
+
+[190/216] 244 · COMMANDER ADAEZE OSEI-LINDQVIST [Ethiopian, female]
+  [skip] 244-commander-adaeze-osei-lindqvist.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\244-commander-adaeze-osei-lindqvist.jpg
+
+[191/216] 245 · ARCHIVIST DAYO ACHEBE-FERRARA [Ghanaian, female]
+  [skip] 245-archivist-dayo-achebe-ferrara.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\245-archivist-dayo-achebe-ferrara.jpg
+
+[192/216] 246 · FACTOR EMEKA ODUYA-MARCHETTI [Filipino, female]
+  [skip] 246-factor-emeka-oduya-marchetti.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\246-factor-emeka-oduya-marchetti.jpg
+
+[193/216] 247 · PROFESSOR YEMI OSEI-CARDOSO [Kenyan, female]
+  [skip] 247-professor-yemi-osei-cardoso.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\247-professor-yemi-osei-cardoso.jpg
+
+[194/216] 248 · BROTHER KWEKU OSEI-NAKAMURA [Irish, male]
+  [skip] 248-brother-kweku-osei-nakamura.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\248-brother-kweku-osei-nakamura.jpg
+
+[195/216] 249 · SENIOR FACTOR NKECHI OSEI-LINDSTRÖM [Chinese, male]
+  [skip] 249-senior-factor-nkechi-osei-lindstr-m.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\249-senior-factor-nkechi-osei-lindstr-m.jpg
+
+[196/216] 250 · THE CARTOGRAPHER [Indian_North, male]
+  [skip] 250-the-cartographer.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\250-the-cartographer.jpg
+
+[197/216] E-001 · DR. YEWANDE ADISA-REINHOLT [Colombian, female]
+  [skip] E-001-dr-yewande-adisa-reinholt.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-001-dr-yewande-adisa-reinholt.jpg
+
+[198/216] E-002 · COLONEL JAMES OSEI-MARCHETTI (RET.) [Mexican, female]
+  [skip] E-002-colonel-james-osei-marchetti-ret.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-002-colonel-james-osei-marchetti-ret.jpg
+
+[199/216] E-003 · DR. EMEKA OKAFOR-VASQUEZ [Colombian, female]
+  [skip] E-003-dr-emeka-okafor-vasquez.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-003-dr-emeka-okafor-vasquez.jpg
+
+[200/216] E-004 · DR. PRIYA SUNDARAM-CHEN [French, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-004-dr-priya-sundaram-chen.jpg
+
+[201/216] E-005 · DR. KOLADE OSEI-LINDQVIST [Indian_South, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-005-dr-kolade-osei-lindqvist.jpg
+
+[202/216] E-006 · LIEUTENANT COMMANDER ADAEZE OSEI-BRANDT (USN) [German, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-006-lieutenant-commander-adaeze-osei-brandt-usn.jpg
+
+[203/216] E-007 · DR. MARCUS OSEI-TANAKA [Chinese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-007-dr-marcus-osei-tanaka.jpg
+
+[204/216] E-008 · ENGINEER FIRST CLASS TAIWO OSEI-NAKAMURA (USN) [Japanese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-008-engineer-first-class-taiwo-osei-nakamura-usn.jpg
+
+[205/216] E-009 · DR. FUNMILAYO OSEI-SOLBERG [Austrian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-009-dr-funmilayo-osei-solberg.jpg
+
+[206/216] E-010 · SENIOR SCIENTIST ADISA OSEI-PETROV [Scandinavian, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-010-senior-scientist-adisa-osei-petrov.jpg
+
+[207/216] E-011 · DEPUTY SECRETARY NGOZI OSEI-BRANDT [Italian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-011-deputy-secretary-ngozi-osei-brandt.jpg
+
+[208/216] E-012 · DIRECTOR EMEKA ACHEBE-LINDQVIST [South_African, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-012-director-emeka-achebe-lindqvist.jpg
+
+[209/216] E-013 · SENATOR ADAEZE OSEI-KONSTANTINOU [Irish, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-013-senator-adaeze-osei-konstantinou.jpg
+
+[210/216] E-014 · SPECIAL AGENT TAIWO ACHEBE-FERRARA (FBI) [Italian, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-014-special-agent-taiwo-achebe-ferrara-fbi.jpg
+
+[211/216] E-015 · AMBASSADOR BISI OSEI-VOSS [Austrian, female]
+  [skip] E-015-ambassador-bisi-osei-voss.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-015-ambassador-bisi-osei-voss.jpg
+
+[212/216] E-016 · JOURNALIST KOLADE OSEI-FERRARI [Japanese, female]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-016-journalist-kolade-osei-ferrari.jpg
+
+[213/216] E-017 · PRIVATE CITIZEN AMARA OKAFOR-NWOSU (PRE-FOUNDING) [Indian_South, female]
+  [skip] E-017-private-citizen-amara-okafor-nwosu-pre-founding.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-017-private-citizen-amara-okafor-nwosu-pre-founding.jpg
+
+[214/216] E-018 · DR. ELENA VASQUEZ-CHEN (PRE-FOUNDING) [Indian_South, male]
+  [skip] E-018-dr-elena-vasquez-chen-pre-founding.jpg
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-018-dr-elena-vasquez-chen-pre-founding.jpg
+
+[215/216] E-019 · CAPTAIN IKENNA ODUYA-VOSS (USN) [British, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-019-captain-ikenna-oduya-voss-usn.jpg
+
+[216/216] E-020 · YUSUF OKAFOR-VASQUEZ (PRE-FOUNDING) [Portuguese, male]
+  ✓ D:\pythonprojects\loom\loom\docs\character-references\E-020-yusuf-okafor-vasquez-pre-founding.jpg
+
+=== Done ===
+  Generated: 216
+  Kept Black: 54

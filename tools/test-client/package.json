@@ -1,0 +1,10 @@
+{
+  "name": "@loom/test-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ws": "npx tsx test-client.ts",
+    "grpc": "npx tsx grpc-test-client.ts"
+  }
+}
