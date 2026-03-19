@@ -199,6 +199,12 @@ async function main(): Promise<void> {
   const { createKindlerProgression } = await import('../fabrics/loom-core/src/kindler-progression.js');
   const { createHiddenZones } = await import('../fabrics/loom-core/src/hidden-zones.js');
   const { createPgHiddenZonesRepository } = await import('../universe/hidden-zones/pg-hidden-zones-repository.js');
+  const { createNpcCatalog } = await import('../fabrics/loom-core/src/npc-catalog.js');
+  const { createCurriculumMap } = await import('../fabrics/loom-core/src/curriculum-map.js');
+  const { createEntryTypes } = await import('../fabrics/loom-core/src/entry-types.js');
+  const { registerNpcRoutes } = await import('./routes/npcs.js');
+  const { registerCurriculumRoutes } = await import('./routes/curriculum.js');
+  const { registerEntryTypeRoutes } = await import('./routes/entry-types.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -247,6 +253,9 @@ async function main(): Promise<void> {
   const visitorCharacters = createVisitorCharacters();
   const kindlerProgression = createKindlerProgression();
   const hiddenZones = createHiddenZones();
+  const npcCatalog = createNpcCatalog();
+  const curriculumMap = createCurriculumMap();
+  const entryTypes = createEntryTypes();
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -444,6 +453,9 @@ async function main(): Promise<void> {
         pgHiddenZonesRepo,
         kindlerRepo: kindlerRepo,
       }),
+      (app) => registerNpcRoutes(app, { npcCatalog }),
+      (app) => registerCurriculumRoutes(app, { curriculum: curriculumMap }),
+      (app) => registerEntryTypeRoutes(app, { entryTypes }),
     ],
   });
 

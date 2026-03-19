@@ -146,15 +146,18 @@ def generate_one(num, slug, prompt):
     for attempt in range(120):
         time.sleep(2)
         s, poll_resp = api_get(status_url)
-        if s != 200:
-            return None, f"Poll failed HTTP {s}"
+        # 200 = COMPLETED, 202 = IN_PROGRESS/IN_QUEUE — both are valid
+        if s not in (200, 202):
+            return None, f"Poll failed HTTP {s}: {poll_resp}"
+        if not isinstance(poll_resp, dict):
+            return None, f"Unexpected poll response: {poll_resp}"
         current = poll_resp.get("status", "UNKNOWN")
         if current == "COMPLETED":
             break
         if current in ("FAILED", "CANCELLED"):
             return None, f"Generation {current}: {poll_resp.get('error', '')}"
         if attempt % 10 == 9:
-            print(f"    [{num:02d}] still waiting... ({attempt+1}s/240s)")
+            print(f"    [{num:02d}] still waiting... ({(attempt+1)*2}s)")
     else:
         return None, "Timed out after 240s"
 
