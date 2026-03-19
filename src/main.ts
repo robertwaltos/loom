@@ -211,6 +211,16 @@ async function main(): Promise<void> {
   const { registerAccessibilityRoutes } = await import('./routes/accessibility.js');
   const { registerFadingRoutes } = await import('./routes/fading.js');
   const { registerNpcRelationshipRoutes } = await import('./routes/npc-relationships.js');
+  const { createSettlementEngine } = await import('../fabrics/loom-core/src/settlement-engine.js');
+  const { createWorldEventScheduler } = await import('../fabrics/loom-core/src/world-event-scheduler.js');
+  const { createLootTableModule } = await import('../fabrics/loom-core/src/loot-table.js');
+  const { createAbilitySystem } = await import('../fabrics/loom-core/src/ability-system.js');
+  const { createStatusEffectSystem } = await import('../fabrics/loom-core/src/status-effect.js');
+  const { registerSettlementRoutes } = await import('./routes/settlements.js');
+  const { registerWorldEventRoutes } = await import('./routes/world-events.js');
+  const { registerLootTableRoutes } = await import('./routes/loot-tables.js');
+  const { registerCombatRoutes } = await import('./routes/combat.js');
+  const { registerStatusEffectRoutes } = await import('./routes/status-effects.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -275,6 +285,30 @@ async function main(): Promise<void> {
     events: { emit: (e) => logger.info({ event: e }, 'accessibility:event') },
     store: pgAccessibilityRepo,
   });
+
+  // Wave 13 — Settlement, World Events, Loot Tables, Ability System, Status Effects
+  const microsClock = { nowMicroseconds: () => Math.floor(Date.now() * 1000) };
+  const bigintMicrosClock = { nowMicroseconds: () => BigInt(Date.now()) * 1000n };
+  const bigintUsClock = { nowUs: () => BigInt(Date.now()) * 1000n };
+  const koydoUUIDGen = { generate: () => crypto.randomUUID(), next: () => crypto.randomUUID() };
+  const koydoGameLogger = {
+    debug: (msg: string) => logger.debug({}, msg),
+    info: (msg: string) => logger.info({}, msg),
+    warn: (msg: string) => logger.warn({}, msg),
+    error: (msg: string) => logger.error({}, msg),
+  };
+  const settlementEngine = createSettlementEngine(microsClock);
+  const worldEventScheduler = createWorldEventScheduler({ idGenerator: koydoUUIDGen, clock: microsClock });
+  const lootTables = createLootTableModule({
+    clock: bigintMicrosClock,
+    idGen: koydoUUIDGen,
+    logger: {
+      info: (msg, ctx) => logger.info(ctx, msg),
+      warn: (msg, ctx) => logger.warn(ctx, msg),
+    },
+  });
+  const abilitySystem = createAbilitySystem({ clock: bigintUsClock, idGen: koydoUUIDGen, logger: koydoGameLogger });
+  const statusEffectSystem = createStatusEffectSystem({ clock: bigintUsClock, idGen: koydoUUIDGen, logger: koydoGameLogger });
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -481,6 +515,11 @@ async function main(): Promise<void> {
       }),
       (app) => registerFadingRoutes(app, { luminanceStore, pgLuminanceRepo }),
       (app) => registerNpcRelationshipRoutes(app, { npcRelationships }),
+      (app) => registerSettlementRoutes(app, { settlementEngine }),
+      (app) => registerWorldEventRoutes(app, { worldEventScheduler }),
+      (app) => registerLootTableRoutes(app, { lootTables }),
+      (app) => registerCombatRoutes(app, { abilitySystem }),
+      (app) => registerStatusEffectRoutes(app, { statusEffectSystem }),
     ],
   });
 
