@@ -108,7 +108,7 @@ void UBridgeLoomConnection::ConnectToLoom(const FLoomConnectionConfig& Config)
 
 	LoomBridge::NegotiateRequest NegReq;
 	NegReq.set_fabric_id("ue5-client");
-	NegReq.set_fabric_name("Unreal Engine 5.5");
+	NegReq.set_fabric_name("Unreal Engine 5.7");
 	NegReq.set_rendering_tier("high");
 	NegReq.set_max_resolution_width(3840);
 	NegReq.set_max_resolution_height(2160);
