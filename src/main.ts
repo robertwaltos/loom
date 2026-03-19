@@ -163,6 +163,10 @@ async function main(): Promise<void> {
   const { createPgAdventureProgressRepository } = await import('../universe/adventures/pg-repository.js');
   const { createPgParentRepository } = await import('../universe/parent-dashboard/pg-parent-repository.js');
   const { createPgMiniGameRepository } = await import('../universe/mini-games/pg-repository.js');
+  const { createPgQuestChainsRepository } = await import('../universe/quests/pg-quest-chains-repository.js');
+  const { createPgNotificationsRepository } = await import('../universe/notifications/pg-notifications-repository.js');
+  const { createQuestChains } = await import('../fabrics/loom-core/src/quest-chains.js');
+  const { createThreadwayNetwork } = await import('../fabrics/loom-core/src/threadway-network.js');
   const { registerKindlerRoutes } = await import('./routes/kindler.js');
   const { registerSessionRoutes } = await import('./routes/session.js');
   const { registerGuideRoutes } = await import('./routes/guide.js');
@@ -181,6 +185,9 @@ async function main(): Promise<void> {
   const { registerFeatureFlagRoutes } = await import('./routes/feature-flags.js');
   const { registerModerationRoutes } = await import('./routes/moderation.js');
   const { registerAnalyticsRoutes } = await import('./routes/analytics.js');
+  const { registerQuestChainsRoutes } = await import('./routes/quest-chains.js');
+  const { registerThreadwayRoutes } = await import('./routes/threadways.js');
+  const { registerNotificationsRoutes } = await import('./routes/notifications.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -219,6 +226,10 @@ async function main(): Promise<void> {
   const pgAdventureProgressRepo = createPgAdventureProgressRepository(pgPool);
   const pgParentRepo = createPgParentRepository(pgPool);
   const pgMiniGameRepo = createPgMiniGameRepository(pgPool);
+  const pgQuestRepo = createPgQuestChainsRepository(pgPool);
+  const pgNotifRepo = createPgNotificationsRepository(pgPool);
+  const questChains = createQuestChains();
+  const threadwayNetwork = createThreadwayNetwork();
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -398,6 +409,14 @@ async function main(): Promise<void> {
       (app) => registerAnalyticsRoutes(app, {
         analyticsRepo: pgAnalyticsRepo,
         moderationSecret: process.env['SUPPORT_MODERATION_SECRET'],
+      }),
+      (app) => registerQuestChainsRoutes(app, { questChains, pgQuestRepo }),
+      (app) => registerThreadwayRoutes(app, { network: threadwayNetwork }),
+      (app) => registerNotificationsRoutes(app, {
+        pgNotifRepo,
+        ...(process.env['SUPPORT_MODERATION_SECRET']
+          ? { moderationSecret: process.env['SUPPORT_MODERATION_SECRET'] }
+          : {}),
       }),
     ],
   });

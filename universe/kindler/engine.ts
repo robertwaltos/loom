@@ -35,6 +35,7 @@ export const SPARK_DELTAS: Readonly<Record<SparkCause, number>> = {
   collaborative_quest: 0.08,
   natural_decay:      -0.002,   // Per 24 hours of inactivity — gentle
   return_bonus:        0.05,    // Rewarded when Kindler returns after 7+ days
+  item_redeemed:       0.00,    // Variable — cost set by caller at redemption time
 };
 
 /** Kindler spark never drops below this floor */

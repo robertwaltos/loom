@@ -7,6 +7,7 @@
  * GET  /v1/kindler/:id/progress — Get entry completion history
  * GET  /v1/kindler/:id/chapter  — Get current chapter info and progress toward next
  * GET  /v1/kindler/:id/dashboard — Get dashboard summary (spark, chapter, worlds)
+ * POST /v1/kindler/:id/spark/redeem — Redeem spark for a cosmetic item
  *
  * All routes require Authorization: Bearer <parent-token>
  * COPPA: no real names — displayName is a nickname, no DOB stored.
@@ -425,5 +426,48 @@ export function registerKindlerRoutes(app: FastifyAppLike, deps: KindlerRoutesDe
       },
     };
     return reply.send(res);
+  });
+
+  // POST /v1/kindler/:id/spark/redeem — spend spark on a cosmetic/reward
+  app.post('/v1/kindler/:id/spark/redeem', async (req, reply) => {
+    const params = (req as unknown as { params: Record<string, unknown> }).params;
+    const body = (req as unknown as { body: unknown }).body as Record<string, unknown> | null | undefined;
+    const id = typeof params['id'] === 'string' ? params['id'] : null;
+    if (id === null) {
+      const err: ErrorResponse = { ok: false, error: 'Invalid id', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    const rawCost = typeof body?.['cost'] === 'number' ? body['cost'] : null;
+    const itemId = typeof body?.['itemId'] === 'string' ? body['itemId'] : null;
+    const itemType = typeof body?.['itemType'] === 'string' ? body['itemType'] : null;
+    if (rawCost === null || rawCost <= 0 || rawCost > 1.0) {
+      const err: ErrorResponse = { ok: false, error: 'cost must be between 0 and 1.0 (spark fraction)', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    if (itemId === null || itemType === null) {
+      const err: ErrorResponse = { ok: false, error: 'itemId and itemType are required', code: 'INVALID_INPUT' };
+      return reply.code(400).send(err);
+    }
+    const profile = await repo.findById(id);
+    if (profile === null) {
+      const err: ErrorResponse = { ok: false, error: `Kindler '${id}' not found`, code: 'NOT_FOUND' };
+      return reply.code(404).send(err);
+    }
+    if (profile.sparkLevel < rawCost) {
+      const err: ErrorResponse = { ok: false, error: 'Insufficient spark', code: 'INSUFFICIENT_SPARK' };
+      return reply.code(422).send(err);
+    }
+    const newSparkLevel = Math.max(0, parseFloat((profile.sparkLevel - rawCost).toFixed(4)));
+    const updated: typeof profile = { ...profile, sparkLevel: newSparkLevel };
+    await repo.save(updated);
+    await repo.appendSparkEntry({
+      id: crypto.randomUUID(),
+      kindlerId: id,
+      sparkLevel: newSparkLevel,
+      delta: -rawCost,
+      cause: 'item_redeemed',
+      timestamp: Date.now(),
+    });
+    return reply.send({ ok: true, kindlerId: id, sparkLevel: newSparkLevel, cost: rawCost, itemId, itemType });
   });
 }

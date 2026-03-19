@@ -60,7 +60,8 @@ export type SparkCause =
   | 'cross_world_quest'
   | 'collaborative_quest'
   | 'natural_decay'        // Gentle — never punitive
-  | 'return_bonus';        // Returning after absence is rewarding
+  | 'return_bonus'         // Returning after absence is rewarding
+  | 'item_redeemed';       // Kindler spends spark on a cosmetic/reward
 
 // ─── Progress Tracking ─────────────────────────────────────────────
 
