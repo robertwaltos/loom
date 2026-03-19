@@ -205,6 +205,12 @@ async function main(): Promise<void> {
   const { registerNpcRoutes } = await import('./routes/npcs.js');
   const { registerCurriculumRoutes } = await import('./routes/curriculum.js');
   const { registerEntryTypeRoutes } = await import('./routes/entry-types.js');
+  const { createAccessibilityEngine } = await import('../fabrics/loom-core/src/accessibility-system.js');
+  const { createNpcRelationshipRegistry } = await import('../fabrics/loom-core/src/npc-relationship-registry.js');
+  const { createPgAccessibilityRepository } = await import('../universe/accessibility/pg-accessibility-repository.js');
+  const { registerAccessibilityRoutes } = await import('./routes/accessibility.js');
+  const { registerFadingRoutes } = await import('./routes/fading.js');
+  const { registerNpcRelationshipRoutes } = await import('./routes/npc-relationships.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -256,6 +262,19 @@ async function main(): Promise<void> {
   const npcCatalog = createNpcCatalog();
   const curriculumMap = createCurriculumMap();
   const entryTypes = createEntryTypes();
+  const pgAccessibilityRepo = createPgAccessibilityRepository(pgPool);
+  const npcRelationships = createNpcRelationshipRegistry();
+  const accessibilityEngine = createAccessibilityEngine({
+    clock: { now: () => BigInt(Date.now()) },
+    ids: { next: () => crypto.randomUUID() },
+    log: {
+      info: (msg, ctx) => logger.info(ctx ?? {}, msg),
+      warn: (msg, ctx) => logger.warn(ctx ?? {}, msg),
+      error: (msg, ctx) => logger.error(ctx ?? {}, msg),
+    },
+    events: { emit: (e) => logger.info({ event: e }, 'accessibility:event') },
+    store: pgAccessibilityRepo,
+  });
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -456,6 +475,12 @@ async function main(): Promise<void> {
       (app) => registerNpcRoutes(app, { npcCatalog }),
       (app) => registerCurriculumRoutes(app, { curriculum: curriculumMap }),
       (app) => registerEntryTypeRoutes(app, { entryTypes }),
+      (app) => registerAccessibilityRoutes(app, {
+        accessibilityEngine,
+        accessibilityStore: pgAccessibilityRepo,
+      }),
+      (app) => registerFadingRoutes(app, { luminanceStore, pgLuminanceRepo }),
+      (app) => registerNpcRelationshipRoutes(app, { npcRelationships }),
     ],
   });
 
