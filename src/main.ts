@@ -235,6 +235,20 @@ async function main(): Promise<void> {
   const { registerDayNightRoutes } = await import('./routes/day-night.js');
   const { registerDungeonRoutes } = await import('./routes/dungeons.js');
   const { registerProceduralQuestRoutes } = await import('./routes/procedural-quests.js');
+  const { createEncyclopediaRegistry } = await import('../fabrics/loom-core/src/encyclopedia-entries.js');
+  const { createSaveGameSystem } = await import('../fabrics/loom-core/src/save-game.js');
+  const { createTerrainEngineSystem } = await import('../fabrics/loom-core/src/terrain-engine.js');
+  const { createQuestTrackerSystem } = await import('../fabrics/loom-core/src/quest-tracker.js');
+  const { createAscendancyEngine } = await import('../fabrics/loom-core/src/ascendancy-engine.js');
+  const { createAudioEngine } = await import('../fabrics/loom-core/src/audio-engine.js');
+  const { createSpawnBudgetState } = await import('../fabrics/loom-core/src/spawn-budget.js');
+  const { registerEncyclopediaRoutes } = await import('./routes/encyclopedia.js');
+  const { registerSaveGameRoutes } = await import('./routes/save-game.js');
+  const { registerTerrainRoutes } = await import('./routes/terrain.js');
+  const { registerQuestTrackerRoutes } = await import('./routes/quest-tracker.js');
+  const { registerAscendancyRoutes } = await import('./routes/ascendancy.js');
+  const { registerAudioRoutes } = await import('./routes/audio.js');
+  const { registerSpawnBudgetRoutes } = await import('./routes/spawn-budget.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -343,6 +357,38 @@ async function main(): Promise<void> {
     idGen: { generate: () => crypto.randomUUID() },
     logger: { info: (msg, ctx) => logger.info(ctx, msg), warn: (msg, ctx) => logger.warn(ctx, msg) },
   });
+
+  // Wave 15 — Encyclopedia, Save Game, Terrain, Quest Tracker, Ascendancy, Audio, Spawn Budget
+  const encyclopedia = createEncyclopediaRegistry();
+  const saveGame = createSaveGameSystem({
+    clock: { nowUs: () => BigInt(Date.now()) * 1000n },
+    idGen: { generate: () => crypto.randomUUID() },
+    logger: koydoGameLogger,
+  });
+  const terrainEngine = createTerrainEngineSystem({
+    clock: { nowUs: () => BigInt(Date.now()) * 1000n },
+    idGen: { generate: () => crypto.randomUUID() },
+    logger: koydoGameLogger,
+  });
+  const questTracker = createQuestTrackerSystem({
+    clock: { nowUs: () => BigInt(Date.now()) * 1000n },
+    idGen: { generate: () => crypto.randomUUID() },
+    logger: koydoGameLogger,
+  });
+  const ascendancyEngine = createAscendancyEngine({
+    clock: { nowMs: () => Date.now() },
+    idGenerator: { next: () => crypto.randomUUID() },
+  });
+  const audioEngine = createAudioEngine({
+    clock: { nowMicroseconds: () => Math.floor(Date.now() * 1000) },
+    logger: { info: (ctx, msg) => logger.info(ctx, msg) },
+    idGenerator: { generate: () => crypto.randomUUID() },
+  });
+  const spawnBudgetState = createSpawnBudgetState(
+    { nowMicros: () => BigInt(Date.now()) * 1000n },
+    { nextId: () => crypto.randomUUID() },
+    { info: (m) => logger.info({}, m), warn: (m) => logger.warn({}, m), error: (m) => logger.error({}, m) },
+  );
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -561,6 +607,13 @@ async function main(): Promise<void> {
       (app) => registerDayNightRoutes(app, { dayNightCycle }),
       (app) => registerDungeonRoutes(app, { dungeonState }),
       (app) => registerProceduralQuestRoutes(app, { proceduralQuests }),
+      (app) => registerEncyclopediaRoutes(app, { encyclopedia }),
+      (app) => registerSaveGameRoutes(app, { saveGame }),
+      (app) => registerTerrainRoutes(app, { terrainEngine }),
+      (app) => registerQuestTrackerRoutes(app, { questTracker }),
+      (app) => registerAscendancyRoutes(app, { ascendancyEngine }),
+      (app) => registerAudioRoutes(app, { audioEngine }),
+      (app) => registerSpawnBudgetRoutes(app, { spawnBudgetState }),
     ],
   });
 
