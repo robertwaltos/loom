@@ -221,6 +221,20 @@ async function main(): Promise<void> {
   const { registerLootTableRoutes } = await import('./routes/loot-tables.js');
   const { registerCombatRoutes } = await import('./routes/combat.js');
   const { registerStatusEffectRoutes } = await import('./routes/status-effects.js');
+  const { createCharacterDossierRegistry } = await import('../fabrics/loom-core/src/character-dossiers.js');
+  const { createForgettingWell } = await import('../fabrics/loom-core/src/forgetting-well.js');
+  const { createBiomeEngine } = await import('../fabrics/loom-core/src/biome-engine.js');
+  const { createWeatherSystem } = await import('../fabrics/loom-core/src/weather-system.js');
+  const { createDayNightCycle } = await import('../fabrics/loom-core/src/day-night-cycle.js');
+  const { createDungeonGeneratorState } = await import('../fabrics/loom-core/src/dungeon-generator.js');
+  const { createProceduralQuestModule } = await import('../fabrics/loom-core/src/procedural-quest.js');
+  const { registerCharacterDossierRoutes } = await import('./routes/character-dossiers.js');
+  const { registerForgettingWellRoutes } = await import('./routes/forgetting-well.js');
+  const { registerBiomeRoutes } = await import('./routes/biome.js');
+  const { registerWeatherRoutes } = await import('./routes/weather.js');
+  const { registerDayNightRoutes } = await import('./routes/day-night.js');
+  const { registerDungeonRoutes } = await import('./routes/dungeons.js');
+  const { registerProceduralQuestRoutes } = await import('./routes/procedural-quests.js');
 
   const koydoIdGen = { generate: () => crypto.randomUUID() };
 
@@ -309,6 +323,26 @@ async function main(): Promise<void> {
   });
   const abilitySystem = createAbilitySystem({ clock: bigintUsClock, idGen: koydoUUIDGen, logger: koydoGameLogger });
   const statusEffectSystem = createStatusEffectSystem({ clock: bigintUsClock, idGen: koydoUUIDGen, logger: koydoGameLogger });
+
+  // Wave 14 — Character Dossiers, Forgetting Well, Biome, Weather, Day-Night, Dungeons, Procedural Quests
+  const dossierRegistry = createCharacterDossierRegistry();
+  const forgettingWell = createForgettingWell();
+  const biomeEngine = createBiomeEngine();
+  const weatherSystem = createWeatherSystem();
+  const dayNightCycle = createDayNightCycle({
+    clock: { nowMicroseconds: () => BigInt(Date.now()) * 1000n },
+    logger: { info: (msg, ctx) => logger.info(ctx, msg) },
+  });
+  const dungeonState = createDungeonGeneratorState(
+    { nowMicros: () => BigInt(Date.now()) * 1000n },
+    { nextId: () => crypto.randomUUID() },
+    { info: (m) => logger.info({}, m), warn: (m) => logger.warn({}, m), error: (m) => logger.error({}, m) },
+  );
+  const proceduralQuests = createProceduralQuestModule({
+    clock: { nowMicroseconds: () => BigInt(Date.now()) * 1000n },
+    idGen: { generate: () => crypto.randomUUID() },
+    logger: { info: (msg, ctx) => logger.info(ctx, msg), warn: (msg, ctx) => logger.warn(ctx, msg) },
+  });
 
   // Fire-and-forget analytics emitter — all routes share this instance
   const analyticsEmitter = {
@@ -520,6 +554,13 @@ async function main(): Promise<void> {
       (app) => registerLootTableRoutes(app, { lootTables }),
       (app) => registerCombatRoutes(app, { abilitySystem }),
       (app) => registerStatusEffectRoutes(app, { statusEffectSystem }),
+      (app) => registerCharacterDossierRoutes(app, { dossierRegistry }),
+      (app) => registerForgettingWellRoutes(app, { forgettingWell }),
+      (app) => registerBiomeRoutes(app, { biomeEngine }),
+      (app) => registerWeatherRoutes(app, { weatherSystem }),
+      (app) => registerDayNightRoutes(app, { dayNightCycle }),
+      (app) => registerDungeonRoutes(app, { dungeonState }),
+      (app) => registerProceduralQuestRoutes(app, { proceduralQuests }),
     ],
   });
 
