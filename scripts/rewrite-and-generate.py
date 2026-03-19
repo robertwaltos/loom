@@ -734,19 +734,26 @@ def main():
     MANIFEST_PATH.write_text(json.dumps(manifest, indent=2, ensure_ascii=False), encoding='utf-8')
     print(f"\nManifest saved: {MANIFEST_PATH}")
 
-    # 4. Delete portraits for characters whose race changed (not Black anymore)
+    # 4. Delete only stale portraits (filenames that no longer correspond to any character
+    #    in the current manifest). Portraits already at the correct new filename are kept.
+    expected_names = {f"{c['id']}-{c['slug']}.jpg" for c in chars}
     deleted = 0
-    kept = 0
-    for c in chars:
-        portrait = OUTPUT_DIR / f"{c['id']}-{c['slug']}.jpg"
-        if portrait.exists():
-            if c['is_black']:
-                kept += 1
+    kept_black = 0
+    kept_current = 0
+    for portrait in sorted(OUTPUT_DIR.glob("*.jpg")):
+        if portrait.name in expected_names:
+            # Portrait already has the correct new filename — keep it
+            c = next((x for x in chars if f"{x['id']}-{x['slug']}.jpg" == portrait.name), None)
+            if c and c['is_black']:
+                kept_black += 1
                 print(f"  [keep Black] {portrait.name}")
             else:
-                portrait.unlink()
-                deleted += 1
-    print(f"\nDeleted {deleted} portraits (race changed). Kept {kept} Black portraits.")
+                kept_current += 1
+        else:
+            portrait.unlink()
+            deleted += 1
+            print(f"  [delete stale] {portrait.name}")
+    print(f"\nDeleted {deleted} stale portraits. Kept {kept_black} Black + {kept_current} current.")
 
     # 5. Generate all missing portraits
     pending = [c for c in chars if not (OUTPUT_DIR / f"{c['id']}-{c['slug']}.jpg").exists()]
